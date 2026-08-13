@@ -1,0 +1,26 @@
+{
+    "name": "se7enxweb/cjw_newsletter",
+    "description": "CJW Newsletter is a flexible newsletter solution for Exponential content object capabilities from CJW-Network",
+    "type": "ezpublish-legacy-extension",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name" : "7x",
+            "homepage": "https://se7enx.com",
+            "email": "info@se7enx.com",
+            "role": "Developer"
+        },
+        {
+            "name" : "CJW Network",
+            "homepage": "https://cjw-network.com",
+            "email": "info@cjw-network.com",
+            "role": "Author"
+        }
+    ],
+    "require": {
+        "se7enxweb/ezpublish-legacy-installer": "*"
+    },
+    "extra": {
+        "ezpublish-legacy-extension-name": "cjw_newsletter"
+    }
+}
