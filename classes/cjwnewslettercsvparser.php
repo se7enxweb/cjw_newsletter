@@ -30,7 +30,7 @@ class CjwNewsletterCsvParser
      * @param boolean $utf8Encode
      * @return void
      */
-    function __construct( $csvFileName, $delimiter = ';' , $firstRowIsLabel = true, $csvFieldMappingArray, $utf8Encode = false )
+    function __construct( $csvFileName, $delimiter, $firstRowIsLabel, $csvFieldMappingArray, $utf8Encode = false )
     {
         if ( $delimiter == '\t' )
         {
@@ -64,7 +64,7 @@ class CjwNewsletterCsvParser
                 {
                     if ( $utf8Encode !== FALSE )
                     {
-                        $rowArray[ $c ] [ $firstRow[$i] ] = utf8_encode( $row[ $i ] );
+                        $rowArray[ $c ] [ $firstRow[$i] ] = mb_convert_encoding( $row[ $i ], 'UTF-8', 'ISO-8859-1' );
                     }
                     else
                     {

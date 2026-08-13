@@ -165,7 +165,7 @@ class CjwNewsletterMailComposer extends ezcMail
      *
      * @param ezcMailComposerOptions $options
      */
-    public function __construct( ezcMailComposerOptions $options = null )
+    public function __construct( ?ezcMailComposerOptions $options = null )
     {
         $this->properties['plainText'] = null;
         $this->properties['htmlText'] = null;
@@ -295,7 +295,7 @@ class CjwNewsletterMailComposer extends ezcMail
      *            the Mail component. Use addFileAttachment() and
      *            addStringAttachment() instead.
      */
-    public function addAttachment( $fileName, $content = null, $contentType = null, $mimeType = null, ezcMailContentDispositionHeader $contentDisposition = null )
+    public function addAttachment( $fileName, $content = null, $contentType = null, $mimeType = null, ?ezcMailContentDispositionHeader $contentDisposition = null )
     {
         if ( is_null( $content ) )
         {
@@ -327,7 +327,7 @@ class CjwNewsletterMailComposer extends ezcMail
      * @param string $mimeType
      * @param ezcMailContentDispositionHeader $contentDisposition
      */
-    public function addFileAttachment( $fileName, $contentType = null, $mimeType = null, ezcMailContentDispositionHeader $contentDisposition = null )
+    public function addFileAttachment( $fileName, $contentType = null, $mimeType = null, ?ezcMailContentDispositionHeader $contentDisposition = null )
     {
         if ( is_readable( $fileName ) )
         {
@@ -366,7 +366,7 @@ class CjwNewsletterMailComposer extends ezcMail
      * @param string $mimeType
      * @param ezcMailContentDispositionHeader $contentDisposition
      */
-    public function addStringAttachment( $fileName, $content, $contentType = null, $mimeType = null, ezcMailContentDispositionHeader $contentDisposition = null )
+    public function addStringAttachment( $fileName, $content, $contentType = null, $mimeType = null, ?ezcMailContentDispositionHeader $contentDisposition = null )
     {
         $this->attachments[] = array( $fileName, $content, $contentType, $mimeType, $contentDisposition );
     }

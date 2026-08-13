@@ -312,8 +312,8 @@ class CjwNewsletterMailbox extends eZPersistentObject
         $userName              = $this->attribute( 'user_name' );
         $password              = $this->attribute( 'password' );
         $port                  = $this->attribute( 'port' );
-        $ssl                   = (boolean) $this->attribute( 'is_ssl' );
-        $deleteMailsFromServer = (boolean) $this->attribute( 'delete_mails_from_server' );
+        $ssl                   = (bool) $this->attribute( 'is_ssl' );
+        $deleteMailsFromServer = (bool) $this->attribute( 'delete_mails_from_server' );
 
         if( $port > 0 )
         {
@@ -451,7 +451,7 @@ class CjwNewsletterMailbox extends eZPersistentObject
                               'exists' => array(),
                               'failed'  => array() );
         $mailboxId = $this->attribute( 'id' );
-        $mailboxDeleteMailsFromServer = (boolean) $this->attribute( 'delete_mails_from_server' );
+        $mailboxDeleteMailsFromServer = (bool) $this->attribute( 'delete_mails_from_server' );
 
         if ( is_object( $this->TransportObject ) )
         {
