@@ -82,7 +82,7 @@ class CjwNewsletterOperators
                 switch( $namedParameters['variable_name'] )
                 {
                     // {cjw_newsletter_variable( 'available_subscription_status_id_name_array' )}
-                    case 'available_subscription_status_id_name_array';
+                    case 'available_subscription_status_id_name_array':
                     {
                         $returnValue = CjwNewsletterSubscription::availableStatusIdNameArray();
                     }
