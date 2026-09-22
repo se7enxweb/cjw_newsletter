@@ -13,6 +13,51 @@
  * @filesource
  */
 
+
+if ( !function_exists( 'storeImportResultToFile' ) ) {
+function storeImportResultToFile( $importId, $data )
+{
+    $fileName = getImportResultFilePath( $importId );
+
+    $dir = dirname( $fileName );
+    $file = basename( $fileName );
+
+    // return content string of mail item
+    $messageData = serialize( $data );
+
+    // create file in path with content
+    $createResult = eZFile::create( $file, $dir, $messageData );
+}
+}
+
+if ( !function_exists( 'getImportResultFromFile' ) ) {
+function getImportResultFromFile( $importId )
+{
+
+    $fileName = getImportResultFilePath( $importId );
+    $data = file_get_contents( $fileName );
+    if ( $data )
+    {
+        return unserialize( $data );
+    }
+    else
+    {
+        return false;
+    }
+}
+}
+
+if ( !function_exists( 'getImportResultFilePath' ) ) {
+function getImportResultFilePath( $importId )
+{
+    $fileSep = eZSys::fileSeparator();
+    $dir = eZSys::varDirectory() . $fileSep . 'cjw_newsletter' . $fileSep . 'csvimport';
+    $file = $importId.'-import_result.serialize';
+
+    return $dir. $fileSep . $file;
+}
+}
+
 require_once( 'kernel/common/i18n.php' );
 include_once( 'kernel/common/template.php' );
 
@@ -528,43 +573,8 @@ $Result['path'] =  array( array( 'url'  => 'newsletter/index',
 
 
 
-function storeImportResultToFile( $importId, $data )
-{
-    $fileName = getImportResultFilePath( $importId );
 
-    $dir = dirname( $fileName );
-    $file = basename( $fileName );
 
-    // return content string of mail item
-    $messageData = serialize( $data );
-
-    // create file in path with content
-    $createResult = eZFile::create( $file, $dir, $messageData );
-}
-
-function getImportResultFromFile( $importId )
-{
-
-    $fileName = getImportResultFilePath( $importId );
-    $data = file_get_contents( $fileName );
-    if ( $data )
-    {
-        return unserialize( $data );
-    }
-    else
-    {
-        return false;
-    }
-}
-
-function getImportResultFilePath( $importId )
-{
-    $fileSep = eZSys::fileSeparator();
-    $dir = eZSys::varDirectory() . $fileSep . 'cjw_newsletter' . $fileSep . 'csvimport';
-    $file = $importId.'-import_result.serialize';
-
-    return $dir. $fileSep . $file;
-}
 
 
 

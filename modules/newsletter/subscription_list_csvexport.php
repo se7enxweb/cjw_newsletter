@@ -12,6 +12,76 @@
  * @filesource
  */
 
+
+if ( !function_exists( 'getDataForCsv' ) ) {
+/**
+ * fetch data for csv export
+ *
+ * @param integer $listContentObjectId
+ * @return array with data
+ */
+function getDataForCsv( $listContentObjectId, $limit = 0, $module = false )
+{
+    if ( isset( $listContentObjectId ) )
+    {
+        $db = eZDB::instance();
+
+        // set optional limit, for example, for the preview of csv export
+        if ( isset( $limit ) && $limit > 0 )
+            $qryLimit = "LIMIT $limit";
+        // empty
+        else
+            $qryLimit = '';
+
+        // query for fetch user data of one list, with optional limit parameter
+        // u.id, u.email, u.first_name, u.last_name, u.salutation
+        $qryGetData = "SELECT s.id as s_id,
+                              u.email,
+                              u.first_name,
+                              u.last_name,
+                              u.salutation,
+                              u.status as u_status,
+                              u.custom_data_text_1,
+                              u.custom_data_text_2,
+                              u.custom_data_text_3,
+                              u.custom_data_text_4,
+                              s.status as s_status,
+                              s.created as s_created,
+                              s.modified as s_modified,
+                              s.confirmed as s_confirmed,
+                              s.approved as s_approved,
+                              s.removed as s_removed,
+                              s.newsletter_user_id,
+                              s.output_format_array_string
+
+                       FROM cjwnl_subscription s, cjwnl_user u
+                       WHERE s.list_contentobject_id=$listContentObjectId
+                       AND s.newsletter_user_id=u.id
+                       $qryLimit";
+
+        // execute query
+        $resQryGetData = $db->arrayQuery( $qryGetData );
+
+        // exists results ?
+        if ( is_array( $resQryGetData ) && count( $resQryGetData ) > 0 )
+        {
+            // array keys for csv title's
+            $arrKeys = array_keys( $resQryGetData[ 0 ] );
+
+            // set keys at the begin of array => first array element => title's
+            array_unshift( $resQryGetData,$arrKeys );
+
+            return $resQryGetData;
+        }
+        // error
+        else
+        {
+          return false;
+        }
+    }
+}
+}
+
 require_once( 'kernel/common/i18n.php' );
 include_once( 'kernel/common/template.php' );
 
@@ -169,70 +239,4 @@ $Result['path'] =  array( array( 'url'  => 'newsletter/index',
 
 
 
-/**
- * fetch data for csv export
- *
- * @param integer $listContentObjectId
- * @return array with data
- */
-function getDataForCsv( $listContentObjectId, $limit = 0, $module = false )
-{
-    if ( isset( $listContentObjectId ) )
-    {
-        $db = eZDB::instance();
-
-        // set optional limit, for example, for the preview of csv export
-        if ( isset( $limit ) && $limit > 0 )
-            $qryLimit = "LIMIT $limit";
-        // empty
-        else
-            $qryLimit = '';
-
-        // query for fetch user data of one list, with optional limit parameter
-        // u.id, u.email, u.first_name, u.last_name, u.salutation
-        $qryGetData = "SELECT s.id as s_id,
-                              u.email,
-                              u.first_name,
-                              u.last_name,
-                              u.salutation,
-                              u.status as u_status,
-                              u.custom_data_text_1,
-                              u.custom_data_text_2,
-                              u.custom_data_text_3,
-                              u.custom_data_text_4,
-                              s.status as s_status,
-                              s.created as s_created,
-                              s.modified as s_modified,
-                              s.confirmed as s_confirmed,
-                              s.approved as s_approved,
-                              s.removed as s_removed,
-                              s.newsletter_user_id,
-                              s.output_format_array_string
-
-                       FROM cjwnl_subscription s, cjwnl_user u
-                       WHERE s.list_contentobject_id=$listContentObjectId
-                       AND s.newsletter_user_id=u.id
-                       $qryLimit";
-
-        // execute query
-        $resQryGetData = $db->arrayQuery( $qryGetData );
-
-        // exists results ?
-        if ( is_array( $resQryGetData ) && count( $resQryGetData ) > 0 )
-        {
-            // array keys for csv title's
-            $arrKeys = array_keys( $resQryGetData[ 0 ] );
-
-            // set keys at the begin of array => first array element => title's
-            array_unshift( $resQryGetData,$arrKeys );
-
-            return $resQryGetData;
-        }
-        // error
-        else
-        {
-          return false;
-        }
-    }
-}
 ?>

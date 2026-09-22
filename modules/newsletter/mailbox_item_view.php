@@ -14,6 +14,44 @@
 // newsletter/mailbox_item_view/ $mailboxItemId ?GetRawMailContent => show raw message as text
 // newsletter/mailbox_item_view/ $mailboxItemId ?DownloadRawMailContent => download raw message
 
+
+if ( !function_exists( 'downloadFile' ) ) {
+// helpfunction
+/**
+ * Passthrough file, and exit cleanly
+*/
+function downloadFile( $filePath )
+{
+
+    if( !file_exists( $filePath ) )
+    {
+        header("HTTP/1.1 404 Not Found");
+        eZExecution::cleanExit();
+    }
+
+    ob_clean();
+
+    header("Pragma: public");
+    header("Expires: 0"); // set expiration time
+    header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+
+    header("Content-Type: application/force-download");
+    header("Content-Type: application/octet-stream");
+    header("Content-Type: application/download");
+
+    header("Content-Disposition: attachment; filename=" . basename( $filePath ) );
+
+    header("Content-Transfer-Encoding: binary");
+    header("Content-Length: ".filesize( $filePath ));
+
+    ob_end_clean();
+
+    @readfile( $filePath );
+    eZExecution::cleanExit();
+
+}
+}
+
 $http = eZHTTPTool::instance();
 $module = $Params['Module'];
 $templateFile = 'design:newsletter/mailbox_item_view.tpl';
@@ -65,39 +103,5 @@ else
 }
 
 
-// helpfunction
-/**
- * Passthrough file, and exit cleanly
-*/
-function downloadFile( $filePath )
-{
-
-    if( !file_exists( $filePath ) )
-    {
-        header("HTTP/1.1 404 Not Found");
-        eZExecution::cleanExit();
-    }
-
-    ob_clean();
-
-    header("Pragma: public");
-    header("Expires: 0"); // set expiration time
-    header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-
-    header("Content-Type: application/force-download");
-    header("Content-Type: application/octet-stream");
-    header("Content-Type: application/download");
-
-    header("Content-Disposition: attachment; filename=" . basename( $filePath ) );
-
-    header("Content-Transfer-Encoding: binary");
-    header("Content-Length: ".filesize( $filePath ));
-
-    ob_end_clean();
-
-    @readfile( $filePath );
-    eZExecution::cleanExit();
-
-}
 
 ?>

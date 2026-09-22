@@ -1,4 +1,6 @@
 <?php
+
+if ( !class_exists( 'CjwNewsletterFunctionCollection', false ) ) {
 /**
  * File containing the CjwNewsletterFunctionCollection class
  *
@@ -216,5 +218,7 @@ class CjwNewsletterFunctionCollection
     }
 
 }
+}
+
 
 ?>
