@@ -21,12 +21,16 @@ include_once( 'kernel/common/template.php' );
 $mailboxObject = new CjwNewsletterMailbox( true );
 
 $listMailboxesCount = 0;
+$listMailboxes = array();
 
 // return array with mailbox objects
 // TODO result check (is array or object etc )
 if ( is_object( $mailboxObject ) )
 {
+    // null when there are no mailboxes, which PHP 8's count() refuses
     $listMailboxes = $mailboxObject->fetchAllMailboxes();
+    if ( !is_array( $listMailboxes ) )
+        $listMailboxes = array();
     $listMailboxesCount = count( $listMailboxes );
 }
 

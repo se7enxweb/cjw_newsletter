@@ -1,6 +1,9 @@
 {* List of all stored mailboxes *}
 
 {def $page_uri = 'newsletter/mailbox_list'}
+{* Items per page from the user's preference (1, 2, 3 = 10, 25, 50), as the
+   links below set it. Undefined, the navigator divided by nothing. *}
+{def $limit = min( ezpreference( 'admin_mailbox_item_list_limit' ), 3 )|choose( 10, 10, 25, 50 )}
 
 <div class="newsletter newsletter-mailboxlist">
 
