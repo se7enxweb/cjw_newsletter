@@ -1,5 +1,5 @@
 name: cjw_newsletter
-version: 4.0.0.1
+version: 4.1.1
 files_count: 275
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
@@ -171,7 +171,7 @@ e2f971e85954b56dba7f639f8170a4b5  design/standard/templates/newsletter/mail/subs
 39b6ec650c8e3d2412864197098dba9b  design/standard/templates/newsletter/mailbox_edit.tpl
 b3f2a6cb484468e3dfa5d338cae61ac2  design/standard/templates/newsletter/mailbox_item_list.tpl
 c66b14e26934f26dec2682b4c9a976a6  design/standard/templates/newsletter/mailbox_item_view.tpl
-30cedaa017eb14ea012e724f7b916887  design/standard/templates/newsletter/mailbox_list.tpl
+71274f5a3633aa7771531d82f8602f23  design/standard/templates/newsletter/mailbox_list.tpl
 fd1bc1df11ce77dc2ea4e084ec0b6bfb  design/standard/templates/newsletter/preview.tpl
 9304d1873e6813c9e6b2b3cf2cd21c44  design/standard/templates/newsletter/send.tpl
 3e99567b01bf2370bf7dce7cc71c04a6  design/standard/templates/newsletter/send_abort.tpl
@@ -213,14 +213,14 @@ c3ce0df8bc798c5ce10b4e0d5332b1fb  doc/uml/cjw_newsletter_dbschema.mwb
 cf1036b2d3360f8e36d7462c0c58eaa8  doc/uml/cjw_newsletter_dbschema_v1.0.0.png
 71f4165c0974cba8273f21381b2a7031  doc/uml/class_diagram.svg
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
-99555e39768ca9638b1a1d1df1cfbba5  extendedattributefilter/cjwnewsletterlistfilter.php
-8157450dda4e38e0a75fb7809b3f976c  extension.xml
-5aa275b8e4c0ca92c8ffb5d6d59055f8  ezinfo.php
+9b42fb9c56db8dd0f49f360dd3de0df4  extendedattributefilter/cjwnewsletterlistfilter.php
+440673b41593c89bd9e18032e189b75c  extension.xml
+c2b3ec9798115eaa281c5bdd46ac0c77  ezinfo.php
 6b014c5395bc5720c866f3226dc95a27  modules/newsletter/archive.php
 bbe17a90e304d829f1c6d9dc532e8d86  modules/newsletter/blacklist_item_add.php
 57cd61512fd7faaa1cfb27adf13863c4  modules/newsletter/blacklist_item_list.php
 f62e41cc6fae7aa7134e67795f4cead9  modules/newsletter/blacklist_item_remove.php
-0b8dbfa59cc7e75d1a0dc548152b1818  modules/newsletter/cjwnewsletterfunctioncollection.php
+1bcab32aa215597c2312eafd106c2b5c  modules/newsletter/cjwnewsletterfunctioncollection.php
 d19d8293279ae9735e758aa955c18b8d  modules/newsletter/configure.php
 42ba79bc2ddcfae5a36a8de19c3e40bb  modules/newsletter/function_definition.php
 33420b6b0f127ec189ffef45b86d2e62  modules/newsletter/import_list.php
@@ -228,8 +228,8 @@ cd7f52a980dc96201d6c7492e22cc263  modules/newsletter/import_view.php
 2932d962ea36da937a28dc94a9740a4c  modules/newsletter/index.php
 1af7bab3d3a5e652d984e8801b357575  modules/newsletter/mailbox_edit.php
 119b26bec3f1d846431fb829b872071e  modules/newsletter/mailbox_item_list.php
-6f0c6c4c7e87ce75c4ddac49654d4827  modules/newsletter/mailbox_item_view.php
-cd75f61f7527c0029b2389bf194ff76c  modules/newsletter/mailbox_list.php
+4faf23a0d0e0e7d6477e665668015be5  modules/newsletter/mailbox_item_view.php
+e4ef5645c399fe277d87090f1af9d9ff  modules/newsletter/mailbox_list.php
 b82c1eb9c810c7954b24047f27e6cf18  modules/newsletter/module.php
 b287baaf072d655ac8f762c1ac180cdd  modules/newsletter/preview.php
 dde204d24af0ddfbba880df9c0b3c664  modules/newsletter/preview_archive.php
@@ -239,9 +239,9 @@ e6abf355cc203cece27f495574ccb5c9  modules/newsletter/send_abort.php
 937a20a39f11d4204dc832d24531dd40  modules/newsletter/subscribe.php
 b5f947febd9fb489244e98add1cac137  modules/newsletter/subscribe_infomail.php
 658dc4b4826eff8b635bbdfae4e0d66c  modules/newsletter/subscription_list.php
-36fabd8a5ef43690fcbaae28458215b1  modules/newsletter/subscription_list_csvexport.php
-0ad66a37983fa28d4005466da9800519  modules/newsletter/subscription_list_csvimport.php
-47ecae58928576cff61323f4ba6e7864  modules/newsletter/subscription_list_csvimport_df.php
+c3bcf8f6a20c8c66a332279dde3920b0  modules/newsletter/subscription_list_csvexport.php
+17986a644eae20c991be588da752db5d  modules/newsletter/subscription_list_csvimport.php
+bf764db9c9e6db5d831681d8ecf04705  modules/newsletter/subscription_list_csvimport_df.php
 f7c5f91e666341d1a346f77f9e0d0709  modules/newsletter/subscription_view.php
 204a7e42ed9777d08596769f513d77cc  modules/newsletter/unsubscribe.php
 f0978a79b39df1932da26015a9e5b007  modules/newsletter/user_create.php
