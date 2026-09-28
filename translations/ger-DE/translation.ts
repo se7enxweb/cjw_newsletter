@@ -227,6 +227,10 @@
         <source>Statistics</source>
         <translation>Statistiken</translation>
     </message>
+    <message>
+        <source>Cronjob Status:</source>
+        <translation>Cronjob-Status:</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/cjw_newsletter_edition_status</name>
@@ -601,6 +605,10 @@
         <source>Archived</source>
         <translation>Archiviert</translation>
     </message>
+    <message>
+        <source>your browser does not support iframes!</source>
+        <translation>Ihr Browser unterstützt keine iframes!</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/cjwnewsletteredition_preview_archive</name>
@@ -726,6 +734,14 @@
         <source>Sending</source>
         <translation>Im Versand</translation>
     </message>
+    <message>
+        <source>Subscriptions Filter (%approved/%all)</source>
+        <translation>Abonnements-Filter (%approved/%all)</translation>
+    </message>
+    <message>
+        <source>Filter</source>
+        <translation>Filter</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/datatype/cjwnewsletteredition</name>
@@ -740,6 +756,14 @@
     <message>
         <source>The current edition was already send and is in archive!</source>
         <translation>Die aktuelle Newsletterausgabe wurde schon verschickt und ist im Archiv!</translation>
+    </message>
+    <message>
+        <source>Status:</source>
+        <translation>Status:</translation>
+    </message>
+    <message>
+        <source>The schedule date or time is invalid!</source>
+        <translation>Das geplante Datum oder die geplante Uhrzeit ist ungültig!</translation>
     </message>
 </context>
 <context>
@@ -859,6 +883,21 @@
     <message>
         <source>yes</source>
         <translation>ja</translation>
+    </message>
+    <message>
+        <source>Email reply-to</source>
+        <translation>E-Mail Antwortadresse (Reply-To)</translation>
+    </message>
+    <message>
+        <source>Email return-path</source>
+        <translation>E-Mail Rücksendepfad (Return-Path)</translation>
+    </message>
+</context>
+<context>
+    <name>cjw_newsletter/datatype/cjwnewsletterlistvirtual</name>
+    <message>
+        <source>Filter</source>
+        <translation>Filter</translation>
     </message>
 </context>
 <context>
@@ -1020,7 +1059,7 @@
     </message>
     <message>
         <source>Imports (%import_list_count) </source>
-        <translation type="unfinished"></translation>
+        <translation>Importe (%import_list_count) </translation>
     </message>
 </context>
 <context>
@@ -1208,6 +1247,10 @@
         <source>Dashboard</source>
         <translation>Dashboard</translation>
     </message>
+    <message>
+        <source>draft</source>
+        <translation>Entwurf</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/mail/subscription_confirmation</name>
@@ -1318,6 +1361,14 @@ Zur Bearbeitung der Newslettereinstellungen bitte auf folgenden Link klicken:
     <message>
         <source>Active</source>
         <translation>Aktiv</translation>
+    </message>
+    <message>
+        <source>True</source>
+        <translation>Ja</translation>
+    </message>
+    <message>
+        <source>False</source>
+        <translation>Nein</translation>
     </message>
 </context>
 <context>
@@ -1512,6 +1563,14 @@ Zur Bearbeitung der Newslettereinstellungen bitte auf folgenden Link klicken:
     <message>
         <source>Mailbox item view</source>
         <translation>E-Mail-Detailansicht</translation>
+    </message>
+    <message>
+        <source>created</source>
+        <translation>erstellt</translation>
+    </message>
+    <message>
+        <source>processed</source>
+        <translation>verarbeitet</translation>
     </message>
 </context>
 <context>
@@ -2492,15 +2551,19 @@ Zur Bearbeitung der Newslettereinstellungen bitte auf folgenden Link klicken:
     </message>
     <message>
         <source>Exponential User</source>
-        <translation type="unfinished"></translation>
+        <translation>Exponential-Benutzer</translation>
     </message>
     <message>
         <source>Approve</source>
-        <translation type="unfinished"></translation>
+        <translation>Freigeben</translation>
     </message>
     <message>
         <source>Approve subscription</source>
         <translation type="unfinished">Anmeldung annehmen</translation>
+    </message>
+    <message>
+        <source>This View is only available for &apos;Newsletter List&apos; objects</source>
+        <translation>Diese Ansicht ist nur für Objekte vom Typ &apos;Newsletter-Liste&apos; verfügbar</translation>
     </message>
 </context>
 <context>
@@ -2679,6 +2742,34 @@ Zur Bearbeitung der Newslettereinstellungen bitte auf folgenden Link klicken:
     <message>
         <source>(supported CSV delimiters: &quot;,&quot;, &quot;;&quot;, &quot;|&quot;)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsupported CSV delimiter. Please use one of the following:</source>
+        <translation>Nicht unterstütztes CSV-Trennzeichen. Bitte verwenden Sie eines der folgenden:</translation>
+    </message>
+    <message>
+        <source>Database key</source>
+        <translation>Datenbankschlüssel</translation>
+    </message>
+    <message>
+        <source>Csv field</source>
+        <translation>CSV-Feld</translation>
+    </message>
+    <message>
+        <source>supported CSV delimiters: </source>
+        <translation>unterstützte CSV-Trennzeichen: </translation>
+    </message>
+    <message>
+        <source>status old: %old -new: %new</source>
+        <translation>Status alt: %old - neu: %new</translation>
+    </message>
+    <message>
+        <source>status old: %old - new: %new</source>
+        <translation>Status alt: %old - neu: %new</translation>
+    </message>
+    <message>
+        <source>Import all - disabled</source>
+        <translation>Alle importieren - deaktiviert</translation>
     </message>
 </context>
 <context>
@@ -2950,7 +3041,7 @@ müssen Sie diese Seite bestätigen.</translation>
     </message>
     <message>
         <source>auto approve</source>
-        <translation type="unfinished"></translation>
+        <translation>automatisch freigeben</translation>
     </message>
     <message>
         <source>Modified</source>
@@ -3109,7 +3200,7 @@ müssen Sie diese Seite bestätigen.</translation>
     </message>
     <message>
         <source>Subscription details</source>
-        <translation type="unfinished"></translation>
+        <translation>Abonnement-Details</translation>
     </message>
     <message>
         <source>Edit</source>
@@ -3331,11 +3422,27 @@ müssen Sie diese Seite bestätigen.</translation>
     </message>
     <message>
         <source>External user id</source>
-        <translation type="unfinished"></translation>
+        <translation>Externe Benutzer-ID</translation>
     </message>
     <message>
         <source>Remove from blacklist</source>
-        <translation type="unfinished"></translation>
+        <translation>Von der Sperrliste entfernen</translation>
+    </message>
+    <message>
+        <source>Custom Data text 1</source>
+        <translation>Eigene Daten Text 1</translation>
+    </message>
+    <message>
+        <source>Custom Data text 2</source>
+        <translation>Eigene Daten Text 2</translation>
+    </message>
+    <message>
+        <source>Custom Data text 3</source>
+        <translation>Eigene Daten Text 3</translation>
+    </message>
+    <message>
+        <source>Custom Data text 4</source>
+        <translation>Eigene Daten Text 4</translation>
     </message>
 </context>
 <context>
@@ -3673,23 +3780,23 @@ müssen Sie diese Seite bestätigen.</translation>
     </message>
     <message>
         <source>Tab is disabled, enable with toggler to the left of these tabs.</source>
-        <translation type="unfinished"></translation>
+        <translation>Der Reiter ist ausgeschaltet, mit Schalter linksseitig dieser Reiter einschalten.</translation>
     </message>
     <message>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Ansicht</translation>
     </message>
     <message>
         <source>Show simplified view of content.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeige vereinfachte Inhaltsansicht.</translation>
     </message>
     <message>
         <source>Ordering</source>
-        <translation type="unfinished"></translation>
+        <translation>Anordnung</translation>
     </message>
     <message>
         <source>Show published ordering overview.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeige die veröffentlichte Sortierung.</translation>
     </message>
 </context>
 <context>
@@ -3750,11 +3857,11 @@ müssen Sie diese Seite bestätigen.</translation>
     <name>design/admin/parts/my/menu</name>
     <message>
         <source>Enable &amp;quot;Tabs&amp;quot; by default while browsing content.</source>
-        <translation type="unfinished"></translation>
+        <translation>Beim Browsen der Inhalte &amp;quot;Reiter&amp;quot; als Standard aktivieren.</translation>
     </message>
     <message>
         <source>Disable &amp;quot;Tabs&amp;quot; by default while browsing content.</source>
-        <translation type="unfinished"></translation>
+        <translation>Beim Browsen der Inhalte &amp;quot;Reiter&amp;quot; als Standard deaktivieren.</translation>
     </message>
 </context>
 <context>
@@ -3762,6 +3869,13 @@ müssen Sie diese Seite bestätigen.</translation>
     <message>
         <source>Edit</source>
         <translation>Bearbeiten</translation>
+    </message>
+</context>
+<context>
+    <name>design/standard/content/datatype</name>
+    <message>
+        <source>Remove selected</source>
+        <translation>Ausgewähltes entfernen</translation>
     </message>
 </context>
 <context>
@@ -3776,6 +3890,43 @@ müssen Sie diese Seite bestätigen.</translation>
     <message>
         <source>Salutation</source>
         <translation>Anrede</translation>
+    </message>
+    <message>
+        <source>Email</source>
+        <comment>Filtertype name</comment>
+        <translation>E-Mail</translation>
+    </message>
+    <message>
+        <source>equal</source>
+        <comment>Filtertype condition</comment>
+        <translation>gleich</translation>
+    </message>
+    <message>
+        <source>contains</source>
+        <comment>Filtertype condition</comment>
+        <translation>enthält</translation>
+    </message>
+    <message>
+        <source>Salutation</source>
+        <comment>Filtertype name</comment>
+        <translation>Anrede</translation>
+    </message>
+    <message>
+        <source>not equal</source>
+        <comment>Filtertype condition</comment>
+        <translation>ungleich</translation>
+    </message>
+    <message>
+        <source>Filter</source>
+        <translation>Filter</translation>
+    </message>
+    <message>
+        <source>Active filters</source>
+        <translation>Aktive Filter</translation>
+    </message>
+    <message>
+        <source>or</source>
+        <translation>oder</translation>
     </message>
 </context>
 </TS>

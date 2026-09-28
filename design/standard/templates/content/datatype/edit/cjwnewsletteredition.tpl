@@ -12,7 +12,7 @@
 
 {*$edition_object|attribute(show)*}
 
-<h2>Status:</h2>
+<h2>{'Status:'|i18n( 'cjw_newsletter/datatype/cjwnewsletteredition' )}</h2>
 <p> {$edition_object.status|wash} </p>
 
 {include uri="design:includes/cjwnewsletteredition_preview.tpl" newsletter_edition_attribute=$attribute}

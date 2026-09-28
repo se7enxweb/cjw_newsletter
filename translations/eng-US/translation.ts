@@ -199,6 +199,10 @@
         <source>Statistics</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Cronjob Status:</source>
+        <translation>Cronjob Status:</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/cjw_newsletter_edition_status</name>
@@ -573,6 +577,10 @@
         <source>Archived</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>your browser does not support iframes!</source>
+        <translation>your browser does not support iframes!</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/cjwnewsletteredition_preview_archive</name>
@@ -678,6 +686,14 @@
         <source>Sending</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Subscriptions Filter (%approved/%all)</source>
+        <translation>Subscriptions Filter (%approved/%all)</translation>
+    </message>
+    <message>
+        <source>Filter</source>
+        <translation>Filter</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/datatype/cjwnewsletteredition</name>
@@ -692,6 +708,14 @@
     <message>
         <source>The current edition was already send and is in archive!</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status:</source>
+        <translation>Status:</translation>
+    </message>
+    <message>
+        <source>The schedule date or time is invalid!</source>
+        <translation>The schedule date or time is invalid!</translation>
     </message>
 </context>
 <context>
@@ -811,6 +835,21 @@
     <message>
         <source>yes</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Email reply-to</source>
+        <translation>Email reply-to</translation>
+    </message>
+    <message>
+        <source>Email return-path</source>
+        <translation>Email return-path</translation>
+    </message>
+</context>
+<context>
+    <name>cjw_newsletter/datatype/cjwnewsletterlistvirtual</name>
+    <message>
+        <source>Filter</source>
+        <translation>Filter</translation>
     </message>
 </context>
 <context>
@@ -1104,6 +1143,10 @@
         <source>Dashboard</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>draft</source>
+        <translation>draft</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/mail/subscription_confirmation</name>
@@ -1186,6 +1229,14 @@ To edit your newsletter settings please visit the following link:
     <message>
         <source>Active</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>True</source>
+        <translation>True</translation>
+    </message>
+    <message>
+        <source>False</source>
+        <translation>False</translation>
     </message>
 </context>
 <context>
@@ -1364,6 +1415,14 @@ To edit your newsletter settings please visit the following link:
     <message>
         <source>Mailbox item view</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>created</source>
+        <translation>created</translation>
+    </message>
+    <message>
+        <source>processed</source>
+        <translation>processed</translation>
     </message>
 </context>
 <context>
@@ -2114,6 +2173,10 @@ To edit your newsletter settings please visit the following link:
         <source>Approve subscription</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>This View is only available for &apos;Newsletter List&apos; objects</source>
+        <translation>This View is only available for &apos;Newsletter List&apos; objects</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/subscription_list_csvexport</name>
@@ -2279,6 +2342,34 @@ To edit your newsletter settings please visit the following link:
     <message>
         <source>(supported CSV delimiters: &quot;,&quot;, &quot;;&quot;, &quot;|&quot;)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsupported CSV delimiter. Please use one of the following:</source>
+        <translation>Unsupported CSV delimiter. Please use one of the following:</translation>
+    </message>
+    <message>
+        <source>Database key</source>
+        <translation>Database key</translation>
+    </message>
+    <message>
+        <source>Csv field</source>
+        <translation>Csv field</translation>
+    </message>
+    <message>
+        <source>supported CSV delimiters: </source>
+        <translation>supported CSV delimiters: </translation>
+    </message>
+    <message>
+        <source>status old: %old -new: %new</source>
+        <translation>status old: %old -new: %new</translation>
+    </message>
+    <message>
+        <source>status old: %old - new: %new</source>
+        <translation>status old: %old - new: %new</translation>
+    </message>
+    <message>
+        <source>Import all - disabled</source>
+        <translation>Import all - disabled</translation>
     </message>
 </context>
 <context>
@@ -2822,6 +2913,22 @@ you have to confirm this page.</source>
         <source>Remove from blacklist</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Custom Data text 1</source>
+        <translation>Custom Data text 1</translation>
+    </message>
+    <message>
+        <source>Custom Data text 2</source>
+        <translation>Custom Data text 2</translation>
+    </message>
+    <message>
+        <source>Custom Data text 3</source>
+        <translation>Custom Data text 3</translation>
+    </message>
+    <message>
+        <source>Custom Data text 4</source>
+        <translation>Custom Data text 4</translation>
+    </message>
 </context>
 <context>
     <name>design/admin/content/edit</name>
@@ -3178,6 +3285,13 @@ you have to confirm this page.</source>
     </message>
 </context>
 <context>
+    <name>design/standard/content/datatype</name>
+    <message>
+        <source>Remove selected</source>
+        <translation>Remove selected</translation>
+    </message>
+</context>
+<context>
     <name>kernel/navigationpart</name>
     <message>
         <source>CJW Newsletter</source>
@@ -3189,6 +3303,43 @@ you have to confirm this page.</source>
     <message>
         <source>Salutation</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Email</source>
+        <comment>Filtertype name</comment>
+        <translation>Email</translation>
+    </message>
+    <message>
+        <source>equal</source>
+        <comment>Filtertype condition</comment>
+        <translation>equal</translation>
+    </message>
+    <message>
+        <source>contains</source>
+        <comment>Filtertype condition</comment>
+        <translation>contains</translation>
+    </message>
+    <message>
+        <source>Salutation</source>
+        <comment>Filtertype name</comment>
+        <translation>Salutation</translation>
+    </message>
+    <message>
+        <source>not equal</source>
+        <comment>Filtertype condition</comment>
+        <translation>not equal</translation>
+    </message>
+    <message>
+        <source>Filter</source>
+        <translation>Filter</translation>
+    </message>
+    <message>
+        <source>Active filters</source>
+        <translation>Active filters</translation>
+    </message>
+    <message>
+        <source>or</source>
+        <translation>or</translation>
     </message>
 </context>
 </TS>

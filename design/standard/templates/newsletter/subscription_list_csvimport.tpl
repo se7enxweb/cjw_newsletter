@@ -367,7 +367,7 @@ list all blacklist items
                                                     {$email_ok|wash()}
                                                 {/if}
                                             </td>
-                                            <td title="status old: {$user_status_old|wash()} -new: {$user_status_new|wash()}">
+                                            <td title="{'status old: %old -new: %new'|i18n( 'cjw_newsletter/subscription_list_csvimport',, hash( '%old', $user_status_old|wash(), '%new', $user_status_new|wash() ) )}">
                                                 {if $user_created|eq( '1' )}
                                                     <b>{'created'|i18n( 'cjw_newsletter/subscription_list_csvimport' )}</b>
                                                 {elseif $user_created|eq( '2' )}
@@ -383,7 +383,7 @@ list all blacklist items
                                                     {$user_created|wash()}
                                                 {/if}
                                             </td>
-                                            <td title="status old: {$subscription_status_old|wash()} - new: {$subscription_status_new|wash()}">
+                                            <td title="{'status old: %old - new: %new'|i18n( 'cjw_newsletter/subscription_list_csvimport',, hash( '%old', $subscription_status_old|wash(), '%new', $subscription_status_new|wash() ) )}">
                                                 {if $subscription_created|eq( '1' )}
                                                     {'created'|i18n( 'cjw_newsletter/subscription_list_csvimport' )}
                                                 {elseif $subscription_created|eq( '2' )}
@@ -447,7 +447,7 @@ list all blacklist items
                                             {if $access}
                                                 {* Access is allowed. *}<input class="button" type="submit" name="ImportButton" value="{'Import all'|i18n( 'cjw_newsletter/subscription_list_csvimport' )}" title="{'Import all'|i18n( 'cjw_newsletter/subscription_list_csvimport' )}" />
                                             {else}
-                                                {* Access is denied. *}<input class="disabled" type="button" value="{'Import all'|i18n( 'cjw_newsletter/subscription_list_csvimport' )}" title="{'Import all'|i18n( 'cjw_newsletter/subscription_list_csvimport' )} - disabled" />
+                                                {* Access is denied. *}<input class="disabled" type="button" value="{'Import all'|i18n( 'cjw_newsletter/subscription_list_csvimport' )}" title="{'Import all - disabled'|i18n( 'cjw_newsletter/subscription_list_csvimport' )}" />
                                             {/if}
                                         {/if}
                                     </div>

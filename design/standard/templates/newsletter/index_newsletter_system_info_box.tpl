@@ -46,7 +46,7 @@
             {if $edition_draft_node_list|count|gt(0)}
                 {foreach $edition_draft_node_list as $edition_draft_node}
                     <tr class="{$style}">
-                    <td width="61%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_draft.png'|ezdesign} title="draft" /> <a href={$edition_draft_node.url_alias|ezurl}>{$edition_draft_node.name|wash()}</a></td>
+                    <td width="61%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_draft.png'|ezdesign} title="{'draft'|i18n( 'cjw_newsletter/index' )}" /> <a href={$edition_draft_node.url_alias|ezurl}>{$edition_draft_node.name|wash()}</a></td>
                     <td width="39%">
                         {if $edition_draft_node.can_edit}
                         <form action={'content/action'|ezurl()} method="post">
@@ -104,7 +104,7 @@
             {if $edition_draft_node_list|count|gt(0)}
                 {foreach $edition_draft_node_list as $edition_draft_node}
                     <tr class="{$style}">
-                    <td width="61%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_draft.png'|ezdesign} title="draft" /> <a href={$edition_draft_node.url_alias|ezurl}>{$edition_draft_node.name|wash()}</a></td>
+                    <td width="61%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_draft.png'|ezdesign} title="{'draft'|i18n( 'cjw_newsletter/index' )}" /> <a href={$edition_draft_node.url_alias|ezurl}>{$edition_draft_node.name|wash()}</a></td>
                     <td width="39%">
                         {if $edition_draft_node.can_edit}
                         <form action={'content/action'|ezurl()} method="post">

@@ -56,7 +56,7 @@
                         <span class="openclose"></span>
                         <img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_user.png'|ezdesign} alt="" />
                         <a class="nodetext" href={concat('newsletter/subscription_list/',$newsletter_list_node_id)|ezurl}>
-                            <span class="node-name-normal">{'Subscriptions'|i18n('cjw_newsletter/contentstructuremenu')} Filter (<b>{$subcription_user_statistic.approved}</b>/{$subcription_user_statistic.all})</span>
+                            <span class="node-name-normal">{'Subscriptions Filter (%approved/%all)'|i18n( 'cjw_newsletter/contentstructuremenu',, hash( '%approved', concat( '<b>', $subcription_user_statistic.approved, '</b>' ), '%all', $subcription_user_statistic.all ) )}</span>
                         </a>
                     </li>
                     {undef $subcripion_user_statistic}

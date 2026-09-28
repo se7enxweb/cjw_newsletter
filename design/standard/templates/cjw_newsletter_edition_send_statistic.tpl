@@ -57,7 +57,7 @@
         <tr>
 
         <td colspan="7">
-        Cronjob Status: {*{$edition_send_object.status}*}
+        {'Cronjob Status:'|i18n( 'cjw_newsletter/cjw_newsletter_edition_send_statistic' )} {*{$edition_send_object.status}*}
             <ul>
             <li>{if $edition_send_object.status|eq(4)}<b>{/if}0 - wait_for_schedule ( {$edition_send_object.created|l10n( shortdatetime )} ){if $edition_send_object.status|eq(0)}</b>{/if}</li>
             <li>{if $edition_send_object.status|eq(0)}<b>{/if}0 - wait_for_process ( {$edition_send_object.created|l10n( shortdatetime )} ){if $edition_send_object.status|eq(0)}</b>{/if}</li>

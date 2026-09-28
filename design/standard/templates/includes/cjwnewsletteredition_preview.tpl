@@ -30,7 +30,7 @@ newsletter edition vorschau in iframes oder nur links zu den full views
 [{'Skin'|i18n('cjw_newsletter/cjwnewsletteredition_preview')}: {$skin_name}] <a href={$src_url|ezurl} target="new_{$output_format_id}">[{'Fullscreen'|i18n('cjw_newsletter/cjwnewsletteredition_preview')}]</a>
 {if $show_iframes}
     <iframe src={$src_url|ezurl} width="100%" height="{$iframe_height}" name="EDITION_PREVIEW_{$output_format_id}">
-        <p>your browser does not support iframes!</p>
+        <p>{'your browser does not support iframes!'|i18n( 'cjw_newsletter/cjwnewsletteredition_preview' )}</p>
     </iframe>
 {/if}
 {undef $src_url}

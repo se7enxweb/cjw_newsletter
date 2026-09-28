@@ -30,7 +30,7 @@
     <td>
         {def $counter = 0}
         {foreach $values_selected as $value}
-            {if $counter|ne( 0 )} Oder {/if} {$value|wash()}
+            {if $counter|ne( 0 )} {'or'|i18n( 'cjw_newsletter/filtertypes' )} {/if} {$value|wash()}
             {set $counter = $count|inc()}
         {/foreach}
     </td>

@@ -71,7 +71,7 @@ full view of an mailbox item
                                 </tr>
                                 <tr>
                                     <th>
-                                        created
+                                        {'created'|i18n( 'cjw_newsletter/mailbox_item_view' )}
                                     </th>
                                     <td>
                                         {$mailbox_item.created|l10n( shortdatetime )}
@@ -79,7 +79,7 @@ full view of an mailbox item
                                 </tr>
                                 <tr>
                                     <th>
-                                        processed
+                                        {'processed'|i18n( 'cjw_newsletter/mailbox_item_view' )}
                                     </th>
                                     <td>
                                         {if $mailbox_item.processed|ne(0)}

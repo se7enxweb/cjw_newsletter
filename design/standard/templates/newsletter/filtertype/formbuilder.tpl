@@ -35,8 +35,8 @@ function addTextValue( field )
 {/literal}
 </script>
 
-<fieldset title="Filter" id="filter">
-    <legend>Aktive Filter</legend>
+<fieldset title="{'Filter'|i18n( 'cjw_newsletter/filtertypes' )}" id="filter">
+    <legend>{'Active filters'|i18n( 'cjw_newsletter/filtertypes' )}</legend>
 
     <table width="100%"><tr><td>
         <table border="0">

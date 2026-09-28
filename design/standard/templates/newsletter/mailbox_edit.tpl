@@ -58,18 +58,18 @@
                             </p>
                             <label>{'SSL'|i18n( 'cjw_newsletter/mailbox_edit' )}</label>
                             <p>
-                                <input type="radio" name="is_ssl" value="1" {if eq( $mailbox.is_ssl, 1 )}checked{/if}> True
-                                <input type="radio" name="is_ssl" value="0" {if eq( $mailbox.is_ssl, 0 )}checked{/if}> False
+                                <input type="radio" name="is_ssl" value="1" {if eq( $mailbox.is_ssl, 1 )}checked{/if}> {'True'|i18n( 'cjw_newsletter/mailbox_edit' )}
+                                <input type="radio" name="is_ssl" value="0" {if eq( $mailbox.is_ssl, 0 )}checked{/if}> {'False'|i18n( 'cjw_newsletter/mailbox_edit' )}
                             </p>
                             <label>{'Delete mails from server'|i18n( 'cjw_newsletter/mailbox_edit' )}</label>
                             <p>
-                                <input type="radio" name="delete_mails_from_server" value="1" {if eq( $mailbox.delete_mails_from_server, 1 )}checked{/if}> True
-                                <input type="radio" name="delete_mails_from_server" value="0" {if eq( $mailbox.delete_mails_from_server, 0 )}checked{/if}> False
+                                <input type="radio" name="delete_mails_from_server" value="1" {if eq( $mailbox.delete_mails_from_server, 1 )}checked{/if}> {'True'|i18n( 'cjw_newsletter/mailbox_edit' )}
+                                <input type="radio" name="delete_mails_from_server" value="0" {if eq( $mailbox.delete_mails_from_server, 0 )}checked{/if}> {'False'|i18n( 'cjw_newsletter/mailbox_edit' )}
                             </p>
                             <label>{'Active'|i18n( 'cjw_newsletter/mailbox_edit' )}</label>
                             <p>
-                                <input type="radio" name="is_activated" value="1" {if or( eq( $mailbox.is_activated, '1' ), eq( $mailbox.is_activated, 0 ) )}checked{/if}> True
-                                <input type="radio" name="is_activated" value="0" {if eq( $mailbox.is_activated, '0' )}checked{/if}> False
+                                <input type="radio" name="is_activated" value="1" {if or( eq( $mailbox.is_activated, '1' ), eq( $mailbox.is_activated, 0 ) )}checked{/if}> {'True'|i18n( 'cjw_newsletter/mailbox_edit' )}
+                                <input type="radio" name="is_activated" value="0" {if eq( $mailbox.is_activated, '0' )}checked{/if}> {'False'|i18n( 'cjw_newsletter/mailbox_edit' )}
                             </p>
                         </div>
                         {* DESIGN: Content END *}

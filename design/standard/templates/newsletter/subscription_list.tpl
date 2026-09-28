@@ -340,7 +340,7 @@
 
 
 {else}
-    This View is only available for 'Newsletter List' objects
+    {'This View is only available for \'Newsletter List\' objects'|i18n( 'cjw_newsletter/subscription_list' )}
 {/if}
 
 </div>
