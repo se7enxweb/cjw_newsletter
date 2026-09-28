@@ -2,10 +2,10 @@
 <software>
     <metadata>
         <name>CJW Newsletter - Multi Channel Marketing</name>
-        <version>4.1.2</version>
+        <version>4.1.3</version>
         <copyright>Copyright (C) 2015 CJW Network</copyright>
-        <license>GNU General Public License v2.0</license>
-        <info_url>http://projects.ez.no/cjw_newsletter</info_url>
+        <license>GNU General Public License v2.0 (or any later version)</license>
+        <info_url>https://github.com/se7enxweb/cjw_newsletter</info_url>
     </metadata>
 
     <dependencies>
