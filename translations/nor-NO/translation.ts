@@ -2151,7 +2151,7 @@ To edit your newsletter settings please visit the following link:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>eZ Publish User</source>
+        <source>Exponential User</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

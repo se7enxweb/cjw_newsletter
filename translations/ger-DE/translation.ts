@@ -2491,7 +2491,7 @@ Zur Bearbeitung der Newslettereinstellungen bitte auf folgenden Link klicken:
         <translation>Blacklisted</translation>
     </message>
     <message>
-        <source>eZ Publish User</source>
+        <source>Exponential User</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

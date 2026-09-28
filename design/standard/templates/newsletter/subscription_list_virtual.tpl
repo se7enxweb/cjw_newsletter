@@ -276,7 +276,7 @@
             <th>{'Email'|i18n( 'cjw_newsletter/subscription_list' )}</th>
             <th>{'First name'|i18n( 'cjw_newsletter/subscription_list' )}</th>
             <th>{'Last name'|i18n( 'cjw_newsletter/subscription_list' )}</th>
-            <th>{'eZ Publish User'|i18n('cjw_newsletter/subscription_list')}</th>
+            <th>{'Exponential User'|i18n('cjw_newsletter/subscription_list')}</th>
             <th>{'Format'|i18n( 'cjw_newsletter/subscription_list' )}</th>
             <th>{'Status'|i18n( 'cjw_newsletter/subscription_list' )}</th>
             <th>{'Modified'|i18n( 'cjw_newsletter/subscription_list' )}</th>

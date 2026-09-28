@@ -2381,7 +2381,7 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
         <translation>En liste noire</translation>
     </message>
     <message>
-        <source>eZ Publish User</source>
+        <source>Exponential User</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
