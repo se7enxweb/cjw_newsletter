@@ -1,5 +1,5 @@
 name: cjw_newsletter
-version: 4.1.5
+version: 4.1.6
 files_count: 275
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
@@ -214,8 +214,8 @@ cf1036b2d3360f8e36d7462c0c58eaa8  doc/uml/cjw_newsletter_dbschema_v1.0.0.png
 71f4165c0974cba8273f21381b2a7031  doc/uml/class_diagram.svg
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
 9b42fb9c56db8dd0f49f360dd3de0df4  extendedattributefilter/cjwnewsletterlistfilter.php
-3d7ff7325b4fa53bafe7cbe1a105b1e4  extension.xml
-2e4b70934f2d52952329747a6bda2976  ezinfo.php
+c99c3aaa6b867024ea4d1ce78b882d57  extension.xml
+bf06cccd0d3b0f1cfc20421887751012  ezinfo.php
 6b014c5395bc5720c866f3226dc95a27  modules/newsletter/archive.php
 bbe17a90e304d829f1c6d9dc532e8d86  modules/newsletter/blacklist_item_add.php
 57cd61512fd7faaa1cfb27adf13863c4  modules/newsletter/blacklist_item_list.php
