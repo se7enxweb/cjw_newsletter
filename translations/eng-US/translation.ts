@@ -3265,6 +3265,14 @@ you have to confirm this page.</source>
         <source>Logout</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Newsletter</source>
+        <translation>Newsletter</translation>
+    </message>
+    <message>
+        <source>Newsletter administration</source>
+        <translation>Newsletter administration</translation>
+    </message>
 </context>
 <context>
     <name>design/admin/parts/my/menu</name>

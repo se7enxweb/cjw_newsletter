@@ -3852,6 +3852,14 @@ müssen Sie diese Seite bestätigen.</translation>
         <source>Logout</source>
         <translation>Ausloggen</translation>
     </message>
+    <message>
+        <source>Newsletter</source>
+        <translation>Newsletter</translation>
+    </message>
+    <message>
+        <source>Newsletter administration</source>
+        <translation>Adminbereich Newsletter</translation>
+    </message>
 </context>
 <context>
     <name>design/admin/parts/my/menu</name>

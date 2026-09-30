@@ -23,7 +23,7 @@ NavigationPartIdentifier=eznewsletternavigationpart
 URL[]
 URL[default]=newsletter/index
 Name=Newsletter
-Tooltip=Adminbereich Newsletter
+Tooltip=Newsletter administration
 
 Enabled[]
 Enabled[default]=true
