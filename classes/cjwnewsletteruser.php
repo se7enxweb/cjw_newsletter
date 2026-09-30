@@ -937,7 +937,7 @@ class CjwNewsletterUser extends eZPersistentObject
         {
             $db = eZDB::instance();
             $email = $db->escapeString( $emailSearch );
-            $customConds = " WHERE email like \"%$email%\"";
+            $customConds = " WHERE email LIKE '%$email%'";
         }
 
         if ( (int) $limit != 0 )
@@ -971,7 +971,7 @@ class CjwNewsletterUser extends eZPersistentObject
         if ( $emailSearch != '' && $emailSearch != false )
         {
             $email = $db->escapeString( $emailSearch );
-            $customConds = " WHERE email like \"%$email%\"";
+            $customConds = " WHERE email LIKE '%$email%'";
         }
         $query = 'SELECT COUNT(id) AS count FROM cjwnl_user' .$customConds;
         $rows = $db -> arrayQuery( $query );
@@ -1651,14 +1651,16 @@ class CjwNewsletterUser extends eZPersistentObject
         $tables = $def["name"];
         $class_name = $def["class_name"];
 
-        $sqlFieldArray = array( 'DISTINCT( cjwnl_user.email )',
-                                'cjwnl_user.*' );
+        // Each user once who has a subscription matching the filter. This was a
+        // DISTINCT over every column of a join with cjwnl_subscription, which
+        // Oracle refuses because cjwnl_user has CLOB columns (ORA-22848); an
+        // EXISTS on the subscriptions returns the same rows on every database.
+        $sqlFieldArray = array( 'cjwnl_user.*' );
         $sqlTableArray = array( 'cjwnl_user' );
         $sqlCondArray = array();
 
 
         $sqlCondArray[] = 'cjwnl_user.id = cjwnl_subscription.newsletter_user_id';
-        $sqlTableArray[] = 'cjwnl_subscription';
 
     /*    if ( $userStatus )
         {
@@ -1748,7 +1750,8 @@ class CjwNewsletterUser extends eZPersistentObject
 
         $sql = "SELECT $sqlFieldString
                 FROM $sqlTableString
-                $sqlCondAndString";
+                WHERE EXISTS ( SELECT 1 FROM cjwnl_subscription
+                $sqlCondAndString )";
 
         //eZPersistentObject::replaceFieldsWithShortNames( $db, $fields, $conditions );
 
