@@ -26,12 +26,15 @@ function getDataForCsv( $listContentObjectId, $limit = 0, $module = false )
     {
         $db = eZDB::instance();
 
-        // set optional limit, for example, for the preview of csv export
+        // set optional limit, for example, for the preview of csv export;
+        // the database driver writes it in its own dialect (LIMIT is not Oracle SQL)
         if ( isset( $limit ) && $limit > 0 )
-            $qryLimit = "LIMIT $limit";
+            $qryParams = array( 'limit' => (int) $limit );
         // empty
         else
-            $qryLimit = '';
+            $qryParams = false;
+
+        $listContentObjectId = (int) $listContentObjectId;
 
         // query for fetch user data of one list, with optional limit parameter
         // u.id, u.email, u.first_name, u.last_name, u.salutation
@@ -56,11 +59,10 @@ function getDataForCsv( $listContentObjectId, $limit = 0, $module = false )
 
                        FROM cjwnl_subscription s, cjwnl_user u
                        WHERE s.list_contentobject_id=$listContentObjectId
-                       AND s.newsletter_user_id=u.id
-                       $qryLimit";
+                       AND s.newsletter_user_id=u.id";
 
         // execute query
-        $resQryGetData = $db->arrayQuery( $qryGetData );
+        $resQryGetData = $db->arrayQuery( $qryGetData, $qryParams );
 
         // exists results ?
         if ( is_array( $resQryGetData ) && count( $resQryGetData ) > 0 )
