@@ -567,9 +567,13 @@ class CjwNewsletterEditionSend extends eZPersistentObject
 
         $db = eZDB::instance();
         $editionSendItemStatusAbort = CjwNewsletterEditionSendItem::STATUS_ABORT;
-        $query = "UPDATE `cjwnl_edition_send_item` SET `status` = '$editionSendItemStatusAbort'
-                  WHERE `cjwnl_edition_send_item`.`edition_send_id` =$editionSendId
-                  AND `cjwnl_edition_send_item`.`status` =0;";
+        // plain identifiers and no trailing semicolon: backticks are MySQL's
+        // alone and Oracle refuses a statement ending in ";"
+        $editionSendItemStatusAbort = (int) $editionSendItemStatusAbort;
+        $editionSendId = (int) $editionSendId;
+        $query = "UPDATE cjwnl_edition_send_item SET status = $editionSendItemStatusAbort
+                  WHERE edition_send_id = $editionSendId
+                  AND status = 0";
 
         $updateResult = $db->query( $query );
 
