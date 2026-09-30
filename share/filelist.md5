@@ -259,7 +259,7 @@ dabf79f5ec9c323b6045e0c75a6f1178  settings/contentstructuremenu.ini.append.php
 c3dc3dd06b89f9521a918002f7784821  settings/design.ini.append.php
 299d2bb2379bc31e9a852987d148c715  settings/extendedattributefilter.ini.append.php
 f4f00b1e25828edb64aa1e9a8ba21d3d  settings/icon.ini.append.php
-e76a962a6500036bb3a6115bc54bfde2  settings/menu.ini.append.php
+ab41f1e8cf068990f03974c3e50e692c  settings/menu.ini.append.php
 583081682e134c1be24c9752046a8a9f  settings/module.ini.append.php
 694e8a6be3755c72e3356c95f66655d0  settings/override.ini.append.php
 09300efe56d808e921de18063061e7e0  settings/site.ini.append.php
@@ -268,11 +268,11 @@ e0fb0db8bc7127f92f518c510b43fe13  settings/websitetoolbar.ini.append.php
 55e5fa9c3cbd314111cc488492b78384  share/db_schema.dba
 b829d5125f764e31c1a62e897fa2742b  sql/mysql/schema.sql
 bec2649673924ae9ec6b9506bb1b26b0  sql/postgresql/schema.sql
-5f223ea5dda6a79323cce136c11a9558  translations/eng-US/translation.ts
+8cf089016e3533c04af62d6e26b5d083  translations/eng-US/translation.ts
 1ddb26d6affbce3932cb19a291a88c3a  translations/fre-FR/translation.ts
-34ed2ff2cc6187fc195e1bce5c6e8760  translations/ger-DE/translation.ts
+fba027ac247324963445ffa16042470b  translations/ger-DE/translation.ts
 96f6b8c09f74cae57de3d1fdbe2086c8  translations/nor-NO/translation.ts
-d65d57e5458c2fdacb8338e96a678dcc  translations/untranslated/translation.ts
+d2ee502fdf8fe8f793538e6e12f39643  translations/untranslated/translation.ts
 8467fc444a55eb51e0864b1cc6d2dfcf  update/database/mysql/1.0/unstable/dbupdate-1.0.0beta-to-1.0.0beta2.sql
 dcbc9647a87b9e82edb28c3055b93649  update/database/mysql/1.0/unstable/dbupdate-1.0.0beta2-to-1.0.0rc1.sql
 083452edd270bb0f7dd2f7772a785be3  update/database/mysql/1.0/unstable/dbupdate-1.0.0rc1-to-1.0.0.sql
