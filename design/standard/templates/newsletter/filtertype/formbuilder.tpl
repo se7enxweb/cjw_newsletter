@@ -18,11 +18,11 @@ function toggleMultiSelect( field )
     select = $( '#values_' + field );
     if ( select.attr( 'multiple' ) == true )
     {
-        select.attr( 'multiple', false );
+        select.prop( 'multiple', false );
     }
     else
     {
-        select.attr( 'multiple', true );
+        select.prop( 'multiple', true );
     }
 }
 
