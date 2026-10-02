@@ -2,6 +2,7 @@
 /**
  * The code of extension/cjw_newsletter/cronjobs/cjw_newsletter_mailqueue_create.php, moved into a class (#207 stage 1). The file extension/cjw_newsletter/cronjobs/cjw_newsletter_mailqueue_create.php is one call to it.
  * Guide: doc/bc/6.0/cli_cronjob_view_abstractions.md
+ * @description Check pending newsletter users and create the mail queue of the editions to send
  */
 /*
  * The original header of extension/cjw_newsletter/cronjobs/cjw_newsletter_mailqueue_create.php:

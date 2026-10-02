@@ -2,6 +2,7 @@
 /**
  * The code of extension/cjw_newsletter/cronjobs/cjw_newsletter_mailqueue_process.php, moved into a class (#207 stage 1). The file extension/cjw_newsletter/cronjobs/cjw_newsletter_mailqueue_process.php is one call to it.
  * Guide: doc/bc/6.0/cli_cronjob_view_abstractions.md
+ * @description Send the newsletter mails that wait in the mail queue
  */
 /*
  * The original header of extension/cjw_newsletter/cronjobs/cjw_newsletter_mailqueue_process.php:

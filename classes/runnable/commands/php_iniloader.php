@@ -2,6 +2,7 @@
 /**
  * The code of extension/cjw_newsletter/bin/php/iniloader.php, moved into a class (#207 stage 1). The file extension/cjw_newsletter/bin/php/iniloader.php is one call to it.
  * Guide: doc/bc/6.0/cli_cronjob_view_abstractions.md
+ * @description Print the serialized INI object of a siteaccess (-s siteaccess)
  */
 /*
  * The original header of extension/cjw_newsletter/bin/php/iniloader.php:
