@@ -35,8 +35,8 @@ class Iniloader extends \Exponential\Runnable\Command
             ${$__name} = &$GLOBALS[$__name];
         unset( $__name );
 
-        $cli = \eZCLI::instance();
-        $script = \eZScript::instance( array( 'description' => ( "eZ Publish INI Reader\n\n" .
+        $cli = $this->cli();
+        $script = $this->script( array( 'description' => ( "eZ Publish INI Reader\n\n" .
                                                                 "Read INI Files\n" .
                                                                 "\n" .
                                                                 "iniloader.php -s siteaccess site.ini" ),
@@ -44,11 +44,9 @@ class Iniloader extends \Exponential\Runnable\Command
                                              'use-modules' => true,
                                              'use-extensions' => true ) );
 
-        $script->startup();
-        $options = $script->getOptions( "",
+        $options = $this->startup( "",
                                         "[ininame]",
                                         array() );
-        $script->initialize();
         $iniName = $options['arguments'][0];
         $ini = \eZINI::instance('site.ini');
 

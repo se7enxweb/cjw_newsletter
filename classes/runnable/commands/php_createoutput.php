@@ -284,8 +284,8 @@ class Createoutput extends \Exponential\Runnable\Command
 
         include_once( 'kernel/common/template.php' );
 
-        $cli = \eZCLI::instance();
-        $script = \eZScript::instance( array( 'description' => ( "CjW Newsletter CreateOutput\n\n" .
+        $cli = $this->cli();
+        $script = $this->script( array( 'description' => ( "CjW Newsletter CreateOutput\n\n" .
 
                                                                 "\n" .
                                                                 "createoutput.php -s siteaccess --outputFormat=0" ),
@@ -293,9 +293,7 @@ class Createoutput extends \Exponential\Runnable\Command
                                              'use-modules' => true,
                                              'use-extensions' => true ) );
 
-        $script->startup();
-
-        $options = $script->getOptions( "[output_format_id:][object_id:][object_version:][current_hostname:][www_dir:][skin_name:]",
+        $options = $this->startup( "[output_format_id:][object_id:][object_version:][current_hostname:][www_dir:][skin_name:]",
                                         "",
                                         array( 'output_format_id' => '--',
                                                'object_id' => '--',
@@ -307,10 +305,6 @@ class Createoutput extends \Exponential\Runnable\Command
                                         false,
                                         array( 'siteaccess' => true,
                                                'user' => true )  );
-
-
-
-        $script->initialize();
 
         // login as admin
         // that template proecessing inlcude all images
