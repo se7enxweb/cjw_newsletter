@@ -2,73 +2,10 @@
 /**
  * File unsubscribe.php
  *
- * @copyright Copyright (C) 2007-2012 CJW Network - Coolscreen.de, JAC Systeme GmbH, Webmanufaktur. All rights reserved.
- * @license http://ez.no/licenses/gnu_gpl GNU GPL v2
- * @version //autogentag//
+ * @copyright Copyright (C) 1998 - 2026 7x and the Exponential Foundation. All rights reserved.
+ * @license GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
- * @subpackage modules
- * @filesource
  */
 
-require_once( 'kernel/common/i18n.php' );
-include_once( 'kernel/common/template.php' );
-
-$module = $Params['Module'];
-
-$http = eZHTTPTool::instance();
-$tpl = templateInit();
-$subscription = CjwNewsletterSubscription::fetchByHash( $Params['Hash'] );
-
-if ( !$subscription )
-{
-    return $module->handleError( eZError::KERNEL_NOT_AVAILABLE, 'kernel' );
-}
-
-$newsletterUser = $subscription->attribute( 'newsletter_user' );
-if ( !is_object( $newsletterUser ) )
-{
-    return $module->handleError( eZError::KERNEL_NOT_AVAILABLE, 'kernel' );
-}
-if ( $newsletterUser->isOnBlacklist() )
-{
-    return $module->handleError( eZError::KERNEL_NOT_AVAILABLE, 'kernel' );
-}
-
-if( $subscription->isRemoved() )
-{
-    $tplTemplate = 'design:newsletter/unsubscribe_already_done.tpl';
-}
-elseif ( $module->isCurrentAction( 'Unsubscribe' ) )
-{
-    $unsubscribeResult = $subscription->unsubscribe();
-    $tpl->setVariable( 'unsubscribe_result', $unsubscribeResult );
-
-
-    $tplTemplate = 'design:newsletter/unsubscribe_success.tpl';
-}
-else if ( $module->isCurrentAction( 'Cancel' ) )
-{
-    $cancelUri = '/';
-    if ( $module->hasActionParameter( 'CancelUri' ) )
-    {
-        $cancelUri = $module->actionParameter( 'CancelUri' );
-    }
-
-    $module->redirectTo( $cancelUri );
-    // echo $cancelUrl;
-}
-else
-{
-    $tplTemplate = 'design:newsletter/unsubscribe.tpl';
-}
-
-$tpl->setVariable( 'newsletter_user', $newsletterUser );
-$tpl->setVariable( 'subscription', $subscription );
-
-$Result = array();
-$Result['content'] = $tpl->fetch( $tplTemplate );
-$Result['path'] = array( array( 'url' => false,
-                                'text' => ezi18n( 'cjw_newsletter/unsubscribe', 'Unsubscribe' ) ) );
-
-
-?>
+// The code is in extension/cjw_newsletter/classes/runnable/views/newsletter/unsubscribe.php (#207); this file is the entry point.
+return \Exponential\View\Extension\CjwNewsletter\Newsletter\Unsubscribe::main( __FILE__, get_defined_vars() );

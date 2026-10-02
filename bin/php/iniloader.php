@@ -7,37 +7,12 @@
  * -script to get a serialized ini object of the siteaccess<br>
  * -iniloader.php -s siteaccess<br>
  *
- * @copyright Copyright (C) 2007-2012 CJW Network - Coolscreen.de, JAC Systeme GmbH, Webmanufaktur. All rights reserved.
- * @license http://ez.no/licenses/gnu_gpl GNU GPL v2
- * @version //autogentag//
+ * @copyright Copyright (C) 1998 - 2026 7x and the Exponential Foundation. All rights reserved.
+ * @license GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
- * @author Felix Woldt 2008
- * @subpackage phpscript
- * @filesource
  */
 
 require 'autoload.php';
 
-$cli = eZCLI::instance();
-$script = eZScript::instance( array( 'description' => ( "eZ Publish INI Reader\n\n" .
-                                                        "Read INI Files\n" .
-                                                        "\n" .
-                                                        "iniloader.php -s siteaccess site.ini" ),
-                                     'use-session' => false,
-                                     'use-modules' => true,
-                                     'use-extensions' => true ) );
-
-$script->startup();
-$options = $script->getOptions( "",
-                                "[ininame]",
-                                array() );
-$script->initialize();
-$iniName = $options['arguments'][0];
-$ini = eZINI::instance('site.ini');
-
-//serialize( $ini );
-$cli->output( serialize( $ini ) );
-
-$script->shutdown();
-
-?>
+// The code is in extension/cjw_newsletter/classes/runnable/commands/php_iniloader.php (#207); this file is the entry point.
+\Exponential\Command\Extension\CjwNewsletter\Iniloader::main( __FILE__ );

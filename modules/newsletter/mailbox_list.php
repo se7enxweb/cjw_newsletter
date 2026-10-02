@@ -4,57 +4,10 @@
  *
  * List all stored mailboxes.
  *
- * @copyright Copyright (C) 2007-2012 CJW Network - Coolscreen.de, JAC Systeme GmbH, Webmanufaktur. All rights reserved.
- * @license http://ez.no/licenses/gnu_gpl GNU GPL v2
- * @version //autogentag//
+ * @copyright Copyright (C) 1998 - 2026 7x and the Exponential Foundation. All rights reserved.
+ * @license GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
- * @subpackage modules
- * @filesource
  */
 
-$module = $Params['Module'];
-$templateFile = "design:newsletter/mailbox_list.tpl";
-
-require_once( 'kernel/common/i18n.php' );
-include_once( 'kernel/common/template.php' );
-
-$mailboxObject = new CjwNewsletterMailbox( true );
-
-$listMailboxesCount = 0;
-$listMailboxes = array();
-
-// return array with mailbox objects
-// TODO result check (is array or object etc )
-if ( is_object( $mailboxObject ) )
-{
-    // null when there are no mailboxes, which PHP 8's count() refuses
-    $listMailboxes = $mailboxObject->fetchAllMailboxes();
-    if ( !is_array( $listMailboxes ) )
-        $listMailboxes = array();
-    $listMailboxesCount = count( $listMailboxes );
-}
-
-$tpl = templateInit();
-
-$viewParameters = array( 'offset' => 0,
-                         'namefilter' => '',
-                         'redirect_uri' => $module->currentRedirectionURI() );
-
-$userParameters = $Params['UserParameters'];
-$viewParameters = array_merge( $viewParameters, $userParameters );
-
-$tpl->setVariable( 'view_parameters', $viewParameters );
-
-$tpl->setVariable( 'mailbox_list', $listMailboxes );
-$tpl->setVariable( 'mailbox_list_count', $listMailboxesCount );
-
-$Result = array();
-
-$Result['content'] = $tpl->fetch( $templateFile );
-$Result['path'] = array( array( 'url'  => 'newsletter/index',
-                                'text' => ezi18n( 'cjw_newsletter', 'Newsletter' ) ),
-                         array( 'url'  => false,
-                                'text' => ezi18n( 'cjw_newsletter/mailbox_item_list', 'Mail accounts' ) ) );
-
-
-?>
+// The code is in extension/cjw_newsletter/classes/runnable/views/newsletter/mailbox_list.php (#207); this file is the entry point.
+return \Exponential\View\Extension\CjwNewsletter\Newsletter\MailboxList::main( __FILE__, get_defined_vars() );

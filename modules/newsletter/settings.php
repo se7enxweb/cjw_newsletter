@@ -2,46 +2,10 @@
 /**
  * File settings.php
  *
- * @copyright Copyright (C) 2007-2012 CJW Network - Coolscreen.de, JAC Systeme GmbH, Webmanufaktur. All rights reserved.
- * @license http://ez.no/licenses/gnu_gpl GNU GPL v2
- * @version //autogentag//
+ * @copyright Copyright (C) 1998 - 2026 7x and the Exponential Foundation. All rights reserved.
+ * @license GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
- * @subpackage modules
- * @filesource
  */
 
-include_once( 'kernel/common/template.php' );
-
-$module = $Params["Module"];
-$http = eZHTTPTool::instance();
-
-$viewParameters = array();
-
-
-$tpl = templateInit();
-$tpl->setVariable( 'view_parameters', $viewParameters );
-
-//http://admin.eldorado-templin.info.jac400.in-mv.com/settings/view/eldorado-templin_admin/cjw_newsletter.ini
-
-$tpl->setVariable( 'current_siteaccess', $viewParameters );
-
-//$tpl->setVariable( 'link_array', $data['result']);
-
-//$tpl->setVariable( 'csv_data_not_ok', $invalidLinien );
-
-
-$currentSiteAccess = $GLOBALS['eZCurrentAccess'];
-$currentSiteAccessName = $currentSiteAccess['name'];
-
-$redirectUri = "/settings/view/$currentSiteAccessName/cjw_newsletter.ini";
-return $module->redirectTo( $redirectUri );
-
-/*
-$Result = array();
-$Result['content'] = $tpl->fetch( "design:newsletter/index.tpl" );
-$Result['path'] = array( array( 'url' => false,
-                                    'text' => 'newsletter' ),
-                             array( 'url' => false,
-                                    'text' => 'index' ) );
-*/
-?>
+// The code is in extension/cjw_newsletter/classes/runnable/views/newsletter/settings.php (#207); this file is the entry point.
+return \Exponential\View\Extension\CjwNewsletter\Newsletter\Settings::main( __FILE__, get_defined_vars() );
