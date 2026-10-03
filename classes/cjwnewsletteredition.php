@@ -495,24 +495,43 @@ class CjwNewsletterEdition extends eZPersistentObject
 
         $currentHostName = eZSys::hostname();
         $wwwDir = eZSys::wwwDir();
-        //$wwwDir = 'tmp';
-        $wwwDirString = '';
-        if( $wwwDir != '' )
+
+        // every value that comes from the request (siteaccess, skin) is one shell argument and nothing else
+        $args = array( escapeshellarg( $phpCli ),
+                       escapeshellarg( 'extension/cjw_newsletter/bin/php/createoutput.php' ),
+                       '--object_id=' . (int)$editionContentObjectId,
+                       '--object_version=' . (int)$versionId,
+                       '--output_format_id=' . (int)$outputFormat );
+        if ( $wwwDir != '' )
         {
-            $wwwDirString = "--www_dir=$wwwDir ";
+            $args[] = escapeshellarg( '--www_dir=' . $wwwDir );
         }
-
-        $cmd = "\"$phpCli\" extension/cjw_newsletter/bin/php/createoutput.php --object_id=$editionContentObjectId --object_version=$versionId --output_format_id=$outputFormat $wwwDirString--current_hostname=$currentHostName --skin_name=$skinName -s $siteAccess";
-
-        $fileSep = eZSys::fileSeparator();
-        $cmd = str_replace( '/', $fileSep, $cmd );
+        $args[] = escapeshellarg( '--current_hostname=' . $currentHostName );
+        $args[] = escapeshellarg( '--skin_name=' . $skinName );
+        $args[] = '-s ' . escapeshellarg( (string)$siteAccess );
+        // a cron job runs as root on many installations, and a script run as root refuses to start without this
+        if ( function_exists( 'posix_geteuid' ) && posix_geteuid() === 0 )
+        {
+            $args[] = '--allow-root-user';
+        }
+        $cmd = implode( ' ', $args ) . ' 2>&1';
 
         eZDebug::writeDebug( "shell_exec( $cmd )", 'newsletter/preview' );
-        // echo "<hr>$cmd<hr>";
 
-        $returnValue = shell_exec( escapeshellcmd( $cmd ) );
-        $newsletterContentArray = unserialize( trim( $returnValue ) );
-
+        $returnValue = shell_exec( $cmd );
+        $newsletterContentArray = is_string( $returnValue ) ? @unserialize( trim( $returnValue ) ) : false;
+        if ( !is_array( $newsletterContentArray ) )
+        {
+            // the banner some scripts print before the result is not part of it
+            $pos = is_string( $returnValue ) ? strpos( $returnValue, 'a:' ) : false;
+            $newsletterContentArray = $pos !== false ? @unserialize( trim( substr( $returnValue, $pos ) ) ) : false;
+        }
+        if ( !is_array( $newsletterContentArray ) )
+        {
+            CjwNewsletterLog::writeError( 'newsletter output could not be created for object ' . (int)$editionContentObjectId, 'CjwNewsletterEdition', 'getOutput', array( 'output' => (string)$returnValue ) );
+            return array( 'subject' => '', 'body' => array( 'html' => '', 'text' => '' ), 'output_format' => $outputFormat,
+                          'html_mail_image_include' => 0, 'ez_root' => '', 'content_type' => '', 'error' => true );
+        }
         if ( CjwNewsletterEdition::imageIncludeIsEnabled() )
             $htmlMailImageInclude = 1;
 

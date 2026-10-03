@@ -287,7 +287,7 @@ class CjwNewsletterList extends eZPersistentObject
 
         foreach ( $siteAccessArray as $siteAccessName )
         {
-            $siteAccessIniArray[ $siteAccessName ] = $this->getSitIniObjectBySiteAccessName( $siteAccessName );
+            $siteAccessIniArray[ $siteAccessName ] = $this->getSiteIniObjectBySiteAccessName( $siteAccessName );
         }
 
         return $siteAccessIniArray;
@@ -393,16 +393,29 @@ class CjwNewsletterList extends eZPersistentObject
         $cjwNewsletterIni = eZINI::instance('cjw_newsletter.ini');
         $phpCli = $cjwNewsletterIni->variable('NewsletterSettings', 'PhpCli' );
 
-        $cmd = "\"$phpCli\" extension/cjw_newsletter/bin/php/iniloader.php -s $siteAccess site.ini";
-
-        // for WINDOWS replace   / => \
-        $fileSep = eZSys::fileSeparator();
-        $cmd = str_replace( '/', $fileSep, $cmd );
+        $args = array( escapeshellarg( $phpCli ),
+                       escapeshellarg( 'extension/cjw_newsletter/bin/php/iniloader.php' ),
+                       '-s ' . escapeshellarg( (string)$siteAccess ),
+                       'site.ini' );
+        // a script run as root refuses to start without this flag
+        if ( function_exists( 'posix_geteuid' ) && posix_geteuid() === 0 )
+        {
+            $args[] = '--allow-root-user';
+        }
+        $cmd = implode( ' ', $args ) . ' 2>&1';
 
         eZDebug::writeDebug( "shell_exec( $cmd )", 'CjwNewsletterList::getSiteIniObjectBySiteAccessName()' );
 
-        $returnValue = shell_exec( escapeshellcmd( $cmd ) );
-        $iniObject = unserialize( trim( $returnValue ) );
+        $returnValue = shell_exec( $cmd );
+        $iniObject = is_string( $returnValue ) ? @unserialize( trim( $returnValue ), array( 'allowed_classes' => array( 'eZINI' ) ) ) : false;
+        if ( !is_object( $iniObject ) && is_string( $returnValue ) && ( $pos = strpos( $returnValue, 'O:' ) ) !== false )
+        {
+            $iniObject = @unserialize( trim( substr( $returnValue, $pos ) ), array( 'allowed_classes' => array( 'eZINI' ) ) );
+        }
+        if ( !is_object( $iniObject ) )
+        {
+            $iniObject = null;
+        }
         return $iniObject;
     }
 
