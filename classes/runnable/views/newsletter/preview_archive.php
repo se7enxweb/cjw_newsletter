@@ -63,9 +63,13 @@ class PreviewArchive extends \Exponential\Runnable\ModuleView
         $newsletterDataArray = $editionSendObject->getParsedOutputXml();
         $newsletterContent = false;
 
-        if( isset( $newsletterDataArray[ $outputFormatId ]) )
+        if( is_array( $newsletterDataArray ) && isset( $newsletterDataArray[ $outputFormatId ]['body'] ) )
         {
             $newsletterContentArray = $newsletterDataArray[ $outputFormatId ];
+        }
+        else
+        {
+            return $this->viewResult( isset( $Result ) ? $Result : null,  $module->handleError( \eZError::KERNEL_NOT_FOUND, 'kernel' ) );
         }
 
         // html / text  - multipart/alternative
@@ -99,7 +103,7 @@ class PreviewArchive extends \Exponential\Runnable\ModuleView
         /*$mailSubject = "<body><b>Email subject:</b> ". $newsletterContentArray['subject'] . "<br />";
         $newsletterContent = preg_replace( array('%<body>%'), array( $mailSubject ), $newsletterContent);*/
 
-        $debug = 0;
+        $debug = ( $http->hasVariable( 'Debug' ) && (int)$http->variable( 'Debug' ) == 1 ) ? 1 : 0;
 
         if( $debug == 0 )
         {

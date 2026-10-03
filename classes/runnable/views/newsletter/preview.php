@@ -118,8 +118,19 @@ class Preview extends \Exponential\Runnable\ModuleView
             $debug = true;
         }
 
+        // no such edition version
+        if ( !is_object( \eZContentObjectVersion::fetchVersion( (int)$versionId, (int)$editionContentObjectId, true ) ) )
+        {
+            return $this->viewResult( isset( $Result ) ? $Result : null,  $module->handleError( \eZError::KERNEL_NOT_AVAILABLE, 'kernel' ) );
+        }
+
         $newsletterContent = '';
         $newsletterContentArray = \CjwNewsletterEdition::getOutput( $editionContentObjectId, $versionId, $outputFormat, $siteAccess, $skinName, $forceSettingImageIncludeTo );
+
+        if( !is_array( $newsletterContentArray ) || !empty( $newsletterContentArray['error'] ) )
+        {
+            return $this->viewResult( isset( $Result ) ? $Result : null,  $module->handleError( \eZError::KERNEL_NOT_FOUND, 'kernel' ) );
+        }
 
         if( $newsletterContentArray['content_type'] == 'text/html' )
         {

@@ -59,9 +59,14 @@ class Archive extends \Exponential\Runnable\ModuleView
         $newsletterDataArray = $editionSendObject->getParsedOutputXml();
         $newsletterContent = false;
 
-        if( isset( $newsletterDataArray[ $outputFormatId ]) )
+        if( is_array( $newsletterDataArray ) && isset( $newsletterDataArray[ $outputFormatId ]['body'] ) )
         {
             $newsletterContentArray = $newsletterDataArray[ $outputFormatId ];
+        }
+        else
+        {
+            // the edition has no such output format
+            return $this->viewResult( isset( $Result ) ? $Result : null,  $module->handleError( \eZError::KERNEL_NOT_AVAILABLE, 'kernel' ) );
         }
 
         switch( $outputFormatId )
@@ -74,14 +79,14 @@ class Archive extends \Exponential\Runnable\ModuleView
             case 1:
 
                 $newsletterContent .= '<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>newsletter - outputformat - text</title></head><body><pre>'. $newsletterContentArray['body']['text'] .'</pre></body></html>';
+        <title>newsletter - outputformat - text</title></head><body><pre>'. htmlspecialchars( $newsletterContentArray['body']['text'], ENT_QUOTES, 'UTF-8' ) .'</pre></body></html>';
 
                 break;
             default:
                 return $this->viewResult( isset( $Result ) ? $Result : null,  $module->handleError( \eZError::KERNEL_NOT_AVAILABLE, 'kernel' ) );
         }
 
-        $debug = 0;
+        $debug = ( $http->hasVariable( 'Debug' ) && (int)$http->variable( 'Debug' ) == 1 ) ? 1 : 0;
 
         if( $debug == 0 )
         {
