@@ -223,6 +223,7 @@ class CjwNewsletterEditionSendItem extends eZPersistentObject
      */
     static function fetchListByNewsletterUserId( $limit, $offset, $newsletterUserId, $asObject = true )
     {
+        $limitArr = null;
         if ( (int) $limit != 0 )
         {
             $limitArr = array( 'limit' => $limit, 'offset' => $offset );
@@ -255,6 +256,7 @@ class CjwNewsletterEditionSendItem extends eZPersistentObject
      */
     static function fetchListByNewsletterUserIdAndStatus( $limit, $offset, $newsletterUserId, $status, $asObject = true )
     {
+        $limitArr = null;
         if ( (int) $limit != 0 )
         {
             $limitArr = array( 'limit' => $limit, 'offset' => $offset );
@@ -398,7 +400,6 @@ class CjwNewsletterEditionSendItem extends eZPersistentObject
         }
 
         $limitArr = null;
-
         if ( (int) $limit != 0 )
         {
             $limitArr = array( 'limit' => $limit, 'offset' => $offset );
@@ -475,6 +476,10 @@ class CjwNewsletterEditionSendItem extends eZPersistentObject
     function getNewsletterEditionObject()
     {
         $tmp = CjwNewsletterEditionSend::fetch($this->attribute('edition_send_id'));
+        if ( !is_object( $tmp ) )
+        {
+            return false;
+        }
         $obj = eZContentObject::fetch( $tmp->attribute('edition_contentobject_id') );
         return $obj;
     }
@@ -487,7 +492,7 @@ class CjwNewsletterEditionSendItem extends eZPersistentObject
      * @param string $hashCode
      * @return object / boolean
      */
-    public static function fetchByHash( $hashCode, $asObject )
+    public static function fetchByHash( $hashCode, $asObject = true )
     {
          return eZPersistentObject::fetchObject(
                                                     CjwNewsletterEditionSendItem::definition(),
@@ -545,6 +550,7 @@ class CjwNewsletterEditionSendItem extends eZPersistentObject
         {
             $sendItem->setAttribute( 'status' , self::STATUS_ABORT );
             $sendItem->setAttribute( 'bounced', time() );
+            $sendItem->store();
         }
         return count( $sendItemList );
     }

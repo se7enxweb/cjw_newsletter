@@ -480,13 +480,19 @@ class CjwNewsletterEditionSend extends eZPersistentObject
         $xmlString = $this->attribute( 'output_xml' );
 
         $doc = new DOMDocument();
-        $doc->loadXML( $xmlString );
-
-        $outputFormatNodes = $doc->getElementsByTagName( 'output_formats' )->item(0);
+        // an empty or damaged output_xml has no output formats
+        if ( trim( (string)$xmlString ) === '' || !@$doc->loadXML( $xmlString ) )
+        {
+            return $resultArray;
+        }
 
         // first to create a list of categories
         $outputFormatArray = array();
         $xmlOutputFormats = $doc->getElementsByTagName( 'output_formats' )->item(0);
+        if ( !$xmlOutputFormats )
+        {
+            return $resultArray;
+        }
 
         foreach ( $xmlOutputFormats->getElementsByTagName( 'output_format' ) as $outputFormatNode )
         {
@@ -510,7 +516,7 @@ class CjwNewsletterEditionSend extends eZPersistentObject
             $mainTemplateNode = $outputFormatNode->getElementsByTagName( 'main_template' )->item(0);
 
             // <type name="html"> <type name="text">
-            foreach ( $mainTemplateNode->getElementsByTagName( 'type' ) as $typeNode )
+            foreach ( $mainTemplateNode ? $mainTemplateNode->getElementsByTagName( 'type' ) : array() as $typeNode )
             {
                 $typeName = $typeNode->getAttribute( 'name' );
                 switch ( $typeName )

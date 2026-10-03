@@ -194,6 +194,7 @@ class CjwNewsletterBlacklistItem extends eZPersistentObject
      */
     static public function fetchAllBlacklistItems( $limit = 50, $offset = 0, $sortByArray = null, $asObject = true )
     {
+        $limitArr = null;
         if ( (int) $limit != 0 )
         {
             $limitArr = array( 'limit' => $limit, 'offset' => $offset );

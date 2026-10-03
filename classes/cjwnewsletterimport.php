@@ -177,6 +177,7 @@ class CjwNewsletterImport extends eZPersistentObject
      */
     static public function fetchAllImportItems( $limit = 50, $offset = 0, $sortByArray = null, $asObject = true )
     {
+        $limitArr = null;
         if ( (int) $limit != 0 )
         {
             $limitArr = array( 'limit' => $limit, 'offset' => $offset );

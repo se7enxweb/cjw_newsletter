@@ -200,6 +200,7 @@ class CjwNewsletterMailboxItem extends eZPersistentObject
      */
     static public function fetchAllMailboxItems( $limit = 50, $offset = 0, $sortByArray = null, $asObject = true )
     {
+        $limitArr = null;
         if ( (int) $limit != 0 )
         {
             $limitArr = array( 'limit' => $limit, 'offset' => $offset );
@@ -365,12 +366,19 @@ class CjwNewsletterMailboxItem extends eZPersistentObject
      */
     private function saveParsedInfos( $parsedResult )
     {
+        // a message that cannot be parsed is done with: it is marked processed so that it is not tried again and again
+        if ( !is_array( $parsedResult ) )
+        {
+            $this->setAttribute( 'processed', time() );
+            $this->store();
+            return;
+        }
         $this->setAttribute( 'email_from', $parsedResult[ 'from' ] );
         $this->setAttribute( 'email_to', $parsedResult[ 'to' ] );
         $this->setAttribute( 'email_subject', $parsedResult['subject' ] );
         $this->setAttribute( 'bounce_code', $parsedResult[ 'error_code' ] );
         //$this->setAttribute( 'final_recipient', $parsedResult[ 'final_recipient' ] );
-        $this->setAttribute( 'email_send_date', $this->convertEmailSendDateToTimestamp( $parsedResult[ 'email_send_date' ] ) );
+        $this->setAttribute( 'email_send_date', (int)$this->convertEmailSendDateToTimestamp( $parsedResult[ 'email_send_date' ] ) );
 
         // if x-cjwnl-senditem hash was set in bounce mail than fetch some ez data
         if ( isset( $parsedResult[ 'x-cjwnl-senditem' ] ) )
@@ -407,9 +415,9 @@ class CjwNewsletterMailboxItem extends eZPersistentObject
         // if only set 'x-cjwnl-user'
         elseif ( isset( $parsedResult[ 'x-cjwnl-user' ] ) )
         {
-            $newsletterUser = CjwNewsletterUser::fetchByHash( $sendItemHash, true );
+            $newsletterUser = CjwNewsletterUser::fetchByHash( $parsedResult[ 'x-cjwnl-user' ], true );
 
-            if ( is_object( $sendItemObject ) )
+            if ( is_object( $newsletterUser ) )
             {
                 $newsletterUserId = $newsletterUser->attribute('id');
                 $this->setAttribute( 'newsletter_user_id', $newsletterUserId );
