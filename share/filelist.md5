@@ -1,6 +1,6 @@
+name: cjw_newsletter
 version: 4.1.14
-version: 4.1.13
-files_count: 275
+files_count: 276
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
 aa9ea80af84e6cba65e0764a80b56e16  .gitignore
@@ -14,6 +14,7 @@ aa9ea80af84e6cba65e0764a80b56e16  .gitignore
 9529122df889e50c12928e8a31f0db59  bin/php/createoutput.php
 b166fa164601e815da34960e05960c6c  bin/php/iniloader.php
 1c057511e70c7670318dcef1a4566dc0  classes/cjwnewsletterblacklistitem.php
+b72b58555d15802945278ec319ab7800  classes/cjwnewsletterclassinstaller.php
 c100460656f5985e64ce64468eab85fc  classes/cjwnewslettercsvexport.php
 ca9eb0be6024c09fc0bee16d7875dbcd  classes/cjwnewslettercsvparser.php
 9ad5781c7c4076fcc745d85698db7f60  classes/cjwnewsletteredition.php
@@ -47,8 +48,8 @@ e7e70295b7b1985893ef64f110a22280  cronjobs/cjw_newsletter_mailqueue_process.php
 92d2676a7de76981e85916aa0e0dcfcb  datatypes/cjwnewsletterlistvirtual/cjwnewsletterlistvirtualtype.php
 a9bd8883e1218b38482ec8786b133861  datatypes/cjwnewslettersubscription/cjwnewslettersubscriptiontype.php
 6e8c923562443d906b907b020275ca97  design/admin2/override/templates/node/view/full/cjw_newsletter_edition.tpl
-27237ca75ee5133cc5c58635ca636178  design/admin2/override/templates/node/view/full/cjw_newsletter_list.tpl
-b601c272eaf65bb21bf794ade51539e1  design/admin2/override/templates/node/view/full/cjw_newsletter_list_virtual.tpl
+60f8d566d1df550e7b3044b5b8c7cbb7  design/admin2/override/templates/node/view/full/cjw_newsletter_list.tpl
+41fecbf922bace4e08eba39007f544fe  design/admin2/override/templates/node/view/full/cjw_newsletter_list_virtual.tpl
 528b5c78662075879713efa073320e88  design/admin2/templates/cjw_newsletter_edition_preview.tpl
 9526cd16ee381ec3ca1022a1d9533417  design/admin2/templates/cjw_newsletter_edition_preview_archive.tpl
 a7e21058fdb2e5ffb0d20fdfdd554ebb  design/admin2/templates/cjw_newsletter_edition_send_statistic.tpl
@@ -214,8 +215,8 @@ cf1036b2d3360f8e36d7462c0c58eaa8  doc/uml/cjw_newsletter_dbschema_v1.0.0.png
 71f4165c0974cba8273f21381b2a7031  doc/uml/class_diagram.svg
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
 9b42fb9c56db8dd0f49f360dd3de0df4  extendedattributefilter/cjwnewsletterlistfilter.php
-e7c2821a3ea497a928ff0c00fe4b96a2  extension.xml
-756afaf425727a73eb24d682f7508158  ezinfo.php
+4e5ed992a6967b2b8b0e4482846a97d8  extension.xml
+6c6bd0899ecc5a31d7943b23d0cc3c25  ezinfo.php
 497b5da0906ba7711bb1c1bf1e7992de  modules/newsletter/archive.php
 092c3c44c54c804db95592598cf3026f  modules/newsletter/blacklist_item_add.php
 0590861266fa3db091c7e434d11e9f7f  modules/newsletter/blacklist_item_list.php
