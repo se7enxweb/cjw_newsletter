@@ -146,6 +146,9 @@
 </div>
 
 <div class="float-break"></div>
+</form>
+
+{* The forms below are separate forms: nested forms are dropped by the browser, which merged all their fields into the one above. *}
 
 <div class="button-left">
 <div class='block'>
@@ -176,7 +179,7 @@
 </div>
 
 <div class="float-break"></div>
-</form>
+
 {* DESIGN: Control bar END *}
 </div>
 
