@@ -5,199 +5,199 @@
     <name>cjw_newsletter</name>
     <message>
         <source>Newsletter</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/blacklist_item_add</name>
     <message>
         <source>Edit &lt;%mailbox.email&gt; </source>
-        <translation type="unfinished"></translation>
+        <translation>Edit &lt;%mailbox.email&gt; </translation>
     </message>
     <message>
         <source>Add a new Blacklist item </source>
-        <translation type="unfinished"></translation>
+        <translation>Add a new Blacklist item </translation>
     </message>
     <message>
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation>Email</translation>
     </message>
     <message>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation>Note</translation>
     </message>
     <message>
         <source>Add to Blacklist</source>
-        <translation type="unfinished"></translation>
+        <translation>Add to Blacklist</translation>
     </message>
     <message>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>Discard</translation>
     </message>
     <message>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Back</translation>
     </message>
     <message>
         <source>Successfully adding newsletter user %nl_user_id with email %email to blacklist</source>
-        <translation type="unfinished"></translation>
+        <translation>Successfully adding newsletter user %nl_user_id with email %email to blacklist</translation>
     </message>
     <message>
         <source>Successfully adding email address %email to blacklist</source>
-        <translation type="unfinished"></translation>
+        <translation>Successfully adding email address %email to blacklist</translation>
     </message>
     <message>
         <source>Blacklist add</source>
-        <translation type="unfinished"></translation>
+        <translation>Blacklist add</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/blacklist_item_list</name>
     <message>
         <source>Create a new blacklist entry.</source>
-        <translation type="unfinished"></translation>
+        <translation>Create a new blacklist entry.</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Invert selection</translation>
     </message>
     <message>
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID</translation>
     </message>
     <message>
         <source>Email hash</source>
-        <translation type="unfinished"></translation>
+        <translation>Email hash</translation>
     </message>
     <message>
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation>Email</translation>
     </message>
     <message>
         <source>Created</source>
-        <translation type="unfinished"></translation>
+        <translation>Created</translation>
     </message>
     <message>
         <source>Creator</source>
-        <translation type="unfinished"></translation>
+        <translation>Creator</translation>
     </message>
     <message>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation>Note</translation>
     </message>
     <message>
         <source>Select items for removal</source>
-        <translation type="unfinished"></translation>
+        <translation>Select items for removal</translation>
     </message>
     <message>
         <source>Manage blacklist</source>
-        <translation type="unfinished"></translation>
+        <translation>Manage blacklist</translation>
     </message>
     <message>
         <source>By adding an user to the blacklist, you can make sure that he will never get a newsletter again from this system.</source>
-        <translation type="unfinished"></translation>
+        <translation>By adding an user to the blacklist, you can make sure that he will never get a newsletter again from this system.</translation>
     </message>
     <message>
         <source>Add email address to blacklist</source>
-        <translation type="unfinished"></translation>
+        <translation>Add email address to blacklist</translation>
     </message>
     <message>
         <source>Blacklisted users</source>
-        <translation type="unfinished"></translation>
+        <translation>Blacklisted users</translation>
     </message>
     <message>
         <source>Newsletter UID</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter UID</translation>
     </message>
     <message>
         <source>Blacklists</source>
-        <translation type="unfinished"></translation>
+        <translation>Blacklists</translation>
     </message>
     <message>
         <source>Remove selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove selected</translation>
     </message>
     <message>
         <source>Remove the selected items from the list above.</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove the selected items from the list above.</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/cjw_newsletter_edition_preview</name>
     <message>
         <source>Do you really want to send out this newsletter to all recipients of this Newsletterlist?</source>
-        <translation type="unfinished"></translation>
+        <translation>Do you really want to send out this newsletter to all recipients of this Newsletterlist?</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/cjw_newsletter_edition_send_statistic</name>
     <message>
         <source>Current Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Current Date</translation>
     </message>
     <message>
         <source>Newsletter Edition send out statistic</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter Edition send out statistic</translation>
     </message>
     <message>
         <source>Id</source>
-        <translation type="unfinished"></translation>
+        <translation>Id</translation>
     </message>
     <message>
         <source>Mail count</source>
-        <translation type="unfinished"></translation>
+        <translation>Mail count</translation>
     </message>
     <message>
         <source>Mail send</source>
-        <translation type="unfinished"></translation>
+        <translation>Mail send</translation>
     </message>
     <message>
         <source>Mail not send</source>
-        <translation type="unfinished"></translation>
+        <translation>Mail not send</translation>
     </message>
     <message>
         <source>Mail bounced</source>
-        <translation type="unfinished"></translation>
+        <translation>Mail bounced</translation>
     </message>
     <message>
         <source>Creator</source>
-        <translation type="unfinished"></translation>
+        <translation>Creator</translation>
     </message>
     <message>
         <source>Abort cronjob</source>
-        <translation type="unfinished"></translation>
+        <translation>Abort cronjob</translation>
     </message>
     <message>
         <source>Emails count</source>
-        <translation type="unfinished"></translation>
+        <translation>Emails count</translation>
     </message>
     <message>
         <source>Emails sent</source>
-        <translation type="unfinished"></translation>
+        <translation>Emails sent</translation>
     </message>
     <message>
         <source>Emails opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Emails opened</translation>
     </message>
     <message>
         <source>Emails not sent</source>
-        <translation type="unfinished"></translation>
+        <translation>Emails not sent</translation>
     </message>
     <message>
         <source>Emails bounced</source>
-        <translation type="unfinished"></translation>
+        <translation>Emails bounced</translation>
     </message>
     <message>
         <source>Newsletter processing info</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter processing info</translation>
     </message>
     <message>
         <source>Cronjob status</source>
-        <translation type="unfinished"></translation>
+        <translation>Cronjob status</translation>
     </message>
     <message>
         <source>Statistics</source>
-        <translation type="unfinished"></translation>
+        <translation>Statistics</translation>
     </message>
     <message>
         <source>Cronjob Status:</source>
@@ -208,153 +208,153 @@
     <name>cjw_newsletter/cjw_newsletter_edition_status</name>
     <message>
         <source>Edition State</source>
-        <translation type="unfinished"></translation>
+        <translation>Edition State</translation>
     </message>
     <message>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>State</translation>
     </message>
     <message>
         <source>Operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Operation</translation>
     </message>
     <message>
         <source>Send Newsletter</source>
-        <translation type="unfinished"></translation>
+        <translation>Send Newsletter</translation>
     </message>
     <message>
         <source>in the dispatch</source>
-        <translation type="unfinished"></translation>
+        <translation>in the dispatch</translation>
     </message>
     <message>
         <source>sends</source>
-        <translation type="unfinished"></translation>
+        <translation>sends</translation>
     </message>
     <message>
         <source>uncompletedly</source>
-        <translation type="unfinished"></translation>
+        <translation>uncompletedly</translation>
     </message>
     <message>
         <source>Newsletter edition preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter edition preview</translation>
     </message>
     <message>
         <source>Status draft</source>
-        <translation type="unfinished"></translation>
+        <translation>Status draft</translation>
     </message>
     <message>
         <source>Status process</source>
-        <translation type="unfinished"></translation>
+        <translation>Status process</translation>
     </message>
     <message>
         <source>Status archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Status archive</translation>
     </message>
     <message>
         <source>Status abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Status abort</translation>
     </message>
     <message>
         <source>Newsletter edition preview archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter edition preview archive</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/cjw_newsletter_list</name>
     <message>
         <source>Create newsletter here</source>
-        <translation type="unfinished"></translation>
+        <translation>Create newsletter here</translation>
     </message>
     <message>
         <source>Create filter here</source>
-        <translation type="unfinished"></translation>
+        <translation>Create filter here</translation>
     </message>
     <message>
         <source>Newsletter editions</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter editions</translation>
     </message>
     <message>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>All</translation>
     </message>
     <message>
         <source>The current selection has no result.</source>
-        <translation type="unfinished"></translation>
+        <translation>The current selection has no result.</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/cjw_newsletter_list_children</name>
     <message>
         <source>Up one level.</source>
-        <translation type="unfinished"></translation>
+        <translation>Up one level.</translation>
     </message>
     <message>
         <source>Sub items [%children_count]</source>
-        <translation type="unfinished"></translation>
+        <translation>Sub items [%children_count]</translation>
     </message>
     <message>
         <source>Show 10 items per page.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show 10 items per page.</translation>
     </message>
     <message>
         <source>Show 50 items per page.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show 50 items per page.</translation>
     </message>
     <message>
         <source>Show 25 items per page.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show 25 items per page.</translation>
     </message>
     <message>
         <source>Display sub items using a simple list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Display sub items using a simple list.</translation>
     </message>
     <message>
         <source>List</source>
-        <translation type="unfinished"></translation>
+        <translation>List</translation>
     </message>
     <message>
         <source>Thumbnail</source>
-        <translation type="unfinished"></translation>
+        <translation>Thumbnail</translation>
     </message>
     <message>
         <source>Display sub items using a detailed list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Display sub items using a detailed list.</translation>
     </message>
     <message>
         <source>Detailed</source>
-        <translation type="unfinished"></translation>
+        <translation>Detailed</translation>
     </message>
     <message>
         <source>Display sub items as thumbnails.</source>
-        <translation type="unfinished"></translation>
+        <translation>Display sub items as thumbnails.</translation>
     </message>
     <message>
         <source>The current item does not contain any sub items.</source>
-        <translation type="unfinished"></translation>
+        <translation>The current item does not contain any sub items.</translation>
     </message>
     <message>
         <source>Remove selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove selected</translation>
     </message>
     <message>
         <source>Remove the selected items from the list above.</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove the selected items from the list above.</translation>
     </message>
     <message>
         <source>You do not have permission to remove any of the items from the list above.</source>
-        <translation type="unfinished"></translation>
+        <translation>You do not have permission to remove any of the items from the list above.</translation>
     </message>
     <message>
         <source>Update priorities</source>
-        <translation type="unfinished"></translation>
+        <translation>Update priorities</translation>
     </message>
     <message>
         <source>Apply changes to the priorities of the items in the list above.</source>
-        <translation type="unfinished"></translation>
+        <translation>Apply changes to the priorities of the items in the list above.</translation>
     </message>
     <message>
         <source>You cannot update the priorities because you do not have permission to edit the current item or because a non-priority sorting method is used.</source>
-        <translation type="unfinished"></translation>
+        <translation>You cannot update the priorities because you do not have permission to edit the current item or because a non-priority sorting method is used.</translation>
     </message>
     <message>
         <source>Use this menu to select the type of item you want to create then click the &quot;Create here&quot; button. The item will be created in the current location.</source>
@@ -366,106 +366,114 @@
     </message>
     <message>
         <source>Create here</source>
-        <translation type="unfinished"></translation>
+        <translation>Create here</translation>
     </message>
     <message>
         <source>Create a new item in the current location. Use the menu on the left to select the type of  item.</source>
-        <translation type="unfinished"></translation>
+        <translation>Create a new item in the current location. Use the menu on the left to select the type of  item.</translation>
     </message>
     <message>
         <source>Not available</source>
-        <translation type="unfinished"></translation>
+        <translation>Not available</translation>
     </message>
     <message>
         <source>You do not have permission to create new items in the current location.</source>
-        <translation type="unfinished"></translation>
+        <translation>You do not have permission to create new items in the current location.</translation>
     </message>
     <message>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorting</translation>
     </message>
     <message>
         <source>Class identifier</source>
-        <translation type="unfinished"></translation>
+        <translation>Class identifier</translation>
     </message>
     <message>
         <source>Class name</source>
-        <translation type="unfinished"></translation>
+        <translation>Class name</translation>
     </message>
     <message>
         <source>Depth</source>
-        <translation type="unfinished"></translation>
+        <translation>Depth</translation>
     </message>
     <message>
         <source>Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Modified</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Name</translation>
     </message>
     <message>
         <source>Priority</source>
-        <translation type="unfinished"></translation>
+        <translation>Priority</translation>
     </message>
     <message>
         <source>Published</source>
-        <translation type="unfinished"></translation>
+        <translation>Published</translation>
     </message>
     <message>
         <source>Section</source>
-        <translation type="unfinished"></translation>
+        <translation>Section</translation>
     </message>
     <message>
         <source>You cannot set the sorting method for the current location because you do not have permission to edit the current item.</source>
-        <translation type="unfinished"></translation>
+        <translation>You cannot set the sorting method for the current location because you do not have permission to edit the current item.</translation>
     </message>
     <message>
         <source>Use these controls to set the sorting method for the sub items of the current location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Use these controls to set the sorting method for the sub items of the current location.</translation>
     </message>
     <message>
         <source>Descending</source>
-        <translation type="unfinished"></translation>
+        <translation>Descending</translation>
     </message>
     <message>
         <source>Ascending</source>
-        <translation type="unfinished"></translation>
+        <translation>Ascending</translation>
     </message>
     <message>
         <source>Set</source>
-        <translation type="unfinished"></translation>
+        <translation>Set</translation>
+    </message>
+    <message>
+        <source>Use this menu to select the language you want to use for the creation then click the "Create here" button. The item will be created in the current location.</source>
+        <translation>Use this menu to select the language you want to use for the creation then click the "Create here" button. The item will be created in the current location.</translation>
+    </message>
+    <message>
+        <source>Use this menu to select the type of item you want to create then click the "Create here" button. The item will be created in the current location.</source>
+        <translation>Use this menu to select the type of item you want to create then click the "Create here" button. The item will be created in the current location.</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/cjw_newsletter_list_children_list</name>
     <message>
         <source>Invert selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Invert selection.</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Name</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Status</translation>
     </message>
     <message>
         <source>Published</source>
-        <translation type="unfinished"></translation>
+        <translation>Published</translation>
     </message>
     <message>
         <source>Priority</source>
-        <translation type="unfinished"></translation>
+        <translation>Priority</translation>
     </message>
     <message>
         <source>(disabled)</source>
-        <translation type="unfinished"></translation>
+        <translation>(disabled)</translation>
     </message>
     <message>
         <source>(locked)</source>
-        <translation type="unfinished"></translation>
+        <translation>(locked)</translation>
     </message>
     <message>
         <source>Use the priority fields to control the order in which the items appear. You can use both positive and negative integers. Click the &quot;Update priorities&quot; button to apply the changes.</source>
@@ -473,19 +481,19 @@
     </message>
     <message>
         <source>You are not allowed to update the priorities because you do not have permission to edit &lt;%node_name&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>You are not allowed to update the priorities because you do not have permission to edit &lt;%node_name&gt;.</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit</translation>
     </message>
     <message>
         <source>The edition %child_name is already in sending process.</source>
-        <translation type="unfinished"></translation>
+        <translation>The edition %child_name is already in sending process.</translation>
     </message>
     <message>
         <source>Edit &lt;%child_name&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit &lt;%child_name&gt;.</translation>
     </message>
     <message>
         <source>You do not have permission to edit &quot;%child_name&quot;.</source>
@@ -493,89 +501,97 @@
     </message>
     <message>
         <source>Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Modified</translation>
+    </message>
+    <message>
+        <source>Use the priority fields to control the order in which the items appear. You can use both positive and negative integers. Click the "Update priorities" button to apply the changes.</source>
+        <translation>Use the priority fields to control the order in which the items appear. You can use both positive and negative integers. Click the "Update priorities" button to apply the changes.</translation>
+    </message>
+    <message>
+        <source>You do not have permission to edit "%child_name".</source>
+        <translation>You do not have permission to edit "%child_name".</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/cjw_newsletter_list_window_controls</name>
     <message>
         <source>Hide preview of content.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hide preview of content.</translation>
     </message>
     <message>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Preview</translation>
     </message>
     <message>
         <source>Show preview of content.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show preview of content.</translation>
     </message>
     <message>
         <source>Hide details.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hide details.</translation>
     </message>
     <message>
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Details</translation>
     </message>
     <message>
         <source>Show details.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show details.</translation>
     </message>
     <message>
         <source>Hide available translations.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hide available translations.</translation>
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Translations</translation>
     </message>
     <message>
         <source>Show available translations.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show available translations.</translation>
     </message>
     <message>
         <source>Hide location overview.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hide location overview.</translation>
     </message>
     <message>
         <source>Locations</source>
-        <translation type="unfinished"></translation>
+        <translation>Locations</translation>
     </message>
     <message>
         <source>Show location overview.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show location overview.</translation>
     </message>
     <message>
         <source>Hide object relation overview.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hide object relation overview.</translation>
     </message>
     <message>
         <source>Relations</source>
-        <translation type="unfinished"></translation>
+        <translation>Relations</translation>
     </message>
     <message>
         <source>Show object relation overview.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show object relation overview.</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/cjwnewsletteredition_preview</name>
     <message>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Preview</translation>
     </message>
     <message>
         <source>Fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Fullscreen</translation>
     </message>
     <message>
         <source>Skin</source>
-        <translation type="unfinished"></translation>
+        <translation>Skin</translation>
     </message>
     <message>
         <source>Archived</source>
-        <translation type="unfinished"></translation>
+        <translation>Archived</translation>
     </message>
     <message>
         <source>your browser does not support iframes!</source>
@@ -586,58 +602,58 @@
     <name>cjw_newsletter/cjwnewsletteredition_preview_archive</name>
     <message>
         <source>Archive view</source>
-        <translation type="unfinished"></translation>
+        <translation>Archive view</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/configure</name>
     <message>
         <source>Configure newsletter settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Configure newsletter settings</translation>
     </message>
     <message>
         <source>Newsletter confirmation successful</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter confirmation successful</translation>
     </message>
     <message>
         <source>First name of the subscriber.</source>
-        <translation type="unfinished"></translation>
+        <translation>First name of the subscriber.</translation>
     </message>
     <message>
         <source>Email of the subscriber.</source>
-        <translation type="unfinished"></translation>
+        <translation>Email of the subscriber.</translation>
     </message>
     <message>
         <source>Add to subscription.</source>
-        <translation type="unfinished"></translation>
+        <translation>Add to subscription.</translation>
     </message>
     <message>
         <source>Salutation</source>
-        <translation type="unfinished"></translation>
+        <translation>Salutation</translation>
     </message>
     <message>
         <source>First name</source>
-        <translation type="unfinished"></translation>
+        <translation>First name</translation>
     </message>
     <message>
         <source>Last name</source>
-        <translation type="unfinished"></translation>
+        <translation>Last name</translation>
     </message>
     <message>
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation>Email</translation>
     </message>
     <message>
         <source>Confirm</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirm</translation>
     </message>
     <message>
         <source>Here you can edit your newsletter attributes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Here you can edit your newsletter attributes.</translation>
     </message>
     <message>
         <source>Please select the newsletter you wish to subscribe to. Deselect to unsubscribe.</source>
-        <translation type="unfinished"></translation>
+        <translation>Please select the newsletter you wish to subscribe to. Deselect to unsubscribe.</translation>
     </message>
     <message>
         <source>You can also edit the small boxes &quot;first name&quot; and &quot;last name&quot;.</source>
@@ -645,46 +661,50 @@
     </message>
     <message>
         <source>Please register another email address to subscribe to the same newsletter twice.</source>
-        <translation type="unfinished"></translation>
+        <translation>Please register another email address to subscribe to the same newsletter twice.</translation>
     </message>
     <message>
         <source>* mandatory fields</source>
-        <translation type="unfinished"></translation>
+        <translation>* mandatory fields</translation>
     </message>
     <message>
         <source>Changes saved</source>
-        <translation type="unfinished"></translation>
+        <translation>Changes saved</translation>
     </message>
     <message>
         <source>No newsletters available.</source>
-        <translation type="unfinished"></translation>
+        <translation>No newsletters available.</translation>
+    </message>
+    <message>
+        <source>You can also edit the small boxes "first name" and "last name".</source>
+        <translation>You can also edit the small boxes "first name" and "last name".</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/contentstructuremenu</name>
     <message>
         <source>Fold/Unfold</source>
-        <translation type="unfinished"></translation>
+        <translation>Fold/Unfold</translation>
     </message>
     <message>
         <source>Draft</source>
-        <translation type="unfinished"></translation>
+        <translation>Draft</translation>
     </message>
     <message>
         <source>Subscriptions</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscriptions</translation>
     </message>
     <message>
         <source>Archived</source>
-        <translation type="unfinished"></translation>
+        <translation>Archived</translation>
     </message>
     <message>
         <source>Aborted</source>
-        <translation type="unfinished"></translation>
+        <translation>Aborted</translation>
     </message>
     <message>
         <source>Sending</source>
-        <translation type="unfinished"></translation>
+        <translation>Sending</translation>
     </message>
     <message>
         <source>Subscriptions Filter (%approved/%all)</source>
@@ -699,15 +719,15 @@
     <name>cjw_newsletter/datatype/cjwnewsletteredition</name>
     <message>
         <source>The current edition is already in sending process - to create a new version please stop it first</source>
-        <translation type="unfinished"></translation>
+        <translation>The current edition is already in sending process - to create a new version please stop it first</translation>
     </message>
     <message>
         <source>The current edition is already in sending process - you have to create a new copy of this object</source>
-        <translation type="unfinished"></translation>
+        <translation>The current edition is already in sending process - you have to create a new copy of this object</translation>
     </message>
     <message>
         <source>The current edition was already send and is in archive!</source>
-        <translation type="unfinished"></translation>
+        <translation>The current edition was already send and is in archive!</translation>
     </message>
     <message>
         <source>Status:</source>
@@ -717,24 +737,28 @@
         <source>The schedule date or time is invalid!</source>
         <translation>The schedule date or time is invalid!</translation>
     </message>
+    <message>
+        <source>You have to set a valid email adress</source>
+        <translation>You have to set a valid email adress</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/datatype/cjwnewsletterlist</name>
     <message>
         <source>Main Siteaccess must be set</source>
-        <translation type="unfinished"></translation>
+        <translation>Main Siteaccess must be set</translation>
     </message>
     <message>
         <source>You have to choose an output format</source>
-        <translation type="unfinished"></translation>
+        <translation>You have to choose an output format</translation>
     </message>
     <message>
         <source>You have to set a valid email adress</source>
-        <translation type="unfinished"></translation>
+        <translation>You have to set a valid email adress</translation>
     </message>
     <message>
         <source>You have to set a valid semder email</source>
-        <translation type="unfinished"></translation>
+        <translation>You have to set a valid semder email</translation>
     </message>
     <message>
         <source>You have to set a valid semder email adress &gt;&gt; $reciever</source>
@@ -742,99 +766,99 @@
     </message>
     <message>
         <source>List options</source>
-        <translation type="unfinished"></translation>
+        <translation>List options</translation>
     </message>
     <message>
         <source>Render output</source>
-        <translation type="unfinished"></translation>
+        <translation>Render output</translation>
     </message>
     <message>
         <source>Can subscribe</source>
-        <translation type="unfinished"></translation>
+        <translation>Can subscribe</translation>
     </message>
     <message>
         <source>Siteaccess</source>
-        <translation type="unfinished"></translation>
+        <translation>Siteaccess</translation>
     </message>
     <message>
         <source>Available newsletter output formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Available newsletter output formats</translation>
     </message>
     <message>
         <source>Automatically approve subscription after user registration?</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatically approve subscription after user registration?</translation>
     </message>
     <message>
         <source>Newsletter sender email</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter sender email</translation>
     </message>
     <message>
         <source>Newsletter sender name</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter sender name</translation>
     </message>
     <message>
         <source>Newsletter default test receiver email</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter default test receiver email</translation>
     </message>
     <message>
         <source>Newsletter skin name</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter skin name</translation>
     </message>
     <message>
         <source>Personalize newsletter if data are available?</source>
-        <translation type="unfinished"></translation>
+        <translation>Personalize newsletter if data are available?</translation>
     </message>
     <message>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>No</translation>
     </message>
     <message>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Yes</translation>
     </message>
     <message>
         <source>Newsletter output formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter output formats</translation>
     </message>
     <message>
         <source>Show in siteaccess</source>
-        <translation type="unfinished"></translation>
+        <translation>Show in siteaccess</translation>
     </message>
     <message>
         <source>Main siteaccess</source>
-        <translation type="unfinished"></translation>
+        <translation>Main siteaccess</translation>
     </message>
     <message>
         <source>Main siteaccess site url</source>
-        <translation type="unfinished"></translation>
+        <translation>Main siteaccess site url</translation>
     </message>
     <message>
         <source>Main siteaccess locale</source>
-        <translation type="unfinished"></translation>
+        <translation>Main siteaccess locale</translation>
     </message>
     <message>
         <source>Email sender</source>
-        <translation type="unfinished"></translation>
+        <translation>Email sender</translation>
     </message>
     <message>
         <source>Email sender name</source>
-        <translation type="unfinished"></translation>
+        <translation>Email sender name</translation>
     </message>
     <message>
         <source>Email receiver test</source>
-        <translation type="unfinished"></translation>
+        <translation>Email receiver test</translation>
     </message>
     <message>
         <source>Personalize content</source>
-        <translation type="unfinished"></translation>
+        <translation>Personalize content</translation>
     </message>
     <message>
         <source>no</source>
-        <translation type="unfinished"></translation>
+        <translation>no</translation>
     </message>
     <message>
         <source>yes</source>
-        <translation type="unfinished"></translation>
+        <translation>yes</translation>
     </message>
     <message>
         <source>Email reply-to</source>
@@ -843,6 +867,10 @@
     <message>
         <source>Email return-path</source>
         <translation>Email return-path</translation>
+    </message>
+    <message>
+        <source>You have to choose a siteaccess for the list</source>
+        <translation>You have to choose a siteaccess for the list</translation>
     </message>
 </context>
 <context>
@@ -856,30 +884,30 @@
     <name>cjw_newsletter/datatype/cjwnewslettersubcription/validation_error</name>
     <message>
         <source>Datatype can not be used here - user_account required.</source>
-        <translation type="unfinished"></translation>
+        <translation>Datatype can not be used here - user_account required.</translation>
     </message>
     <message>
         <source>No user account found</source>
-        <translation type="unfinished"></translation>
+        <translation>No user account found</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/datatype/cjwnewslettersubscription</name>
     <message>
         <source>No newsletters available.</source>
-        <translation type="unfinished"></translation>
+        <translation>No newsletters available.</translation>
     </message>
     <message>
         <source>Email of the subscriber.</source>
-        <translation type="unfinished"></translation>
+        <translation>Email of the subscriber.</translation>
     </message>
     <message>
         <source>no</source>
-        <translation type="unfinished"></translation>
+        <translation>no</translation>
     </message>
     <message>
         <source>yes</source>
-        <translation type="unfinished"></translation>
+        <translation>yes</translation>
     </message>
 </context>
 <context>
@@ -887,261 +915,261 @@
     <message>
         <source>CJW Newsletter Edition</source>
         <comment>Datatype name</comment>
-        <translation type="unfinished"></translation>
+        <translation>CJW Newsletter Edition</translation>
     </message>
     <message>
         <source>CJW Newsletter List</source>
         <comment>Datatype name</comment>
-        <translation type="unfinished"></translation>
+        <translation>CJW Newsletter List</translation>
     </message>
     <message>
         <source>CJW Newsletter Subscription</source>
         <comment>Datatype name</comment>
-        <translation type="unfinished"></translation>
+        <translation>CJW Newsletter Subscription</translation>
     </message>
     <message>
         <source>CJW Newsletter List Virtual</source>
         <comment>Datatype name</comment>
-        <translation type="unfinished"></translation>
+        <translation>CJW Newsletter List Virtual</translation>
     </message>    
 </context>
 <context>
     <name>cjw_newsletter/design/admin/node/view/full</name>
     <message>
         <source>The edition %child_name is already in sending process.</source>
-        <translation type="unfinished"></translation>
+        <translation>The edition %child_name is already in sending process.</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/editionsenditem/status</name>
     <message>
         <source>New</source>
-        <translation type="unfinished"></translation>
+        <translation>New</translation>
     </message>
     <message>
         <source>Send</source>
-        <translation type="unfinished"></translation>
+        <translation>Send</translation>
     </message>
     <message>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Abort</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/import_list</name>
     <message>
         <source>Here you find a list of all data imports!</source>
-        <translation type="unfinished"></translation>
+        <translation>Here you find a list of all data imports!</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Invert selection</translation>
     </message>
     <message>
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID</translation>
     </message>
     <message>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type</translation>
     </message>
     <message>
         <source>List Id</source>
-        <translation type="unfinished"></translation>
+        <translation>List Id</translation>
     </message>
     <message>
         <source>Created</source>
-        <translation type="unfinished"></translation>
+        <translation>Created</translation>
     </message>
     <message>
         <source>Creator</source>
-        <translation type="unfinished"></translation>
+        <translation>Creator</translation>
     </message>
     <message>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation>Note</translation>
     </message>
     <message>
         <source>Select items for removal</source>
-        <translation type="unfinished"></translation>
+        <translation>Select items for removal</translation>
     </message>
     <message>
         <source>Imported subscription count</source>
-        <translation type="unfinished"></translation>
+        <translation>Imported subscription count</translation>
     </message>
     <message>
         <source>Imported</source>
-        <translation type="unfinished"></translation>
+        <translation>Imported</translation>
     </message>
     <message>
         <source>Count</source>
-        <translation type="unfinished"></translation>
+        <translation>Count</translation>
     </message>
     <message>
         <source>Subscription count after import</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription count after import</translation>
     </message>
     <message>
         <source>Subscriptions in current system with import id %importId</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscriptions in current system with import id %importId</translation>
     </message>
     <message>
         <source>Approved subscriptions in current system with import id %importId</source>
-        <translation type="unfinished"></translation>
+        <translation>Approved subscriptions in current system with import id %importId</translation>
     </message>
     <message>
         <source>Manage imports</source>
-        <translation type="unfinished"></translation>
+        <translation>Manage imports</translation>
     </message>
     <message>
         <source>Imports</source>
-        <translation type="unfinished"></translation>
+        <translation>Imports</translation>
     </message>
     <message>
         <source>Imports (%import_list_count) </source>
-        <translation type="unfinished"></translation>
+        <translation>Imports (%import_list_count) </translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/import_view</name>
     <message>
         <source>Import details</source>
-        <translation type="unfinished"></translation>
+        <translation>Import details</translation>
     </message>
     <message>
         <source>Id</source>
-        <translation type="unfinished"></translation>
+        <translation>Id</translation>
     </message>
     <message>
         <source>Subscription list</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription list</translation>
     </message>
     <message>
         <source>Import type</source>
-        <translation type="unfinished"></translation>
+        <translation>Import type</translation>
     </message>
     <message>
         <source>Created</source>
-        <translation type="unfinished"></translation>
+        <translation>Created</translation>
     </message>
     <message>
         <source>Creator</source>
-        <translation type="unfinished"></translation>
+        <translation>Creator</translation>
     </message>
     <message>
         <source>Import note</source>
-        <translation type="unfinished"></translation>
+        <translation>Import note</translation>
     </message>
     <message>
         <source>Data text</source>
-        <translation type="unfinished"></translation>
+        <translation>Data text</translation>
     </message>
     <message>
         <source>Remote id</source>
-        <translation type="unfinished"></translation>
+        <translation>Remote id</translation>
     </message>
     <message>
         <source>Imported subscription count</source>
-        <translation type="unfinished"></translation>
+        <translation>Imported subscription count</translation>
     </message>
     <message>
         <source>Imported user count</source>
-        <translation type="unfinished"></translation>
+        <translation>Imported user count</translation>
     </message>
     <message>
         <source>Subscriptions created by import</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscriptions created by import</translation>
     </message>
     <message>
         <source>n/a</source>
-        <translation type="unfinished"></translation>
+        <translation>n/a</translation>
     </message>
     <message>
         <source>Imported</source>
-        <translation type="unfinished"></translation>
+        <translation>Imported</translation>
     </message>
     <message>
         <source>Live count</source>
-        <translation type="unfinished"></translation>
+        <translation>Live count</translation>
     </message>
     <message>
         <source>Live count approved</source>
-        <translation type="unfinished"></translation>
+        <translation>Live count approved</translation>
     </message>
     <message>
         <source>Subscription count after import</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription count after import</translation>
     </message>
     <message>
         <source>Subscriptions in current system with import id %importId</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscriptions in current system with import id %importId</translation>
     </message>
     <message>
         <source>Approved subscriptions in current system with import id %importId</source>
-        <translation type="unfinished"></translation>
+        <translation>Approved subscriptions in current system with import id %importId</translation>
     </message>
     <message>
         <source>Live count confirmed</source>
-        <translation type="unfinished"></translation>
+        <translation>Live count confirmed</translation>
     </message>
     <message>
         <source>Newsletter user count after import</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter user count after import</translation>
     </message>
     <message>
         <source>Newsletter user in current system with import id %importId</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter user in current system with import id %importId</translation>
     </message>
     <message>
         <source>Confirmed Newsletter user in current system with import id %importId</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmed Newsletter user in current system with import id %importId</translation>
     </message>
     <message>
         <source>Remove %count_active_subscriptions active subscriptions by admin</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove %count_active_subscriptions active subscriptions by admin</translation>
     </message>
     <message>
         <source>Do you really want to set status removed by admin to all active subscriptions (%count_active_subscriptions)?</source>
-        <translation type="unfinished"></translation>
+        <translation>Do you really want to set status removed by admin to all active subscriptions (%count_active_subscriptions)?</translation>
     </message>
     <message>
         <source>Imports</source>
-        <translation type="unfinished"></translation>
+        <translation>Imports</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/index</name>
     <message>
         <source>Mails</source>
-        <translation type="unfinished"></translation>
+        <translation>Mails</translation>
     </message>
     <message>
         <source>Bounced</source>
-        <translation type="unfinished"></translation>
+        <translation>Bounced</translation>
     </message>
     <message>
         <source>Newsletter dashboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter dashboard</translation>
     </message>
     <message>
         <source>Last actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Last actions</translation>
     </message>
     <message>
         <source>Create newsletter here</source>
-        <translation type="unfinished"></translation>
+        <translation>Create newsletter here</translation>
     </message>
     <message>
         <source>Edit newsletter</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit newsletter</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit</translation>
     </message>
     <message>
         <source>Dashboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Dashboard</translation>
     </message>
     <message>
         <source>draft</source>
@@ -1160,7 +1188,15 @@ To activate or edit your subscription, please visit this link:
 
 %configureLink
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Hello %name
+
+Thank you for subscribing to the following newsletter:
+%subscriptionList
+
+To activate or edit your subscription, please visit this link:
+
+%configureLink
+</translation>
     </message>
 </context>
 <context>
@@ -1173,62 +1209,68 @@ To edit your newsletter settings please visit the following link:
 
 %configureLink
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Hello %name
+
+Thank you for using our newsletter.
+To edit your newsletter settings please visit the following link:
+
+%configureLink
+</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/mailbox_edit</name>
     <message>
         <source>Edit &lt;%mailbox.email&gt; </source>
-        <translation type="unfinished"></translation>
+        <translation>Edit &lt;%mailbox.email&gt; </translation>
     </message>
     <message>
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation>Email</translation>
     </message>
     <message>
         <source>Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Server</translation>
     </message>
     <message>
         <source>Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Port</translation>
     </message>
     <message>
         <source>User</source>
-        <translation type="unfinished"></translation>
+        <translation>User</translation>
     </message>
     <message>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Password</translation>
     </message>
     <message>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type</translation>
     </message>
     <message>
         <source>SSL</source>
-        <translation type="unfinished"></translation>
+        <translation>SSL</translation>
     </message>
     <message>
         <source>Store Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Store Changes</translation>
     </message>
     <message>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>Discard</translation>
     </message>
     <message>
         <source>Add new mail account</source>
-        <translation type="unfinished"></translation>
+        <translation>Add new mail account</translation>
     </message>
     <message>
         <source>Delete mails from server</source>
-        <translation type="unfinished"></translation>
+        <translation>Delete mails from server</translation>
     </message>
     <message>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Active</translation>
     </message>
     <message>
         <source>True</source>
@@ -1243,178 +1285,178 @@ To edit your newsletter settings please visit the following link:
     <name>cjw_newsletter/mailbox_item_list</name>
     <message>
         <source>Mailbox collect mail result</source>
-        <translation type="unfinished"></translation>
+        <translation>Mailbox collect mail result</translation>
     </message>
     <message>
         <source>Collection result for mailbox %mailbox_id.</source>
-        <translation type="unfinished"></translation>
+        <translation>Collection result for mailbox %mailbox_id.</translation>
     </message>
     <message>
         <source>Added</source>
-        <translation type="unfinished"></translation>
+        <translation>Added</translation>
     </message>
     <message>
         <source>Connection failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Connection failed</translation>
     </message>
     <message>
         <source>Mailbox item parse result</source>
-        <translation type="unfinished"></translation>
+        <translation>Mailbox item parse result</translation>
     </message>
     <message>
         <source>Collect all mails</source>
-        <translation type="unfinished"></translation>
+        <translation>Collect all mails</translation>
     </message>
     <message>
         <source>Parse mails</source>
-        <translation type="unfinished"></translation>
+        <translation>Parse mails</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Invert selection</translation>
     </message>
     <message>
         <source>Mb</source>
-        <translation type="unfinished"></translation>
+        <translation>Mb</translation>
     </message>
     <message>
         <source>Ms</source>
-        <translation type="unfinished"></translation>
+        <translation>Ms</translation>
     </message>
     <message>
         <source>MI</source>
-        <translation type="unfinished"></translation>
+        <translation>MI</translation>
     </message>
     <message>
         <source>MSize</source>
-        <translation type="unfinished"></translation>
+        <translation>MSize</translation>
     </message>
     <message>
         <source>Bouncecode</source>
-        <translation type="unfinished"></translation>
+        <translation>Bouncecode</translation>
     </message>
     <message>
         <source>IsBounce</source>
-        <translation type="unfinished"></translation>
+        <translation>IsBounce</translation>
     </message>
     <message>
         <source>Nl user</source>
-        <translation type="unfinished"></translation>
+        <translation>Nl user</translation>
     </message>
     <message>
         <source>Subject</source>
-        <translation type="unfinished"></translation>
+        <translation>Subject</translation>
     </message>
     <message>
         <source>From</source>
-        <translation type="unfinished"></translation>
+        <translation>From</translation>
     </message>
     <message>
         <source>To</source>
-        <translation type="unfinished"></translation>
+        <translation>To</translation>
     </message>
     <message>
         <source>Email send date</source>
-        <translation type="unfinished"></translation>
+        <translation>Email send date</translation>
     </message>
     <message>
         <source>Created</source>
-        <translation type="unfinished"></translation>
+        <translation>Created</translation>
     </message>
     <message>
         <source>Processed</source>
-        <translation type="unfinished"></translation>
+        <translation>Processed</translation>
     </message>
     <message>
         <source>n/a</source>
-        <translation type="unfinished"></translation>
+        <translation>n/a</translation>
     </message>
     <message>
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID</translation>
     </message>
     <message>
         <source>Select mailbox item for removal</source>
-        <translation type="unfinished"></translation>
+        <translation>Select mailbox item for removal</translation>
     </message>
     <message>
         <source>Already exists</source>
-        <translation type="unfinished"></translation>
+        <translation>Already exists</translation>
     </message>
     <message>
         <source>Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Failed</translation>
     </message>
     <message>
         <source>Manage bounces</source>
-        <translation type="unfinished"></translation>
+        <translation>Manage bounces</translation>
     </message>
     <message>
         <source>Mailbox items</source>
-        <translation type="unfinished"></translation>
+        <translation>Mailbox items</translation>
     </message>
     <message>
         <source>Mail accounts</source>
-        <translation type="unfinished"></translation>
+        <translation>Mail accounts</translation>
     </message>
     <message>
         <source>Bounces</source>
-        <translation type="unfinished"></translation>
+        <translation>Bounces</translation>
     </message>
     <message>
         <source>Collect emails from bounce accounts and parse them. You may then accept the detected bounce status or manually adjust it.</source>
-        <translation type="unfinished"></translation>
+        <translation>Collect emails from bounce accounts and parse them. You may then accept the detected bounce status or manually adjust it.</translation>
     </message>
     <message>
         <source>E-mails parsed</source>
-        <translation type="unfinished"></translation>
+        <translation>E-mails parsed</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/mailbox_item_view</name>
     <message>
         <source>Mailbox Item Database Infos</source>
-        <translation type="unfinished"></translation>
+        <translation>Mailbox Item Database Infos</translation>
     </message>
     <message>
         <source>LIVE mailbox item parse infos</source>
-        <translation type="unfinished"></translation>
+        <translation>LIVE mailbox item parse infos</translation>
     </message>
     <message>
         <source>Raw mail content</source>
-        <translation type="unfinished"></translation>
+        <translation>Raw mail content</translation>
     </message>
     <message>
         <source>Full View</source>
-        <translation type="unfinished"></translation>
+        <translation>Full View</translation>
     </message>
     <message>
         <source>Download</source>
-        <translation type="unfinished"></translation>
+        <translation>Download</translation>
     </message>
     <message>
         <source>Show raw mail content inline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show raw mail content inline.</translation>
     </message>
     <message>
         <source>Show inline</source>
-        <translation type="unfinished"></translation>
+        <translation>Show inline</translation>
     </message>
     <message>
         <source>Hide raw mail content inline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hide raw mail content inline.</translation>
     </message>
     <message>
         <source>Hide inline</source>
-        <translation type="unfinished"></translation>
+        <translation>Hide inline</translation>
     </message>
     <message>
         <source>Mailbox item list</source>
-        <translation type="unfinished"></translation>
+        <translation>Mailbox item list</translation>
     </message>
     <message>
         <source>Mailbox item view</source>
-        <translation type="unfinished"></translation>
+        <translation>Mailbox item view</translation>
     </message>
     <message>
         <source>created</source>
@@ -1429,363 +1471,363 @@ To edit your newsletter settings please visit the following link:
     <name>cjw_newsletter/mailbox_list</name>
     <message>
         <source>Invert selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Invert selection</translation>
     </message>
     <message>
         <source>Select subscriber for removal</source>
-        <translation type="unfinished"></translation>
+        <translation>Select subscriber for removal</translation>
     </message>
     <message>
         <source>n/a</source>
-        <translation type="unfinished"></translation>
+        <translation>n/a</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit</translation>
     </message>
     <message>
         <source>Edit mailbox.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit mailbox.</translation>
     </message>
     <message>
         <source>Add new mailbox.</source>
-        <translation type="unfinished"></translation>
+        <translation>Add new mailbox.</translation>
     </message>
     <message>
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID</translation>
     </message>
     <message>
         <source>Manage mail accounts</source>
-        <translation type="unfinished"></translation>
+        <translation>Manage mail accounts</translation>
     </message>
     <message>
         <source>Define mail accounts that will collect mails for bounce handling</source>
-        <translation type="unfinished"></translation>
+        <translation>Define mail accounts that will collect mails for bounce handling</translation>
     </message>
     <message>
         <source>Add mail account</source>
-        <translation type="unfinished"></translation>
+        <translation>Add mail account</translation>
     </message>
     <message>
         <source>Mail accounts</source>
-        <translation type="unfinished"></translation>
+        <translation>Mail accounts</translation>
     </message>
     <message>
         <source>Last connect</source>
-        <translation type="unfinished"></translation>
+        <translation>Last connect</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/menu</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Settings</translation>
     </message>
     <message>
         <source>Administer</source>
-        <translation type="unfinished"></translation>
+        <translation>Administer</translation>
     </message>
     <message>
         <source>Users</source>
-        <translation type="unfinished"></translation>
+        <translation>Users</translation>
     </message>
     <message>
         <source>Blacklists</source>
-        <translation type="unfinished"></translation>
+        <translation>Blacklists</translation>
     </message>
     <message>
         <source>Bounces</source>
-        <translation type="unfinished"></translation>
+        <translation>Bounces</translation>
     </message>
     <message>
         <source>Newsletter systems</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter systems</translation>
     </message>
     <message>
         <source>Mail accounts</source>
-        <translation type="unfinished"></translation>
+        <translation>Mail accounts</translation>
     </message>
     <message>
         <source>Imports</source>
-        <translation type="unfinished"></translation>
+        <translation>Imports</translation>
     </message>
     <message>
         <source>Subscription form</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription form</translation>
     </message>
     <message>
         <source>INI Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>INI Settings</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/newsletter_list_subscription</name>
     <message>
         <source>Import contact from CSV file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Import contact from CSV file.</translation>
     </message>
     <message>
         <source>Export to CSV file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Export to CSV file.</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/newsletter_menu</name>
     <message>
         <source>Change the left menu width to small size.</source>
-        <translation type="unfinished"></translation>
+        <translation>Change the left menu width to small size.</translation>
     </message>
     <message>
         <source>Small</source>
-        <translation type="unfinished"></translation>
+        <translation>Small</translation>
     </message>
     <message>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Medium</translation>
     </message>
     <message>
         <source>Change the left menu width to large size.</source>
-        <translation type="unfinished"></translation>
+        <translation>Change the left menu width to large size.</translation>
     </message>
     <message>
         <source>Large</source>
-        <translation type="unfinished"></translation>
+        <translation>Large</translation>
     </message>
     <message>
         <source>Change the left menu width to medium size.</source>
-        <translation type="unfinished"></translation>
+        <translation>Change the left menu width to medium size.</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/outputformat</name>
     <message>
         <source>HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML</translation>
     </message>
     <message>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/path</name>
     <message>
         <source>Newsletter</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/preview</name>
     <message>
         <source>Newsletter preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter preview</translation>
     </message>
     <message>
         <source>Preview of the newsletter output formats in iframe?</source>
-        <translation type="unfinished"></translation>
+        <translation>Preview of the newsletter output formats in iframe?</translation>
     </message>
     <message>
         <source>Email subject</source>
-        <translation type="unfinished"></translation>
+        <translation>Email subject</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/send</name>
     <message>
         <source>Send Test Newsletter</source>
-        <translation type="unfinished"></translation>
+        <translation>Send Test Newsletter</translation>
     </message>
     <message>
         <source>Send Test Newsletter at</source>
-        <translation type="unfinished"></translation>
+        <translation>Send Test Newsletter at</translation>
     </message>
     <message>
         <source>Nr</source>
-        <translation type="unfinished"></translation>
+        <translation>Nr</translation>
     </message>
     <message>
         <source>Result</source>
-        <translation type="unfinished"></translation>
+        <translation>Result</translation>
     </message>
     <message>
         <source>Email Sender</source>
-        <translation type="unfinished"></translation>
+        <translation>Email Sender</translation>
     </message>
     <message>
         <source>Charset</source>
-        <translation type="unfinished"></translation>
+        <translation>Charset</translation>
     </message>
     <message>
         <source>Send Newsletter</source>
-        <translation type="unfinished"></translation>
+        <translation>Send Newsletter</translation>
     </message>
     <message>
         <source>Email Receiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Email Receiver</translation>
     </message>
     <message>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Back</translation>
     </message>
     <message>
         <source>Content Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Content Type</translation>
     </message>
     <message>
         <source>Transport</source>
-        <translation type="unfinished"></translation>
+        <translation>Transport</translation>
     </message>
     <message>
         <source>Newsletter Send</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter Send</translation>
     </message>
     <message>
         <source>Send out newsletter</source>
-        <translation type="unfinished"></translation>
+        <translation>Send out newsletter</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancel</translation>
     </message>
     <message>
         <source>Test newsletter sent result</source>
-        <translation type="unfinished"></translation>
+        <translation>Test newsletter sent result</translation>
     </message>
     <message>
         <source>Subject</source>
-        <translation type="unfinished"></translation>
+        <translation>Subject</translation>
     </message>
     <message>
         <source>Send</source>
-        <translation type="unfinished"></translation>
+        <translation>Send</translation>
     </message>
     <message>
         <source>Send test newsletter</source>
-        <translation type="unfinished"></translation>
+        <translation>Send test newsletter</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/send.tpl</name>
     <message>
         <source>Do you really want to send out this newsletter?</source>
-        <translation type="unfinished"></translation>
+        <translation>Do you really want to send out this newsletter?</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/send_abort</name>
     <message>
         <source>Abort newsletter send out process</source>
-        <translation type="unfinished"></translation>
+        <translation>Abort newsletter send out process</translation>
     </message>
     <message>
         <source>Abort send out process</source>
-        <translation type="unfinished"></translation>
+        <translation>Abort send out process</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancel</translation>
     </message>
     <message>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Back</translation>
     </message>
     <message>
         <source>Send out process is finished, can not abort anymore!</source>
-        <translation type="unfinished"></translation>
+        <translation>Send out process is finished, can not abort anymore!</translation>
     </message>
     <message>
         <source>Send out process was already aborted!</source>
-        <translation type="unfinished"></translation>
+        <translation>Send out process was already aborted!</translation>
     </message>
     <message>
         <source>Abort successfull</source>
-        <translation type="unfinished"></translation>
+        <translation>Abort successfull</translation>
     </message>
     <message>
         <source>Abort not successfull</source>
-        <translation type="unfinished"></translation>
+        <translation>Abort not successfull</translation>
     </message>
     <message>
         <source>Abort sent out process</source>
-        <translation type="unfinished"></translation>
+        <translation>Abort sent out process</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/send_abort.tpl</name>
     <message>
         <source>Do you really want to abort the send out process?</source>
-        <translation type="unfinished"></translation>
+        <translation>Do you really want to abort the send out process?</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/skin/default</name>
     <message>
         <source>unsubscribe</source>
-        <translation type="unfinished"></translation>
+        <translation>unsubscribe</translation>
     </message>
     <message>
         <source>To unsubscribe from this newsletter please visit the following link</source>
-        <translation type="unfinished"></translation>
+        <translation>To unsubscribe from this newsletter please visit the following link</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/subscribe</name>
     <message>
         <source>Salutation</source>
-        <translation type="unfinished"></translation>
+        <translation>Salutation</translation>
     </message>
     <message>
         <source>Newsletter subscribe</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter subscribe</translation>
     </message>
     <message>
         <source>First name</source>
-        <translation type="unfinished"></translation>
+        <translation>First name</translation>
     </message>
     <message>
         <source>First name of the subscriber.</source>
-        <translation type="unfinished"></translation>
+        <translation>First name of the subscriber.</translation>
     </message>
     <message>
         <source>Last name</source>
-        <translation type="unfinished"></translation>
+        <translation>Last name</translation>
     </message>
     <message>
         <source>Last name of the subscriber.</source>
-        <translation type="unfinished"></translation>
+        <translation>Last name of the subscriber.</translation>
     </message>
     <message>
         <source>Email of the subscriber.</source>
-        <translation type="unfinished"></translation>
+        <translation>Email of the subscriber.</translation>
     </message>
     <message>
         <source>Subscribe</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscribe</translation>
     </message>
     <message>
         <source>Add to subscription.</source>
-        <translation type="unfinished"></translation>
+        <translation>Add to subscription.</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancel</translation>
     </message>
     <message>
         <source>unsubscribe</source>
-        <translation type="unfinished"></translation>
+        <translation>unsubscribe</translation>
     </message>
     <message>
         <source>change</source>
-        <translation type="unfinished"></translation>
+        <translation>change</translation>
     </message>
     <message>
         <source>Input did not validate</source>
-        <translation type="unfinished"></translation>
+        <translation>Input did not validate</translation>
     </message>
     <message>
         <source>Here you can subscribe to one of our newsletters.</source>
-        <translation type="unfinished"></translation>
+        <translation>Here you can subscribe to one of our newsletters.</translation>
     </message>
     <message>
         <source>Please fill in the boxes &quot;first name&quot; and &quot;last name&quot; and enter your e-mail address in the corresponding field. Then, select the newsletter you are interested in and the format you prefer.</source>
@@ -1793,385 +1835,389 @@ To edit your newsletter settings please visit the following link:
     </message>
     <message>
         <source>E-mail</source>
-        <translation type="unfinished"></translation>
+        <translation>E-mail</translation>
     </message>
     <message>
         <source>Data Protection</source>
-        <translation type="unfinished"></translation>
+        <translation>Data Protection</translation>
     </message>
     <message>
         <source>Your e-mail address will under no circumstances be passed on to unauthorized third parties.</source>
-        <translation type="unfinished"></translation>
+        <translation>Your e-mail address will under no circumstances be passed on to unauthorized third parties.</translation>
     </message>
     <message>
         <source>Further Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Further Options</translation>
     </message>
     <message>
         <source>You want to %unsubscribelink or %changesubscribelink your profile?</source>
-        <translation type="unfinished"></translation>
+        <translation>You want to %unsubscribelink or %changesubscribelink your profile?</translation>
     </message>
     <message>
         <source>* mandatory fields</source>
-        <translation type="unfinished"></translation>
+        <translation>* mandatory fields</translation>
     </message>
     <message>
         <source>Subscription form</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription form</translation>
     </message>
     <message>
         <source>No newsletters available.</source>
-        <translation type="unfinished"></translation>
+        <translation>No newsletters available.</translation>
+    </message>
+    <message>
+        <source>Please fill in the boxes "first name" and "last name" and enter your e-mail address in the corresponding field. Then, select the newsletter you are interested in and the format you prefer.</source>
+        <translation>Please fill in the boxes "first name" and "last name" and enter your e-mail address in the corresponding field. Then, select the newsletter you are interested in and the format you prefer.</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/subscribe_info</name>
     <message>
         <source>Get subscribe information</source>
-        <translation type="unfinished"></translation>
+        <translation>Get subscribe information</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/subscribe_infomail</name>
     <message>
         <source>Newsletter - Edit profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter - Edit profile</translation>
     </message>
     <message>
         <source>Enter the e-mail address you originally used to subscribe and you will be sent a link to edit you data.</source>
-        <translation type="unfinished"></translation>
+        <translation>Enter the e-mail address you originally used to subscribe and you will be sent a link to edit you data.</translation>
     </message>
     <message>
         <source>E-mail</source>
-        <translation type="unfinished"></translation>
+        <translation>E-mail</translation>
     </message>
     <message>
         <source>Send</source>
-        <translation type="unfinished"></translation>
+        <translation>Send</translation>
     </message>
     <message>
         <source>Input did not validate</source>
-        <translation type="unfinished"></translation>
+        <translation>Input did not validate</translation>
     </message>
     <message>
         <source>* mandatory fields</source>
-        <translation type="unfinished"></translation>
+        <translation>* mandatory fields</translation>
     </message>
     <message>
         <source>email</source>
-        <translation type="unfinished"></translation>
+        <translation>email</translation>
     </message>
     <message>
         <source>Please input a valid e-mail address!</source>
-        <translation type="unfinished"></translation>
+        <translation>Please input a valid e-mail address!</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/subscribe_infomail_success</name>
     <message>
         <source>Newsletter</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter</translation>
     </message>
     <message>
         <source>back</source>
-        <translation type="unfinished"></translation>
+        <translation>back</translation>
     </message>
     <message>
         <source>E-mail has been sent!</source>
-        <translation type="unfinished"></translation>
+        <translation>E-mail has been sent!</translation>
     </message>
     <message>
         <source>If you are a valid newsletter user, an e-mail has been sent to you with all information required!</source>
-        <translation type="unfinished"></translation>
+        <translation>If you are a valid newsletter user, an e-mail has been sent to you with all information required!</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/subscribe_success</name>
     <message>
         <source>Newsletter - subscribe success</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter - subscribe success</translation>
     </message>
     <message>
         <source>You are registered for our newsletter.</source>
-        <translation type="unfinished"></translation>
+        <translation>You are registered for our newsletter.</translation>
     </message>
     <message>
         <source>An email was sent to your address %email.</source>
-        <translation type="unfinished"></translation>
+        <translation>An email was sent to your address %email.</translation>
     </message>
     <message>
         <source>Please note that your subscription is only active if you clicked confirmation link in these email.</source>
-        <translation type="unfinished"></translation>
+        <translation>Please note that your subscription is only active if you clicked confirmation link in these email.</translation>
     </message>
     <message>
         <source>You have the possibility of changing your personal profile at any time.</source>
-        <translation type="unfinished"></translation>
+        <translation>You have the possibility of changing your personal profile at any time.</translation>
     </message>
     <message>
         <source>back</source>
-        <translation type="unfinished"></translation>
+        <translation>back</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/subscribe_success_not</name>
     <message>
         <source>Newsletter - subscribe unsuccessfull</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter - subscribe unsuccessfull</translation>
     </message>
     <message>
         <source>Please contact the system administrator</source>
-        <translation type="unfinished"></translation>
+        <translation>Please contact the system administrator</translation>
     </message>
     <message>
         <source>back</source>
-        <translation type="unfinished"></translation>
+        <translation>back</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/subscription</name>
     <message>
         <source>First name</source>
-        <translation type="unfinished"></translation>
+        <translation>First name</translation>
     </message>
     <message>
         <source>Last name</source>
-        <translation type="unfinished"></translation>
+        <translation>Last name</translation>
     </message>
     <message>
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation>Email</translation>
     </message>
     <message>
         <source>Newsletter</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter</translation>
     </message>
     <message>
         <source>You must choose a list for subscription.</source>
-        <translation type="unfinished"></translation>
+        <translation>You must choose a list for subscription.</translation>
     </message>
     <message>
         <source>You must enter a first name.</source>
-        <translation type="unfinished"></translation>
+        <translation>You must enter a first name.</translation>
     </message>
     <message>
         <source>You must enter a last name.</source>
-        <translation type="unfinished"></translation>
+        <translation>You must enter a last name.</translation>
     </message>
     <message>
         <source>You must provide a valid email address.</source>
-        <translation type="unfinished"></translation>
+        <translation>You must provide a valid email address.</translation>
     </message>
     <message>
         <source>Email is already used by an other newsletter user.</source>
-        <translation type="unfinished"></translation>
+        <translation>Email is already used by an other newsletter user.</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/subscription/status</name>
     <message>
         <source>Pending</source>
-        <translation type="unfinished"></translation>
+        <translation>Pending</translation>
     </message>
     <message>
         <source>Confirmed</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmed</translation>
     </message>
     <message>
         <source>Approved</source>
-        <translation type="unfinished"></translation>
+        <translation>Approved</translation>
     </message>
     <message>
         <source>Removed by user</source>
-        <translation type="unfinished"></translation>
+        <translation>Removed by user</translation>
     </message>
     <message>
         <source>Removed by admin</source>
-        <translation type="unfinished"></translation>
+        <translation>Removed by admin</translation>
     </message>
     <message>
         <source>Bounced soft</source>
-        <translation type="unfinished"></translation>
+        <translation>Bounced soft</translation>
     </message>
     <message>
         <source>Bounced hard</source>
-        <translation type="unfinished"></translation>
+        <translation>Bounced hard</translation>
     </message>
     <message>
         <source>Blacklisted</source>
-        <translation type="unfinished"></translation>
+        <translation>Blacklisted</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/subscription_confirmation</name>
     <message>
         <source>Subscription verification</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription verification</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/subscription_information</name>
     <message>
         <source>Subscription information</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription information</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/subscription_list</name>
     <message>
         <source>Subscription list &lt;%subscription_list_name&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription list &lt;%subscription_list_name&gt;</translation>
     </message>
     <message>
         <source>Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Modified</translation>
     </message>
     <message>
         <source>Import CSV</source>
-        <translation type="unfinished"></translation>
+        <translation>Import CSV</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Invert selection</translation>
     </message>
     <message>
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation>Email</translation>
     </message>
     <message>
         <source>First name</source>
-        <translation type="unfinished"></translation>
+        <translation>First name</translation>
     </message>
     <message>
         <source>Last name</source>
-        <translation type="unfinished"></translation>
+        <translation>Last name</translation>
     </message>
     <message>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Format</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Status</translation>
     </message>
     <message>
         <source>Created</source>
-        <translation type="unfinished"></translation>
+        <translation>Created</translation>
     </message>
     <message>
         <source>Confirmed</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmed</translation>
     </message>
     <message>
         <source>Approved</source>
-        <translation type="unfinished"></translation>
+        <translation>Approved</translation>
     </message>
     <message>
         <source>Removed</source>
-        <translation type="unfinished"></translation>
+        <translation>Removed</translation>
     </message>
     <message>
         <source>Select subscriber for removal</source>
-        <translation type="unfinished"></translation>
+        <translation>Select subscriber for removal</translation>
     </message>
     <message>
         <source>n/a</source>
-        <translation type="unfinished"></translation>
+        <translation>n/a</translation>
     </message>
     <message>
         <source>Remove selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove selected</translation>
     </message>
     <message>
         <source>Remove selected subscription.</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove selected subscription.</translation>
     </message>
     <message>
         <source>New subscription</source>
-        <translation type="unfinished"></translation>
+        <translation>New subscription</translation>
     </message>
     <message>
         <source>Create a new subscription.</source>
-        <translation type="unfinished"></translation>
+        <translation>Create a new subscription.</translation>
     </message>
     <message>
         <source>Id</source>
-        <translation type="unfinished"></translation>
+        <translation>Id</translation>
     </message>
     <message>
         <source>List name</source>
-        <translation type="unfinished"></translation>
+        <translation>List name</translation>
     </message>
     <message>
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID</translation>
     </message>
     <message>
         <source>Newsletter User</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter User</translation>
     </message>
     <message>
         <source>Remote id</source>
-        <translation type="unfinished"></translation>
+        <translation>Remote id</translation>
     </message>
     <message>
         <source>Import Id</source>
-        <translation type="unfinished"></translation>
+        <translation>Import Id</translation>
     </message>
     <message>
         <source>NL user import id</source>
-        <translation type="unfinished"></translation>
+        <translation>NL user import id</translation>
     </message>
     <message>
         <source>Hash</source>
-        <translation type="unfinished"></translation>
+        <translation>Hash</translation>
     </message>
     <message>
         <source>Export CSV</source>
-        <translation type="unfinished"></translation>
+        <translation>Export CSV</translation>
     </message>
     <message>
         <source>Create new Subscription</source>
-        <translation type="unfinished"></translation>
+        <translation>Create new Subscription</translation>
     </message>
     <message>
         <source>Subscriptions statistic</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscriptions statistic</translation>
     </message>
     <message>
         <source>Subscribers</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscribers</translation>
     </message>
     <message>
         <source>Subscriptions</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscriptions</translation>
     </message>
     <message>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>All</translation>
     </message>
     <message>
         <source>Pending</source>
-        <translation type="unfinished"></translation>
+        <translation>Pending</translation>
     </message>
     <message>
         <source>Bounced</source>
-        <translation type="unfinished"></translation>
+        <translation>Bounced</translation>
     </message>
     <message>
         <source>Blacklisted</source>
-        <translation type="unfinished"></translation>
+        <translation>Blacklisted</translation>
     </message>
     <message>
         <source>Exponential User</source>
-        <translation type="unfinished"></translation>
+        <translation>Exponential User</translation>
     </message>
     <message>
         <source>Approve</source>
-        <translation type="unfinished"></translation>
+        <translation>Approve</translation>
     </message>
     <message>
         <source>Approve subscription</source>
-        <translation type="unfinished"></translation>
+        <translation>Approve subscription</translation>
     </message>
     <message>
         <source>This View is only available for &apos;Newsletter List&apos; objects</source>
@@ -2182,158 +2228,158 @@ To edit your newsletter settings please visit the following link:
     <name>cjw_newsletter/subscription_list_csvexport</name>
     <message>
         <source>Subscription CSV export</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription CSV export</translation>
     </message>
     <message>
         <source>CSV field delimiter</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV field delimiter</translation>
     </message>
     <message>
         <source>CSV preview</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV preview</translation>
     </message>
     <message>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Export</translation>
     </message>
     <message>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Preview</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancel</translation>
     </message>
     <message>
         <source>Cancel subscription export.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancel subscription export.</translation>
     </message>
     <message>
         <source>Subscription list CSV export</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription list CSV export</translation>
     </message>
     <message>
         <source>CSV export</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV export</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/subscription_list_csvimport</name>
     <message>
         <source>Upload file</source>
-        <translation type="unfinished"></translation>
+        <translation>Upload file</translation>
     </message>
     <message>
         <source>First row is label</source>
-        <translation type="unfinished"></translation>
+        <translation>First row is label</translation>
     </message>
     <message>
         <source>Import note</source>
-        <translation type="unfinished"></translation>
+        <translation>Import note</translation>
     </message>
     <message>
         <source>Output format</source>
-        <translation type="unfinished"></translation>
+        <translation>Output format</translation>
     </message>
     <message>
         <source>CSV field delimiter</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV field delimiter</translation>
     </message>
     <message>
         <source>Csv File Uploaded</source>
-        <translation type="unfinished"></translation>
+        <translation>Csv File Uploaded</translation>
     </message>
     <message>
         <source>Import   Id</source>
-        <translation type="unfinished"></translation>
+        <translation>Import   Id</translation>
     </message>
     <message>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Update</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancel</translation>
     </message>
     <message>
         <source>Cancel subscription import.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancel subscription import.</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Invert selection</translation>
     </message>
     <message>
         <source>Import all</source>
-        <translation type="unfinished"></translation>
+        <translation>Import all</translation>
     </message>
     <message>
         <source>Import done</source>
-        <translation type="unfinished"></translation>
+        <translation>Import done</translation>
     </message>
     <message>
         <source>Row nr</source>
-        <translation type="unfinished"></translation>
+        <translation>Row nr</translation>
     </message>
     <message>
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation>Email</translation>
     </message>
     <message>
         <source>First name</source>
-        <translation type="unfinished"></translation>
+        <translation>First name</translation>
     </message>
     <message>
         <source>Last name</source>
-        <translation type="unfinished"></translation>
+        <translation>Last name</translation>
     </message>
     <message>
         <source>Salutation</source>
-        <translation type="unfinished"></translation>
+        <translation>Salutation</translation>
     </message>
     <message>
         <source>Email ok</source>
-        <translation type="unfinished"></translation>
+        <translation>Email ok</translation>
     </message>
     <message>
         <source>Nl user created</source>
-        <translation type="unfinished"></translation>
+        <translation>Nl user created</translation>
     </message>
     <message>
         <source>Subscription created</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription created</translation>
     </message>
     <message>
         <source>Created / modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Created / modified</translation>
     </message>
     <message>
         <source>yes</source>
-        <translation type="unfinished"></translation>
+        <translation>yes</translation>
     </message>
     <message>
         <source>no</source>
-        <translation type="unfinished"></translation>
+        <translation>no</translation>
     </message>
     <message>
         <source>created</source>
-        <translation type="unfinished"></translation>
+        <translation>created</translation>
     </message>
     <message>
         <source>updated</source>
-        <translation type="unfinished"></translation>
+        <translation>updated</translation>
     </message>
     <message>
         <source>Subscription CSV import</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription CSV import</translation>
     </message>
     <message>
         <source>Imported items</source>
-        <translation type="unfinished"></translation>
+        <translation>Imported items</translation>
     </message>
     <message>
         <source>CSV import</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV import</translation>
     </message>
     <message>
         <source>Unsupported CSV delimiter. Please use one of the following: &quot;,&quot;, &quot;;&quot;, &quot;|&quot;</source>
@@ -2376,94 +2422,94 @@ To edit your newsletter settings please visit the following link:
     <name>cjw_newsletter/subscription_view</name>
     <message>
         <source>Subscription Id</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription Id</translation>
     </message>
     <message>
         <source>Subscription list</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription list</translation>
     </message>
     <message>
         <source>Newsletter user</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter user</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Status</translation>
     </message>
     <message>
         <source>Created</source>
-        <translation type="unfinished"></translation>
+        <translation>Created</translation>
     </message>
     <message>
         <source>Creator</source>
-        <translation type="unfinished"></translation>
+        <translation>Creator</translation>
     </message>
     <message>
         <source>Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Modified</translation>
     </message>
     <message>
         <source>Modifier</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier</translation>
     </message>
     <message>
         <source>Confirmed</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmed</translation>
     </message>
     <message>
         <source>Approved</source>
-        <translation type="unfinished"></translation>
+        <translation>Approved</translation>
     </message>
     <message>
         <source>Removed</source>
-        <translation type="unfinished"></translation>
+        <translation>Removed</translation>
     </message>
     <message>
         <source>Bounced</source>
-        <translation type="unfinished"></translation>
+        <translation>Bounced</translation>
     </message>
     <message>
         <source>Hash</source>
-        <translation type="unfinished"></translation>
+        <translation>Hash</translation>
     </message>
     <message>
         <source>Remote id</source>
-        <translation type="unfinished"></translation>
+        <translation>Remote id</translation>
     </message>
     <message>
         <source>Import id</source>
-        <translation type="unfinished"></translation>
+        <translation>Import id</translation>
     </message>
     <message>
         <source>Subscription successfully approved!</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription successfully approved!</translation>
     </message>
     <message>
         <source>Subscription successfully removed!</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription successfully removed!</translation>
     </message>
     <message>
         <source>Newsletter subscription</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter subscription</translation>
     </message>
     <message>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Format</translation>
     </message>
     <message>
         <source>Approve subscription</source>
-        <translation type="unfinished"></translation>
+        <translation>Approve subscription</translation>
     </message>
     <message>
         <source>Remove subscription</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove subscription</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/unsubscribe</name>
     <message>
         <source>Unsubscribe</source>
-        <translation type="unfinished"></translation>
+        <translation>Unsubscribe</translation>
     </message>
     <message>
         <source>Hi %name
@@ -2473,11 +2519,11 @@ To edit your newsletter settings please visit the following link:
     </message>
     <message>
         <source>Unsubscribe from list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Unsubscribe from list.</translation>
     </message>
     <message>
         <source>Unsubscription already done</source>
-        <translation type="unfinished"></translation>
+        <translation>Unsubscription already done</translation>
     </message>
     <message>
         <source>Hi %name
@@ -2487,7 +2533,7 @@ To edit your newsletter settings please visit the following link:
     </message>
     <message>
         <source>Unsubscribe success</source>
-        <translation type="unfinished"></translation>
+        <translation>Unsubscribe success</translation>
     </message>
     <message>
         <source>Hi %name
@@ -2496,422 +2542,448 @@ If you want to unsubscribe from from List &quot;%listName&quot;
 you have to confirm this page.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Hi %name
+
+        You already unsubscribed from List "%listName".</source>
+        <translation>Hi %name
+
+        You already unsubscribed from List "%listName".</translation>
+    </message>
+    <message>
+        <source>Hi %name
+
+        You unsubscribe successfully from List "%listName".</source>
+        <translation>Hi %name
+
+        You unsubscribe successfully from List "%listName".</translation>
+    </message>
+    <message>
+        <source>Hi %name
+
+If you want to unsubscribe from from List "%listName"
+you have to confirm this page.</source>
+        <translation>Hi %name
+
+If you want to unsubscribe from from List "%listName"
+you have to confirm this page.</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/user/salutation</name>
     <message>
         <source>Mr</source>
-        <translation type="unfinished"></translation>
+        <translation>Mr</translation>
     </message>
     <message>
         <source>Mrs</source>
-        <translation type="unfinished"></translation>
+        <translation>Mrs</translation>
     </message>
     <message>
         <source>Ms</source>
-        <translation type="unfinished"></translation>
+        <translation>Ms</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/user/status</name>
     <message>
         <source>Pending</source>
-        <translation type="unfinished"></translation>
+        <translation>Pending</translation>
     </message>
     <message>
         <source>Confirmed</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmed</translation>
     </message>
     <message>
         <source>Removed by user</source>
-        <translation type="unfinished"></translation>
+        <translation>Removed by user</translation>
     </message>
     <message>
         <source>Removed by admin</source>
-        <translation type="unfinished"></translation>
+        <translation>Removed by admin</translation>
     </message>
     <message>
         <source>Bounced soft</source>
-        <translation type="unfinished"></translation>
+        <translation>Bounced soft</translation>
     </message>
     <message>
         <source>Bounced hard</source>
-        <translation type="unfinished"></translation>
+        <translation>Bounced hard</translation>
     </message>
     <message>
         <source>Blacklisted</source>
-        <translation type="unfinished"></translation>
+        <translation>Blacklisted</translation>
     </message>
     <message>
         <source>Pending eZ User Register</source>
-        <translation type="unfinished"></translation>
+        <translation>Pending eZ User Register</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/user_create</name>
     <message>
         <source>Create a new newsletter user</source>
-        <translation type="unfinished"></translation>
+        <translation>Create a new newsletter user</translation>
     </message>
     <message>
         <source>Create and edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Create and edit</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancel</translation>
     </message>
     <message>
         <source>Create</source>
-        <translation type="unfinished"></translation>
+        <translation>Create</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/user_edit</name>
     <message>
         <source>First name of newsletter user.</source>
-        <translation type="unfinished"></translation>
+        <translation>First name of newsletter user.</translation>
     </message>
     <message>
         <source>Last name of newsletter user.</source>
-        <translation type="unfinished"></translation>
+        <translation>Last name of newsletter user.</translation>
     </message>
     <message>
         <source>Subscriptions</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscriptions</translation>
     </message>
     <message>
         <source>Store and exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Store and exit</translation>
     </message>
     <message>
         <source>Store draft</source>
-        <translation type="unfinished"></translation>
+        <translation>Store draft</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancel</translation>
     </message>
     <message>
         <source>Creating new newsletter user</source>
-        <translation type="unfinished"></translation>
+        <translation>Creating new newsletter user</translation>
     </message>
     <message>
         <source>Edit existing newsletter user</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit existing newsletter user</translation>
     </message>
     <message>
         <source>Can not edit newsletter user because he is blacklisted</source>
-        <translation type="unfinished"></translation>
+        <translation>Can not edit newsletter user because he is blacklisted</translation>
     </message>
     <message>
         <source>auto approve</source>
-        <translation type="unfinished"></translation>
+        <translation>auto approve</translation>
     </message>
     <message>
         <source>Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Modified</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/user_list</name>
     <message>
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation>Email</translation>
     </message>
     <message>
         <source>Edit current subscription list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit current subscription list.</translation>
     </message>
     <message>
         <source>Import CSV</source>
-        <translation type="unfinished"></translation>
+        <translation>Import CSV</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Invert selection</translation>
     </message>
     <message>
         <source>Lists</source>
-        <translation type="unfinished"></translation>
+        <translation>Lists</translation>
     </message>
     <message>
         <source>Confirmed</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmed</translation>
     </message>
     <message>
         <source>Conf</source>
-        <translation type="unfinished"></translation>
+        <translation>Conf</translation>
     </message>
     <message>
         <source>Blacklisted</source>
-        <translation type="unfinished"></translation>
+        <translation>Blacklisted</translation>
     </message>
     <message>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>Black</translation>
     </message>
     <message>
         <source>Bounce</source>
-        <translation type="unfinished"></translation>
+        <translation>Bounce</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Status</translation>
     </message>
     <message>
         <source>Select subscriber for removal</source>
-        <translation type="unfinished"></translation>
+        <translation>Select subscriber for removal</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Name</translation>
     </message>
     <message>
         <source>Create Newsletter user</source>
-        <translation type="unfinished"></translation>
+        <translation>Create Newsletter user</translation>
     </message>
     <message>
         <source>Edit newsletter user</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit newsletter user</translation>
     </message>
     <message>
         <source>Approved</source>
-        <translation type="unfinished"></translation>
+        <translation>Approved</translation>
     </message>
     <message>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>All</translation>
     </message>
     <message>
         <source>UID</source>
-        <translation type="unfinished"></translation>
+        <translation>UID</translation>
     </message>
     <message>
         <source>Manage users</source>
-        <translation type="unfinished"></translation>
+        <translation>Manage users</translation>
     </message>
     <message>
         <source>Search for existing user</source>
-        <translation type="unfinished"></translation>
+        <translation>Search for existing user</translation>
     </message>
     <message>
         <source>Users</source>
-        <translation type="unfinished"></translation>
+        <translation>Users</translation>
     </message>
     <message>
         <source>eZ user id</source>
-        <translation type="unfinished"></translation>
+        <translation>eZ user id</translation>
     </message>
     <message>
         <source>Newsletter user id</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter user id</translation>
     </message>
     <message>
         <source>Bounced</source>
-        <translation type="unfinished"></translation>
+        <translation>Bounced</translation>
     </message>
     <message>
         <source>Bounce count</source>
-        <translation type="unfinished"></translation>
+        <translation>Bounce count</translation>
     </message>
     <message>
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Details</translation>
     </message>
     <message>
         <source>Subscription details</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription details</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/user_remove</name>
     <message>
         <source>Remove newsletter user</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove newsletter user</translation>
     </message>
     <message>
         <source>Subscription count</source>
-        <translation type="unfinished"></translation>
+        <translation>Subscription count</translation>
     </message>
     <message>
         <source>S</source>
-        <translation type="unfinished"></translation>
+        <translation>S</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancel</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/user_view</name>
     <message>
         <source>Id</source>
-        <translation type="unfinished"></translation>
+        <translation>Id</translation>
     </message>
     <message>
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation>Email</translation>
     </message>
     <message>
         <source>Salutation</source>
-        <translation type="unfinished"></translation>
+        <translation>Salutation</translation>
     </message>
     <message>
         <source>First name</source>
-        <translation type="unfinished"></translation>
+        <translation>First name</translation>
     </message>
     <message>
         <source>Last name</source>
-        <translation type="unfinished"></translation>
+        <translation>Last name</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Status</translation>
     </message>
     <message>
         <source>Creator</source>
-        <translation type="unfinished"></translation>
+        <translation>Creator</translation>
     </message>
     <message>
         <source>Created</source>
-        <translation type="unfinished"></translation>
+        <translation>Created</translation>
     </message>
     <message>
         <source>Modifier</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier</translation>
     </message>
     <message>
         <source>Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Modified</translation>
     </message>
     <message>
         <source>Confirmed</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmed</translation>
     </message>
     <message>
         <source>Bounced</source>
-        <translation type="unfinished"></translation>
+        <translation>Bounced</translation>
     </message>
     <message>
         <source>Blacklisted</source>
-        <translation type="unfinished"></translation>
+        <translation>Blacklisted</translation>
     </message>
     <message>
         <source>Hash</source>
-        <translation type="unfinished"></translation>
+        <translation>Hash</translation>
     </message>
     <message>
         <source>Bounce count</source>
-        <translation type="unfinished"></translation>
+        <translation>Bounce count</translation>
     </message>
     <message>
         <source>Remote id</source>
-        <translation type="unfinished"></translation>
+        <translation>Remote id</translation>
     </message>
     <message>
         <source>Import id</source>
-        <translation type="unfinished"></translation>
+        <translation>Import id</translation>
     </message>
     <message>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation>Note</translation>
     </message>
     <message>
         <source>Data xml</source>
-        <translation type="unfinished"></translation>
+        <translation>Data xml</translation>
     </message>
     <message>
         <source>Data text</source>
-        <translation type="unfinished"></translation>
+        <translation>Data text</translation>
     </message>
     <message>
         <source>Processed</source>
-        <translation type="unfinished"></translation>
+        <translation>Processed</translation>
     </message>
     <message>
         <source>Newsletter user</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter user</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Name</translation>
     </message>
     <message>
         <source>enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>enabled</translation>
     </message>
     <message>
         <source>disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>disabled</translation>
     </message>
     <message>
         <source>Ez user with id %ez_user_id does not exist anymore!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ez user with id %ez_user_id does not exist anymore!</translation>
     </message>
     <message>
         <source>Removed</source>
-        <translation type="unfinished"></translation>
+        <translation>Removed</translation>
     </message>
     <message>
         <source>Edit by admin</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit by admin</translation>
     </message>
     <message>
         <source>Delete newsletter user and all subscriptions from database</source>
-        <translation type="unfinished"></translation>
+        <translation>Delete newsletter user and all subscriptions from database</translation>
     </message>
     <message>
         <source>eZ user id</source>
-        <translation type="unfinished"></translation>
+        <translation>eZ user id</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove</translation>
     </message>
     <message>
         <source>Add to blacklist</source>
-        <translation type="unfinished"></translation>
+        <translation>Add to blacklist</translation>
     </message>
     <message>
         <source>Newsletter subscriptions</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter subscriptions</translation>
     </message>
     <message>
         <source>Newsletter received</source>
-        <translation type="unfinished"></translation>
+        <translation>Newsletter received</translation>
     </message>
     <message>
         <source>Edition sent id</source>
-        <translation type="unfinished"></translation>
+        <translation>Edition sent id</translation>
     </message>
     <message>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Format</translation>
     </message>
     <message>
         <source>Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Opened</translation>
     </message>
     <message>
         <source>External user id</source>
-        <translation type="unfinished"></translation>
+        <translation>External user id</translation>
     </message>
     <message>
         <source>Remove from blacklist</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove from blacklist</translation>
     </message>
     <message>
         <source>Custom Data text 1</source>

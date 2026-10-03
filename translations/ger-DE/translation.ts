@@ -765,6 +765,10 @@
         <source>The schedule date or time is invalid!</source>
         <translation>Das geplante Datum oder die geplante Uhrzeit ist ungültig!</translation>
     </message>
+    <message>
+        <source>You have to set a valid email adress</source>
+        <translation>Sie müssen eine gültige E-Mail-Adresse angeben</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/datatype/cjwnewsletterlist</name>
@@ -891,6 +895,10 @@
     <message>
         <source>Email return-path</source>
         <translation>E-Mail Rücksendepfad (Return-Path)</translation>
+    </message>
+    <message>
+        <source>You have to choose a siteaccess for the list</source>
+        <translation>Sie müssen für die Liste einen Siteaccess auswählen</translation>
     </message>
 </context>
 <context>
