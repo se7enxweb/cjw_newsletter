@@ -1,4 +1,4 @@
-{set-block variable=$subject scope=root}{ezini('NewsletterMailSettings', 'EmailSubjectPrefix', 'cjw_newsletter.ini')} {$contentobject.name|wash}{/set-block}
+{set-block variable=$subject scope=root}{cond( ezini('NewsletterMailSettings', 'EmailSubjectPrefix', 'cjw_newsletter.ini')|ne(''), ezini('NewsletterMailSettings', 'EmailSubjectPrefix', 'cjw_newsletter.ini'), concat( '[Newsletter ', ezini('SiteSettings', 'SiteURL', 'site.ini')|explode('/')|extract(0,1)|implode(''), ']' ) )} {$contentobject.name|wash}{/set-block}
 {def $edition_data_map = $contentobject.data_map}
 
 {if $edition_data_map.title.has_content}

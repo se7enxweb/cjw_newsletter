@@ -1,4 +1,4 @@
-{*?template charset=utf-8?*}{set-block variable=$subject scope=root}{ezini('NewsletterMailSettings', 'EmailSubjectPrefix', 'cjw_newsletter.ini')} {'Subscription verification'|i18n( 'cjw_newsletter/subscription_confirmation' )}{/set-block}
+{*?template charset=utf-8?*}{set-block variable=$subject scope=root}{cond( ezini('NewsletterMailSettings', 'EmailSubjectPrefix', 'cjw_newsletter.ini')|ne(''), ezini('NewsletterMailSettings', 'EmailSubjectPrefix', 'cjw_newsletter.ini'), concat( '[Newsletter ', ezini('SiteSettings', 'SiteURL', 'site.ini')|explode('/')|extract(0,1)|implode(''), ']' ) )} {'Subscription verification'|i18n( 'cjw_newsletter/subscription_confirmation' )}{/set-block}
 {*
 $newsletter_user
 $hostname
