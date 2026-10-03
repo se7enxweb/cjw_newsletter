@@ -354,12 +354,13 @@ class CjwNewsletterMailbox extends eZPersistentObject
                     $ezcTransportObject = new ezcMailPop3Transport( $server, $serverPort, $options );
                     break;
                 default:
+                    $message = 'Unknown mailbox type ' . $mailboxType;
                     CjwNewsletterLog::writeError(
                                                 'CjwNewsletterMailbox::connect',
                                                 'mailbox',
                                                 'connect-failed',
-                                                 array( 'error-code' => $e->getMessage() ) );
-                    return $e->getMessage();
+                                                 array( 'error-code' => $message ) );
+                    return $message;
 
             }
         }
@@ -456,6 +457,8 @@ class CjwNewsletterMailbox extends eZPersistentObject
         if ( is_object( $this->TransportObject ) )
         {
             $transport = $this->TransportObject;
+            $uniqueIdentifierArray = array();
+            $messageIdArray = array();
 
             try
             {
@@ -466,7 +469,7 @@ class CjwNewsletterMailbox extends eZPersistentObject
             }
             catch( Exception $e )
             {
-                $uniqueIdentifiers = false;
+                $uniqueIdentifierArray = array();
                 CjwNewsletterLog::writeError(
                                             'CjwNewsletterMailbox::fetchMails',
                                             'mailbox',
@@ -482,7 +485,7 @@ class CjwNewsletterMailbox extends eZPersistentObject
             }
             catch( Exception $e )
             {
-                $messageIdNumbers = false;
+                $messageIdArray = array();
                 CjwNewsletterLog::writeError(
                                             'CjwNewsletterMailbox::fetchMails',
                                             'mailbox',
@@ -598,12 +601,12 @@ class CjwNewsletterMailbox extends eZPersistentObject
         $mailboxId = (int) $this->attribute('id');
         $identifierImplodeString = '';
 
-        foreach( $messageIdentifierArray as $identifier )
+        $db = eZDB::instance();
+        foreach( (array)$messageIdentifierArray as $identifier )
         {
-            $identifierImplodeString .= "'$identifier',";
+            $identifierImplodeString .= "'" . $db->escapeString( (string)$identifier ) . "',";
         }
 
-        $db = eZDB::instance();
         $sql = "SELECT id, message_identifier FROM cjwnl_mailbox_item
                 WHERE mailbox_id=$mailboxId
                 AND message_identifier IN ( $identifierImplodeString -1 )";

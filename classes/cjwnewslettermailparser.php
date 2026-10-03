@@ -93,7 +93,12 @@ class CjwNewsletterMailParser
     public function parse( )
     {
         // parse set to mailobject
-        $set = new ezcMailVariableSet( $this->MailboxItem->getRawMailMessageContent() );
+        $rawMail = $this->MailboxItem->getRawMailMessageContent();
+        if ( !is_string( $rawMail ) || $rawMail === '' )
+        {
+            return false;
+        }
+        $set = new ezcMailVariableSet( $rawMail );
 
         try
         {
@@ -177,6 +182,9 @@ class CjwNewsletterMailParser
         {
             $second = $arrayPartsOfezcMailObject[ 1 ]->__get( 'recipients' );
 
+            $recipient = '';
+            $errorCode = '0';
+            $diagnostic = '';
             if( isset( $second[ 0 ] ) && is_object( $second[ 0 ] ) )
             {
                 $recipient = $second[ 0 ]->offsetGet( 'Final-Recipient' );
@@ -186,7 +194,7 @@ class CjwNewsletterMailParser
             }
             else
             {
-                return 0;
+                return array( 'error_code' => '0', 'final_recipient' => '' );
             }
 
             // error code in recipients
@@ -201,7 +209,7 @@ class CjwNewsletterMailParser
                 $ezcMailMultipartReportParts = $mailObject->body->getParts();
 
                 // check, we search an ezcMailText object, which contains the 'text' field
-                if ( is_object( $ezcMailMultipartReportParts[ 0 ] ) && $ezcMailMultipartReportParts[ 0 ] instanceof ezcMailText )
+                if ( isset( $ezcMailMultipartReportParts[ 0 ] ) && is_object( $ezcMailMultipartReportParts[ 0 ] ) && $ezcMailMultipartReportParts[ 0 ] instanceof ezcMailText )
                 {
                     // parse error code from textstring
                     $errorCode = $this->standardParser( $ezcMailMultipartReportParts[0]->__get( 'text' ) );
@@ -220,7 +228,7 @@ class CjwNewsletterMailParser
         }
         else
         {
-            return 0;
+            return array( 'error_code' => '0', 'final_recipient' => '' );
         }
 
     }
@@ -243,7 +251,7 @@ class CjwNewsletterMailParser
                 {
                     array_push( $newArray, $errorCode[ $key ] );
                     $errorStringForArray = $newArray[ 0 ];
-                    $errorNumForArray    = $resultForArray[ 0 ];
+                    $errorNumForArray    = trim( $resultForArray[ 0 ] );
                     $bounceTyp           = 'Hardbounce';
 
                     //echo $bounceTyp."\n"."ErrorCode: ". $errorNumForArray ."\n"."ErrorDescription: ". $errorStringForArray."\n";
@@ -253,7 +261,7 @@ class CjwNewsletterMailParser
                 {
                     array_push( $newArray, $errorCode[$key] );
                     $errorStringForArray = $newArray[ 0 ];
-                    $errorNumForArray    = $resultForArray[ 0 ];
+                    $errorNumForArray    = trim( $resultForArray[ 0 ] );
                     $bounceTyp           = 'Softbounce';
 
                     //echo $bounceTyp."\n"."ErrorCode: ". $errorNumForArray ."\n"."ErrorDescription: ". $errorStringForArray."\n";
@@ -274,6 +282,10 @@ class CjwNewsletterMailParser
                 $errorStringForString = $errorCode;
                 $errorNumForString    = trim ( $resultForString[ 0 ] );
                 return $errorNumForString;
+            }
+            elseif ( preg_match( '(4[0-9][0-9] [0-9].[0-9].[0-9])', $errorCode, $resultForString ) )
+            {
+                return trim ( $resultForString[ 0 ] );
             }
             else
             // (#4.4.1) / (#4.4.3) (#5.1.2)
@@ -298,7 +310,7 @@ class CjwNewsletterMailParser
             elseif ( preg_match( '( 4[0-9][0-9] )', $errorCode, $resultForString ) )
             {
                 $errorStringForString = $errorCode;
-                $errorNumForString    = $resultForString[ 0 ];
+                $errorNumForString    = trim( $resultForString[ 0 ] );
                 $bounceTyp            = 'Softbounce';
 
                 //echo $bounceTyp."\n"."ErrorCode: ". $errorNumForString ."\n"."ErrorDescription: ". $errorStringForString."\n";
@@ -318,6 +330,10 @@ class CjwNewsletterMailParser
     private function getCjwHeaders()
     {
         $textArray = $this->MailboxItem->getRawMailMessageContent( true );
+        if ( !is_array( $textArray ) )
+        {
+            return array();
+        }
         $xcjwHeaderArray = array();
         $i = 0;
 
@@ -325,12 +341,16 @@ class CjwNewsletterMailParser
         // we expect that all x-cjw- headers are in the first 100-200 lines
         while( count( $textArray ) > $i && $i < 200 )
         {
-            if ( strpos( $textArray[$i], 'x-cjwnl-' ) === 0 )
+            // the mail server of a bounce quotes the headers in its own case
+            if ( stripos( ltrim( $textArray[$i], "> \t" ), 'x-cjwnl-' ) === 0 )
             {
-                $explodeTextArray = explode( ':', $textArray[ $i ] );
-                $key = trim( $explodeTextArray[ 0 ] );
-                $value = trim( $explodeTextArray[ 1 ] );
-                $xcjwHeaderArray[ $key ] = $value;
+                $explodeTextArray = explode( ':', ltrim( $textArray[ $i ], "> \t" ), 2 );
+                if ( count( $explodeTextArray ) === 2 )
+                {
+                    $key = strtolower( trim( $explodeTextArray[ 0 ] ) );
+                    $value = trim( $explodeTextArray[ 1 ] );
+                    $xcjwHeaderArray[ $key ] = $value;
+                }
             }
             $i++;
         }
