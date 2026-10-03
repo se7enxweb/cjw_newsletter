@@ -60,8 +60,12 @@ class UserList extends \Exponential\Runnable\ModuleView
         // get wanted user email and filter by itself
         if( $http->hasVariable( 'SearchUserEmail' ) )
         {
-            $searchUserEmail = trim( $db->escapeString( $http->variable( 'SearchUserEmail' ) ) );
-            $filterArray[]   = array( 'cjwnl_user.email' =>  array( 'like', $searchUserEmail ) );
+            // the filter escapes the value for SQL; the template washes it for HTML
+            $searchUserEmail = trim( (string)$http->variable( 'SearchUserEmail' ) );
+            if ( $searchUserEmail !== '' )
+            {
+                $filterArray[]   = array( 'cjwnl_user.email' =>  array( 'like', '%' . $searchUserEmail . '%' ) );
+            }
         }
 
         // AND - all filter should match

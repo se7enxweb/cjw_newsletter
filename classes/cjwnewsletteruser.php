@@ -771,14 +771,17 @@ class CjwNewsletterUser extends eZPersistentObject
     static function fetchByEmail( $email )
     {
         $db = eZDB::instance();
-        $objectList = eZPersistentObject::fetchObjectList(
-                        CjwNewsletterUser::definition(),
-                        null,
-                        array( 'email' => $db->escapeString( $email ) ),
-                        null,
-                        null,
-                        true
-                        );
+        $objectList = array();
+        // the address is compared in lower case and without surrounding blanks
+        $rows = $db->arrayQuery( "SELECT id FROM cjwnl_user WHERE LOWER( email ) = '" . $db->escapeString( strtolower( trim( (string)$email ) ) ) . "' ORDER BY id" );
+        foreach ( (array)$rows as $row )
+        {
+            $userObject = self::fetch( $row['id'] );
+            if ( is_object( $userObject ) )
+            {
+                $objectList[] = $userObject;
+            }
+        }
 
         $count = count( $objectList );
         if ( $count == 1 )
@@ -822,11 +825,10 @@ class CjwNewsletterUser extends eZPersistentObject
         if( $ezUserId > 0 )
         {
 
-            $db = eZDB::instance();
             $objectList = eZPersistentObject::fetchObjectList(
                             CjwNewsletterUser::definition(),
                             null,
-                            array( 'ez_user_id' => $db->escapeString( $ezUserId ) ),
+                            array( 'ez_user_id' => (int)$ezUserId ),
                             null,
                             null,
                             true
@@ -851,11 +853,15 @@ class CjwNewsletterUser extends eZPersistentObject
      */
     static function fetchByRemoteId( $remoteId )
     {
-        $db = eZDB::instance();
+        // no remote id is no match, not a match for every user that has none
+        if ( $remoteId === false || $remoteId === null || trim( (string)$remoteId ) === '' )
+        {
+            return false;
+        }
         $objectList = eZPersistentObject::fetchObjectList(
                         CjwNewsletterUser::definition(),
                         null,
-                        array( 'remote_id' => $db->escapeString( $remoteId ) ),
+                        array( 'remote_id' => (string)$remoteId ),
                         null,
                         null,
                         true
@@ -1427,6 +1433,7 @@ class CjwNewsletterUser extends eZPersistentObject
             $this->setAttribute( 'status', self::STATUS_REMOVED_SELF );
             $this->setAllNewsletterUserRelatedItemsToStatus( self::STATUS_REMOVED_SELF );
         }
+        $this->store();
     }
 
 

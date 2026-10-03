@@ -63,7 +63,7 @@ nur nodeobject vom type  cjw_newsletter_list aktzeptieren
                             {*Alles: <input type="text" name="SearchText" value="">
                             <br/>
                             *}
-                            {'Email'|i18n( 'cjw_newsletter/user_list' )}: <input type="text" name="SearchUserEmail" value="{if is_set($view_parameters['search_user_email'])}{$view_parameters['search_user_email']}{/if}"><input type="submit" name="SubmitUserSearch" value="{'Search for existing user'|i18n( 'cjw_newsletter/user_list' )}">
+                            {'Email'|i18n( 'cjw_newsletter/user_list' )}: <input type="text" name="SearchUserEmail" value="{if is_set($view_parameters['search_user_email'])}{$view_parameters['search_user_email']|wash}{/if}"><input type="submit" name="SubmitUserSearch" value="{'Search for existing user'|i18n( 'cjw_newsletter/user_list' )}">
                         </form>{* Created. *}
                     </div>
                 </div>
