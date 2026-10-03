@@ -325,7 +325,9 @@ class CjwNewsletterMail
             // is string ' 450 ' included in emailResult
             $searchString = ' 450 ';
             $addErrorMessage = '';
-            if ( strpos( $sendResult, $searchString ) !== false )
+            $sendResultText = $sendResult instanceof Exception ? $sendResult->getMessage() : (string)$sendResult;
+            $emailResult['send_error'] = $sendResultText;
+            if ( strpos( $sendResultText, $searchString ) !== false )
             {
                 // check if we found an email nl user for emailReceiver
                 $nlUserToBounce = CjwNewsletterUser::fetchByEmail( $emailReceiver );
@@ -375,14 +377,8 @@ class CjwNewsletterMail
         $emailResult = eZMailTransport::send( $mail );
         $emailResult = array('email_result' => $emailResult, 'email_sender' => $emailSender, 'email_reciever' => $emailReciever, 'email_subject' => $emailSubject, 'email_content_type' => $emailContentType, 'email_charset' => $emailCharset );
 
-        if ( $mailResult === true )
-        {
-            $message = "send - " . $receiver['email'] . " - " . $receiver['name'];
-        }
-        else
-        {
-            $message = "not send - " . $receiver['email'] . " - " . $receiver['name'];
-        }
+        // eZMailTransport::send() answers true or false
+        $emailResult['send_result'] = $emailResult['email_result'] === true;
         return $emailResult;
     }
 
@@ -516,7 +512,7 @@ class CjwNewsletterMail
      */
     public function resetExtraMailHeaders()
     {
-        $this->extraEmailHeaderItemArray = array();
+        $this->ExtraEmailHeaderItemArray = array();
         //$this->setExtraMailHeader( 'version', '1.0.0alpha' );
         $this->setExtraMailHeader( 'version', cjw_newsletterInfo::SOFTWARE_VERSION );
     }

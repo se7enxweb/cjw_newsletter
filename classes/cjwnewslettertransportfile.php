@@ -30,15 +30,42 @@ class CjwNewsletterTransportFile implements ezcMailTransport
      */
     public function __construct( $mailDir = 'var/log/mail' )
     {
-        // $this->mailDir = eZSys::siteDir().eZSys::varDirectory().'/log/mail';
+        $mailDir = self::resolveMailDir( $mailDir );
         if ( is_dir( $mailDir ) or eZDir::mkdir( $mailDir, false, true ) )
         {
             $this->mailDir = $mailDir;
         }
         else
         {
-            // TODO Fehlerbehandlung wenn verzeichnis nicht angelegt werden kann
+            throw new ezcMailTransportException( "The mail directory '$mailDir' does not exist and cannot be created." );
         }
+    }
+
+    /**
+     * A relative directory is relative to the installation, not to whatever the current directory of the process is
+     * (a cron job and a web request differ in that).
+     *
+     * @param string $mailDir
+     * @return string
+     */
+    public static function resolveMailDir( $mailDir )
+    {
+        $mailDir = rtrim( (string)$mailDir, '/\\' );
+        if ( $mailDir === '' )
+        {
+            $mailDir = 'var/log/mail';
+        }
+        if ( $mailDir[0] !== '/' && !preg_match( '#^[A-Za-z]:[/\\\\]#', $mailDir ) )
+        {
+            $base = rtrim( (string)eZSys::siteDir(), '/\\' );
+            // the installation's directory; where the process does not know it (siteDir is empty), the current directory is
+            if ( $base === '' || $base[0] !== '/' || !is_dir( $base ) )
+            {
+                $base = rtrim( getcwd(), '/\\' );
+            }
+            $mailDir = $base . '/' . $mailDir;
+        }
+        return $mailDir;
     }
 
     /**
@@ -65,14 +92,25 @@ class CjwNewsletterTransportFile implements ezcMailTransport
         }
 
 
+        $firstRecipient = '';
+        foreach ( array( $mail->to, $mail->cc, $mail->bcc ) as $addressList )
+        {
+            if ( count( $addressList ) > 0 )
+            {
+                $firstRecipient = $addressList[0]->email;
+                break;
+            }
+        }
+
         $success = $this->createMailFile( ezcMailTools::composeEmailAddresses( $mail->to ),
                          $mail->getHeader( 'Subject' ),
                          $mail->generateBody(),
                          $headers,
-                         $emailReturnPath );
+                         $emailReturnPath,
+                         $firstRecipient );
         if ( $success === false )
         {
-            throw new ezcMailTransportException( 'The email could not be sent by sendmail' );
+            throw new ezcMailTransportException( 'The email could not be written to ' . $this->mailDir );
         }
     }
 
@@ -85,13 +123,15 @@ class CjwNewsletterTransportFile implements ezcMailTransport
      * @param unknown_type $emailReturnPath
      * @return file
      */
-    function createMailFile( $receiver, $subject, $message, $extraHeaders, $emailReturnPath = '' )
+    function createMailFile( $receiver, $subject, $message, $extraHeaders, $emailReturnPath = '', $recipientAddress = '' )
     {
         $sys = eZSys::instance();
         $lineBreak =  ($sys->osType() == 'win32' ? "\r\n" : "\n" );
         // $separator =  ($sys->osType() == 'win32' ? "\\" : "/" );
         // $fileName = date("Ymd") .'-' .date("His").'-'.rand().'.mail';
-        $fileName = time().'-'.rand().'-cjw_nl.mail';
+        // unique even when many mails are written in the same second: time, random id and the recipient
+        $recipient = preg_replace( '/[^A-Za-z0-9._@-]+/', '_', substr( $recipientAddress !== '' ? (string)$recipientAddress : strip_tags( (string)$receiver ), 0, 80 ) );
+        $fileName = gmdate( 'Ymd-His' ) . '-' . uniqid( '', true ) . '-' . $recipient . '.eml';
         // $mailDir = eZSys::siteDir().eZSys::varDirectory().'/log/mail';
         // $mailDir = eZSys::siteDir().'var/log/mail';
 

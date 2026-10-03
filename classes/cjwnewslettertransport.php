@@ -45,7 +45,10 @@ class CjwNewsletterTransport
     {
         $iniTransport = $this->transportMethod;
         $cjwNewsletterINI = eZINI::instance( 'cjw_newsletter.ini' );
+        $transport = null;
 
+        try
+        {
         switch ( $iniTransport )
         {
             case 'smtp':
@@ -80,16 +83,18 @@ class CjwNewsletterTransport
             {
                 $transport = new ezcMailMtaTransport();
             } break;
+            default:
+            {
+                throw new ezcMailTransportException( 'Unknown transport method ' . $iniTransport );
+            }
         }
 
-        try
-        {
             $transport->send( $ezcMailComposerObject );
             // CjwNewsletterLog::writeInfo( 'email send ok', 'CjwNewsletterTransport', 'send' );
 
             return true;
         }
-        catch ( ezcMailTransportException $e )
+        catch ( Exception $e )
         {
             // error by transport with tracking
             eZDebug::writeError( 'CjwNewsletterTransport:send: ' . $e->getMessage()  );
@@ -116,9 +121,9 @@ class CjwNewsletterTransport
         switch ( $name )
         {
             case 'transportMethod':
-                if ( !(  in_array($value, array( 'file', 'smtp', 'sendmail' ) ) ) )
+                if ( !(  in_array($value, array( 'file', 'smtp', 'sendmail', 'mta' ) ) ) )
                 {
-                    throw new ezcBaseValueException( 'transportMethod', $value, 'file, smtp, sendmail' );
+                    throw new ezcBaseValueException( 'transportMethod', $value, 'file, smtp, sendmail, mta' );
                 }
                 $this->properties[$name] = $value;
                 break;
