@@ -73,10 +73,14 @@ class Unsubscribe extends \Exponential\Runnable\ModuleView
             if ( $module->hasActionParameter( 'CancelUri' ) )
             {
                 $cancelUri = $module->actionParameter( 'CancelUri' );
+                // only a path of this site, never another host
+                if ( !is_string( $cancelUri ) || strpos( $cancelUri, '//' ) !== false || strpos( $cancelUri, ':' ) !== false || strpos( $cancelUri, '\\' ) !== false )
+                {
+                    $cancelUri = '/';
+                }
             }
 
-            $module->redirectTo( $cancelUri );
-            // echo $cancelUrl;
+            return $this->viewResult( isset( $Result ) ? $Result : null, $module->redirectTo( $cancelUri ) );
         }
         else
         {

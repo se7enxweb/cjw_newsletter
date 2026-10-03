@@ -25,6 +25,17 @@ namespace Exponential\View\Extension\CjwNewsletter\Newsletter
 
 class MailboxEdit extends \Exponential\Runnable\ModuleView
 {
+    /** A redirect target from a form: a path of this site, never another host. */
+    private function localPath( $path )
+    {
+        $path = ltrim( (string)$path, '/\\' );
+        if ( $path === '' || strpos( $path, ':' ) !== false )
+        {
+            $path = 'newsletter/mailbox_list';
+        }
+        return '/' . $path;
+    }
+
     public function run( array $scope )
     {
         // the including function's variables ($Params, $Module, $cli, ...)
@@ -56,24 +67,29 @@ class MailboxEdit extends \Exponential\Runnable\ModuleView
                 }
             }
 
+            // an id that does not exist is an error, not a mailbox to fill
+            if ( !is_object( $mailboxObject ) )
+            {
+                return $this->viewResult( isset( $Result ) ? $Result : null,  $module->handleError( \eZError::KERNEL_NOT_AVAILABLE, 'kernel' ) );
+            }
+
             // set data from edit/add view
+            $mailboxData = array();
             if ( $http->hasPostVariable( 'edit' ) )
             {
-                $mailboxData = array(
-                                        'email'                    => $http->postVariable( 'email' ),
-                                        'server'                   => $http->postVariable( 'server' ),
-                                        'port'                     => $http->postVariable( 'port' ),
-                                        'user_name'                => $http->postVariable( 'user_name' ),
-                                        'password'                 => $http->postVariable( 'password' ),
-                                        'type'                     => $http->postVariable( 'type' ),
-                                        'is_activated'             => $http->postVariable( 'is_activated' ),
-                                        'is_ssl'                   => $http->postVariable( 'is_ssl' ),
-                                        'delete_mails_from_server' => $http->postVariable( 'delete_mails_from_server' )
-                                     );
+                foreach ( array( 'email' => '', 'server' => '', 'port' => 0, 'user_name' => '', 'password' => '', 'type' => 'imap',
+                                 'is_activated' => 0, 'is_ssl' => 0, 'delete_mails_from_server' => 0 ) as $field => $default )
+                {
+                    $mailboxData[$field] = $http->hasPostVariable( $field ) ? $http->postVariable( $field ) : $default;
+                }
+                if ( !in_array( $mailboxData['type'], array( 'imap', 'pop3' ) ) )
+                {
+                    $mailboxData['type'] = 'imap';
+                }
             }
 
             // if PublishButton was pushed than store new data
-            if ( $http->hasPostVariable( 'PublishButton' ) )
+            if ( $http->hasPostVariable( 'PublishButton' ) && $mailboxData )
             {
                 // save data
                 $resultStoreData = $mailboxObject->storeMailboxData( $Params[ 'MailboxId' ], $mailboxData );
@@ -81,13 +97,13 @@ class MailboxEdit extends \Exponential\Runnable\ModuleView
                 // positiv return, redirect to maibox list
                 if ( $resultStoreData )
                 {
-                    $module->redirectTo( "/".$http->postVariable( 'redirect' ) );
+                    $module->redirectTo( $this->localPath( $http->hasPostVariable( 'redirect' ) ? $http->postVariable( 'redirect' ) : '' ) );
                 }
             }
             // Cancel
             elseif( $http->hasPostVariable( 'DiscardButton' ) )
             {
-                $module->redirectTo( "/".$http->postVariable( 'redirect' ) );
+                $module->redirectTo( $this->localPath( $http->hasPostVariable( 'redirect' ) ? $http->postVariable( 'redirect' ) : '' ) );
             }
         }
 

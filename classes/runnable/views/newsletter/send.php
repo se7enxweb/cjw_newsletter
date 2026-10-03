@@ -61,7 +61,7 @@ class Send extends \Exponential\Runnable\ModuleView
         $tpl->setVariable( 'view_parameters', $viewParameters );
         $tpl->setVariable( 'node_id', $nodeId );
 
-        $node = \eZContentObjectTreeNode::fetch( $nodeId );
+        $node = $nodeId ? \eZContentObjectTreeNode::fetch( (int)$nodeId ) : null;
 
         if ( !is_object( $node ) )
         {
@@ -143,11 +143,11 @@ class Send extends \Exponential\Runnable\ModuleView
                 if ( $module->hasActionParameter( 'SendOutConfirmation' ) )
                 {
                     // validate schedule datetime
-                    $theFormData = array( 'year'     => $_POST['CJWNL_datetime_year_noid'],
-                                          'month'    => $_POST['CJWNL_datetime_month_noid'],
-                                          'day'      => $_POST['CJWNL_datetime_day_noid'],
-                                          'hour'     => $_POST['CJWNL_datetime_hour_noid'],
-                                          'minute'   => $_POST['CJWNL_datetime_minute_noid'] );
+                    $theFormData = array( 'year'     => isset( $_POST['CJWNL_datetime_year_noid'] ) ? $_POST['CJWNL_datetime_year_noid'] : 0,
+                                          'month'    => isset( $_POST['CJWNL_datetime_month_noid'] ) ? $_POST['CJWNL_datetime_month_noid'] : 0,
+                                          'day'      => isset( $_POST['CJWNL_datetime_day_noid'] ) ? $_POST['CJWNL_datetime_day_noid'] : 0,
+                                          'hour'     => isset( $_POST['CJWNL_datetime_hour_noid'] ) ? $_POST['CJWNL_datetime_hour_noid'] : 0,
+                                          'minute'   => isset( $_POST['CJWNL_datetime_minute_noid'] ) ? $_POST['CJWNL_datetime_minute_noid'] : 0 );
                     $theFormData = array_map('intval', $theFormData);
 
                     $theDateIsValid = ( \eZDateTimeValidator::validateDate( $theFormData['day'],

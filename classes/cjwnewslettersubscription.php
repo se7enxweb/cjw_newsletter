@@ -696,15 +696,21 @@ class CjwNewsletterSubscription extends eZPersistentObject
 
         if ( is_object( $newsletterUserObject ) === false )
         {
-            return $resultArray['errors'] = "Can not create new newsletter user with $email";
+            $resultArray['errors'][] = "Can not create new newsletter user with $email";
+            return $resultArray;
         }
 
         $newsletterUserId = $newsletterUserObject->attribute('id');
 
         // list_subscribe
-        foreach ( $listArray as $listId )
+        foreach ( (array)$listArray as $listId )
         {
-            $outputFormatArray = $listOutputFormatArray[ $listId ];
+            if ( !self::isNewsletterListObject( $listId ) )
+            {
+                $resultArray['errors'][ $listId ] = "Object $listId is no newsletter list";
+                continue;
+            }
+            $outputFormatArray = isset( $listOutputFormatArray[ $listId ] ) ? (array)$listOutputFormatArray[ $listId ] : array( 0 );
             $status = self::STATUS_PENDING;
             $dryRun = false;
             $resultArray['list_subscribe'][ $listId ] = self::createUpdateNewsletterSubscription(
@@ -718,7 +724,7 @@ class CjwNewsletterSubscription extends eZPersistentObject
 
         if ( $subscribeOnlyMode === false )
         {
-            $listRemoveArray =  array_diff( $idArray, $listArray );
+            $listRemoveArray =  array_diff( (array)$idArray, (array)$listArray );
             // list_remove by user self
             foreach ( $listRemoveArray as $listId )
             {
@@ -726,6 +732,22 @@ class CjwNewsletterSubscription extends eZPersistentObject
             }
         }
         return $resultArray;
+    }
+
+    /**
+     * Whether an id is the content object of a newsletter list (static or virtual)
+     *
+     * @param integer $listContentObjectId
+     * @return boolean
+     */
+    static function isNewsletterListObject( $listContentObjectId )
+    {
+        $object = eZContentObject::fetch( (int)$listContentObjectId );
+        if ( !is_object( $object ) )
+        {
+            return false;
+        }
+        return in_array( $object->attribute( 'class_identifier' ), array( 'cjw_newsletter_list', 'cjw_newsletter_list_virtual' ) );
     }
 
     /**
@@ -898,7 +920,7 @@ class CjwNewsletterSubscription extends eZPersistentObject
     static function fetchSubscriptionListByListId( $listObject, $statusId = false, $limit = 50, $offset = 0, $asObject = true )
     {
 
-        $listContentObjectId = $listObject->attribute( 'contentobject_id' );
+        $listContentObjectId = is_object( $listObject ) ? $listObject->attribute( 'contentobject_id' ) : (int)$listObject;
 
         $sortArr = array( 'created' => 'desc' );
         $limitArr = null;
@@ -944,7 +966,7 @@ class CjwNewsletterSubscription extends eZPersistentObject
      */
     static function fetchSubscriptionListByListIdCount( $listObject, $statusId = false )
     {
-        $listContentObjectId = $listObject->attribute( 'contentobject_id' );
+        $listContentObjectId = is_object( $listObject ) ? $listObject->attribute( 'contentobject_id' ) : (int)$listObject;
 
         $condArr = array( 'list_contentobject_id' => (int) $listContentObjectId );
         if( $statusId !== false )
@@ -1124,7 +1146,7 @@ class CjwNewsletterSubscription extends eZPersistentObject
     static function fetchSubscriptionListStatistic( $listObject )
     {
 
-        $listConentObjectId = $listObject->attribute( 'contentobject_id' );
+        $listConentObjectId = is_object( $listObject ) ? $listObject->attribute( 'contentobject_id' ) : (int)$listObject;
 
         $db = eZDB::instance();
         $query = "SELECT status, COUNT(id) as count
@@ -1277,10 +1299,6 @@ class CjwNewsletterSubscription extends eZPersistentObject
                                                 'modifier' => eZUser::currentUserID() )
                                           );
 
-        foreach( $currentNewsletterSubscriptionObjects as $subscription )
-        {
-            $subscription->remove();
-        }
         parent::remove( $conditions, $extraConditions );
     }
 

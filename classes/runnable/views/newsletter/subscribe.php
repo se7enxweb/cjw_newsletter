@@ -74,7 +74,7 @@ class Subscribe extends \Exponential\Runnable\ModuleView
                 $backUrl = $module->actionParameter( 'BackUrl' );
             }
 
-            $postedEmail = trim( $http->postVariable( 'Subscription_Email' ) );
+            $postedEmail = $http->hasPostVariable( 'Subscription_Email' ) ? trim( (string)$http->postVariable( 'Subscription_Email' ) ) : '';
             $postedEmailIsFromLoggedInUser = false;
             // ez user
             if ( $user )
@@ -108,16 +108,16 @@ class Subscribe extends \Exponential\Runnable\ModuleView
             if ( $http->hasPostVariable( 'Subscription_Salutation' ) )
                 $subscriptionDataArr['salutation'] = trim( $http->postVariable( 'Subscription_Salutation' ) );
             if ( $http->hasPostVariable( 'Subscription_IdArray' ) )
-                $subscriptionDataArr['id_array'] = $http->postVariable( 'Subscription_IdArray' );
+                $subscriptionDataArr['id_array'] = array_map( 'intval', (array)$http->postVariable( 'Subscription_IdArray' ) );
             if ( $http->hasPostVariable( 'Subscription_ListArray' ) )
-                $subscriptionDataArr['list_array'] = $http->postVariable( 'Subscription_ListArray' );
+                $subscriptionDataArr['list_array'] = array_map( 'intval', (array)$http->postVariable( 'Subscription_ListArray' ) );
 
          //   $subscriptionDataArr['list_output_format_array'] = array();
 
-            foreach ( $subscriptionDataArr['id_array'] as $listId )
+            foreach ( array_unique( array_merge( $subscriptionDataArr['id_array'], $subscriptionDataArr['list_array'] ) ) as $listId )
             {
                 if ( $http->hasPostVariable( "Subscription_OutputFormatArray_$listId" ) )
-                    $subscriptionDataArr['list_output_format_array'][ $listId ] = $http->postVariable( "Subscription_OutputFormatArray_$listId" );
+                    $subscriptionDataArr['list_output_format_array'][ $listId ] = array_map( 'intval', (array)$http->postVariable( "Subscription_OutputFormatArray_$listId" ) );
                 else
                 {
                     $defaultOutputFormatId = 0;
@@ -155,7 +155,7 @@ class Subscribe extends \Exponential\Runnable\ModuleView
                     } break;
                     case 'last_name':
                     {
-                        if ( !$subscriptionDataArr['name'] )
+                        if ( !$subscriptionDataArr['last_name'] )
                         {
                             $warningArr['last_name'] = $messageArray['last_name'];
                         }
