@@ -214,8 +214,8 @@ cf1036b2d3360f8e36d7462c0c58eaa8  doc/uml/cjw_newsletter_dbschema_v1.0.0.png
 71f4165c0974cba8273f21381b2a7031  doc/uml/class_diagram.svg
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
 9b42fb9c56db8dd0f49f360dd3de0df4  extendedattributefilter/cjwnewsletterlistfilter.php
-fe8f524fb9aa2f5c620fa166cadb47f7  extension.xml
-6786c83c43dfbd51e51b5d6fac4db1e6  ezinfo.php
+dd251e54b05f331c9faf83e4fed96937  extension.xml
+270a4858660be9d03e98d11379466204  ezinfo.php
 497b5da0906ba7711bb1c1bf1e7992de  modules/newsletter/archive.php
 092c3c44c54c804db95592598cf3026f  modules/newsletter/blacklist_item_add.php
 0590861266fa3db091c7e434d11e9f7f  modules/newsletter/blacklist_item_list.php
