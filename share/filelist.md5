@@ -268,9 +268,9 @@ e0fb0db8bc7127f92f518c510b43fe13  settings/websitetoolbar.ini.append.php
 55e5fa9c3cbd314111cc488492b78384  share/db_schema.dba
 b829d5125f764e31c1a62e897fa2742b  sql/mysql/schema.sql
 bec2649673924ae9ec6b9506bb1b26b0  sql/postgresql/schema.sql
-8cf089016e3533c04af62d6e26b5d083  translations/eng-US/translation.ts
+fed03e7ac756df2c3177c546fcc23850  translations/eng-US/translation.ts
 1ddb26d6affbce3932cb19a291a88c3a  translations/fre-FR/translation.ts
-fba027ac247324963445ffa16042470b  translations/ger-DE/translation.ts
+cd98082a7f540ef2266f73d97827019f  translations/ger-DE/translation.ts
 96f6b8c09f74cae57de3d1fdbe2086c8  translations/nor-NO/translation.ts
 d2ee502fdf8fe8f793538e6e12f39643  translations/untranslated/translation.ts
 8467fc444a55eb51e0864b1cc6d2dfcf  update/database/mysql/1.0/unstable/dbupdate-1.0.0beta-to-1.0.0beta2.sql
