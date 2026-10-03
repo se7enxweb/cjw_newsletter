@@ -14,7 +14,7 @@ aa9ea80af84e6cba65e0764a80b56e16  .gitignore
 9529122df889e50c12928e8a31f0db59  bin/php/createoutput.php
 b166fa164601e815da34960e05960c6c  bin/php/iniloader.php
 e952805cb3dd66b57e5088927d652a56  classes/cjwnewsletterblacklistitem.php
-b72b58555d15802945278ec319ab7800  classes/cjwnewsletterclassinstaller.php
+76860f87644a3d13a3ac8b5efe054421  classes/cjwnewsletterclassinstaller.php
 538888730b963e7ecf37ba4b0181506f  classes/cjwnewslettercsvexport.php
 b86cfd1d7e3da7ac352d2e681e1ae647  classes/cjwnewslettercsvparser.php
 a0b7f367cd992b17f6b9b46813d98ad4  classes/cjwnewsletteredition.php
@@ -200,8 +200,8 @@ e0233099f55b769c69c578d7074ed10d  design/standard/templates/newsletter/import_vi
 08b10a7aac2080a441e7f70bb1fd66ad  design/standard/templates/newsletter/index.tpl
 5bbf6dcac588e0adf36a44cba9adde9e  design/standard/templates/newsletter/index_newsletter_system_info_box.tpl
 a982bc3a0cc27feeb6ec979c6e672049  design/standard/templates/newsletter/mail/footer.tpl
-e2f971e85954b56dba7f639f8170a4b5  design/standard/templates/newsletter/mail/subscription_confirmation.tpl
-2bbf4eafa7a8426bca7b95acd69b143e  design/standard/templates/newsletter/mail/subscription_information.tpl
+42a3f24e73784cc3ee17a4174ecb4c9b  design/standard/templates/newsletter/mail/subscription_confirmation.tpl
+9f3df9fed4a26350c3bdb13cb08e4b32  design/standard/templates/newsletter/mail/subscription_information.tpl
 01d25b67bc0319d37bdfa854458d71cb  design/standard/templates/newsletter/mailbox_edit.tpl
 b3f2a6cb484468e3dfa5d338cae61ac2  design/standard/templates/newsletter/mailbox_item_list.tpl
 07d459e9cfb9cf23f68a9bb15127cd39  design/standard/templates/newsletter/mailbox_item_view.tpl
@@ -210,8 +210,8 @@ fd1bc1df11ce77dc2ea4e084ec0b6bfb  design/standard/templates/newsletter/preview.t
 9304d1873e6813c9e6b2b3cf2cd21c44  design/standard/templates/newsletter/send.tpl
 3e99567b01bf2370bf7dce7cc71c04a6  design/standard/templates/newsletter/send_abort.tpl
 3c284e8961ca56614ed44579a529be65  design/standard/templates/newsletter/send_newsletter_test_result.tpl
-60dde24f29fbfb96f9ce532abb8d4ecb  design/standard/templates/newsletter/skin/default/outputformat/html.tpl
-4c3734fde03cc74759124b5870f95d14  design/standard/templates/newsletter/skin/default/outputformat/text.tpl
+f9870db3bb78a64397ccf2315ffd8304  design/standard/templates/newsletter/skin/default/outputformat/html.tpl
+abb9ef510dd1ec1878d4943a2ceb6d6a  design/standard/templates/newsletter/skin/default/outputformat/text.tpl
 e8b991e1de15e699b9471ced2d6b71c3  design/standard/templates/newsletter/subscribe.tpl
 ddbebb5098fdcee82b6e6b99e053fa33  design/standard/templates/newsletter/subscribe_infomail.tpl
 32b1b0d3f3c7476875d28efb7dfce997  design/standard/templates/newsletter/subscribe_infomail_success.tpl
@@ -248,8 +248,8 @@ cf1036b2d3360f8e36d7462c0c58eaa8  doc/uml/cjw_newsletter_dbschema_v1.0.0.png
 71f4165c0974cba8273f21381b2a7031  doc/uml/class_diagram.svg
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
 782edd7ce72084d23e44e94ae248d722  extendedattributefilter/cjwnewsletterlistfilter.php
-4bea8492a2d4bc73bc32bd4ea25877dd  extension.xml
-f20e64cb7fad6fab683dede7f26d1266  ezinfo.php
+92ab8721708c4dcbf9fd15c8a8349b25  extension.xml
+a383bdca8ff89d985c59b575081e6806  ezinfo.php
 497b5da0906ba7711bb1c1bf1e7992de  modules/newsletter/archive.php
 092c3c44c54c804db95592598cf3026f  modules/newsletter/blacklist_item_add.php
 0590861266fa3db091c7e434d11e9f7f  modules/newsletter/blacklist_item_list.php
@@ -286,7 +286,7 @@ ce1e6bc29aefa8233bcd5b1a40a60a59  modules/newsletter/user_remove.php
 b65917311debfe1c5476b6765cc463c5  packages/cjw_newsletter_classes-1.0-1.ezpkg
 dbad6e48797d42af0fd5a76ef06e844a  packages/cjw_newsletter_list_virtual-1.0-1.ezpkg
 8f9878ff3745b1a6140ecaafd9da4668  settings/admininterface.ini.append.php
-05eee131197bcfdd144db0ff30e727ca  settings/cjw_newsletter.ini
+7188e635202e50b4af6481efad20d59b  settings/cjw_newsletter.ini
 433a2de6d4719ed46708d315f97e16b9  settings/content.ini.append.php
 dabf79f5ec9c323b6045e0c75a6f1178  settings/contentstructuremenu.ini.append.php
 0911490fc1233a80c1f5d18ef29f8c7a  settings/cronjob.ini.append.php
