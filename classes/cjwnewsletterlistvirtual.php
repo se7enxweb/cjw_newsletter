@@ -50,11 +50,11 @@ class CjwNewsletterListVirtual extends CjwNewsletterList
      * @param array $row
      * @return void
      */
-    function CjwNewsletterListVirtual( $row = array() )
+    function __construct( $row = array() )
     {
         $this->FilterObject = new CjwNewsletterFilter();
 
-        $this->eZPersistentObject( $row );
+        parent::__construct( $row );
         $this->setAttribute( 'is_virtual', 1 );
 
 //        $this->FilterObject->fromXml( $this->attribute( 'virtual_filter' ) );

@@ -123,7 +123,7 @@ class CjwNewsletterFilter
      */
     public function addFilter( $filterTypeIdentifier, $operation = false, $values = false )
     {
-        if ( count( $this->FilterTypesAvailable > 0 )
+        if ( count( $this->FilterTypesAvailable ) > 0
              && $filterTypeIdentifier != null
              && $filterTypeIdentifier != false
              && isset( $this->FilterTypesAvailable[ $filterTypeIdentifier ] ) )
@@ -187,6 +187,7 @@ class CjwNewsletterFilter
     {
         $this->resetFilterTypesActiveArray();
 
+        $previousLibxmlState = libxml_use_internal_errors( true );
         try
         {
             $loadedXml = new SimpleXMLElement( $xmlString );
@@ -203,8 +204,11 @@ class CjwNewsletterFilter
         }
         catch( Exception $e )
         {
-            // TODO error
+            // a damaged filter xml leaves no filter
+            $this->resetFilterTypesActiveArray();
+            libxml_clear_errors();
         }
+        libxml_use_internal_errors( $previousLibxmlState );
     }
 
     /**

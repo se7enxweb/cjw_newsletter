@@ -107,8 +107,8 @@ class CjwNewsletterListType extends eZDataType
 
         $postListData = array();
         $postListData['main_siteaccess'] = $http->postVariable(  $prefix . 'MainSiteaccess' . $postfix );
-        $postListData['siteaccess_array'] = $http->hasPostVariable(  $prefix . 'SiteaccessArray' . $postfix ) ? $http->postVariable(  $prefix . 'SiteaccessArray' . $postfix ) : array();
-        $postListData['output_format_array'] = $http->hasPostVariable(  $prefix . 'OutputFormatArray' . $postfix ) ? $http->postVariable(  $prefix . 'OutputFormatArray' . $postfix ) : array();
+        $postListData['siteaccess_array'] = $http->hasPostVariable(  $prefix . 'SiteaccessArray' . $postfix ) ? (array)$http->postVariable(  $prefix . 'SiteaccessArray' . $postfix ) : array();
+        $postListData['output_format_array'] = $http->hasPostVariable(  $prefix . 'OutputFormatArray' . $postfix ) ? (array)$http->postVariable(  $prefix . 'OutputFormatArray' . $postfix ) : array();
         $postListData['email_sender'] = $http->postVariable(  $prefix . 'EmailSender' . $postfix );
         $postListData['email_reply_to'] = $http->postVariable(  $prefix . 'EmailReplyTo' . $postfix );
         $postListData['email_return_path'] = $http->postVariable(  $prefix . 'EmailReturnPath' . $postfix );

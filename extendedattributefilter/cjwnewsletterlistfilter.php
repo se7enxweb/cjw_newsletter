@@ -69,9 +69,9 @@ class CjwNewsletterListFilter
                 foreach ( $paramSiteAccess as $name )
                 {
                     if ( $name == 'current_siteaccess' )
-                        $siteAccessArray = array( $currentSiteAccess );
+                        $siteAccessArray[] = $currentSiteAccess;
                     else
-                        $siteAccessArray = array( $name );
+                        $siteAccessArray[] = $name;
                 }
             }
         }

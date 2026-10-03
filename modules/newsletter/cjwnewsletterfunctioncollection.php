@@ -78,7 +78,7 @@ class CjwNewsletterFunctionCollection
         }
         else
         {
-            eZDebug::writeError( "CjwNewsletterFunctinCollection::fetchSubscriptionList - no object found for ObjectId: $listContentObjectId $Version: $listContentObjectVersion" );
+            eZDebug::writeError( "CjwNewsletterFunctinCollection::fetchSubscriptionList - no object found for ObjectId: $listContentObjectId Version: $listContentObjectVersion" );
         }
 
         return array( 'result' => $objectList );
@@ -130,7 +130,7 @@ class CjwNewsletterFunctionCollection
         }
         else
         {
-            eZDebug::writeError( "CjwNewsletterFunctinCollection::fetchSubscriptionListCount - no object found for ObjectId: $listContentObjectId $Version: $listContentObjectVersion" );
+            eZDebug::writeError( "CjwNewsletterFunctinCollection::fetchSubscriptionListCount - no object found for ObjectId: $listContentObjectId Version: $listContentObjectVersion" );
         }
 
 

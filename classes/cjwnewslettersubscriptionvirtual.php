@@ -486,7 +486,7 @@ AND EXISTS (
      */
     static function createFromUserRow( $newsletterUserRow, $virtualListContentObjectId, $asObject )
     {
-        $subcriptionVirtualObjectList = self::createFromUserRows( array(
+        $subcriptionVirtualObjectList = self::createFromUserRowArray( array(
                                                                   $newsletterUserRow
                                                                   ),
                                                                   $virtualListContentObjectId,
@@ -603,7 +603,7 @@ AND EXISTS (
             $exernalFilterQuery = self::createFilterSqlByArray( $filterArray );
             $externalSqlArray[] = "AND EXISTS ( $exernalFilterQuery )";
         }
-        $sqlExternalCondAndString = implode( ',', $externalSqlArray );
+        $sqlExternalCondAndString = implode( ' ', $externalSqlArray );
         return $sqlExternalCondAndString;
     }
 
