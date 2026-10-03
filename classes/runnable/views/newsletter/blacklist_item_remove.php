@@ -55,7 +55,7 @@ class BlacklistItemRemove extends \Exponential\Runnable\ModuleView
 
         if ( $deleteIDArray )
         {
-            foreach ( $deleteIDArray as $id )
+            foreach ( (array)$deleteIDArray as $id )
             {
                 $itemByID = \CjwNewsletterBlacklistItem::fetch( $id );
                 if( !is_object( $itemByID ) )
@@ -73,7 +73,7 @@ class BlacklistItemRemove extends \Exponential\Runnable\ModuleView
         }
 
         if ( $http->hasVariable( 'RedirectURI' ) )
-            $module->redirectTo( trim( $http->variable( 'RedirectURI' ) ) );
+            $module->redirectTo( \CjwNewsletterUtils::localRedirectPath( $http->variable( 'RedirectURI' ), '/newsletter/blacklist_item_list' ) );
         elseif ( $http->hasSessionVariable( 'LastAccessesURI' ) )
             $module->redirectTo( $http->sessionVariable( 'LastAccessesURI' ) );
         else

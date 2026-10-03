@@ -60,7 +60,12 @@ class UserCreate extends \Exponential\Runnable\ModuleView
 
         if( $http->hasPostVariable( 'OldPostVarSerialized' ) )
         {
-            $oldPostArray =  unserialize( base64_decode( $http->postVariable( 'OldPostVarSerialized' ) ) );
+            // plain data only: this field comes from the browser
+            $oldPostArray =  @unserialize( (string)base64_decode( (string)$http->postVariable( 'OldPostVarSerialized' ) ), array( 'allowed_classes' => false ) );
+            if ( !is_array( $oldPostArray ) )
+            {
+                $oldPostArray = array();
+            }
         }
         else
         {
@@ -71,20 +76,20 @@ class UserCreate extends \Exponential\Runnable\ModuleView
 
         if ( $http->hasVariable( 'RedirectUrlActionCancel' ) )
         {
-            $redirectUrlCancel = $http->variable( 'RedirectUrlActionCancel' );
+            $redirectUrlCancel = \CjwNewsletterUtils::localRedirectPath( $http->variable( 'RedirectUrlActionCancel' ), 'newsletter/user_list' );
         }
         elseif ( $http->hasVariable( 'RedirectUrl' ) )
         {
-            $redirectUrlCancel = $http->variable( 'RedirectUrl' );
+            $redirectUrlCancel = \CjwNewsletterUtils::localRedirectPath( $http->variable( 'RedirectUrl' ), 'newsletter/user_list' );
         }
 
         if ( $http->hasVariable( 'RedirectUrlActionStore' ) )
         {
-            $redirectUrlStore = $http->variable( 'RedirectUrlActionStore' );
+            $redirectUrlStore = \CjwNewsletterUtils::localRedirectPath( $http->variable( 'RedirectUrlActionStore' ), 'newsletter/user_list' );
         }
         elseif ( $http->hasVariable( 'RedirectUrl' ) )
         {
-            $redirectUrlStore = $http->variable( 'RedirectUrl' );
+            $redirectUrlStore = \CjwNewsletterUtils::localRedirectPath( $http->variable( 'RedirectUrl' ), 'newsletter/user_list' );
         }
 
 
@@ -111,9 +116,9 @@ class UserCreate extends \Exponential\Runnable\ModuleView
             $subscriptionDataArr['note'] = trim( $http->postVariable( 'Subscription_Note' ) );
         }
         if ( $http->hasPostVariable( 'Subscription_IdArray' ) )
-            $subscriptionDataArr['id_array'] = $http->postVariable( 'Subscription_IdArray' );
+            $subscriptionDataArr['id_array'] = array_map( 'intval', (array)$http->postVariable( 'Subscription_IdArray' ) );
         if ( $http->hasPostVariable( 'Subscription_ListArray' ) )
-            $subscriptionDataArr['list_array'] = $http->postVariable( 'Subscription_ListArray' );
+            $subscriptionDataArr['list_array'] = array_map( 'intval', (array)$http->postVariable( 'Subscription_ListArray' ) );
 
         //   $subscriptionDataArr['list_output_format_array'] = array();
 

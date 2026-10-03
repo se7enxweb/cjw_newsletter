@@ -51,13 +51,13 @@ class UserRemove extends \Exponential\Runnable\ModuleView
         $redirectUrlCancel = '/newsletter/user_view/'. $newsletterUserObject->attribute( 'id' );
         if( $http->hasVariable( 'RedirectUrlActionCancel' ) )
         {
-            $redirectUrlCancel = $http->variable( 'RedirectUrlActionCancel' );
+            $redirectUrlCancel = \CjwNewsletterUtils::localRedirectPath( $http->variable( 'RedirectUrlActionCancel' ), '/newsletter/user_list' );
         }
 
         $redirectUrlRemove = '/newsletter/user_list/';
         if( $http->hasVariable( 'RedirectUrlActionRemove' ) )
         {
-            $redirectUrlRemove = $http->variable( 'RedirectUrlActionRemove' );
+            $redirectUrlRemove = \CjwNewsletterUtils::localRedirectPath( $http->variable( 'RedirectUrlActionRemove' ), '/newsletter/user_list' );
         }
 
         // show an overview of all things we will be delete

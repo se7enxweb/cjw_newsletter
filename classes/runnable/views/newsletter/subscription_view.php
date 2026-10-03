@@ -69,7 +69,11 @@ class SubscriptionView extends \Exponential\Runnable\ModuleView
         }
 
         $listObject = $subscriptionObject->attribute( 'newsletter_list' );
-
+        if ( !is_object( $listObject ) )
+        {
+            // the list of this subscription is gone
+            return $this->viewResult( isset( $Result ) ? $Result : null,  $module->handleError( \eZError::KERNEL_NOT_AVAILABLE, 'kernel' ) );
+        }
 
         $listNodeId = $listObject->attribute( 'main_node_id' );
         $listNode = \eZContentObjectTreeNode::fetch( $listNodeId );
