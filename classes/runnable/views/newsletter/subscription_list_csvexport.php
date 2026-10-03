@@ -162,7 +162,7 @@ class SubscriptionListCsvexport extends \Exponential\Runnable\ModuleView
          */
         // get delimiter
         if ( $http->hasVariable( 'CsvDelimiter' ) && $http->variable( 'CsvDelimiter' ) != '' )
-            $delimiter = $http->variable( 'CsvDelimiter' );
+            $delimiter = substr( (string)$http->variable( 'CsvDelimiter' ), 0, 1 );
 
         /**
          * CSV Preview

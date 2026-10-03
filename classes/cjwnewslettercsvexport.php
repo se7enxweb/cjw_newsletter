@@ -70,7 +70,7 @@ class CjwNewsletterCsvExport extends eZPersistentObject
         $this->Data = $data;
 
         // set keys array
-        $this->AllKeys = $data[ 0 ];
+        $this->AllKeys = isset( $data[ 0 ] ) ? $data[ 0 ] : array();
 
         // set choosen keys
         $this->setChoosenKeys( $choosenKeys );
@@ -123,14 +123,20 @@ class CjwNewsletterCsvExport extends eZPersistentObject
                 // exists a item-key === the current header-key => write in string => result => sorted items in string
                 foreach ( $this->ChoosenKeys as $row => $value )
                 {
-                    if ( isset( $arrDataItem[ $row ] ) )
-                    {
-                        // maybe there are delimiter chars in string => convert theys
-                        $strValidCsvItem = str_replace( $this->Delimiter, "[c$asciiChar]", $arrDataItem[ $row ] );
+                    // a missing value is an empty column: skipping it would move the later columns of this row
+                    $cell = isset( $arrDataItem[ $row ] ) ? (string)$arrDataItem[ $row ] : '';
 
-                        // cat string with delimiter
-                        $this->CsvResult .= $strValidCsvItem . $this->Delimiter;
+                    // a cell that starts with = + - or @ would be a formula in a spreadsheet
+                    if ( $cell !== '' && strpos( '=+-@', $cell[0] ) !== false && !is_numeric( $cell ) )
+                    {
+                        $cell = "'" . $cell;
                     }
+
+                    // maybe there are delimiter chars in string => convert theys
+                    $strValidCsvItem = str_replace( array( $this->Delimiter, "\r", "\n" ), array( "[c$asciiChar]", ' ', ' ' ), $cell );
+
+                    // cat string with delimiter
+                    $this->CsvResult .= $strValidCsvItem . $this->Delimiter;
                 }
             }
             // headers

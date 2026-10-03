@@ -167,6 +167,13 @@ class SubscriptionListCsvimport extends \Exponential\Runnable\ModuleView
         if ( $http->hasPostVariable( 'CsvFilePath' ) )
         {
             $csvFilePath = $http->variable( 'CsvFilePath' );
+            // only a file of the import directory can be named, never any other file of the server
+            $importDirReal = realpath( \eZSys::varDirectory() . '/cjw_newsletter/csvimport' );
+            $postedReal = is_string( $csvFilePath ) ? realpath( $csvFilePath ) : false;
+            if ( !$importDirReal || !$postedReal || strpos( $postedReal, $importDirReal . DIRECTORY_SEPARATOR ) !== 0 )
+            {
+                $csvFilePath = false;
+            }
         }
         if ( $http->hasPostVariable( 'SelectedOutputFormatArray' ) )
         {
@@ -233,7 +240,9 @@ class SubscriptionListCsvimport extends \Exponential\Runnable\ModuleView
             $dir = \eZSys::varDirectory() . $fileSep . 'cjw_newsletter' . $fileSep . 'csvimport';
 
             $importId = $importObject->attribute('id');
-            $fileName = $importId .'-'. date( "Ymd-His", $importObject->attribute('created') ) .'-'. $binaryFile->attribute( 'original_filename' );
+            // the name the browser sent is a label, never a path
+            $originalName = preg_replace( '/[^A-Za-z0-9._-]+/', '_', basename( str_replace( '\\', '/', (string)$binaryFile->attribute( 'original_filename' ) ) ) );
+            $fileName = $importId .'-'. date( "Ymd-His", $importObject->attribute('created') ) .'-'. $originalName;
             $csvFilePath = $dir . $fileSep . $fileName;
             $importObject->setAttribute( 'data_text', $csvFilePath );
             $importObject->setAttribute( 'note', $note );
@@ -287,7 +296,7 @@ class SubscriptionListCsvimport extends \Exponential\Runnable\ModuleView
             //$csvDataArray = $csvParserObject->getCsvDataArray();
 
             // start data import
-            if ( $importCsvFile === TRUE )
+            if ( $importCsvFile === TRUE && is_object( $importObject ) )
             {
                 \CjwNewsletterLog::writeNotice( 'subscription_list_csvimport',
                                                'import',
@@ -389,7 +398,7 @@ class SubscriptionListCsvimport extends \Exponential\Runnable\ModuleView
                                                                  array(
                                                                         'email_cur' => $existingNewsletterUserObject->attribute( 'email'),
                                                                         'email_imp' => $email,
-                                                                        'remote_id' => $remoteId )
+                                                                        'remote_id' => $remote_id )
                                                                   );
                                     }
                                 }

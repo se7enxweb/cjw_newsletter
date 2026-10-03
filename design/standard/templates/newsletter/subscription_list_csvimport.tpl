@@ -121,7 +121,7 @@ list all blacklist items
                             </table>
                         </div>
 
-                        {set $csv_header_row = $csv_header_row|trim( $default_csv_delimiter )}
+                        {set $csv_header_row = $csv_header_row|trim( $csv_delimiter )}
 
 <pre style="overflow:auto;">{$csv_header_row}
 

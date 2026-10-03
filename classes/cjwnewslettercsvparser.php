@@ -32,12 +32,21 @@ class CjwNewsletterCsvParser
      */
     function __construct( $csvFileName, $delimiter, $firstRowIsLabel, $csvFieldMappingArray, $utf8Encode = false )
     {
-        if ( $delimiter == '\t' )
+        if ( $delimiter == '\t' || $delimiter == 'tab' )
         {
-            $delimiter = '\t';
+            $delimiter = "\t";
+        }
+        if ( !is_string( $delimiter ) || strlen( $delimiter ) !== 1 )
+        {
+            $delimiter = ';';
         }
 
-        $fp = fopen( $csvFileName, 'r' );
+        $this->CsvDataArray = array();
+        $fp = is_readable( $csvFileName ) ? fopen( $csvFileName, 'r' ) : false;
+        if ( !$fp )
+        {
+            return;
+        }
         $rowArray = array();
         $c = 0;
         $row = array();
@@ -51,12 +60,12 @@ class CjwNewsletterCsvParser
 
         if ( $firstRowIsLabel == true )
         {
-            $firstRowTmp = fgetcsv( $fp, 1000, $delimiter );
+            $firstRowTmp = fgetcsv( $fp, 0, $delimiter, '"', '\\' );
             $c++;
         }
 
         // Loop file
-        while ( ( $row = fgetcsv( $fp, 1000, $delimiter )) !== FALSE )
+        while ( ( $row = fgetcsv( $fp, 0, $delimiter, '"', '\\' )) !== FALSE )
         {
             for ( $i=0; $i < count( $firstRow ); $i++ )
             {
