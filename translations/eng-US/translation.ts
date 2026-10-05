@@ -6032,6 +6032,514 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
         <source>Rendering</source>
         <translation>Rendering</translation>
     </message>
+    <message>
+        <source>The identifier may only contain the letters a-z, digits and underscores.</source>
+        <translation>The identifier may only contain the letters a-z, digits and underscores.</translation>
+    </message>
+    <message>
+        <source>Enter a name of at most 255 characters.</source>
+        <translation>Enter a name of at most 255 characters.</translation>
+    </message>
+    <message>
+        <source>An interest from eztags needs the id of its tag.</source>
+        <translation>An interest from eztags needs the id of its tag.</translation>
+    </message>
+    <message>
+        <source>The newsletter list does not exist.</source>
+        <translation>The newsletter list does not exist.</translation>
+    </message>
+    <message>
+        <source>This identifier is already used by another interest of the list.</source>
+        <translation>This identifier is already used by another interest of the list.</translation>
+    </message>
+    <message>
+        <source>The skin %skin is not allowed for this list.</source>
+        <translation>The skin %skin is not allowed for this list.</translation>
+    </message>
+    <message>
+        <source>The skin of the list (%skin) must be one of the allowed skins.</source>
+        <translation>The skin of the list (%skin) must be one of the allowed skins.</translation>
+    </message>
+    <message>
+        <source>The main language %language is not a language of the site.</source>
+        <translation>The main language %language is not a language of the site.</translation>
+    </message>
+    <message>
+        <source>Interests from eztags need the eztags extension.</source>
+        <translation>Interests from eztags need the eztags extension.</translation>
+    </message>
+    <message>
+        <source>The skin %skin is listed in AvailableSkinArray[] but has no templates.</source>
+        <translation>The skin %skin is listed in AvailableSkinArray[] but has no templates.</translation>
+    </message>
+    <message>
+        <source>No subscriber has the address %email.</source>
+        <translation>No subscriber has the address %email.</translation>
+    </message>
+    <message>
+        <source>The subscriber %id does not exist.</source>
+        <translation>The subscriber %id does not exist.</translation>
+    </message>
+    <message>
+        <source>Preview as a subscriber</source>
+        <translation>Preview as a subscriber</translation>
+    </message>
+    <message>
+        <source>The interest "%name" was removed, with the picks of its subscribers.</source>
+        <translation>The interest "%name" was removed, with the picks of its subscribers.</translation>
+    </message>
+    <message>
+        <source>Every list</source>
+        <translation>Every list</translation>
+    </message>
+    <message>
+        <source>Interests</source>
+        <translation>Interests</translation>
+    </message>
+    <message>
+        <source>The interest "%name" was saved.</source>
+        <translation>The interest "%name" was saved.</translation>
+    </message>
+    <message>
+        <source>New interest</source>
+        <translation>New interest</translation>
+    </message>
+    <message>
+        <source>Skins</source>
+        <translation>Skins</translation>
+    </message>
+    <message>
+        <source>This language is not offered.</source>
+        <translation>This language is not offered.</translation>
+    </message>
+    <message>
+        <source>Newsletters</source>
+        <translation>Newsletters</translation>
+    </message>
+    <message>
+        <source>Interest "%name"</source>
+        <translation>Interest "%name"</translation>
+    </message>
+    <message>
+        <source>The interest was not saved</source>
+        <translation>The interest was not saved</translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation>Name</translation>
+    </message>
+    <message>
+        <source>What subscribers see on their preference page.</source>
+        <translation>What subscribers see on their preference page.</translation>
+    </message>
+    <message>
+        <source>Identifier</source>
+        <translation>Identifier</translation>
+    </message>
+    <message>
+        <source>Letters a-z, digits and underscores; made from the name when empty. A "newsletter condition" tests it (interest).</source>
+        <translation>Letters a-z, digits and underscores; made from the name when empty. A "newsletter condition" tests it (interest).</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>List</translation>
+    </message>
+    <message>
+        <source>Source</source>
+        <translation>Source</translation>
+    </message>
+    <message>
+        <source>Topic (a list offers it when its interest source is "Topics of the list")</source>
+        <translation>Topic (a list offers it when its interest source is "Topics of the list")</translation>
+    </message>
+    <message>
+        <source>Tag (a list offers it when its interest source is "Tags")</source>
+        <translation>Tag (a list offers it when its interest source is "Tags")</translation>
+    </message>
+    <message>
+        <source>Tag id (eztags)</source>
+        <translation>Tag id (eztags)</translation>
+    </message>
+    <message>
+        <source>Needed for a tag. For a topic optional: the "articles for your interests" block finds articles with this tag; without one it looks for the identifier among the keywords of an article.</source>
+        <translation>Needed for a tag. For a topic optional: the "articles for your interests" block finds articles with this tag; without one it looks for the identifier among the keywords of an article.</translation>
+    </message>
+    <message>
+        <source>Order</source>
+        <translation>Order</translation>
+    </message>
+    <message>
+        <source>Offered to subscribers</source>
+        <translation>Offered to subscribers</translation>
+    </message>
+    <message>
+        <source>%count subscribers picked it.</source>
+        <translation>%count subscribers picked it.</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation>Save</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Cancel</translation>
+    </message>
+    <message>
+        <source>Remove this interest?</source>
+        <translation>Remove this interest?</translation>
+    </message>
+    <message>
+        <source>%count subscribers picked it; their picks are removed with it.</source>
+        <translation>%count subscribers picked it; their picks are removed with it.</translation>
+    </message>
+    <message>
+        <source>Yes, remove</source>
+        <translation>Yes, remove</translation>
+    </message>
+    <message>
+        <source>Subscribers pick interests on their e-mail preference page. A list offers them when its interest source is set (list edit form).</source>
+        <translation>Subscribers pick interests on their e-mail preference page. A list offers them when its interest source is set (list edit form).</translation>
+    </message>
+    <message>
+        <source>eztags is not installed: only topics</source>
+        <translation>eztags is not installed: only topics</translation>
+    </message>
+    <message>
+        <source>Subscribers</source>
+        <translation>Subscribers</translation>
+    </message>
+    <message>
+        <source>State</source>
+        <translation>State</translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation>Actions</translation>
+    </message>
+    <message>
+        <source>Tag</source>
+        <translation>Tag</translation>
+    </message>
+    <message>
+        <source>Topic</source>
+        <translation>Topic</translation>
+    </message>
+    <message>
+        <source>tag</source>
+        <translation>tag</translation>
+    </message>
+    <message>
+        <source>offered</source>
+        <translation>offered</translation>
+    </message>
+    <message>
+        <source>hidden</source>
+        <translation>hidden</translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation>Edit</translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation>Remove</translation>
+    </message>
+    <message>
+        <source>No interest yet.</source>
+        <translation>No interest yet.</translation>
+    </message>
+    <message>
+        <source>Skins allowed for a send</source>
+        <translation>Skins allowed for a send</translation>
+    </message>
+    <message>
+        <source>The editor chooses one of these when an edition is sent. None ticked: every skin.</source>
+        <translation>The editor chooses one of these when an edition is sent. None ticked: every skin.</translation>
+    </message>
+    <message>
+        <source>Languages</source>
+        <translation>Languages</translation>
+    </message>
+    <message>
+        <source>One edition with translations: each subscriber gets his language when the edition has it, else the main language. None ticked: every subscriber gets the main language.</source>
+        <translation>One edition with translations: each subscriber gets his language when the edition has it, else the main language. None ticked: every subscriber gets the main language.</translation>
+    </message>
+    <message>
+        <source>Main language</source>
+        <translation>Main language</translation>
+    </message>
+    <message>
+        <source>The language of the main siteaccess</source>
+        <translation>The language of the main siteaccess</translation>
+    </message>
+    <message>
+        <source>Subscribers pick interests on their preference page; the block "articles for your interests" of a skin is filled from them.</source>
+        <translation>Subscribers pick interests on their preference page; the block "articles for your interests" of a skin is filled from them.</translation>
+    </message>
+    <message>
+        <source>No interests</source>
+        <translation>No interests</translation>
+    </message>
+    <message>
+        <source>Topics of the list</source>
+        <translation>Topics of the list</translation>
+    </message>
+    <message>
+        <source>Tags (eztags)</source>
+        <translation>Tags (eztags)</translation>
+    </message>
+    <message>
+        <source>Manage the interests</source>
+        <translation>Manage the interests</translation>
+    </message>
+    <message>
+        <source>Every skin</source>
+        <translation>Every skin</translation>
+    </message>
+    <message>
+        <source>Only the main language</source>
+        <translation>Only the main language</translation>
+    </message>
+    <message>
+        <source>E-mail address of the subscriber</source>
+        <translation>E-mail address of the subscriber</translation>
+    </message>
+    <message>
+        <source>Skin</source>
+        <translation>Skin</translation>
+    </message>
+    <message>
+        <source>Show</source>
+        <translation>Show</translation>
+    </message>
+    <message>
+        <source>Or one of the subscribers of the list:</source>
+        <translation>Or one of the subscribers of the list:</translation>
+    </message>
+    <message>
+        <source>Subscriber</source>
+        <translation>Subscriber</translation>
+    </message>
+    <message>
+        <source>Language</source>
+        <translation>Language</translation>
+    </message>
+    <message>
+        <source>the subscriber has not chosen one</source>
+        <translation>the subscriber has not chosen one</translation>
+    </message>
+    <message>
+        <source>chosen: %language, the edition has no translation in it</source>
+        <translation>chosen: %language, the edition has no translation in it</translation>
+    </message>
+    <message>
+        <source>none</source>
+        <translation>none</translation>
+    </message>
+    <message>
+        <source>as it was sent</source>
+        <translation>as it was sent</translation>
+    </message>
+    <message>
+        <source>Subject</source>
+        <translation>Subject</translation>
+    </message>
+    <message>
+        <source>HTML part</source>
+        <translation>HTML part</translation>
+    </message>
+    <message>
+        <source>Text part</source>
+        <translation>Text part</translation>
+    </message>
+    <message>
+        <source>Choose a subscriber: the preview shows his language, the conditional parts, the articles for his interests and his placeholders. Nothing is sent.</source>
+        <translation>Choose a subscriber: the preview shows his language, the conditional parts, the articles for his interests and his placeholders. Nothing is sent.</translation>
+    </message>
+    <message>
+        <source>Skin of this send</source>
+        <translation>Skin of this send</translation>
+    </message>
+    <message>
+        <source>Preview the skins</source>
+        <translation>Preview the skins</translation>
+    </message>
+    <message>
+        <source>his language, the conditional parts and the articles for his interests</source>
+        <translation>his language, the conditional parts and the articles for his interests</translation>
+    </message>
+    <message>
+        <source>the list's skin</source>
+        <translation>the list's skin</translation>
+    </message>
+    <message>
+        <source>Text part written with the plain text views</source>
+        <translation>Text part written with the plain text views</translation>
+    </message>
+    <message>
+        <source>Text part converted from the HTML part</source>
+        <translation>Text part converted from the HTML part</translation>
+    </message>
+    <message>
+        <source>No templates found</source>
+        <translation>No templates found</translation>
+    </message>
+    <message>
+        <source>Shown with the edition "%name". Every conditional part is shown, the placeholders are not replaced.</source>
+        <translation>Shown with the edition "%name". Every conditional part is shown, the placeholders are not replaced.</translation>
+    </message>
+    <message>
+        <source>There is no edition to show the skin with yet.</source>
+        <translation>There is no edition to show the skin with yet.</translation>
+    </message>
+    <message>
+        <source>Skins, languages and interests</source>
+        <translation>Skins, languages and interests</translation>
+    </message>
+    <message>
+        <source>Lists</source>
+        <translation>Lists</translation>
+    </message>
+    <message>
+        <source>No newsletter list yet.</source>
+        <translation>No newsletter list yet.</translation>
+    </message>
+    <message>
+        <source>%count skins allowed</source>
+        <translation>%count skins allowed</translation>
+    </message>
+    <message>
+        <source>%count interests</source>
+        <translation>%count interests</translation>
+    </message>
+    <message>
+        <source>with interests</source>
+        <translation>with interests</translation>
+    </message>
+    <message>
+        <source>outputs in other languages</source>
+        <translation>outputs in other languages</translation>
+    </message>
+    <message>
+        <source>Articles for your interests</source>
+        <translation>Articles for your interests</translation>
+    </message>
+    <message>
+        <source>You receive this newsletter because you subscribed to %list.</source>
+        <translation>You receive this newsletter because you subscribed to %list.</translation>
+    </message>
+    <message>
+        <source>Change your newsletter settings</source>
+        <translation>Change your newsletter settings</translation>
+    </message>
+    <message>
+        <source>Unsubscribe</source>
+        <translation>Unsubscribe</translation>
+    </message>
+    <message>
+        <source>Top story</source>
+        <translation>Top story</translation>
+    </message>
+    <message>
+        <source>More for your interests</source>
+        <translation>More for your interests</translation>
+    </message>
+    <message>
+        <source>View</source>
+        <translation>View</translation>
+    </message>
+    <message>
+        <source>Picked for you</source>
+        <translation>Picked for you</translation>
+    </message>
+    <message>
+        <source>Language of the newsletters</source>
+        <translation>Language of the newsletters</translation>
+    </message>
+    <message>
+        <source>The main language of each list</source>
+        <translation>The main language of each list</translation>
+    </message>
+    <message>
+        <source>An edition that has no translation in your language comes in the main language of its list.</source>
+        <translation>An edition that has no translation in your language comes in the main language of its list.</translation>
+    </message>
+    <message>
+        <source>Your interests</source>
+        <translation>Your interests</translation>
+    </message>
+    <message>
+        <source>Newsletters that have a block of articles for your interests fill it from what you pick here. Nothing picked: no such block.</source>
+        <translation>Newsletters that have a block of articles for your interests fill it from what you pick here. Nothing picked: no such block.</translation>
+    </message>
+    <message>
+        <source>By e-mail</source>
+        <translation>By e-mail</translation>
+    </message>
+    <message>
+        <source>to unsubscribe, write to</source>
+        <translation>to unsubscribe, write to</translation>
+    </message>
+    <message>
+        <source>to subscribe, write to</source>
+        <translation>to subscribe, write to</translation>
+    </message>
+    <message>
+        <source>to subscribe or unsubscribe, write to</source>
+        <translation>to subscribe or unsubscribe, write to</translation>
+    </message>
+    <message>
+        <source>Formats and lists of your newsletters</source>
+        <translation>Formats and lists of your newsletters</translation>
+    </message>
+    <message>
+        <source>Sign in to see your newsletters.</source>
+        <translation>Sign in to see your newsletters.</translation>
+    </message>
+    <message>
+        <source>You do not receive any newsletter.</source>
+        <translation>You do not receive any newsletter.</translation>
+    </message>
+    <message>
+        <source>Subscribe to a newsletter</source>
+        <translation>Subscribe to a newsletter</translation>
+    </message>
+    <message>
+        <source>Newsletters are switched off on your e-mail preferences page, so none of these is sent.</source>
+        <translation>Newsletters are switched off on your e-mail preferences page, so none of these is sent.</translation>
+    </message>
+    <message>
+        <source>%count interests offered</source>
+        <translation>%count interests offered</translation>
+    </message>
+    <message>
+        <source>All your e-mail preferences</source>
+        <translation>All your e-mail preferences</translation>
+    </message>
+    <message>
+        <source>The newsletters you receive by e-mail, in which language, and what you are interested in. Whether you get newsletters at all is decided on your e-mail preferences page.</source>
+        <translation>The newsletters you receive by e-mail, in which language, and what you are interested in. Whether you get newsletters at all is decided on your e-mail preferences page.</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Yes</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>No</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Image</translation>
+    </message>
+    <message>
+        <source>Price</source>
+        <translation>Price</translation>
+    </message>
+    <message>
+        <source>instead of</source>
+        <translation>instead of</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/statistics</name>

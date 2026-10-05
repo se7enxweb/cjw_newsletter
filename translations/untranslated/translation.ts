@@ -5234,6 +5234,514 @@ If you did not send this request, ignore this mail: nothing changes.</source>
         <source>Rendering</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>The identifier may only contain the letters a-z, digits and underscores.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a name of at most 255 characters.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>An interest from eztags needs the id of its tag.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The newsletter list does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This identifier is already used by another interest of the list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The skin %skin is not allowed for this list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The skin of the list (%skin) must be one of the allowed skins.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The main language %language is not a language of the site.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Interests from eztags need the eztags extension.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The skin %skin is listed in AvailableSkinArray[] but has no templates.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No subscriber has the address %email.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The subscriber %id does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Preview as a subscriber</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The interest "%name" was removed, with the picks of its subscribers.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Every list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Interests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The interest "%name" was saved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New interest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This language is not offered.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Newsletters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Interest "%name"</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The interest was not saved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>What subscribers see on their preference page.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Identifier</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Letters a-z, digits and underscores; made from the name when empty. A "newsletter condition" tests it (interest).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Topic (a list offers it when its interest source is "Topics of the list")</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tag (a list offers it when its interest source is "Tags")</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tag id (eztags)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Needed for a tag. For a topic optional: the "articles for your interests" block finds articles with this tag; without one it looks for the identifier among the keywords of an article.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offered to subscribers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count subscribers picked it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove this interest?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count subscribers picked it; their picks are removed with it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Yes, remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subscribers pick interests on their e-mail preference page. A list offers them when its interest source is set (list edit form).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>eztags is not installed: only topics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subscribers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>State</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Topic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>tag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>offered</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No interest yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skins allowed for a send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The editor chooses one of these when an edition is sent. None ticked: every skin.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Languages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>One edition with translations: each subscriber gets his language when the edition has it, else the main language. None ticked: every subscriber gets the main language.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Main language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The language of the main siteaccess</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subscribers pick interests on their preference page; the block "articles for your interests" of a skin is filled from them.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No interests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Topics of the list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tags (eztags)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Manage the interests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Every skin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Only the main language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>E-mail address of the subscriber</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Or one of the subscribers of the list:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subscriber</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the subscriber has not chosen one</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>chosen: %language, the edition has no translation in it</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>none</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>as it was sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subject</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>HTML part</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text part</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose a subscriber: the preview shows his language, the conditional parts, the articles for his interests and his placeholders. Nothing is sent.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skin of this send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Preview the skins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>his language, the conditional parts and the articles for his interests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the list's skin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text part written with the plain text views</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text part converted from the HTML part</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No templates found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shown with the edition "%name". Every conditional part is shown, the placeholders are not replaced.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There is no edition to show the skin with yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skins, languages and interests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lists</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No newsletter list yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count skins allowed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count interests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>with interests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>outputs in other languages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Articles for your interests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You receive this newsletter because you subscribed to %list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Change your newsletter settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsubscribe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Top story</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>More for your interests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Picked for you</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Language of the newsletters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The main language of each list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>An edition that has no translation in your language comes in the main language of its list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your interests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Newsletters that have a block of articles for your interests fill it from what you pick here. Nothing picked: no such block.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>By e-mail</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>to unsubscribe, write to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>to subscribe, write to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>to subscribe or unsubscribe, write to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Formats and lists of your newsletters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sign in to see your newsletters.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You do not receive any newsletter.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subscribe to a newsletter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Newsletters are switched off on your e-mail preferences page, so none of these is sent.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count interests offered</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All your e-mail preferences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The newsletters you receive by e-mail, in which language, and what you are interested in. Whether you get newsletters at all is decided on your e-mail preferences page.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Price</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>instead of</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/statistics</name>
