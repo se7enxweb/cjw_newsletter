@@ -91,6 +91,9 @@
                                                 
                                                 {include uri='design:content/datatype/edit/ezdatetime.tpl' attribute_base='CJWNL' attribute=$itsData}                                            
 
+                                                {* the parts the feature areas add to the send form ([ExtensionPointSettings] SendFormParts[]) *}
+                                                {foreach $send_form_parts as $cjwnl_part}{include uri=$cjwnl_part node_id=$node_id object_version=first_set( $object_version, false() )}{/foreach}
+
                                                 <input type="hidden" name="TopLevelNode" value="{$node_id}" />
                                                 <input type="hidden" name="ContentNodeID" value="{$node_id}" />
                                                 <input type="hidden" name="ContentObjectID" value="{$node_id}" />

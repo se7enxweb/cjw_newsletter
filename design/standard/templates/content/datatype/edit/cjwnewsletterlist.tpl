@@ -117,6 +117,13 @@
 <input type="radio" name="{$attribute_base}_CjwNewsletterList_PersonalizeContent_{$attribute.id}" value="0"{$personalize_content|choose(' checked', '')} /> {'no'|i18n('cjw_newsletter/datatype/cjwnewsletterlist')}
 <input type="radio" name="{$attribute_base}_CjwNewsletterList_PersonalizeContent_{$attribute.id}" value="1"{$personalize_content|choose('', ' checked')} /> {'yes'|i18n('cjw_newsletter/datatype/cjwnewsletterlist')}
 
+{* the parts the feature areas add to the list ([ExtensionPointSettings] ListEditParts[]); the POST names are
+   {$attribute_base}_CjwNewsletterList_<Name>_{$attribute.id}, read by the area's listAttributeInput() *}
+{foreach ezini( 'ExtensionPointSettings', 'ListEditParts', 'cjw_newsletter.ini' ) as $cjwnl_part}
+<hr>
+{include uri=$cjwnl_part attribute=$attribute attribute_base=$attribute_base list_object=$list_object}
+{/foreach}
+
 {*
 
 <h1>class content</h1>

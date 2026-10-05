@@ -203,6 +203,13 @@ class CjwNewsletterListType extends eZDataType
                             );
 
 
+        // extension point: the 4.2.0 columns are kept from the stored version, then the form parts of the feature
+        // areas set theirs ([ExtensionPointSettings] ListEditParts[], handlers' listAttributeInput())
+        foreach ( CjwNewsletterExtensionPoints::listAttributeInput( $listObject, $http, $prefix, $postfix, $contentObjectAttribute ) as $error )
+        {
+            $validationErrorMesssageArray[] = $error;
+        }
+
         $contentObjectAttribute->Content = $listObject;
 
         // $listObject->store();

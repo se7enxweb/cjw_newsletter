@@ -75,6 +75,9 @@
         </div>
     </div>
 
+    {* the parts the feature areas add to the list view ([ExtensionPointSettings] ListViewParts[]) *}
+    {foreach ezini( 'ExtensionPointSettings', 'ListViewParts', 'cjw_newsletter.ini' ) as $cjwnl_part}{include uri=$cjwnl_part attribute=$attribute list_object=$newsletter_list_content}{/foreach}
+
     <div class="break"></div>
 
 {undef $newsletter_list_content}

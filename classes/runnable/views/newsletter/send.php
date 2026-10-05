@@ -60,6 +60,9 @@ class Send extends \Exponential\Runnable\ModuleView
         $tpl = templateInit();
         $tpl->setVariable( 'view_parameters', $viewParameters );
         $tpl->setVariable( 'node_id', $nodeId );
+        // the template parts the feature areas add to the send and test forms (CjwNewsletterExtensionPoints)
+        $tpl->setVariable( 'send_form_parts', \CjwNewsletterExtensionPoints::templates( 'SendFormParts' ) );
+        $tpl->setVariable( 'test_form_parts', \CjwNewsletterExtensionPoints::templates( 'TestFormParts' ) );
 
         $node = $nodeId ? \eZContentObjectTreeNode::fetch( (int)$nodeId ) : null;
 
@@ -87,9 +90,11 @@ class Send extends \Exponential\Runnable\ModuleView
             $templateFile = 'design:newsletter/send_newsletter_test_result.tpl';
             $pathString = ezi18n( 'cjw_newsletter/send', 'Send test newsletter' );
 
-            if ( $module->hasActionParameter('EmailReseiverTest') )
+            $emailReceiverTest = $module->hasActionParameter( 'EmailReseiverTest' ) ? (string)$module->actionParameter( 'EmailReseiverTest' ) : '';
+            // extension point: e.g. the addresses of a test group (CjwNewsletterExtensionPoints)
+            $emailReceiverTest = (string)\CjwNewsletterExtensionPoints::filter( 'testSendRecipients', $emailReceiverTest, array( $http, $objectVersion ) );
+            if ( $module->hasActionParameter( 'EmailReseiverTest' ) || $emailReceiverTest !== '' )
             {
-                $emailReceiverTest = $module->actionParameter('EmailReseiverTest');
                 $newsletterMail = new \CjwNewsletterMail();
 
                 $forceSettingImageIncludeTo = -1;
@@ -174,10 +179,24 @@ class Send extends \Exponential\Runnable\ModuleView
                 }
 
 
+                // extension point: the parts of the send form check what they posted (CjwNewsletterExtensionPoints)
+                if ( $sendNewsletterOutDatetime && $sendNewsletterOutConfirm === true )
+                {
+                    $formErrors = \CjwNewsletterExtensionPoints::errors( 'sendFormValidate', array( $http, $objectVersion ) );
+                    if ( $formErrors )
+                    {
+                        $message_warning = implode( ' ', $formErrors );
+                        $sendNewsletterOutConfirm = false;
+                    }
+                }
+
                 // to we send out the newsletter
                 if ( $sendNewsletterOutDatetime && $sendNewsletterOutConfirm === true )
                 {
                     $createResult = $attributeEditionContent->createNewsletterSendObject( $sendNewsletterOutDatetime );
+                    // extension point: the parts of the send form store what they posted on the new send
+                    if ( is_object( $createResult ) )
+                        \CjwNewsletterExtensionPoints::call( 'sendFormStored', array( $createResult, $http, $objectVersion ) );
                     // redirect to current url   newsletter/send/ nodeId to loose the post variables
                     // return $module->redirectCurrent();
 

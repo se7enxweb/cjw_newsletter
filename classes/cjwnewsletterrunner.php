@@ -342,6 +342,9 @@ class CjwNewsletterRunner
         $message = "START: cjw_newsletter_mailqueue_create";
         $cli->output( $message );
 
+        // extension point: e.g. the recurring sends make their sends here (CjwNewsletterExtensionPoints)
+        \CjwNewsletterExtensionPoints::call( 'queueCreateBefore', array( $cli ) );
+
         // before we create the edition_send_items we will activate all nl_user with statua 20 - CjwNewlsetterUser::STATUS_PENDING_EZ_USER_REGISTER
 
         $message = "--\n>> START: check nl users with status STATUS_PENDING_EZ_USER_REGISTER";
@@ -504,6 +507,9 @@ class CjwNewsletterRunner
             $totals['sends']++;
             $newsletterEdtionSendObject->setAttribute('status', \CjwNewsletterEditionSend::STATUS_MAILQUEUE_CREATED );
             $newsletterEdtionSendObject->store();
+
+            // extension point: e.g. tracked links, A/B variants, outputs per language
+            \CjwNewsletterExtensionPoints::call( 'sendQueueCreated', array( $newsletterEdtionSendObject, $cli ) );
         }
 
         $message = ">> END: check NlEditionSend objects\n--";
@@ -520,6 +526,9 @@ class CjwNewsletterRunner
         $message = "START: cjw_newsletter_mailqueue_process";
         $cli->output( $message );
 
+        // extension point: e.g. the SMS queue, the choice of an A/B winner
+        \CjwNewsletterExtensionPoints::call( 'queueProcessBefore', array( $cli ) );
+
         // to fetch all send objetc with status == STATUS_MALQUEUE_CREATED || STATUS_MALQUEUE_STARTED
         $sendObjectList = \CjwNewsletterEditionSend::fetchEditionSendListByStatus( array( \CjwNewsletterEditionSend::STATUS_MAILQUEUE_CREATED , \CjwNewsletterEditionSend::STATUS_MAILQUEUE_PROCESS_STARTED ) );
 
@@ -528,6 +537,13 @@ class CjwNewsletterRunner
         // - if send = count all => status == PROCESS_FINISHED
         foreach ( $sendObjectList as $sendObject )
         {
+            // extension point: a send a handler holds back (a pause, an A/B wait, another channel) waits for a later run
+            if ( !\CjwNewsletterExtensionPoints::allows( 'sendProcessAllowed', array( $sendObject ) ) )
+            {
+                $cli->output( 'Send ' . $sendObject->attribute( 'id' ) . ' held back for a later run.' );
+                continue;
+            }
+
             // set startdate only at the first time
             if ( $sendObject->attribute( 'status' ) == \CjwNewsletterEditionSend::STATUS_MAILQUEUE_CREATED )
             {
@@ -614,8 +630,28 @@ class CjwNewsletterRunner
                             // the placeholders of this recipient: escaped in the HTML part, raw in the text part and the subject
                             $placeholderValues = \CjwNewsletterPlaceholders::valuesForRecipient( $sendItem, $sendObject,
                                 $newsletterUnsubscribeHash, $newsletterUserObject, $personalizeContent === 1 );
-                            $outputStringArrayNew = \CjwNewsletterPlaceholders::replaceInBodies( $outputStringArray, $placeholderValues );
-                            $emailSubject = \CjwNewsletterPlaceholders::replaceInSubject( $emailSubject, $placeholderValues );
+
+                            // extension point: a handler may change the subject, the bodies and the placeholder values
+                            // of this recipient, defer the item (rate limit) or close it
+                            $message = new \ArrayObject( array( 'subject' => $emailSubject, 'bodies' => $outputStringArray,
+                                'values' => $placeholderValues, 'defer' => false, 'abort' => '' ) );
+                            \CjwNewsletterExtensionPoints::call( 'itemBeforeSend', array( $message, $sendItem, $sendObject, $newsletterUserObject ) );
+                            if ( $message['defer'] )
+                            {
+                                $progressMonitor->addEntry( "[DEFERRED] $itemCounter/$itemsNotSend", "Newsletter send item {$id} left for a later run." );
+                                $totals['deferred'] = ( isset( $totals['deferred'] ) ? $totals['deferred'] : 0 ) + 1;
+                                break 2;
+                            }
+                            if ( $message['abort'] !== '' )
+                            {
+                                $progressMonitor->addEntry( "[ABORT] $itemCounter/$itemsNotSend", "Newsletter send item {$id} closed: " . $message['abort'] );
+                                $sendItem->setAttribute( 'status', \CjwNewsletterEditionSendItem::STATUS_ABORT );
+                                $sendItem->store();
+                                $itemCounter++;
+                                continue;
+                            }
+                            $outputStringArrayNew = \CjwNewsletterPlaceholders::replaceInBodies( $message['bodies'], $message['values'] );
+                            $emailSubject = \CjwNewsletterPlaceholders::replaceInSubject( $message['subject'], $message['values'] );
 
                             // set x-cjwnl header
                             $cjwMail->resetExtraMailHeaders();
@@ -680,8 +716,10 @@ class CjwNewsletterRunner
                                     // bounce nl user
                                     $newsletterUser->setBounced( $isHardBounce );
                                 }
-
                             }
+
+                            // extension point: e.g. the rate counters, the A/B counts
+                            \CjwNewsletterExtensionPoints::call( 'itemSent', array( $sendItem, $sendObject, $resultArray ) );
                         }
 
                         // newsletter user object not available anymore => abort

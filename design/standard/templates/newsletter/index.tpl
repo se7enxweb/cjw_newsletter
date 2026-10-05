@@ -106,6 +106,12 @@
             </section>
         </div>
 
+        {* the blocks the feature areas add to the dashboard ([ExtensionPointSettings] DashboardBlocks[]); each gets
+           summary, its own data is in summary.areas.<handler class> *}
+        {foreach ezini( 'ExtensionPointSettings', 'DashboardBlocks', 'cjw_newsletter.ini' ) as $cjwnl_block}
+        {include uri=$cjwnl_block summary=$summary can_send=$can_send can_admin=$can_admin}
+        {/foreach}
+
         <section>
             <h2>{'Problems and hints'|i18n( 'extension/cjw_newsletter' )}</h2>
             {if $summary.problems|count}

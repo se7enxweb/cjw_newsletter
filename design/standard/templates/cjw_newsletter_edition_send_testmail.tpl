@@ -44,6 +44,9 @@
         <div class="block">
             <div class="left">
 
+                {* the parts the feature areas add to the test send form ([ExtensionPointSettings] TestFormParts[]) *}
+                {foreach ezini( 'ExtensionPointSettings', 'TestFormParts', 'cjw_newsletter.ini' ) as $cjwnl_part}{include uri=$cjwnl_part node=$node}{/foreach}
+
                 {* Newsletter test email button. *}
                 <input type="submit" class="button" name="SendNewsletterTestButton" value="{"Send Test Newsletter"|i18n("cjw_newsletter/send")}" />
 

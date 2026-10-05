@@ -95,7 +95,7 @@ class CjwNewsletterDashboard
     /*!
      \static
      \return array with the keys 'tables_missing', 'lists', 'users', 'subscriptions', 'editions', 'sends', 'last_sends',
-             'blacklist', 'mailboxes', 'imports', 'transport', 'runs', 'orphans', 'problems'
+             'blacklist', 'mailboxes', 'imports', 'transport', 'runs', 'orphans', 'problems', 'areas' (4.2.0: handler class => its summary)
     */
     static function summary()
     {
@@ -298,6 +298,16 @@ class CjwNewsletterDashboard
                                  'text' => ezpI18n::tr( $i18n, 'No mail account is active, so bounces are not collected.' ), 'url' => 'newsletter/mailbox_list' );
         }
         unset( $problems );
+        // extension point: what the feature areas show on the dashboard, as summary.areas.<handler class>; a handler
+        // may also return 'problems' (same form as above), which are added to the list
+        $summary['areas'] = array();
+        foreach ( CjwNewsletterExtensionPoints::call( 'dashboardSummary', array( $summary ) ) as $class => $areaSummary )
+        {
+            $summary['areas'][$class] = is_array( $areaSummary ) ? $areaSummary : array();
+            if ( isset( $areaSummary['problems'] ) && is_array( $areaSummary['problems'] ) )
+                foreach ( $areaSummary['problems'] as $problem )
+                    $summary['problems'][] = $problem;
+        }
         return $summary;
     }
 }
