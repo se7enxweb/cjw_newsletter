@@ -450,6 +450,11 @@ class CjwNewsletterRendering
         $bodies = self::resolveBodies( $bodies, $context, array( 'edition_object_id' => $editionObjectId, 'list_id' => $listId, 'language' => $language ) );
         $subject = CjwNewsletterConditions::resolve( (string)$subject, $context );
         $values = CjwNewsletterPlaceholders::valuesForSubscriber( $user, $listId, $personalize );
+        // the hashes of the older skins, as the runner gives them
+        $subscription = is_object( $user ) && $listId > 0 ? CjwNewsletterSubscription::fetchByListIdAndNewsletterUserId( $listId, $user->attribute( 'id' ) ) : null;
+        $values = array_merge( array( '#_hash_unsubscribe_#' => is_object( $subscription ) ? (string)$subscription->attribute( 'hash' ) : '',
+                                      '#_hash_configure_#' => is_object( $user ) ? (string)$user->attribute( 'hash' ) : '',
+                                      '#_hash_edition_#' => is_object( $send ) ? (string)$send->attribute( 'hash' ) : '' ), $values );
         $bodies = CjwNewsletterPlaceholders::replaceInBodies( $bodies, $values );
         return array( 'subject' => CjwNewsletterPlaceholders::replaceInSubject( $subject, $values ),
                       'html' => $bodies['html'], 'text' => $bodies['text'], 'language' => $language, 'skin' => $skin,
