@@ -305,6 +305,9 @@ class CjwNewsletterBlacklistItem extends eZPersistentObject
             $newsletterUserObject->setBlacklisted();
         }
         parent::store( $fieldFilters );
+        // the suppression list of the e-mail preferences (Exponential 6.0.15 and later) gets the address too
+        if ( class_exists( 'CjwNewsletterMailPreferences' ) )
+            CjwNewsletterMailPreferences::blacklisted( $this->attribute( 'email' ) );
     }
 
     /**
@@ -317,7 +320,11 @@ class CjwNewsletterBlacklistItem extends eZPersistentObject
         {
             $newsletterUserObject->setNonBlacklisted();
         }
-        return parent::remove( $conditions = null, $extraConditions = null );
+        $result = parent::remove( $conditions = null, $extraConditions = null );
+        // and the suppression list of the e-mail preferences lifts it
+        if ( class_exists( 'CjwNewsletterMailPreferences' ) )
+            CjwNewsletterMailPreferences::unblacklisted( $this->attribute( 'email' ) );
+        return $result;
     }
 
 }

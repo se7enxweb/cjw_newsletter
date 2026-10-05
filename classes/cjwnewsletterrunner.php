@@ -229,11 +229,11 @@ class CjwNewsletterRunner
      The second cronjob part: send the mails of the queue (with the transport of [NewsletterMailSettings]
      TransportMethodCronjob) and finish the sends whose queue is empty.
 
-     \return array( 'ok', 'locked', 'sent', 'failed', 'finished', 'waiting' )
+     \return array( 'ok', 'locked', 'sent', 'failed', 'finished', 'waiting', 'blocked' )
     */
     static function queueProcess( $cli = false, $by = 'cron', $dryRun = false )
     {
-        $totals = array( 'ok' => true, 'locked' => false, 'sent' => 0, 'failed' => 0, 'finished' => 0, 'waiting' => 0 );
+        $totals = array( 'ok' => true, 'locked' => false, 'sent' => 0, 'failed' => 0, 'finished' => 0, 'waiting' => 0, 'blocked' => 0 );
         $cli = $cli ? $cli : new CjwNewsletterJobOutput( false );
         $lock = $dryRun ? true : self::lock( 'queue_process' );
         if ( !$lock )
@@ -573,6 +573,8 @@ class CjwNewsletterRunner
 
             $cjwMail = new \CjwNewsletterMail();
             $cjwMail->setTransportMethodCronjobFromIni();
+            // the editions go through the mail gate of the e-mail preferences (Exponential 6.0.15 and later)
+            $cjwMail->setMailCategory( 'newsletter' );
 
             // process every send_item of current sendobject
             for( $i = 0; $i < $itemsNotSend; $i += $limit)
@@ -675,7 +677,18 @@ class CjwNewsletterRunner
 
                             $sendResult = $resultArray['send_result'];
 
-                            if ( $sendResult === true )
+                            if ( !empty( $resultArray['blocked'] ) )
+                            {
+                                // the person's e-mail preferences refuse it (all optional e-mail off, the
+                                // newsletters off, a suppressed address): the item is closed, the user is not bounced
+                                $progressMonitor->addEntry( "[BLOCKED] $itemCounter/$itemsNotSend",
+                                    "Newsletter send item {$id} not sent: refused by the e-mail preferences." );
+                                $totals['blocked'] = ( isset( $totals['blocked'] ) ? $totals['blocked'] : 0 ) + 1;
+                                $sendItem->setAttribute( 'status',
+                                    \CjwNewsletterEditionSendItem::STATUS_ABORT );
+                                $sendItem->store();
+                            }
+                            else if ( $sendResult === true )
                             {
                                 // emal was send
                                 $progressMonitor->addEntry( "[SEND] $itemCounter/$itemsNotSend",

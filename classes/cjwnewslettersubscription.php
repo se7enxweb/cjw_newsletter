@@ -1288,7 +1288,11 @@ class CjwNewsletterSubscription extends eZPersistentObject
     public function store( $fieldFilters = null )
     {
         $this->setModified();
+        // the e-mail preferences (Exponential 6.0.15 and later) record every change of the status in their consent log
+        $oldStatus = class_exists( 'CjwNewsletterMailPreferences' ) ? CjwNewsletterMailPreferences::storedStatus( $this ) : null;
         parent::store( $fieldFilters );
+        if ( class_exists( 'CjwNewsletterMailPreferences' ) )
+            CjwNewsletterMailPreferences::subscriptionChanged( $this, $oldStatus );
     }
 
     /**

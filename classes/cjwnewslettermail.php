@@ -66,6 +66,27 @@ class CjwNewsletterMail
     private $ContentTransferEncoding = ezcMail::EIGHT_BIT;
 
     /**
+     * The category of the e-mail preferences (Exponential 6.0.15 and later) the mails belong to; set, they go
+     * through the mail gate (see setMailCategory()). null: sent as before.
+     *
+     * @var string|null
+     */
+    private $MailCategory = null;
+
+    /**
+     * The mails sent after this go through the mail gate of the e-mail preferences as this category: a person
+     * who switched it off, or all optional e-mail, or whose address is suppressed does not get them, and the gate
+     * adds its footer and the List-Unsubscribe headers. Without the e-mail preferences nothing changes. Test mails
+     * (preview) are never gated.
+     *
+     * @param string|null $category e.g. 'newsletter'; null switches the gate off again
+     */
+    public function setMailCategory( $category )
+    {
+        $this->MailCategory = $category === null || $category === '' ? null : (string)$category;
+    }
+
+    /**
      * Constructor
      *
      * @return void
@@ -304,7 +325,30 @@ class CjwNewsletterMail
 
         $mail->build();
         $transport = new CjwNewsletterTransport( $transportMethod );
-        $sendResult = $transport->send( $mail );
+        $gate = null;
+        if ( !$isPreview && $this->MailCategory !== null && class_exists( 'CjwNewsletterMailPreferences' ) )
+            $gate = CjwNewsletterMailPreferences::sendThroughGate( $mail, $transport, $this->MailCategory );
+        if ( is_array( $gate ) && $gate['handled'] )
+            $sendResult = $gate['result'];
+        else
+            $sendResult = $transport->send( $mail );
+
+        if ( is_array( $gate ) && $gate['blocked'] )
+        {
+            // the person's e-mail preferences refuse it: nothing was sent, which is neither a success nor a bounce
+            $emailResult = array( 'send_result' => false,
+                                  'blocked' => true,
+                                  'blocked_reasons' => $gate['reasons'],
+                                  'email_sender' => $emailSender,
+                                  'email_receiver' => $emailReceiver,
+                                  'email_subject' => $emailSubject,
+                                  'email_content_type' => '',
+                                  'email_charset' => $emailCharset,
+                                  'transport_method' => $transportMethod );
+            CjwNewsletterLog::writeInfo( 'email not sent: refused by the e-mail preferences (' . implode( ',', $gate['reasons'] ) . ')',
+                                         'CjwNewsletterMail', 'sendEmail', array( 'transport_method' => $transportMethod ) );
+            return $emailResult;
+        }
 
         $emailResult = array('send_result' => $sendResult,
                              'email_sender' => $emailSender,

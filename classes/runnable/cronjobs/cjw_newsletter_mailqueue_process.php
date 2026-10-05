@@ -43,7 +43,7 @@ class CjwNewsletterMailqueueProcess extends \Exponential\Runnable\CronjobPart
             $cli->output( 'Another run of this part is active; this run does nothing.' );
             return false;
         }
-        $cli->output( 'Done: ' . $totals['sent'] . ' mails sent, ' . $totals['failed'] . ' failed, ' . $totals['finished'] . ' sends finished.' );
+        $cli->output( 'Done: ' . $totals['sent'] . ' mails sent, ' . $totals['failed'] . ' failed, ' . $totals['blocked'] . ' refused by the e-mail preferences, ' . $totals['finished'] . ' sends finished.' );
         $cli->output( "END: cjw_newsletter_mailqueue_process" );
         return $totals['ok'];
     }
