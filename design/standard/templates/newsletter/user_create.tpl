@@ -21,10 +21,10 @@
 
 <form action={'newsletter/user_create/'|ezurl} method="post">
 
-<input type="hidden" name="RedirectUrlActionCancel" value="{$redirect_url_action_cancel}" />
-<input type="hidden" name="RedirectUrlActionStore" value="{$redirect_url_action_store}" />
+<input type="hidden" name="RedirectUrlActionCancel" value="{$redirect_url_action_cancel|wash}" />
+<input type="hidden" name="RedirectUrlActionStore" value="{$redirect_url_action_store|wash}" />
 
-<input type="hidden" name="OldPostVarSerialized" value="{$old_post_var_serialized}" />
+<input type="hidden" name="OldPostVarSerialized" value="{$old_post_var_serialized|wash}" />
 
     <div class="context-block">
         {* DESIGN: Header START *}

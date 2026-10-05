@@ -308,7 +308,7 @@ full view of an mailbox item
             <div class="box-content">
                 <div class="context-attributes">
                     <div class="overflow-table">
-                        <p>{$mailbox_item.file_path}</p>
+                        <p>{$mailbox_item.file_path|wash}</p>
 
                         <a href="?GetRawMailContent" target="_blank">{'Full View'|i18n( 'cjw_newsletter/mailbox_item_view',, hash( ) )}</a>
                         <a href="?DownloadRawMailContent">{'Download'|i18n( 'cjw_newsletter/mailbox_item_view',, hash( ) )}</a>

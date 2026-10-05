@@ -42,96 +42,70 @@ class BlacklistItemAdd extends \Exponential\Runnable\ModuleView
         $http = \eZHTTPTool::instance();
         $tpl = templateInit();
 
-        $isBlacklistDone = false;
-        $email = false;
-        $note = '';
+        $email = $http->hasVariable( 'Email' ) ? trim( (string)$http->variable( 'Email' ) ) : '';
+        $note = $http->hasVariable( 'Note' ) ? trim( (string)$http->variable( 'Note' ) ) : '';
+        $errors = array();
 
-        if( $http->hasVariable( 'Email' ) )
+        if ( $http->hasVariable( 'DiscardButton' ) )
         {
-            $email = trim( $http->variable( 'Email' ) );
+            return $this->viewResult( null, $module->redirectTo( '/newsletter/blacklist_item_list' ) );
         }
-        if( $http->hasVariable( 'Note' ) )
+        elseif ( $http->hasVariable( 'AddButton' ) )
         {
-            $note = trim( $http->variable( 'Note' ) );
-        }
-
-        // if email is ok than create a new blacklist item
-        // email to lowercase
-
-        $message = '';
-        $blacklistItemObject = false;
-
-        if( $email != '' )
-        {
-            $existingBlacklistItemObject = \CjwNewsletterBlacklistItem::fetchByEmail( $email );
-
-            if( !is_object( $existingBlacklistItemObject ) )
+            if ( $email === '' )
             {
-                $blacklistItemObject = \CjwNewsletterBlacklistItem::create( $email, $note );
+                $errors['email'] = ezi18n( 'cjw_newsletter/blacklist_item_add', 'Enter the email address.' );
             }
-            else
+            elseif ( !\eZMail::validate( $email ) )
             {
-                $blacklistItemObject = $existingBlacklistItemObject;
+                $errors['email'] = ezi18n( 'cjw_newsletter/blacklist_item_add', 'This is not a valid email address.' );
             }
-
-        }
-
-
-        // if AddButton was pushed than store new data
-        if ( $http->hasVariable( 'AddButton' ) )
-        {
-            if( is_object( $blacklistItemObject ) )
+            elseif ( mb_strlen( $email ) > 150 )
             {
-                $newsletterUserObject = $blacklistItemObject->attribute( 'newsletter_user_object' );
-
-        //        $newsletterUserObject->setBlacklisted();
-
-                $blacklistItemObject->store();
-
-                if( is_object( $newsletterUserObject ) )
+                $errors['email'] = ezi18n( 'cjw_newsletter/blacklist_item_add', 'The email address is too long.' );
+            }
+            if ( mb_strlen( $note ) > 2000 )
+            {
+                $errors['note'] = ezi18n( 'cjw_newsletter/blacklist_item_add', 'The note is too long (2000 characters at most).' );
+            }
+            if ( !$errors )
+            {
+                $existing = \CjwNewsletterBlacklistItem::fetchByEmail( $email );
+                if ( is_object( $existing ) )
                 {
-
-                    $message = ezi18n( 'cjw_newsletter/blacklist_item_add', 'Successfully adding newsletter user %nl_user_id with email %email to blacklist', '',
-                             array( '%nl_user_id' => $newsletterUserObject->attribute('id'),
-                                    '%email' => $newsletterUserObject->attribute('email') ));
-
-                    $isBlacklistDone = true;
+                    \CjwNewsletterUI::notice( 'warning', ezi18n( 'cjw_newsletter/blacklist_item_add', 'The address %email is on the blacklist already.', '', array( '%email' => $email ) ) );
                 }
                 else
                 {
-                    $message = ezi18n( 'cjw_newsletter/blacklist_item_add', 'Successfully adding email address %email to blacklist', '',
-                             array( '%email' => $blacklistItemObject->attribute('email') ));
-                    $isBlacklistDone = true;
+                    $item = \CjwNewsletterBlacklistItem::create( $email, $note );
+                    // store() also blacklists the newsletter user of this address
+                    $item->store();
+                    $newsletterUser = $item->attribute( 'newsletter_user_object' );
+                    \CjwNewsletterUI::notice( 'feedback', is_object( $newsletterUser )
+                        ? ezi18n( 'cjw_newsletter/blacklist_item_add', 'Successfully adding newsletter user %nl_user_id with email %email to blacklist', '',
+                                  array( '%nl_user_id' => $newsletterUser->attribute( 'id' ), '%email' => $newsletterUser->attribute( 'email' ) ) )
+                        : ezi18n( 'cjw_newsletter/blacklist_item_add', 'Successfully adding email address %email to blacklist', '', array( '%email' => $email ) ) );
                 }
-
+                return $this->viewResult( null, $module->redirectTo( '/newsletter/blacklist_item_list' ) );
             }
         }
-        // Cancel
-        elseif( $http->hasVariable( 'DiscardButton' ) )
-        {
-            $module->redirectTo( '/newsletter/blacklist_item_list' );
-        }
-
-
 
         $viewParameters = array( 'offset'     => 0,
                                  'namefilter' => '' );
-
         $userParameters = $Params[ 'UserParameters' ];
         $viewParameters = array_merge( $viewParameters, $userParameters );
 
-        $tpl->setVariable( 'is_blacklist_done', $isBlacklistDone );
-        $tpl->setVariable( 'message', $message );
-        $tpl->setVariable( 'blacklist_item', $blacklistItemObject );
-
         $tpl->setVariable( 'view_parameters', $viewParameters );
+        $tpl->setVariable( 'email', $email );
+        $tpl->setVariable( 'note', $note );
+        $tpl->setVariable( 'errors', $errors );
 
         $Result = array();
-
         $Result[ 'content' ] = $tpl->fetch( $templateFile );
-        //$Result[ 'ui_context' ] = 'edit';
-        $Result['path'] =  array( array( 'url'  => false,
+        $Result['path'] =  array( array( 'url'  => 'newsletter/index',
                                          'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                  array( 'url'  => 'newsletter/blacklist_item_list',
+                                         'text' => ezi18n( 'cjw_newsletter/blacklist_item_list', 'Blacklists' ) ),
                                   array( 'url'  => false,
                                          'text' => ezi18n( 'cjw_newsletter/blacklist_item_add', 'Blacklist add' ) ) );
 

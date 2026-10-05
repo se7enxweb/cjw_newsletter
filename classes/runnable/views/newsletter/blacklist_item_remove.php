@@ -34,50 +34,69 @@ class BlacklistItemRemove extends \Exponential\Runnable\ModuleView
         unset( $__name );
 
         $module = $Params['Module'];
+        $templateFile = 'design:newsletter/blacklist_item_remove.tpl';
 
         require_once( 'kernel/common/i18n.php' );
+        include_once( 'kernel/common/template.php' );
 
         $http = \eZHTTPTool::instance();
-        $blackListItemArray = array();
-        $deleteIDArray = $http->hasVariable( 'BlacklistIDArray' ) ? $http->variable( 'BlacklistIDArray' ) : array();
-        $email = $http->hasVariable( 'Email' ) ? trim( $http->variable( 'Email' ) ) : '';
+        $tpl = templateInit();
 
-        if ( $email )
+        $redirect = $http->hasVariable( 'RedirectURI' )
+            ? \CjwNewsletterUtils::localRedirectPath( $http->variable( 'RedirectURI' ), '/newsletter/blacklist_item_list' )
+            : '/newsletter/blacklist_item_list';
+
+        $items = array();
+        $email = $http->hasVariable( 'Email' ) ? trim( (string)$http->variable( 'Email' ) ) : '';
+        if ( $email !== '' )
         {
             $itemByEmail = \CjwNewsletterBlacklistItem::fetchByEmail( $email );
-            if( !is_object( $itemByEmail ) )
+            if ( is_object( $itemByEmail ) )
             {
-                \eZDebug::writeError( "Given email ($email) isn't blacklisted", 'newsletter/blacklist_item_remove' );
-                return $this->viewResult( isset( $Result ) ? $Result : null,  $module->handleError( \eZError::KERNEL_NOT_FOUND, 'kernel' ) );
+                $items[$itemByEmail->attribute( 'id' )] = $itemByEmail;
             }
-            $blackListItemArray[] = $itemByEmail;
         }
-
-        if ( $deleteIDArray )
+        $ids = $http->hasVariable( 'BlacklistIDArray' ) ? (array)$http->variable( 'BlacklistIDArray' ) : array();
+        foreach ( $ids as $id )
         {
-            foreach ( (array)$deleteIDArray as $id )
+            $itemByID = \CjwNewsletterBlacklistItem::fetch( (int)$id );
+            if ( is_object( $itemByID ) )
             {
-                $itemByID = \CjwNewsletterBlacklistItem::fetch( $id );
-                if( !is_object( $itemByID ) )
-                {
-                    \eZDebug::writeError( "Given id ($id) isn't blacklisted", 'newsletter/blacklist_item_remove' );
-                    return $this->viewResult( isset( $Result ) ? $Result : null,  $module->handleError( \eZError::KERNEL_NOT_FOUND, 'kernel' ) );
-                }
-                $blackListItemArray[] = $itemByID;
+                $items[$itemByID->attribute( 'id' )] = $itemByID;
             }
         }
 
-        foreach ( $blackListItemArray as $blackListItem )
+        if ( $http->hasVariable( 'CancelButton' ) )
         {
-            $blackListItem->remove();
+            return $this->viewResult( null, $module->redirectTo( $redirect ) );
+        }
+        if ( !$items )
+        {
+            \CjwNewsletterUI::notice( 'warning', ezi18n( 'cjw_newsletter/blacklist_item_remove', 'Select at least one address to remove from the blacklist.' ) );
+            return $this->viewResult( null, $module->redirectTo( $redirect ) );
+        }
+        if ( $http->hasVariable( 'ConfirmRemoveButton' ) )
+        {
+            foreach ( $items as $item )
+            {
+                $item->remove();
+            }
+            \CjwNewsletterUI::notice( 'feedback', ezi18n( 'cjw_newsletter/blacklist_item_remove', '%count addresses were removed from the blacklist.', '', array( '%count' => count( $items ) ) ) );
+            return $this->viewResult( null, $module->redirectTo( $redirect ) );
         }
 
-        if ( $http->hasVariable( 'RedirectURI' ) )
-            $module->redirectTo( \CjwNewsletterUtils::localRedirectPath( $http->variable( 'RedirectURI' ), '/newsletter/blacklist_item_list' ) );
-        elseif ( $http->hasSessionVariable( 'LastAccessesURI' ) )
-            $module->redirectTo( $http->sessionVariable( 'LastAccessesURI' ) );
-        else
-            $module->redirectToView( 'blacklist_item_list' );
+        // step one: show what would go, remove nothing
+        $tpl->setVariable( 'items', array_values( $items ) );
+        $tpl->setVariable( 'redirect_uri', ltrim( $redirect, '/' ) );
+
+        $Result = array();
+        $Result['content'] = $tpl->fetch( $templateFile );
+        $Result['path'] =  array( array( 'url'  => 'newsletter/index',
+                                         'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                  array( 'url'  => 'newsletter/blacklist_item_list',
+                                         'text' => ezi18n( 'cjw_newsletter/blacklist_item_list', 'Blacklists' ) ),
+                                  array( 'url'  => false,
+                                         'text' => ezi18n( 'cjw_newsletter/blacklist_item_remove', 'Remove' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

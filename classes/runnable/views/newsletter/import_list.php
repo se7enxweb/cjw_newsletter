@@ -37,45 +37,27 @@ class ImportList extends \Exponential\Runnable\ModuleView
         require_once( 'kernel/common/i18n.php' );
         include_once( 'kernel/common/template.php' );
 
-        $http = \eZHTTPTool::instance();
         $tpl = templateInit();
 
-        $http = \eZHTTPTool::instance();
-        $db = \eZDB::instance();
+        $userParameters = isset( $Params['UserParameters'] ) && is_array( $Params['UserParameters'] ) ? $Params['UserParameters'] : array();
+        $viewParameters = array_merge( array( 'offset' => 0, 'namefilter' => '' ), $userParameters );
+        $viewParameters['offset'] = max( 0, (int)$viewParameters['offset'] );
+        $limit = isset( $userParameters['limit'] ) && in_array( (int)$userParameters['limit'], array( 10, 25, 50, 100 ) ) ? (int)$userParameters['limit'] : 25;
 
-        $viewParameters = array( 'offset' => 0,
-                                 'namefilter' => '' );
-
-        $userParameters = $Params['UserParameters'];
-        $viewParameters = array_merge( $viewParameters, $userParameters );
-
-        $limit = 10;
-        $limitArray = array( 10, 10, 25, 50 );
-        $limitArrayKey = \eZPreferences::value( 'admin_import_list_limit' );
-
-        // get user limit preference
-        if ( isset( $limitArray[ $limitArrayKey ] ) )
-        {
-            $limit =  $limitArray[ $limitArrayKey ];
-        }
-
-        $importList = \CjwNewsletterImport::fetchAllImportItems( $limit, $viewParameters[ 'offset' ] );
+        // the newest imports first
+        $importList = \CjwNewsletterImport::fetchAllImportItems( $limit, $viewParameters['offset'], array( 'id' => 'desc' ) );
         $importListCount = \CjwNewsletterImport::fetchAllImportItemsCount( );
 
-        $tpl->setVariable( 'view_parameters', $viewParameters );
-
-        $tpl->setVariable( 'import_list', $importList );
+        $tpl->setVariable( 'view_parameters', array( 'offset' => $viewParameters['offset'], 'limit' => $limit ) );
+        $tpl->setVariable( 'import_list', is_array( $importList ) ? $importList : array() );
         $tpl->setVariable( 'import_list_count', $importListCount );
-
         $tpl->setVariable( 'limit', $limit );
-
+        $tpl->setVariable( 'notices', \CjwNewsletterUI::takeNotices() );
 
         $Result = array();
-
         $Result['content'] = $tpl->fetch( $templateFile );
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
                                          'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
-
                                   array( 'url'  => false,
                                          'text' => ezi18n( 'cjw_newsletter/import_list', 'Imports' ) ) );
 

@@ -30,8 +30,8 @@
 
 <form action={concat( 'newsletter/user_edit/', $newsletter_user_id )|ezurl} method="post">
 
-<input type="hidden" name="RedirectUrlActionCancel" value="{$redirect_url_action_cancel}" />
-<input type="hidden" name="RedirectUrlActionStore" value="{$redirect_url_action_store}" />
+<input type="hidden" name="RedirectUrlActionCancel" value="{$redirect_url_action_cancel|wash}" />
+<input type="hidden" name="RedirectUrlActionStore" value="{$redirect_url_action_store|wash}" />
 
     <div class="context-block">
         {* DESIGN: Header START *}

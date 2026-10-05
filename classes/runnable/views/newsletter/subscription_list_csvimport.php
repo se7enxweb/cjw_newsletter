@@ -21,53 +21,6 @@
  *
  */
 
-namespace
-{
-if ( !function_exists( 'storeImportResultToFile' ) ) {
-function storeImportResultToFile( $importId, $data )
-{
-    $fileName = getImportResultFilePath( $importId );
-
-    $dir = dirname( $fileName );
-    $file = basename( $fileName );
-
-    // return content string of mail item
-    $messageData = serialize( $data );
-
-    // create file in path with content
-    $createResult = eZFile::create( $file, $dir, $messageData );
-}
-}
-
-if ( !function_exists( 'getImportResultFromFile' ) ) {
-function getImportResultFromFile( $importId )
-{
-
-    $fileName = getImportResultFilePath( $importId );
-    $data = file_get_contents( $fileName );
-    if ( $data )
-    {
-        return unserialize( $data );
-    }
-    else
-    {
-        return false;
-    }
-}
-}
-
-if ( !function_exists( 'getImportResultFilePath' ) ) {
-function getImportResultFilePath( $importId )
-{
-    $fileSep = eZSys::fileSeparator();
-    $dir = eZSys::varDirectory() . $fileSep . 'cjw_newsletter' . $fileSep . 'csvimport';
-    $file = $importId.'-import_result.serialize';
-
-    return $dir. $fileSep . $file;
-}
-}
-}
-
 namespace Exponential\View\Extension\CjwNewsletter\Newsletter
 {
 
@@ -250,6 +203,13 @@ class SubscriptionListCsvimport extends \Exponential\Runnable\ModuleView
             // create dir
             \eZDir::mkdir( $dir, false, true );
             $createResult = copy( $filePathUpload, $csvFilePath );
+            if ( !$createResult )
+            {
+                // the folder is not writable for the web server: say so instead of showing an import without rows
+                $importObject->remove();
+                \CjwNewsletterUI::notice( 'error', ezi18n( 'cjw_newsletter/subscription_list_csvimport', 'The file could not be stored in %dir. Check that the web server can write there.', '', array( '%dir' => $dir ) ) );
+                return $this->viewResult( null, $module->redirectToView( 'subscription_list_csvimport', array( $nodeId, 0 ) ) );
+            }
 
             $importObject->store();
 
@@ -272,9 +232,10 @@ class SubscriptionListCsvimport extends \Exponential\Runnable\ModuleView
         }
 
         // read import result
-        if ( file_exists( getImportResultFilePath( $importId ) ) )
+        if ( $importId && is_file( \CjwNewsletterImport::resultFilePath( $importId ) ) )
         {
-            $listSubscriptionArray = getImportResultFromFile( $importId );
+            $listSubscriptionArray = \CjwNewsletterImport::readResult( $importId );
+            $listSubscriptionArray = is_array( $listSubscriptionArray ) ? $listSubscriptionArray : array();
             $csvParserObject       = new \CjwNewsletterCsvParser( $csvFilePath, $csvDelimiter, $firstRowIsLabel, $csvFieldMappingArray, $utf8Encode );
             $csvDataArray          = $csvParserObject->getCsvDataArray();
         }
@@ -295,283 +256,36 @@ class SubscriptionListCsvimport extends \Exponential\Runnable\ModuleView
             //$csvParserObject = new CjwNewsletterCsvParser( $csvFilePath, $csvDelimiter, $firstRowIsLabel, $csvFieldMappingArray, $utf8Encode );
             //$csvDataArray = $csvParserObject->getCsvDataArray();
 
-            // start data import
+            // start data import: a background run of the command, inline when none can be started
+            $jobId = '';
             if ( $importCsvFile === TRUE && is_object( $importObject ) )
             {
-                \CjwNewsletterLog::writeNotice( 'subscription_list_csvimport',
-                                               'import',
-                                               'start',
-                                               array( 'import_id'       => $importObject->attribute( 'id' ),
-                                                      'csv_array_count' => count( $csvDataArray ),
-                                                      'current_user'    => \eZUser::currentUserID() )
-                                             );
-
-                foreach ( $csvDataArray as $rowId => $item )
+                $delimiterNames = array( ',' => 'comma', ';' => 'semicolon', '\\t' => 'tab', '|' => 'pipe' );
+                $arguments = array( '--import-id=' . (int)$importObject->attribute( 'id' ),
+                                    '--delimiter=' . ( isset( $delimiterNames[$csvDelimiter] ) ? $delimiterNames[$csvDelimiter] : 'semicolon' ),
+                                    '--formats=' . implode( '-', array_map( 'intval', (array)$selectedOutputFormatArray ) ) );
+                if ( $firstRowIsLabel )
                 {
-                    $remote_id = false;
-                    if( isset( $item[ 'remote_id' ] ) )
-                        $remote_id = trim( $item[ 'remote_id' ] );
-
-                    $email = '';
-                    if( isset( $item[ 'email' ] ) )
-                        $email = trim( $item[ 'email' ] );
-
-                    $salutation = 0;
-                    if( isset( $item[ 'salutation' ] ) )
-                        $salutation = (int) $item[ 'salutation' ];
-
-                    $firstName = '';
-                    if( isset( $item[ 'first_name' ] ) )
-                        $firstName = $item[ 'first_name' ];
-
-                    $lastName = '';
-                    if( isset( $item[ 'last_name' ] ) )
-                        $lastName = $item[ 'last_name' ];
-
-                    $customDataText1 = '';
-                    if( isset( $item[ 'custom_data_text_1' ] ) )
-                        $customDataText1 = $item[ 'custom_data_text_1' ];
-
-                    $customDataText2 = '';
-                    if( isset( $item[ 'custom_data_text_2' ] ) )
-                        $customDataText2 = $item[ 'custom_data_text_2' ];
-
-                    $customDataText3 = '';
-                    if( isset( $item[ 'custom_data_text_3' ] ) )
-                        $customDataText3 = $item[ 'custom_data_text_3' ];
-
-                    $customDataText4 = '';
-                    if( isset( $item[ 'custom_data_text_4' ] ) )
-                        $customDataText4 = $item[ 'custom_data_text_4' ];
-
-                    $eZUserId = false;
-                    $newsletterUserId = 0;
-
-                    $emailOk = \ezcMailTools::validateEmailAddress( $email );
-                    $subscriptionObject = null;
-                    $createNewUser = 0; // 0 - no, 1 - yes, 2 - updated
-                    $createNewSubscription = 0;
-
-                    // store status from existing objects and new stati after import/update
-                    $existingUserStatus = -1;
-                    $existingSubscriptionStatus = -1;
-                    $newUserStatus = -1;
-                    $newSubscriptionStatus = -1;
-
-                    $userIsBlacklistedOrRemoved = false;
-
-                    if ( !$emailOk )
-                    {
-                        $emailOk = 0;
-                    }
-                    else
-                    {
-                        $emailOk = 1;
-
-                        if ( $csvImportHasPrio == false )
-                        {
-                            // 1. check if an nl user for email already exists
-                            //    no   -> create new one with status """confirmed"""
-                            //         -> subscribe to nl list with status """approved"""
-                            //    yes  -> subscribe to nl list with status """approved"""
-                            $existingNewsletterUserObject = \CjwNewsletterUser::fetchByEmail( $email );
-                        }
-                        else
-                        {
-                            // user wurde bereits importiert?
-                            // zuerst nach remote_id suchen
-                            $existingNewsletterUserObject = \CjwNewsletterUser::fetchByRemoteId( $remote_id );
-                            if ( is_object( $existingNewsletterUserObject ) )
-                            {
-                                // sicherstellen, dass wir keine duplicate emails haben
-                                if ( $email != $existingNewsletterUserObject->attribute( 'email') )
-                                {
-                                    $tmpUserObject = \CjwNewsletterUser::fetchByEmail( $email );
-                                    if ( is_object( $tmpUserObject ) )
-                                    {
-                                        // houston, we've got a problem - $tmpUserObject löschen???
-        // ToDo
-                                        \CjwNewsletterLog::writeError(
-                                                                'CSV Import: duplicate E-Mail Adress',
-                                                                'user',
-                                                                'email',
-                                                                 array(
-                                                                        'email_cur' => $existingNewsletterUserObject->attribute( 'email'),
-                                                                        'email_imp' => $email,
-                                                                        'remote_id' => $remote_id )
-                                                                  );
-                                    }
-                                }
-                            }
-                            // user hat sich selbst per subscription angelegt?
-                            // sonst nach email suchen
-                            if ( !is_object( $existingNewsletterUserObject ) )
-                            {
-                                $existingNewsletterUserObject = \CjwNewsletterUser::fetchByEmail( $email );
-                            }
-                        }
-
-                        // update existing
-                        if ( is_object( $existingNewsletterUserObject ) )
-                        {
-                            $userObject = $existingNewsletterUserObject;
-                            $updateUserDataIfExists = true;
-                            $existingUserStatus = $userObject->attribute( 'status' );
-
-                            if ( $userObject->isOnBlacklist() ||
-                                 $userObject->isRemovedSelf() )
-                            {
-                                $userIsBlacklistedOrRemoved = true;
-                            }
-
-                            // only user which are not blacklisted or not self removed
-                            // can get a new subscription
-                            if ( $userIsBlacklistedOrRemoved === true )
-                            {
-                                // 0
-                                $createNewUser = 0;
-                            }
-                            elseif ( $updateUserDataIfExists === true )
-                            {
-                                // updated
-                                $createNewUser = 2;
-
-                                if ( $csvImportHasPrio && $userObject->attribute( 'email' ) != $email )
-                                    $userObject->setAttribute( 'email', $email );
-
-                                if ( $salutation != 0 )
-                                    $userObject->setAttribute( 'salutation', $salutation );
-                                if ( $firstName != '' )
-                                    $userObject->setAttribute( 'first_name', $firstName );
-                                if ( $lastName != '' )
-                                    $userObject->setAttribute( 'last_name', $lastName );
-                                if ( $customDataText1 != '' )
-                                    $userObject->setAttribute( 'custom_data_text_1', $customDataText1 );
-                                if ( $customDataText2 != '' )
-                                    $userObject->setAttribute( 'custom_data_text_2', $customDataText2 );
-                                if ( $customDataText3 != '' )
-                                    $userObject->setAttribute( 'custom_data_text_3', $customDataText3 );
-                                if ( $customDataText4 != '' )
-                                    $userObject->setAttribute( 'custom_data_text_4', $customDataText4 );
-
-                                $userObject->setAttribute( 'status', \CjwNewsletterUser::STATUS_CONFIRMED );
-                                $userObject->setAttribute( 'import_id', $importId );
-                                
-                                // set new remote_id
-                                if ( $remote_id !== false )
-                                    $userObject->setAttribute( 'remote_id', $remote_id );
-                                else
-                                    $userObject->setAttribute( 'remote_id', 'cjwnl:csvimport:'. \CjwNewsletterUtils::generateUniqueMd5Hash( $userObject->attribute( 'id' ) ) );
-                                
-                                $userObject->store();
-
-                                $newUserStatus = $userObject->attribute('status');
-                            }
-                        }
-                        // create new object
-                        else
-                        {
-                            $createNewUser = 1;
-                            $userObject = \CjwNewsletterUser::createUpdateNewsletterUser( $email,
-                                                                     $salutation,
-                                                                     $firstName,
-                                                                     $lastName,
-                                                                     $eZUserId,
-                                                                     \CjwNewsletterUser::STATUS_CONFIRMED,
-                                                                    'default',
-                                                                     $customDataText1,
-                                                                     $customDataText2,
-                                                                     $customDataText3,
-                                                                     $customDataText4 );
-                            $userObject->setAttribute( 'import_id', $importId );
-                            
-                            // set new remote_id
-                            if ( $remote_id !== false )
-                                $userObject->setAttribute( 'remote_id', $remote_id );
-                            else
-                                $userObject->setAttribute( 'remote_id', 'cjwnl:csvimport:'. \CjwNewsletterUtils::generateUniqueMd5Hash( $userObject->attribute( 'id' ) ) );
-                            
-                            $userObject->store();
-                            $newUserStatus = $userObject->attribute('status');
-                        }
-                        $newsletterUserId = $userObject->attribute( 'id' );
-                        $outputFormatArray = $selectedOutputFormatArray;
-
-                        // only user which are not blacklisted can get a new subscription
-                        if ( $newsletterUserId != null &&
-                             $userIsBlacklistedOrRemoved === false )
-                        {
-                            $existingSubscription = \CjwNewsletterSubscription::fetchByListIdAndNewsletterUserId( $listContentObjectId, $newsletterUserId );
-                            // if subscription exists do nothing
-                            if ( is_object( $existingSubscription )  )
-                            {
-                                $existingSubscriptionStatus = $existingSubscription->attribute('status');
-
-                                // if user has removed a subscription by himself
-                                // don't activate it again
-                                if ( $existingSubscription->isRemovedSelf() ||
-                                     $existingSubscription->isBlacklisted() )
-                                {
-                                    // no
-                                    $createNewSubscription = 0;
-                                }
-                                else
-                                {
-                                    // 2 - update
-                                    $createNewSubscription = 2;
-                                    $subscriptionObject = $existingSubscription;
-
-                                    $subscriptionObject->setAttribute( 'status', \CjwNewsletterSubscription::STATUS_APPROVED );
-                                    $subscriptionObject->setAttribute( 'import_id', $importId );
-                                    // set new remote_id
-                                    $subscriptionObject->setAttribute( 'remote_id', 'cjwnl:csvimport:'. \CjwNewsletterUtils::generateUniqueMd5Hash( $newsletterUserId . $importId ) );
-                                    $subscriptionObject->store();
-                                }
-                            }
-                            // create new subscription
-                            else
-                            {
-                                $createNewSubscription = 1;
-                                $newListSubscription =  \CjwNewsletterSubscription::create(
-                                                         $listContentObjectId,
-                                                         $newsletterUserId,
-                                                         $outputFormatArray,
-                                                         \CjwNewsletterSubscription::STATUS_APPROVED );
-                                $newListSubscription->setAttribute( 'import_id', $importId );
-                                // set new remote_id
-                                $newListSubscription->setAttribute( 'remote_id', 'cjwnl:csvimport:'. \CjwNewsletterUtils::generateUniqueMd5Hash( $newsletterUserId . $importId ) );
-                                $newListSubscription->store();
-                                $subscriptionObject = $newListSubscription;
-                                $newSubscriptionStatus = $subscriptionObject->attribute( 'status' );
-                            }
-                       }
-                    }
-                    $listSubscriptionArray[ $rowId ] = array( 'subscription_object'  => $subscriptionObject,
-                                                              'email_ok'             => $emailOk,
-                                                              'user_created'         => $createNewUser,
-                                                              'newsletter_user_id'   => $newsletterUserId,
-                                                              'subscription_created' => $createNewSubscription,
-                                                              'user_status_old'      => $existingUserStatus,
-                                                              'user_status_new'      => $newUserStatus,
-                                                              'subscription_status_old' => $existingSubscriptionStatus,
-                                                              'subscription_status_new'  => $newSubscriptionStatus
-                                                              //'user_object' => $userObject
-                    );
-
+                    $arguments[] = '--first-row-label';
                 }
-                // imported timestamp + set count for imported users + subscriptions
-                $importObject->setImported();
-
-                \CjwNewsletterLog::writeNotice(
-                                                    'subscription_list_csvimport',
-                                                    'import',
-                                                    'end',
-                                                     array( 'import_id' => $importObject->attribute( 'id' ),
-                                                            'current_user' => \eZUser::currentUserID() ) );
-
-
-                // store result to File
-                storeImportResultToFile( $importId, $listSubscriptionArray );
+                if ( trim( (string)$note ) !== '' )
+                {
+                    $importObject->setAttribute( 'note', $note );
+                    $importObject->store();
+                }
+                $jobError = '';
+                // [NewsletterCsvImportSettings] ImportInBackground=disabled runs the import inside this request
+                $inBackground = !$cjwNewsletterIni->hasVariable( 'NewsletterCsvImportSettings', 'ImportInBackground' )
+                                || $cjwNewsletterIni->variable( 'NewsletterCsvImportSettings', 'ImportInBackground' ) != 'disabled';
+                $jobId = $inBackground ? \CjwNewsletterJob::start( 'import', $arguments, $jobError ) : false;
+                if ( !$jobId )
+                {
+                    // no background run possible here: do the work now
+                    $jobId = '';
+                    \CjwNewsletterImport::runCsvImport( $importObject, $csvDataArray, $listContentObjectId, $selectedOutputFormatArray, $csvImportHasPrio );
+                    $listSubscriptionArray = \CjwNewsletterImport::readResult( $importId );
+                    $listSubscriptionArray = is_array( $listSubscriptionArray ) ? $listSubscriptionArray : array();
+                }
             }
         //}
 
@@ -585,6 +299,8 @@ class SubscriptionListCsvimport extends \Exponential\Runnable\ModuleView
         $tpl->setVariable( 'view_parameters', $viewParameters );
         $tpl->setVariable( 'list_node', $listNode );
         $tpl->setVariable( 'import_id', $importId );
+        $tpl->setVariable( 'notices', \CjwNewsletterUI::takeNotices() );
+        $tpl->setVariable( 'job_id', isset( $jobId ) ? $jobId : '' );
         $tpl->setVariable( 'import_object', $importObject );
         $tpl->setVariable( 'selected_output_format_array', $selectedOutputFormatArray );
         $tpl->setVariable( 'csv_data_array', $csvDataArray );

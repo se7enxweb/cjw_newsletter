@@ -18,7 +18,7 @@
         {'You are registered for our newsletter.'|i18n( 'cjw_newsletter/subscribe_success' )}
     </p>
 
-    <p><a href="{$back_url_input}">{'back'|i18n( 'cjw_newsletter/subscribe_success' )}</a></p>
+    <p><a href="{$back_url_input|wash}">{'back'|i18n( 'cjw_newsletter/subscribe_success' )}</a></p>
 
     </div></div></div>
     <div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>

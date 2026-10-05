@@ -17,7 +17,7 @@ $back_url_input
        {'If you are a valid newsletter user, an e-mail has been sent to you with all information required!'|i18n( 'cjw_newsletter/subscribe_infomail_success' )}
     </p>
 
-    <p><a href="{$back_url_input}">{'back'|i18n( 'cjw_newsletter/subscribe_infomail_success' )}</a></p>
+    <p><a href="{$back_url_input|wash}">{'back'|i18n( 'cjw_newsletter/subscribe_infomail_success' )}</a></p>
 
 
     </div></div></div>

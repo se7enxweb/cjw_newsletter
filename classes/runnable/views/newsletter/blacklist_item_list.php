@@ -40,38 +40,32 @@ class BlacklistItemList extends \Exponential\Runnable\ModuleView
         $http = \eZHTTPTool::instance();
         $tpl = templateInit();
 
-        $http = \eZHTTPTool::instance();
-        $db = \eZDB::instance();
-
-        $viewParameters = array( 'offset' => 0,
-                                 'namefilter' => '' );
-
-        $userParameters = $Params['UserParameters'];
-        $viewParameters = array_merge( $viewParameters, $userParameters );
-
-        $limit = 10;
-        $limitArray = array( 10, 10, 25, 50 );
-        $limitArrayKey = \eZPreferences::value( 'admin_blacklist_item_list_limit' );
-
-        // get user limit preference
-        if ( isset( $limitArray[ $limitArrayKey ] ) )
+        $vp = \CjwNewsletterUI::listParameters( $Params, array( 'created', 'email', 'id' ), 25 );
+        $user = isset( $Params['UserParameters'] ) && is_array( $Params['UserParameters'] ) ? $Params['UserParameters'] : array();
+        if ( !isset( $user['order'] ) )
         {
-            $limit =  $limitArray[ $limitArrayKey ];
+            $vp['order'] = 'desc';
+        }
+        $vp['limit'] = isset( $user['limit'] ) && in_array( (int)$user['limit'], array( 10, 25, 50, 100 ) ) ? (int)$user['limit'] : 25;
+
+        if ( $http->hasPostVariable( 'FilterButton' ) )
+        {
+            $vp['q'] = mb_substr( trim( (string)$http->postVariable( 'Filter' ) ), 0, 100 );
+            return $this->viewResult( null, $module->redirectTo( \CjwNewsletterUI::listURL( 'blacklist_item_list', $vp, array( 'offset' => 0 ) ) ) );
         }
 
-        $blacklistItemList = \CjwNewsletterBlacklistItem::fetchAllBlacklistItems( $limit, $viewParameters[ 'offset' ] );
-        $blacklistItemListCount = \CjwNewsletterBlacklistItem::fetchAllBlacklistItemsCount( );
+        $total = 0;
+        $blacklistItemList = \CjwNewsletterBlacklistItem::fetchPage( $vp['q'], $vp['sort'], $vp['order'], $vp['limit'], $vp['offset'], $total );
 
-        $tpl->setVariable( 'view_parameters', $viewParameters );
-
+        $tpl->setVariable( 'view_parameters', array( 'offset' => $vp['offset'], 'q' => rawurlencode( $vp['q'] ), 'sort' => $vp['sort'], 'order' => $vp['order'] ) );
         $tpl->setVariable( 'blacklist_item_list', $blacklistItemList );
-        $tpl->setVariable( 'blacklist_item_list_count', $blacklistItemListCount );
-
-        $tpl->setVariable( 'limit', $limit );
-
+        $tpl->setVariable( 'blacklist_item_list_count', $total );
+        $tpl->setVariable( 'all_count', \CjwNewsletterBlacklistItem::fetchAllBlacklistItemsCount() );
+        $tpl->setVariable( 'limit', $vp['limit'] );
+        $tpl->setVariable( 'vp', $vp );
+        $tpl->setVariable( 'notices', \CjwNewsletterUI::takeNotices() );
 
         $Result = array();
-
         $Result['content'] = $tpl->fetch( $templateFile );
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
                                          'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),

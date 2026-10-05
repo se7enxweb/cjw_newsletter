@@ -40,52 +40,40 @@ class MailboxItemList extends \Exponential\Runnable\ModuleView
         $http = \eZHTTPTool::instance();
         $tpl = templateInit();
 
-        if( $http->hasVariable( 'ConnectMailboxButton' ) )
+        // "Collect all mails" and "Parse mails" go on in the background (a mail server can take minutes) and show their progress here
+        foreach ( array( 'ConnectMailboxButton' => '--collect-only', 'BounceMailItemButton' => '--parse-only' ) as $button => $argument )
         {
-            $collectMailResult = \CjwNewsletterMailbox::collectMailsFromActiveMailboxes();
-            $tpl->setVariable( 'collect_mail_result', $collectMailResult );
+            if ( $http->hasPostVariable( $button ) )
+            {
+                $error = '';
+                $jobID = \CjwNewsletterJob::start( 'mailbox', array( $argument ), $error );
+                if ( !$jobID )
+                {
+                    \CjwNewsletterUI::notice( 'error', ezpI18n::tr( 'extension/cjw_newsletter', 'The run could not be started: %reason', null, array( '%reason' => $error ) ) );
+                    return $this->viewResult( null, $module->redirectToView( 'mailbox_item_list' ) );
+                }
+                return $this->viewResult( null, $module->redirectToView( 'mailbox_item_list', array(), array(), array( 'job' => $jobID ) ) );
+            }
         }
 
-        if( $http->hasVariable( 'BounceMailItemButton' ) )
-        {
-            $parseResultArray = \CjwNewsletterMailbox::parseActiveMailboxItems();
-            $tpl->setVariable( 'parse_result', $parseResultArray );
-        }
+        $userParameters = isset( $Params['UserParameters'] ) && is_array( $Params['UserParameters'] ) ? $Params['UserParameters'] : array();
+        $viewParameters = array_merge( array( 'offset' => 0, 'namefilter' => '' ), $userParameters );
+        $limit = isset( $userParameters['limit'] ) && in_array( (int)$userParameters['limit'], array( 10, 25, 50, 100 ) ) ? (int)$userParameters['limit'] : 25;
+        $viewParameters['offset'] = max( 0, (int)$viewParameters['offset'] );
 
-
-        $http = \eZHTTPTool::instance();
-        $db = \eZDB::instance();
-
-        $viewParameters = array( 'offset' => 0,
-                                 'namefilter' => '' );
-
-        $userParameters = $Params['UserParameters'];
-        $viewParameters = array_merge( $viewParameters, $userParameters );
-
-        $limit = 10;
-        $limitArray = array( 10, 10, 25, 50 );
-        $limitArrayKey = \eZPreferences::value( 'admin_mailbox_item_list_limit' );
-
-        // get user limit preference
-        if ( isset( $limitArray[ $limitArrayKey ] ) )
-        {
-            $limit =  $limitArray[ $limitArrayKey ];
-        }
-
-        $mailboxItemList = \CjwNewsletterMailboxItem::fetchAllMailboxItems( $limit, $viewParameters[ 'offset' ] );
+        // the newest mails first
+        $mailboxItemList = \CjwNewsletterMailboxItem::fetchAllMailboxItems( $limit, $viewParameters['offset'], array( 'id' => 'desc' ) );
         $mailboxItemListCount = \CjwNewsletterMailboxItem::fetchAllMailboxItemsCount( );
 
-
-        $tpl->setVariable( 'view_parameters', $viewParameters );
-
-        $tpl->setVariable( 'mailbox_item_list', $mailboxItemList );
+        $tpl->setVariable( 'view_parameters', array( 'offset' => $viewParameters['offset'], 'limit' => $limit ) );
+        $tpl->setVariable( 'mailbox_item_list', is_array( $mailboxItemList ) ? $mailboxItemList : array() );
         $tpl->setVariable( 'mailbox_item_list_count', $mailboxItemListCount );
-
         $tpl->setVariable( 'limit', $limit );
-
+        $tpl->setVariable( 'notices', \CjwNewsletterUI::takeNotices() );
+        $tpl->setVariable( 'job_id', isset( $userParameters['job'] ) && \CjwNewsletterJob::isID( $userParameters['job'] ) ? $userParameters['job'] : '' );
+        $tpl->setVariable( 'active_mailboxes', count( (array)\CjwNewsletterMailbox::fetchAllActiveMailboxes() ) );
 
         $Result = array();
-
         $Result['content'] = $tpl->fetch( $templateFile );
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
                                          'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),

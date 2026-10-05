@@ -230,7 +230,7 @@
                                         {'Data xml'|i18n( 'cjw_newsletter/user_view' )}
                                     </th>
                                     <td>
-                                        {$newsletter_user.data_xml}
+                                        {$newsletter_user.data_xml|wash}
                                     </td>
                                 </tr>
                                 <tr>
@@ -238,69 +238,63 @@
                                         {'Data text'|i18n( 'cjw_newsletter/user_view' )}
                                     </th>
                                     <td>
-                                        {$newsletter_user.data_text}
+                                        {$newsletter_user.data_text|wash}
                                     </td>
                                 </tr>
 
                                 {*
                                     Get CustomFieldMappingArray - exists a public name ?
                                 *}
-                                {def $mappingArray = array()}
-
-                                {if ezini_hasvariable( 'NewsletterUserSettings', 'CustomFieldMappingArray', 'cjw_newsletter.ini' )}
-                                    {set $mappingArray = ezini( 'NewsletterUserSettings', 'CustomFieldMappingArray', 'cjw_newsletter.ini' )}
-                                {/if}
-
+                                
                                 <tr>
                                     <th>
-                                        {if and( $mappingArray|contains( 'custom_data_text_1' ), ezini_hasvariable( 'CustomFieldMapping_custom_data_text_1', 'Name', 'cjw_newsletter.ini' ) )}
-                                            {ezini( 'CustomFieldMapping_custom_data_text_1', 'Name', 'cjw_newsletter.ini' )|i18n( 'cjw_newsletter/user_view' )}
+                                        {if is_set( $custom_field_names.custom_data_text_1 )}
+                                            {$custom_field_names.custom_data_text_1|i18n( 'cjw_newsletter/user_view' )|wash}
                                         {else}
                                             {'Custom Data text 1'|i18n( 'cjw_newsletter/user_view' )}
                                         {/if}
                                     </th>
                                     <td>
-                                        {$newsletter_user.custom_data_text_1}
+                                        {$newsletter_user.custom_data_text_1|wash}
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>
-                                        {if and( $mappingArray|contains( 'custom_data_text_2' ), ezini_hasvariable( 'CustomFieldMapping_custom_data_text_2', 'Name', 'cjw_newsletter.ini' ) )}
-                                            {ezini( 'CustomFieldMapping_custom_data_text_2', 'Name', 'cjw_newsletter.ini' )|i18n( 'cjw_newsletter/user_view' )}
+                                        {if is_set( $custom_field_names.custom_data_text_2 )}
+                                            {$custom_field_names.custom_data_text_2|i18n( 'cjw_newsletter/user_view' )|wash}
                                         {else}
                                             {'Custom Data text 2'|i18n( 'cjw_newsletter/user_view' )}
                                         {/if}
                                     </th>
                                     <td>
-                                        {$newsletter_user.custom_data_text_2}
+                                        {$newsletter_user.custom_data_text_2|wash}
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>
-                                        {if and( $mappingArray|contains( 'custom_data_text_3' ), ezini_hasvariable( 'CustomFieldMapping_custom_data_text_3', 'Name', 'cjw_newsletter.ini' ) )}
-                                            {ezini( 'CustomFieldMapping_custom_data_text_3', 'Name', 'cjw_newsletter.ini' )|i18n( 'cjw_newsletter/user_view' )}
+                                        {if is_set( $custom_field_names.custom_data_text_3 )}
+                                            {$custom_field_names.custom_data_text_3|i18n( 'cjw_newsletter/user_view' )|wash}
                                         {else}
                                             {'Custom Data text 3'|i18n( 'cjw_newsletter/user_view' )}
                                         {/if}
                                     </th>
                                     <td>
-                                        {$newsletter_user.custom_data_text_3}
+                                        {$newsletter_user.custom_data_text_3|wash}
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>
-                                        {if and( $mappingArray|contains( 'custom_data_text_4' ), ezini_hasvariable( 'CustomFieldMapping_custom_data_text_4', 'Name', 'cjw_newsletter.ini' ) )}
-                                            {ezini( 'CustomFieldMapping_custom_data_text_4', 'Name', 'cjw_newsletter.ini' )|i18n( 'cjw_newsletter/user_view' )}
+                                        {if is_set( $custom_field_names.custom_data_text_4 )}
+                                            {$custom_field_names.custom_data_text_4|i18n( 'cjw_newsletter/user_view' )|wash}
                                         {else}
                                             {'Custom Data text 4'|i18n( 'cjw_newsletter/user_view' )}
                                         {/if}
                                     </th>
                                     <td>
-                                        {$newsletter_user.custom_data_text_4}
+                                        {$newsletter_user.custom_data_text_4|wash}
                                     </td>
                                 </tr>
 
-                                {undef $mappingArray}
                             </table>
                         </div>
                     </div>

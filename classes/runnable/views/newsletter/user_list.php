@@ -39,59 +39,67 @@ class UserList extends \Exponential\Runnable\ModuleView
 
         $tpl  = templateInit();
         $http = \eZHTTPTool::instance();
-        $db   = \eZDB::instance();
 
-        $searchUserEmail = false;
-        $offset          = 0;
-        $limit           = 10;
+        // the parameters of the list: (q) text, (status) group, (list) list object id, (sort), (order), (offset), (limit)
+        $vp = \CjwNewsletterUI::listParameters( $Params, array( 'email', 'name', 'status', 'created', 'id' ), 25 );
+        $user = isset( $Params['UserParameters'] ) && is_array( $Params['UserParameters'] ) ? $Params['UserParameters'] : array();
+        $groups = array( 'confirmed' => array( \CjwNewsletterUser::STATUS_CONFIRMED ),
+                         'pending' => array( \CjwNewsletterUser::STATUS_PENDING, \CjwNewsletterUser::STATUS_PENDING_EZ_USER_REGISTER ),
+                         'removed' => array( \CjwNewsletterUser::STATUS_REMOVED_SELF, \CjwNewsletterUser::STATUS_REMOVED_ADMIN ),
+                         'bounced' => array( \CjwNewsletterUser::STATUS_BOUNCED_SOFT, \CjwNewsletterUser::STATUS_BOUNCED_HARD ),
+                         'blacklisted' => array( \CjwNewsletterUser::STATUS_BLACKLISTED ) );
+        $vp['status'] = isset( $user['status'] ) && isset( $groups[$user['status']] ) ? $user['status'] : '';
+        $vp['list'] = isset( $user['list'] ) ? (int)$user['list'] : 0;
+        $vp['limit'] = isset( $user['limit'] ) && in_array( (int)$user['limit'], array( 10, 25, 50, 100 ) ) ? (int)$user['limit'] : 25;
 
-        $filterArray = array();
-        //
-        // filter examples
-        //
-        //$filterArray[] = array( 'cjwnl_user.email' => array( 'OR', array( 'like', '%@%' ), array( 'like', '%abc@%' ) ) );
-        //$filterArray[] = array( 'cjwnl_user.email' => array( 'OR', array( 'AND', 'woldt', 'acd'  ), array( 'like', '%abc@%' ) ) );
-        //$filterArray[] = array( 'cjwnl_user.last_name' => array( array( 'woldt', 'acd' ) ) );
-        //$filterArray[] = array( 'cjwnl_user.last_name' => array( 'AND', 'woldt', 'acd'  ) );
-        //$filterArray[] = array( 'cjwnl_subscription.list_contentobject_id' => array(  array( 132 , 109 ) ) );
-        //$filterArray[] = array( 'cjwnl_subscription.status' => CjwNewsletterSubscription::STATUS_APPROVED );
-        //$filterArray[] = array( 'cjwnl_user.email' =>  array( 'like', '%@%.de' ) );
-
-        // get wanted user email and filter by itself
-        if( $http->hasVariable( 'SearchUserEmail' ) )
+        $url = function ( $override = array() ) use ( $vp )
         {
-            // the filter escapes the value for SQL; the template washes it for HTML
-            $searchUserEmail = trim( (string)$http->variable( 'SearchUserEmail' ) );
-            if ( $searchUserEmail !== '' )
+            $vp2 = array_merge( $vp, $override );
+            $path = 'newsletter/user_list';
+            foreach ( array( 'offset' => 0, 'limit' => 25 ) as $key => $default )
             {
-                $filterArray[]   = array( 'cjwnl_user.email' =>  array( 'like', '%' . $searchUserEmail . '%' ) );
+                if ( $vp2[$key] != $default ) { $path .= '/(' . $key . ')/' . (int)$vp2[$key]; }
             }
+            if ( $vp2['q'] !== '' ) { $path .= '/(q)/' . rawurlencode( $vp2['q'] ); }
+            if ( $vp2['status'] !== '' ) { $path .= '/(status)/' . $vp2['status']; }
+            if ( $vp2['list'] ) { $path .= '/(list)/' . (int)$vp2['list']; }
+            return $path . '/(sort)/' . $vp2['sort'] . '/(order)/' . $vp2['order'];
+        };
+
+        // a search from the form (and the old GET variable) becomes a URL, so that the page can be bookmarked and paged
+        if ( $http->hasVariable( 'SearchUserEmail' ) || $http->hasPostVariable( 'SubmitUserSearch' ) )
+        {
+            $status = $http->hasVariable( 'StatusFilter' ) ? (string)$http->variable( 'StatusFilter' ) : '';
+            return $this->viewResult( null, $module->redirectTo( $url( array( 'offset' => 0,
+                'q' => mb_substr( trim( (string)$http->variable( 'SearchUserEmail' ) ), 0, 100 ),
+                'status' => isset( $groups[$status] ) ? $status : '',
+                'list' => $http->hasVariable( 'ListFilter' ) ? (int)$http->variable( 'ListFilter' ) : 0 ) ) ) );
         }
 
-        // AND - all filter should match
-        // OR - 1 one the filter should be match
-        // AND-NOT - none of the filter should be matched
+        $total = 0;
+        $userList = \CjwNewsletterUser::fetchUserPage( $vp['q'], $vp['status'] !== '' ? $groups[$vp['status']] : array(), $vp['list'],
+                                                       $vp['sort'], $vp['order'], $vp['limit'], $vp['offset'], $total );
+        $summary = \CjwNewsletterDashboard::summary();
 
-        $userListSearch = \CjwNewsletterUser::fetchUserListByFilter( $filterArray,
-                                                                    $limit,
-                                                                    $offset );
-
-        $tpl->setVariable( 'user_list', $userListSearch );
-        $tpl->setVariable( 'user_list_count', count( $userListSearch ) );
-
-        $viewParameters = array( 'offset'     => 0,
-                                 'namefilter' => '' );
-
-        $searchParameters = array( 'search_user_email' => $searchUserEmail );
-
-        $userParameters = $Params['UserParameters'];
-        $viewParameters = array_merge( $viewParameters, $userParameters );
-        $viewParameters = array_merge( $viewParameters, $searchParameters );
-
-        $tpl->setVariable( 'view_parameters', $viewParameters );
+        $tpl->setVariable( 'user_list', $userList );
+        $tpl->setVariable( 'user_list_count', $total );
+        $tpl->setVariable( 'all_count', $summary['users']['total'] );
+        $tpl->setVariable( 'lists', $summary['lists'] );
+        $tpl->setVariable( 'vp', $vp );
+        $tpl->setVariable( 'urls', array( 'base' => $url( array( 'offset' => 0 ) ),
+                                          'sort_email' => $url( array( 'sort' => 'email', 'order' => $vp['sort'] == 'email' && $vp['order'] == 'asc' ? 'desc' : 'asc', 'offset' => 0 ) ),
+                                          'sort_name' => $url( array( 'sort' => 'name', 'order' => $vp['sort'] == 'name' && $vp['order'] == 'asc' ? 'desc' : 'asc', 'offset' => 0 ) ),
+                                          'sort_status' => $url( array( 'sort' => 'status', 'order' => $vp['sort'] == 'status' && $vp['order'] == 'asc' ? 'desc' : 'asc', 'offset' => 0 ) ),
+                                          'sort_created' => $url( array( 'sort' => 'created', 'order' => $vp['sort'] == 'created' && $vp['order'] == 'asc' ? 'desc' : 'asc', 'offset' => 0 ) ),
+                                          'limit_10' => $url( array( 'limit' => 10, 'offset' => 0 ) ), 'limit_25' => $url( array( 'limit' => 25, 'offset' => 0 ) ),
+                                          'limit_50' => $url( array( 'limit' => 50, 'offset' => 0 ) ), 'limit_100' => $url( array( 'limit' => 100, 'offset' => 0 ) ) ) );
+        // the navigator builds its links from the view parameters
+        $tpl->setVariable( 'view_parameters', array( 'offset' => $vp['offset'], 'limit' => $vp['limit'], 'q' => rawurlencode( $vp['q'] ),
+                                                     'status' => $vp['status'], 'list' => $vp['list'], 'sort' => $vp['sort'], 'order' => $vp['order'] ) );
+        $tpl->setVariable( 'notices', \CjwNewsletterUI::takeNotices() );
+        $tpl->setVariable( 'search_user_email', $vp['q'] );
 
         $Result = array();
-
         $Result['content'] = $tpl->fetch( $templateFile );
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
                                          'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),

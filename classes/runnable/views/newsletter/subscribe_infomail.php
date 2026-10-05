@@ -53,7 +53,8 @@ class SubscribeInfomail extends \Exponential\Runnable\ModuleView
 
                 if ( $module->hasActionParameter( 'BackUrl' ) )
                 {
-                    $backUrl = $module->actionParameter( 'BackUrl' );
+                    // a path of this site: the value comes from the form and ends in a link
+                $backUrl = \CjwNewsletterUtils::localRedirectPath( $module->actionParameter( 'BackUrl' ), '/' );
                 }
 
                 // Wenn email ok

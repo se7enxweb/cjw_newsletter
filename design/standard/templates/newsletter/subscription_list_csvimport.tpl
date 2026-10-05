@@ -1,4 +1,5 @@
 {* Newsletter - subscription_list_csvimport *}
+{ezcss_require( 'newsletter_ui.css' )}
 
 {*
 newsletter/import_list.tpl
@@ -69,6 +70,8 @@ list all blacklist items
             <div class="box-mr">
                 <div class="box-content">
                     <div class="context-attributes">
+                        {include uri='design:parts/newsletter/notices.tpl' notices=$notices}
+                        {include uri='design:parts/newsletter/job.tpl' job_id=$job_id}
                         <div class="block float-break"></div>
 
                         <div class="block">
@@ -84,7 +87,7 @@ list all blacklist items
                                     </label>
 
                                     {if $import_object.is_imported}
-                                        <p>{'Import done'|i18n( 'cjw_newsletter/subscription_list_csvimport' )} {$import_object.created|l10n( shortdatetime )|wash}</p>
+                                        <p>{'Import done'|i18n( 'cjw_newsletter/subscription_list_csvimport' )} {$import_object.imported|l10n( shortdatetime )|wash}</p>
                                     {/if}
                                 {/if}
 
@@ -123,6 +126,7 @@ list all blacklist items
 
                         {set $csv_header_row = $csv_header_row|trim( $csv_delimiter )}
 
+<p class="nl-hint">{'The expected format of the file, with example rows:'|i18n( 'extension/cjw_newsletter' )}</p>
 <pre style="overflow:auto;">{$csv_header_row}
 
 {for 1 to 3 as $counter}
@@ -462,3 +466,4 @@ list all blacklist items
 </form>
 
 </div>
+{include uri='design:parts/newsletter/script.tpl'}

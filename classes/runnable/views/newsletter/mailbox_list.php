@@ -68,6 +68,7 @@ class MailboxList extends \Exponential\Runnable\ModuleView
 
         $tpl->setVariable( 'mailbox_list', $listMailboxes );
         $tpl->setVariable( 'mailbox_list_count', $listMailboxesCount );
+        $tpl->setVariable( 'notices', \CjwNewsletterUI::takeNotices() );
 
         $Result = array();
 

@@ -71,7 +71,8 @@ class Subscribe extends \Exponential\Runnable\ModuleView
             $backUrl = '/';
             if ( $module->hasActionParameter( 'BackUrl' ) )
             {
-                $backUrl = $module->actionParameter( 'BackUrl' );
+                // a path of this site: the value comes from the form and ends in a link
+                $backUrl = \CjwNewsletterUtils::localRedirectPath( $module->actionParameter( 'BackUrl' ), '/' );
             }
 
             $postedEmail = $http->hasPostVariable( 'Subscription_Email' ) ? trim( (string)$http->postVariable( 'Subscription_Email' ) ) : '';

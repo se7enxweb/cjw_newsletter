@@ -1,101 +1,37 @@
-{* Add a new blacklist item*}
+{*  newsletter/blacklist_item_add.tpl
 
-{def $mailbox_id = 0}
-
-{if is_set( $mailbox.id )}
-    {set $mailbox_id = $mailbox.id }
-{/if}
-
-<div class="newsletter blacklist_item_add">
-
-    {if $message|ne('')}
-    <div class="message-warning">
-        <h2>{$message|wash}</h2>
+    put an email address on the blacklist
+*}
+{ezcss_require( 'newsletter_ui.css' )}
+<div class="newsletter newsletter-blacklist_item_add">
+<form action={'newsletter/blacklist_item_add'|ezurl} method="post">
+<div class="context-block nl">
+    <div class="box-header">
+        <h1 class="context-title">{'Add a new Blacklist item'|i18n( 'cjw_newsletter/blacklist_item_add' )}</h1>
+        <div class="header-mainline"></div>
     </div>
-    {/if}
+    <div class="box-content">
 
-
-    <form name="editform" id="editform" enctype="multipart/form-data" method="post" action={concat( '/newsletter/blacklist_item_add/', $mailbox_id )|ezurl}>
-    <div class="context-block">
-        {* DESIGN: Header START *}
-        <div class="box-header">
-            <div class="box-tc">
-                <div class="box-ml">
-                    <div class="box-mr">
-                        <div class="box-tl">
-                            <div class="box-tr">
-                                <h1 class="context-title">
-                                    {if is_set( $mailbox.email )}
-                                        {$mailbox.email|class_icon( normal, $mailbox.email )}&nbsp;{'Edit <%mailbox.email> '|i18n( 'cjw_newsletter/blacklist_item_add',, hash( '%mailbox.email', $mailbox.email ) )|wash}
-                                    {else}
-                                        {'Add a new Blacklist item '|i18n( 'cjw_newsletter/blacklist_item_add' )}
-                                    {/if}
-                                </h1>
-
-                                {* DESIGN: Mainline *}
-                                <div class="header-mainline"></div>
-
-                                {* DESIGN: Header END *}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        {if $errors|count}
+        <div class="message-error"><h2>{'Input did not validate'|i18n( 'cjw_newsletter/subscribe' )}</h2>
+            <ul>{foreach $errors as $error}<li>{$error|wash}</li>{/foreach}</ul>
         </div>
+        {/if}
 
-        {* DESIGN: Content START *}
-        <div class="box-ml">
-            <div class="box-mr">
-
-
-                <div class="box-content">
-    {if $is_blacklist_done|not}
-                    <div class="context-attributes">
-                        <label>{'Email'|i18n( 'cjw_newsletter/blacklist_item_add' )}</label>
-                        <input class="box" type="text" name="Email" value="{$blacklist_item.email}" />
-                        <label>{'Note'|i18n( 'cjw_newsletter/blacklist_item_add' )}</label>
-                        <textarea class="box" name="Note" cols="50" rows="10">{$blacklist_item.note|wash}</textarea>
-                    </div>
-    {else}
-                    <div class="context-attributes">
-                        <label>{'Email'|i18n( 'cjw_newsletter/blacklist_item_add' )}</label>
-                        {$blacklist_item.email|wash}
-                        <label>{'Note'|i18n( 'cjw_newsletter/blacklist_item_add' )}</label>
-                        <p>{$blacklist_item.note|wash}</p>
-                    </div>
-    {/if}
-                    {* DESIGN: Content END *}
-                </div>
-
-            </div>
+        <div class="block {if is_set( $errors.email )}nl-field-error{/if}">
+            <label for="nl-blacklist-email">{'Email'|i18n( 'cjw_newsletter/blacklist_item_add' )}</label>
+            <input id="nl-blacklist-email" class="halfbox" type="text" name="Email" value="{$email|wash}" maxlength="150" />
         </div>
-        <div class="controlbar">
-            {* DESIGN: Control bar START *}
-            <div class="box-bc">
-                <div class="box-ml">
-                    <div class="box-mr">
-                        <div class="box-tc">
-                            <div class="box-bl">
-                                <div class="box-br">
-                                    <div class="block">
-                                    {if $is_blacklist_done|not}
-                                        <input class="button" type="submit" name="AddButton" value="{'Add to Blacklist'|i18n( 'cjw_newsletter/blacklist_item_add' )}" title="" />
-                                        <input class="button" type="submit" name="DiscardButton" value="{'Discard'|i18n( 'cjw_newsletter/blacklist_item_add' )}" />
-                                    {else}
-                                        <input class="button" type="submit" name="DiscardButton" value="{'Back'|i18n( 'cjw_newsletter/blacklist_item_add' )}" />
-                                    {/if}
-                                    </div>
-                                    {* DESIGN: Control bar END *}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="block {if is_set( $errors.note )}nl-field-error{/if}">
+            <label for="nl-blacklist-note">{'Note'|i18n( 'cjw_newsletter/blacklist_item_add' )}</label>
+            <textarea id="nl-blacklist-note" class="box" name="Note" cols="60" rows="4">{$note|wash}</textarea>
         </div>
+        <p class="nl-hint">{'A newsletter user with this address is set to "blacklisted" and gets no more mail.'|i18n( 'extension/cjw_newsletter' )}</p>
     </div>
-    </form>
-
+    <div class="controlbar">
+        <input class="defaultbutton" type="submit" name="AddButton" value="{'Add to Blacklist'|i18n( 'cjw_newsletter/blacklist_item_add' )|wash}" />
+        <input class="button" type="submit" name="DiscardButton" value="{'Discard'|i18n( 'cjw_newsletter/blacklist_item_add' )|wash}" />
+    </div>
 </div>
-
-{*$blacklist_item|attribute(show)*}
+</form>
+</div>

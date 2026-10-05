@@ -20,6 +20,12 @@ $ViewList['index'] = array(
     'default_navigation_part' => 'eznewsletternavigationpart',
     'params' => array( ) );
 
+$ViewList['job'] = array(
+    'script' => 'job.php',
+    'functions' => array( 'index' ),
+    'default_navigation_part' => 'eznewsletternavigationpart',
+    'params' => array( 'JobID' ) );
+
 $ViewList['settings'] = array(
     'script' => 'settings.php',
     'functions' => array( 'settings' ),
@@ -44,7 +50,6 @@ $ViewList['mailbox_edit'] = array(
     'script' => 'mailbox_edit.php',
     'functions' => array( 'mailbox_edit' ),
     'default_navigation_part' => 'eznewsletternavigationpart',
-    'ui_context' => 'edit',
     'params' => array( 'MailboxId' )
     );
 
@@ -66,7 +71,6 @@ $ViewList['blacklist_item_add'] = array(
     'script' => 'blacklist_item_add.php',
     'functions' => array( 'blacklist_item' ),
     'default_navigation_part' => 'eznewsletternavigationpart',
-    'ui_context' => 'edit',
     'params' => array( )
     );
 
@@ -74,7 +78,6 @@ $ViewList['blacklist_item_remove'] = array(
     'script' => 'blacklist_item_remove.php',
     'functions' => array( 'blacklist_item' ),
     'default_navigation_part' => 'eznewsletternavigationpart',
-    'ui_context' => 'edit',
     'params' => array( )
 );
 

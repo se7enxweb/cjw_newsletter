@@ -54,6 +54,18 @@ class UserView extends \Exponential\Runnable\ModuleView
             $viewParameters = array_merge( $viewParameters, $Params['UserParameters'] );
         }
 
+        // the public names of the custom fields (cjw_newsletter.ini [NewsletterUserSettings] CustomFieldMappingArray and [CustomFieldMapping_<field>] Name)
+        $customFieldNames = array();
+        $ini = \eZINI::instance( 'cjw_newsletter.ini' );
+        $mapped = $ini->hasVariable( 'NewsletterUserSettings', 'CustomFieldMappingArray' ) ? (array)$ini->variable( 'NewsletterUserSettings', 'CustomFieldMappingArray' ) : array();
+        foreach ( array( 'custom_data_text_1', 'custom_data_text_2', 'custom_data_text_3', 'custom_data_text_4' ) as $field )
+        {
+            if ( in_array( $field, $mapped ) && $ini->hasVariable( 'CustomFieldMapping_' . $field, 'Name' ) )
+            {
+                $customFieldNames[$field] = $ini->variable( 'CustomFieldMapping_' . $field, 'Name' );
+            }
+        }
+        $tpl->setVariable( 'custom_field_names', $customFieldNames );
         $tpl->setVariable( 'view_parameters', $viewParameters );
 
         $tpl->setVariable( 'newsletter_user', $newsletterUserObject );
