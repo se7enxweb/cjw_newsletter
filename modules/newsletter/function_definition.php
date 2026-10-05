@@ -187,4 +187,17 @@ $FunctionList['edition_send_item_list_count'] = array( 'name' => 'edition_send_i
                                                              'required' => false )
                                                      )
                         );
+
+// ---- 4.2.0 N1 Deliverability: fetch functions
+// {fetch( 'newsletter', 'test_group_list', hash( 'list_contentobject_id', $id ) )} the test groups of a list and of every list
+$FunctionList['test_group_list'] = array( 'name' => 'test_group_list',
+                               'operation_types' => array( 'read' ),
+                               'call_method' => array( 'class' => 'CjwNewsletterDeliverabilityFetch',
+                                                       'method' => 'fetchTestGroupList' ),
+                               'parameter_type' => 'standard',
+                               'parameters' => array( array( 'name' => 'list_contentobject_id',
+                                                             'type' => 'integer',
+                                                             'default' => 0,
+                                                             'required' => false ) ) );
+// ---- end N1 fetch functions
 ?>
