@@ -5,18 +5,18 @@
 *}
 {if and( is_set( $summary.areas.CjwNewsletterStatisticsHooks ), is_set( $summary.areas.CjwNewsletterStatisticsHooks.weeks ) )}
 {ezcss_require( 'newsletter_statistics.css' )}
-{def $s = $summary.areas.CjwNewsletterStatisticsHooks
+{def $cjwnl_stat = $summary.areas.CjwNewsletterStatisticsHooks
      $i18n = 'cjw_newsletter/statistics'}
 <section class="nl-area nl-area-statistics">
     <h2>{'Statistics'|i18n( $i18n )}</h2>
-    {include uri='design:newsletter/statistics/summary.tpl' s=$s}
+    {include uri='design:newsletter/statistics/summary.tpl' s=$cjwnl_stat}
     <div class="nl-cards">
         <section class="nl-card nl-card-wide">
             <h3>{'Last tracked sends'|i18n( $i18n )}</h3>
-            {if $s.recent|count}
+            {if $cjwnl_stat.recent|count}
             <div class="nl-stat-scroll"><table class="list nl-table">
                 <tr><th>{'Edition'|i18n( $i18n )}</th><th class="nl-num">{'Sent'|i18n( $i18n )}</th><th class="nl-num">{'Opens'|i18n( $i18n )}</th><th class="nl-num">{'Clicks'|i18n( $i18n )}</th></tr>
-                {foreach $s.recent as $r sequence array( 'bglight', 'bgdark' ) as $seq}
+                {foreach $cjwnl_stat.recent as $r sequence array( 'bglight', 'bgdark' ) as $seq}
                 <tr class="{$seq}">
                     <td class="nl-wrap"><a href={concat( 'newsletter/report/', $r.id )|ezurl}>{if $r.edition.name}{$r.edition.name|wash}{else}#{$r.id}{/if}</a></td>
                     <td class="nl-num">{$r.sent}</td><td class="nl-num">{$r.opens}</td><td class="nl-num">{$r.clicks}</td>
@@ -33,9 +33,9 @@
         </section>
         <section class="nl-card">
             <h3>{'A/B subject tests'|i18n( $i18n )}</h3>
-            {if $s.ab_tests|count}
+            {if $cjwnl_stat.ab_tests|count}
             <ul class="nl-problems">
-                {foreach $s.ab_tests as $t}
+                {foreach $cjwnl_stat.ab_tests as $t}
                 <li><span class="nl-pill {cond( eq( $t.status_code, 1 ), 'is-warn', eq( $t.status_code, 2 ), 'is-ok', 'is-info' )}">{$t.status|i18n( $i18n )}</span>
                     <span><a href={concat( 'newsletter/ab_test/', $t.edition_send_id )|ezurl}>{if $t.edition.name}{$t.edition.name|wash}{else}#{$t.edition_send_id}{/if}</a>
                     {if and( eq( $t.status_code, 1 ), $t.decide_at )}<span class="nl-muted">{'winner at %time'|i18n( $i18n,, hash( '%time', $t.decide_at|l10n( 'shortdatetime' ) ) )|wash}</span>{/if}</span></li>
@@ -47,5 +47,5 @@
         </section>
     </div>
 </section>
-{undef $s $i18n}
+{undef $cjwnl_stat $i18n}
 {/if}
