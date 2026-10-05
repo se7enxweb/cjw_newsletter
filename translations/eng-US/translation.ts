@@ -6073,6 +6073,10 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
         <translation>The skin %skin is listed in AvailableSkinArray[] but has no templates.</translation>
     </message>
     <message>
+        <source>This language is not offered.</source>
+        <translation>This language is not offered.</translation>
+    </message>
+    <message>
         <source>No subscriber has the address %email.</source>
         <translation>No subscriber has the address %email.</translation>
     </message>
@@ -6107,10 +6111,6 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
     <message>
         <source>Skins</source>
         <translation>Skins</translation>
-    </message>
-    <message>
-        <source>This language is not offered.</source>
-        <translation>This language is not offered.</translation>
     </message>
     <message>
         <source>Newsletters</source>
@@ -6393,6 +6393,14 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
         <translation>There is no edition to show the skin with yet.</translation>
     </message>
     <message>
+        <source>Language of the newsletters</source>
+        <translation>Language of the newsletters</translation>
+    </message>
+    <message>
+        <source>The main language of each list</source>
+        <translation>The main language of each list</translation>
+    </message>
+    <message>
         <source>Skins, languages and interests</source>
         <translation>Skins, languages and interests</translation>
     </message>
@@ -6453,14 +6461,6 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
         <translation>Picked for you</translation>
     </message>
     <message>
-        <source>Language of the newsletters</source>
-        <translation>Language of the newsletters</translation>
-    </message>
-    <message>
-        <source>The main language of each list</source>
-        <translation>The main language of each list</translation>
-    </message>
-    <message>
         <source>An edition that has no translation in your language comes in the main language of its list.</source>
         <translation>An edition that has no translation in your language comes in the main language of its list.</translation>
     </message>
@@ -6493,6 +6493,10 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
         <translation>Formats and lists of your newsletters</translation>
     </message>
     <message>
+        <source>The newsletters you receive by e-mail, in which language, and what you are interested in. Whether you get newsletters at all is decided on your e-mail preferences page.</source>
+        <translation>The newsletters you receive by e-mail, in which language, and what you are interested in. Whether you get newsletters at all is decided on your e-mail preferences page.</translation>
+    </message>
+    <message>
         <source>Sign in to see your newsletters.</source>
         <translation>Sign in to see your newsletters.</translation>
     </message>
@@ -6515,10 +6519,6 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
     <message>
         <source>All your e-mail preferences</source>
         <translation>All your e-mail preferences</translation>
-    </message>
-    <message>
-        <source>The newsletters you receive by e-mail, in which language, and what you are interested in. Whether you get newsletters at all is decided on your e-mail preferences page.</source>
-        <translation>The newsletters you receive by e-mail, in which language, and what you are interested in. Whether you get newsletters at all is decided on your e-mail preferences page.</translation>
     </message>
     <message>
         <source>Yes</source>

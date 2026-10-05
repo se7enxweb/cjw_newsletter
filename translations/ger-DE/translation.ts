@@ -6596,6 +6596,10 @@ Wenn Sie diese Bitte nicht geschickt haben, beachten Sie diese Mail nicht: Es ä
         <translation>Das Layout %skin steht in AvailableSkinArray[], hat aber keine Templates.</translation>
     </message>
     <message>
+        <source>This language is not offered.</source>
+        <translation>Diese Sprache wird nicht angeboten.</translation>
+    </message>
+    <message>
         <source>No subscriber has the address %email.</source>
         <translation>Kein Abonnent hat die Adresse %email.</translation>
     </message>
@@ -6630,10 +6634,6 @@ Wenn Sie diese Bitte nicht geschickt haben, beachten Sie diese Mail nicht: Es ä
     <message>
         <source>Skins</source>
         <translation>Layouts</translation>
-    </message>
-    <message>
-        <source>This language is not offered.</source>
-        <translation>Diese Sprache wird nicht angeboten.</translation>
     </message>
     <message>
         <source>Newsletters</source>
@@ -6916,6 +6916,14 @@ Wenn Sie diese Bitte nicht geschickt haben, beachten Sie diese Mail nicht: Es ä
         <translation>Es gibt noch keine Ausgabe, mit der das Layout gezeigt werden kann.</translation>
     </message>
     <message>
+        <source>Language of the newsletters</source>
+        <translation>Sprache der Newsletter</translation>
+    </message>
+    <message>
+        <source>The main language of each list</source>
+        <translation>Die Hauptsprache der jeweiligen Liste</translation>
+    </message>
+    <message>
         <source>Skins, languages and interests</source>
         <translation>Layouts, Sprachen und Interessen</translation>
     </message>
@@ -6976,14 +6984,6 @@ Wenn Sie diese Bitte nicht geschickt haben, beachten Sie diese Mail nicht: Es ä
         <translation>Für Sie ausgewählt</translation>
     </message>
     <message>
-        <source>Language of the newsletters</source>
-        <translation>Sprache der Newsletter</translation>
-    </message>
-    <message>
-        <source>The main language of each list</source>
-        <translation>Die Hauptsprache der jeweiligen Liste</translation>
-    </message>
-    <message>
         <source>An edition that has no translation in your language comes in the main language of its list.</source>
         <translation>Eine Ausgabe ohne Übersetzung in Ihrer Sprache kommt in der Hauptsprache ihrer Liste.</translation>
     </message>
@@ -7016,6 +7016,10 @@ Wenn Sie diese Bitte nicht geschickt haben, beachten Sie diese Mail nicht: Es ä
         <translation>Formate und Listen Ihrer Newsletter</translation>
     </message>
     <message>
+        <source>The newsletters you receive by e-mail, in which language, and what you are interested in. Whether you get newsletters at all is decided on your e-mail preferences page.</source>
+        <translation>Die Newsletter, die Sie per E-Mail erhalten, in welcher Sprache und was Sie interessiert. Ob Sie überhaupt Newsletter bekommen, entscheiden Sie auf Ihrer E-Mail-Einstellungsseite.</translation>
+    </message>
+    <message>
         <source>Sign in to see your newsletters.</source>
         <translation>Melden Sie sich an, um Ihre Newsletter zu sehen.</translation>
     </message>
@@ -7038,10 +7042,6 @@ Wenn Sie diese Bitte nicht geschickt haben, beachten Sie diese Mail nicht: Es ä
     <message>
         <source>All your e-mail preferences</source>
         <translation>Alle Ihre E-Mail-Einstellungen</translation>
-    </message>
-    <message>
-        <source>The newsletters you receive by e-mail, in which language, and what you are interested in. Whether you get newsletters at all is decided on your e-mail preferences page.</source>
-        <translation>Die Newsletter, die Sie per E-Mail erhalten, in welcher Sprache und was Sie interessiert. Ob Sie überhaupt Newsletter bekommen, entscheiden Sie auf Ihrer E-Mail-Einstellungsseite.</translation>
     </message>
     <message>
         <source>Yes</source>

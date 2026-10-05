@@ -5275,6 +5275,10 @@ If you did not send this request, ignore this mail: nothing changes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>This language is not offered.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>No subscriber has the address %email.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5308,10 +5312,6 @@ If you did not send this request, ignore this mail: nothing changes.</source>
     </message>
     <message>
         <source>Skins</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This language is not offered.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5595,6 +5595,14 @@ If you did not send this request, ignore this mail: nothing changes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Language of the newsletters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The main language of each list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Skins, languages and interests</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5655,14 +5663,6 @@ If you did not send this request, ignore this mail: nothing changes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Language of the newsletters</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The main language of each list</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>An edition that has no translation in your language comes in the main language of its list.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5695,6 +5695,10 @@ If you did not send this request, ignore this mail: nothing changes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>The newsletters you receive by e-mail, in which language, and what you are interested in. Whether you get newsletters at all is decided on your e-mail preferences page.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Sign in to see your newsletters.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5716,10 +5720,6 @@ If you did not send this request, ignore this mail: nothing changes.</source>
     </message>
     <message>
         <source>All your e-mail preferences</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The newsletters you receive by e-mail, in which language, and what you are interested in. Whether you get newsletters at all is decided on your e-mail preferences page.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
