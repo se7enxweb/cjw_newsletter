@@ -16,6 +16,12 @@ Listeners[]=CjwNewsletterMailPreferences
 # Both are optional and off by default (the person opts in on the central preference page).
 
 # N1 Deliverability: the kernel bounce reader hands newsletter bounces and mail-in messages to the newsletter
+# Every message the bounce reader of the e-mail preferences reads (exp:mail:bounces, the cronjob part mailbounces) is
+# given to CjwNewsletterMailin after the kernel's own work: a bounce of a newsletter mail marks the item and the
+# newsletter user (a soft bounce is sent again), a mail to a mail-in address of a list starts a subscription with
+# double opt-in or an unsubscribe (cjw_newsletter.ini [MailInSettings]). Nothing is read while the reader is disabled.
+[BounceSettings]
+MessageListeners[]=CjwNewsletterMailin
 
 # N4 Statistics: consent to per-person open and click counting
 #[CategorySettings]
