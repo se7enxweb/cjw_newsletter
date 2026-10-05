@@ -1,4 +1,4 @@
-﻿CREATE SEQUENCE cjwnl_blacklist_item_s
+CREATE SEQUENCE cjwnl_blacklist_item_s
     START 1
     INCREMENT 1
     MAXVALUE 9223372036854775807
@@ -82,6 +82,8 @@ CREATE INDEX cjwnl_edition_contentobject_id ON cjwnl_edition USING btree (conten
 CREATE TABLE cjwnl_edition_send (
   id integer NOT NULL DEFAULT nextval(('cjwnl_edition_send_s'::text)::regclass),
   list_contentobject_id integer NOT NULL DEFAULT 0,
+  list_contentobject_version integer NOT NULL DEFAULT 0,
+  list_is_virtual smallint NOT NULL DEFAULT 0::smallint,
   edition_contentobject_id integer NOT NULL DEFAULT 0,
   edition_contentobject_version integer NOT NULL DEFAULT 0,
   created integer NOT NULL DEFAULT 0,
@@ -90,12 +92,15 @@ CREATE TABLE cjwnl_edition_send (
   output_format_array_string character varying(50) NOT NULL,
   creator_id integer NOT NULL DEFAULT 0,
   mailqueue_created integer NOT NULL DEFAULT 0,
+  mailqueue_process_scheduled integer DEFAULT NULL,
   mailqueue_process_started integer NOT NULL DEFAULT 0,
   mailqueue_process_finished integer NOT NULL DEFAULT 0,
   mailqueue_process_aborted integer NOT NULL DEFAULT 0,
   output_xml text NOT NULL,
   hash character varying(255) NOT NULL,
   email_sender character varying(255) NOT NULL,
+  email_reply_to character varying(255) NOT NULL DEFAULT ''::character varying,
+  email_return_path character varying(255) NOT NULL DEFAULT ''::character varying,
   email_sender_name character varying(255) NOT NULL,
   personalize_content smallint NOT NULL DEFAULT 0::smallint,
   CONSTRAINT cjwnl_edition_send_pkey PRIMARY KEY (id)
@@ -149,11 +154,15 @@ CREATE TABLE cjwnl_list (
   output_format_array_string character varying(255) NOT NULL,
   email_sender_name character varying(255) NOT NULL,
   email_sender character varying(255) NOT NULL,
+  email_reply_to character varying(255) NOT NULL DEFAULT ''::character varying,
+  email_return_path character varying(255) NOT NULL DEFAULT ''::character varying,
   email_receiver_test character varying(255) NOT NULL,
   auto_approve_registered_user smallint NOT NULL DEFAULT 0::smallint,
   skin_name character varying(255) NOT NULL DEFAULT 'default'::character varying,
   personalize_content smallint NOT NULL DEFAULT 0::smallint,
   user_data_fields text NOT NULL,
+  is_virtual smallint NOT NULL DEFAULT 0::smallint,
+  virtual_filter text NOT NULL DEFAULT ''::text,
   CONSTRAINT cjwnl_list_pkey PRIMARY KEY (contentobject_attribute_id, contentobject_attribute_version)
 );
 
@@ -248,6 +257,10 @@ CREATE TABLE cjwnl_user (
   import_id integer,
   bounce_count smallint DEFAULT 0::smallint,
   data_text text,
+  custom_data_text_1 character varying(255) NOT NULL DEFAULT ''::character varying,
+  custom_data_text_2 character varying(255) NOT NULL DEFAULT ''::character varying,
+  custom_data_text_3 character varying(255) NOT NULL DEFAULT ''::character varying,
+  custom_data_text_4 character varying(255) NOT NULL DEFAULT ''::character varying,
   CONSTRAINT cjwnl_user_pkey PRIMARY KEY (id)
 );
 
