@@ -381,53 +381,71 @@ class CjwNewsletterMailboxItem extends eZPersistentObject
         $this->setAttribute( 'email_send_date', (int)$this->convertEmailSendDateToTimestamp( $parsedResult[ 'email_send_date' ] ) );
 
         // if x-cjwnl-senditem hash was set in bounce mail than fetch some ez data
+        $sendItemObject = null;
+        $newsletterUser = null;
         if ( isset( $parsedResult[ 'x-cjwnl-senditem' ] ) )
         {
-            $sendItemHash = $parsedResult[ 'x-cjwnl-senditem' ];
-
-            // try to fetch edition send item object
-            $sendItemObject = CjwNewsletterEditionSendItem::fetchByHash( $sendItemHash, true );
-
-            if( is_object( $sendItemObject ) )
+            $sendItemObject = CjwNewsletterEditionSendItem::fetchByHash( $parsedResult[ 'x-cjwnl-senditem' ], true );
+            if ( is_object( $sendItemObject ) )
             {
-                $newsletterUserId   = $sendItemObject->attribute( 'newsletter_user_id' );
-                $editionSendId      = $sendItemObject->attribute( 'edition_send_id' );
-                $editionSendItemId  = $sendItemObject->attribute( 'id' );
-
-                $this->setAttribute( 'newsletter_user_id', $newsletterUserId );
-                $this->setAttribute( 'edition_send_id', $editionSendId );
-                $this->setAttribute( 'edition_send_item_id', $editionSendItemId );
-
-                if ( $this->isBounce() )
-                {
-                    $sendItemObject->setBounced();
-                    $newsletterUser = $sendItemObject->attribute( 'newsletter_user_object' );
-
-                    if( is_object( $newsletterUser ) )
-                    {
-                        // bounce nl user
-                        $isHardBounce = false;
-                        $newsletterUser->setBounced( $isHardBounce );
-                    }
-                }
+                $this->setAttribute( 'newsletter_user_id', $sendItemObject->attribute( 'newsletter_user_id' ) );
+                $this->setAttribute( 'edition_send_id', $sendItemObject->attribute( 'edition_send_id' ) );
+                $this->setAttribute( 'edition_send_item_id', $sendItemObject->attribute( 'id' ) );
+            }
+            else
+            {
+                $sendItemObject = null;
             }
         }
         // if only set 'x-cjwnl-user'
         elseif ( isset( $parsedResult[ 'x-cjwnl-user' ] ) )
         {
             $newsletterUser = CjwNewsletterUser::fetchByHash( $parsedResult[ 'x-cjwnl-user' ], true );
-
             if ( is_object( $newsletterUser ) )
             {
-                $newsletterUserId = $newsletterUser->attribute('id');
-                $this->setAttribute( 'newsletter_user_id', $newsletterUserId );
+                $this->setAttribute( 'newsletter_user_id', $newsletterUser->attribute( 'id' ) );
+            }
+            else
+            {
+                $newsletterUser = null;
+            }
+        }
 
-                if ( $this->isBounce() )
-                {
-                    // bounce nl user
-                    $isHardBounce = false;
-                    $newsletterUser->setBounced( $isHardBounce );
-                }
+        if ( class_exists( 'CjwNewsletterBounce' ) )
+        {
+            // 4.2.0: the kind of the bounce (the kernel's classifier, else the SMTP code); hard bounces and complaints
+            // go on the kernel suppression list, soft bounces are sent again (CjwNewsletterBounce)
+            $classification = CjwNewsletterBounce::classify( (string)$this->getRawMailMessageContent(), $parsedResult[ 'error_code' ] );
+            if ( $classification['kind'] !== CjwNewsletterBounce::NONE && !$this->isBounce() )
+            {
+                // a feedback loop report, or a status without an SMTP reply
+                $this->setAttribute( 'bounce_code', substr( $classification['detail'] !== '' ? $classification['detail'] : $classification['kind'], 0, 50 ) );
+            }
+            $parsedResult['bounce_kind'] = $classification['kind'];
+            if ( $classification['kind'] !== CjwNewsletterBounce::NONE && ( $sendItemObject || $newsletterUser ) )
+            {
+                $handled = CjwNewsletterBounce::handle( $classification, $sendItemObject, $newsletterUser );
+                $parsedResult['bounce_action'] = $handled['action'];
+            }
+            elseif ( $classification['kind'] === CjwNewsletterBounce::NONE && class_exists( 'CjwNewsletterMailin' ) )
+            {
+                // no bounce: perhaps a subscribe or unsubscribe mail to an address of a list
+                $mailin = CjwNewsletterMailin::handleRawMessage( (string)$this->getRawMailMessageContent(), (int)$this->attribute( 'mailbox_id' ) );
+                if ( is_array( $mailin ) )
+                    $parsedResult['mailin'] = $mailin['action'] . ':' . $mailin['status'];
+            }
+        }
+        elseif ( $this->isBounce() )
+        {
+            if ( $sendItemObject )
+            {
+                $sendItemObject->setBounced();
+                $newsletterUser = $sendItemObject->attribute( 'newsletter_user_object' );
+            }
+            if ( is_object( $newsletterUser ) )
+            {
+                // bounce nl user
+                $newsletterUser->setBounced( false );
             }
         }
 

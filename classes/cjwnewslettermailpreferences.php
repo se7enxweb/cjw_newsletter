@@ -244,6 +244,39 @@ class CjwNewsletterMailPreferences
     }
 
     /**
+     * A hard bounce or a complaint of a newsletter mail: the address goes on the suppression list with the reason
+     * "bounce" or "complaint", and the consent log records it (source system). The suppression listener of this
+     * class then puts the address on the newsletter blacklist, as for every other suppression.
+     *
+     * @param string $email
+     * @param string $reason bounce or complaint
+     * @param string $detail the status code or the feedback type
+     * @return bool the address is suppressed now (false: no e-mail preferences here, or no address)
+     */
+    public static function suppressForBounce( $email, $reason, $detail = '' )
+    {
+        $email = trim( (string)$email );
+        if ( !self::available() || $email === '' || !in_array( $reason, array( 'bounce', 'complaint' ), true ) )
+            return false;
+        try
+        {
+            if ( expMailSuppression::isSuppressed( $email ) )
+                return true;
+            $wording = $reason === 'bounce' ? 'Newsletter: hard bounce, status ' . $detail : 'Newsletter: complaint, feedback type ' . $detail;
+            expMailSuppression::add( $email, $reason, $wording, 0 );
+            $recipient = expMailRecipient::fromAddress( $email );
+            if ( $recipient !== null )
+                expConsentLog::record( $recipient, '', 'suppress', '', $reason, expConsentContext::system( $wording ) );
+            return true;
+        }
+        catch ( Throwable $e )
+        {
+            eZDebug::writeError( 'Newsletter bounce suppression: ' . $e->getMessage(), __METHOD__ );
+            return false;
+        }
+    }
+
+    /**
      * An address was taken off the newsletter blacklist: its suppression is lifted.
      *
      * @param string $email

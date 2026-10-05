@@ -157,23 +157,43 @@ class CjwNewsletterMail
         $sendResult = array();
         $this->setTransportMethodPreviewFromIni();
 
+        // 4.2.0: test mails are marked (subject prefix, X-Cjwnl-Test header) and, unless switched off, every
+        // address gets a mail of its own (CjwNewsletterTestSend)
+        $receivers = array( $emailReceiver );
+        $marked = class_exists( 'CjwNewsletterTestSend' );
+        if ( $marked )
+        {
+            $this->setExtraMailHeader( 'test', '1' );
+            if ( CjwNewsletterTestSend::oneMailPerAddress() )
+            {
+                $parsed = CjwNewsletterTestSend::parseAddresses( $emailReceiver );
+                if ( $parsed['valid'] )
+                    $receivers = $parsed['valid'];
+            }
+        }
+
         // send one mail for every version
         foreach ( $outputFormatTextArray as $outputFormat )
         {
-            $result = $this->sendEmail( $outputFormat['email_sender'],
-                                        $outputFormat['email_sender_name'],
-                                        $emailReceiver,
-                                        $emailReceiverName = 'Tester ',
-                                        $outputFormat['subject'],
-                                        $outputFormat['body'],
-                                        $isPreview = true,
-                                        'utf-8',
-                                        $outputFormat['email_reply_to'],
-                                        $outputFormat['email_return_path']
-                                         );
+            foreach ( $receivers as $index => $receiver )
+            {
+                $result = $this->sendEmail( $outputFormat['email_sender'],
+                                            $outputFormat['email_sender_name'],
+                                            $receiver,
+                                            $emailReceiverName = 'Tester ',
+                                            $marked ? CjwNewsletterTestSend::markSubject( $outputFormat['subject'] ) : $outputFormat['subject'],
+                                            $outputFormat['body'],
+                                            $isPreview = true,
+                                            'utf-8',
+                                            $outputFormat['email_reply_to'],
+                                            $outputFormat['email_return_path']
+                                             );
 
-            $sendResult[ $outputFormat['output_format'] ] = $result;
+                $sendResult[ $outputFormat['output_format'] . ( $index ? '-' . $index : '' ) ] = $result;
+            }
         }
+        if ( $marked )
+            $this->resetExtraMailHeaders();
         return $sendResult;
     }
 
@@ -367,26 +387,16 @@ class CjwNewsletterMail
             // An error occured while sending or receiving mail. RCPT TO failed with error: 450 4.1.2
             // <xxxr@domain.de>: Recipient address rejected: Domain not found
             // is string ' 450 ' included in emailResult
-            $searchString = ' 450 ';
+            // 4.2.0: the kind of the refusal (a 4xx reply is temporary, only a permanent failure of the address is a
+            // hard bounce); the queue runner retries or bounces the item (CjwNewsletterBounce::sendFailed())
             $addErrorMessage = '';
             $sendResultText = $sendResult instanceof Exception ? $sendResult->getMessage() : (string)$sendResult;
             $emailResult['send_error'] = $sendResultText;
-            if ( strpos( $sendResultText, $searchString ) !== false )
+            if ( class_exists( 'CjwNewsletterBounce' ) )
             {
-                // check if we found an email nl user for emailReceiver
-                $nlUserToBounce = CjwNewsletterUser::fetchByEmail( $emailReceiver );
-                if ( is_object( $nlUserToBounce ) )
-                {
-                    // hardbounce user
-                    // alle active element will be aborted, too
-                    $nlUserToBounce->setBounced( true );
-                    $emailResult[ 'nluser_id' ] = $nlUserToBounce->attribute( 'id' );
-                    $addErrorMessage = ' - HARD BOUNCE (450)';
-                }
-                else
-                {
-                    $addErrorMessage = ' - NL User for email not found';
-                }
+                $emailResult['bounce_kind'] = CjwNewsletterBounce::kindOfCode( $sendResultText );
+                if ( $emailResult['bounce_kind'] !== CjwNewsletterBounce::NONE )
+                    $addErrorMessage = ' - ' . strtoupper( $emailResult['bounce_kind'] ) . ' (' . CjwNewsletterBounce::statusOf( $sendResultText ) . ')';
             }
             CjwNewsletterLog::writeError( 'email send failed to ' . $emailReceiver . $addErrorMessage , 'CjwNewsletterMail', 'sendEmail', $emailResult );
 
