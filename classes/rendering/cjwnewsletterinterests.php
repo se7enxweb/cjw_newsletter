@@ -230,6 +230,36 @@ class CjwNewsletterInterests
     {
         return (int)CjwNewsletterUserInterest::fetchListCount( array( 'interest_id' => (int)$interestId ) );
     }
+
+    /**
+     * The interests the lists of a subscriber offer, with his picks (the admin user pages).
+     *
+     * @param int $newsletterUserId
+     * @return array hash( interests: hash( id, name, list_name, checked ), offered_ids: int[] )
+     */
+    static function choicesForUser( $newsletterUserId )
+    {
+        $out = array( 'interests' => array(), 'offered_ids' => array() );
+        $newsletterUserId = (int)$newsletterUserId;
+        if ( $newsletterUserId <= 0 )
+            return $out;
+        $picked = self::idsForUser( $newsletterUserId );
+        foreach ( (array)CjwNewsletterSubscription::fetchSubscriptionListByNewsletterUserId( $newsletterUserId ) as $subscription )
+        {
+            $listId = (int)$subscription->attribute( 'list_contentobject_id' );
+            $listName = CjwNewsletterPlaceholders::listName( $listId );
+            foreach ( self::forList( $listId ) as $interest )
+            {
+                $id = (int)$interest->attribute( 'id' );
+                if ( in_array( $id, $out['offered_ids'], true ) )
+                    continue;
+                $out['offered_ids'][] = $id;
+                $out['interests'][] = array( 'id' => $id, 'name' => (string)$interest->attribute( 'name' ), 'list_name' => $listName,
+                                             'checked' => in_array( $id, $picked, true ) );
+            }
+        }
+        return $out;
+    }
 }
 
 ?>

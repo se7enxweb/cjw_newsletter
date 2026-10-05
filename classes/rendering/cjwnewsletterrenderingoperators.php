@@ -145,6 +145,8 @@ class CjwNewsletterRenderingOperators
                 return CjwNewsletterPlaceholders::names();
             case 'condition_fields':
                 return CjwNewsletterConditions::fields();
+            case 'user_choices':
+                return CjwNewsletterInterests::choicesForUser( (int)$param );
             case 'plaintext_template':
                 return self::plainTextTemplate( (string)$param );
         }

@@ -238,7 +238,34 @@ class CjwNewsletterRenderingHooks
         return false;
     }
 
-    /** A removed subscriber takes his interests with him (CjwNewsletterUser removal, the kernel erasure). */
+    /**
+     * The admin user edit form (UserEditParts[] design:newsletter/rendering/user_edit_part.tpl): the language.
+     *
+     * @return string[] errors
+     */
+    static function userInput( $user, $http )
+    {
+        if ( !$http->hasPostVariable( 'CjwNewsletterRendering_UserPart' ) )
+            return array();
+        $language = $http->hasPostVariable( 'CjwNewsletterRendering_Language' ) ? trim( (string)$http->postVariable( 'CjwNewsletterRendering_Language' ) ) : '';
+        $known = CjwNewsletterRendering::contentLanguages();
+        if ( $language !== '' && !isset( $known[$language] ) )
+            return array( ezpI18n::tr( self::CONTEXT, 'This language is not offered.' ) );
+        $user->setAttribute( 'language', $language );
+        return array();
+    }
+
+    /** The interests of the user edit form, once the subscriber is stored (a new one has his id then). */
+    static function userStored( $user, $http )
+    {
+        if ( !$http->hasPostVariable( 'CjwNewsletterRendering_UserPart' ) || !is_object( $user ) || (int)$user->attribute( 'id' ) <= 0 )
+            return;
+        $choices = CjwNewsletterInterests::choicesForUser( $user->attribute( 'id' ) );
+        $wanted = $http->hasPostVariable( 'CjwNewsletterRendering_Interest' ) ? array_map( 'intval', (array)$http->postVariable( 'CjwNewsletterRendering_Interest' ) ) : array();
+        CjwNewsletterInterests::setForUser( $user->attribute( 'id' ), $wanted, $choices['offered_ids'] );
+    }
+
+    /** For callers that remove a subscriber: his interests go with him (the kernel erasure does it through the category handler). */
     static function userRemoved( $newsletterUserId )
     {
         CjwNewsletterInterests::removeForUser( $newsletterUserId );
