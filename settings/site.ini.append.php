@@ -22,4 +22,19 @@ TranslationExtensions[]=cjw_newsletter
 [TemplateSettings]
 ExtensionAutoloadPath[]=cjw_newsletter
 
+# N4 Statistics: the open pixel and the click redirect answer everybody (the mail client of a recipient has no
+# login and no session); they check their own signature and only redirect to the links stored for the sent edition.
+[RoleSettings]
+PolicyOmitList[]=newsletter/r
+PolicyOmitList[]=newsletter/o
+# end N4
+
+# N5 SMS: the endpoint an SMS provider calls (newsletter/sms_inbound) checks the provider's signature or secret
+# itself and refuses everything else; the code page (newsletter/sms_confirm) is reached only with the subscriber's
+# secret hash, like newsletter/configure. Neither needs a login or a session.
+[RoleSettings]
+PolicyOmitList[]=newsletter/sms_inbound
+PolicyOmitList[]=newsletter/sms_confirm
+# end N5
+
 */ ?>
