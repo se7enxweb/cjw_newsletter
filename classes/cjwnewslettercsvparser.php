@@ -15,8 +15,6 @@
  * @package cjw_newsletter
  */
 
-ini_set( 'auto_detect_line_endings', true );
-
 class CjwNewsletterCsvParser
 {
     /**
@@ -43,6 +41,25 @@ class CjwNewsletterCsvParser
 
         $this->CsvDataArray = array();
         $fp = is_readable( $csvFileName ) ? fopen( $csvFileName, 'r' ) : false;
+        // a file with old Mac line endings (a carriage return alone): auto_detect_line_endings did that, and it is deprecated since PHP 8.1
+        if ( $fp )
+        {
+            $head = fread( $fp, 1048576 );
+            rewind( $fp );
+            if ( preg_match( '/\r(?!\n)/', (string)$head ) )
+            {
+                $normalised = fopen( 'php://temp', 'r+' );
+                stream_copy_to_stream( $fp, $normalised );
+                fclose( $fp );
+                rewind( $normalised );
+                $fp = $normalised;
+                $text = preg_replace( '/\r\n?/', "\n", stream_get_contents( $fp ) );
+                rewind( $fp );
+                ftruncate( $fp, 0 );
+                fwrite( $fp, $text );
+                rewind( $fp );
+            }
+        }
         if ( !$fp )
         {
             return;
