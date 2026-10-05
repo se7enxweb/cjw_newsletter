@@ -1,0 +1,44 @@
+/* newsletter, area editorial (4.2.0): recurring sends, article pools, the picker and the approval. Builds on
+   newsletter_ui.css and its tokens (--nl-*, from the admin4 --a4-* tokens with fallbacks). */
+
+.nl-ed-next { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.3em; }
+.nl-ed-next li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2em 0.6em; }
+.nl-ed-next time { font-variant-numeric: tabular-nums; font-weight: 600; }
+.nl .nl-ed-wait { color: #b26a00; }
+
+.nl-ed-form { display: grid; grid-template-columns: minmax(10em, 14em) 1fr; gap: 0.8em 1.2em; align-items: start; margin: 0 0 1em 0; }
+.nl-ed-form > label, .nl-ed-form > .nl-ed-label { font-weight: bold; padding-top: 0.25em; }
+.nl-ed-form > div { min-width: 0; }
+.nl-ed-form select, .nl-ed-form input[type=text], .nl-ed-form input[type=number], .nl-ed-form input[type=date], .nl-ed-form textarea { max-width: 100%; }
+.nl-ed-form select[multiple] { min-width: 16em; min-height: 7em; }
+.nl-ed-choices { display: flex; flex-wrap: wrap; gap: 0.3em 1em; }
+.nl-ed-choices label { display: inline-flex; align-items: center; gap: 0.3em; font-weight: normal; }
+.nl-ed-fieldset { margin: 0 0 1em 0; padding: 0.8em 1em; border: 1px solid var(--nl-line); border-radius: 8px; }
+.nl-ed-fieldset legend { padding: 0 0.4em; font-weight: bold; }
+.nl-ed-field-error { color: #b3261e; font-size: 0.92em; margin: 0.2em 0 0 0; }
+
+.nl-ed-picks { margin: 0 0 1em 0; padding: 0; list-style: none; border: 1px solid var(--nl-line); border-radius: 8px; overflow: hidden; }
+.nl-ed-picks li { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4em 0.8em; padding: 0.45em 0.9em; border-top: 1px solid var(--nl-line); }
+.nl-ed-picks li:first-child { border-top: 0; }
+.nl-ed-picks .nl-ed-title { flex: 1 1 14em; min-width: 0; word-break: break-word; }
+.nl-ed-articles td.nl-ed-check { width: 2em; text-align: center; }
+.nl-ed-articles td.nl-ed-title { word-break: break-word; }
+
+.nl-ed-state { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5em 1em; margin: 0 0 1em 0; padding: 0.8em 1em; border: 1px solid var(--nl-line); border-radius: 8px; background: var(--nl-soft); }
+.nl-ed-history { margin: 0; padding: 0; list-style: none; }
+.nl-ed-history li { padding: 0.4em 0; border-top: 1px solid var(--nl-line); }
+.nl-ed-history li:first-child { border-top: 0; }
+.nl-ed-comment { margin: 0.2em 0 0 0; white-space: pre-wrap; word-break: break-word; color: var(--nl-muted); }
+.nl-ed-part { margin: 0.8em 0; padding: 0.7em 0.9em; border: 1px solid var(--nl-line); border-radius: 8px; }
+.nl-ed-part h3, .nl-ed-part h4 { margin: 0 0 0.4em 0; font-size: 1em; }
+.nl-ed-part p { margin: 0.2em 0; }
+
+@media (max-width: 640px) {
+    .nl-ed-form { grid-template-columns: 1fr; gap: 0.3em; }
+    .nl-ed-form > label, .nl-ed-form > .nl-ed-label { padding-top: 0.6em; }
+    .nl-table.nl-ed-responsive thead, .nl-table.nl-ed-responsive tr.nl-ed-head { display: none; }
+    .nl-table.nl-ed-responsive, .nl-table.nl-ed-responsive tbody, .nl-table.nl-ed-responsive tr, .nl-table.nl-ed-responsive td { display: block; width: auto; }
+    .nl-table.nl-ed-responsive tr { padding: 0.5em 0; border-top: 1px solid var(--nl-line); }
+    .nl-table.nl-ed-responsive td { border: 0; padding: 0.1em 0.4em; text-align: left !important; }
+    .nl-table.nl-ed-responsive td[data-label]::before { content: attr(data-label) ": "; font-weight: bold; color: var(--nl-muted); }
+}
