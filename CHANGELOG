@@ -1,5 +1,102 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.0
+=====
+
+Requires Exponential 6.0.15 or later (the e-mail preferences with the mail gate, the consent log, the suppression
+list, the bounce reader's MessageListeners, the category handlers' erased() and the category part hook). Upgrade from
+4.1.20: doc/upgrade-4.2.md. The guides of every area are listed in doc/README.md.
+
+Added
+
+- Deliverability (doc/deliverability.md)
+  - Hard bounces and complaints go on the suppression list of the e-mail preferences (reason bounce or complaint,
+    written to the consent log), which blocks every optional mail of the site; the kind of a returned message comes
+    from the kernel's bounce classifier, else from the SMTP code.
+  - Soft bounces and temporary refusals are sent again after a delay that doubles with each try, at most
+    SoftBounceMaxRetries times; a finished send is opened again for the retry.
+  - Rate limits per transport (per minute and per hour), batches and pauses between them, resumable sending, and a
+    pause per transport; the page "Rate limits and batches" (newsletter/throttle) and the dashboard show the state.
+  - Test groups for the test sends of an edition; test mails are marked (subject prefix, X-Cjwnl-Test) and each
+    address gets a mail of its own.
+  - Subscribe and unsubscribe by e-mail at the mail-in addresses of the lists (plus addressing too), read from the
+    kernel's bounce mailbox or a newsletter mail account: a subscribe mail starts the double opt-in; an unsubscribe mail
+    is honoured at once only when it proves the address.
+  - CSV import into the kernel's suppression list, with a check run.
+  - The command ext:cjw_newsletter:deliverability (status, suppression-import, pause, resume, read).
+- Editorial (doc/editorial.md)
+  - Recurring sends of a list on chosen weekdays, weekly or monthly in a time zone, sending a copy of a template
+    edition (filled from the article pool with what is new, skipped when nothing is) or the latest unsent edition;
+    optional conditions; a log of every run; the command ext:cjw_newsletter:schedule.
+  - Article pools per list with a global default (nodes, classes, sections, tags, states, age, order) and the article
+    picker of an edition.
+  - The optional approval of editions per list through the collaboration inbox: the send waits until the version is
+    approved; approvers from users and user groups (ApproverGroupIds default 12).
+- Rendering (doc/rendering.md)
+  - More placeholders ([[email]], [[organisation]], [[custom_1]]..[[custom_4]], [[list_name]], [[manage_url]] and
+    placeholders from the settings), all escaped in the HTML part.
+  - The newsletter condition: a custom tag of ezxmltext and an eztemplate of ezrichtext for parts only some subscribers
+    get (field, list, language, interest), decided the same way in the HTML and the text part.
+  - Interests (topics of a list or eztags) chosen on the e-mail preference page and the notification card, and the
+    block "articles for your interests" filled per subscriber from the article pool.
+  - One edition with translations: each subscriber gets his language, with the list's main language as the fallback;
+    the command ext:cjw_newsletter:translatable-fields makes the text fields of the newsletter classes translatable.
+  - The skins company, news and shop; the allowed skins per list and the skin per send; the skin preview.
+  - Plain text views of every field type and every ezxmltext tag, and ezrichtext as text and HTML.
+  - The preview of an edition as a chosen subscriber.
+  - The language and the interests of a subscriber on the admin user pages.
+- Statistics (doc/statistics.md)
+  - Open pixel and click redirect (signed, no open redirect, no session), counted per person only with the consent of
+    the new e-mail preference category "Newsletter statistics" (optional, off by default), as anonymous totals for
+    everybody else; tracking is off for the site and per list by default.
+  - The report of a send, the statistics on the dashboard with the trend, the article box on the admin preview of a
+    newsletter article, and the statistics CSV export (totals only).
+  - A/B subject tests: samples per variant, the winner by open rate (by clicks with anonymous totals only) after a
+    wait, the rest gets the winner's subject.
+  - Retention of the per-person rows (12 months by default), removed at once on withdrawal and erasure; the command
+    ext:cjw_newsletter:statistics.
+- SMS (doc/sms.md)
+  - Newsletters by SMS to confirmed mobile numbers, through a provider-neutral transport: a file transport, a generic
+    HTTP/JSON transport mapped in the settings, and a Twilio-style preset.
+  - The e-mail preference category "Newsletters by SMS" with the code double opt-in (hashed codes, limited in time,
+    attempts and requests), the STOP keyword through the inbound endpoint, the rate limit of the deliverability area,
+    and the SMS state on the dashboard and the notification card.
+- Import, export and migration (doc/importexport.md)
+  - The CSV import with a column mapping (guessed from the column names), a preview, a dry run and a consent source
+    written to the consent log; suppressed, blacklisted, opted-out and unsubscribed addresses are never imported again.
+  - The subscriber export of a list with filters and a choice of columns; formula cells are defused.
+  - The command ext:cjw_newsletter:import-eznewsletter: the lists, subscribers and subscriptions of the old eznewsletter
+    extension, with a dry run, a migration log and the old consent dates; the old tables are only read.
+- Extension points for the feature areas (cjw_newsletter.ini [ExtensionPointSettings]): the queue runner, the send and
+  test forms, the list attribute, the admin user pages, the subscribe form and the dashboard call the handlers and
+  include the template parts the areas register; userRemoved is called when a subscriber is removed.
+- A dashboard block per area on newsletter/index, and the newsletter card of the notification settings pages.
+- The schema of 4.2.0: 24 new tables and new columns of five 4.1 tables in one change for MySQL, PostgreSQL and SQLite
+  (doc/schema-4.2.md), with update/database/<engine>/4.2/dbupdate-4.1.20-to-4.2.0.sql.
+- doc/README.md, the index of the guides, and doc/upgrade-4.2.md.
+
+Updated
+
+- PostgreSQL: the sequences of the 4.1 tables are renamed from <table>_s to <table>_id_seq, the name the database
+  driver reads; inserts into those tables could not return their ids before.
+- The erasure of a person in the e-mail preferences removes the newsletter user with his subscriptions, interests,
+  language, mobile number, SMS codes and SMS, and his per-person statistics; the totals, the suppression entry and the
+  blacklist entry (without the user) stay.
+- Removing a subscriber removes his interests, SMS codes and SMS and per-person statistics with him;
+  ext:cjw_newsletter:repair also removes the interests that older removals left behind.
+- The approval items of the collaboration inbox show as waiting, approved or denied (inboxState() of the handler, read
+  by the inbox of Exponential 6.0.15).
+- A 450 reply of the mail server is no longer taken for a hard bounce.
+- The export previews show the newest subscriptions first.
+- English and German texts for every new page; French and Norwegian are marked unfinished.
+- A list or edition whose content object is gone (a stale cjwnl_list row) is skipped without a debug error; the
+  dashboard logged "Object not found" on every load for such a row.
+- The deprecated templateInit() and ezi18n() are replaced with eZTemplate::factory() and ezpI18n::tr() (191 calls).
+- The language choice on the e-mail preference page names each language in its own name ("Deutsch (Deutschland)").
+- The interests on the preference page and the newsletter card are a labelled group; long list names no longer squeeze
+  the dashboard's values; the statistics templates show their texts translated; the old admin design has its own
+  newsletter card on the notification settings.
+
 4.1.20
 ======
 
