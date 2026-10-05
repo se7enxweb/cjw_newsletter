@@ -4856,6 +4856,1170 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
         <source>Editorial</source>
         <translation>Editorial</translation>
     </message>
+    <message>
+        <source>approved</source>
+        <translation>approved</translation>
+    </message>
+    <message>
+        <source>rejected</source>
+        <translation>rejected</translation>
+    </message>
+    <message>
+        <source>replaced</source>
+        <translation>replaced</translation>
+    </message>
+    <message>
+        <source>waiting for approval</source>
+        <translation>waiting for approval</translation>
+    </message>
+    <message>
+        <source>Default pool (settings)</source>
+        <translation>Default pool (settings)</translation>
+    </message>
+    <message>
+        <source>Pool %id</source>
+        <translation>Pool %id</translation>
+    </message>
+    <message>
+        <source>auto-fill</source>
+        <translation>auto-fill</translation>
+    </message>
+    <message>
+        <source>interests</source>
+        <translation>interests</translation>
+    </message>
+    <message>
+        <source>editor</source>
+        <translation>editor</translation>
+    </message>
+    <message>
+        <source>Read more</source>
+        <translation>Read more</translation>
+    </message>
+    <message>
+        <source>This edition waits for its approval. It can be sent when it is approved.</source>
+        <translation>This edition waits for its approval. It can be sent when it is approved.</translation>
+    </message>
+    <message>
+        <source>This edition was rejected. Change it and ask for the approval again.</source>
+        <translation>This edition was rejected. Change it and ask for the approval again.</translation>
+    </message>
+    <message>
+        <source>The list needs an approval before an edition is sent. Ask for the approval first.</source>
+        <translation>The list needs an approval before an edition is sent. Ask for the approval first.</translation>
+    </message>
+    <message>
+        <source>The chosen article pool does not exist.</source>
+        <translation>The chosen article pool does not exist.</translation>
+    </message>
+    <message>
+        <source>There are active recurring sends, but [ScheduleSettings] Schedules is disabled: the cronjob does not run them.</source>
+        <translation>There are active recurring sends, but [ScheduleSettings] Schedules is disabled: the cronjob does not run them.</translation>
+    </message>
+    <message>
+        <source>%count runs of recurring sends failed in the last 7 days.</source>
+        <translation>%count runs of recurring sends failed in the last 7 days.</translation>
+    </message>
+    <message>
+        <source>&quot;%name&quot; has waited more than two days for its approval.</source>
+        <translation>&quot;%name&quot; has waited more than two days for its approval.</translation>
+    </message>
+    <message>
+        <source>active</source>
+        <translation>active</translation>
+    </message>
+    <message>
+        <source>paused</source>
+        <translation>paused</translation>
+    </message>
+    <message>
+        <source>removed</source>
+        <translation>removed</translation>
+    </message>
+    <message>
+        <source>Monthly on day %day at %time</source>
+        <translation>Monthly on day %day at %time</translation>
+    </message>
+    <message>
+        <source>Weekly on %day at %time</source>
+        <translation>Weekly on %day at %time</translation>
+    </message>
+    <message>
+        <source>Every day at %time</source>
+        <translation>Every day at %time</translation>
+    </message>
+    <message>
+        <source>On %days at %time</source>
+        <translation>On %days at %time</translation>
+    </message>
+    <message>
+        <source>Only when the pool has new articles</source>
+        <translation>Only when the pool has new articles</translation>
+    </message>
+    <message>
+        <source>Made by the recurring send %id.</source>
+        <translation>Made by the recurring send %id.</translation>
+    </message>
+    <message>
+        <source>Newsletter approval</source>
+        <translation>Newsletter approval</translation>
+    </message>
+    <message>
+        <source>Newsletter approval: %name</source>
+        <translation>Newsletter approval: %name</translation>
+    </message>
+    <message>
+        <source>Your comment was added.</source>
+        <translation>Your comment was added.</translation>
+    </message>
+    <message>
+        <source>The edition was approved. It can be sent now.</source>
+        <translation>The edition was approved. It can be sent now.</translation>
+    </message>
+    <message>
+        <source>The edition was rejected.</source>
+        <translation>The edition was rejected.</translation>
+    </message>
+    <message>
+        <source>You cannot decide this request: it was decided already, or you may not approve newsletters, or you asked for it yourself.</source>
+        <translation>You cannot decide this request: it was decided already, or you may not approve newsletters, or you asked for it yourself.</translation>
+    </message>
+    <message>
+        <source>The recurring send %id is paused.</source>
+        <translation>The recurring send %id is paused.</translation>
+    </message>
+    <message>
+        <source>The recurring send %id runs again; next run %time.</source>
+        <translation>The recurring send %id runs again; next run %time.</translation>
+    </message>
+    <message>
+        <source>Another run of the recurring sends is active. Try again in a moment.</source>
+        <translation>Another run of the recurring sends is active. Try again in a moment.</translation>
+    </message>
+    <message>
+        <source>Recurring send %id: %result. %message</source>
+        <translation>Recurring send %id: %result. %message</translation>
+    </message>
+    <message>
+        <source>The recurring send %id was removed. The editions and sends it made stay.</source>
+        <translation>The recurring send %id was removed. The editions and sends it made stay.</translation>
+    </message>
+    <message>
+        <source>Recurring sends</source>
+        <translation>Recurring sends</translation>
+    </message>
+    <message>
+        <source>sent</source>
+        <translation>sent</translation>
+    </message>
+    <message>
+        <source>skipped, nothing new</source>
+        <translation>skipped, nothing new</translation>
+    </message>
+    <message>
+        <source>skipped, condition not met</source>
+        <translation>skipped, condition not met</translation>
+    </message>
+    <message>
+        <source>dry run</source>
+        <translation>dry run</translation>
+    </message>
+    <message>
+        <source>failed</source>
+        <translation>failed</translation>
+    </message>
+    <message>
+        <source>Choose at least one day.</source>
+        <translation>Choose at least one day.</translation>
+    </message>
+    <message>
+        <source>The recurring send was saved. Next run: %time.</source>
+        <translation>The recurring send was saved. Next run: %time.</translation>
+    </message>
+    <message>
+        <source>The recurring send was saved. It is paused.</source>
+        <translation>The recurring send was saved. It is paused.</translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation>Edit</translation>
+    </message>
+    <message>
+        <source>New recurring send</source>
+        <translation>New recurring send</translation>
+    </message>
+    <message>
+        <source>Choose the newsletter list.</source>
+        <translation>Choose the newsletter list.</translation>
+    </message>
+    <message>
+        <source>Choose the edition that is copied.</source>
+        <translation>Choose the edition that is copied.</translation>
+    </message>
+    <message>
+        <source>The template edition must belong to the chosen list.</source>
+        <translation>The template edition must belong to the chosen list.</translation>
+    </message>
+    <message>
+        <source>Enter the time as HH:MM, for example 08:30.</source>
+        <translation>Enter the time as HH:MM, for example 08:30.</translation>
+    </message>
+    <message>
+        <source>Choose a time zone of the list.</source>
+        <translation>Choose a time zone of the list.</translation>
+    </message>
+    <message>
+        <source>The chosen condition is not available.</source>
+        <translation>The chosen condition is not available.</translation>
+    </message>
+    <message>
+        <source>The article pool &quot;%name&quot; was removed. Its lists and recurring sends use the default pool now.</source>
+        <translation>The article pool &quot;%name&quot; was removed. Its lists and recurring sends use the default pool now.</translation>
+    </message>
+    <message>
+        <source>Article pools</source>
+        <translation>Article pools</translation>
+    </message>
+    <message>
+        <source>Give the pool a name.</source>
+        <translation>Give the pool a name.</translation>
+    </message>
+    <message>
+        <source>Choose a newsletter list, or none for a global pool.</source>
+        <translation>Choose a newsletter list, or none for a global pool.</translation>
+    </message>
+    <message>
+        <source>The node %id does not exist.</source>
+        <translation>The node %id does not exist.</translation>
+    </message>
+    <message>
+        <source>Enter at least one node the articles are searched under.</source>
+        <translation>Enter at least one node the articles are searched under.</translation>
+    </message>
+    <message>
+        <source>Some of the tag ids do not exist.</source>
+        <translation>Some of the tag ids do not exist.</translation>
+    </message>
+    <message>
+        <source>The number of articles is between 1 and %max.</source>
+        <translation>The number of articles is between 1 and %max.</translation>
+    </message>
+    <message>
+        <source>The article pool &quot;%name&quot; was saved.</source>
+        <translation>The article pool &quot;%name&quot; was saved.</translation>
+    </message>
+    <message>
+        <source>New article pool</source>
+        <translation>New article pool</translation>
+    </message>
+    <message>
+        <source>%count articles were taken into the edition.</source>
+        <translation>%count articles were taken into the edition.</translation>
+    </message>
+    <message>
+        <source>The edition must be approved again.</source>
+        <translation>The edition must be approved again.</translation>
+    </message>
+    <message>
+        <source>The article was taken out of the edition.</source>
+        <translation>The article was taken out of the edition.</translation>
+    </message>
+    <message>
+        <source>Pick articles</source>
+        <translation>Pick articles</translation>
+    </message>
+    <message>
+        <source>The approval was asked for, but nobody can approve it: set [ApprovalSettings] ApproverUserIds[] or ApproverGroupIds[].</source>
+        <translation>The approval was asked for, but nobody can approve it: set [ApprovalSettings] ApproverUserIds[] or ApproverGroupIds[].</translation>
+    </message>
+    <message>
+        <source>The approval was asked for. The approvers find it in their collaboration inbox.</source>
+        <translation>The approval was asked for. The approvers find it in their collaboration inbox.</translation>
+    </message>
+    <message>
+        <source>Approval</source>
+        <translation>Approval</translation>
+    </message>
+    <message>
+        <source>Approval of &quot;%name&quot;</source>
+        <translation>Approval of &quot;%name&quot;</translation>
+    </message>
+    <message>
+        <source>Version %version</source>
+        <translation>Version %version</translation>
+    </message>
+    <message>
+        <source>not the current version (%current)</source>
+        <translation>not the current version (%current)</translation>
+    </message>
+    <message>
+        <source>The list needs no approval: the edition can be sent as it is.</source>
+        <translation>The list needs no approval: the edition can be sent as it is.</translation>
+    </message>
+    <message>
+        <source>The edition</source>
+        <translation>The edition</translation>
+    </message>
+    <message>
+        <source>In the inbox</source>
+        <translation>In the inbox</translation>
+    </message>
+    <message>
+        <source>Asked by</source>
+        <translation>Asked by</translation>
+    </message>
+    <message>
+        <source>Decided by</source>
+        <translation>Decided by</translation>
+    </message>
+    <message>
+        <source>Comment</source>
+        <translation>Comment</translation>
+    </message>
+    <message>
+        <source>Articles from pools</source>
+        <translation>Articles from pools</translation>
+    </message>
+    <message>
+        <source>Your decision</source>
+        <translation>Your decision</translation>
+    </message>
+    <message>
+        <source>Approve</source>
+        <translation>Approve</translation>
+    </message>
+    <message>
+        <source>Approve this edition? It can be sent then.</source>
+        <translation>Approve this edition? It can be sent then.</translation>
+    </message>
+    <message>
+        <source>Reject</source>
+        <translation>Reject</translation>
+    </message>
+    <message>
+        <source>Ask for the approval</source>
+        <translation>Ask for the approval</translation>
+    </message>
+    <message>
+        <source>Nobody gets the request yet: set [ApprovalSettings] ApproverUserIds[] or ApproverGroupIds[].</source>
+        <translation>Nobody gets the request yet: set [ApprovalSettings] ApproverUserIds[] or ApproverGroupIds[].</translation>
+    </message>
+    <message>
+        <source>%count approvers get it in their collaboration inbox.</source>
+        <translation>%count approvers get it in their collaboration inbox.</translation>
+    </message>
+    <message>
+        <source>Message to the approvers</source>
+        <translation>Message to the approvers</translation>
+    </message>
+    <message>
+        <source>Ask for approval</source>
+        <translation>Ask for approval</translation>
+    </message>
+    <message>
+        <source>The request waits for an approver.</source>
+        <translation>The request waits for an approver.</translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation>History</translation>
+    </message>
+    <message>
+        <source>Version %version, asked %time by %name</source>
+        <translation>Version %version, asked %time by %name</translation>
+    </message>
+    <message>
+        <source>decided %time by %name</source>
+        <translation>decided %time by %name</translation>
+    </message>
+    <message>
+        <source>The approval of this edition was never asked for.</source>
+        <translation>The approval of this edition was never asked for.</translation>
+    </message>
+    <message>
+        <source>not asked for yet</source>
+        <translation>not asked for yet</translation>
+    </message>
+    <message>
+        <source>Pick articles for &quot;%name&quot;</source>
+        <translation>Pick articles for &quot;%name&quot;</translation>
+    </message>
+    <message>
+        <source>Pool</source>
+        <translation>Pool</translation>
+    </message>
+    <message>
+        <source>articles taken</source>
+        <translation>articles taken</translation>
+    </message>
+    <message>
+        <source>Back to the edition</source>
+        <translation>Back to the edition</translation>
+    </message>
+    <message>
+        <source>The edition is being sent or was sent: its articles cannot change.</source>
+        <translation>The edition is being sent or was sent: its articles cannot change.</translation>
+    </message>
+    <message>
+        <source>In the edition</source>
+        <translation>In the edition</translation>
+    </message>
+    <message>
+        <source>removed content %id</source>
+        <translation>removed content %id</translation>
+    </message>
+    <message>
+        <source>Edit the text the edition shows</source>
+        <translation>Edit the text the edition shows</translation>
+    </message>
+    <message>
+        <source>Edit the text</source>
+        <translation>Edit the text</translation>
+    </message>
+    <message>
+        <source>Take out</source>
+        <translation>Take out</translation>
+    </message>
+    <message>
+        <source>No article of the pool is in the edition yet.</source>
+        <translation>No article of the pool is in the edition yet.</translation>
+    </message>
+    <message>
+        <source>Articles of the pool</source>
+        <translation>Articles of the pool</translation>
+    </message>
+    <message>
+        <source>Class</source>
+        <translation>Class</translation>
+    </message>
+    <message>
+        <source>any</source>
+        <translation>any</translation>
+    </message>
+    <message>
+        <source>Published from</source>
+        <translation>Published from</translation>
+    </message>
+    <message>
+        <source>to</source>
+        <translation>to</translation>
+    </message>
+    <message>
+        <source>Section</source>
+        <translation>Section</translation>
+    </message>
+    <message>
+        <source>Tag id</source>
+        <translation>Tag id</translation>
+    </message>
+    <message>
+        <source>State</source>
+        <translation>State</translation>
+    </message>
+    <message>
+        <source>Filter</source>
+        <translation>Filter</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation>Reset</translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation>Select all</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Title</translation>
+    </message>
+    <message>
+        <source>Published</source>
+        <translation>Published</translation>
+    </message>
+    <message>
+        <source>in the edition</source>
+        <translation>in the edition</translation>
+    </message>
+    <message>
+        <source>Take the chosen articles into the edition</source>
+        <translation>Take the chosen articles into the edition</translation>
+    </message>
+    <message>
+        <source>%from to %to of %total</source>
+        <translation>%from to %to of %total</translation>
+    </message>
+    <message>
+        <source>Previous</source>
+        <translation>Previous</translation>
+    </message>
+    <message>
+        <source>Next</source>
+        <translation>Next</translation>
+    </message>
+    <message>
+        <source>No article of the pool matches the filters.</source>
+        <translation>No article of the pool matches the filters.</translation>
+    </message>
+    <message>
+        <source>Edit the article pool &quot;%name&quot;</source>
+        <translation>Edit the article pool &quot;%name&quot;</translation>
+    </message>
+    <message>
+        <source>Please check the form</source>
+        <translation>Please check the form</translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation>Name</translation>
+    </message>
+    <message>
+        <source>For</source>
+        <translation>For</translation>
+    </message>
+    <message>
+        <source>Every list (a global pool)</source>
+        <translation>Every list (a global pool)</translation>
+    </message>
+    <message>
+        <source>The global default pool (only for a global pool)</source>
+        <translation>The global default pool (only for a global pool)</translation>
+    </message>
+    <message>
+        <source>Searched under the nodes</source>
+        <translation>Searched under the nodes</translation>
+    </message>
+    <message>
+        <source>Node ids, separated by commas. Now:</source>
+        <translation>Node ids, separated by commas. Now:</translation>
+    </message>
+    <message>
+        <source>Classes</source>
+        <translation>Classes</translation>
+    </message>
+    <message>
+        <source>None chosen = every class.</source>
+        <translation>None chosen = every class.</translation>
+    </message>
+    <message>
+        <source>Sections</source>
+        <translation>Sections</translation>
+    </message>
+    <message>
+        <source>None chosen = every section.</source>
+        <translation>None chosen = every section.</translation>
+    </message>
+    <message>
+        <source>Tags</source>
+        <translation>Tags</translation>
+    </message>
+    <message>
+        <source>Tag ids, separated by commas; an article needs one of them. Now:</source>
+        <translation>Tag ids, separated by commas; an article needs one of them. Now:</translation>
+    </message>
+    <message>
+        <source>The tag extension is not active.</source>
+        <translation>The tag extension is not active.</translation>
+    </message>
+    <message>
+        <source>Object states</source>
+        <translation>Object states</translation>
+    </message>
+    <message>
+        <source>Age</source>
+        <translation>Age</translation>
+    </message>
+    <message>
+        <source>days (0 = any age)</source>
+        <translation>days (0 = any age)</translation>
+    </message>
+    <message>
+        <source>Articles per edition</source>
+        <translation>Articles per edition</translation>
+    </message>
+    <message>
+        <source>the most the auto-fill takes</source>
+        <translation>the most the auto-fill takes</translation>
+    </message>
+    <message>
+        <source>Order</source>
+        <translation>Order</translation>
+    </message>
+    <message>
+        <source>newest first</source>
+        <translation>newest first</translation>
+    </message>
+    <message>
+        <source>last changed first</source>
+        <translation>last changed first</translation>
+    </message>
+    <message>
+        <source>by priority</source>
+        <translation>by priority</translation>
+    </message>
+    <message>
+        <source>by name</source>
+        <translation>by name</translation>
+    </message>
+    <message>
+        <source>The pool finds %count articles now</source>
+        <translation>The pool finds %count articles now</translation>
+    </message>
+    <message>
+        <source>Nothing matches. Check the nodes, classes and filters.</source>
+        <translation>Nothing matches. Check the nodes, classes and filters.</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation>Save</translation>
+    </message>
+    <message>
+        <source>Show the articles</source>
+        <translation>Show the articles</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Cancel</translation>
+    </message>
+    <message>
+        <source>Remove the article pool &quot;%name&quot;?</source>
+        <translation>Remove the article pool &quot;%name&quot;?</translation>
+    </message>
+    <message>
+        <source>The lists and recurring sends that use it fall back to the default pool. The articles taken into editions stay.</source>
+        <translation>The lists and recurring sends that use it fall back to the default pool. The articles taken into editions stay.</translation>
+    </message>
+    <message>
+        <source>Yes, remove</source>
+        <translation>Yes, remove</translation>
+    </message>
+    <message>
+        <source>A pool says where the articles for editions come from: the nodes searched, the classes, sections, tags, states and age. A list uses the pool it names, else a pool made for it, else the global default.</source>
+        <translation>A pool says where the articles for editions come from: the nodes searched, the classes, sections, tags, states and age. A list uses the pool it names, else a pool made for it, else the global default.</translation>
+    </message>
+    <message>
+        <source>No default pool is stored: the settings are used</source>
+        <translation>No default pool is stored: the settings are used</translation>
+    </message>
+    <message>
+        <source>Nodes</source>
+        <translation>Nodes</translation>
+    </message>
+    <message>
+        <source>classes</source>
+        <translation>classes</translation>
+    </message>
+    <message>
+        <source>at most %count articles</source>
+        <translation>at most %count articles</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Searched under</source>
+        <translation>Searched under</translation>
+    </message>
+    <message>
+        <source>Filters</source>
+        <translation>Filters</translation>
+    </message>
+    <message>
+        <source>Articles</source>
+        <translation>Articles</translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation>Actions</translation>
+    </message>
+    <message>
+        <source>default</source>
+        <translation>default</translation>
+    </message>
+    <message>
+        <source>every list</source>
+        <translation>every list</translation>
+    </message>
+    <message>
+        <source>named by %lists</source>
+        <translation>named by %lists</translation>
+    </message>
+    <message>
+        <source>%count sections</source>
+        <translation>%count sections</translation>
+    </message>
+    <message>
+        <source>%count tags</source>
+        <translation>%count tags</translation>
+    </message>
+    <message>
+        <source>%count states</source>
+        <translation>%count states</translation>
+    </message>
+    <message>
+        <source>%days days</source>
+        <translation>%days days</translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation>Remove</translation>
+    </message>
+    <message>
+        <source>There is no article pool yet.</source>
+        <translation>There is no article pool yet.</translation>
+    </message>
+    <message>
+        <source>Make a global default pool, or one for a list.</source>
+        <translation>Make a global default pool, or one for a list.</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>no</translation>
+    </message>
+    <message>
+        <source>yes, an edition is sent only after its approval (collaboration inbox)</source>
+        <translation>yes, an edition is sent only after its approval (collaboration inbox)</translation>
+    </message>
+    <message>
+        <source>Article pool</source>
+        <translation>Article pool</translation>
+    </message>
+    <message>
+        <source>The pool made for the list, else the global default</source>
+        <translation>The pool made for the list, else the global default</translation>
+    </message>
+    <message>
+        <source>an edition is sent only after its approval</source>
+        <translation>an edition is sent only after its approval</translation>
+    </message>
+    <message>
+        <source>from the settings</source>
+        <translation>from the settings</translation>
+    </message>
+    <message>
+        <source>none</source>
+        <translation>none</translation>
+    </message>
+    <message>
+        <source>Edit the recurring send %id</source>
+        <translation>Edit the recurring send %id</translation>
+    </message>
+    <message>
+        <source>[ScheduleSettings] Schedules is disabled: the cronjob does not run recurring sends. ext:cjw_newsletter:schedule run does.</source>
+        <translation>[ScheduleSettings] Schedules is disabled: the cronjob does not run recurring sends. ext:cjw_newsletter:schedule run does.</translation>
+    </message>
+    <message>
+        <source>What is sent</source>
+        <translation>What is sent</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>List</translation>
+    </message>
+    <message>
+        <source>- choose -</source>
+        <translation>- choose -</translation>
+    </message>
+    <message>
+        <source>with approval</source>
+        <translation>with approval</translation>
+    </message>
+    <message>
+        <source>Mode</source>
+        <translation>Mode</translation>
+    </message>
+    <message>
+        <source>Send the latest edition of the list that was not sent yet</source>
+        <translation>Send the latest edition of the list that was not sent yet</translation>
+    </message>
+    <message>
+        <source>Copy a template edition and send the copy</source>
+        <translation>Copy a template edition and send the copy</translation>
+    </message>
+    <message>
+        <source>Template edition</source>
+        <translation>Template edition</translation>
+    </message>
+    <message>
+        <source>- only for mode copy -</source>
+        <translation>- only for mode copy -</translation>
+    </message>
+    <message>
+        <source>The copy gets the title of the template and the date, and the newsletter articles of the template.</source>
+        <translation>The copy gets the title of the template and the date, and the newsletter articles of the template.</translation>
+    </message>
+    <message>
+        <source>Auto-fill</source>
+        <translation>Auto-fill</translation>
+    </message>
+    <message>
+        <source>Fill the copy with the articles of the pool published since the last send</source>
+        <translation>Fill the copy with the articles of the pool published since the last send</translation>
+    </message>
+    <message>
+        <source>The pool of the list</source>
+        <translation>The pool of the list</translation>
+    </message>
+    <message>
+        <source>Skip the run when there is nothing new (it is logged)</source>
+        <translation>Skip the run when there is nothing new (it is logged)</translation>
+    </message>
+    <message>
+        <source>Condition</source>
+        <translation>Condition</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation>None</translation>
+    </message>
+    <message>
+        <source>When</source>
+        <translation>When</translation>
+    </message>
+    <message>
+        <source>Repeat</source>
+        <translation>Repeat</translation>
+    </message>
+    <message>
+        <source>On these weekdays</source>
+        <translation>On these weekdays</translation>
+    </message>
+    <message>
+        <source>Weekly on</source>
+        <translation>Weekly on</translation>
+    </message>
+    <message>
+        <source>Weekday</source>
+        <translation>Weekday</translation>
+    </message>
+    <message>
+        <source>Monthly on day</source>
+        <translation>Monthly on day</translation>
+    </message>
+    <message>
+        <source>Day of the month</source>
+        <translation>Day of the month</translation>
+    </message>
+    <message>
+        <source>A day beyond the end of a month means its last day (the 31st is the 30th in April).</source>
+        <translation>A day beyond the end of a month means its last day (the 31st is the 30th in April).</translation>
+    </message>
+    <message>
+        <source>Time</source>
+        <translation>Time</translation>
+    </message>
+    <message>
+        <source>Time zone</source>
+        <translation>Time zone</translation>
+    </message>
+    <message>
+        <source>Default (%zone)</source>
+        <translation>Default (%zone)</translation>
+    </message>
+    <message>
+        <source>Next runs</source>
+        <translation>Next runs</translation>
+    </message>
+    <message>
+        <source>Remove this recurring send?</source>
+        <translation>Remove this recurring send?</translation>
+    </message>
+    <message>
+        <source>The editions and sends it made stay; its log is removed.</source>
+        <translation>The editions and sends it made stay; its log is removed.</translation>
+    </message>
+    <message>
+        <source>The cronjob runs the due sends</source>
+        <translation>The cronjob runs the due sends</translation>
+    </message>
+    <message>
+        <source>[ScheduleSettings] Schedules is disabled: the cronjob does not run them</source>
+        <translation>[ScheduleSettings] Schedules is disabled: the cronjob does not run them</translation>
+    </message>
+    <message>
+        <source>Last run</source>
+        <translation>Last run</translation>
+    </message>
+    <message>
+        <source>The recurring sends have not run yet.</source>
+        <translation>The recurring sends have not run yet.</translation>
+    </message>
+    <message>
+        <source>In cron: the part cjw_newsletter_mailqueue_create runs them. By hand:</source>
+        <translation>In cron: the part cjw_newsletter_mailqueue_create runs them. By hand:</translation>
+    </message>
+    <message>
+        <source>What</source>
+        <translation>What</translation>
+    </message>
+    <message>
+        <source>Next run</source>
+        <translation>Next run</translation>
+    </message>
+    <message>
+        <source>list removed</source>
+        <translation>list removed</translation>
+    </message>
+    <message>
+        <source>Copy of &quot;%name&quot;</source>
+        <translation>Copy of &quot;%name&quot;</translation>
+    </message>
+    <message>
+        <source>filled from &quot;%pool&quot;</source>
+        <translation>filled from &quot;%pool&quot;</translation>
+    </message>
+    <message>
+        <source>The latest unsent edition</source>
+        <translation>The latest unsent edition</translation>
+    </message>
+    <message>
+        <source>with a condition</source>
+        <translation>with a condition</translation>
+    </message>
+    <message>
+        <source>due</source>
+        <translation>due</translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation>Pause</translation>
+    </message>
+    <message>
+        <source>Resume</source>
+        <translation>Resume</translation>
+    </message>
+    <message>
+        <source>Try</source>
+        <translation>Try</translation>
+    </message>
+    <message>
+        <source>Say what a run would do now, change nothing</source>
+        <translation>Say what a run would do now, change nothing</translation>
+    </message>
+    <message>
+        <source>Run now</source>
+        <translation>Run now</translation>
+    </message>
+    <message>
+        <source>Run this recurring send now? It makes the send at once.</source>
+        <translation>Run this recurring send now? It makes the send at once.</translation>
+    </message>
+    <message>
+        <source>There is no recurring send yet.</source>
+        <translation>There is no recurring send yet.</translation>
+    </message>
+    <message>
+        <source>A recurring send sends a list on chosen weekdays, weekly or monthly: a copy of a template edition, or the latest edition that was not sent.</source>
+        <translation>A recurring send sends a list on chosen weekdays, weekly or monthly: a copy of a template edition, or the latest edition that was not sent.</translation>
+    </message>
+    <message>
+        <source>Last runs</source>
+        <translation>Last runs</translation>
+    </message>
+    <message>
+        <source>Schedule</source>
+        <translation>Schedule</translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation>Result</translation>
+    </message>
+    <message>
+        <source>Details</source>
+        <translation>Details</translation>
+    </message>
+    <message>
+        <source>send %id</source>
+        <translation>send %id</translation>
+    </message>
+    <message>
+        <source>No run yet.</source>
+        <translation>No run yet.</translation>
+    </message>
+    <message>
+        <source>Ask for or give the approval</source>
+        <translation>Ask for or give the approval</translation>
+    </message>
+    <message>
+        <source>The list needs an approval: this version cannot be sent before it is approved.</source>
+        <translation>The list needs an approval: this version cannot be sent before it is approved.</translation>
+    </message>
+    <message>
+        <source>Articles from the pool</source>
+        <translation>Articles from the pool</translation>
+    </message>
+    <message>
+        <source>copy</source>
+        <translation>copy</translation>
+    </message>
+    <message>
+        <source>latest</source>
+        <translation>latest</translation>
+    </message>
+    <message>
+        <source>No recurring send is planned.</source>
+        <translation>No recurring send is planned.</translation>
+    </message>
+    <message>
+        <source>The cronjob runs them</source>
+        <translation>The cronjob runs them</translation>
+    </message>
+    <message>
+        <source>Not run by the cronjob</source>
+        <translation>Not run by the cronjob</translation>
+    </message>
+    <message>
+        <source>Approvals</source>
+        <translation>Approvals</translation>
+    </message>
+    <message>
+        <source>asked %time by %name</source>
+        <translation>asked %time by %name</translation>
+    </message>
+    <message>
+        <source>No edition waits for an approval.</source>
+        <translation>No edition waits for an approval.</translation>
+    </message>
+    <message>
+        <source>Collaboration inbox</source>
+        <translation>Collaboration inbox</translation>
+    </message>
+    <message>
+        <source>pools</source>
+        <translation>pools</translation>
+    </message>
+    <message>
+        <source>Editors pick articles for an edition from the pool of its list; recurring copies are filled from it.</source>
+        <translation>Editors pick articles for an edition from the pool of its list; recurring copies are filled from it.</translation>
+    </message>
+    <message>
+        <source>Approved</source>
+        <translation>Approved</translation>
+    </message>
+    <message>
+        <source>Rejected</source>
+        <translation>Rejected</translation>
+    </message>
+    <message>
+        <source>Replaced</source>
+        <translation>Replaced</translation>
+    </message>
+    <message>
+        <source>Waiting for approval</source>
+        <translation>Waiting for approval</translation>
+    </message>
+    <message>
+        <source>Asked</source>
+        <translation>Asked</translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation>Version</translation>
+    </message>
+    <message>
+        <source>Open the edition</source>
+        <translation>Open the edition</translation>
+    </message>
+    <message>
+        <source>Preview</source>
+        <translation>Preview</translation>
+    </message>
+    <message>
+        <source>Approval page</source>
+        <translation>Approval page</translation>
+    </message>
+    <message>
+        <source>The edition %id was removed.</source>
+        <translation>The edition %id was removed.</translation>
+    </message>
+    <message>
+        <source>Decision</source>
+        <translation>Decision</translation>
+    </message>
+    <message>
+        <source>The request was replaced by a newer one (the edition changed).</source>
+        <translation>The request was replaced by a newer one (the edition changed).</translation>
+    </message>
+    <message>
+        <source>The edition waits for an approver.</source>
+        <translation>The edition waits for an approver.</translation>
+    </message>
+    <message>
+        <source>The edition waits for your approval before it is sent.</source>
+        <translation>The edition waits for your approval before it is sent.</translation>
+    </message>
+    <message>
+        <source>Add comment</source>
+        <translation>Add comment</translation>
+    </message>
+    <message>
+        <source>Approve &quot;%title&quot;? It can be sent then.</source>
+        <translation>Approve &quot;%title&quot;? It can be sent then.</translation>
+    </message>
+    <message>
+        <source>Reject &quot;%title&quot;?</source>
+        <translation>Reject &quot;%title&quot;?</translation>
+    </message>
+    <message>
+        <source>Only an approver can approve or reject this request.</source>
+        <translation>Only an approver can approve or reject this request.</translation>
+    </message>
+    <message>
+        <source>Participants</source>
+        <translation>Participants</translation>
+    </message>
+    <message>
+        <source>Messages</source>
+        <translation>Messages</translation>
+    </message>
+    <message>
+        <source>There are no messages yet.</source>
+        <translation>There are no messages yet.</translation>
+    </message>
+    <message>
+        <source>version %version</source>
+        <translation>version %version</translation>
+    </message>
+    <message>
+        <source>&quot;%1&quot; was approved for sending</source>
+        <translation>&quot;%1&quot; was approved for sending</translation>
+    </message>
+    <message>
+        <source>&quot;%1&quot; was rejected</source>
+        <translation>&quot;%1&quot; was rejected</translation>
+    </message>
+    <message>
+        <source>&quot;%1&quot;: the request was replaced by a newer one</source>
+        <translation>&quot;%1&quot;: the request was replaced by a newer one</translation>
+    </message>
+    <message>
+        <source>&quot;%1&quot; waits for the approval of the newsletter</source>
+        <translation>&quot;%1&quot; waits for the approval of the newsletter</translation>
+    </message>
+    <message>
+        <source>&quot;%1&quot; waits for your approval before it is sent</source>
+        <translation>&quot;%1&quot; waits for your approval before it is sent</translation>
+    </message>
+    <message>
+        <source>[%sitename] The newsletter &quot;%name&quot; waits for your approval</source>
+        <translation>[%sitename] The newsletter &quot;%name&quot; waits for your approval</translation>
+    </message>
+    <message>
+        <source>The newsletter edition &quot;%name&quot; waits for your approval at %sitename. It is not sent before it is approved.</source>
+        <translation>The newsletter edition &quot;%name&quot; waits for your approval at %sitename. It is not sent before it is approved.</translation>
+    </message>
+    <message>
+        <source>If you do not want to receive these notifications, change your settings at:</source>
+        <translation>If you do not want to receive these notifications, change your settings at:</translation>
+    </message>
+    <message>
+        <source>[%sitename] The approval of the newsletter &quot;%name&quot;</source>
+        <translation>[%sitename] The approval of the newsletter &quot;%name&quot;</translation>
+    </message>
+    <message>
+        <source>The approval of the newsletter edition &quot;%name&quot; at %sitename has changed. See the request:</source>
+        <translation>The approval of the newsletter edition &quot;%name&quot; at %sitename has changed. See the request:</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/rendering</name>

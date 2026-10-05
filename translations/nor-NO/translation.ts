@@ -4003,6 +4003,1170 @@ If you did not send this request, ignore this mail: nothing changes.</source>
         <source>Editorial</source>
         <translation>Redaksjon</translation>
     </message>
+    <message>
+        <source>approved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>rejected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>replaced</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>waiting for approval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default pool (settings)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pool %id</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>auto-fill</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>interests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Read more</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This edition waits for its approval. It can be sent when it is approved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This edition was rejected. Change it and ask for the approval again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The list needs an approval before an edition is sent. Ask for the approval first.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The chosen article pool does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There are active recurring sends, but [ScheduleSettings] Schedules is disabled: the cronjob does not run them.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count runs of recurring sends failed in the last 7 days.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&quot;%name&quot; has waited more than two days for its approval.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>active</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>paused</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>removed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Monthly on day %day at %time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Weekly on %day at %time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Every day at %time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>On %days at %time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Only when the pool has new articles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Made by the recurring send %id.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Newsletter approval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Newsletter approval: %name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your comment was added.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The edition was approved. It can be sent now.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The edition was rejected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You cannot decide this request: it was decided already, or you may not approve newsletters, or you asked for it yourself.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The recurring send %id is paused.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The recurring send %id runs again; next run %time.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Another run of the recurring sends is active. Try again in a moment.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Recurring send %id: %result. %message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The recurring send %id was removed. The editions and sends it made stay.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Recurring sends</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>skipped, nothing new</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>skipped, condition not met</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>dry run</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose at least one day.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The recurring send was saved. Next run: %time.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The recurring send was saved. It is paused.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New recurring send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose the newsletter list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose the edition that is copied.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The template edition must belong to the chosen list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter the time as HH:MM, for example 08:30.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose a time zone of the list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The chosen condition is not available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The article pool &quot;%name&quot; was removed. Its lists and recurring sends use the default pool now.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Article pools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Give the pool a name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose a newsletter list, or none for a global pool.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The node %id does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter at least one node the articles are searched under.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Some of the tag ids do not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The number of articles is between 1 and %max.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The article pool &quot;%name&quot; was saved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New article pool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count articles were taken into the edition.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The edition must be approved again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The article was taken out of the edition.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pick articles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The approval was asked for, but nobody can approve it: set [ApprovalSettings] ApproverUserIds[] or ApproverGroupIds[].</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The approval was asked for. The approvers find it in their collaboration inbox.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Approval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Approval of &quot;%name&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version %version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>not the current version (%current)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The list needs no approval: the edition can be sent as it is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The edition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>In the inbox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Asked by</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Decided by</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Comment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Articles from pools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your decision</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Approve</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Approve this edition? It can be sent then.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reject</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ask for the approval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nobody gets the request yet: set [ApprovalSettings] ApproverUserIds[] or ApproverGroupIds[].</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count approvers get it in their collaboration inbox.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message to the approvers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ask for approval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The request waits for an approver.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version %version, asked %time by %name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>decided %time by %name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The approval of this edition was never asked for.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>not asked for yet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pick articles for &quot;%name&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>articles taken</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Back to the edition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The edition is being sent or was sent: its articles cannot change.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>In the edition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>removed content %id</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit the text the edition shows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit the text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Take out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No article of the pool is in the edition yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Articles of the pool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Class</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>any</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Published from</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Section</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tag id</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>State</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Published</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>in the edition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Take the chosen articles into the edition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%from to %to of %total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Previous</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No article of the pool matches the filters.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit the article pool &quot;%name&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please check the form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>For</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Every list (a global pool)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The global default pool (only for a global pool)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Searched under the nodes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Node ids, separated by commas. Now:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Classes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None chosen = every class.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sections</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None chosen = every section.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tag ids, separated by commas; an article needs one of them. Now:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The tag extension is not active.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Object states</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Age</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>days (0 = any age)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Articles per edition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the most the auto-fill takes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>newest first</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>last changed first</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>by priority</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>by name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The pool finds %count articles now</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nothing matches. Check the nodes, classes and filters.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show the articles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove the article pool &quot;%name&quot;?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The lists and recurring sends that use it fall back to the default pool. The articles taken into editions stay.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Yes, remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A pool says where the articles for editions come from: the nodes searched, the classes, sections, tags, states and age. A list uses the pool it names, else a pool made for it, else the global default.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No default pool is stored: the settings are used</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nodes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>classes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>at most %count articles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Searched under</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Articles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>every list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>named by %lists</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count sections</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count tags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count states</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%days days</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There is no article pool yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Make a global default pool, or one for a list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>yes, an edition is sent only after its approval (collaboration inbox)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Article pool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The pool made for the list, else the global default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>an edition is sent only after its approval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>from the settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>none</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit the recurring send %id</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[ScheduleSettings] Schedules is disabled: the cronjob does not run recurring sends. ext:cjw_newsletter:schedule run does.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>What is sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>- choose -</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>with approval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send the latest edition of the list that was not sent yet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy a template edition and send the copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Template edition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>- only for mode copy -</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The copy gets the title of the template and the date, and the newsletter articles of the template.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Auto-fill</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fill the copy with the articles of the pool published since the last send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The pool of the list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skip the run when there is nothing new (it is logged)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Condition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Repeat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>On these weekdays</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Weekly on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Weekday</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Monthly on day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Day of the month</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A day beyond the end of a month means its last day (the 31st is the 30th in April).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Time zone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default (%zone)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next runs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove this recurring send?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The editions and sends it made stay; its log is removed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The cronjob runs the due sends</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[ScheduleSettings] Schedules is disabled: the cronjob does not run them</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last run</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The recurring sends have not run yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>In cron: the part cjw_newsletter_mailqueue_create runs them. By hand:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>What</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next run</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>list removed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy of &quot;%name&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>filled from &quot;%pool&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The latest unsent edition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>with a condition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>due</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resume</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Try</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Say what a run would do now, change nothing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Run now</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Run this recurring send now? It makes the send at once.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There is no recurring send yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A recurring send sends a list on chosen weekdays, weekly or monthly: a copy of a template edition, or the latest edition that was not sent.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last runs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Schedule</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>send %id</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No run yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ask for or give the approval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The list needs an approval: this version cannot be sent before it is approved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Articles from the pool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>latest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No recurring send is planned.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The cronjob runs them</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Not run by the cronjob</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Approvals</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>asked %time by %name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No edition waits for an approval.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Collaboration inbox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>pools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Editors pick articles for an edition from the pool of its list; recurring copies are filled from it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Approved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rejected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replaced</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Waiting for approval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Asked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open the edition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Approval page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The edition %id was removed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Decision</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The request was replaced by a newer one (the edition changed).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The edition waits for an approver.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The edition waits for your approval before it is sent.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add comment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Approve &quot;%title&quot;? It can be sent then.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reject &quot;%title&quot;?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Only an approver can approve or reject this request.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Participants</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There are no messages yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>version %version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&quot;%1&quot; was approved for sending</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&quot;%1&quot; was rejected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&quot;%1&quot;: the request was replaced by a newer one</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&quot;%1&quot; waits for the approval of the newsletter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&quot;%1&quot; waits for your approval before it is sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[%sitename] The newsletter &quot;%name&quot; waits for your approval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The newsletter edition &quot;%name&quot; waits for your approval at %sitename. It is not sent before it is approved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>If you do not want to receive these notifications, change your settings at:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[%sitename] The approval of the newsletter &quot;%name&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The approval of the newsletter edition &quot;%name&quot; at %sitename has changed. See the request:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/rendering</name>

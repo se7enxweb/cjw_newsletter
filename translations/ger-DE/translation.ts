@@ -5379,6 +5379,1170 @@ Wenn Sie diese Bitte nicht geschickt haben, beachten Sie diese Mail nicht: Es ä
         <source>Editorial</source>
         <translation>Redaktion</translation>
     </message>
+    <message>
+        <source>approved</source>
+        <translation>freigegeben</translation>
+    </message>
+    <message>
+        <source>rejected</source>
+        <translation>abgelehnt</translation>
+    </message>
+    <message>
+        <source>replaced</source>
+        <translation>ersetzt</translation>
+    </message>
+    <message>
+        <source>waiting for approval</source>
+        <translation>wartet auf Freigabe</translation>
+    </message>
+    <message>
+        <source>Default pool (settings)</source>
+        <translation>Standard-Pool (Einstellungen)</translation>
+    </message>
+    <message>
+        <source>Pool %id</source>
+        <translation>Pool %id</translation>
+    </message>
+    <message>
+        <source>auto-fill</source>
+        <translation>automatisch gefüllt</translation>
+    </message>
+    <message>
+        <source>interests</source>
+        <translation>Interessen</translation>
+    </message>
+    <message>
+        <source>editor</source>
+        <translation>Redaktion</translation>
+    </message>
+    <message>
+        <source>Read more</source>
+        <translation>Weiterlesen</translation>
+    </message>
+    <message>
+        <source>This edition waits for its approval. It can be sent when it is approved.</source>
+        <translation>Diese Ausgabe wartet auf ihre Freigabe. Sie kann versendet werden, sobald sie freigegeben ist.</translation>
+    </message>
+    <message>
+        <source>This edition was rejected. Change it and ask for the approval again.</source>
+        <translation>Diese Ausgabe wurde abgelehnt. Ändern Sie sie und bitten Sie erneut um Freigabe.</translation>
+    </message>
+    <message>
+        <source>The list needs an approval before an edition is sent. Ask for the approval first.</source>
+        <translation>Die Liste verlangt eine Freigabe, bevor eine Ausgabe versendet wird. Bitten Sie zuerst um Freigabe.</translation>
+    </message>
+    <message>
+        <source>The chosen article pool does not exist.</source>
+        <translation>Der gewählte Artikel-Pool existiert nicht.</translation>
+    </message>
+    <message>
+        <source>There are active recurring sends, but [ScheduleSettings] Schedules is disabled: the cronjob does not run them.</source>
+        <translation>Es gibt aktive wiederkehrende Versände, aber [ScheduleSettings] Schedules ist ausgeschaltet: der Cronjob führt sie nicht aus.</translation>
+    </message>
+    <message>
+        <source>%count runs of recurring sends failed in the last 7 days.</source>
+        <translation>%count Läufe wiederkehrender Versände sind in den letzten 7 Tagen fehlgeschlagen.</translation>
+    </message>
+    <message>
+        <source>&quot;%name&quot; has waited more than two days for its approval.</source>
+        <translation>„%name“ wartet seit mehr als zwei Tagen auf die Freigabe.</translation>
+    </message>
+    <message>
+        <source>active</source>
+        <translation>aktiv</translation>
+    </message>
+    <message>
+        <source>paused</source>
+        <translation>pausiert</translation>
+    </message>
+    <message>
+        <source>removed</source>
+        <translation>entfernt</translation>
+    </message>
+    <message>
+        <source>Monthly on day %day at %time</source>
+        <translation>Monatlich am %day. um %time</translation>
+    </message>
+    <message>
+        <source>Weekly on %day at %time</source>
+        <translation>Wöchentlich am %day um %time</translation>
+    </message>
+    <message>
+        <source>Every day at %time</source>
+        <translation>Täglich um %time</translation>
+    </message>
+    <message>
+        <source>On %days at %time</source>
+        <translation>Am %days um %time</translation>
+    </message>
+    <message>
+        <source>Only when the pool has new articles</source>
+        <translation>Nur wenn der Pool neue Artikel hat</translation>
+    </message>
+    <message>
+        <source>Made by the recurring send %id.</source>
+        <translation>Erstellt vom wiederkehrenden Versand %id.</translation>
+    </message>
+    <message>
+        <source>Newsletter approval</source>
+        <translation>Newsletter-Freigabe</translation>
+    </message>
+    <message>
+        <source>Newsletter approval: %name</source>
+        <translation>Newsletter-Freigabe: %name</translation>
+    </message>
+    <message>
+        <source>Your comment was added.</source>
+        <translation>Ihr Kommentar wurde hinzugefügt.</translation>
+    </message>
+    <message>
+        <source>The edition was approved. It can be sent now.</source>
+        <translation>Die Ausgabe wurde freigegeben. Sie kann jetzt versendet werden.</translation>
+    </message>
+    <message>
+        <source>The edition was rejected.</source>
+        <translation>Die Ausgabe wurde abgelehnt.</translation>
+    </message>
+    <message>
+        <source>You cannot decide this request: it was decided already, or you may not approve newsletters, or you asked for it yourself.</source>
+        <translation>Sie können über diese Anfrage nicht entscheiden: sie wurde schon entschieden, Sie dürfen keine Newsletter freigeben, oder Sie haben sie selbst gestellt.</translation>
+    </message>
+    <message>
+        <source>The recurring send %id is paused.</source>
+        <translation>Der wiederkehrende Versand %id ist pausiert.</translation>
+    </message>
+    <message>
+        <source>The recurring send %id runs again; next run %time.</source>
+        <translation>Der wiederkehrende Versand %id läuft wieder; nächster Lauf %time.</translation>
+    </message>
+    <message>
+        <source>Another run of the recurring sends is active. Try again in a moment.</source>
+        <translation>Ein anderer Lauf der wiederkehrenden Versände ist aktiv. Versuchen Sie es gleich noch einmal.</translation>
+    </message>
+    <message>
+        <source>Recurring send %id: %result. %message</source>
+        <translation>Wiederkehrender Versand %id: %result. %message</translation>
+    </message>
+    <message>
+        <source>The recurring send %id was removed. The editions and sends it made stay.</source>
+        <translation>Der wiederkehrende Versand %id wurde entfernt. Die Ausgaben und Versände, die er erstellt hat, bleiben.</translation>
+    </message>
+    <message>
+        <source>Recurring sends</source>
+        <translation>Wiederkehrende Versände</translation>
+    </message>
+    <message>
+        <source>sent</source>
+        <translation>versendet</translation>
+    </message>
+    <message>
+        <source>skipped, nothing new</source>
+        <translation>übersprungen, nichts Neues</translation>
+    </message>
+    <message>
+        <source>skipped, condition not met</source>
+        <translation>übersprungen, Bedingung nicht erfüllt</translation>
+    </message>
+    <message>
+        <source>dry run</source>
+        <translation>Probelauf</translation>
+    </message>
+    <message>
+        <source>failed</source>
+        <translation>fehlgeschlagen</translation>
+    </message>
+    <message>
+        <source>Choose at least one day.</source>
+        <translation>Wählen Sie mindestens einen Tag.</translation>
+    </message>
+    <message>
+        <source>The recurring send was saved. Next run: %time.</source>
+        <translation>Der wiederkehrende Versand wurde gespeichert. Nächster Lauf: %time.</translation>
+    </message>
+    <message>
+        <source>The recurring send was saved. It is paused.</source>
+        <translation>Der wiederkehrende Versand wurde gespeichert. Er ist pausiert.</translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation>Bearbeiten</translation>
+    </message>
+    <message>
+        <source>New recurring send</source>
+        <translation>Neuer wiederkehrender Versand</translation>
+    </message>
+    <message>
+        <source>Choose the newsletter list.</source>
+        <translation>Wählen Sie die Newsletter-Liste.</translation>
+    </message>
+    <message>
+        <source>Choose the edition that is copied.</source>
+        <translation>Wählen Sie die Ausgabe, die kopiert wird.</translation>
+    </message>
+    <message>
+        <source>The template edition must belong to the chosen list.</source>
+        <translation>Die Vorlage muss zur gewählten Liste gehören.</translation>
+    </message>
+    <message>
+        <source>Enter the time as HH:MM, for example 08:30.</source>
+        <translation>Geben Sie die Uhrzeit als HH:MM ein, zum Beispiel 08:30.</translation>
+    </message>
+    <message>
+        <source>Choose a time zone of the list.</source>
+        <translation>Wählen Sie eine Zeitzone aus der Liste.</translation>
+    </message>
+    <message>
+        <source>The chosen condition is not available.</source>
+        <translation>Die gewählte Bedingung ist nicht verfügbar.</translation>
+    </message>
+    <message>
+        <source>The article pool &quot;%name&quot; was removed. Its lists and recurring sends use the default pool now.</source>
+        <translation>Der Artikel-Pool „%name“ wurde entfernt. Seine Listen und wiederkehrenden Versände verwenden jetzt den Standard-Pool.</translation>
+    </message>
+    <message>
+        <source>Article pools</source>
+        <translation>Artikel-Pools</translation>
+    </message>
+    <message>
+        <source>Give the pool a name.</source>
+        <translation>Geben Sie dem Pool einen Namen.</translation>
+    </message>
+    <message>
+        <source>Choose a newsletter list, or none for a global pool.</source>
+        <translation>Wählen Sie eine Newsletter-Liste oder keine für einen globalen Pool.</translation>
+    </message>
+    <message>
+        <source>The node %id does not exist.</source>
+        <translation>Der Knoten %id existiert nicht.</translation>
+    </message>
+    <message>
+        <source>Enter at least one node the articles are searched under.</source>
+        <translation>Geben Sie mindestens einen Knoten an, unter dem die Artikel gesucht werden.</translation>
+    </message>
+    <message>
+        <source>Some of the tag ids do not exist.</source>
+        <translation>Einige der Tag-IDs existieren nicht.</translation>
+    </message>
+    <message>
+        <source>The number of articles is between 1 and %max.</source>
+        <translation>Die Zahl der Artikel liegt zwischen 1 und %max.</translation>
+    </message>
+    <message>
+        <source>The article pool &quot;%name&quot; was saved.</source>
+        <translation>Der Artikel-Pool „%name“ wurde gespeichert.</translation>
+    </message>
+    <message>
+        <source>New article pool</source>
+        <translation>Neuer Artikel-Pool</translation>
+    </message>
+    <message>
+        <source>%count articles were taken into the edition.</source>
+        <translation>%count Artikel wurden in die Ausgabe übernommen.</translation>
+    </message>
+    <message>
+        <source>The edition must be approved again.</source>
+        <translation>Die Ausgabe muss erneut freigegeben werden.</translation>
+    </message>
+    <message>
+        <source>The article was taken out of the edition.</source>
+        <translation>Der Artikel wurde aus der Ausgabe genommen.</translation>
+    </message>
+    <message>
+        <source>Pick articles</source>
+        <translation>Artikel auswählen</translation>
+    </message>
+    <message>
+        <source>The approval was asked for, but nobody can approve it: set [ApprovalSettings] ApproverUserIds[] or ApproverGroupIds[].</source>
+        <translation>Um Freigabe wurde gebeten, aber niemand kann sie erteilen: setzen Sie [ApprovalSettings] ApproverUserIds[] oder ApproverGroupIds[].</translation>
+    </message>
+    <message>
+        <source>The approval was asked for. The approvers find it in their collaboration inbox.</source>
+        <translation>Um Freigabe wurde gebeten. Die Freigebenden finden die Anfrage in ihrem Collaboration-Posteingang.</translation>
+    </message>
+    <message>
+        <source>Approval</source>
+        <translation>Freigabe</translation>
+    </message>
+    <message>
+        <source>Approval of &quot;%name&quot;</source>
+        <translation>Freigabe von „%name“</translation>
+    </message>
+    <message>
+        <source>Version %version</source>
+        <translation>Version %version</translation>
+    </message>
+    <message>
+        <source>not the current version (%current)</source>
+        <translation>nicht die aktuelle Version (%current)</translation>
+    </message>
+    <message>
+        <source>The list needs no approval: the edition can be sent as it is.</source>
+        <translation>Die Liste verlangt keine Freigabe: die Ausgabe kann so versendet werden.</translation>
+    </message>
+    <message>
+        <source>The edition</source>
+        <translation>Die Ausgabe</translation>
+    </message>
+    <message>
+        <source>In the inbox</source>
+        <translation>Im Posteingang</translation>
+    </message>
+    <message>
+        <source>Asked by</source>
+        <translation>Angefragt von</translation>
+    </message>
+    <message>
+        <source>Decided by</source>
+        <translation>Entschieden von</translation>
+    </message>
+    <message>
+        <source>Comment</source>
+        <translation>Kommentar</translation>
+    </message>
+    <message>
+        <source>Articles from pools</source>
+        <translation>Artikel aus Pools</translation>
+    </message>
+    <message>
+        <source>Your decision</source>
+        <translation>Ihre Entscheidung</translation>
+    </message>
+    <message>
+        <source>Approve</source>
+        <translation>Freigeben</translation>
+    </message>
+    <message>
+        <source>Approve this edition? It can be sent then.</source>
+        <translation>Diese Ausgabe freigeben? Sie kann dann versendet werden.</translation>
+    </message>
+    <message>
+        <source>Reject</source>
+        <translation>Ablehnen</translation>
+    </message>
+    <message>
+        <source>Ask for the approval</source>
+        <translation>Um Freigabe bitten</translation>
+    </message>
+    <message>
+        <source>Nobody gets the request yet: set [ApprovalSettings] ApproverUserIds[] or ApproverGroupIds[].</source>
+        <translation>Noch niemand erhält die Anfrage: setzen Sie [ApprovalSettings] ApproverUserIds[] oder ApproverGroupIds[].</translation>
+    </message>
+    <message>
+        <source>%count approvers get it in their collaboration inbox.</source>
+        <translation>%count Freigebende erhalten sie in ihrem Collaboration-Posteingang.</translation>
+    </message>
+    <message>
+        <source>Message to the approvers</source>
+        <translation>Nachricht an die Freigebenden</translation>
+    </message>
+    <message>
+        <source>Ask for approval</source>
+        <translation>Um Freigabe bitten</translation>
+    </message>
+    <message>
+        <source>The request waits for an approver.</source>
+        <translation>Die Anfrage wartet auf eine Freigabe.</translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation>Verlauf</translation>
+    </message>
+    <message>
+        <source>Version %version, asked %time by %name</source>
+        <translation>Version %version, angefragt am %time von %name</translation>
+    </message>
+    <message>
+        <source>decided %time by %name</source>
+        <translation>entschieden am %time von %name</translation>
+    </message>
+    <message>
+        <source>The approval of this edition was never asked for.</source>
+        <translation>Für diese Ausgabe wurde noch nie um Freigabe gebeten.</translation>
+    </message>
+    <message>
+        <source>not asked for yet</source>
+        <translation>noch nicht angefragt</translation>
+    </message>
+    <message>
+        <source>Pick articles for &quot;%name&quot;</source>
+        <translation>Artikel für „%name“ auswählen</translation>
+    </message>
+    <message>
+        <source>Pool</source>
+        <translation>Pool</translation>
+    </message>
+    <message>
+        <source>articles taken</source>
+        <translation>Artikel übernommen</translation>
+    </message>
+    <message>
+        <source>Back to the edition</source>
+        <translation>Zurück zur Ausgabe</translation>
+    </message>
+    <message>
+        <source>The edition is being sent or was sent: its articles cannot change.</source>
+        <translation>Die Ausgabe wird versendet oder wurde versendet: ihre Artikel können sich nicht mehr ändern.</translation>
+    </message>
+    <message>
+        <source>In the edition</source>
+        <translation>In der Ausgabe</translation>
+    </message>
+    <message>
+        <source>removed content %id</source>
+        <translation>entfernter Inhalt %id</translation>
+    </message>
+    <message>
+        <source>Edit the text the edition shows</source>
+        <translation>Den Text bearbeiten, den die Ausgabe zeigt</translation>
+    </message>
+    <message>
+        <source>Edit the text</source>
+        <translation>Text bearbeiten</translation>
+    </message>
+    <message>
+        <source>Take out</source>
+        <translation>Herausnehmen</translation>
+    </message>
+    <message>
+        <source>No article of the pool is in the edition yet.</source>
+        <translation>Noch kein Artikel des Pools ist in der Ausgabe.</translation>
+    </message>
+    <message>
+        <source>Articles of the pool</source>
+        <translation>Artikel des Pools</translation>
+    </message>
+    <message>
+        <source>Class</source>
+        <translation>Klasse</translation>
+    </message>
+    <message>
+        <source>any</source>
+        <translation>beliebig</translation>
+    </message>
+    <message>
+        <source>Published from</source>
+        <translation>Veröffentlicht von</translation>
+    </message>
+    <message>
+        <source>to</source>
+        <translation>bis</translation>
+    </message>
+    <message>
+        <source>Section</source>
+        <translation>Bereich</translation>
+    </message>
+    <message>
+        <source>Tag id</source>
+        <translation>Tag-ID</translation>
+    </message>
+    <message>
+        <source>State</source>
+        <translation>Status</translation>
+    </message>
+    <message>
+        <source>Filter</source>
+        <translation>Filtern</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation>Zurücksetzen</translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation>Alle auswählen</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Titel</translation>
+    </message>
+    <message>
+        <source>Published</source>
+        <translation>Veröffentlicht</translation>
+    </message>
+    <message>
+        <source>in the edition</source>
+        <translation>in der Ausgabe</translation>
+    </message>
+    <message>
+        <source>Take the chosen articles into the edition</source>
+        <translation>Die gewählten Artikel in die Ausgabe übernehmen</translation>
+    </message>
+    <message>
+        <source>%from to %to of %total</source>
+        <translation>%from bis %to von %total</translation>
+    </message>
+    <message>
+        <source>Previous</source>
+        <translation>Zurück</translation>
+    </message>
+    <message>
+        <source>Next</source>
+        <translation>Weiter</translation>
+    </message>
+    <message>
+        <source>No article of the pool matches the filters.</source>
+        <translation>Kein Artikel des Pools passt zu den Filtern.</translation>
+    </message>
+    <message>
+        <source>Edit the article pool &quot;%name&quot;</source>
+        <translation>Artikel-Pool „%name“ bearbeiten</translation>
+    </message>
+    <message>
+        <source>Please check the form</source>
+        <translation>Bitte prüfen Sie das Formular</translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation>Name</translation>
+    </message>
+    <message>
+        <source>For</source>
+        <translation>Für</translation>
+    </message>
+    <message>
+        <source>Every list (a global pool)</source>
+        <translation>Jede Liste (ein globaler Pool)</translation>
+    </message>
+    <message>
+        <source>The global default pool (only for a global pool)</source>
+        <translation>Der globale Standard-Pool (nur für einen globalen Pool)</translation>
+    </message>
+    <message>
+        <source>Searched under the nodes</source>
+        <translation>Gesucht unter den Knoten</translation>
+    </message>
+    <message>
+        <source>Node ids, separated by commas. Now:</source>
+        <translation>Knoten-IDs, durch Kommas getrennt. Jetzt:</translation>
+    </message>
+    <message>
+        <source>Classes</source>
+        <translation>Klassen</translation>
+    </message>
+    <message>
+        <source>None chosen = every class.</source>
+        <translation>Keine gewählt = jede Klasse.</translation>
+    </message>
+    <message>
+        <source>Sections</source>
+        <translation>Bereiche</translation>
+    </message>
+    <message>
+        <source>None chosen = every section.</source>
+        <translation>Keiner gewählt = jeder Bereich.</translation>
+    </message>
+    <message>
+        <source>Tags</source>
+        <translation>Tags</translation>
+    </message>
+    <message>
+        <source>Tag ids, separated by commas; an article needs one of them. Now:</source>
+        <translation>Tag-IDs, durch Kommas getrennt; ein Artikel braucht eines davon. Jetzt:</translation>
+    </message>
+    <message>
+        <source>The tag extension is not active.</source>
+        <translation>Die Tag-Erweiterung ist nicht aktiv.</translation>
+    </message>
+    <message>
+        <source>Object states</source>
+        <translation>Objektzustände</translation>
+    </message>
+    <message>
+        <source>Age</source>
+        <translation>Alter</translation>
+    </message>
+    <message>
+        <source>days (0 = any age)</source>
+        <translation>Tage (0 = beliebiges Alter)</translation>
+    </message>
+    <message>
+        <source>Articles per edition</source>
+        <translation>Artikel pro Ausgabe</translation>
+    </message>
+    <message>
+        <source>the most the auto-fill takes</source>
+        <translation>höchstens so viele übernimmt das automatische Füllen</translation>
+    </message>
+    <message>
+        <source>Order</source>
+        <translation>Reihenfolge</translation>
+    </message>
+    <message>
+        <source>newest first</source>
+        <translation>neueste zuerst</translation>
+    </message>
+    <message>
+        <source>last changed first</source>
+        <translation>zuletzt geänderte zuerst</translation>
+    </message>
+    <message>
+        <source>by priority</source>
+        <translation>nach Priorität</translation>
+    </message>
+    <message>
+        <source>by name</source>
+        <translation>nach Name</translation>
+    </message>
+    <message>
+        <source>The pool finds %count articles now</source>
+        <translation>Der Pool findet jetzt %count Artikel</translation>
+    </message>
+    <message>
+        <source>Nothing matches. Check the nodes, classes and filters.</source>
+        <translation>Nichts passt. Prüfen Sie Knoten, Klassen und Filter.</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation>Speichern</translation>
+    </message>
+    <message>
+        <source>Show the articles</source>
+        <translation>Artikel zeigen</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Abbrechen</translation>
+    </message>
+    <message>
+        <source>Remove the article pool &quot;%name&quot;?</source>
+        <translation>Den Artikel-Pool „%name“ entfernen?</translation>
+    </message>
+    <message>
+        <source>The lists and recurring sends that use it fall back to the default pool. The articles taken into editions stay.</source>
+        <translation>Die Listen und wiederkehrenden Versände, die ihn verwenden, nutzen dann den Standard-Pool. Die in Ausgaben übernommenen Artikel bleiben.</translation>
+    </message>
+    <message>
+        <source>Yes, remove</source>
+        <translation>Ja, entfernen</translation>
+    </message>
+    <message>
+        <source>A pool says where the articles for editions come from: the nodes searched, the classes, sections, tags, states and age. A list uses the pool it names, else a pool made for it, else the global default.</source>
+        <translation>Ein Pool legt fest, woher die Artikel für Ausgaben kommen: die durchsuchten Knoten, die Klassen, Bereiche, Tags, Zustände und das Alter. Eine Liste verwendet den Pool, den sie nennt, sonst einen für sie angelegten, sonst den globalen Standard.</translation>
+    </message>
+    <message>
+        <source>No default pool is stored: the settings are used</source>
+        <translation>Es ist kein Standard-Pool gespeichert: die Einstellungen werden verwendet</translation>
+    </message>
+    <message>
+        <source>Nodes</source>
+        <translation>Knoten</translation>
+    </message>
+    <message>
+        <source>classes</source>
+        <translation>Klassen</translation>
+    </message>
+    <message>
+        <source>at most %count articles</source>
+        <translation>höchstens %count Artikel</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Searched under</source>
+        <translation>Gesucht unter</translation>
+    </message>
+    <message>
+        <source>Filters</source>
+        <translation>Filter</translation>
+    </message>
+    <message>
+        <source>Articles</source>
+        <translation>Artikel</translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation>Aktionen</translation>
+    </message>
+    <message>
+        <source>default</source>
+        <translation>Standard</translation>
+    </message>
+    <message>
+        <source>every list</source>
+        <translation>jede Liste</translation>
+    </message>
+    <message>
+        <source>named by %lists</source>
+        <translation>genannt von %lists</translation>
+    </message>
+    <message>
+        <source>%count sections</source>
+        <translation>%count Bereiche</translation>
+    </message>
+    <message>
+        <source>%count tags</source>
+        <translation>%count Tags</translation>
+    </message>
+    <message>
+        <source>%count states</source>
+        <translation>%count Zustände</translation>
+    </message>
+    <message>
+        <source>%days days</source>
+        <translation>%days Tage</translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation>Entfernen</translation>
+    </message>
+    <message>
+        <source>There is no article pool yet.</source>
+        <translation>Es gibt noch keinen Artikel-Pool.</translation>
+    </message>
+    <message>
+        <source>Make a global default pool, or one for a list.</source>
+        <translation>Legen Sie einen globalen Standard-Pool an oder einen für eine Liste.</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>nein</translation>
+    </message>
+    <message>
+        <source>yes, an edition is sent only after its approval (collaboration inbox)</source>
+        <translation>ja, eine Ausgabe wird erst nach ihrer Freigabe versendet (Collaboration-Posteingang)</translation>
+    </message>
+    <message>
+        <source>Article pool</source>
+        <translation>Artikel-Pool</translation>
+    </message>
+    <message>
+        <source>The pool made for the list, else the global default</source>
+        <translation>Der für die Liste angelegte Pool, sonst der globale Standard</translation>
+    </message>
+    <message>
+        <source>an edition is sent only after its approval</source>
+        <translation>eine Ausgabe wird erst nach ihrer Freigabe versendet</translation>
+    </message>
+    <message>
+        <source>from the settings</source>
+        <translation>aus den Einstellungen</translation>
+    </message>
+    <message>
+        <source>none</source>
+        <translation>keine</translation>
+    </message>
+    <message>
+        <source>Edit the recurring send %id</source>
+        <translation>Wiederkehrenden Versand %id bearbeiten</translation>
+    </message>
+    <message>
+        <source>[ScheduleSettings] Schedules is disabled: the cronjob does not run recurring sends. ext:cjw_newsletter:schedule run does.</source>
+        <translation>[ScheduleSettings] Schedules ist ausgeschaltet: der Cronjob führt keine wiederkehrenden Versände aus. ext:cjw_newsletter:schedule run tut es.</translation>
+    </message>
+    <message>
+        <source>What is sent</source>
+        <translation>Was versendet wird</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Liste</translation>
+    </message>
+    <message>
+        <source>- choose -</source>
+        <translation>- wählen -</translation>
+    </message>
+    <message>
+        <source>with approval</source>
+        <translation>mit Freigabe</translation>
+    </message>
+    <message>
+        <source>Mode</source>
+        <translation>Modus</translation>
+    </message>
+    <message>
+        <source>Send the latest edition of the list that was not sent yet</source>
+        <translation>Die neueste noch nicht versendete Ausgabe der Liste versenden</translation>
+    </message>
+    <message>
+        <source>Copy a template edition and send the copy</source>
+        <translation>Eine Vorlage-Ausgabe kopieren und die Kopie versenden</translation>
+    </message>
+    <message>
+        <source>Template edition</source>
+        <translation>Vorlage-Ausgabe</translation>
+    </message>
+    <message>
+        <source>- only for mode copy -</source>
+        <translation>- nur für den Modus Kopie -</translation>
+    </message>
+    <message>
+        <source>The copy gets the title of the template and the date, and the newsletter articles of the template.</source>
+        <translation>Die Kopie erhält den Titel der Vorlage mit dem Datum und die Newsletter-Artikel der Vorlage.</translation>
+    </message>
+    <message>
+        <source>Auto-fill</source>
+        <translation>Automatisch füllen</translation>
+    </message>
+    <message>
+        <source>Fill the copy with the articles of the pool published since the last send</source>
+        <translation>Die Kopie mit den Artikeln des Pools füllen, die seit dem letzten Versand veröffentlicht wurden</translation>
+    </message>
+    <message>
+        <source>The pool of the list</source>
+        <translation>Der Pool der Liste</translation>
+    </message>
+    <message>
+        <source>Skip the run when there is nothing new (it is logged)</source>
+        <translation>Den Lauf überspringen, wenn es nichts Neues gibt (wird protokolliert)</translation>
+    </message>
+    <message>
+        <source>Condition</source>
+        <translation>Bedingung</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation>Keine</translation>
+    </message>
+    <message>
+        <source>When</source>
+        <translation>Wann</translation>
+    </message>
+    <message>
+        <source>Repeat</source>
+        <translation>Wiederholen</translation>
+    </message>
+    <message>
+        <source>On these weekdays</source>
+        <translation>An diesen Wochentagen</translation>
+    </message>
+    <message>
+        <source>Weekly on</source>
+        <translation>Wöchentlich am</translation>
+    </message>
+    <message>
+        <source>Weekday</source>
+        <translation>Wochentag</translation>
+    </message>
+    <message>
+        <source>Monthly on day</source>
+        <translation>Monatlich am Tag</translation>
+    </message>
+    <message>
+        <source>Day of the month</source>
+        <translation>Tag des Monats</translation>
+    </message>
+    <message>
+        <source>A day beyond the end of a month means its last day (the 31st is the 30th in April).</source>
+        <translation>Ein Tag nach dem Monatsende bedeutet dessen letzten Tag (der 31. ist im April der 30.).</translation>
+    </message>
+    <message>
+        <source>Time</source>
+        <translation>Uhrzeit</translation>
+    </message>
+    <message>
+        <source>Time zone</source>
+        <translation>Zeitzone</translation>
+    </message>
+    <message>
+        <source>Default (%zone)</source>
+        <translation>Standard (%zone)</translation>
+    </message>
+    <message>
+        <source>Next runs</source>
+        <translation>Nächste Läufe</translation>
+    </message>
+    <message>
+        <source>Remove this recurring send?</source>
+        <translation>Diesen wiederkehrenden Versand entfernen?</translation>
+    </message>
+    <message>
+        <source>The editions and sends it made stay; its log is removed.</source>
+        <translation>Die Ausgaben und Versände, die er erstellt hat, bleiben; sein Protokoll wird entfernt.</translation>
+    </message>
+    <message>
+        <source>The cronjob runs the due sends</source>
+        <translation>Der Cronjob führt die fälligen Versände aus</translation>
+    </message>
+    <message>
+        <source>[ScheduleSettings] Schedules is disabled: the cronjob does not run them</source>
+        <translation>[ScheduleSettings] Schedules ist ausgeschaltet: der Cronjob führt sie nicht aus</translation>
+    </message>
+    <message>
+        <source>Last run</source>
+        <translation>Letzter Lauf</translation>
+    </message>
+    <message>
+        <source>The recurring sends have not run yet.</source>
+        <translation>Die wiederkehrenden Versände sind noch nicht gelaufen.</translation>
+    </message>
+    <message>
+        <source>In cron: the part cjw_newsletter_mailqueue_create runs them. By hand:</source>
+        <translation>Im Cron: der Teil cjw_newsletter_mailqueue_create führt sie aus. Von Hand:</translation>
+    </message>
+    <message>
+        <source>What</source>
+        <translation>Was</translation>
+    </message>
+    <message>
+        <source>Next run</source>
+        <translation>Nächster Lauf</translation>
+    </message>
+    <message>
+        <source>list removed</source>
+        <translation>Liste entfernt</translation>
+    </message>
+    <message>
+        <source>Copy of &quot;%name&quot;</source>
+        <translation>Kopie von „%name“</translation>
+    </message>
+    <message>
+        <source>filled from &quot;%pool&quot;</source>
+        <translation>gefüllt aus „%pool“</translation>
+    </message>
+    <message>
+        <source>The latest unsent edition</source>
+        <translation>Die neueste nicht versendete Ausgabe</translation>
+    </message>
+    <message>
+        <source>with a condition</source>
+        <translation>mit einer Bedingung</translation>
+    </message>
+    <message>
+        <source>due</source>
+        <translation>fällig</translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation>Pausieren</translation>
+    </message>
+    <message>
+        <source>Resume</source>
+        <translation>Fortsetzen</translation>
+    </message>
+    <message>
+        <source>Try</source>
+        <translation>Probieren</translation>
+    </message>
+    <message>
+        <source>Say what a run would do now, change nothing</source>
+        <translation>Sagen, was ein Lauf jetzt täte, nichts ändern</translation>
+    </message>
+    <message>
+        <source>Run now</source>
+        <translation>Jetzt ausführen</translation>
+    </message>
+    <message>
+        <source>Run this recurring send now? It makes the send at once.</source>
+        <translation>Diesen wiederkehrenden Versand jetzt ausführen? Der Versand wird sofort erstellt.</translation>
+    </message>
+    <message>
+        <source>There is no recurring send yet.</source>
+        <translation>Es gibt noch keinen wiederkehrenden Versand.</translation>
+    </message>
+    <message>
+        <source>A recurring send sends a list on chosen weekdays, weekly or monthly: a copy of a template edition, or the latest edition that was not sent.</source>
+        <translation>Ein wiederkehrender Versand verschickt eine Liste an gewählten Wochentagen, wöchentlich oder monatlich: eine Kopie einer Vorlage-Ausgabe oder die neueste noch nicht versendete Ausgabe.</translation>
+    </message>
+    <message>
+        <source>Last runs</source>
+        <translation>Letzte Läufe</translation>
+    </message>
+    <message>
+        <source>Schedule</source>
+        <translation>Zeitplan</translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation>Ergebnis</translation>
+    </message>
+    <message>
+        <source>Details</source>
+        <translation>Details</translation>
+    </message>
+    <message>
+        <source>send %id</source>
+        <translation>Versand %id</translation>
+    </message>
+    <message>
+        <source>No run yet.</source>
+        <translation>Noch kein Lauf.</translation>
+    </message>
+    <message>
+        <source>Ask for or give the approval</source>
+        <translation>Um Freigabe bitten oder sie erteilen</translation>
+    </message>
+    <message>
+        <source>The list needs an approval: this version cannot be sent before it is approved.</source>
+        <translation>Die Liste verlangt eine Freigabe: diese Version kann erst nach ihrer Freigabe versendet werden.</translation>
+    </message>
+    <message>
+        <source>Articles from the pool</source>
+        <translation>Artikel aus dem Pool</translation>
+    </message>
+    <message>
+        <source>copy</source>
+        <translation>Kopie</translation>
+    </message>
+    <message>
+        <source>latest</source>
+        <translation>neueste</translation>
+    </message>
+    <message>
+        <source>No recurring send is planned.</source>
+        <translation>Kein wiederkehrender Versand ist geplant.</translation>
+    </message>
+    <message>
+        <source>The cronjob runs them</source>
+        <translation>Der Cronjob führt sie aus</translation>
+    </message>
+    <message>
+        <source>Not run by the cronjob</source>
+        <translation>Nicht vom Cronjob ausgeführt</translation>
+    </message>
+    <message>
+        <source>Approvals</source>
+        <translation>Freigaben</translation>
+    </message>
+    <message>
+        <source>asked %time by %name</source>
+        <translation>angefragt am %time von %name</translation>
+    </message>
+    <message>
+        <source>No edition waits for an approval.</source>
+        <translation>Keine Ausgabe wartet auf eine Freigabe.</translation>
+    </message>
+    <message>
+        <source>Collaboration inbox</source>
+        <translation>Collaboration-Posteingang</translation>
+    </message>
+    <message>
+        <source>pools</source>
+        <translation>Pools</translation>
+    </message>
+    <message>
+        <source>Editors pick articles for an edition from the pool of its list; recurring copies are filled from it.</source>
+        <translation>Die Redaktion wählt Artikel für eine Ausgabe aus dem Pool ihrer Liste; wiederkehrende Kopien werden daraus gefüllt.</translation>
+    </message>
+    <message>
+        <source>Approved</source>
+        <translation>Freigegeben</translation>
+    </message>
+    <message>
+        <source>Rejected</source>
+        <translation>Abgelehnt</translation>
+    </message>
+    <message>
+        <source>Replaced</source>
+        <translation>Ersetzt</translation>
+    </message>
+    <message>
+        <source>Waiting for approval</source>
+        <translation>Wartet auf Freigabe</translation>
+    </message>
+    <message>
+        <source>Asked</source>
+        <translation>Angefragt</translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation>Version</translation>
+    </message>
+    <message>
+        <source>Open the edition</source>
+        <translation>Ausgabe öffnen</translation>
+    </message>
+    <message>
+        <source>Preview</source>
+        <translation>Vorschau</translation>
+    </message>
+    <message>
+        <source>Approval page</source>
+        <translation>Freigabeseite</translation>
+    </message>
+    <message>
+        <source>The edition %id was removed.</source>
+        <translation>Die Ausgabe %id wurde entfernt.</translation>
+    </message>
+    <message>
+        <source>Decision</source>
+        <translation>Entscheidung</translation>
+    </message>
+    <message>
+        <source>The request was replaced by a newer one (the edition changed).</source>
+        <translation>Die Anfrage wurde durch eine neuere ersetzt (die Ausgabe hat sich geändert).</translation>
+    </message>
+    <message>
+        <source>The edition waits for an approver.</source>
+        <translation>Die Ausgabe wartet auf eine Freigabe.</translation>
+    </message>
+    <message>
+        <source>The edition waits for your approval before it is sent.</source>
+        <translation>Die Ausgabe wartet auf Ihre Freigabe, bevor sie versendet wird.</translation>
+    </message>
+    <message>
+        <source>Add comment</source>
+        <translation>Kommentar hinzufügen</translation>
+    </message>
+    <message>
+        <source>Approve &quot;%title&quot;? It can be sent then.</source>
+        <translation>„%title“ freigeben? Die Ausgabe kann dann versendet werden.</translation>
+    </message>
+    <message>
+        <source>Reject &quot;%title&quot;?</source>
+        <translation>„%title“ ablehnen?</translation>
+    </message>
+    <message>
+        <source>Only an approver can approve or reject this request.</source>
+        <translation>Nur Freigebende können diese Anfrage freigeben oder ablehnen.</translation>
+    </message>
+    <message>
+        <source>Participants</source>
+        <translation>Beteiligte</translation>
+    </message>
+    <message>
+        <source>Messages</source>
+        <translation>Nachrichten</translation>
+    </message>
+    <message>
+        <source>There are no messages yet.</source>
+        <translation>Es gibt noch keine Nachrichten.</translation>
+    </message>
+    <message>
+        <source>version %version</source>
+        <translation>Version %version</translation>
+    </message>
+    <message>
+        <source>&quot;%1&quot; was approved for sending</source>
+        <translation>„%1“ wurde zum Versand freigegeben</translation>
+    </message>
+    <message>
+        <source>&quot;%1&quot; was rejected</source>
+        <translation>„%1“ wurde abgelehnt</translation>
+    </message>
+    <message>
+        <source>&quot;%1&quot;: the request was replaced by a newer one</source>
+        <translation>„%1“: die Anfrage wurde durch eine neuere ersetzt</translation>
+    </message>
+    <message>
+        <source>&quot;%1&quot; waits for the approval of the newsletter</source>
+        <translation>„%1“ wartet auf die Freigabe des Newsletters</translation>
+    </message>
+    <message>
+        <source>&quot;%1&quot; waits for your approval before it is sent</source>
+        <translation>„%1“ wartet auf Ihre Freigabe, bevor er versendet wird</translation>
+    </message>
+    <message>
+        <source>[%sitename] The newsletter &quot;%name&quot; waits for your approval</source>
+        <translation>[%sitename] Der Newsletter „%name“ wartet auf Ihre Freigabe</translation>
+    </message>
+    <message>
+        <source>The newsletter edition &quot;%name&quot; waits for your approval at %sitename. It is not sent before it is approved.</source>
+        <translation>Die Newsletter-Ausgabe „%name“ wartet auf %sitename auf Ihre Freigabe. Sie wird erst nach der Freigabe versendet.</translation>
+    </message>
+    <message>
+        <source>If you do not want to receive these notifications, change your settings at:</source>
+        <translation>Wenn Sie diese Benachrichtigungen nicht mehr erhalten möchten, ändern Sie Ihre Einstellungen hier:</translation>
+    </message>
+    <message>
+        <source>[%sitename] The approval of the newsletter &quot;%name&quot;</source>
+        <translation>[%sitename] Die Freigabe des Newsletters „%name“</translation>
+    </message>
+    <message>
+        <source>The approval of the newsletter edition &quot;%name&quot; at %sitename has changed. See the request:</source>
+        <translation>Die Freigabe der Newsletter-Ausgabe „%name“ auf %sitename hat sich geändert. Zur Anfrage:</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/rendering</name>
