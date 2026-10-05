@@ -2,12 +2,12 @@
 /**
  * File throttle.php: rate limits, batches and pauses of the transports.
  *
- * cjw_newsletter 4.2.0, area N1 Deliverability: not implemented yet, answers "not found" (404) until the area writes it.
+ * cjw_newsletter 4.2.0, area N1 Deliverability.
  *
  * @copyright Copyright (C) 1998 - 2026 7x and the Exponential Foundation. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
  */
 
-$Module = $Params['Module'];
-return $Module->handleError( eZError::KERNEL_NOT_FOUND, 'kernel' );
+// The code is in extension/cjw_newsletter/classes/runnable/views/newsletter/throttle.php; this file is the entry point.
+return \Exponential\View\Extension\CjwNewsletter\Newsletter\Throttle::main( __FILE__, get_defined_vars() );
