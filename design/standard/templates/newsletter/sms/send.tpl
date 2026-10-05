@@ -61,7 +61,7 @@
                 <h2>{'Test SMS'|i18n( $i18n )}</h2>
                 <div class="block">
                     <label for="nl-sms-test-phone">{'Mobile number'|i18n( $i18n )}</label>
-                    <input id="nl-sms-test-phone" class="halfbox" type="text" inputmode="tel" autocomplete="off" name="SmsTestPhone" value="{$test_phone|wash}" maxlength="40" placeholder="+49 151 23456789" />
+                    <input id="nl-sms-test-phone" class="box" type="text" inputmode="tel" autocomplete="off" name="SmsTestPhone" value="{$test_phone|wash}" maxlength="40" placeholder="+49 151 23456789" />
                 </div>
                 <p class="nl-hint">{'The test goes only to this number; the placeholders stay as they are.'|i18n( $i18n )}</p>
                 <input class="button" type="submit" name="SmsTestButton" value="{'Send a test SMS'|i18n( $i18n )|wash}"{if $sms_enabled|not} disabled="disabled"{/if} />
