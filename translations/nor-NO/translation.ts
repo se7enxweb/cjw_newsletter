@@ -5860,15 +5860,15 @@ If you did not send this request, ignore this mail: nothing changes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Back to the list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Save the mapping as</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Save mapping</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Back to the list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6161,6 +6161,10 @@ If you did not send this request, ignore this mail: nothing changes.</source>
     </message>
     <message>
         <source>to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the newest first</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

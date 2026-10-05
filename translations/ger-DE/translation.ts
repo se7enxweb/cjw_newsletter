@@ -7236,16 +7236,16 @@ Wenn Sie diese Bitte nicht geschickt haben, beachten Sie diese Mail nicht: Es ä
         <translation>Die Zeilen jetzt in die Liste importieren? Die Herkunft der Einwilligung wird in das Einwilligungsprotokoll jeder Person geschrieben.</translation>
     </message>
     <message>
+        <source>Back to the list</source>
+        <translation>Zurück zur Liste</translation>
+    </message>
+    <message>
         <source>Save the mapping as</source>
         <translation>Zuordnung speichern als</translation>
     </message>
     <message>
         <source>Save mapping</source>
         <translation>Zuordnung speichern</translation>
-    </message>
-    <message>
-        <source>Back to the list</source>
-        <translation>Zurück zur Liste</translation>
     </message>
     <message>
         <source>Subscriptions of the list</source>
@@ -7538,6 +7538,10 @@ Wenn Sie diese Bitte nicht geschickt haben, beachten Sie diese Mail nicht: Es ä
     <message>
         <source>to</source>
         <translation>bis</translation>
+    </message>
+    <message>
+        <source>the newest first</source>
+        <translation>die neuesten zuerst</translation>
     </message>
     <message>
         <source>No subscriber matches the filters.</source>

@@ -6713,16 +6713,16 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
         <translation>Import the rows into the list now? The consent source is written to the consent log of every person.</translation>
     </message>
     <message>
+        <source>Back to the list</source>
+        <translation>Back to the list</translation>
+    </message>
+    <message>
         <source>Save the mapping as</source>
         <translation>Save the mapping as</translation>
     </message>
     <message>
         <source>Save mapping</source>
         <translation>Save mapping</translation>
-    </message>
-    <message>
-        <source>Back to the list</source>
-        <translation>Back to the list</translation>
     </message>
     <message>
         <source>Subscriptions of the list</source>
@@ -7015,6 +7015,10 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
     <message>
         <source>to</source>
         <translation>to</translation>
+    </message>
+    <message>
+        <source>the newest first</source>
+        <translation>the newest first</translation>
     </message>
     <message>
         <source>No subscriber matches the filters.</source>
