@@ -50,6 +50,30 @@
         <source>Blacklist add</source>
         <translation>Blacklist add</translation>
     </message>
+    <message>
+        <source>Add a new Blacklist item</source>
+        <translation>Add a new Blacklist item</translation>
+    </message>
+    <message>
+        <source>Enter the email address.</source>
+        <translation>Enter the email address.</translation>
+    </message>
+    <message>
+        <source>This is not a valid email address.</source>
+        <translation>This is not a valid email address.</translation>
+    </message>
+    <message>
+        <source>The email address is too long.</source>
+        <translation>The email address is too long.</translation>
+    </message>
+    <message>
+        <source>The note is too long (2000 characters at most).</source>
+        <translation>The note is too long (2000 characters at most).</translation>
+    </message>
+    <message>
+        <source>The address %email is on the blacklist already.</source>
+        <translation>The address %email is on the blacklist already.</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/blacklist_item_list</name>
@@ -120,6 +144,10 @@
     <message>
         <source>Remove the selected items from the list above.</source>
         <translation>Remove the selected items from the list above.</translation>
+    </message>
+    <message>
+        <source>Blacklisted email addresses</source>
+        <translation>Blacklisted email addresses</translation>
     </message>
 </context>
 <context>
@@ -1029,6 +1057,10 @@
         <source>Imports (%import_list_count) </source>
         <translation>Imports (%import_list_count) </translation>
     </message>
+    <message>
+        <source>List</source>
+        <translation>List</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/import_view</name>
@@ -1279,6 +1311,50 @@ To edit your newsletter settings please visit the following link:
     <message>
         <source>False</source>
         <translation>False</translation>
+    </message>
+    <message>
+        <source>Remove this mail account?</source>
+        <translation>Remove this mail account?</translation>
+    </message>
+    <message>
+        <source>The mails collected from it stay; no more bounces are collected.</source>
+        <translation>The mails collected from it stay; no more bounces are collected.</translation>
+    </message>
+    <message>
+        <source>Empty: the default of the type (IMAP 143, IMAP with SSL 993, POP3 110, POP3 with SSL 995).</source>
+        <translation>Empty: the default of the type (IMAP 143, IMAP with SSL 993, POP3 110, POP3 with SSL 995).</translation>
+    </message>
+    <message>
+        <source>Leave it empty to keep the stored password.</source>
+        <translation>Leave it empty to keep the stored password.</translation>
+    </message>
+    <message>
+        <source>The mail account was removed. The mails it collected stay.</source>
+        <translation>The mail account was removed. The mails it collected stay.</translation>
+    </message>
+    <message>
+        <source>Enter a valid email address.</source>
+        <translation>Enter a valid email address.</translation>
+    </message>
+    <message>
+        <source>Enter the name of the mail server, for example mail.example.com.</source>
+        <translation>Enter the name of the mail server, for example mail.example.com.</translation>
+    </message>
+    <message>
+        <source>The port is a number from 1 to 65535. Leave it empty for the default of the type.</source>
+        <translation>The port is a number from 1 to 65535. Leave it empty for the default of the type.</translation>
+    </message>
+    <message>
+        <source>Enter the user name.</source>
+        <translation>Enter the user name.</translation>
+    </message>
+    <message>
+        <source>Enter the password.</source>
+        <translation>Enter the password.</translation>
+    </message>
+    <message>
+        <source>The mail account %email was saved.</source>
+        <translation>The mail account %email was saved.</translation>
     </message>
 </context>
 <context>
@@ -1559,6 +1635,10 @@ To edit your newsletter settings please visit the following link:
     <message>
         <source>INI Settings</source>
         <translation>INI Settings</translation>
+    </message>
+    <message>
+        <source>Dashboard</source>
+        <translation>Dashboard</translation>
     </message>
 </context>
 <context>
@@ -2416,6 +2496,10 @@ To edit your newsletter settings please visit the following link:
     <message>
         <source>Import all - disabled</source>
         <translation>Import all - disabled</translation>
+    </message>
+    <message>
+        <source>The file could not be stored in %dir. Check that the web server can write there.</source>
+        <translation>The file could not be stored in %dir. Check that the web server can write there.</translation>
     </message>
 </context>
 <context>
@@ -3420,6 +3504,608 @@ you have to confirm this page.</translation>
     <message>
         <source>or</source>
         <translation>or</translation>
+    </message>
+</context>
+<context>
+    <name>extension/cjw_newsletter</name>
+    <message>
+        <source>A newsletter user with this address is set to "blacklisted" and gets no more mail.</source>
+        <translation>A newsletter user with this address is set to "blacklisted" and gets no more mail.</translation>
+    </message>
+    <message>
+        <source>Mail is never sent to an address on the blacklist, whatever list it subscribes to.</source>
+        <translation>Mail is never sent to an address on the blacklist, whatever list it subscribes to.</translation>
+    </message>
+    <message>
+        <source>Find an address</source>
+        <translation>Find an address</translation>
+    </message>
+    <message>
+        <source>Address or note</source>
+        <translation>Address or note</translation>
+    </message>
+    <message>
+        <source>Filter</source>
+        <translation>Filter</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Clear</translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation>Select all</translation>
+    </message>
+    <message>
+        <source>Select</source>
+        <translation>Select</translation>
+    </message>
+    <message>
+        <source>%count of %all addresses</source>
+        <translation>%count of %all addresses</translation>
+    </message>
+    <message>
+        <source>No address matches "%q".</source>
+        <translation>No address matches "%q".</translation>
+    </message>
+    <message>
+        <source>Show all addresses</source>
+        <translation>Show all addresses</translation>
+    </message>
+    <message>
+        <source>The blacklist is empty.</source>
+        <translation>The blacklist is empty.</translation>
+    </message>
+    <message>
+        <source>Yes, remove</source>
+        <translation>Yes, remove</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Cancel</translation>
+    </message>
+    <message>
+        <source>Subscribers are imported from a CSV file on the subscriptions page of a list. Each upload is listed here.</source>
+        <translation>Subscribers are imported from a CSV file on the subscriptions page of a list. Each upload is listed here.</translation>
+    </message>
+    <message>
+        <source>not imported</source>
+        <translation>not imported</translation>
+    </message>
+    <message>
+        <source>%count imports</source>
+        <translation>%count imports</translation>
+    </message>
+    <message>
+        <source>Per page</source>
+        <translation>Per page</translation>
+    </message>
+    <message>
+        <source>There is no import yet.</source>
+        <translation>There is no import yet.</translation>
+    </message>
+    <message>
+        <source>Open the subscriptions of a list and choose "Import CSV".</source>
+        <translation>Open the subscriptions of a list and choose "Import CSV".</translation>
+    </message>
+    <message>
+        <source>The extension is not installed in this database yet</source>
+        <translation>The extension is not installed in this database yet</translation>
+    </message>
+    <message>
+        <source>These tables are missing: %tables.</source>
+        <translation>These tables are missing: %tables.</translation>
+    </message>
+    <message>
+        <source>They are created from the schema file share/db_schema.dba of the extension, by the setup wizard, by the installer or with the schema tools of Exponential.</source>
+        <translation>They are created from the schema file share/db_schema.dba of the extension, by the setup wizard, by the installer or with the schema tools of Exponential.</translation>
+    </message>
+    <message>
+        <source>lists</source>
+        <translation>lists</translation>
+    </message>
+    <message>
+        <source>subscribers</source>
+        <translation>subscribers</translation>
+    </message>
+    <message>
+        <source>editions</source>
+        <translation>editions</translation>
+    </message>
+    <message>
+        <source>blacklisted</source>
+        <translation>blacklisted</translation>
+    </message>
+    <message>
+        <source>Sends by %method</source>
+        <translation>Sends by %method</translation>
+    </message>
+    <message>
+        <source>Writes mails to files</source>
+        <translation>Writes mails to files</translation>
+    </message>
+    <message>
+        <source>%count to look at</source>
+        <translation>%count to look at</translation>
+    </message>
+    <message>
+        <source>No problems</source>
+        <translation>No problems</translation>
+    </message>
+    <message>
+        <source>Subscribers</source>
+        <translation>Subscribers</translation>
+    </message>
+    <message>
+        <source>users</source>
+        <translation>users</translation>
+    </message>
+    <message>
+        <source>approved</source>
+        <translation>approved</translation>
+    </message>
+    <message>
+        <source>waiting</source>
+        <translation>waiting</translation>
+    </message>
+    <message>
+        <source>bounced</source>
+        <translation>bounced</translation>
+    </message>
+    <message>
+        <source>Users</source>
+        <translation>Users</translation>
+    </message>
+    <message>
+        <source>Blacklists</source>
+        <translation>Blacklists</translation>
+    </message>
+    <message>
+        <source>Imports</source>
+        <translation>Imports</translation>
+    </message>
+    <message>
+        <source>Sending</source>
+        <translation>Sending</translation>
+    </message>
+    <message>
+        <source>sending</source>
+        <translation>sending</translation>
+    </message>
+    <message>
+        <source>finished</source>
+        <translation>finished</translation>
+    </message>
+    <message>
+        <source>Transport</source>
+        <translation>Transport</translation>
+    </message>
+    <message>
+        <source>Outbox</source>
+        <translation>Outbox</translation>
+    </message>
+    <message>
+        <source>%count mails</source>
+        <translation>%count mails</translation>
+    </message>
+    <message>
+        <source>last</source>
+        <translation>last</translation>
+    </message>
+    <message>
+        <source>Last send run</source>
+        <translation>Last send run</translation>
+    </message>
+    <message>
+        <source>The mail queue has not run yet.</source>
+        <translation>The mail queue has not run yet.</translation>
+    </message>
+    <message>
+        <source>Bounces</source>
+        <translation>Bounces</translation>
+    </message>
+    <message>
+        <source>active accounts</source>
+        <translation>active accounts</translation>
+    </message>
+    <message>
+        <source>collected mails</source>
+        <translation>collected mails</translation>
+    </message>
+    <message>
+        <source>not parsed</source>
+        <translation>not parsed</translation>
+    </message>
+    <message>
+        <source>Last run</source>
+        <translation>Last run</translation>
+    </message>
+    <message>
+        <source>The mail accounts have not been read yet.</source>
+        <translation>The mail accounts have not been read yet.</translation>
+    </message>
+    <message>
+        <source>Mail accounts</source>
+        <translation>Mail accounts</translation>
+    </message>
+    <message>
+        <source>Run now</source>
+        <translation>Run now</translation>
+    </message>
+    <message>
+        <source>The cronjob parts do this on a schedule. Here you can run them by hand; the run goes on in the background.</source>
+        <translation>The cronjob parts do this on a schedule. Here you can run them by hand; the run goes on in the background.</translation>
+    </message>
+    <message>
+        <source>Create the mail queue and send the mails now?</source>
+        <translation>Create the mail queue and send the mails now?</translation>
+    </message>
+    <message>
+        <source>Send now</source>
+        <translation>Send now</translation>
+    </message>
+    <message>
+        <source>Count only</source>
+        <translation>Count only</translation>
+    </message>
+    <message>
+        <source>Say what a run would do, change nothing</source>
+        <translation>Say what a run would do, change nothing</translation>
+    </message>
+    <message>
+        <source>Read the mail accounts and parse the mails now?</source>
+        <translation>Read the mail accounts and parse the mails now?</translation>
+    </message>
+    <message>
+        <source>Process the mail accounts</source>
+        <translation>Process the mail accounts</translation>
+    </message>
+    <message>
+        <source>In cron:</source>
+        <translation>In cron:</translation>
+    </message>
+    <message>
+        <source>Problems and hints</source>
+        <translation>Problems and hints</translation>
+    </message>
+    <message>
+        <source>Problem</source>
+        <translation>Problem</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Warning</translation>
+    </message>
+    <message>
+        <source>Hint</source>
+        <translation>Hint</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation>Open</translation>
+    </message>
+    <message>
+        <source>Remove these subscriptions and mails? This cannot be undone.</source>
+        <translation>Remove these subscriptions and mails? This cannot be undone.</translation>
+    </message>
+    <message>
+        <source>Remove them</source>
+        <translation>Remove them</translation>
+    </message>
+    <message>
+        <source>Nothing to report: the lists have subscribers, the mail queue runs and nothing is stuck.</source>
+        <translation>Nothing to report: the lists have subscribers, the mail queue runs and nothing is stuck.</translation>
+    </message>
+    <message>
+        <source>Lists</source>
+        <translation>Lists</translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation>Name</translation>
+    </message>
+    <message>
+        <source>Approved</source>
+        <translation>Approved</translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <translation>Waiting</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>All</translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation>Actions</translation>
+    </message>
+    <message>
+        <source>Subscriptions</source>
+        <translation>Subscriptions</translation>
+    </message>
+    <message>
+        <source>Import CSV</source>
+        <translation>Import CSV</translation>
+    </message>
+    <message>
+        <source>There is no newsletter list yet.</source>
+        <translation>There is no newsletter list yet.</translation>
+    </message>
+    <message>
+        <source>Last sends</source>
+        <translation>Last sends</translation>
+    </message>
+    <message>
+        <source>Edition</source>
+        <translation>Edition</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Status</translation>
+    </message>
+    <message>
+        <source>Mails</source>
+        <translation>Mails</translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation>Sent</translation>
+    </message>
+    <message>
+        <source>Failed</source>
+        <translation>Failed</translation>
+    </message>
+    <message>
+        <source>Created</source>
+        <translation>Created</translation>
+    </message>
+    <message>
+        <source>Nothing was sent yet.</source>
+        <translation>Nothing was sent yet.</translation>
+    </message>
+    <message>
+        <source>Newsletter systems</source>
+        <translation>Newsletter systems</translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation>Remove</translation>
+    </message>
+    <message>
+        <source>Collect reads the active mail accounts and stores the new mails; Parse looks at the stored mails and sets the status of the users that bounced. Both run in the background.</source>
+        <translation>Collect reads the active mail accounts and stores the new mails; Parse looks at the stored mails and sets the status of the users that bounced. Both run in the background.</translation>
+    </message>
+    <message>
+        <source>No mail account is active.</source>
+        <translation>No mail account is active.</translation>
+    </message>
+    <message>
+        <source>bounce</source>
+        <translation>bounce</translation>
+    </message>
+    <message>
+        <source>No mail was collected yet.</source>
+        <translation>No mail was collected yet.</translation>
+    </message>
+    <message>
+        <source>The newsletter reads these accounts for bounces and replies. Only active accounts are read.</source>
+        <translation>The newsletter reads these accounts for bounces and replies. Only active accounts are read.</translation>
+    </message>
+    <message>
+        <source>active</source>
+        <translation>active</translation>
+    </message>
+    <message>
+        <source>not active</source>
+        <translation>not active</translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation>Edit</translation>
+    </message>
+    <message>
+        <source>There is no mail account yet.</source>
+        <translation>There is no mail account yet.</translation>
+    </message>
+    <message>
+        <source>Add the account that receives the bounces of the newsletter mails.</source>
+        <translation>Add the account that receives the bounces of the newsletter mails.</translation>
+    </message>
+    <message>
+        <source>The expected format of the file, with example rows:</source>
+        <translation>The expected format of the file, with example rows:</translation>
+    </message>
+    <message>
+        <source>Address, name or organisation</source>
+        <translation>Address, name or organisation</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>List</translation>
+    </message>
+    <message>
+        <source>Details</source>
+        <translation>Details</translation>
+    </message>
+    <message>
+        <source>%count of %all users</source>
+        <translation>%count of %all users</translation>
+    </message>
+    <message>
+        <source>No user matches the filter.</source>
+        <translation>No user matches the filter.</translation>
+    </message>
+    <message>
+        <source>Show all users</source>
+        <translation>Show all users</translation>
+    </message>
+    <message>
+        <source>There is no newsletter user yet.</source>
+        <translation>There is no newsletter user yet.</translation>
+    </message>
+    <message>
+        <source>Users subscribe through the subscription form, or you create them here or import a CSV file into a list.</source>
+        <translation>Users subscribe through the subscription form, or you create them here or import a CSV file into a list.</translation>
+    </message>
+    <message>
+        <source>Background run</source>
+        <translation>Background run</translation>
+    </message>
+    <message>
+        <source>starting</source>
+        <translation>starting</translation>
+    </message>
+    <message>
+        <source>running</source>
+        <translation>running</translation>
+    </message>
+    <message>
+        <source>failed</source>
+        <translation>failed</translation>
+    </message>
+    <message>
+        <source>unknown</source>
+        <translation>unknown</translation>
+    </message>
+    <message>
+        <source>The tables of the extension are not created yet: %tables.</source>
+        <translation>The tables of the extension are not created yet: %tables.</translation>
+    </message>
+    <message>
+        <source>The newsletter folder (cjw_newsletter.ini, RootFolderNodeId=%node) does not exist. The newsletter systems cannot be listed.</source>
+        <translation>The newsletter folder (cjw_newsletter.ini, RootFolderNodeId=%node) does not exist. The newsletter systems cannot be listed.</translation>
+    </message>
+    <message>
+        <source>There is no newsletter list yet. Create a newsletter system and a list below the newsletter folder.</source>
+        <translation>There is no newsletter list yet. Create a newsletter system and a list below the newsletter folder.</translation>
+    </message>
+    <message>
+        <source>Mails are written to files (%dir), not sent: TransportMethodCronjob is "file".</source>
+        <translation>Mails are written to files (%dir), not sent: TransportMethodCronjob is "file".</translation>
+    </message>
+    <message>
+        <source>The outbox %dir is not writable by the web server.</source>
+        <translation>The outbox %dir is not writable by the web server.</translation>
+    </message>
+    <message>
+        <source>The transport is "smtp" but SmtpTransportServer is empty.</source>
+        <translation>The transport is "smtp" but SmtpTransportServer is empty.</translation>
+    </message>
+    <message>
+        <source>The default sender address is %sender. Set EmailSender in cjw_newsletter.ini or on each list.</source>
+        <translation>The default sender address is %sender. Set EmailSender in cjw_newsletter.ini or on each list.</translation>
+    </message>
+    <message>
+        <source>%subscriptions subscriptions belong to newsletter users that no longer exist and %items waiting mails can never be sent.</source>
+        <translation>%subscriptions subscriptions belong to newsletter users that no longer exist and %items waiting mails can never be sent.</translation>
+    </message>
+    <message>
+        <source>%count newsletter users are marked as bounced; they get no mail.</source>
+        <translation>%count newsletter users are marked as bounced; they get no mail.</translation>
+    </message>
+    <message>
+        <source>%count sends are waiting for more than a day. Is the cronjob running?</source>
+        <translation>%count sends are waiting for more than a day. Is the cronjob running?</translation>
+    </message>
+    <message>
+        <source>%count mails could not be sent (aborted items).</source>
+        <translation>%count mails could not be sent (aborted items).</translation>
+    </message>
+    <message>
+        <source>The mail queue has not run yet. Put "php runcronjobs.php cjw_newsletter" in cron.</source>
+        <translation>The mail queue has not run yet. Put "php runcronjobs.php cjw_newsletter" in cron.</translation>
+    </message>
+    <message>
+        <source>%count collected mails are not parsed yet.</source>
+        <translation>%count collected mails are not parsed yet.</translation>
+    </message>
+    <message>
+        <source>No mail account is active, so bounces are not collected.</source>
+        <translation>No mail account is active, so bounces are not collected.</translation>
+    </message>
+    <message>
+        <source>You do not have the permission for this action.</source>
+        <translation>You do not have the permission for this action.</translation>
+    </message>
+    <message>
+        <source>The run could not be started: %reason</source>
+        <translation>The run could not be started: %reason</translation>
+    </message>
+    <message>
+        <source>scheduled</source>
+        <translation>scheduled</translation>
+    </message>
+    <message>
+        <source>waiting for the queue</source>
+        <translation>waiting for the queue</translation>
+    </message>
+    <message>
+        <source>queued</source>
+        <translation>queued</translation>
+    </message>
+    <message>
+        <source>aborted</source>
+        <translation>aborted</translation>
+    </message>
+    <message>
+        <source>Confirmed</source>
+        <translation>Confirmed</translation>
+    </message>
+    <message>
+        <source>Pending</source>
+        <translation>Pending</translation>
+    </message>
+    <message>
+        <source>Removed</source>
+        <translation>Removed</translation>
+    </message>
+    <message>
+        <source>Bounced</source>
+        <translation>Bounced</translation>
+    </message>
+    <message>
+        <source>Blacklisted</source>
+        <translation>Blacklisted</translation>
+    </message>
+    <message>
+        <source>done</source>
+        <translation>done</translation>
+    </message>
+    <message>
+        <source>Newsletter</source>
+        <translation>Newsletter</translation>
+    </message>
+    <message>
+        <source>Dashboard</source>
+        <translation>Dashboard</translation>
+    </message>
+</context>
+<context>
+    <name>cjw_newsletter/blacklist_item_remove</name>
+    <message>
+        <source>Remove from the blacklist</source>
+        <translation>Remove from the blacklist</translation>
+    </message>
+    <message>
+        <source>Remove these addresses from the blacklist?</source>
+        <translation>Remove these addresses from the blacklist?</translation>
+    </message>
+    <message>
+        <source>A newsletter user with such an address is set back to "confirmed" and gets mail again.</source>
+        <translation>A newsletter user with such an address is set back to "confirmed" and gets mail again.</translation>
+    </message>
+    <message>
+        <source>Select at least one address to remove from the blacklist.</source>
+        <translation>Select at least one address to remove from the blacklist.</translation>
+    </message>
+    <message>
+        <source>%count addresses were removed from the blacklist.</source>
+        <translation>%count addresses were removed from the blacklist.</translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation>Remove</translation>
     </message>
 </context>
 </TS>

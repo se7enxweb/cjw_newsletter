@@ -54,6 +54,30 @@
         <source>Blacklist add</source>
         <translation>Zur Blacklist hinzufügen</translation>
     </message>
+    <message>
+        <source>Add a new Blacklist item</source>
+        <translation>Neuen Blacklisteintrag hinzufügen</translation>
+    </message>
+    <message>
+        <source>Enter the email address.</source>
+        <translation>Geben Sie die E-Mail-Adresse ein.</translation>
+    </message>
+    <message>
+        <source>This is not a valid email address.</source>
+        <translation>Das ist keine gültige E-Mail-Adresse.</translation>
+    </message>
+    <message>
+        <source>The email address is too long.</source>
+        <translation>Die E-Mail-Adresse ist zu lang.</translation>
+    </message>
+    <message>
+        <source>The note is too long (2000 characters at most).</source>
+        <translation>Die Notiz ist zu lang (höchstens 2000 Zeichen).</translation>
+    </message>
+    <message>
+        <source>The address %email is on the blacklist already.</source>
+        <translation>Die Adresse %email steht schon auf der Blacklist.</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/blacklist_item_list</name>
@@ -148,6 +172,10 @@
     <message>
         <source>Remove the selected items from the list above.</source>
         <translation type="unfinished">Die ausgewählten Elemente von obiger Liste entfernen.</translation>
+    </message>
+    <message>
+        <source>Blacklisted email addresses</source>
+        <translation>E-Mail-Adressen auf der Blacklist</translation>
     </message>
 </context>
 <context>
@@ -1069,6 +1097,10 @@
         <source>Imports (%import_list_count) </source>
         <translation>Importe (%import_list_count) </translation>
     </message>
+    <message>
+        <source>List</source>
+        <translation>Liste</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/import_view</name>
@@ -1377,6 +1409,50 @@ Zur Bearbeitung der Newslettereinstellungen bitte auf folgenden Link klicken:
     <message>
         <source>False</source>
         <translation>Nein</translation>
+    </message>
+    <message>
+        <source>Remove this mail account?</source>
+        <translation>Dieses Mailkonto entfernen?</translation>
+    </message>
+    <message>
+        <source>The mails collected from it stay; no more bounces are collected.</source>
+        <translation>Die davon gesammelten Mails bleiben; es werden keine Rückläufer mehr gesammelt.</translation>
+    </message>
+    <message>
+        <source>Empty: the default of the type (IMAP 143, IMAP with SSL 993, POP3 110, POP3 with SSL 995).</source>
+        <translation>Leer: der Standard des Typs (IMAP 143, IMAP mit SSL 993, POP3 110, POP3 mit SSL 995).</translation>
+    </message>
+    <message>
+        <source>Leave it empty to keep the stored password.</source>
+        <translation>Leer lassen, um das gespeicherte Passwort zu behalten.</translation>
+    </message>
+    <message>
+        <source>The mail account was removed. The mails it collected stay.</source>
+        <translation>Das Mailkonto wurde entfernt. Die davon gesammelten Mails bleiben.</translation>
+    </message>
+    <message>
+        <source>Enter a valid email address.</source>
+        <translation>Geben Sie eine gültige E-Mail-Adresse ein.</translation>
+    </message>
+    <message>
+        <source>Enter the name of the mail server, for example mail.example.com.</source>
+        <translation>Geben Sie den Namen des Mailservers ein, zum Beispiel mail.example.com.</translation>
+    </message>
+    <message>
+        <source>The port is a number from 1 to 65535. Leave it empty for the default of the type.</source>
+        <translation>Der Port ist eine Zahl von 1 bis 65535. Leer lassen für den Standard des Typs.</translation>
+    </message>
+    <message>
+        <source>Enter the user name.</source>
+        <translation>Geben Sie den Benutzernamen ein.</translation>
+    </message>
+    <message>
+        <source>Enter the password.</source>
+        <translation>Geben Sie das Passwort ein.</translation>
+    </message>
+    <message>
+        <source>The mail account %email was saved.</source>
+        <translation>Das Mailkonto %email wurde gespeichert.</translation>
     </message>
 </context>
 <context>
@@ -1773,6 +1849,10 @@ Zur Bearbeitung der Newslettereinstellungen bitte auf folgenden Link klicken:
     <message>
         <source>INI Settings</source>
         <translation>INI Einstellungen</translation>
+    </message>
+    <message>
+        <source>Dashboard</source>
+        <translation>Übersicht</translation>
     </message>
 </context>
 <context>
@@ -2778,6 +2858,10 @@ Zur Bearbeitung der Newslettereinstellungen bitte auf folgenden Link klicken:
     <message>
         <source>Import all - disabled</source>
         <translation>Alle importieren - deaktiviert</translation>
+    </message>
+    <message>
+        <source>The file could not be stored in %dir. Check that the web server can write there.</source>
+        <translation>Die Datei konnte nicht in %dir gespeichert werden. Prüfen Sie, ob der Webserver dort schreiben darf.</translation>
     </message>
 </context>
 <context>
@@ -3943,6 +4027,608 @@ müssen Sie diese Seite bestätigen.</translation>
     <message>
         <source>or</source>
         <translation>oder</translation>
+    </message>
+</context>
+<context>
+    <name>extension/cjw_newsletter</name>
+    <message>
+        <source>A newsletter user with this address is set to "blacklisted" and gets no more mail.</source>
+        <translation>Ein Newsletter-Benutzer mit dieser Adresse wird auf "auf der Blacklist" gesetzt und bekommt keine Mails mehr.</translation>
+    </message>
+    <message>
+        <source>Mail is never sent to an address on the blacklist, whatever list it subscribes to.</source>
+        <translation>An eine Adresse auf der Blacklist wird nie Mail gesendet, egal welche Liste sie abonniert.</translation>
+    </message>
+    <message>
+        <source>Find an address</source>
+        <translation>Adresse suchen</translation>
+    </message>
+    <message>
+        <source>Address or note</source>
+        <translation>Adresse oder Notiz</translation>
+    </message>
+    <message>
+        <source>Filter</source>
+        <translation>Filtern</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Zurücksetzen</translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation>Alle auswählen</translation>
+    </message>
+    <message>
+        <source>Select</source>
+        <translation>Auswählen</translation>
+    </message>
+    <message>
+        <source>%count of %all addresses</source>
+        <translation>%count von %all Adressen</translation>
+    </message>
+    <message>
+        <source>No address matches "%q".</source>
+        <translation>Keine Adresse passt zu "%q".</translation>
+    </message>
+    <message>
+        <source>Show all addresses</source>
+        <translation>Alle Adressen zeigen</translation>
+    </message>
+    <message>
+        <source>The blacklist is empty.</source>
+        <translation>Die Blacklist ist leer.</translation>
+    </message>
+    <message>
+        <source>Yes, remove</source>
+        <translation>Ja, entfernen</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Abbrechen</translation>
+    </message>
+    <message>
+        <source>Subscribers are imported from a CSV file on the subscriptions page of a list. Each upload is listed here.</source>
+        <translation>Abonnenten werden auf der Abonnementseite einer Liste aus einer CSV-Datei importiert. Jeder Upload steht hier.</translation>
+    </message>
+    <message>
+        <source>not imported</source>
+        <translation>nicht importiert</translation>
+    </message>
+    <message>
+        <source>%count imports</source>
+        <translation>%count Importe</translation>
+    </message>
+    <message>
+        <source>Per page</source>
+        <translation>Pro Seite</translation>
+    </message>
+    <message>
+        <source>There is no import yet.</source>
+        <translation>Es gibt noch keinen Import.</translation>
+    </message>
+    <message>
+        <source>Open the subscriptions of a list and choose "Import CSV".</source>
+        <translation>Öffnen Sie die Abonnements einer Liste und wählen Sie "CSV importieren".</translation>
+    </message>
+    <message>
+        <source>The extension is not installed in this database yet</source>
+        <translation>Die Erweiterung ist in dieser Datenbank noch nicht installiert</translation>
+    </message>
+    <message>
+        <source>These tables are missing: %tables.</source>
+        <translation>Diese Tabellen fehlen: %tables.</translation>
+    </message>
+    <message>
+        <source>They are created from the schema file share/db_schema.dba of the extension, by the setup wizard, by the installer or with the schema tools of Exponential.</source>
+        <translation>Sie werden aus der Schemadatei share/db_schema.dba der Erweiterung angelegt: vom Einrichtungsassistenten, vom Installer oder mit den Schema-Werkzeugen von Exponential.</translation>
+    </message>
+    <message>
+        <source>lists</source>
+        <translation>Listen</translation>
+    </message>
+    <message>
+        <source>subscribers</source>
+        <translation>Abonnenten</translation>
+    </message>
+    <message>
+        <source>editions</source>
+        <translation>Ausgaben</translation>
+    </message>
+    <message>
+        <source>blacklisted</source>
+        <translation>auf der Blacklist</translation>
+    </message>
+    <message>
+        <source>Sends by %method</source>
+        <translation>Versand per %method</translation>
+    </message>
+    <message>
+        <source>Writes mails to files</source>
+        <translation>Schreibt Mails in Dateien</translation>
+    </message>
+    <message>
+        <source>%count to look at</source>
+        <translation>%count zu prüfen</translation>
+    </message>
+    <message>
+        <source>No problems</source>
+        <translation>Keine Probleme</translation>
+    </message>
+    <message>
+        <source>Subscribers</source>
+        <translation>Abonnenten</translation>
+    </message>
+    <message>
+        <source>users</source>
+        <translation>Benutzer</translation>
+    </message>
+    <message>
+        <source>approved</source>
+        <translation>freigegeben</translation>
+    </message>
+    <message>
+        <source>waiting</source>
+        <translation>wartend</translation>
+    </message>
+    <message>
+        <source>bounced</source>
+        <translation>zurückgewiesen</translation>
+    </message>
+    <message>
+        <source>Users</source>
+        <translation>Benutzer</translation>
+    </message>
+    <message>
+        <source>Blacklists</source>
+        <translation>Blacklists</translation>
+    </message>
+    <message>
+        <source>Imports</source>
+        <translation>Importe</translation>
+    </message>
+    <message>
+        <source>Sending</source>
+        <translation>Versand</translation>
+    </message>
+    <message>
+        <source>sending</source>
+        <translation>wird gesendet</translation>
+    </message>
+    <message>
+        <source>finished</source>
+        <translation>beendet</translation>
+    </message>
+    <message>
+        <source>Transport</source>
+        <translation>Transport</translation>
+    </message>
+    <message>
+        <source>Outbox</source>
+        <translation>Postausgang</translation>
+    </message>
+    <message>
+        <source>%count mails</source>
+        <translation>%count Mails</translation>
+    </message>
+    <message>
+        <source>last</source>
+        <translation>zuletzt</translation>
+    </message>
+    <message>
+        <source>Last send run</source>
+        <translation>Letzter Versandlauf</translation>
+    </message>
+    <message>
+        <source>The mail queue has not run yet.</source>
+        <translation>Die Mail-Warteschlange ist noch nicht gelaufen.</translation>
+    </message>
+    <message>
+        <source>Bounces</source>
+        <translation>Rückläufer</translation>
+    </message>
+    <message>
+        <source>active accounts</source>
+        <translation>aktive Konten</translation>
+    </message>
+    <message>
+        <source>collected mails</source>
+        <translation>gesammelte Mails</translation>
+    </message>
+    <message>
+        <source>not parsed</source>
+        <translation>nicht ausgewertet</translation>
+    </message>
+    <message>
+        <source>Last run</source>
+        <translation>Letzter Lauf</translation>
+    </message>
+    <message>
+        <source>The mail accounts have not been read yet.</source>
+        <translation>Die Mailkonten wurden noch nicht gelesen.</translation>
+    </message>
+    <message>
+        <source>Mail accounts</source>
+        <translation>Mailkonten</translation>
+    </message>
+    <message>
+        <source>Run now</source>
+        <translation>Jetzt ausführen</translation>
+    </message>
+    <message>
+        <source>The cronjob parts do this on a schedule. Here you can run them by hand; the run goes on in the background.</source>
+        <translation>Die Cronjob-Teile erledigen das nach Zeitplan. Hier können Sie sie von Hand starten; der Lauf geht im Hintergrund weiter.</translation>
+    </message>
+    <message>
+        <source>Create the mail queue and send the mails now?</source>
+        <translation>Die Mail-Warteschlange jetzt anlegen und die Mails senden?</translation>
+    </message>
+    <message>
+        <source>Send now</source>
+        <translation>Jetzt senden</translation>
+    </message>
+    <message>
+        <source>Count only</source>
+        <translation>Nur zählen</translation>
+    </message>
+    <message>
+        <source>Say what a run would do, change nothing</source>
+        <translation>Sagen, was ein Lauf täte, nichts ändern</translation>
+    </message>
+    <message>
+        <source>Read the mail accounts and parse the mails now?</source>
+        <translation>Die Mailkonten jetzt lesen und die Mails auswerten?</translation>
+    </message>
+    <message>
+        <source>Process the mail accounts</source>
+        <translation>Mailkonten verarbeiten</translation>
+    </message>
+    <message>
+        <source>In cron:</source>
+        <translation>In cron:</translation>
+    </message>
+    <message>
+        <source>Problems and hints</source>
+        <translation>Probleme und Hinweise</translation>
+    </message>
+    <message>
+        <source>Problem</source>
+        <translation>Problem</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Warnung</translation>
+    </message>
+    <message>
+        <source>Hint</source>
+        <translation>Hinweis</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation>Öffnen</translation>
+    </message>
+    <message>
+        <source>Remove these subscriptions and mails? This cannot be undone.</source>
+        <translation>Diese Abonnements und Mails entfernen? Das lässt sich nicht rückgängig machen.</translation>
+    </message>
+    <message>
+        <source>Remove them</source>
+        <translation>Entfernen</translation>
+    </message>
+    <message>
+        <source>Nothing to report: the lists have subscribers, the mail queue runs and nothing is stuck.</source>
+        <translation>Nichts zu melden: die Listen haben Abonnenten, die Warteschlange läuft und nichts hängt.</translation>
+    </message>
+    <message>
+        <source>Lists</source>
+        <translation>Listen</translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation>Name</translation>
+    </message>
+    <message>
+        <source>Approved</source>
+        <translation>Freigegeben</translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <translation>Wartend</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Alle</translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation>Aktionen</translation>
+    </message>
+    <message>
+        <source>Subscriptions</source>
+        <translation>Abonnements</translation>
+    </message>
+    <message>
+        <source>Import CSV</source>
+        <translation>CSV importieren</translation>
+    </message>
+    <message>
+        <source>There is no newsletter list yet.</source>
+        <translation>Es gibt noch keine Newsletter-Liste.</translation>
+    </message>
+    <message>
+        <source>Last sends</source>
+        <translation>Letzte Sendungen</translation>
+    </message>
+    <message>
+        <source>Edition</source>
+        <translation>Ausgabe</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Status</translation>
+    </message>
+    <message>
+        <source>Mails</source>
+        <translation>Mails</translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation>Gesendet</translation>
+    </message>
+    <message>
+        <source>Failed</source>
+        <translation>Fehlgeschlagen</translation>
+    </message>
+    <message>
+        <source>Created</source>
+        <translation>Erstellt</translation>
+    </message>
+    <message>
+        <source>Nothing was sent yet.</source>
+        <translation>Es wurde noch nichts gesendet.</translation>
+    </message>
+    <message>
+        <source>Newsletter systems</source>
+        <translation>Newsletter-Systeme</translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation>Entfernen</translation>
+    </message>
+    <message>
+        <source>Collect reads the active mail accounts and stores the new mails; Parse looks at the stored mails and sets the status of the users that bounced. Both run in the background.</source>
+        <translation>Sammeln liest die aktiven Mailkonten und speichert die neuen Mails; Auswerten prüft die gespeicherten Mails und setzt den Status der Benutzer, deren Mail zurückkam. Beides läuft im Hintergrund.</translation>
+    </message>
+    <message>
+        <source>No mail account is active.</source>
+        <translation>Kein Mailkonto ist aktiv.</translation>
+    </message>
+    <message>
+        <source>bounce</source>
+        <translation>Rückläufer</translation>
+    </message>
+    <message>
+        <source>No mail was collected yet.</source>
+        <translation>Es wurde noch keine Mail gesammelt.</translation>
+    </message>
+    <message>
+        <source>The newsletter reads these accounts for bounces and replies. Only active accounts are read.</source>
+        <translation>Der Newsletter liest diese Konten nach Rückläufern und Antworten. Nur aktive Konten werden gelesen.</translation>
+    </message>
+    <message>
+        <source>active</source>
+        <translation>aktiv</translation>
+    </message>
+    <message>
+        <source>not active</source>
+        <translation>nicht aktiv</translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation>Bearbeiten</translation>
+    </message>
+    <message>
+        <source>There is no mail account yet.</source>
+        <translation>Es gibt noch kein Mailkonto.</translation>
+    </message>
+    <message>
+        <source>Add the account that receives the bounces of the newsletter mails.</source>
+        <translation>Legen Sie das Konto an, das die Rückläufer der Newsletter-Mails erhält.</translation>
+    </message>
+    <message>
+        <source>The expected format of the file, with example rows:</source>
+        <translation>Das erwartete Format der Datei, mit Beispielzeilen:</translation>
+    </message>
+    <message>
+        <source>Address, name or organisation</source>
+        <translation>Adresse, Name oder Organisation</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Liste</translation>
+    </message>
+    <message>
+        <source>Details</source>
+        <translation>Details</translation>
+    </message>
+    <message>
+        <source>%count of %all users</source>
+        <translation>%count von %all Benutzern</translation>
+    </message>
+    <message>
+        <source>No user matches the filter.</source>
+        <translation>Kein Benutzer passt zum Filter.</translation>
+    </message>
+    <message>
+        <source>Show all users</source>
+        <translation>Alle Benutzer zeigen</translation>
+    </message>
+    <message>
+        <source>There is no newsletter user yet.</source>
+        <translation>Es gibt noch keinen Newsletter-Benutzer.</translation>
+    </message>
+    <message>
+        <source>Users subscribe through the subscription form, or you create them here or import a CSV file into a list.</source>
+        <translation>Benutzer abonnieren über das Abonnementformular, oder Sie legen sie hier an oder importieren eine CSV-Datei in eine Liste.</translation>
+    </message>
+    <message>
+        <source>Background run</source>
+        <translation>Lauf im Hintergrund</translation>
+    </message>
+    <message>
+        <source>starting</source>
+        <translation>startet</translation>
+    </message>
+    <message>
+        <source>running</source>
+        <translation>läuft</translation>
+    </message>
+    <message>
+        <source>failed</source>
+        <translation>fehlgeschlagen</translation>
+    </message>
+    <message>
+        <source>unknown</source>
+        <translation>unbekannt</translation>
+    </message>
+    <message>
+        <source>The tables of the extension are not created yet: %tables.</source>
+        <translation>Die Tabellen der Erweiterung sind noch nicht angelegt: %tables.</translation>
+    </message>
+    <message>
+        <source>The newsletter folder (cjw_newsletter.ini, RootFolderNodeId=%node) does not exist. The newsletter systems cannot be listed.</source>
+        <translation>Der Newsletter-Ordner (cjw_newsletter.ini, RootFolderNodeId=%node) existiert nicht. Die Newsletter-Systeme können nicht aufgelistet werden.</translation>
+    </message>
+    <message>
+        <source>There is no newsletter list yet. Create a newsletter system and a list below the newsletter folder.</source>
+        <translation>Es gibt noch keine Newsletter-Liste. Legen Sie unter dem Newsletter-Ordner ein Newsletter-System und eine Liste an.</translation>
+    </message>
+    <message>
+        <source>Mails are written to files (%dir), not sent: TransportMethodCronjob is "file".</source>
+        <translation>Mails werden in Dateien geschrieben (%dir), nicht gesendet: TransportMethodCronjob ist "file".</translation>
+    </message>
+    <message>
+        <source>The outbox %dir is not writable by the web server.</source>
+        <translation>Der Postausgang %dir ist für den Webserver nicht beschreibbar.</translation>
+    </message>
+    <message>
+        <source>The transport is "smtp" but SmtpTransportServer is empty.</source>
+        <translation>Der Transport ist "smtp", aber SmtpTransportServer ist leer.</translation>
+    </message>
+    <message>
+        <source>The default sender address is %sender. Set EmailSender in cjw_newsletter.ini or on each list.</source>
+        <translation>Die Standard-Absenderadresse ist %sender. Setzen Sie EmailSender in cjw_newsletter.ini oder an jeder Liste.</translation>
+    </message>
+    <message>
+        <source>%subscriptions subscriptions belong to newsletter users that no longer exist and %items waiting mails can never be sent.</source>
+        <translation>%subscriptions Abonnements gehören zu Newsletter-Benutzern, die es nicht mehr gibt, und %items wartende Mails können nie gesendet werden.</translation>
+    </message>
+    <message>
+        <source>%count newsletter users are marked as bounced; they get no mail.</source>
+        <translation>%count Newsletter-Benutzer sind als zurückgewiesen markiert; sie bekommen keine Mail.</translation>
+    </message>
+    <message>
+        <source>%count sends are waiting for more than a day. Is the cronjob running?</source>
+        <translation>%count Sendungen warten seit mehr als einem Tag. Läuft der Cronjob?</translation>
+    </message>
+    <message>
+        <source>%count mails could not be sent (aborted items).</source>
+        <translation>%count Mails konnten nicht gesendet werden (abgebrochene Einträge).</translation>
+    </message>
+    <message>
+        <source>The mail queue has not run yet. Put "php runcronjobs.php cjw_newsletter" in cron.</source>
+        <translation>Die Mail-Warteschlange ist noch nicht gelaufen. Tragen Sie "php runcronjobs.php cjw_newsletter" in cron ein.</translation>
+    </message>
+    <message>
+        <source>%count collected mails are not parsed yet.</source>
+        <translation>%count gesammelte Mails sind noch nicht ausgewertet.</translation>
+    </message>
+    <message>
+        <source>No mail account is active, so bounces are not collected.</source>
+        <translation>Kein Mailkonto ist aktiv, daher werden keine Rückläufer gesammelt.</translation>
+    </message>
+    <message>
+        <source>You do not have the permission for this action.</source>
+        <translation>Sie haben für diese Aktion keine Berechtigung.</translation>
+    </message>
+    <message>
+        <source>The run could not be started: %reason</source>
+        <translation>Der Lauf konnte nicht gestartet werden: %reason</translation>
+    </message>
+    <message>
+        <source>scheduled</source>
+        <translation>geplant</translation>
+    </message>
+    <message>
+        <source>waiting for the queue</source>
+        <translation>wartet auf die Warteschlange</translation>
+    </message>
+    <message>
+        <source>queued</source>
+        <translation>in der Warteschlange</translation>
+    </message>
+    <message>
+        <source>aborted</source>
+        <translation>abgebrochen</translation>
+    </message>
+    <message>
+        <source>Confirmed</source>
+        <translation>Bestätigt</translation>
+    </message>
+    <message>
+        <source>Pending</source>
+        <translation>Ausstehend</translation>
+    </message>
+    <message>
+        <source>Removed</source>
+        <translation>Entfernt</translation>
+    </message>
+    <message>
+        <source>Bounced</source>
+        <translation>Zurückgewiesen</translation>
+    </message>
+    <message>
+        <source>Blacklisted</source>
+        <translation>Auf der Blacklist</translation>
+    </message>
+    <message>
+        <source>done</source>
+        <translation>erledigt</translation>
+    </message>
+    <message>
+        <source>Newsletter</source>
+        <translation>Newsletter</translation>
+    </message>
+    <message>
+        <source>Dashboard</source>
+        <translation>Übersicht</translation>
+    </message>
+</context>
+<context>
+    <name>cjw_newsletter/blacklist_item_remove</name>
+    <message>
+        <source>Remove from the blacklist</source>
+        <translation>Von der Blacklist entfernen</translation>
+    </message>
+    <message>
+        <source>Remove these addresses from the blacklist?</source>
+        <translation>Diese Adressen von der Blacklist entfernen?</translation>
+    </message>
+    <message>
+        <source>A newsletter user with such an address is set back to "confirmed" and gets mail again.</source>
+        <translation>Ein Newsletter-Benutzer mit einer solchen Adresse wird auf "bestätigt" zurückgesetzt und bekommt wieder Mails.</translation>
+    </message>
+    <message>
+        <source>Select at least one address to remove from the blacklist.</source>
+        <translation>Wählen Sie mindestens eine Adresse, die von der Blacklist entfernt werden soll.</translation>
+    </message>
+    <message>
+        <source>%count addresses were removed from the blacklist.</source>
+        <translation>%count Adressen wurden von der Blacklist entfernt.</translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation>Entfernen</translation>
     </message>
 </context>
 </TS>
