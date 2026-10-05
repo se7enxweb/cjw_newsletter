@@ -18,7 +18,7 @@
             {if $e.next|count}
             <ul class="nl-ed-next">
                 {foreach $e.next as $s}
-                <li><time>{$s.next_run|l10n( 'shortdatetime' )}</time> <span>{$s.list_name|wash}</span> <span class="nl-pill is-muted">{if eq( $s.mode, 'copy' )}{'copy'|i18n( 'cjw_newsletter/editorial' )}{else}{'latest'|i18n( 'cjw_newsletter/editorial' )}{/if}</span></li>
+                <li><time>{$s.next_run_text|wash}</time> <span>{$s.list_name|wash}</span> <span class="nl-pill is-muted">{if eq( $s.mode, 'copy' )}{'copy'|i18n( 'cjw_newsletter/editorial' )}{else}{'latest'|i18n( 'cjw_newsletter/editorial' )}{/if}</span></li>
                 {/foreach}
             </ul>
             {else}

@@ -57,6 +57,7 @@ class CjwNewsletterSchedule extends eZPersistentObject
                                             'is_active' => 'isActive',
                                             'is_due' => 'isDue',
                                             'article_pool' => 'articlePool',
+                                            'next_run_text' => 'nextRunText',
                                             'log_list' => 'recentLog' ),
             'sort' => array( 'id' => 'desc' ),
             'class_name' => 'CjwNewsletterSchedule',
@@ -283,6 +284,17 @@ class CjwNewsletterSchedule extends eZPersistentObject
     {
         $after = $after === null ? time() : (int)$after;
         $this->setAttribute( 'next_run', (int)$this->attribute( 'status' ) === self::STATUS_ACTIVE ? $this->nextRunAfter( $after ) : 0 );
+    }
+
+    /** @return string the next run as Y-m-d H:i and the zone abbreviation, in the time zone of the schedule; '' = none */
+    function nextRunText()
+    {
+        $time = (int)$this->attribute( 'next_run' );
+        if ( $time <= 0 )
+            return '';
+        $date = new DateTime( '@' . $time );
+        $date->setTimezone( new DateTimeZone( $this->timezoneName() ) );
+        return $date->format( 'Y-m-d H:i T' );
     }
 
     /** @return bool */

@@ -59,7 +59,7 @@
                 <td data-label="{'When'|i18n( 'cjw_newsletter/editorial' )|wash}">{$s.recurrence_text|wash}<br /><span class="nl-muted">{$s.timezone_name|wash}</span></td>
                 <td data-label="{'Runs'|i18n( 'cjw_newsletter/editorial' )|wash}">
                     {if $s.is_active}<span class="nl-pill is-ok">{$s.status_name|wash}</span>{else}<span class="nl-pill is-muted">{$s.status_name|wash}</span>{/if}{if $s.is_due} <span class="nl-pill is-warn">{'due'|i18n( 'cjw_newsletter/editorial' )}</span>{/if}<br />
-                    {'Next run'|i18n( 'cjw_newsletter/editorial' )}: {if $s.next_run}<time>{$s.next_run|l10n( 'shortdatetime' )}</time>{else}-{/if}<br />
+                    {'Next run'|i18n( 'cjw_newsletter/editorial' )}: {if $s.next_run}<time>{$s.next_run_text|wash}</time>{else}-{/if}<br />
                     {'Last run'|i18n( 'cjw_newsletter/editorial' )}: {if $s.last_run}<time>{$s.last_run|l10n( 'shortdatetime' )}</time> <span class="nl-pill {cond( eq( $s.last_result, 'sent' ), 'is-ok', eq( $s.last_result, 'failed' ), 'is-bad', 'is-muted' )}">{if is_set( $result_names[$s.last_result] )}{$result_names[$s.last_result]|wash}{else}{$s.last_result|wash}{/if}</span>{else}-{/if}
                 </td>
                 <td class="nl-actions">

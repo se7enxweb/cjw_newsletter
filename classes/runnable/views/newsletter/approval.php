@@ -23,6 +23,9 @@ class Approval extends \Exponential\Runnable\ModuleView
         $module = $Params['Module'];
         $http = \eZHTTPTool::instance();
         $tr = 'cjw_newsletter/editorial';
+        // the view is for the editors (newsletter/editorial) and the approvers (newsletter/approve)
+        if ( !\CjwNewsletterEditorialUI::can( 'editorial' ) && !\CjwNewsletterEditorialUI::can( 'approve' ) )
+            return $this->viewResult( null, $module->handleError( \eZError::KERNEL_ACCESS_DENIED, 'kernel' ) );
         $editionId = isset( $Params['EditionContentObjectId'] ) ? (int)$Params['EditionContentObjectId'] : 0;
         $edition = $editionId > 0 ? \eZContentObject::fetch( $editionId ) : null;
         if ( !$edition instanceof \eZContentObject || $edition->attribute( 'class_identifier' ) !== 'cjw_newsletter_edition' )

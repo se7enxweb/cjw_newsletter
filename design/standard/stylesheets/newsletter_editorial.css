@@ -40,7 +40,11 @@
     .nl-table.nl-ed-responsive, .nl-table.nl-ed-responsive tbody, .nl-table.nl-ed-responsive tr, .nl-table.nl-ed-responsive td { display: block; width: auto; }
     .nl-table.nl-ed-responsive tr { padding: 0.5em 0; border-top: 1px solid var(--nl-line); }
     .nl-table.nl-ed-responsive td { border: 0; padding: 0.1em 0.4em; text-align: left !important; }
-    .nl-table.nl-ed-responsive td[data-label]::before { content: attr(data-label) ": "; font-weight: bold; color: var(--nl-muted); }
+    .nl-table.nl-ed-responsive td[data-label]::before { content: attr(data-label) ":\00a0"; font-weight: bold; color: var(--nl-muted); }
+    .nl-table.nl-ed-articles td.nl-ed-check { display: inline-block; width: auto; vertical-align: middle; }
+    .nl-table.nl-ed-articles td.nl-ed-title { display: inline-block; vertical-align: middle; font-weight: bold; }
+    .nl-table.nl-ed-articles td.nl-ed-title::before { content: none; }
+    .nl-table.nl-ed-articles td { padding-top: 0; padding-bottom: 0; font-size: 0.95em; }
 }
 
 /* the tables with actions keep their text columns readable: the buttons wrap instead of squeezing the columns */
