@@ -36,7 +36,7 @@ class SubscriptionList extends \Exponential\Runnable\ModuleView
 
         $module = $Params['Module'];
         $http = \eZHTTPTool::instance();
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
 
         $nodeId = (int) $Params['NodeId'];
 
@@ -78,7 +78,7 @@ class SubscriptionList extends \Exponential\Runnable\ModuleView
         $Result['node_id'] = $nodeId;
         $Result['content'] = $tpl->fetch( $templateFile );
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
-                                         'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/path', 'Newsletter' ) ),
 
                                   array( 'url'  => $systemNode->attribute( 'url_alias' ),
                                          'text' => $systemNode->attribute( 'name' ) ),
@@ -87,7 +87,7 @@ class SubscriptionList extends \Exponential\Runnable\ModuleView
                                          'text' => $node->attribute( 'name' ) ),
 
                                   array( 'url'  => false,
-                                         'text' => ezi18n( 'cjw_newsletter/subscription_list', 'Subscriptions' ) ) );
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/subscription_list', 'Subscriptions' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

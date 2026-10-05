@@ -37,7 +37,7 @@ class UserList extends \Exponential\Runnable\ModuleView
         require_once( 'kernel/common/i18n.php' );
         include_once( 'kernel/common/template.php' );
 
-        $tpl  = templateInit();
+        $tpl  = \eZTemplate::factory();
         $http = \eZHTTPTool::instance();
 
         // the parameters of the list: (q) text, (status) group, (list) list object id, (sort), (order), (offset), (limit)
@@ -102,9 +102,9 @@ class UserList extends \Exponential\Runnable\ModuleView
         $Result = array();
         $Result['content'] = $tpl->fetch( $templateFile );
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
-                                         'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/path', 'Newsletter' ) ),
                                   array( 'url'  => false,
-                                         'text' => ezi18n( 'cjw_newsletter/user_list', 'Users' ) ) );
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/user_list', 'Users' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

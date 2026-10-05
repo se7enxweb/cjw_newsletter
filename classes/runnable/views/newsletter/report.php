@@ -26,7 +26,7 @@ class Report extends \Exponential\Runnable\ModuleView
         $module = $Params['Module'];
         $sendId = isset( $Params['EditionSendId'] ) ? (int)$Params['EditionSendId'] : 0;
         $userParameters = isset( $Params['UserParameters'] ) && is_array( $Params['UserParameters'] ) ? $Params['UserParameters'] : array();
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $tpl->setVariable( 'tracking_enabled', \CjwNewsletterTracking::enabled() );
         $path = array( array( 'url' => 'newsletter/index', 'text' => \ezpI18n::tr( 'cjw_newsletter', 'Newsletter' ) ),
                        array( 'url' => $sendId ? 'newsletter/report' : false, 'text' => \ezpI18n::tr( 'cjw_newsletter/statistics', 'Statistics' ) ) );

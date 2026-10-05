@@ -38,7 +38,7 @@ class UserCreate extends \Exponential\Runnable\ModuleView
 
         $module = $Params['Module'];
         $http = \eZHTTPTool::instance();
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
 
         $templateFile = 'design:newsletter/user_create.tpl';
 
@@ -159,8 +159,8 @@ class UserCreate extends \Exponential\Runnable\ModuleView
                     {
                         if ( !\eZMail::validate( $subscriptionDataArr['email'] ) || $subscriptionDataArr['email'] == '' )
                         {
-                            $warningArr['email'] = array( 'field_key'   => ezi18n( 'cjw_newsletter/subscription', 'Email'),
-                                                          'message'     => ezi18n( 'cjw_newsletter/subscription', 'You must provide a valid email address.' ) );
+                            $warningArr['email'] = array( 'field_key'   => \ezpI18n::tr( 'cjw_newsletter/subscription', 'Email'),
+                                                          'message'     => \ezpI18n::tr( 'cjw_newsletter/subscription', 'You must provide a valid email address.' ) );
                         }
                         else
                         {
@@ -173,8 +173,8 @@ class UserCreate extends \Exponential\Runnable\ModuleView
                                 $newsletterUserId = $existingNewsletterUserObject->attribute( 'id' );
                                 $msg = 'edit_existing';
 
-                             /*   $warningArr['email'] = array( 'field_key'   => ezi18n( 'cjw_newsletter/subscription', 'Email' ),
-                                                        'message'     => ezi18n( 'cjw_newsletter/subscription', 'Email is already used by an other newsletter user.' ) );
+                             /*   $warningArr['email'] = array( 'field_key'   => \ezpI18n::tr( 'cjw_newsletter/subscription', 'Email' ),
+                                                        'message'     => \ezpI18n::tr( 'cjw_newsletter/subscription', 'Email is already used by an other newsletter user.' ) );
                                                         */
                             }
 
@@ -223,11 +223,11 @@ class UserCreate extends \Exponential\Runnable\ModuleView
 
         $Result['content'] = $tpl->fetch( $templateFile );
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
-                                         'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/path', 'Newsletter' ) ),
                                   array( 'url'  => 'newsletter/user_list',
-                                         'text' => ezi18n( 'cjw_newsletter/user_list', 'Users' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/user_list', 'Users' ) ),
                                   array( 'url'  => false,
-                                         'text' => ezi18n( 'cjw_newsletter/user_create', 'Create' ) ) );
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/user_create', 'Create' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

@@ -57,7 +57,7 @@ class ImportView extends \Exponential\Runnable\ModuleView
             $removeResult = $importObject->removeActiveSubscriptionsByAdmin();
         }
 
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
 
         $tpl->setVariable( 'import_object', $importObject );
         $tpl->setVariable( 'view_parameters', $viewParameters );
@@ -68,11 +68,11 @@ class ImportView extends \Exponential\Runnable\ModuleView
 
 
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
-                                         'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/path', 'Newsletter' ) ),
                                   array( 'url'  => 'newsletter/import_list',
-                                         'text' => ezi18n( 'cjw_newsletter/import_view', 'Imports' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/import_view', 'Imports' ) ),
                                   array( 'url'  => false,
-                                         'text' => ezi18n( 'cjw_newsletter/import_view', 'Import details' ) ) );
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/import_view', 'Import details' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

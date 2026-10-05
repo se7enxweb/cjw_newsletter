@@ -237,7 +237,7 @@ class SubscriptionListCsvexport extends \Exponential\Runnable\ModuleView
         $userParameters = $Params['UserParameters'];
         $viewParameters = array_merge( $viewParameters, $userParameters );
 
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $tpl->setVariable( 'view_parameters', $viewParameters );
         $tpl->setVariable( 'list_node', $listNode );
         $tpl->setVariable( 'csv_delimiter', $delimiter );
@@ -247,10 +247,10 @@ class SubscriptionListCsvexport extends \Exponential\Runnable\ModuleView
         $Result = array();
         $Result[ 'content' ] = $tpl->fetch( 'design:newsletter/subscription_list_csvexport.tpl' );
         $Result[ 'path' ]    = array( array( 'url' => false,
-                                             'text' => ezi18n( 'cjw_newsletter/subscription_list_csvexport', 'Subscription list CSV export' ) ) );
+                                             'text' => \ezpI18n::tr( 'cjw_newsletter/subscription_list_csvexport', 'Subscription list CSV export' ) ) );
 
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
-                                         'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/path', 'Newsletter' ) ),
 
                                   array( 'url'  => $systemNode->attribute( 'url_alias' ),
                                          'text' => $systemNode->attribute( 'name' ) ),
@@ -259,10 +259,10 @@ class SubscriptionListCsvexport extends \Exponential\Runnable\ModuleView
                                          'text' => $listNode->attribute( 'name' ) ),
 
                                   array( 'url'  => 'newsletter/subscription_list/' . $nodeId,
-                                         'text' => ezi18n( 'cjw_newsletter/subscription_list', 'Subscriptions' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/subscription_list', 'Subscriptions' ) ),
 
                                   array( 'url'  => false,
-                                         'text' => ezi18n( 'cjw_newsletter/subscription_list_csvexport', 'CSV export' ) ) );
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/subscription_list_csvexport', 'CSV export' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

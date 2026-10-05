@@ -45,7 +45,7 @@ class Throttle extends \Exponential\Runnable\ModuleView
         }
 
         include_once( 'kernel/common/template.php' );
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $batches = array();
         $names = array( 0 => 'new', 1 => 'running', 2 => 'done', 3 => 'paused', 9 => 'failed' );
         foreach ( \CjwNewsletterDeliverability::recentBatches( 20 ) as $batch )

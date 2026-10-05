@@ -31,7 +31,7 @@ class SmsConfirm extends \Exponential\Runnable\ModuleView
 
         include_once( 'kernel/common/template.php' );
         $http = \eZHTTPTool::instance();
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $state = 'form';
         $error = '';
         $info = '';

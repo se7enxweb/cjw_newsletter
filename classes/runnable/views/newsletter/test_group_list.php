@@ -20,7 +20,7 @@ class TestGroupList extends \Exponential\Runnable\ModuleView
         unset( $__name );
 
         include_once( 'kernel/common/template.php' );
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $lists = array();
         foreach ( \CjwNewsletterTestSend::listChoices() as $list )
             $lists[$list['id']] = $list['name'];

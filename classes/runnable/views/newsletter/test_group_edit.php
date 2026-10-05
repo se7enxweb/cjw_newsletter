@@ -54,7 +54,7 @@ class TestGroupEdit extends \Exponential\Runnable\ModuleView
         }
 
         include_once( 'kernel/common/template.php' );
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $tpl->setVariable( 'group', array( 'id' => (int)$group->attribute( 'id' ), 'name' => (string)$group->attribute( 'name' ),
                                            'email_list' => (string)$group->attribute( 'email_list' ),
                                            'list_contentobject_id' => (int)$group->attribute( 'list_contentobject_id' ) ) );

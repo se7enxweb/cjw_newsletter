@@ -54,7 +54,7 @@ class AbTest extends \Exponential\Runnable\ModuleView
             return $this->viewResult( null, $module->redirectToView( 'ab_test', array( $sendId ) ) );
         }
 
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $tpl->setVariable( 'test', \CjwNewsletterAbTester::summary( $test, $send ) );
         $tpl->setVariable( 'report', \CjwNewsletterStatisticsReport::send( $send ) );
         $tpl->setVariable( 'can_send', $canSend );

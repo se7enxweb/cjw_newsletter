@@ -37,7 +37,7 @@ class ImportList extends \Exponential\Runnable\ModuleView
         require_once( 'kernel/common/i18n.php' );
         include_once( 'kernel/common/template.php' );
 
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
 
         $userParameters = isset( $Params['UserParameters'] ) && is_array( $Params['UserParameters'] ) ? $Params['UserParameters'] : array();
         $viewParameters = array_merge( array( 'offset' => 0, 'namefilter' => '' ), $userParameters );
@@ -57,9 +57,9 @@ class ImportList extends \Exponential\Runnable\ModuleView
         $Result = array();
         $Result['content'] = $tpl->fetch( $templateFile );
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
-                                         'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/path', 'Newsletter' ) ),
                                   array( 'url'  => false,
-                                         'text' => ezi18n( 'cjw_newsletter/import_list', 'Imports' ) ) );
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/import_list', 'Imports' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

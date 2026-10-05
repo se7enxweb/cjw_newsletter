@@ -57,14 +57,14 @@ class Index extends \Exponential\Runnable\ModuleView
             {
                 if ( !$action[2] )
                 {
-                    \CjwNewsletterUI::notice( 'error', ezpI18n::tr( 'extension/cjw_newsletter', 'You do not have the permission for this action.' ) );
+                    \CjwNewsletterUI::notice( 'error', \ezpI18n::tr( 'extension/cjw_newsletter', 'You do not have the permission for this action.' ) );
                     return $this->viewResult( null, $module->redirectToView( 'index' ) );
                 }
                 $error = '';
                 $jobID = \CjwNewsletterJob::start( $action[0], $action[1], $error );
                 if ( !$jobID )
                 {
-                    \CjwNewsletterUI::notice( 'error', ezpI18n::tr( 'extension/cjw_newsletter', 'The run could not be started: %reason', null, array( '%reason' => $error ) ) );
+                    \CjwNewsletterUI::notice( 'error', \ezpI18n::tr( 'extension/cjw_newsletter', 'The run could not be started: %reason', null, array( '%reason' => $error ) ) );
                     return $this->viewResult( null, $module->redirectToView( 'index' ) );
                 }
                 return $this->viewResult( null, $module->redirectToView( 'index', array(), array(), array( 'job' => $jobID ) ) );
@@ -77,7 +77,7 @@ class Index extends \Exponential\Runnable\ModuleView
         $userParameters = $Params['UserParameters'];
         $viewParameters = array_merge( $viewParameters, $userParameters );
 
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $tpl->setVariable( 'view_parameters', $viewParameters );
         $tpl->setVariable( 'summary', \CjwNewsletterDashboard::summary() );
         $tpl->setVariable( 'notices', \CjwNewsletterUI::takeNotices() );
@@ -90,9 +90,9 @@ class Index extends \Exponential\Runnable\ModuleView
         $Result = array();
         $Result['content'] = $tpl->fetch( "design:newsletter/index.tpl" );
         $Result['path'] = array( array( 'url'  => false,
-                                        'text' => ezi18n( 'cjw_newsletter', 'Newsletter' ) ),
+                                        'text' => \ezpI18n::tr( 'cjw_newsletter', 'Newsletter' ) ),
                                  array( 'url'  => false,
-                                        'text' => ezi18n( 'cjw_newsletter/index', 'Dashboard' ) ) );
+                                        'text' => \ezpI18n::tr( 'cjw_newsletter/index', 'Dashboard' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

@@ -36,7 +36,7 @@ class Subscribe extends \Exponential\Runnable\ModuleView
 
         $module = $Params['Module'];
         $http = \eZHTTPTool::instance();
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
 
         // ezuser, anonym or per hash
 
@@ -126,14 +126,14 @@ class Subscribe extends \Exponential\Runnable\ModuleView
                  }
             }
 
-            $messageArray['list_array'] = array( 'field_key'   => ezi18n( 'cjw_newsletter/subscription', 'Newsletter'),
-                                                 'message'     => ezi18n( 'cjw_newsletter/subscription', 'You must choose a list for subscription.' ) );
-            $messageArray['first_name'] = array( 'field_key'   => ezi18n( 'cjw_newsletter/subscription', 'First name'),
-                                                 'message'     => ezi18n( 'cjw_newsletter/subscription', 'You must enter a first name.' ) );
-            $messageArray['last_name']  = array( 'field_key'   => ezi18n( 'cjw_newsletter/subscription', 'Last name'),
-                                                 'message'     => ezi18n( 'cjw_newsletter/subscription', 'You must enter a last name.' ) );
-            $messageArray['email']      = array( 'field_key'   => ezi18n( 'cjw_newsletter/subscription', 'Email'),
-                                                 'message'     => ezi18n( 'cjw_newsletter/subscription', 'You must provide a valid email address.' ) );
+            $messageArray['list_array'] = array( 'field_key'   => \ezpI18n::tr( 'cjw_newsletter/subscription', 'Newsletter'),
+                                                 'message'     => \ezpI18n::tr( 'cjw_newsletter/subscription', 'You must choose a list for subscription.' ) );
+            $messageArray['first_name'] = array( 'field_key'   => \ezpI18n::tr( 'cjw_newsletter/subscription', 'First name'),
+                                                 'message'     => \ezpI18n::tr( 'cjw_newsletter/subscription', 'You must enter a first name.' ) );
+            $messageArray['last_name']  = array( 'field_key'   => \ezpI18n::tr( 'cjw_newsletter/subscription', 'Last name'),
+                                                 'message'     => \ezpI18n::tr( 'cjw_newsletter/subscription', 'You must enter a last name.' ) );
+            $messageArray['email']      = array( 'field_key'   => \ezpI18n::tr( 'cjw_newsletter/subscription', 'Email'),
+                                                 'message'     => \ezpI18n::tr( 'cjw_newsletter/subscription', 'You must provide a valid email address.' ) );
 
             $requiredSubscriptionFields = array( 'list_array', 'email' );
             foreach ( $requiredSubscriptionFields as $fieldName )
@@ -292,9 +292,9 @@ class Subscribe extends \Exponential\Runnable\ModuleView
         $Result['content'] = $tpl->fetch( $templateFile );
 
         $Result['path'] =  array( array( 'url'  => false,
-                                         'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/path', 'Newsletter' ) ),
                                   array( 'url'  => false,
-                                         'text' => ezi18n( 'cjw_newsletter/subscribe', 'Subscription form' ) ) );
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/subscribe', 'Subscription form' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

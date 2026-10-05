@@ -42,7 +42,7 @@ class Send extends \Exponential\Runnable\ModuleView
         $message_warning = '';
         $message_feedback = '';
         $templateFile = 'design:newsletter/send.tpl';
-        $pathString = ezi18n( 'cjw_newsletter/send', 'Send' );
+        $pathString = \ezpI18n::tr( 'cjw_newsletter/send', 'Send' );
 
         if( isSet( $Params['NodeId'] ) )
         {
@@ -57,7 +57,7 @@ class Send extends \Exponential\Runnable\ModuleView
             $nodeId = null;
         }
 
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $tpl->setVariable( 'view_parameters', $viewParameters );
         $tpl->setVariable( 'node_id', $nodeId );
         // the template parts the feature areas add to the send and test forms (CjwNewsletterExtensionPoints)
@@ -88,7 +88,7 @@ class Send extends \Exponential\Runnable\ModuleView
         if ( $module->isCurrentAction( 'SendNewsletterTest' ) )
         {
             $templateFile = 'design:newsletter/send_newsletter_test_result.tpl';
-            $pathString = ezi18n( 'cjw_newsletter/send', 'Send test newsletter' );
+            $pathString = \ezpI18n::tr( 'cjw_newsletter/send', 'Send test newsletter' );
 
             $emailReceiverTest = $module->hasActionParameter( 'EmailReseiverTest' ) ? (string)$module->actionParameter( 'EmailReseiverTest' ) : '';
             // extension point: e.g. the addresses of a test group (CjwNewsletterExtensionPoints)
@@ -133,11 +133,11 @@ class Send extends \Exponential\Runnable\ModuleView
 
             if ( $attributeEditionContent->attribute('is_process') )
             {
-                $message_warning = ezi18n( 'cjw_newsletter/datatype/cjwnewsletteredition', "The current edition is already in sending process - to create a new version please stop it first", null , array(  ) );
+                $message_warning = \ezpI18n::tr( 'cjw_newsletter/datatype/cjwnewsletteredition', "The current edition is already in sending process - to create a new version please stop it first", null , array(  ) );
             }
             elseif ( $attributeEditionContent->attribute( 'is_archive' ) )
             {
-                $message_warning = ezi18n( 'cjw_newsletter/datatype/cjwnewsletteredition', "The current edition was already send and is in archive!", null , array(  ) );
+                $message_warning = \ezpI18n::tr( 'cjw_newsletter/datatype/cjwnewsletteredition', "The current edition was already send and is in archive!", null , array(  ) );
             }
             // send out newsletter
             else
@@ -173,7 +173,7 @@ class Send extends \Exponential\Runnable\ModuleView
                     }
                     else
                     {
-                        $message_warning = ezi18n( 'cjw_newsletter/datatype/cjwnewsletteredition', "The schedule date or time is invalid!", null , array(  ) );
+                        $message_warning = \ezpI18n::tr( 'cjw_newsletter/datatype/cjwnewsletteredition', "The schedule date or time is invalid!", null , array(  ) );
                     }
                     $sendNewsletterOutConfirm = true;
                 }
@@ -225,7 +225,7 @@ class Send extends \Exponential\Runnable\ModuleView
         $Result['content'] = $tpl->fetch( $templateFile );
 
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
-                                         'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/path', 'Newsletter' ) ),
 
                                   array( 'url'  => $systemNode->attribute( 'url_alias' ),
                                          'text' => $systemNode->attribute( 'name' ) ),

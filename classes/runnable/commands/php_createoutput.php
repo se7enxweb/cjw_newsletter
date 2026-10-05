@@ -378,7 +378,7 @@ class Createoutput extends \Exponential\Runnable\Command
         // fetch objectversion
         $contentObject = \eZContentObjectVersion::fetchVersion( $objectVersion ,$objectId );
 
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         // the version is shown in the language asked for, else in the siteaccess language when it has it (a version made
         // as a translation has that translation as its own language, and would show it by default)
         if ( is_object( $contentObject ) )

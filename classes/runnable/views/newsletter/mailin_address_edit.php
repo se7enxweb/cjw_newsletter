@@ -60,7 +60,7 @@ class MailinAddressEdit extends \Exponential\Runnable\ModuleView
                 $mailboxes[] = array( 'id' => (int)$mailbox->attribute( 'id' ), 'name' => (string)$mailbox->attribute( 'email' ) . ' (' . (string)$mailbox->attribute( 'server' ) . ')' );
 
         include_once( 'kernel/common/template.php' );
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $values = array();
         foreach ( array( 'id', 'email', 'plus_tag', 'list_contentobject_id', 'action', 'mailbox_id', 'is_active' ) as $field )
             $values[$field] = $address->attribute( $field );

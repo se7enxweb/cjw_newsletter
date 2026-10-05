@@ -36,7 +36,7 @@ class SubscriptionView extends \Exponential\Runnable\ModuleView
 
         $module = $Params['Module'];
         $http = \eZHTTPTool::instance();
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
 
         $templateFile = 'design:newsletter/subscription_view.tpl';
 
@@ -53,13 +53,13 @@ class SubscriptionView extends \Exponential\Runnable\ModuleView
         if( $http->hasVariable( 'SubscriptionApproveButton' ) )
         {
             $subscriptionObject->approveByAdmin();
-            $message = ezi18n( 'cjw_newsletter/subscription_view','Subscription successfully approved!' );
+            $message = \ezpI18n::tr( 'cjw_newsletter/subscription_view','Subscription successfully approved!' );
         }
 
         if( $http->hasVariable( 'SubscriptionRemoveButton' ) )
         {
             $subscriptionObject->removeByAdmin();
-            $message = ezi18n( 'cjw_newsletter/subscription_view','Subscription successfully removed!' );
+            $message = \ezpI18n::tr( 'cjw_newsletter/subscription_view','Subscription successfully removed!' );
         }
 
         $viewParameters = array();
@@ -101,7 +101,7 @@ class SubscriptionView extends \Exponential\Runnable\ModuleView
 
 
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
-                                         'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/path', 'Newsletter' ) ),
 
                                   array( 'url'  => $systemNode->attribute( 'url_alias' ),
                                          'text' => $systemNode->attribute( 'name' ) ),
@@ -110,7 +110,7 @@ class SubscriptionView extends \Exponential\Runnable\ModuleView
                                          'text' => $listNode->attribute( 'name' ) ),
 
                                   array( 'url'  => 'newsletter/subscription_list/' .$listNodeId,
-                                         'text' => ezi18n( 'cjw_newsletter/subscription_list', 'Subscriptions' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/subscription_list', 'Subscriptions' ) ),
 
                                   array( 'url'  => false,
                                          'text' => $name ) );

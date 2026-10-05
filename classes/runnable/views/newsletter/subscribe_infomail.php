@@ -36,7 +36,7 @@ class SubscribeInfomail extends \Exponential\Runnable\ModuleView
 
         $module = $Params['Module'];
         $http = \eZHTTPTool::instance();
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
 
         //  ezuser, anonym oder per hash
 
@@ -81,8 +81,8 @@ class SubscribeInfomail extends \Exponential\Runnable\ModuleView
                 }
                 else
                 {
-                    $warningArr[] = array( 'field_key' => ezi18n( 'cjw_newsletter/subscribe_infomail','email'),
-                                           'message' => ezi18n( 'cjw_newsletter/subscribe_infomail', 'Please input a valid e-mail address!' ) );
+                    $warningArr[] = array( 'field_key' => \ezpI18n::tr( 'cjw_newsletter/subscribe_infomail','email'),
+                                           'message' => \ezpI18n::tr( 'cjw_newsletter/subscribe_infomail', 'Please input a valid e-mail address!' ) );
                 }
             }
 
@@ -96,7 +96,7 @@ class SubscribeInfomail extends \Exponential\Runnable\ModuleView
 
         $Result['content'] = $tpl->fetch( $templateFile );
         $Result['path'] = array( array( 'url' => false,
-                                        'text' => ezi18n( 'cjw_newsletter/subscribe_info', 'Get subscribe information' ) ) );
+                                        'text' => \ezpI18n::tr( 'cjw_newsletter/subscribe_info', 'Get subscribe information' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

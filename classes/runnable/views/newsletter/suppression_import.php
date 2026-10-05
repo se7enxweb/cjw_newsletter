@@ -56,7 +56,7 @@ class SuppressionImport extends \Exponential\Runnable\ModuleView
         }
 
         include_once( 'kernel/common/template.php' );
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $tpl->setVariable( 'available', \CjwNewsletterSuppressionImport::available() );
         $tpl->setVariable( 'reasons', \CjwNewsletterSuppressionImport::$reasons );
         $tpl->setVariable( 'reason', $reason );

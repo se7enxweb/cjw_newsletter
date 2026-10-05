@@ -256,7 +256,7 @@ class CjwNewsletterMailin
     static function sendUnsubscribeLinks( $user, array $subscriptions )
     {
         include_once( 'kernel/common/template.php' );
-        $tpl = templateInit();
+        $tpl = eZTemplate::factory();
         $links = array();
         $base = class_exists( 'expMailToken' ) ? expMailToken::baseURL() : 'http://' . eZSys::hostname();
         foreach ( $subscriptions as $subscription )

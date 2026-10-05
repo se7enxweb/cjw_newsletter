@@ -82,7 +82,7 @@ class SubscriberExport extends \Exponential\Runnable\ModuleView
             $columnNames[$column] = isset( $fieldNames[$column] ) ? $fieldNames[$column]
                 : \ezpI18n::tr( 'cjw_newsletter/importexport', isset( $extra[$column] ) ? $extra[$column] : $column );
 
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $tpl->setVariable( 'list_object', $listObject );
         $tpl->setVariable( 'list_node', $listNode );
         $tpl->setVariable( 'filters', $filters );

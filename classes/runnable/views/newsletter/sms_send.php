@@ -40,7 +40,7 @@ class SmsSend extends \Exponential\Runnable\ModuleView
 
         include_once( 'kernel/common/template.php' );
         $http = \eZHTTPTool::instance();
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $i18n = 'cjw_newsletter/sms';
         $text = $http->hasPostVariable( 'SmsText' ) ? str_replace( "\r\n", "\n", (string)$http->postVariable( 'SmsText' ) ) : '';
         $testPhone = $http->hasPostVariable( 'SmsTestPhone' ) ? trim( (string)$http->postVariable( 'SmsTestPhone' ) ) : '';

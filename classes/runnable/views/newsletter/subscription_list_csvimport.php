@@ -207,7 +207,7 @@ class SubscriptionListCsvimport extends \Exponential\Runnable\ModuleView
             {
                 // the folder is not writable for the web server: say so instead of showing an import without rows
                 $importObject->remove();
-                \CjwNewsletterUI::notice( 'error', ezi18n( 'cjw_newsletter/subscription_list_csvimport', 'The file could not be stored in %dir. Check that the web server can write there.', '', array( '%dir' => $dir ) ) );
+                \CjwNewsletterUI::notice( 'error', \ezpI18n::tr( 'cjw_newsletter/subscription_list_csvimport', 'The file could not be stored in %dir. Check that the web server can write there.', '', array( '%dir' => $dir ) ) );
                 return $this->viewResult( null, $module->redirectToView( 'subscription_list_csvimport', array( $nodeId, 0 ) ) );
             }
 
@@ -295,7 +295,7 @@ class SubscriptionListCsvimport extends \Exponential\Runnable\ModuleView
         $userParameters = $Params['UserParameters'];
         $viewParameters = array_merge( $viewParameters, $userParameters );
 
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $tpl->setVariable( 'view_parameters', $viewParameters );
         $tpl->setVariable( 'list_node', $listNode );
         $tpl->setVariable( 'import_id', $importId );
@@ -322,7 +322,7 @@ class SubscriptionListCsvimport extends \Exponential\Runnable\ModuleView
         $Result = array();
         $Result['content'] = $tpl->fetch( 'design:newsletter/subscription_list_csvimport.tpl' );
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
-                                         'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/path', 'Newsletter' ) ),
 
                                   array( 'url'  => $systemNode->attribute( 'url_alias' ),
                                          'text' => $systemNode->attribute( 'name' ) ),
@@ -331,10 +331,10 @@ class SubscriptionListCsvimport extends \Exponential\Runnable\ModuleView
                                          'text' => $listNode->attribute( 'name' ) ),
 
                                   array( 'url'  => 'newsletter/subscription_list/' . $nodeId,
-                                         'text' => ezi18n( 'cjw_newsletter/subscription_list', 'Subscriptions' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/subscription_list', 'Subscriptions' ) ),
 
                                   array( 'url'  => false,
-                                         'text' => ezi18n( 'cjw_newsletter/subscription_list_csvimport', 'CSV import' ) ) );
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/subscription_list_csvimport', 'CSV import' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

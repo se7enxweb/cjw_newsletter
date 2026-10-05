@@ -92,7 +92,7 @@ class PreviewArchive extends \Exponential\Runnable\ModuleView
         }
 
 
-        $mailSubjectLabel = ezi18n( 'cjw_newsletter/preview', 'Email subject' );
+        $mailSubjectLabel = \ezpI18n::tr( 'cjw_newsletter/preview', 'Email subject' );
 
         $subjectStyle = 'style="background-color:#dddddd;border-color: #cccccc;border-width: 0 0 1px 0;border-style: solid;color:#333333;"';
 

@@ -38,7 +38,7 @@ class MailboxItemList extends \Exponential\Runnable\ModuleView
         include_once( 'kernel/common/template.php' );
 
         $http = \eZHTTPTool::instance();
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
 
         // "Collect all mails" and "Parse mails" go on in the background (a mail server can take minutes) and show their progress here
         foreach ( array( 'ConnectMailboxButton' => '--collect-only', 'BounceMailItemButton' => '--parse-only' ) as $button => $argument )
@@ -49,7 +49,7 @@ class MailboxItemList extends \Exponential\Runnable\ModuleView
                 $jobID = \CjwNewsletterJob::start( 'mailbox', array( $argument ), $error );
                 if ( !$jobID )
                 {
-                    \CjwNewsletterUI::notice( 'error', ezpI18n::tr( 'extension/cjw_newsletter', 'The run could not be started: %reason', null, array( '%reason' => $error ) ) );
+                    \CjwNewsletterUI::notice( 'error', \ezpI18n::tr( 'extension/cjw_newsletter', 'The run could not be started: %reason', null, array( '%reason' => $error ) ) );
                     return $this->viewResult( null, $module->redirectToView( 'mailbox_item_list' ) );
                 }
                 return $this->viewResult( null, $module->redirectToView( 'mailbox_item_list', array(), array(), array( 'job' => $jobID ) ) );
@@ -76,9 +76,9 @@ class MailboxItemList extends \Exponential\Runnable\ModuleView
         $Result = array();
         $Result['content'] = $tpl->fetch( $templateFile );
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
-                                         'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/path', 'Newsletter' ) ),
                                   array( 'url'  => false,
-                                         'text' => ezi18n( 'cjw_newsletter/mailbox_item_list', 'Bounces' ) ) );
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/mailbox_item_list', 'Bounces' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

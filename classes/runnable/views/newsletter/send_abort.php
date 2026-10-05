@@ -50,7 +50,7 @@ class SendAbort extends \Exponential\Runnable\ModuleView
             $editionSendId = null;
         }
 
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $editionSendObject = \CjwNewsletterEditionSend::fetch( $editionSendId );
 
         if ( !is_object( $editionSendObject ) )
@@ -61,11 +61,11 @@ class SendAbort extends \Exponential\Runnable\ModuleView
 
         if ( $editionSendObject->attribute('status') == \CjwNewsletterEditionSend::STATUS_MAILQUEUE_PROCESS_FINISHED )
         {
-            $message_warning = ezi18n( 'cjw_newsletter/send_abort', 'Send out process is finished, can not abort anymore!', null , array(  ) );
+            $message_warning = \ezpI18n::tr( 'cjw_newsletter/send_abort', 'Send out process is finished, can not abort anymore!', null , array(  ) );
         }
         elseif ( $editionSendObject->attribute('status') == \CjwNewsletterEditionSend::STATUS_ABORT )
         {
-            $message_warning = ezi18n( 'cjw_newsletter/send_abort', 'Send out process was already aborted!', null , array(  ) );
+            $message_warning = \ezpI18n::tr( 'cjw_newsletter/send_abort', 'Send out process was already aborted!', null , array(  ) );
         }
         else
         {
@@ -74,9 +74,9 @@ class SendAbort extends \Exponential\Runnable\ModuleView
                 $abortResult = $editionSendObject->abortAllSendItems();
 
                 if ( $abortResult == true )
-                    $message_feedback = ezi18n( 'cjw_newsletter/send_abort', 'Abort successfull', null , array(  ) );
+                    $message_feedback = \ezpI18n::tr( 'cjw_newsletter/send_abort', 'Abort successfull', null , array(  ) );
                 else
-                    $message_feedback =  ezi18n( 'cjw_newsletter/send_abort', 'Abort not successfull', null , array(  ) );
+                    $message_feedback =  \ezpI18n::tr( 'cjw_newsletter/send_abort', 'Abort not successfull', null , array(  ) );
 
                 $tpl->setVariable( 'send_abort_result', $abortResult );
             }
@@ -112,11 +112,11 @@ class SendAbort extends \Exponential\Runnable\ModuleView
 
         $Result['content'] = $tpl->fetch( "design:newsletter/send_abort.tpl" );
         $Result['path'] = array( array( 'url' => false,
-                                            'text' => ezi18n('cjw_newsletter/send', 'Newsletter Send') )
+                                            'text' => \ezpI18n::tr('cjw_newsletter/send', 'Newsletter Send') )
                                       );
 
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
-                                         'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/path', 'Newsletter' ) ),
 
                                   array( 'url'  => $systemNode->attribute( 'url_alias' ),
                                          'text' => $systemNode->attribute( 'name' ) ),
@@ -128,7 +128,7 @@ class SendAbort extends \Exponential\Runnable\ModuleView
                                          'text' => $editionNode->attribute( 'name' ) ),
 
                                   array( 'url'  => false,
-                                         'text' => ezi18n('cjw_newsletter/send_abort', 'Abort sent out process') ) );
+                                         'text' => \ezpI18n::tr('cjw_newsletter/send_abort', 'Abort sent out process') ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

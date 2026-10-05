@@ -32,7 +32,7 @@ class MigrationLog extends \Exponential\Runnable\ModuleView
         $action = isset( $userParameters['action'] ) && in_array( $userParameters['action'], $actions, true ) ? $userParameters['action'] : '';
         $table = isset( $userParameters['table'] ) && in_array( $userParameters['table'], $tables, true ) ? $userParameters['table'] : '';
 
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $tpl->setVariable( 'reasons', \CjwNewsletterMappedImport::reasonNames() );
         $path = array( array( 'url' => 'newsletter/index', 'text' => \ezpI18n::tr( 'cjw_newsletter/path', 'Newsletter' ) ),
                        array( 'url' => $runId !== '' ? 'newsletter/migration_log' : false, 'text' => \ezpI18n::tr( 'cjw_newsletter/importexport', 'eznewsletter migration' ) ) );

@@ -80,7 +80,7 @@ class MailboxEdit extends \Exponential\Runnable\ModuleView
         elseif ( $http->hasPostVariable( 'ConfirmRemoveButton' ) && $mailboxId > 0 )
         {
             $mailboxObject->remove();
-            \CjwNewsletterUI::notice( 'feedback', ezi18n( 'cjw_newsletter/mailbox_edit', 'The mail account was removed. The mails it collected stay.' ) );
+            \CjwNewsletterUI::notice( 'feedback', \ezpI18n::tr( 'cjw_newsletter/mailbox_edit', 'The mail account was removed. The mails it collected stay.' ) );
             return $this->viewResult( null, $module->redirectTo( $redirect ) );
         }
         elseif ( $http->hasPostVariable( 'PublishButton' ) )
@@ -101,20 +101,20 @@ class MailboxEdit extends \Exponential\Runnable\ModuleView
             }
             if ( $data['email'] === '' || !\eZMail::validate( $data['email'] ) )
             {
-                $errors['email'] = ezi18n( 'cjw_newsletter/mailbox_edit', 'Enter a valid email address.' );
+                $errors['email'] = \ezpI18n::tr( 'cjw_newsletter/mailbox_edit', 'Enter a valid email address.' );
             }
             if ( $data['server'] === '' || !preg_match( '/^[A-Za-z0-9]([A-Za-z0-9.\-]*[A-Za-z0-9])?$/', $data['server'] ) )
             {
-                $errors['server'] = ezi18n( 'cjw_newsletter/mailbox_edit', 'Enter the name of the mail server, for example mail.example.com.' );
+                $errors['server'] = \ezpI18n::tr( 'cjw_newsletter/mailbox_edit', 'Enter the name of the mail server, for example mail.example.com.' );
             }
             if ( $data['port'] !== '' && ( !ctype_digit( $data['port'] ) || (int)$data['port'] > 65535 ) )
             {
-                $errors['port'] = ezi18n( 'cjw_newsletter/mailbox_edit', 'The port is a number from 1 to 65535. Leave it empty for the default of the type.' );
+                $errors['port'] = \ezpI18n::tr( 'cjw_newsletter/mailbox_edit', 'The port is a number from 1 to 65535. Leave it empty for the default of the type.' );
             }
             $data['port'] = $data['port'] === '' ? 0 : (int)$data['port'];
             if ( $data['user_name'] === '' )
             {
-                $errors['user_name'] = ezi18n( 'cjw_newsletter/mailbox_edit', 'Enter the user name.' );
+                $errors['user_name'] = \ezpI18n::tr( 'cjw_newsletter/mailbox_edit', 'Enter the user name.' );
             }
             if ( $data['password'] === '' )
             {
@@ -125,13 +125,13 @@ class MailboxEdit extends \Exponential\Runnable\ModuleView
                 }
                 else
                 {
-                    $errors['password'] = ezi18n( 'cjw_newsletter/mailbox_edit', 'Enter the password.' );
+                    $errors['password'] = \ezpI18n::tr( 'cjw_newsletter/mailbox_edit', 'Enter the password.' );
                 }
             }
             if ( !$errors )
             {
                 $mailboxObject->storeMailboxData( $mailboxId, $data );
-                \CjwNewsletterUI::notice( 'feedback', ezi18n( 'cjw_newsletter/mailbox_edit', 'The mail account %email was saved.', '', array( '%email' => $data['email'] ) ) );
+                \CjwNewsletterUI::notice( 'feedback', \ezpI18n::tr( 'cjw_newsletter/mailbox_edit', 'The mail account %email was saved.', '', array( '%email' => $data['email'] ) ) );
                 return $this->viewResult( null, $module->redirectTo( $redirect ) );
             }
             // show what was typed, not what is stored
@@ -141,7 +141,7 @@ class MailboxEdit extends \Exponential\Runnable\ModuleView
             }
         }
 
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
 
         $viewParameters = array( 'offset'     => 0,
                                  'namefilter' => '' );
@@ -159,9 +159,9 @@ class MailboxEdit extends \Exponential\Runnable\ModuleView
 
         $Result[ 'content' ] = $tpl->fetch( $templateFile );
         $Result['path'] = array( array( 'url'  => 'newsletter/index',
-                                        'text' => ezi18n( 'cjw_newsletter', 'Newsletter' ) ),
+                                        'text' => \ezpI18n::tr( 'cjw_newsletter', 'Newsletter' ) ),
                                  array( 'url'  => 'newsletter/mailbox_list',
-                                        'text' => ezi18n( 'cjw_newsletter/mailbox_item_list', 'Mail accounts' ) ) );
+                                        'text' => \ezpI18n::tr( 'cjw_newsletter/mailbox_item_list', 'Mail accounts' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

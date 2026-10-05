@@ -40,7 +40,7 @@ class BlacklistItemRemove extends \Exponential\Runnable\ModuleView
         include_once( 'kernel/common/template.php' );
 
         $http = \eZHTTPTool::instance();
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
 
         $redirect = $http->hasVariable( 'RedirectURI' )
             ? \CjwNewsletterUtils::localRedirectPath( $http->variable( 'RedirectURI' ), '/newsletter/blacklist_item_list' )
@@ -72,7 +72,7 @@ class BlacklistItemRemove extends \Exponential\Runnable\ModuleView
         }
         if ( !$items )
         {
-            \CjwNewsletterUI::notice( 'warning', ezi18n( 'cjw_newsletter/blacklist_item_remove', 'Select at least one address to remove from the blacklist.' ) );
+            \CjwNewsletterUI::notice( 'warning', \ezpI18n::tr( 'cjw_newsletter/blacklist_item_remove', 'Select at least one address to remove from the blacklist.' ) );
             return $this->viewResult( null, $module->redirectTo( $redirect ) );
         }
         if ( $http->hasVariable( 'ConfirmRemoveButton' ) )
@@ -81,7 +81,7 @@ class BlacklistItemRemove extends \Exponential\Runnable\ModuleView
             {
                 $item->remove();
             }
-            \CjwNewsletterUI::notice( 'feedback', ezi18n( 'cjw_newsletter/blacklist_item_remove', '%count addresses were removed from the blacklist.', '', array( '%count' => count( $items ) ) ) );
+            \CjwNewsletterUI::notice( 'feedback', \ezpI18n::tr( 'cjw_newsletter/blacklist_item_remove', '%count addresses were removed from the blacklist.', '', array( '%count' => count( $items ) ) ) );
             return $this->viewResult( null, $module->redirectTo( $redirect ) );
         }
 
@@ -92,11 +92,11 @@ class BlacklistItemRemove extends \Exponential\Runnable\ModuleView
         $Result = array();
         $Result['content'] = $tpl->fetch( $templateFile );
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
-                                         'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/path', 'Newsletter' ) ),
                                   array( 'url'  => 'newsletter/blacklist_item_list',
-                                         'text' => ezi18n( 'cjw_newsletter/blacklist_item_list', 'Blacklists' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/blacklist_item_list', 'Blacklists' ) ),
                                   array( 'url'  => false,
-                                         'text' => ezi18n( 'cjw_newsletter/blacklist_item_remove', 'Remove' ) ) );
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/blacklist_item_remove', 'Remove' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

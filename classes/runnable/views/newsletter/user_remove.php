@@ -36,7 +36,7 @@ class UserRemove extends \Exponential\Runnable\ModuleView
 
         $module = $Params['Module'];
         $http = \eZHTTPTool::instance();
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
 
         $templateFile = 'design:newsletter/user_remove.tpl';
 
@@ -98,7 +98,7 @@ class UserRemove extends \Exponential\Runnable\ModuleView
 
         $Result['content'] = $tpl->fetch( $templateFile );
         $Result['path'] = array( array( 'url' => false,
-                                        'text' => ezi18n( 'cjw_newsletter/user_remove', 'Remove newsletter user' ) ) );
+                                        'text' => \ezpI18n::tr( 'cjw_newsletter/user_remove', 'Remove newsletter user' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }

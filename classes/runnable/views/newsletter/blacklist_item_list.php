@@ -38,7 +38,7 @@ class BlacklistItemList extends \Exponential\Runnable\ModuleView
         include_once( 'kernel/common/template.php' );
 
         $http = \eZHTTPTool::instance();
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
 
         $vp = \CjwNewsletterUI::listParameters( $Params, array( 'created', 'email', 'id' ), 25 );
         $user = isset( $Params['UserParameters'] ) && is_array( $Params['UserParameters'] ) ? $Params['UserParameters'] : array();
@@ -68,9 +68,9 @@ class BlacklistItemList extends \Exponential\Runnable\ModuleView
         $Result = array();
         $Result['content'] = $tpl->fetch( $templateFile );
         $Result['path'] =  array( array( 'url'  => 'newsletter/index',
-                                         'text' => ezi18n( 'cjw_newsletter/path', 'Newsletter' ) ),
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/path', 'Newsletter' ) ),
                                   array( 'url'  => false,
-                                         'text' => ezi18n( 'cjw_newsletter/blacklist_item_list', 'Blacklists' ) ) );
+                                         'text' => \ezpI18n::tr( 'cjw_newsletter/blacklist_item_list', 'Blacklists' ) ) );
 
         return $this->viewResult( isset( $Result ) ? $Result : null, null );
     }
