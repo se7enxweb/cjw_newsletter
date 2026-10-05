@@ -34,7 +34,10 @@ class CjwNewsletterEditionArticle extends eZPersistentObject
             ),
             'keys' => array( 'id' ),
             'increment_key' => 'id',
-            'function_attributes' => array(),
+            'function_attributes' => array( 'article_object' => 'articleObject',
+                                            'article_node' => 'articleNode',
+                                            'copy_node' => 'copyNode',
+                                            'added_by_name' => 'addedByName' ),
             'sort' => array( 'id' => 'desc' ),
             'class_name' => 'CjwNewsletterEditionArticle',
             'name' => 'cjwnl_edition_article' );
@@ -105,5 +108,62 @@ class CjwNewsletterEditionArticle extends eZPersistentObject
     static function fetchListByContentobjectId( $contentobjectId, $limit = 0, $offset = 0 )
     {
         return self::fetchList( array( 'contentobject_id' => (int)$contentobjectId ), $limit, $offset );
+    }
+
+    // ------------------------------------------------------------------ behaviour (4.2.0 N2 Editorial)
+
+    const ADDED_BY_EDITOR = 0;
+    const ADDED_BY_AUTO_FILL = 1;
+    const ADDED_BY_INTERESTS = 2;
+
+    /**
+     * @return CjwNewsletterEditionArticle[] the articles of an edition, in their order
+     */
+    static function fetchByEdition( $editionContentobjectId )
+    {
+        return self::fetchList( array( 'edition_contentobject_id' => (int)$editionContentobjectId ), 0, 0,
+                                array( 'position' => 'asc', 'id' => 'asc' ) );
+    }
+
+    /**
+     * @return string the remote id of the newsletter article an edition carries for the article
+     */
+    static function copyRemoteId( $editionContentobjectId, $contentobjectId )
+    {
+        return 'cjwnl-pick-' . (int)$editionContentobjectId . '-' . (int)$contentobjectId;
+    }
+
+    /** @return eZContentObject|null the article taken from the pool */
+    function articleObject()
+    {
+        $object = eZContentObject::fetch( (int)$this->attribute( 'contentobject_id' ) );
+        return $object instanceof eZContentObject ? $object : null;
+    }
+
+    /** @return eZContentObjectTreeNode|null its main node */
+    function articleNode()
+    {
+        $object = $this->articleObject();
+        $node = $object ? $object->attribute( 'main_node' ) : null;
+        return $node instanceof eZContentObjectTreeNode ? $node : null;
+    }
+
+    /** @return eZContentObjectTreeNode|null the newsletter article under the edition made for it */
+    function copyNode()
+    {
+        $object = eZContentObject::fetchByRemoteID( self::copyRemoteId( $this->attribute( 'edition_contentobject_id' ), $this->attribute( 'contentobject_id' ) ) );
+        $node = $object ? $object->attribute( 'main_node' ) : null;
+        return $node instanceof eZContentObjectTreeNode ? $node : null;
+    }
+
+    /** @return string */
+    function addedByName()
+    {
+        switch ( (int)$this->attribute( 'added_by' ) )
+        {
+            case self::ADDED_BY_AUTO_FILL: return ezpI18n::tr( 'cjw_newsletter/editorial', 'auto-fill' );
+            case self::ADDED_BY_INTERESTS: return ezpI18n::tr( 'cjw_newsletter/editorial', 'interests' );
+            default: return ezpI18n::tr( 'cjw_newsletter/editorial', 'editor' );
+        }
     }
 }
