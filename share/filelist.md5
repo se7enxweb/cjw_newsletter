@@ -1,6 +1,6 @@
 name: cjw_newsletter
-version: 4.1.17
-files_count: 337
+version: 4.1.18
+files_count: 336
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
 aa9ea80af84e6cba65e0764a80b56e16  .gitignore
@@ -302,7 +302,6 @@ e4f0fbf4f0b3046d63c227ed0b4f96b0  modules/newsletter/send_abort.php
 e96e5b72765d4683b7f8f437ed1f7c7b  modules/newsletter/subscription_list.php
 ad29dfeeaa4f258439f24d41c780a181  modules/newsletter/subscription_list_csvexport.php
 5d04cc1a790a19e40cc961afd8a91680  modules/newsletter/subscription_list_csvimport.php
-bf764db9c9e6db5d831681d8ecf04705  modules/newsletter/subscription_list_csvimport_df.php
 9972e92c1e097db1cde420485fc7cc61  modules/newsletter/subscription_view.php
 6b0a98e40155d550ff1632ff29777448  modules/newsletter/unsubscribe.php
 dbf92ac2448134cfc0cbaf34f72e1ab4  modules/newsletter/user_create.php
