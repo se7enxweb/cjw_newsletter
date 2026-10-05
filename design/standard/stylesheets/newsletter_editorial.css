@@ -42,3 +42,10 @@
     .nl-table.nl-ed-responsive td { border: 0; padding: 0.1em 0.4em; text-align: left !important; }
     .nl-table.nl-ed-responsive td[data-label]::before { content: attr(data-label) ": "; font-weight: bold; color: var(--nl-muted); }
 }
+
+/* the tables with actions keep their text columns readable: the buttons wrap instead of squeezing the columns */
+.nl-table.nl-ed-responsive td.nl-actions { white-space: normal; min-width: 11em; }
+.nl-table.nl-ed-responsive td.nl-actions > * { margin: 0.1em 0.15em 0.1em 0; }
+.nl-table.nl-ed-responsive td.nl-wrap { min-width: 9em; }
+.nl-ed-form > div label, .nl-ed-choices label { font-weight: normal; }
+.nl-ed-state .nl-spacer { margin-left: auto; }

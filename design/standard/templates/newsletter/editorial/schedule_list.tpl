@@ -42,27 +42,26 @@
         <table class="list nl-table nl-ed-responsive">
             <tr class="nl-ed-head">
                 <th class="nl-num">{'ID'|i18n( 'cjw_newsletter/editorial' )}</th>
-                <th>{'List'|i18n( 'cjw_newsletter/editorial' )}</th>
                 <th>{'What'|i18n( 'cjw_newsletter/editorial' )}</th>
                 <th>{'When'|i18n( 'cjw_newsletter/editorial' )}</th>
-                <th>{'Next run'|i18n( 'cjw_newsletter/editorial' )}</th>
-                <th>{'Last run'|i18n( 'cjw_newsletter/editorial' )}</th>
-                <th>{'State'|i18n( 'cjw_newsletter/editorial' )}</th>
+                <th>{'Runs'|i18n( 'cjw_newsletter/editorial' )}</th>
                 <th class="tight">{'Actions'|i18n( 'cjw_newsletter/editorial' )}</th>
             </tr>
             {foreach $schedules as $s sequence array( 'bglight', 'bgdark' ) as $style}
             <tr class="{$style}">
                 <td class="nl-num" data-label="{'ID'|i18n( 'cjw_newsletter/editorial' )|wash}">{$s.id}</td>
-                <td class="nl-wrap" data-label="{'List'|i18n( 'cjw_newsletter/editorial' )|wash}">{if $s.list_node_id}<a href={concat( 'content/view/full/', $s.list_node_id )|ezurl}>{$s.list_name|wash}</a>{else}<span class="nl-danger">{'list removed'|i18n( 'cjw_newsletter/editorial' )}</span>{/if}</td>
                 <td class="nl-wrap" data-label="{'What'|i18n( 'cjw_newsletter/editorial' )|wash}">
+                    <strong>{if $s.list_node_id}<a href={concat( 'content/view/full/', $s.list_node_id )|ezurl}>{$s.list_name|wash}</a>{else}<span class="nl-danger">{'list removed'|i18n( 'cjw_newsletter/editorial' )}</span>{/if}</strong><br />
                     {if eq( $s.mode, 'copy' )}{'Copy of "%name"'|i18n( 'cjw_newsletter/editorial',, hash( '%name', $s.template_edition_name ) )|wash}{if $s.auto_fill}, {'filled from "%pool"'|i18n( 'cjw_newsletter/editorial',, hash( '%pool', $s.article_pool.label ) )|wash}{/if}
                     {else}{'The latest unsent edition'|i18n( 'cjw_newsletter/editorial' )}{/if}
                     {if $s.condition_handler}<br /><span class="nl-muted">{'with a condition'|i18n( 'cjw_newsletter/editorial' )}</span>{/if}
                 </td>
                 <td data-label="{'When'|i18n( 'cjw_newsletter/editorial' )|wash}">{$s.recurrence_text|wash}<br /><span class="nl-muted">{$s.timezone_name|wash}</span></td>
-                <td data-label="{'Next run'|i18n( 'cjw_newsletter/editorial' )|wash}">{if $s.next_run}<time>{$s.next_run|l10n( 'shortdatetime' )}</time>{if $s.is_due} <span class="nl-pill is-warn">{'due'|i18n( 'cjw_newsletter/editorial' )}</span>{/if}{else}-{/if}</td>
-                <td data-label="{'Last run'|i18n( 'cjw_newsletter/editorial' )|wash}">{if $s.last_run}<time>{$s.last_run|l10n( 'shortdatetime' )}</time><br /><span class="nl-pill {cond( eq( $s.last_result, 'sent' ), 'is-ok', eq( $s.last_result, 'failed' ), 'is-bad', 'is-muted' )}">{if is_set( $result_names[$s.last_result] )}{$result_names[$s.last_result]|wash}{else}{$s.last_result|wash}{/if}</span>{else}-{/if}</td>
-                <td data-label="{'State'|i18n( 'cjw_newsletter/editorial' )|wash}">{if $s.is_active}<span class="nl-pill is-ok">{$s.status_name|wash}</span>{else}<span class="nl-pill is-muted">{$s.status_name|wash}</span>{/if}</td>
+                <td data-label="{'Runs'|i18n( 'cjw_newsletter/editorial' )|wash}">
+                    {if $s.is_active}<span class="nl-pill is-ok">{$s.status_name|wash}</span>{else}<span class="nl-pill is-muted">{$s.status_name|wash}</span>{/if}{if $s.is_due} <span class="nl-pill is-warn">{'due'|i18n( 'cjw_newsletter/editorial' )}</span>{/if}<br />
+                    {'Next run'|i18n( 'cjw_newsletter/editorial' )}: {if $s.next_run}<time>{$s.next_run|l10n( 'shortdatetime' )}</time>{else}-{/if}<br />
+                    {'Last run'|i18n( 'cjw_newsletter/editorial' )}: {if $s.last_run}<time>{$s.last_run|l10n( 'shortdatetime' )}</time> <span class="nl-pill {cond( eq( $s.last_result, 'sent' ), 'is-ok', eq( $s.last_result, 'failed' ), 'is-bad', 'is-muted' )}">{if is_set( $result_names[$s.last_result] )}{$result_names[$s.last_result]|wash}{else}{$s.last_result|wash}{/if}</span>{else}-{/if}
+                </td>
                 <td class="nl-actions">
                     <a class="button" href={concat( 'newsletter/schedule_edit/', $s.id )|ezurl}>{'Edit'|i18n( 'cjw_newsletter/editorial' )}</a>
                     {if $s.is_active}<input class="button" type="submit" name="PauseButton[{$s.id}]" value="{'Pause'|i18n( 'cjw_newsletter/editorial' )|wash}" />
