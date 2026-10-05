@@ -386,21 +386,21 @@ $ViewList['skin_preview'] = array(
 
 // ---- end N3 views
 
-// ---- 4.2.0 N4 Statistics: views (area N4 changes only this block; the scripts answer 404 until the area writes them)
+// ---- 4.2.0 N4 Statistics: views (area N4 changes only this block)
 
-// click redirect (public, signed, stored URLs only)
+// click redirect: r/<link id>/<key>/<signature> (public, no session; site.ini PolicyOmitList; only the stored URL of the link)
 $ViewList['r'] = array(
     'script' => 'r.php',
     'functions' => array( 'track' ),
     'default_navigation_part' => 'eznewsletternavigationpart',
-    'params' => array( 'ItemHash', 'LinkId', 'Signature' ) );
+    'params' => array( 'LinkId', 'Key', 'Signature' ) );
 
-// open pixel (public, signed)
+// open pixel: o/<key>/<signature> (public, no session; always the image, counted only with a valid signature)
 $ViewList['o'] = array(
     'script' => 'o.php',
     'functions' => array( 'track' ),
     'default_navigation_part' => 'eznewsletternavigationpart',
-    'params' => array( 'ItemHash', 'Signature' ) );
+    'params' => array( 'Key', 'Signature' ) );
 
 // the report of a send
 $ViewList['report'] = array(

@@ -5184,8 +5184,524 @@ If you did not send this request, ignore this mail: nothing changes.</source>
     <name>cjw_newsletter/statistics</name>
     <!-- cjw_newsletter 4.2.0, area N4: its strings only, appended here -->
     <message>
+        <source>Opens and clicks over time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Week of %date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%opens opens, %clicks clicks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Opens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clicks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nothing counted yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Anonymous totals</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Per person with consent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Statistics</source>
         <translation>Statistikk</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Created</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sending started</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Finished</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tracking</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>switched off for the site</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>of %count mails</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count waiting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delivered</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count not sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bounced</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count unique</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsubscribes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unique opens and clicks and the rates count only the %count people who agreed to the newsletter statistics; everybody else is in the totals of opens and clicks, without a name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This send counts anonymous totals only: opens and clicks without a person, so there are no unique numbers.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This send was not tracked. Sent, delivered, bounced and unsubscribes come from the mail queue and the list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clicks per link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unique</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Share</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No link of this send is tracked.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A/B subject test</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open the A/B test</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export the send (CSV)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export the links (CSV)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export the days (CSV)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All sends</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The edition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%percent % of the list per variant, winner by %criterion rate after %hours h</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>click</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the winner is chosen at %time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>chosen %time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Variant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subject</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>winner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the edition's subject</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Newsletter statistics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sends</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>per person</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>anonymous</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>In brackets: unique, counted only for the people who agreed to the newsletter statistics.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nothing was sent yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export every send (CSV)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dashboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>opens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>clicks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>unique opens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>last %days days</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tracking on for the site</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tracking off for the site</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count people agreed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No consent category</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Opens and clicks per week</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lists</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>not tracked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>anonymous totals</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>per person with consent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Per-person rows are kept %months months, then only the totals stay. A person who withdraws the consent or is erased is removed at once.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last cleanup: %time.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The open rate counts the first open of each person who agreed to the newsletter statistics, per sent mail of the variant; the people are split at random, so the rates compare fairly.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The click rate decides: clicks per sent mail of the variant (anonymous totals, or no opens known).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Change the test now?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose the winner now</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel the test</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Without you, the mail queue chooses the winner when the wait is over and then sends the rest of the list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The report of the send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tracking is switched off for the site ([TrackingSettings] Tracking), so nothing of this send is counted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tracking of this send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>As the list says</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Per person counts only the recipients who agreed to the newsletter statistics on their e-mail preference page; everybody else is counted anonymously.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A sample of the list gets each subject; after the wait the subject with the best rate goes to the rest of the list. Subject A is the edition's own.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subject %key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sample per variant (%)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wait (hours)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Winner by</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>open rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>click rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Statistics: tracking of the sends</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Per person counts only the subscribers who switched on "Newsletter statistics" on their e-mail preference page; the others are counted anonymously. A send may choose another mode in the send form.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>editions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sends</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mails sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>clicks on its links</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Report</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>not sent yet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This content has not gone out in a newsletter yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last tracked sends</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No send is tracked yet. A list chooses its tracking in the list attribute; a send can choose another in the send form.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All statistics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export (CSV)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A/B subject tests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>winner at %time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No A/B test is running. Start one in the send form of an edition.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When this is on, we count which of our newsletters you open and which of their links you click, under your name, to make the newsletters better. When it is off, your opens and clicks are only counted in totals without a name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>We keep what is counted under your name for %months months; after that only the totals stay. When you switch this off or ask us to erase your data, it is removed at once.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nothing is counted at the moment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The A/B test needs at least one other subject.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A subject is longer than 255 characters.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The sample must be between 1 % and %max % per variant.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The wait must be between 0 and 336 hours.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>An A/B test needs tracking (anonymous totals or per person) for this send.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tracking is on, but the e-mail preference category "%category" is not set up: nobody can agree to per-person statistics, so only anonymous totals are counted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Some lists ask for tracking, but [TrackingSettings] Tracking is disabled for the site, so nothing is counted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The A/B test of "%edition" should have chosen its winner: does the mail queue run?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose a tracking mode.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Variant %key won. The rest of the list gets its subject with the next run of the mail queue.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The winner could not be chosen.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The test was cancelled. The rest of the list gets the edition's own subject.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The test is already over.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A/B test</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sampling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>waiting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>winner chosen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cancelled</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

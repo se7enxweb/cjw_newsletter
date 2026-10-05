@@ -24,14 +24,15 @@ Listeners[]=CjwNewsletterMailPreferences
 MessageListeners[]=CjwNewsletterMailin
 
 # N4 Statistics: consent to per-person open and click counting
-#[CategorySettings]
-#Categories[]=newsletter_statistics
-#[Category_newsletter_statistics]
-#Name=Newsletter statistics
-#Description=Count which newsletters I open and which links I click, so the newsletters get better
-#Essential=false
-#DefaultOn=false
-#HandlerClass=CjwNewsletterStatisticsCategoryHandler
+[CategorySettings]
+Categories[]=newsletter_statistics
+[Category_newsletter_statistics]
+Name=Newsletter statistics
+Description=Count which newsletters I open and which links I click, so the newsletters get better
+Essential=false
+DefaultOn=false
+DoubleOptIn=false
+HandlerClass=CjwNewsletterStatisticsCategoryHandler
 
 # N5 SMS: newsletters by SMS, confirmed with a code
 # The double opt-in of this category is the code sent by SMS to the number (CjwNewsletterSmsCategoryHandler), not
