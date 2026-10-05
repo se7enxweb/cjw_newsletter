@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}"{$content|trim}"{if and( is_set( $author ), $author )} ({$author}){/if}{"\n"}{"\n"}

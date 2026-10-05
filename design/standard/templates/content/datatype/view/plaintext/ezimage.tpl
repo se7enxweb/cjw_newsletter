@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}{if $attribute.has_content}[{if $attribute.content.alternative_text}{$attribute.content.alternative_text}{else}{'Image'|i18n( 'cjw_newsletter/rendering' )}: {$attribute.object.name}{/if}]{/if}

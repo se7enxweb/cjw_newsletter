@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}{if $attribute.data_int}{'Yes'|i18n( 'cjw_newsletter/rendering' )}{else}{'No'|i18n( 'cjw_newsletter/rendering' )}{/if}

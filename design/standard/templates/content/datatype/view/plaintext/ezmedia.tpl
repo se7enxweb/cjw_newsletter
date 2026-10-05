@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}{if $attribute.content.filename}{$attribute.content.original_filename}: {concat( 'content/download/', $attribute.contentobject_id, '/', $attribute.id, '/', $attribute.content.original_filename|urlencode )|cjwnl_abs_url()}{/if}

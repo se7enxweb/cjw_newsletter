@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}{$attribute.content.name}: {foreach $attribute.content.option_list as $option}{$option.value}{if $option.additional_price|ne( '' )} ({$option.additional_price|l10n( currency )}){/if}{delimiter}, {/delimiter}{/foreach}

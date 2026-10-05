@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}{if $attribute.content.is_valid}{$attribute.content.timestamp|l10n( shorttime )}{/if}

@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}{if and( is_set( $list_depth ), $list_depth|gt( 1 ) )}{for 2 to $list_depth as $cjwnl_i}  {/for}{/if}{if and( is_set( $list_type ), $list_type|eq( 'ol' ) )}{$list_count}. {else}- {/if}{$content|trim}{"\n"}

@@ -145,8 +145,27 @@ class CjwNewsletterRenderingOperators
                 return CjwNewsletterPlaceholders::names();
             case 'condition_fields':
                 return CjwNewsletterConditions::fields();
+            case 'plaintext_template':
+                return self::plainTextTemplate( (string)$param );
         }
         return false;
+    }
+
+    /**
+     * The plain text view of a datatype, for design:newsletter/rendering/plaintext_attribute.tpl (the skins include it
+     * for every field; attribute_view_gui with view=plaintext is not used, its compiled form does not find views
+     * that are added to an extension).
+     *
+     * @param string $dataTypeString
+     * @return string|false design:content/datatype/view/plaintext/<datatype>.tpl, false when there is none
+     */
+    static function plainTextTemplate( $dataTypeString )
+    {
+        if ( !preg_match( '/^[a-z0-9_]{1,60}$/i', $dataTypeString ) )
+            return false;
+        $path = '/content/datatype/view/plaintext/' . $dataTypeString . '.tpl';
+        $overrides = eZTemplateDesignResource::overrideArray();
+        return isset( $overrides[$path] ) ? 'design:content/datatype/view/plaintext/' . $dataTypeString . '.tpl' : false;
     }
 
     /** @return CjwNewsletterList|false the list of a list node, or of the list above an edition node */

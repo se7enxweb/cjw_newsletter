@@ -44,6 +44,9 @@ class CjwNewsletterConditions
     static $stack = array();
     /** @var int */
     static $counter = 0;
+    /** @var bool true while a newsletter output is rendered (the output command): only then the tags leave markers; on
+     *  the web site the content of a condition is shown as it is */
+    static $active = false;
 
     /** @return string[] the subscriber fields a condition can test */
     static function fields()
@@ -119,6 +122,8 @@ class CjwNewsletterConditions
      */
     static function open( $settings )
     {
+        if ( !self::$active )
+            return '';
         $id = substr( md5( uniqid( '', true ) . ( ++self::$counter ) ), 0, 12 );
         self::$stack[] = $id;
         return '[[cjwnl:if:' . $id . ':' . self::encode( $settings ) . ']]';
@@ -127,12 +132,16 @@ class CjwNewsletterConditions
     /** @return string the else marker of the innermost open condition, '' without one */
     static function elseMarker()
     {
+        if ( !self::$active )
+            return '';
         return self::$stack ? '[[cjwnl:else:' . end( self::$stack ) . ']]' : '';
     }
 
     /** @return string the closing marker of the innermost open condition, '' without one */
     static function close()
     {
+        if ( !self::$active )
+            return '';
         return self::$stack ? '[[cjwnl:endif:' . array_pop( self::$stack ) . ']]' : '';
     }
 

@@ -193,6 +193,7 @@ class CjwNewsletterRendering
      */
     static function prepareTemplate( $tpl, $version, $skin, $language, $urlArray )
     {
+        CjwNewsletterConditions::$active = true;
         CjwNewsletterRenderingOperators::$baseUrl = isset( $urlArray['ez_url'] ) ? (string)$urlArray['ez_url'] : '';
         CjwNewsletterRenderingOperators::$rootUrl = isset( $urlArray['ez_root'] ) ? (string)$urlArray['ez_root'] : '';
         $list = false;

@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}{$attribute.content.name}{foreach $attribute.content.multioption_list as $multioption}{"\n"}{$multioption.name}: {foreach $multioption.optionlist as $option}{$option.value}{delimiter}, {/delimiter}{/foreach}{/foreach}

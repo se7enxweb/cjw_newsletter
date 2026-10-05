@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}{def $cjwnl_href = $href|cjwnl_abs_url()}{if $cjwnl_href|eq( '' )}{$content}{elseif or( $content|eq( $href ), $content|eq( $cjwnl_href ), $content|trim|eq( '' ) )}{$cjwnl_href}{else}{$content} ({$cjwnl_href}){/if}{undef $cjwnl_href}

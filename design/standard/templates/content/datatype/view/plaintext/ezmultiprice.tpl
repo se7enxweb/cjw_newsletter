@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}{foreach $attribute.content.inc_vat_price_list as $currency => $price}{$price.value|l10n( currency )} {$currency}{delimiter}, {/delimiter}{/foreach}

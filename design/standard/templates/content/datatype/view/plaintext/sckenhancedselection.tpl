@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}{foreach $attribute.class_content.options as $option}{if $attribute.content|contains( $option.identifier )}{$option.name}{delimiter}, {/delimiter}{/if}{/foreach}

@@ -1,0 +1,3 @@
+{* The plain text of one field for the text part of a newsletter (cjw_newsletter 4.2.0):
+   {include uri='design:newsletter/rendering/plaintext_attribute.tpl' attribute=$node.data_map.body}
+   Uses design:content/datatype/view/plaintext/<datatype>.tpl; a datatype without a plain view gives nothing. *}{def $cjwnl_plain_tpl = cond( is_set( $attribute ), cjwnl_rendering_data( 'plaintext_template', $attribute.data_type_string ), false() )}{if $cjwnl_plain_tpl}{include uri=$cjwnl_plain_tpl attribute=$attribute}{/if}{undef $cjwnl_plain_tpl}

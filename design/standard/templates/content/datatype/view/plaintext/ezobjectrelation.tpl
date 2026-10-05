@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}{if and( $attribute.content, $attribute.content.can_read, $attribute.content.main_node )}{$attribute.content.name} ({concat( '/', $attribute.content.main_node.url_alias )|cjwnl_abs_url()}){/if}

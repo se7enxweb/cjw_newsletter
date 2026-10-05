@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}{if and( is_set( $title ), $title )}{$title|cjwnl_text_underline( '-' )}{"\n"}{/if}{$content|trim}{"\n"}{"\n"}

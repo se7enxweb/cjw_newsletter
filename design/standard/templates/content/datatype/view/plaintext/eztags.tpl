@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}{foreach $attribute.content.tags as $tag}{$tag.keyword}{delimiter}, {/delimiter}{/foreach}

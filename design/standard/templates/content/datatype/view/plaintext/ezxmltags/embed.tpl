@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}{if $object}[{$object.name}]{if $object.main_node} ({concat( '/', $object.main_node.url_alias )|cjwnl_abs_url()}){/if}{"\n"}{"\n"}{/if}

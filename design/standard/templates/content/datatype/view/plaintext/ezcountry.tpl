@@ -1,0 +1,1 @@
+{* Plain text view for the text part of a newsletter (cjw_newsletter 4.2.0): no HTML, nothing escaped. *}{if $attribute.has_content}{if is_array( $attribute.content.value )}{foreach $attribute.content.value as $country}{$country.Name}{delimiter}, {/delimiter}{/foreach}{else}{$attribute.content.value}{/if}{/if}
