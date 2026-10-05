@@ -19,6 +19,7 @@
  *  - userInput / userStored, subscribeValidate / subscribeInput: the mobile number on the admin user page and in the
  *    subscribe form.
  *  - dashboardSummary: the SMS block of the dashboard.
+ *  - userRemoved: a removed subscriber's codes and SMS go with him.
  *
  * @package cjw_newsletter
  * @subpackage sms
@@ -34,6 +35,12 @@ class CjwNewsletterSmsHooks
         $totals = CjwNewsletterSms::createMessages( $sendObject );
         if ( $cli )
             $cli->output( 'SMS send ' . $sendObject->attribute( 'id' ) . ': ' . $totals['messages'] . ' SMS queued, ' . $totals['skipped'] . ' subscribers without a confirmed number or SMS consent.' );
+    }
+
+    /** A subscriber is removed (CjwNewsletterUser::remove()): his codes, his SMS and the SMS from him go too. */
+    public static function userRemoved( $newsletterUserId )
+    {
+        CjwNewsletterSms::forgetUser( $newsletterUserId, false );
     }
 
     public static function sendProcessAllowed( $sendObject )

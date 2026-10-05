@@ -1350,6 +1350,11 @@ class CjwNewsletterUser extends eZPersistentObject
             $blackListItem->setAttribute( 'newsletter_user_id', 0 );
             $blackListItem->store();
         }
+        // 4.2.0: the feature areas remove their own rows of the subscriber (the interests of the rendering)
+        if ( class_exists( 'CjwNewsletterExtensionPoints' ) )
+        {
+            CjwNewsletterExtensionPoints::call( 'userRemoved', array( (int)$this->attribute( 'id' ) ) );
+        }
         parent::remove( $conditions, $extraConditions );
     }
 

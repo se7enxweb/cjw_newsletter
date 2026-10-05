@@ -478,6 +478,45 @@ class CjwNewsletterSms
         $db->commit();
     }
 
+    /**
+     * Forgets everything the SMS channel keeps of a newsletter user: his codes, his SMS (sent or waiting), the SMS
+     * that came in from him, and his number. For the erasure of the person and the removal of the subscriber.
+     * The text of an SMS send (its row with newsletter user 0) stays.
+     *
+     * @param int $newsletterUserId
+     * @param bool $clearNumber also empty the number of the cjwnl_user row (false when the row is removed anyway)
+     * @return int rows removed
+     */
+    public static function forgetUser( $newsletterUserId, $clearNumber = true )
+    {
+        $userId = (int)$newsletterUserId;
+        if ( $userId <= 0 )
+            return 0;
+        $db = eZDB::instance();
+        $count = function ( $table, $where ) use ( $db ) {
+            $rows = $db->arrayQuery( "SELECT COUNT(*) AS c FROM $table WHERE $where" );
+            return isset( $rows[0]['c'] ) ? (int)$rows[0]['c'] : 0;
+        };
+        $user = CjwNewsletterUser::fetch( $userId );
+        $phone = $user ? (string)$user->attribute( 'phone_number' ) : '';
+        $inbound = 'newsletter_user_id = ' . $userId . ( $phone !== '' ? " OR phone_number = '" . $db->escapeString( $phone ) . "'" : '' );
+        $removed = $count( 'cjwnl_sms_code', 'newsletter_user_id = ' . $userId ) + $count( 'cjwnl_sms_message', 'newsletter_user_id = ' . $userId )
+                   + $count( 'cjwnl_sms_inbound', $inbound );
+        $db->begin();
+        $db->query( 'DELETE FROM cjwnl_sms_code WHERE newsletter_user_id = ' . $userId );
+        $db->query( 'DELETE FROM cjwnl_sms_message WHERE newsletter_user_id = ' . $userId );
+        $db->query( 'DELETE FROM cjwnl_sms_inbound WHERE ' . $inbound );
+        if ( $clearNumber && $user && ( $phone !== '' || (int)$user->attribute( 'phone_status' ) !== self::PHONE_NONE ) )
+        {
+            $user->setAttribute( 'phone_number', '' );
+            $user->setAttribute( 'phone_status', self::PHONE_NONE );
+            $user->setAttribute( 'phone_confirmed', 0 );
+            $user->store();
+        }
+        $db->commit();
+        return $removed;
+    }
+
     // ------------------------------------------------------------------ inbound (STOP)
 
     /**

@@ -32,6 +32,9 @@
  *                                                               the list attribute's POST: set the area's columns on $list
  *                                                               (CjwNewsletterList), return error strings
  *   dashboardSummary( $summary )                                returns an array; it is in summary.areas.<handler class>
+ *   userRemoved( $newsletterUserId )                            a subscriber is being removed (CjwNewsletterUser::remove()):
+ *                                                               remove the area's own rows of him (erasure goes through
+ *                                                               the category handlers' erased() instead)
  *
  * Template parts are listed in [ExtensionPointSettings] as design: template names, each area appending its own:
  * DashboardBlocks[] (dashboard, gets summary), SendFormParts[] (inside the send form, gets node, object_version),

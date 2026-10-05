@@ -21,6 +21,7 @@
  * - sendFormValidate / sendFormStored: the tracking mode and the A/B test of a send.
  * - listAttributeInput: the tracking mode of a list.
  * - dashboardSummary: the numbers of the dashboard block.
+ * - userRemoved: a removed subscriber's opens and clicks go with him (the totals stay).
  *
  * SMS sends (channel sms) and test sends are never tracked.
  *
@@ -181,6 +182,12 @@ class CjwNewsletterStatisticsHooks
             $status = CjwNewsletterAbTester::STATUS_DONE;
         }
         return $status;
+    }
+
+    /** A subscriber is removed (CjwNewsletterUser::remove()): his per-person opens and clicks go; the totals stay. */
+    static function userRemoved( $newsletterUserId )
+    {
+        CjwNewsletterStatisticsRetention::forgetNewsletterUserId( $newsletterUserId );
     }
 
     static function sendProcessAllowed( $send )

@@ -112,14 +112,15 @@ class CjwNewsletterRunner
 
     /*!
      \static
-     The orphans: subscriptions of newsletter users that are gone, and send items without a send or without a user.
+     The orphans: subscriptions of newsletter users that are gone, send items without a send or without a user, and
+     (4.2.0) interests picked by newsletter users that are gone.
 
-     \return array( 'subscriptions' => ids, 'send_items' => ids )
+     \return array( 'subscriptions' => ids, 'send_items' => ids, 'interests' => ids )
     */
     static function orphans()
     {
         $db = eZDB::instance();
-        $result = array( 'subscriptions' => array(), 'send_items' => array() );
+        $result = array( 'subscriptions' => array(), 'send_items' => array(), 'interests' => array() );
         foreach ( (array)$db->arrayQuery( 'SELECT id FROM cjwnl_subscription WHERE newsletter_user_id NOT IN ( SELECT id FROM cjwnl_user )' ) as $row )
         {
             $result['subscriptions'][] = (int)$row['id'];
@@ -127,6 +128,11 @@ class CjwNewsletterRunner
         foreach ( (array)$db->arrayQuery( 'SELECT id FROM cjwnl_edition_send_item WHERE status = 0 AND ( newsletter_user_id NOT IN ( SELECT id FROM cjwnl_user ) OR edition_send_id NOT IN ( SELECT id FROM cjwnl_edition_send ) )' ) as $row )
         {
             $result['send_items'][] = (int)$row['id'];
+        }
+        // 4.2.0: interests of removed users (CjwNewsletterUser::remove() removes them since 4.2.0; older removals left them)
+        foreach ( (array)$db->arrayQuery( 'SELECT id FROM cjwnl_user_interest WHERE newsletter_user_id NOT IN ( SELECT id FROM cjwnl_user )' ) as $row )
+        {
+            $result['interests'][] = (int)$row['id'];
         }
         return $result;
     }
@@ -137,7 +143,7 @@ class CjwNewsletterRunner
     */
     static function repair( $cli = false, $by = 'cron', $dryRun = false )
     {
-        $totals = array( 'ok' => true, 'locked' => false, 'subscriptions' => 0, 'send_items' => 0 );
+        $totals = array( 'ok' => true, 'locked' => false, 'subscriptions' => 0, 'send_items' => 0, 'interests' => 0 );
         $lock = $dryRun ? true : self::lock( 'repair' );
         if ( !$lock )
         {
@@ -148,14 +154,17 @@ class CjwNewsletterRunner
         $orphans = self::orphans();
         $totals['subscriptions'] = count( $orphans['subscriptions'] );
         $totals['send_items'] = count( $orphans['send_items'] );
+        $totals['interests'] = count( $orphans['interests'] );
         if ( $cli )
         {
-            $cli->output( ( $dryRun ? 'Would remove ' : 'Removing ' ) . $totals['subscriptions'] . ' subscriptions of removed users and ' . $totals['send_items'] . ' unsendable items.' );
+            $cli->output( ( $dryRun ? 'Would remove ' : 'Removing ' ) . $totals['subscriptions'] . ' subscriptions of removed users and ' . $totals['send_items'] . ' unsendable items'
+                . ( $totals['interests'] ? ' and ' . $totals['interests'] . ' interests of removed users' : '' ) . '.' );
         }
         if ( !$dryRun )
         {
             $db = eZDB::instance();
-            foreach ( array( 'cjwnl_subscription' => $orphans['subscriptions'], 'cjwnl_edition_send_item' => $orphans['send_items'] ) as $table => $ids )
+            foreach ( array( 'cjwnl_subscription' => $orphans['subscriptions'], 'cjwnl_edition_send_item' => $orphans['send_items'],
+                             'cjwnl_user_interest' => $orphans['interests'] ) as $table => $ids )
             {
                 foreach ( array_chunk( $ids, 200 ) as $chunk )
                 {
