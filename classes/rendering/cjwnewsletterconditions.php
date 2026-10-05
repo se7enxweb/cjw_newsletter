@@ -209,7 +209,7 @@ class CjwNewsletterConditions
                 break;
         }
         // stray markers (an else or end without its start)
-        return preg_replace( '#\[\[cjwnl:(else|endif):[a-z0-9]{6,40}\]\]#', '', $text );
+        return preg_replace( '#\[\[cjwnl:(?:if|else|endif):[^\]\s]{0,400}\]\]#', '', $text );
     }
 
     /**
@@ -226,12 +226,12 @@ class CjwNewsletterConditions
         if ( isset( $condition['list'] ) )
         {
             $listId = isset( $context['list_id'] ) ? (int)$context['list_id'] : 0;
-            $result = $result && in_array( $listId, array_map( 'intval', self::split( $condition['list'] ) ), true );
+            $result = $result && in_array( $listId, array_map( 'intval', self::splitList( $condition['list'] ) ), true );
         }
         if ( isset( $condition['language'] ) )
         {
             $language = isset( $context['language'] ) ? strtolower( (string)$context['language'] ) : '';
-            $result = $result && in_array( $language, array_map( 'strtolower', self::split( $condition['language'] ) ), true );
+            $result = $result && in_array( $language, array_map( 'strtolower', self::splitList( $condition['language'] ) ), true );
         }
         $user = isset( $context['user'] ) && is_object( $context['user'] ) ? $context['user'] : null;
         if ( isset( $condition['interest'] ) )
@@ -241,7 +241,7 @@ class CjwNewsletterConditions
             else
             {
                 $have = array_map( 'strtolower', array_map( 'strval', isset( $context['interests'] ) ? (array)$context['interests'] : array() ) );
-                $want = array_map( 'strtolower', self::split( $condition['interest'] ) );
+                $want = array_map( 'strtolower', self::splitList( $condition['interest'] ) );
                 $result = $result && count( array_intersect( $want, $have ) ) > 0;
             }
         }
@@ -287,7 +287,7 @@ class CjwNewsletterConditions
             case 'starts':
                 return $value !== null && $value !== '' && strpos( $actual, $value ) === 0;
             case 'in':
-                return in_array( $actual, self::split( (string)$value ), true );
+                return in_array( $actual, self::splitList( (string)$value ), true );
             case 'eq':
             default:
                 return $actual === (string)$value;
@@ -295,7 +295,7 @@ class CjwNewsletterConditions
     }
 
     /** @return string[] the values of a list separated by commas, trimmed, without empty ones */
-    static function split( $string )
+    static function splitList( $string )
     {
         $out = array();
         foreach ( explode( ',', (string)$string ) as $part )

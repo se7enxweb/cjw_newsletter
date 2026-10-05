@@ -51,7 +51,8 @@ class CjwNewsletterPlaceholders
             '#_hash_edition_#' => (string)$sendObject->attribute( 'hash' ),
         );
         $listObjectId = is_object( $sendObject ) ? (int)$sendObject->attribute( 'list_contentobject_id' ) : 0;
-        return array_merge( $values, self::valuesForSubscriber( $user, $listObjectId, $personalize, (string)$unsubscribeHash ) );
+        // the links and the list name are added by the rendering handler (CjwNewsletterRenderingHooks::itemBeforeSend())
+        return array_merge( $values, self::valuesForSubscriber( $user, $listObjectId, $personalize, (string)$unsubscribeHash, false ) );
     }
 
     /**
@@ -62,12 +63,15 @@ class CjwNewsletterPlaceholders
      * @param int $listObjectId the list (its name, the unsubscribe link of the subscription); 0 = none
      * @param bool $personalize the subscriber's fields too
      * @param string|null $unsubscribeHash the hash of the subscription, null = looked up
+     * @param bool $links the links and the list name too
      * @return array placeholder => raw value
      */
-    static function valuesForSubscriber( $user, $listObjectId = 0, $personalize = true, $unsubscribeHash = null )
+    static function valuesForSubscriber( $user, $listObjectId = 0, $personalize = true, $unsubscribeHash = null, $links = true )
     {
         $values = array();
         $listObjectId = (int)$listObjectId;
+        if ( !$links )
+            return $personalize ? self::personalValues( $user ) : array();
         if ( $unsubscribeHash === null && $listObjectId > 0 && is_object( $user ) )
         {
             $subscription = CjwNewsletterSubscription::fetchByListIdAndNewsletterUserId( $listObjectId, $user->attribute( 'id' ) );
@@ -79,7 +83,17 @@ class CjwNewsletterPlaceholders
         $values['[[unsubscribe_url]]'] = (string)$unsubscribeHash !== '' ? $base . '/newsletter/unsubscribe/' . $unsubscribeHash : $configureUrl;
         $values['[[configure_url]]'] = $configureUrl;
         $values['[[manage_url]]'] = self::manageUrl( $user, $configureUrl );
-        if ( $personalize && is_object( $user ) )
+        return $personalize ? array_merge( $values, self::personalValues( $user ) ) : $values;
+    }
+
+    /**
+     * @param CjwNewsletterUser $user
+     * @return array the placeholders of the subscriber's own fields
+     */
+    static function personalValues( $user )
+    {
+        $values = array();
+        if ( is_object( $user ) )
         {
             $values['[[name]]'] = (string)$user->attribute( 'name' );
             $values['[[salutation_name]]'] = (string)$user->attribute( 'salutation_name' );

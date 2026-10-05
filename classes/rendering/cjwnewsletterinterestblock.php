@@ -193,8 +193,8 @@ class CjwNewsletterInterestBlock
         $object = eZContentObject::fetch( $editionObjectId );
         $mainNodeId = $object ? (int)$object->attribute( 'main_node_id' ) : 0;
         if ( $mainNodeId > 0 )
-            foreach ( (array)eZContentObjectTreeNode::subTreeByNodeID( array( 'Depth' => 1, 'DepthOperator' => 'eq', 'AsObject' => false ), $mainNodeId ) as $row )
-                $ids[] = (int)$row['contentobject_id'];
+            foreach ( (array)eZContentObjectTreeNode::subTreeByNodeID( array( 'Depth' => 1, 'DepthOperator' => 'eq' ), $mainNodeId ) as $child )
+                $ids[] = (int)$child->attribute( 'contentobject_id' );
         return self::$editionArticles[$editionObjectId] = $ids;
     }
 

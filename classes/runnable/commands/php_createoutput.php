@@ -379,9 +379,15 @@ class Createoutput extends \Exponential\Runnable\Command
         $contentObject = \eZContentObjectVersion::fetchVersion( $objectVersion ,$objectId );
 
         $tpl = templateInit();
-        if ( is_object( $contentObject ) && $renderLanguage !== '' )
+        // the version is shown in the language asked for, else in the siteaccess language when it has it (a version made
+        // as a translation has that translation as its own language, and would show it by default)
+        if ( is_object( $contentObject ) )
         {
-            $contentObject->CurrentLanguage = $renderLanguage;
+            $wanted = $renderLanguage !== '' ? $renderLanguage : (string)$locale;
+            if ( in_array( $wanted, (array)$contentObject->translationList( false, false ), true ) )
+            {
+                $contentObject->CurrentLanguage = $wanted;
+            }
         }
         $tpl->setVariable('contentobject', $contentObject );
 

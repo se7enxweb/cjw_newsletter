@@ -55,6 +55,14 @@ class CjwNewsletterRenderingHooks
             return;
         $list = CjwNewsletterRendering::listOfSend( $sendObject );
         $language = CjwNewsletterRendering::pickLanguage( $user, $list, CjwNewsletterRendering::outputLanguages( $sendObject ) );
+        // [LanguageSettings] FallbackToListMainLanguage=disabled: a subscriber whose language the list offers but the edition
+        // has no translation in gets no mail (instead of the main language)
+        $wanted = (string)$user->attribute( 'language' );
+        if ( $wanted !== '' && $wanted !== $language && !self::fallbackToMainLanguage() && in_array( $wanted, CjwNewsletterRendering::listLanguages( $list ), true ) )
+        {
+            $message['abort'] = 'no translation in ' . $wanted;
+            return;
+        }
         $parsed = CjwNewsletterRendering::parsedOutput( $sendObject, $language );
         $formatId = (int)$sendItem->attribute( 'output_format_id' );
         if ( isset( $parsed[$formatId] ) )
@@ -63,6 +71,10 @@ class CjwNewsletterRenderingHooks
             $message['bodies'] = $parsed[$formatId]['body'];
         }
         $listId = (int)$sendObject->attribute( 'list_contentobject_id' );
+        // the links and the list name (the runner's values: the hashes and, when personalised, the subscriber's fields)
+        $values = $message['values'];
+        $message['values'] = array_merge( CjwNewsletterPlaceholders::valuesForSubscriber( $user, $listId, false,
+            isset( $values['#_hash_unsubscribe_#'] ) ? (string)$values['#_hash_unsubscribe_#'] : null ), (array)$values );
         $context = CjwNewsletterRendering::subscriberContext( $user, $listId, $language );
         $message['bodies'] = CjwNewsletterRendering::resolveBodies( $message['bodies'], $context,
             array( 'edition_object_id' => (int)$sendObject->attribute( 'edition_contentobject_id' ), 'list_id' => $listId, 'language' => $language ) );
@@ -72,6 +84,13 @@ class CjwNewsletterRenderingHooks
             $sendItem->setAttribute( 'language', $language );
             $sendItem->store();
         }
+    }
+
+    /** @return bool [LanguageSettings] FallbackToListMainLanguage is not disabled */
+    static function fallbackToMainLanguage()
+    {
+        $ini = eZINI::instance( 'cjw_newsletter.ini' );
+        return !$ini->hasVariable( 'LanguageSettings', 'FallbackToListMainLanguage' ) || $ini->variable( 'LanguageSettings', 'FallbackToListMainLanguage' ) !== 'disabled';
     }
 
     /** The skin posted with the send form must be one the list allows. */
@@ -136,7 +155,7 @@ class CjwNewsletterRenderingHooks
     static function listAttributeInput( $list, $http, $prefix, $postfix, $contentObjectAttribute )
     {
         $name = function ( $field ) use ( $prefix, $postfix ) {
-            return $prefix . 'CjwNewsletterList_' . $field . $postfix;
+            return $prefix . $field . $postfix;
         };
         if ( !$http->hasPostVariable( $name( 'RenderingPart' ) ) )
             return array();
