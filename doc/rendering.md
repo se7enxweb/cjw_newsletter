@@ -78,8 +78,10 @@ are false there). `[ConditionTagSettings] ConditionTag=disabled` shows every con
   keywords or tags name its identifier. No interests or no articles: no block at all, not even the heading.
   The block is per subscriber, so its articles are not added to the edition. `[InterestSettings]
   MaxArticlesPerBlock` is the most articles.
-- Privacy: the picks are kept in `cjwnl_user_interest`. They are removed with the subscriber, and when the person is
-  erased through the e-mail preferences (`erased()` of the category handler, together with his language).
+- Privacy: the picks are kept in `cjwnl_user_interest`. They are removed with the subscriber (the extension point
+  `userRemoved` of `CjwNewsletterUser::remove()`), and when the person is erased through the e-mail preferences:
+  `erased()` of the newsletter category removes the newsletter user with his subscriptions, interests and language.
+  `ext:cjw_newsletter:repair` removes picks that older removals left behind.
 
 ## 5. Languages
 

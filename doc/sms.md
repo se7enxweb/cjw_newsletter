@@ -215,6 +215,10 @@ with another address only needs `Url=`.
 - The number is personal data of the subscriber (`cjwnl_user.phone_number`) and is shown masked on public pages
   (`+49 ••• 6789`). It is removed by emptying the field; a STOP keeps it with the state "stopped" so that the
   withdrawal can be shown.
+- **Erasure** (`exp:mail:preferences erase`, a request, the removal of the account) and the removal of the
+  subscriber remove the number, the codes, the SMS to the person and the SMS from him (`CjwNewsletterSms::forgetUser()`,
+  through `erased()` of the category handler and the extension point `userRemoved`). The consent log keeps the
+  anonymised record, as the kernel does for every category.
 - The consent and its withdrawal are in the kernel consent log with the wording shown, the source and the time
   (GDPR art. 7(1)); the code confirmation is the proof that the number belongs to the person.
 - Codes are stored only as a hash and expire; incoming messages are kept in `cjwnl_sms_inbound`.
