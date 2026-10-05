@@ -6516,5 +6516,801 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
         <source>Import/export</source>
         <translation>Import/export</translation>
     </message>
+    <message>
+        <source>CSV import %id</source>
+        <translation>CSV import %id</translation>
+    </message>
+    <message>
+        <source>Please check</source>
+        <translation>Please check</translation>
+    </message>
+    <message>
+        <source>Steps</source>
+        <translation>Steps</translation>
+    </message>
+    <message>
+        <source>Upload</source>
+        <translation>Upload</translation>
+    </message>
+    <message>
+        <source>Map the columns</source>
+        <translation>Map the columns</translation>
+    </message>
+    <message>
+        <source>Dry run</source>
+        <translation>Dry run</translation>
+    </message>
+    <message>
+        <source>Import</source>
+        <translation>Import</translation>
+    </message>
+    <message>
+        <source>Reload this page when the run is finished to see the report.</source>
+        <translation>Reload this page when the run is finished to see the report.</translation>
+    </message>
+    <message>
+        <source>rows</source>
+        <translation>rows</translation>
+    </message>
+    <message>
+        <source>columns</source>
+        <translation>columns</translation>
+    </message>
+    <message>
+        <source>Consent source</source>
+        <translation>Consent source</translation>
+    </message>
+    <message>
+        <source>Mapping</source>
+        <translation>Mapping</translation>
+    </message>
+    <message>
+        <source>Imported</source>
+        <translation>Imported</translation>
+    </message>
+    <message>
+        <source>Running</source>
+        <translation>Running</translation>
+    </message>
+    <message>
+        <source>Failed</source>
+        <translation>Failed</translation>
+    </message>
+    <message>
+        <source>Dry run done</source>
+        <translation>Dry run done</translation>
+    </message>
+    <message>
+        <source>Not imported yet</source>
+        <translation>Not imported yet</translation>
+    </message>
+    <message>
+        <source>File and options</source>
+        <translation>File and options</translation>
+    </message>
+    <message>
+        <source>Field delimiter</source>
+        <translation>Field delimiter</translation>
+    </message>
+    <message>
+        <source>Semicolon ;</source>
+        <translation>Semicolon ;</translation>
+    </message>
+    <message>
+        <source>Comma ,</source>
+        <translation>Comma ,</translation>
+    </message>
+    <message>
+        <source>Tab</source>
+        <translation>Tab</translation>
+    </message>
+    <message>
+        <source>Pipe |</source>
+        <translation>Pipe |</translation>
+    </message>
+    <message>
+        <source>Encoding</source>
+        <translation>Encoding</translation>
+    </message>
+    <message>
+        <source>First row holds the column names</source>
+        <translation>First row holds the column names</translation>
+    </message>
+    <message>
+        <source>Output formats of new subscriptions</source>
+        <translation>Output formats of new subscriptions</translation>
+    </message>
+    <message>
+        <source>Update the data of existing subscribers</source>
+        <translation>Update the data of existing subscribers</translation>
+    </message>
+    <message>
+        <source>For example: sign-up form at the trade fair 2025</source>
+        <translation>For example: sign-up form at the trade fair 2025</translation>
+    </message>
+    <message>
+        <source>Columns</source>
+        <translation>Columns</translation>
+    </message>
+    <message>
+        <source>Choose for each column of the file the field it fills. One column must be the e-mail address; each field can be chosen once.</source>
+        <translation>Choose for each column of the file the field it fills. One column must be the e-mail address; each field can be chosen once.</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Column</translation>
+    </message>
+    <message>
+        <source>Field</source>
+        <translation>Field</translation>
+    </message>
+    <message>
+        <source>Values in the file</source>
+        <translation>Values in the file</translation>
+    </message>
+    <message>
+        <source>Preview</source>
+        <translation>Preview</translation>
+    </message>
+    <message>
+        <source>the first %count of %total rows</source>
+        <translation>the first %count of %total rows</translation>
+    </message>
+    <message>
+        <source>Line</source>
+        <translation>Line</translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation>Result</translation>
+    </message>
+    <message>
+        <source>new</source>
+        <translation>new</translation>
+    </message>
+    <message>
+        <source>update</source>
+        <translation>update</translation>
+    </message>
+    <message>
+        <source>skip</source>
+        <translation>skip</translation>
+    </message>
+    <message>
+        <source>The file has no rows.</source>
+        <translation>The file has no rows.</translation>
+    </message>
+    <message>
+        <source>Update the preview</source>
+        <translation>Update the preview</translation>
+    </message>
+    <message>
+        <source>Check every row and count, write nothing</source>
+        <translation>Check every row and count, write nothing</translation>
+    </message>
+    <message>
+        <source>Import %count rows</source>
+        <translation>Import %count rows</translation>
+    </message>
+    <message>
+        <source>Import the rows into the list now? The consent source is written to the consent log of every person.</source>
+        <translation>Import the rows into the list now? The consent source is written to the consent log of every person.</translation>
+    </message>
+    <message>
+        <source>Save the mapping as</source>
+        <translation>Save the mapping as</translation>
+    </message>
+    <message>
+        <source>Save mapping</source>
+        <translation>Save mapping</translation>
+    </message>
+    <message>
+        <source>Back to the list</source>
+        <translation>Back to the list</translation>
+    </message>
+    <message>
+        <source>Subscriptions of the list</source>
+        <translation>Subscriptions of the list</translation>
+    </message>
+    <message>
+        <source>Import details</source>
+        <translation>Import details</translation>
+    </message>
+    <message>
+        <source>New import</source>
+        <translation>New import</translation>
+    </message>
+    <message>
+        <source>Report of the dry run</source>
+        <translation>Report of the dry run</translation>
+    </message>
+    <message>
+        <source>nothing was written</source>
+        <translation>nothing was written</translation>
+    </message>
+    <message>
+        <source>Report of the import</source>
+        <translation>Report of the import</translation>
+    </message>
+    <message>
+        <source>Subscribers</source>
+        <translation>Subscribers</translation>
+    </message>
+    <message>
+        <source>updated</source>
+        <translation>updated</translation>
+    </message>
+    <message>
+        <source>Subscriptions</source>
+        <translation>Subscriptions</translation>
+    </message>
+    <message>
+        <source>approved</source>
+        <translation>approved</translation>
+    </message>
+    <message>
+        <source>already there</source>
+        <translation>already there</translation>
+    </message>
+    <message>
+        <source>Not imported</source>
+        <translation>Not imported</translation>
+    </message>
+    <message>
+        <source>skipped</source>
+        <translation>skipped</translation>
+    </message>
+    <message>
+        <source>failed</source>
+        <translation>failed</translation>
+    </message>
+    <message>
+        <source>rows read</source>
+        <translation>rows read</translation>
+    </message>
+    <message>
+        <source>Rows that were not imported</source>
+        <translation>Rows that were not imported</translation>
+    </message>
+    <message>
+        <source>E-mail address</source>
+        <translation>E-mail address</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>Reason</translation>
+    </message>
+    <message>
+        <source>Only the first 500 are listed.</source>
+        <translation>Only the first 500 are listed.</translation>
+    </message>
+    <message>
+        <source>%count rows had values that were left out (a salutation, language or phone number that could not be read); the rest of these rows was imported.</source>
+        <translation>%count rows had values that were left out (a salutation, language or phone number that could not be read); the rest of these rows was imported.</translation>
+    </message>
+    <message>
+        <source>CSV import with column mapping</source>
+        <translation>CSV import with column mapping</translation>
+    </message>
+    <message>
+        <source>The file was not uploaded</source>
+        <translation>The file was not uploaded</translation>
+    </message>
+    <message>
+        <source>CSV file</source>
+        <translation>CSV file</translation>
+    </message>
+    <message>
+        <source>The first row holds the column names</source>
+        <translation>The first row holds the column names</translation>
+    </message>
+    <message>
+        <source>Saved mapping</source>
+        <translation>Saved mapping</translation>
+    </message>
+    <message>
+        <source>None: guess from the column names</source>
+        <translation>None: guess from the column names</translation>
+    </message>
+    <message>
+        <source>every list</source>
+        <translation>every list</translation>
+    </message>
+    <message>
+        <source>Where and how these people agreed to get the newsletter. It is written to the consent log of every imported person, with the source &quot;import&quot;.</source>
+        <translation>Where and how these people agreed to get the newsletter. It is written to the consent log of every imported person, with the source &quot;import&quot;.</translation>
+    </message>
+    <message>
+        <source>Note</source>
+        <translation>Note</translation>
+    </message>
+    <message>
+        <source>The next step shows the columns of the file: choose for each the field it fills, check the preview, make a dry run, then import. Existing subscribers are updated, never duplicated; invalid, suppressed and unsubscribed addresses are skipped and listed.</source>
+        <translation>The next step shows the columns of the file: choose for each the field it fills, check the preview, make a dry run, then import. Existing subscribers are updated, never duplicated; invalid, suppressed and unsubscribed addresses are skipped and listed.</translation>
+    </message>
+    <message>
+        <source>Upload and map the columns</source>
+        <translation>Upload and map the columns</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Cancel</translation>
+    </message>
+    <message>
+        <source>eznewsletter migration</source>
+        <translation>eznewsletter migration</translation>
+    </message>
+    <message>
+        <source>A site that ran the old eznewsletter extension can take its lists, subscribers and subscriptions over with a console command. The old tables are only read, never changed; every row read is logged here, and a second run skips what an earlier run took over.</source>
+        <translation>A site that ran the old eznewsletter extension can take its lists, subscribers and subscriptions over with a console command. The old tables are only read, never changed; every row read is logged here, and a second run skips what an earlier run took over.</translation>
+    </message>
+    <message>
+        <source>Old tables in this database</source>
+        <translation>Old tables in this database</translation>
+    </message>
+    <message>
+        <source>%count rows</source>
+        <translation>%count rows</translation>
+    </message>
+    <message>
+        <source>None: the old extension did not run on this database. A copy of the old data can be read from an SQLite file with --source-sqlite.</source>
+        <translation>None: the old extension did not run on this database. A copy of the old data can be read from an SQLite file with --source-sqlite.</translation>
+    </message>
+    <message>
+        <source>First a dry run, then the run:</source>
+        <translation>First a dry run, then the run:</translation>
+    </message>
+    <message>
+        <source>&lt;list object id&gt;</source>
+        <translation>&lt;list object id&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;node id&gt;</source>
+        <translation>&lt;node id&gt;</translation>
+    </message>
+    <message>
+        <source>Runs</source>
+        <translation>Runs</translation>
+    </message>
+    <message>
+        <source>Run</source>
+        <translation>Run</translation>
+    </message>
+    <message>
+        <source>Started</source>
+        <translation>Started</translation>
+    </message>
+    <message>
+        <source>Kind</source>
+        <translation>Kind</translation>
+    </message>
+    <message>
+        <source>Created</source>
+        <translation>Created</translation>
+    </message>
+    <message>
+        <source>Merged</source>
+        <translation>Merged</translation>
+    </message>
+    <message>
+        <source>Skipped</source>
+        <translation>Skipped</translation>
+    </message>
+    <message>
+        <source>Sends</source>
+        <translation>Sends</translation>
+    </message>
+    <message>
+        <source>dry run</source>
+        <translation>dry run</translation>
+    </message>
+    <message>
+        <source>run</source>
+        <translation>run</translation>
+    </message>
+    <message>
+        <source>No run yet.</source>
+        <translation>No run yet.</translation>
+    </message>
+    <message>
+        <source>Migration run</source>
+        <translation>Migration run</translation>
+    </message>
+    <message>
+        <source>dry run: nothing was written</source>
+        <translation>dry run: nothing was written</translation>
+    </message>
+    <message>
+        <source>%count failed</source>
+        <translation>%count failed</translation>
+    </message>
+    <message>
+        <source>By old table</source>
+        <translation>By old table</translation>
+    </message>
+    <message>
+        <source>Old table</source>
+        <translation>Old table</translation>
+    </message>
+    <message>
+        <source>Rows</source>
+        <translation>Rows</translation>
+    </message>
+    <message>
+        <source>Action</source>
+        <translation>Action</translation>
+    </message>
+    <message>
+        <source>all</source>
+        <translation>all</translation>
+    </message>
+    <message>
+        <source>all tables</source>
+        <translation>all tables</translation>
+    </message>
+    <message>
+        <source>Old ID</source>
+        <translation>Old ID</translation>
+    </message>
+    <message>
+        <source>Written to</source>
+        <translation>Written to</translation>
+    </message>
+    <message>
+        <source>Details</source>
+        <translation>Details</translation>
+    </message>
+    <message>
+        <source>No rows.</source>
+        <translation>No rows.</translation>
+    </message>
+    <message>
+        <source>All runs</source>
+        <translation>All runs</translation>
+    </message>
+    <message>
+        <source>Subscriber export</source>
+        <translation>Subscriber export</translation>
+    </message>
+    <message>
+        <source>The file holds personal data. Every download is recorded in the audit trail with the list, the filters and the number of rows. Cells a spreadsheet would read as a formula start with an apostrophe.</source>
+        <translation>The file holds personal data. Every download is recorded in the audit trail with the list, the filters and the number of rows. Cells a spreadsheet would read as a formula start with an apostrophe.</translation>
+    </message>
+    <message>
+        <source>Filters</source>
+        <translation>Filters</translation>
+    </message>
+    <message>
+        <source>Subscription status</source>
+        <translation>Subscription status</translation>
+    </message>
+    <message>
+        <source>none checked: every status</source>
+        <translation>none checked: every status</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Date</translation>
+    </message>
+    <message>
+        <source>from</source>
+        <translation>from</translation>
+    </message>
+    <message>
+        <source>to</source>
+        <translation>to</translation>
+    </message>
+    <message>
+        <source>No subscriber matches the filters.</source>
+        <translation>No subscriber matches the filters.</translation>
+    </message>
+    <message>
+        <source>Download CSV</source>
+        <translation>Download CSV</translation>
+    </message>
+    <message>
+        <source>Imports and migration</source>
+        <translation>Imports and migration</translation>
+    </message>
+    <message>
+        <source>Last imports</source>
+        <translation>Last imports</translation>
+    </message>
+    <message>
+        <source>subscriptions</source>
+        <translation>subscriptions</translation>
+    </message>
+    <message>
+        <source>running</source>
+        <translation>running</translation>
+    </message>
+    <message>
+        <source>not imported</source>
+        <translation>not imported</translation>
+    </message>
+    <message>
+        <source>%count skipped</source>
+        <translation>%count skipped</translation>
+    </message>
+    <message>
+        <source>No import yet.</source>
+        <translation>No import yet.</translation>
+    </message>
+    <message>
+        <source>Imports</source>
+        <translation>Imports</translation>
+    </message>
+    <message>
+        <source>%created created, %merged merged, %skipped skipped</source>
+        <translation>%created created, %merged merged, %skipped skipped</translation>
+    </message>
+    <message>
+        <source>Sites that ran eznewsletter take their subscribers over with ext:cjw_newsletter:import-eznewsletter.</source>
+        <translation>Sites that ran eznewsletter take their subscribers over with ext:cjw_newsletter:import-eznewsletter.</translation>
+    </message>
+    <message>
+        <source>Migration log</source>
+        <translation>Migration log</translation>
+    </message>
+    <message>
+        <source>The import with column mapping starts from the CSV import page of a list; sites that ran eznewsletter use the migration.</source>
+        <translation>The import with column mapping starts from the CSV import page of a list; sites that ran eznewsletter use the migration.</translation>
+    </message>
+    <message>
+        <source>CSV with mapping</source>
+        <translation>CSV with mapping</translation>
+    </message>
+    <message>
+        <source>Report</source>
+        <translation>Report</translation>
+    </message>
+    <message>
+        <source>This import reads the columns in a fixed order. To choose which column fills which field, with a preview, a dry run and a consent source:</source>
+        <translation>This import reads the columns in a fixed order. To choose which column fills which field, with a preview, a dry run and a consent source:</translation>
+    </message>
+    <message>
+        <source>To choose the columns and filter by status and date:</source>
+        <translation>To choose the columns and filter by status and date:</translation>
+    </message>
+    <message>
+        <source>Column %number</source>
+        <translation>Column %number</translation>
+    </message>
+    <message>
+        <source>Do not import</source>
+        <translation>Do not import</translation>
+    </message>
+    <message>
+        <source>Salutation</source>
+        <translation>Salutation</translation>
+    </message>
+    <message>
+        <source>First name</source>
+        <translation>First name</translation>
+    </message>
+    <message>
+        <source>Last name</source>
+        <translation>Last name</translation>
+    </message>
+    <message>
+        <source>Organisation</source>
+        <translation>Organisation</translation>
+    </message>
+    <message>
+        <source>Language</source>
+        <translation>Language</translation>
+    </message>
+    <message>
+        <source>Phone number</source>
+        <translation>Phone number</translation>
+    </message>
+    <message>
+        <source>Custom field 1</source>
+        <translation>Custom field 1</translation>
+    </message>
+    <message>
+        <source>Custom field 2</source>
+        <translation>Custom field 2</translation>
+    </message>
+    <message>
+        <source>Custom field 3</source>
+        <translation>Custom field 3</translation>
+    </message>
+    <message>
+        <source>Custom field 4</source>
+        <translation>Custom field 4</translation>
+    </message>
+    <message>
+        <source>Newsletter subscriptions taken over from eznewsletter (run %run); the person opted in on %date</source>
+        <translation>Newsletter subscriptions taken over from eznewsletter (run %run); the person opted in on %date</translation>
+    </message>
+    <message>
+        <source>Newsletter unsubscription taken over from eznewsletter (run %run); the person unsubscribed on %date</source>
+        <translation>Newsletter unsubscription taken over from eznewsletter (run %run); the person unsubscribed on %date</translation>
+    </message>
+    <message>
+        <source>The import %id has been running for more than an hour.</source>
+        <translation>The import %id has been running for more than an hour.</translation>
+    </message>
+    <message>
+        <source>Newsletter &quot;%list&quot;: subscribed by the CSV import %id (consent: %source)</source>
+        <translation>Newsletter &quot;%list&quot;: subscribed by the CSV import %id (consent: %source)</translation>
+    </message>
+    <message>
+        <source>No e-mail address</source>
+        <translation>No e-mail address</translation>
+    </message>
+    <message>
+        <source>Not a valid e-mail address</source>
+        <translation>Not a valid e-mail address</translation>
+    </message>
+    <message>
+        <source>Repeated in the file</source>
+        <translation>Repeated in the file</translation>
+    </message>
+    <message>
+        <source>On the suppression list</source>
+        <translation>On the suppression list</translation>
+    </message>
+    <message>
+        <source>On the newsletter blacklist</source>
+        <translation>On the newsletter blacklist</translation>
+    </message>
+    <message>
+        <source>Switched the newsletter off in the e-mail preferences</source>
+        <translation>Switched the newsletter off in the e-mail preferences</translation>
+    </message>
+    <message>
+        <source>Unsubscribed before</source>
+        <translation>Unsubscribed before</translation>
+    </message>
+    <message>
+        <source>The address bounced</source>
+        <translation>The address bounced</translation>
+    </message>
+    <message>
+        <source>Failed (see the debug log)</source>
+        <translation>Failed (see the debug log)</translation>
+    </message>
+    <message>
+        <source>No target list</source>
+        <translation>No target list</translation>
+    </message>
+    <message>
+        <source>On the old do-not-contact list</source>
+        <translation>On the old do-not-contact list</translation>
+    </message>
+    <message>
+        <source>Never confirmed</source>
+        <translation>Never confirmed</translation>
+    </message>
+    <message>
+        <source>Taken over by an earlier run</source>
+        <translation>Taken over by an earlier run</translation>
+    </message>
+    <message>
+        <source>Salutation not understood</source>
+        <translation>Salutation not understood</translation>
+    </message>
+    <message>
+        <source>Not a locale (like ger-DE)</source>
+        <translation>Not a locale (like ger-DE)</translation>
+    </message>
+    <message>
+        <source>Not a phone number</source>
+        <translation>Not a phone number</translation>
+    </message>
+    <message>
+        <source>Give the mapping a name to save it.</source>
+        <translation>Give the mapping a name to save it.</translation>
+    </message>
+    <message>
+        <source>The mapping &quot;%name&quot; was saved.</source>
+        <translation>The mapping &quot;%name&quot; was saved.</translation>
+    </message>
+    <message>
+        <source>Map one column to the e-mail address.</source>
+        <translation>Map one column to the e-mail address.</translation>
+    </message>
+    <message>
+        <source>Say where the people gave their consent (the consent source).</source>
+        <translation>Say where the people gave their consent (the consent source).</translation>
+    </message>
+    <message>
+        <source>The file of this import is no longer there.</source>
+        <translation>The file of this import is no longer there.</translation>
+    </message>
+    <message>
+        <source>Choose a CSV file.</source>
+        <translation>Choose a CSV file.</translation>
+    </message>
+    <message>
+        <source>The file is empty.</source>
+        <translation>The file is empty.</translation>
+    </message>
+    <message>
+        <source>This is not a CSV file.</source>
+        <translation>This is not a CSV file.</translation>
+    </message>
+    <message>
+        <source>The file could not be stored in %dir. Check that the web server can write there.</source>
+        <translation>The file could not be stored in %dir. Check that the web server can write there.</translation>
+    </message>
+    <message>
+        <source>This import was done already.</source>
+        <translation>This import was done already.</translation>
+    </message>
+    <message>
+        <source>Dry run done: nothing was written. See the report below.</source>
+        <translation>Dry run done: nothing was written. See the report below.</translation>
+    </message>
+    <message>
+        <source>The import is done.</source>
+        <translation>The import is done.</translation>
+    </message>
+    <message>
+        <source>Pending</source>
+        <translation>Pending</translation>
+    </message>
+    <message>
+        <source>Confirmed</source>
+        <translation>Confirmed</translation>
+    </message>
+    <message>
+        <source>Approved</source>
+        <translation>Approved</translation>
+    </message>
+    <message>
+        <source>Unsubscribed</source>
+        <translation>Unsubscribed</translation>
+    </message>
+    <message>
+        <source>Removed by an administrator</source>
+        <translation>Removed by an administrator</translation>
+    </message>
+    <message>
+        <source>Soft bounce</source>
+        <translation>Soft bounce</translation>
+    </message>
+    <message>
+        <source>Hard bounce</source>
+        <translation>Hard bounce</translation>
+    </message>
+    <message>
+        <source>Blacklisted</source>
+        <translation>Blacklisted</translation>
+    </message>
+    <message>
+        <source>Output formats</source>
+        <translation>Output formats</translation>
+    </message>
+    <message>
+        <source>Subscribed</source>
+        <translation>Subscribed</translation>
+    </message>
+    <message>
+        <source>Removed</source>
+        <translation>Removed</translation>
+    </message>
+    <message>
+        <source>User status</source>
+        <translation>User status</translation>
+    </message>
+    <message>
+        <source>Subscription ID</source>
+        <translation>Subscription ID</translation>
+    </message>
+    <message>
+        <source>Newsletter user ID</source>
+        <translation>Newsletter user ID</translation>
+    </message>
+    <message>
+        <source>Import ID</source>
+        <translation>Import ID</translation>
+    </message>
+    <message>
+        <source>&quot;%name&quot;, sent %date: %sent of %items mails</source>
+        <translation>&quot;%name&quot;, sent %date: %sent of %items mails</translation>
+    </message>
 </context>
 </TS>

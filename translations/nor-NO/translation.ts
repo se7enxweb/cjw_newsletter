@@ -5661,7 +5661,803 @@ If you did not send this request, ignore this mail: nothing changes.</source>
     <!-- cjw_newsletter 4.2.0, area N6: its strings only, appended here -->
     <message>
         <source>Import/export</source>
-        <translation>Import/eksport</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CSV import %id</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please check</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Steps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Upload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Map the columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dry run</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reload this page when the run is finished to see the report.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>rows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Consent source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mapping</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Imported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Running</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dry run done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Not imported yet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File and options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Field delimiter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Semicolon ;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Comma ,</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pipe |</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Encoding</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>First row holds the column names</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Output formats of new subscriptions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update the data of existing subscribers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>For example: sign-up form at the trade fair 2025</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose for each column of the file the field it fills. One column must be the e-mail address; each field can be chosen once.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Field</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Values in the file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the first %count of %total rows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>new</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>update</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>skip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The file has no rows.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update the preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check every row and count, write nothing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import %count rows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import the rows into the list now? The consent source is written to the consent log of every person.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save the mapping as</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save mapping</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Back to the list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subscriptions of the list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Report of the dry run</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>nothing was written</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Report of the import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subscribers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>updated</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subscriptions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>approved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>already there</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Not imported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>skipped</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>rows read</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rows that were not imported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>E-mail address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Only the first 500 are listed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count rows had values that were left out (a salutation, language or phone number that could not be read); the rest of these rows was imported.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CSV import with column mapping</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The file was not uploaded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CSV file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The first row holds the column names</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Saved mapping</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None: guess from the column names</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>every list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Where and how these people agreed to get the newsletter. It is written to the consent log of every imported person, with the source &quot;import&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The next step shows the columns of the file: choose for each the field it fills, check the preview, make a dry run, then import. Existing subscribers are updated, never duplicated; invalid, suppressed and unsubscribed addresses are skipped and listed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Upload and map the columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>eznewsletter migration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A site that ran the old eznewsletter extension can take its lists, subscribers and subscriptions over with a console command. The old tables are only read, never changed; every row read is logged here, and a second run skips what an earlier run took over.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Old tables in this database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count rows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None: the old extension did not run on this database. A copy of the old data can be read from an SQLite file with --source-sqlite.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>First a dry run, then the run:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;list object id&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;node id&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Runs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Run</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Started</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Kind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Created</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Merged</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skipped</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sends</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>dry run</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>run</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No run yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Migration run</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>dry run: nothing was written</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>By old table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Old table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>all tables</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Old ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Written to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No rows.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All runs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subscriber export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The file holds personal data. Every download is recorded in the audit trail with the list, the filters and the number of rows. Cells a spreadsheet would read as a formula start with an apostrophe.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subscription status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>none checked: every status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>from</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No subscriber matches the filters.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Download CSV</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Imports and migration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last imports</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>subscriptions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>running</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>not imported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count skipped</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No import yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Imports</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%created created, %merged merged, %skipped skipped</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sites that ran eznewsletter take their subscribers over with ext:cjw_newsletter:import-eznewsletter.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Migration log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The import with column mapping starts from the CSV import page of a list; sites that ran eznewsletter use the migration.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CSV with mapping</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Report</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This import reads the columns in a fixed order. To choose which column fills which field, with a preview, a dry run and a consent source:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To choose the columns and filter by status and date:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Column %number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do not import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Salutation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>First name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Organisation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Phone number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom field 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom field 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom field 3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom field 4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Newsletter subscriptions taken over from eznewsletter (run %run); the person opted in on %date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Newsletter unsubscription taken over from eznewsletter (run %run); the person unsubscribed on %date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The import %id has been running for more than an hour.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Newsletter &quot;%list&quot;: subscribed by the CSV import %id (consent: %source)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No e-mail address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Not a valid e-mail address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Repeated in the file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>On the suppression list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>On the newsletter blacklist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Switched the newsletter off in the e-mail preferences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsubscribed before</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The address bounced</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed (see the debug log)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No target list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>On the old do-not-contact list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Never confirmed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Taken over by an earlier run</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Salutation not understood</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Not a locale (like ger-DE)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Not a phone number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Give the mapping a name to save it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The mapping &quot;%name&quot; was saved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Map one column to the e-mail address.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Say where the people gave their consent (the consent source).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The file of this import is no longer there.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose a CSV file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The file is empty.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This is not a CSV file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The file could not be stored in %dir. Check that the web server can write there.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This import was done already.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dry run done: nothing was written. See the report below.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The import is done.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pending</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Confirmed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Approved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsubscribed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Removed by an administrator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Soft bounce</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hard bounce</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Blacklisted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Output formats</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subscribed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Removed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>User status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subscription ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Newsletter user ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&quot;%name&quot;, sent %date: %sent of %items mails</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
