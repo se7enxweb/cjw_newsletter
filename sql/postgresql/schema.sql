@@ -1,53 +1,53 @@
-CREATE SEQUENCE cjwnl_blacklist_item_s
+CREATE SEQUENCE cjwnl_blacklist_item_id_seq
     START 1
     INCREMENT 1
     MAXVALUE 9223372036854775807
     MINVALUE 1
     CACHE 1;
 
-CREATE SEQUENCE cjwnl_edition_send_s
+CREATE SEQUENCE cjwnl_edition_send_id_seq
     START 1
     INCREMENT 1
     MAXVALUE 9223372036854775807
     MINVALUE 1
     CACHE 1;
 
-CREATE SEQUENCE cjwnl_edition_send_item_s
+CREATE SEQUENCE cjwnl_edition_send_item_id_seq
     START 1
     INCREMENT 1
     MAXVALUE 9223372036854775807
     MINVALUE 1
     CACHE 1;
 
-CREATE SEQUENCE cjwnl_import_s
+CREATE SEQUENCE cjwnl_import_id_seq
     START 1
     INCREMENT 1
     MAXVALUE 9223372036854775807
     MINVALUE 1
     CACHE 1;
 
-CREATE SEQUENCE cjwnl_mailbox_s
+CREATE SEQUENCE cjwnl_mailbox_id_seq
     START 1
     INCREMENT 1
     MAXVALUE 9223372036854775807
     MINVALUE 1
     CACHE 1;
 
-CREATE SEQUENCE cjwnl_mailbox_item_s
+CREATE SEQUENCE cjwnl_mailbox_item_id_seq
     START 1
     INCREMENT 1
     MAXVALUE 9223372036854775807
     MINVALUE 1
     CACHE 1;
 
-CREATE SEQUENCE cjwnl_subscription_s
+CREATE SEQUENCE cjwnl_subscription_id_seq
     START 1
     INCREMENT 1
     MAXVALUE 9223372036854775807
     MINVALUE 1
     CACHE 1;
 
-CREATE SEQUENCE cjwnl_user_s
+CREATE SEQUENCE cjwnl_user_id_seq
     START 1
     INCREMENT 1
     MAXVALUE 9223372036854775807
@@ -55,7 +55,7 @@ CREATE SEQUENCE cjwnl_user_s
     CACHE 1;
 
 CREATE TABLE cjwnl_blacklist_item (
-  id integer NOT NULL DEFAULT nextval(('cjwnl_blacklist_item_s'::text)::regclass),
+  id integer NOT NULL DEFAULT nextval('cjwnl_blacklist_item_id_seq'::regclass),
   email_hash character varying(255) DEFAULT NULL::character varying,
   email character varying(255) DEFAULT NULL::character varying,
   newsletter_user_id integer NOT NULL DEFAULT 0,
@@ -80,7 +80,7 @@ CREATE INDEX cjwnl_edition_contentobject_attr_version ON cjwnl_edition USING btr
 CREATE INDEX cjwnl_edition_contentobject_id ON cjwnl_edition USING btree (contentobject_id);
 
 CREATE TABLE cjwnl_edition_send (
-  id integer NOT NULL DEFAULT nextval(('cjwnl_edition_send_s'::text)::regclass),
+  id integer NOT NULL DEFAULT nextval('cjwnl_edition_send_id_seq'::regclass),
   list_contentobject_id integer NOT NULL DEFAULT 0,
   list_contentobject_version integer NOT NULL DEFAULT 0,
   list_is_virtual smallint NOT NULL DEFAULT 0::smallint,
@@ -111,7 +111,7 @@ CREATE INDEX cjwnl_edition_send_edition_co_version ON cjwnl_edition_send USING b
 CREATE INDEX cjwnl_edition_send_list_coid ON cjwnl_edition_send USING btree (list_contentobject_id);
 
 CREATE TABLE cjwnl_edition_send_item (
-  id integer NOT NULL DEFAULT nextval(('cjwnl_edition_send_item_s'::text)::regclass),
+  id integer NOT NULL DEFAULT nextval('cjwnl_edition_send_item_id_seq'::regclass),
   edition_send_id integer NOT NULL DEFAULT 0,
   newsletter_user_id integer NOT NULL DEFAULT 0,
   output_format_id smallint NOT NULL DEFAULT 0::smallint,
@@ -129,7 +129,7 @@ CREATE INDEX cjwnl_edition_send_item_nuid ON cjwnl_edition_send_item USING btree
 CREATE INDEX cjwnl_edition_send_item_sid ON cjwnl_edition_send_item USING btree (subscription_id);
 
 CREATE TABLE cjwnl_import (
-  id integer NOT NULL DEFAULT nextval(('cjwnl_import_s'::text)::regclass),
+  id integer NOT NULL DEFAULT nextval('cjwnl_import_id_seq'::regclass),
   "type" character varying(255) NOT NULL,
   list_contentobject_id integer,
   created integer,
@@ -171,7 +171,7 @@ CREATE INDEX cjwnl_list_contentobject_attr_version ON cjwnl_list USING btree (co
 CREATE INDEX cjwnl_list_contentobject_id ON cjwnl_list USING btree (contentobject_id);
 
 CREATE TABLE cjwnl_mailbox (
-  id integer NOT NULL DEFAULT nextval(('cjwnl_mailbox_s'::text)::regclass),
+  id integer NOT NULL DEFAULT nextval('cjwnl_mailbox_id_seq'::regclass),
   email character varying(255) DEFAULT NULL::character varying,
   server character varying(255) DEFAULT NULL::character varying,
   port integer,
@@ -186,7 +186,7 @@ CREATE TABLE cjwnl_mailbox (
 );
 
 CREATE TABLE cjwnl_mailbox_item (
-  id integer NOT NULL DEFAULT nextval(('cjwnl_mailbox_item_s'::text)::regclass),
+  id integer NOT NULL DEFAULT nextval('cjwnl_mailbox_item_id_seq'::regclass),
   mailbox_id integer,
   message_id integer,
   message_identifier character varying(50) DEFAULT NULL::character varying,
@@ -209,7 +209,7 @@ CREATE INDEX cjwnl_mailbox_item_mailbox_id ON cjwnl_mailbox_item USING btree (ma
 CREATE INDEX cjwnl_mailbox_item_newsletter_uid ON cjwnl_mailbox_item USING btree (newsletter_user_id);
 
 CREATE TABLE cjwnl_subscription (
-  id integer NOT NULL DEFAULT nextval(('cjwnl_subscription_s'::text)::regclass),
+  id integer NOT NULL DEFAULT nextval('cjwnl_subscription_id_seq'::regclass),
   list_contentobject_id integer NOT NULL DEFAULT 0,
   newsletter_user_id integer NOT NULL DEFAULT 0,
   hash character varying(255) NOT NULL,
@@ -232,7 +232,7 @@ CREATE INDEX cjwnl_subscription_list_contentobject_id ON cjwnl_subscription USIN
 CREATE INDEX cjwnl_subscription_newsletter_user_id ON cjwnl_subscription USING btree (newsletter_user_id);
 
 CREATE TABLE cjwnl_user (
-  id integer NOT NULL DEFAULT nextval(('cjwnl_user_s'::text)::regclass),
+  id integer NOT NULL DEFAULT nextval('cjwnl_user_id_seq'::regclass),
   email character varying(255) DEFAULT NULL::character varying,
   salutation smallint,
   first_name character varying(255) DEFAULT NULL::character varying,
