@@ -611,54 +611,11 @@ class CjwNewsletterRunner
                             $outputStringArray = $outputFormatStringArray[$outputFormatId]['body'];
                             $emailSubject = $outputFormatStringArray[$outputFormatId]['subject'];
 
-                            // parsed text and replace vars
-                            // TODO parse extra variables
-
-                            // START, add more hash keys
-                            $searchArray = array(
-                                '#_hash_unsubscribe_#',
-                                '#_hash_configure_#',
-                                '#_hash_item_#',
-                                '#_hash_edition_#'
-                            );
-
-                            $replaceArray = array(
-                                $newsletterUnsubscribeHash,
-                                $newsletterConfigureHash,
-                                $sendItem->attribute( 'hash' ),
-                                $sendObject->attribute( 'hash' )
-                            );
-                            // END
-
-                            if ( $personalizeContent === 1 )
-                            {
-                                $searchArray = array_merge( $searchArray,
-                                    array(
-                                        '[[name]]',
-                                        '[[salutation_name]]',
-                                        '[[first_name]]',
-                                        '[[last_name]]'
-                                    ) );
-                                $replaceArray = array_merge( $replaceArray,
-                                    array(
-                                        $newsletterUserObject->attribute( 'name' ),
-                                        $newsletterUserObject->attribute( 'salutation_name' ),
-                                        $newsletterUserObject->attribute( 'first_name' ),
-                                        $newsletterUserObject->attribute( 'last_name' )
-                                    ) );
-                            }
-
-                            $outputStringArrayNew = array( 'html' => '', 'text' => '' );
-                            foreach ( $outputStringArray as $index => $string )
-                            {
-                                $outputStringArrayNew[$index] = str_replace( $searchArray,
-                                    $replaceArray,
-                                    $string );
-                            }
-
-                            // START, replace in subject
-                            $emailSubject = str_replace( $searchArray, $replaceArray, $emailSubject );
-                            // END
+                            // the placeholders of this recipient: escaped in the HTML part, raw in the text part and the subject
+                            $placeholderValues = \CjwNewsletterPlaceholders::valuesForRecipient( $sendItem, $sendObject,
+                                $newsletterUnsubscribeHash, $newsletterUserObject, $personalizeContent === 1 );
+                            $outputStringArrayNew = \CjwNewsletterPlaceholders::replaceInBodies( $outputStringArray, $placeholderValues );
+                            $emailSubject = \CjwNewsletterPlaceholders::replaceInSubject( $emailSubject, $placeholderValues );
 
                             // set x-cjwnl header
                             $cjwMail->resetExtraMailHeaders();
