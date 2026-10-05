@@ -1,4 +1,5 @@
 {* Newsletter - subscription_list_csvexport *}
+{ezcss_require( 'newsletter_ui.css' )}
 
 
 {def $limit = 50
@@ -39,6 +40,10 @@
             <div class="box-mr">
                 <div class="box-content">
                     <div class="context-attributes">
+                        {if fetch( 'user', 'has_access_to', hash( 'module', 'newsletter', 'function', 'import_export' ) )}
+                        <div class="block nl"><p class="nl-hint">{'To choose the columns and filter by status and date:'|i18n( 'cjw_newsletter/importexport' )}
+                            <a class="button" href={concat( 'newsletter/subscriber_export/', $list_node.contentobject_id )|ezurl}>{'Subscriber export'|i18n( 'cjw_newsletter/importexport' )}</a></p></div>
+                        {/if}
                         <div class="block float-break">
 
                         </div>

@@ -132,6 +132,17 @@ full view of an newsletter user - with all related data
                                         <span title="{'Confirmed Newsletter user in current system with import id %importId'|i18n( 'cjw_newsletter/import_view',, hash('%importId', $import_object.id ) )}"><b>{$import_object.imported_user_count_live_confirmed|wash}</b></span>
                                     </td>
                                 </tr>
+                                {if eq( $import_object.type, 'cjwnl_csv_mapped' )}
+                                <tr>
+                                    <th>{'Consent source'|i18n( 'cjw_newsletter/importexport' )}</th>
+                                    <td>{$import_object.consent_source|wash}</td>
+                                </tr>
+                                <tr>
+                                    <th>{'Skipped'|i18n( 'cjw_newsletter/importexport' )} | {'Failed'|i18n( 'cjw_newsletter/importexport' )}</th>
+                                    <td>{$import_object.skipped_count|wash} | {$import_object.error_count|wash}{if $import_object.is_dry_run|eq( 1 )} ({'dry run'|i18n( 'cjw_newsletter/importexport' )}){/if}
+                                        <a href={concat( 'newsletter/import_mapping/', $import_object.id, '#nl-ie-report' )|ezurl}>{'Report'|i18n( 'cjw_newsletter/importexport' )}</a></td>
+                                </tr>
+                                {/if}
                             </table>
                         </div>
                         {* DESIGN: Content END *}

@@ -14,7 +14,9 @@
 
         {include uri='design:parts/newsletter/notices.tpl' notices=$notices}
 
-        <p class="nl-muted">{'Subscribers are imported from a CSV file on the subscriptions page of a list. Each upload is listed here.'|i18n( 'extension/cjw_newsletter' )}</p>
+        <p class="nl-muted">{'Subscribers are imported from a CSV file on the subscriptions page of a list. Each upload is listed here.'|i18n( 'extension/cjw_newsletter' )}
+            {'The import with column mapping starts from the CSV import page of a list; sites that ran eznewsletter use the migration.'|i18n( 'cjw_newsletter/importexport' )}
+            <a href={'newsletter/migration_log'|ezurl}>{'Migration log'|i18n( 'cjw_newsletter/importexport' )}</a></p>
 
         {if $import_list|count}
         <table class="list nl-table">
@@ -31,8 +33,8 @@
             {foreach $import_list as $import_item sequence array( 'bglight', 'bgdark' ) as $style}
             {def $list_contentobject = $import_item.list_contentobject}
             <tr class="{$style}">
-                <td class="nl-num"><a href={concat( 'newsletter/import_view/', $import_item.id )|ezurl}>{$import_item.id|wash}</a></td>
-                <td>{$import_item.type|wash}</td>
+                <td class="nl-num"><a href={cond( eq( $import_item.type, 'cjwnl_csv_mapped' ), concat( 'newsletter/import_mapping/', $import_item.id ), concat( 'newsletter/import_view/', $import_item.id ) )|ezurl}>{$import_item.id|wash}</a></td>
+                <td>{if eq( $import_item.type, 'cjwnl_csv_mapped' )}{'CSV with mapping'|i18n( 'cjw_newsletter/importexport' )}{if $import_item.skipped_count|gt( 0 )} <span class="nl-pill is-warn">{'%count skipped'|i18n( 'cjw_newsletter/importexport',, hash( '%count', $import_item.skipped_count ) )}</span>{/if}{if and( $import_item.is_dry_run|eq( 1 ), $import_item.imported|eq( 0 ) )} <span class="nl-pill is-info">{'dry run'|i18n( 'cjw_newsletter/importexport' )}</span>{/if}{else}{$import_item.type|wash}{/if}</td>
                 <td class="nl-wrap">{if is_object( $list_contentobject )}<a href={concat( 'newsletter/subscription_list/', $list_contentobject.main_node_id )|ezurl}>{$list_contentobject.name|wash}</a>{/if}</td>
                 <td>{if is_object( $import_item.creator )}{$import_item.creator.name|wash}{/if}</td>
                 <td class="nl-wrap">{$import_item.note|wash}</td>

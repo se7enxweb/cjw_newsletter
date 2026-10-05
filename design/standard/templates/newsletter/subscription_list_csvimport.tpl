@@ -72,6 +72,10 @@ list all blacklist items
                     <div class="context-attributes">
                         {include uri='design:parts/newsletter/notices.tpl' notices=$notices}
                         {include uri='design:parts/newsletter/job.tpl' job_id=$job_id}
+                        {if fetch( 'user', 'has_access_to', hash( 'module', 'newsletter', 'function', 'import_export' ) )}
+                        <div class="block nl"><p class="nl-hint">{'This import reads the columns in a fixed order. To choose which column fills which field, with a preview, a dry run and a consent source:'|i18n( 'cjw_newsletter/importexport' )}
+                            <a class="button" href={concat( 'newsletter/import_mapping/0/(list)/', $list_node.node_id )|ezurl}>{'CSV import with column mapping'|i18n( 'cjw_newsletter/importexport' )}</a></p></div>
+                        {/if}
                         <div class="block float-break"></div>
 
                         <div class="block">
