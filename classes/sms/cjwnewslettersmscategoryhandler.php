@@ -54,6 +54,17 @@ class CjwNewsletterSmsCategoryHandler implements expMailCategoryHandler
         }
     }
 
+    /**
+     * The person was erased (kernel expMailPreferences::erase()): the number, the codes, the SMS to him and from
+     * him go.
+     */
+    public function erased( $recipient, $context )
+    {
+        $user = CjwNewsletterSms::newsletterUserFor( $recipient );
+        if ( $user )
+            CjwNewsletterSms::forgetUser( (int)$user->attribute( 'id' ) );
+    }
+
     /** The newsletter lists of the person by SMS, under "Your subscriptions:". */
     public function subscriptions( $recipient, $category )
     {

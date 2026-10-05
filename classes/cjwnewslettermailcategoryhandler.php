@@ -174,20 +174,20 @@ class CjwNewsletterMailCategoryHandler implements expMailCategoryHandler
     }
 
     /**
-     * The person was erased (expMailPreferences::erase()): his interests and his language go with him; the
-     * subscriptions are the newsletter's own data and are handled by the newsletter's removal.
+     * The person was erased (expMailPreferences::erase(): "delete my data", or the removal of the account): the
+     * newsletter user goes, with his subscriptions, his interests and his language, and through the extension point
+     * userRemoved what the feature areas keep of him (the SMS channel's codes and messages). A blacklist entry
+     * stays without the user, as the kernel's suppression list stays: it must keep blocking the address. The
+     * per-person statistics go through the statistics category's own erased().
      */
     public function erased( expMailRecipient $recipient, expConsentContext $context )
     {
         $newsletterUser = self::newsletterUser( $recipient );
-        if ( !is_object( $newsletterUser ) || !class_exists( 'CjwNewsletterInterests' ) )
+        if ( !is_object( $newsletterUser ) )
             return;
-        CjwNewsletterInterests::removeForUser( $newsletterUser->attribute( 'id' ) );
-        if ( (string)$newsletterUser->attribute( 'language' ) !== '' )
-        {
-            $newsletterUser->setAttribute( 'language', '' );
-            $newsletterUser->store();
-        }
+        if ( class_exists( 'CjwNewsletterInterests' ) )
+            CjwNewsletterInterests::removeForUser( $newsletterUser->attribute( 'id' ) );
+        $newsletterUser->remove();
     }
 
     /**
