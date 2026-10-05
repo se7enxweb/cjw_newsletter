@@ -4631,4 +4631,35 @@ müssen Sie diese Seite bestätigen.</translation>
         <translation>Entfernen</translation>
     </message>
 </context>
+<context>
+    <name>cjw_newsletter/mailpreferences</name>
+    <message>
+        <source>Newsletter "%list": subscribed, waiting for the confirmation of the e-mail address</source>
+        <translation>Newsletter „%list“: angemeldet, wartet auf die Bestätigung der E-Mail-Adresse</translation>
+    </message>
+    <message>
+        <source>Newsletter "%list": subscription approved by an administrator</source>
+        <translation>Newsletter „%list“: Abonnement von einem Administrator freigegeben</translation>
+    </message>
+    <message>
+        <source>Newsletter "%list": subscription confirmed</source>
+        <translation>Newsletter „%list“: Abonnement bestätigt</translation>
+    </message>
+    <message>
+        <source>Newsletter "%list": subscription removed by an administrator</source>
+        <translation>Newsletter „%list“: Abonnement von einem Administrator entfernt</translation>
+    </message>
+    <message>
+        <source>Newsletter "%list": unsubscribed</source>
+        <translation>Newsletter „%list“: abgemeldet</translation>
+    </message>
+    <message>
+        <source>Put on the newsletter blacklist</source>
+        <translation>Auf die Newsletter-Sperrliste gesetzt</translation>
+    </message>
+    <message>
+        <source>Taken off the newsletter blacklist</source>
+        <translation>Von der Newsletter-Sperrliste genommen</translation>
+    </message>
+</context>
 </TS>

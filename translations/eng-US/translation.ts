@@ -4108,4 +4108,35 @@ you have to confirm this page.</translation>
         <translation>Remove</translation>
     </message>
 </context>
+<context>
+    <name>cjw_newsletter/mailpreferences</name>
+    <message>
+        <source>Newsletter "%list": subscribed, waiting for the confirmation of the e-mail address</source>
+        <translation>Newsletter "%list": subscribed, waiting for the confirmation of the e-mail address</translation>
+    </message>
+    <message>
+        <source>Newsletter "%list": subscription approved by an administrator</source>
+        <translation>Newsletter "%list": subscription approved by an administrator</translation>
+    </message>
+    <message>
+        <source>Newsletter "%list": subscription confirmed</source>
+        <translation>Newsletter "%list": subscription confirmed</translation>
+    </message>
+    <message>
+        <source>Newsletter "%list": subscription removed by an administrator</source>
+        <translation>Newsletter "%list": subscription removed by an administrator</translation>
+    </message>
+    <message>
+        <source>Newsletter "%list": unsubscribed</source>
+        <translation>Newsletter "%list": unsubscribed</translation>
+    </message>
+    <message>
+        <source>Put on the newsletter blacklist</source>
+        <translation>Put on the newsletter blacklist</translation>
+    </message>
+    <message>
+        <source>Taken off the newsletter blacklist</source>
+        <translation>Taken off the newsletter blacklist</translation>
+    </message>
+</context>
 </TS>
