@@ -347,7 +347,7 @@ $ViewList['article_pool'] = array(
 // approve or reject an edition
 $ViewList['approval'] = array(
     'script' => 'approval.php',
-    'functions' => array( 'approve' ),
+    'functions' => array( 'editorial or approve' ), // editors ask for the approval, approvers decide
     'default_navigation_part' => 'eznewsletternavigationpart',
     'params' => array( 'EditionContentObjectId', 'Version' ) );
 
