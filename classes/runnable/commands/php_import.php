@@ -39,6 +39,42 @@ class Import extends \Exponential\Runnable\Command
         return 1;
     }
 
+    /**
+     * An import with a column mapping, or its dry run.
+     */
+    protected function runMapped( $importObject, $dryRun, $jobID, $out )
+    {
+        $lock = $dryRun ? true : \CjwNewsletterRunner::lock( 'import' );
+        if ( !$lock )
+        {
+            return $this->fail( $jobID, $out, 'Another import is running.' );
+        }
+        $result = \CjwNewsletterMappedImport::run( $importObject, $dryRun, $out );
+        if ( !$dryRun )
+        {
+            \CjwNewsletterRunner::unlock( $lock );
+        }
+        if ( $result['error'] !== '' )
+        {
+            $texts = array( 'file' => 'The file of the import is not in the import folder.', 'done' => 'The import was done already.',
+                            'no_email' => 'No column is mapped to the e-mail address.' );
+            return $this->fail( $jobID, $out, isset( $texts[$result['error']] ) ? $texts[$result['error']] : $result['error'] );
+        }
+        $t = $result['totals'];
+        $totals = array( 'rows' => $t['rows'], 'users' => $t['users_created'], 'subscriptions' => $t['subscriptions_created'],
+                         'updated' => $t['users_updated'] + $t['subscriptions_updated'], 'skipped' => $t['skipped'], 'errors' => $t['errors'],
+                         'dry_run' => $dryRun );
+        if ( !$dryRun )
+        {
+            \CjwNewsletterRunner::recordRun( \CjwNewsletterRunner::LAST_IMPORT, $totals, $jobID ? 'job' : 'console' );
+        }
+        $out->output( ( $dryRun ? 'Dry run: ' : 'Imported: ' ) . $t['users_created'] . ' new users, ' . $t['users_updated'] . ' updated, '
+                      . $t['subscriptions_created'] . ' new subscriptions, ' . $t['skipped'] . ' skipped, ' . $t['errors'] . ' failed.' );
+        $this->finish( $jobID, 'import', 'done', $totals );
+        $this->shutdown( 0 );
+        return 0;
+    }
+
     public function run()
     {
         $this->script( array( 'description' => 'Import the rows of a CSV file into a newsletter list',
@@ -55,6 +91,11 @@ class Import extends \Exponential\Runnable\Command
         if ( !is_object( $importObject ) )
         {
             return $this->fail( $jobID, $out, 'Give --import-id of an import from newsletter/import_list.' );
+        }
+        // an import with a column mapping (newsletter/import_mapping): its settings are stored with it
+        if ( $importObject->attribute( 'type' ) === \CjwNewsletterMappedImport::TYPE )
+        {
+            return $this->runMapped( $importObject, (bool)$options['dry-run'], $jobID, $out );
         }
         $names = array( 'comma' => ',', 'semicolon' => ';', 'pipe' => '|', 'tab' => "\t" );
         $delimiterName = $options['delimiter'] ? $options['delimiter'] : 'semicolon';
