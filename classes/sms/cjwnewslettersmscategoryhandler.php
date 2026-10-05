@@ -87,7 +87,7 @@ class CjwNewsletterSmsCategoryHandler implements expMailCategoryHandler
                               CjwNewsletterSms::PHONE_CONFIRMED => 'confirmed', CjwNewsletterSms::PHONE_STOPPED => 'stopped' );
         $vars = array( 'enabled' => CjwNewsletterSms::enabled(), 'has_user' => (bool)$user, 'phone' => '', 'phone_masked' => '',
                        'status' => 'none', 'confirmed' => 0, 'code_waiting' => false, 'code_expires' => 0,
-                       'wording' => CjwNewsletterSms::consentWording(), 'stop_keyword' => implode( ', ', CjwNewsletterSms::stopKeywords() ),
+                       'wording' => CjwNewsletterSms::consentWording(), 'stop_keyword' => current( CjwNewsletterSms::stopKeywords() ),
                        'code_length' => min( 10, max( 4, (int)CjwNewsletterSms::setting( 'CodeLength', 6 ) ) ), 'mode' => $mode,
                        'code_sent' => false, 'code_error' => '' );
         if ( $user && isset( self::$deferredCodes[(int)$user->attribute( 'id' )] ) && eZDB::instance()->transactionCounter() === 0 )
