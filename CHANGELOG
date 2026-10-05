@@ -1,5 +1,17 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.1.19
+======
+
+Added
+
+- A bridge to the e-mail preferences of Exponential 6.0.15 and later (nothing of it is loaded on older versions): the lists are the category "newsletter" of the central preference page and are listed there; the editions go through the mail gate, so the master switch "all optional e-mail off", the category and the suppression list decide who gets them, and the gate adds its footer and the List-Unsubscribe headers; subscribing, confirming, approving and unsubscribing are recorded in the consent log; the blacklist and the suppression list follow each other both ways.
+- The subscribe and configure pages link to the e-mail preference page of the account.
+
+Changed
+
+- An edition mail the e-mail preferences refuse closes its send item without bouncing the user; the queue run counts it as refused. Test mails are never gated.
+
 4.1.17
 ======
 
