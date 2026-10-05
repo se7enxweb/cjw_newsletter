@@ -4900,7 +4900,7 @@ If you did not send this request, ignore this mail: nothing changes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Next run</source>
+        <source>Runs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4925,6 +4925,10 @@ If you did not send this request, ignore this mail: nothing changes.</source>
     </message>
     <message>
         <source>due</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next run</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -6276,8 +6276,8 @@ Wenn Sie diese Bitte nicht geschickt haben, beachten Sie diese Mail nicht: Es ä
         <translation>Was</translation>
     </message>
     <message>
-        <source>Next run</source>
-        <translation>Nächster Lauf</translation>
+        <source>Runs</source>
+        <translation>Läufe</translation>
     </message>
     <message>
         <source>list removed</source>
@@ -6302,6 +6302,10 @@ Wenn Sie diese Bitte nicht geschickt haben, beachten Sie diese Mail nicht: Es ä
     <message>
         <source>due</source>
         <translation>fällig</translation>
+    </message>
+    <message>
+        <source>Next run</source>
+        <translation>Nächster Lauf</translation>
     </message>
     <message>
         <source>Pause</source>

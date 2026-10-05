@@ -5753,8 +5753,8 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
         <translation>What</translation>
     </message>
     <message>
-        <source>Next run</source>
-        <translation>Next run</translation>
+        <source>Runs</source>
+        <translation>Runs</translation>
     </message>
     <message>
         <source>list removed</source>
@@ -5779,6 +5779,10 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
     <message>
         <source>due</source>
         <translation>due</translation>
+    </message>
+    <message>
+        <source>Next run</source>
+        <translation>Next run</translation>
     </message>
     <message>
         <source>Pause</source>
