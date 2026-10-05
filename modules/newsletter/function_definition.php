@@ -220,4 +220,42 @@ $FunctionList['send_statistics'] = array( 'name' => 'send_statistics',
                                                              'type' => 'integer',
                                                              'required' => true ) ) );
 // ---- end N4 fetch functions
+// ---- 4.2.0 N2 Editorial: fetch functions
+// {fetch( 'newsletter', 'approval_state', hash( 'edition_contentobject_id', $id, 'version', $v ) )} required, state, may_send, approval (false without read access)
+$FunctionList['approval_state'] = array( 'name' => 'approval_state',
+                               'operation_types' => array( 'read' ),
+                               'call_method' => array( 'class' => 'CjwNewsletterEditorialFetch',
+                                                       'method' => 'fetchApprovalState' ),
+                               'parameter_type' => 'standard',
+                               'parameters' => array( array( 'name' => 'edition_contentobject_id', 'type' => 'integer', 'required' => true ),
+                                                      array( 'name' => 'version', 'type' => 'integer', 'default' => 0, 'required' => false ) ) );
+// {fetch( 'newsletter', 'edition_articles', hash( 'edition_contentobject_id', $id ) )} the articles taken from pools, the readable ones, in order
+$FunctionList['edition_articles'] = array( 'name' => 'edition_articles',
+                               'operation_types' => array( 'read' ),
+                               'call_method' => array( 'class' => 'CjwNewsletterEditorialFetch',
+                                                       'method' => 'fetchEditionArticles' ),
+                               'parameter_type' => 'standard',
+                               'parameters' => array( array( 'name' => 'edition_contentobject_id', 'type' => 'integer', 'required' => true ) ) );
+// {fetch( 'newsletter', 'list_article_pool', hash( 'list_contentobject_id', $id ) )} the article pool a list uses
+$FunctionList['list_article_pool'] = array( 'name' => 'list_article_pool',
+                               'operation_types' => array( 'read' ),
+                               'call_method' => array( 'class' => 'CjwNewsletterEditorialFetch',
+                                                       'method' => 'fetchListArticlePool' ),
+                               'parameter_type' => 'standard',
+                               'parameters' => array( array( 'name' => 'list_contentobject_id', 'type' => 'integer', 'default' => 0, 'required' => false ) ) );
+// {fetch( 'newsletter', 'article_pool_list', hash() )} every stored article pool
+$FunctionList['article_pool_list'] = array( 'name' => 'article_pool_list',
+                               'operation_types' => array( 'read' ),
+                               'call_method' => array( 'class' => 'CjwNewsletterEditorialFetch',
+                                                       'method' => 'fetchArticlePoolList' ),
+                               'parameter_type' => 'standard',
+                               'parameters' => array() );
+// {fetch( 'newsletter', 'schedule_list', hash( 'list_contentobject_id', $id ) )} the recurring sends (0 = of every list)
+$FunctionList['schedule_list'] = array( 'name' => 'schedule_list',
+                               'operation_types' => array( 'read' ),
+                               'call_method' => array( 'class' => 'CjwNewsletterEditorialFetch',
+                                                       'method' => 'fetchScheduleList' ),
+                               'parameter_type' => 'standard',
+                               'parameters' => array( array( 'name' => 'list_contentobject_id', 'type' => 'integer', 'default' => 0, 'required' => false ) ) );
+// ---- end N2 fetch functions
 ?>
