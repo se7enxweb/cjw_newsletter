@@ -1,0 +1,70 @@
+/* newsletter: CSV import with column mapping, subscriber export, eznewsletter migration log (cjw_newsletter 4.2.0).
+   Builds on newsletter_ui.css and its tokens (--nl-*, from the admin4 tokens --a4-*), so it follows the light and the
+   dark look of admin4 and admin4l and falls back to plain colours in the older admin designs. */
+
+.nl-ie .nl-ie-section { margin: 1.2em 0 0 0; }
+.nl-ie .nl-ie-section > h2 { margin: 0 0 0.5em 0; font-size: 1.08em; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5em; }
+.nl-ie h3 { font-size: 1em; }
+
+/* Steps */
+.nl-ie-steps { display: flex; flex-wrap: wrap; gap: 0.4em; margin: 0 0 1em 0; padding: 0; list-style: none; counter-reset: nl-ie-step; }
+.nl-ie-steps li { counter-increment: nl-ie-step; display: inline-flex; align-items: center; gap: 0.45em; padding: 0.25em 0.8em 0.25em 0.35em;
+                  border: 1px solid var(--nl-line, #e3e6eb); border-radius: 999px; color: var(--nl-muted, #5d6573); font-size: 0.92em; }
+.nl-ie-steps li::before { content: counter(nl-ie-step); display: inline-flex; align-items: center; justify-content: center; width: 1.5em; height: 1.5em;
+                          border-radius: 50%; background: var(--nl-soft, #f6f7f9); border: 1px solid var(--nl-line, #e3e6eb); font-weight: 700; font-size: 0.85em; }
+.nl-ie-steps li.is-current { color: var(--nl-ink, #1f2430); border-color: var(--nl-accent, #f26a21); font-weight: 600; }
+.nl-ie-steps li.is-current::before { background: var(--nl-accent, #f26a21); border-color: var(--nl-accent, #f26a21); color: #fff; }
+.nl-ie-steps li.is-done::before { content: "\2713"; background: rgba(47, 143, 70, 0.16); border-color: rgba(47, 143, 70, 0.45); }
+
+/* Forms */
+.nl-ie-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); gap: 0.8em 1.2em; align-items: end; margin: 0 0 0.8em 0; }
+.nl-ie-grid > label, .nl-ie .nl-ie-wide { display: flex; flex-direction: column; gap: 0.25em; font-weight: bold; font-size: 0.92em; }
+.nl-ie-grid .nl-ie-wide { grid-column: 1 / -1; }
+.nl-ie-grid input[type=text], .nl-ie .nl-ie-wide input[type=text] { width: 100%; box-sizing: border-box; font-weight: normal; }
+.nl-ie .nl-ie-wide .nl-hint { font-weight: normal; }
+.nl-ie .nl-filter .nl-ie-wide { flex: 1 1 20em; }
+.nl-ie label.nl-ie-check { display: inline-flex; flex-direction: row; align-items: center; gap: 0.4em; font-weight: normal; }
+.nl-ie fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+.nl-ie fieldset legend { padding: 0; font-weight: bold; font-size: 0.9em; }
+.nl-ie-formats, .nl-ie-choices { display: flex; flex-wrap: wrap; gap: 0.3em 1.1em; align-items: center; }
+.nl-ie-formats legend, .nl-ie-choices legend { width: 100%; margin-bottom: 0.2em; }
+.nl-ie-columns { display: grid; grid-template-columns: repeat(auto-fill, minmax(13em, 1fr)); gap: 0.25em 1em; }
+.nl-ie-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.nl-ie-inline { display: inline-flex; align-items: center; gap: 0.4em; }
+.nl-ie-buttons { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5em; margin-top: 1.2em; }
+.nl-ie-buttons .nl-spacer { flex: 1 1 auto; }
+.nl-ie-save { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5em; margin: 0.7em 0 0 0; padding: 0.6em 0.9em;
+              border: 1px dashed var(--nl-line, #e3e6eb); border-radius: 8px; }
+.nl-ie-save label { font-weight: bold; font-size: 0.92em; }
+.nl-ie-save input[type=text] { flex: 0 1 18em; min-width: 0; }
+
+/* Mapping and preview */
+.nl-ie-mapping { table-layout: auto; }
+.nl-ie-mapping select { max-width: 100%; }
+.nl-ie-mapping td.nl-ie-samples { overflow-wrap: anywhere; word-break: break-word; }
+.nl-ie-mapping tr.is-mapped td:first-child { box-shadow: inset 3px 0 0 var(--nl-accent, #f26a21); }
+.nl-ie-scroll { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.nl-ie-preview td, .nl-ie-preview th { white-space: nowrap; }
+.nl-ie-preview td.nl-wrap { white-space: normal; min-width: 8em; }
+.nl-ie-preview .nl-pill + .nl-muted { margin-left: 0.3em; }
+.nl-ie-warn { color: #9a6700; }
+.nl-ie .nl-kv { margin: 0.8em 0; }
+.nl-ie-command { max-height: none; }
+
+/* Dashboard block */
+.nl-ie-dashboard { margin: 1.2em 0 0 0; }
+.nl-ie-dashboard > h2 { margin: 0; }
+.nl-ie-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.35em; }
+.nl-ie-list li { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35em 0.6em; }
+
+@media (max-width: 640px) {
+    .nl-ie-grid { grid-template-columns: 1fr; }
+    .nl-ie-buttons > * { flex: 1 1 auto; }
+    .nl-ie-buttons .nl-spacer { display: none; }
+    .nl-ie-inline { flex-wrap: wrap; }
+    .nl-ie-columns { grid-template-columns: 1fr 1fr; }
+    .nl-ie-mapping th:first-child, .nl-ie-mapping td:first-child { display: none; }
+    .nl-ie-mapping tr.is-mapped td:nth-child(2) { box-shadow: inset 3px 0 0 var(--nl-accent, #f26a21); }
+    .nl-ie-mapping th:last-child, .nl-ie-mapping td.nl-ie-samples { display: none; }
+    .nl-ie-mapping select { max-width: 11em; }
+}
