@@ -50,6 +50,27 @@ class CjwNewsletterApprovalCollaborationHandler extends eZCollaborationItemHandl
                       'approval_id' => (int)$collaborationItem->attribute( 'data_text1' ) );
     }
 
+    /**
+     * The state of the item in the collaboration inbox of Exponential (expCollaborationInbox::stateOf()):
+     * waiting, approved, denied, and closed for a request that a newer one replaced.
+     *
+     * @return string
+     */
+    function inboxState( $collaborationItem )
+    {
+        switch ( (int)$collaborationItem->attribute( 'data_int3' ) )
+        {
+            case CjwNewsletterApproval::STATUS_APPROVED:
+                return 'approved';
+            case CjwNewsletterApproval::STATUS_REJECTED:
+                return 'denied';
+            case CjwNewsletterApproval::STATUS_WITHDRAWN:
+                return 'closed';
+            default:
+                return 'waiting';
+        }
+    }
+
     function notificationParticipantTemplate( $participantRole )
     {
         if ( $participantRole == eZCollaborationItemParticipantLink::ROLE_APPROVER )
