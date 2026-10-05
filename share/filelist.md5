@@ -1,6 +1,6 @@
 name: cjw_newsletter
 version: 4.1.20
-files_count: 398
+files_count: 399
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
 aa9ea80af84e6cba65e0764a80b56e16  .gitignore
@@ -23,11 +23,12 @@ b022022151bb1255a0ab48ed98ddbe22  bin/php/queue.php
 76860f87644a3d13a3ac8b5efe054421  classes/cjwnewsletterclassinstaller.php
 538888730b963e7ecf37ba4b0181506f  classes/cjwnewslettercsvexport.php
 a74c21ca4ad6e4047918792df09c68e4  classes/cjwnewslettercsvparser.php
-500d17c768a0487a9d6d249e3b5f35ca  classes/cjwnewsletterdashboard.php
+b4779645422e24ee7263903a8a2fa575  classes/cjwnewsletterdashboard.php
 a0b7f367cd992b17f6b9b46813d98ad4  classes/cjwnewsletteredition.php
 c805a66277af39799926223ad12a1cf0  classes/cjwnewslettereditionsend.php
 45dfeba94962dcfb0263578d5834e679  classes/cjwnewslettereditionsenditem.php
 66cbdaefb3dbc9c47d81e3203503fbd2  classes/cjwnewslettererrorhandler.php
+66ef853a8e08058bf4e51d14eaa96383  classes/cjwnewsletterextensionpoints.php
 46d17fcdfd35ce9846d55f79abfef99c  classes/cjwnewsletterfilter.php
 4996dbcb842c339eb4be92034e6184ab  classes/cjwnewsletterfiltertype.php
 b9bb943b90d288641e3051f6ec46f9fc  classes/cjwnewslettergatetransport.php
@@ -47,7 +48,7 @@ c2cc5743eca7eac6f1f8f8ba4068f844  classes/cjwnewslettermailcomposer.php
 e0ba364177f2c4366394a6eac9f47c3f  classes/cjwnewslettermailpreferences.php
 66efe4396379f597baafc4fe748b26f3  classes/cjwnewsletterplaceholders.php
 8d5b7878cf2ab338b6531633b38f28d0  classes/cjwnewsletterprogress.php
-f2423cbaa9c0004c1c27de9f6283e2a6  classes/cjwnewsletterrunner.php
+0ff5fbbfe96ef86050e1173059a08889  classes/cjwnewsletterrunner.php
 948727d748344e7c2bb0fbe2237a706d  classes/cjwnewslettersubscription.php
 aa675f094d9ec01f80857790eaf58278  classes/cjwnewslettersubscriptionvirtual.php
 9679aa6133164e7f480e59a78282c3bf  classes/cjwnewslettertransport.php
@@ -97,7 +98,7 @@ f77c7cde67b0af1a8e45bd4553b84739  classes/runnable/views/newsletter/mailbox_item
 2c726e877457be9ab29b1d99a29b8fd5  classes/runnable/views/newsletter/mailbox_list.php
 efa8b70c5492b71ef44135b0954df6ab  classes/runnable/views/newsletter/preview.php
 d233be5064074e841b70d8a2fc19e665  classes/runnable/views/newsletter/preview_archive.php
-c8b3710435988c6505cae28cdf0152e7  classes/runnable/views/newsletter/send.php
+3c68f6a28ac3307eeeaf294dfbb9e5d7  classes/runnable/views/newsletter/send.php
 242e2591e21d065ce38e2b69fc7c1a7c  classes/runnable/views/newsletter/send_abort.php
 be2f4b894836433e64be28ee988c821c  classes/runnable/views/newsletter/settings.php
 6ad616fa15b93b172b12bfe81be20446  classes/runnable/views/newsletter/subscribe.php
@@ -126,7 +127,7 @@ ee470718312560e58b6bc67727265d5e  classes/sms/cjwnewslettersmsmessage.php
 93e27fe0928d89f7b2a5608f415a8e8d  cronjobs/cjw_newsletter_mailqueue_create.php
 e7e70295b7b1985893ef64f110a22280  cronjobs/cjw_newsletter_mailqueue_process.php
 033877ee9271c49c58dabecd06784384  datatypes/cjwnewsletteredition/cjwnewslettereditiontype.php
-dd6fa0510dbfaba97719f86ca05c59df  datatypes/cjwnewsletterlist/cjwnewsletterlisttype.php
+f6d7869342fb4ea4adf9d0850392a95b  datatypes/cjwnewsletterlist/cjwnewsletterlisttype.php
 92d2676a7de76981e85916aa0e0dcfcb  datatypes/cjwnewsletterlistvirtual/cjwnewsletterlistvirtualtype.php
 a9bd8883e1218b38482ec8786b133861  datatypes/cjwnewslettersubscription/cjwnewslettersubscriptiontype.php
 6e8c923562443d906b907b020275ca97  design/admin2/override/templates/node/view/full/cjw_newsletter_edition.tpl
@@ -135,7 +136,7 @@ a9bd8883e1218b38482ec8786b133861  datatypes/cjwnewslettersubscription/cjwnewslet
 528b5c78662075879713efa073320e88  design/admin2/templates/cjw_newsletter_edition_preview.tpl
 9526cd16ee381ec3ca1022a1d9533417  design/admin2/templates/cjw_newsletter_edition_preview_archive.tpl
 a7e21058fdb2e5ffb0d20fdfdd554ebb  design/admin2/templates/cjw_newsletter_edition_send_statistic.tpl
-8e061e86ef0581988eb777e78aff9b57  design/admin2/templates/cjw_newsletter_edition_send_testmail.tpl
+a60f75e2af1d27ef0303c9358609ccc4  design/admin2/templates/cjw_newsletter_edition_send_testmail.tpl
 3544db0cb68aeea448023d7b261ff098  design/admin2/templates/cjw_newsletter_edition_status.tpl
 fb12eeda3c7f08beba53ed2f7379dd7a  design/admin2/templates/cjw_newsletter_edition_window_controls.tpl
 033edf0f09a64997698c8fde581b0a30  design/admin2/templates/cjw_newsletter_edition_windows.tpl
@@ -205,7 +206,7 @@ cbe3a783ee016b3b21099ebedc92e903  design/standard/stylesheets/newsletter_admin.c
 d5b7b21e2dc186a202a139021a54606a  design/standard/templates/cjw_newsletter_edition_preview.tpl
 861cb925efb7a468189c8328b5be9485  design/standard/templates/cjw_newsletter_edition_preview_archive.tpl
 96f32c700d29256672a7abfb9114019c  design/standard/templates/cjw_newsletter_edition_send_statistic.tpl
-2424f8fd62e57a0e9bd0ceae63174bdc  design/standard/templates/cjw_newsletter_edition_send_testmail.tpl
+d4749093705897cc18737f003f6db30a  design/standard/templates/cjw_newsletter_edition_send_testmail.tpl
 e60482f47f40feae2302caf1ef616ccc  design/standard/templates/cjw_newsletter_edition_status.tpl
 c94d569334775d7dc1b21cd0e04f5d99  design/standard/templates/cjw_newsletter_edition_windows.tpl
 5e37cc54e721c5c241fdf1154b36355d  design/standard/templates/cjw_newsletter_list_children.tpl
@@ -222,12 +223,12 @@ a1a1ed072f30b1203e0ed850cbef768a  design/standard/templates/class/datatype/view/
 4250f6fa751b643069cc860e2f5c3a32  design/standard/templates/content/datatype/collect/cjwnewslettersubscription.tpl
 3590895b76ae637d22cf2f5d83b3b5e2  design/standard/templates/content/datatype/diff/cjwnewslettersubscription.tpl
 d925cb3d36c3f899639e6364103a9064  design/standard/templates/content/datatype/edit/cjwnewsletteredition.tpl
-2ba2c5d82cd129067b48c04e09688c74  design/standard/templates/content/datatype/edit/cjwnewsletterlist.tpl
+5fd436bc060638c1b78ba58a512ce850  design/standard/templates/content/datatype/edit/cjwnewsletterlist.tpl
 4d69b4ac1e9d328dc9fec11a5d70d00c  design/standard/templates/content/datatype/edit/cjwnewsletterlistvirtual.tpl
 69ca5351830a27264a5448ad70ac6109  design/standard/templates/content/datatype/edit/cjwnewslettersubscription.tpl
 0f67bdb6a537a7455d08db146ad68374  design/standard/templates/content/datatype/result/info/cjwnewslettersubscription.tpl
 070bfdab4c947a55baf3b4488489fbba  design/standard/templates/content/datatype/view/cjwnewsletteredition.tpl
-e468e4daac8baf8cc329c115f2f97fc1  design/standard/templates/content/datatype/view/cjwnewsletterlist.tpl
+4c9dabb0fa4f710e24f7b5e5f863e9eb  design/standard/templates/content/datatype/view/cjwnewsletterlist.tpl
 43632c5bdbe28d2df62399700f658b13  design/standard/templates/content/datatype/view/cjwnewsletterlistvirtual.tpl
 ad2141eb758444d1d4a481392070e7ff  design/standard/templates/content/datatype/view/cjwnewslettersubscription.tpl
 7c27683d79683fa82cdab59c06ef18f1  design/standard/templates/contentstructuremenu/1_newsletter_structure_menu.tpl
@@ -248,7 +249,7 @@ b3c6880e5a9bc0929325f1ca3d569e3c  design/standard/templates/newsletter/filtertyp
 71130ba3b8334bc76c8676502d2ca59d  design/standard/templates/newsletter/filtertype/viewbuilder.tpl
 dcce1782f502c6486ecc7b3534f4d2b4  design/standard/templates/newsletter/import_list.tpl
 e0233099f55b769c69c578d7074ed10d  design/standard/templates/newsletter/import_view.tpl
-a467b4ee593d4470d440e3bb5e053a5e  design/standard/templates/newsletter/index.tpl
+88b6b79d1442e3252fb8ce2db4cb46b3  design/standard/templates/newsletter/index.tpl
 5bbf6dcac588e0adf36a44cba9adde9e  design/standard/templates/newsletter/index_newsletter_system_info_box.tpl
 a982bc3a0cc27feeb6ec979c6e672049  design/standard/templates/newsletter/mail/footer.tpl
 42a3f24e73784cc3ee17a4174ecb4c9b  design/standard/templates/newsletter/mail/subscription_confirmation.tpl
@@ -258,7 +259,7 @@ ef42ccdfed47e15381e68a2887d50027  design/standard/templates/newsletter/mailbox_i
 b087f4da317af22f703fb9f0df814bc3  design/standard/templates/newsletter/mailbox_item_view.tpl
 df10a49a3e74d74efb9a7cc921f5fc1d  design/standard/templates/newsletter/mailbox_list.tpl
 fd1bc1df11ce77dc2ea4e084ec0b6bfb  design/standard/templates/newsletter/preview.tpl
-9304d1873e6813c9e6b2b3cf2cd21c44  design/standard/templates/newsletter/send.tpl
+ef71c7935f7f841a6c31cb5dc6a33c54  design/standard/templates/newsletter/send.tpl
 3e99567b01bf2370bf7dce7cc71c04a6  design/standard/templates/newsletter/send_abort.tpl
 3c284e8961ca56614ed44579a529be65  design/standard/templates/newsletter/send_newsletter_test_result.tpl
 f9870db3bb78a64397ccf2315ffd8304  design/standard/templates/newsletter/skin/default/outputformat/html.tpl
@@ -369,7 +370,7 @@ b65917311debfe1c5476b6765cc463c5  packages/cjw_newsletter_classes-1.0-1.ezpkg
 dbad6e48797d42af0fd5a76ef06e844a  packages/cjw_newsletter_list_virtual-1.0-1.ezpkg
 8f9878ff3745b1a6140ecaafd9da4668  settings/admininterface.ini.append.php
 1d4b17a226d9a96a79649d9b2ea636c9  settings/audit.ini.append.php
-ef456d353941d274f05dcee4b4d8b1e1  settings/cjw_newsletter.ini
+0ebf5ecfa7e649a54c1621f49b9b9396  settings/cjw_newsletter.ini
 433a2de6d4719ed46708d315f97e16b9  settings/content.ini.append.php
 dabf79f5ec9c323b6045e0c75a6f1178  settings/contentstructuremenu.ini.append.php
 59c5d7fe3b066e4915827daa97b39d6c  settings/cronjob.ini.append.php
