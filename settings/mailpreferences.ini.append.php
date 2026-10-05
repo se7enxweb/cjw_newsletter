@@ -12,4 +12,27 @@ HandlerClass=CjwNewsletterMailCategoryHandler
 # suppression list the same way.
 Listeners[]=CjwNewsletterMailPreferences
 
+# ---- cjw_newsletter 4.2.0: categories of the feature areas, switched on by the area when its code exists.
+# Both are optional and off by default (the person opts in on the central preference page).
+
+# N4 Statistics: consent to per-person open and click counting
+#[CategorySettings]
+#Categories[]=newsletter_statistics
+#[Category_newsletter_statistics]
+#Name=Newsletter statistics
+#Description=Count which newsletters I open and which links I click, so the newsletters get better
+#Essential=false
+#DefaultOn=false
+#HandlerClass=CjwNewsletterStatisticsCategoryHandler
+
+# N5 SMS: newsletters by SMS, confirmed with a code
+#[CategorySettings]
+#Categories[]=sms
+#[Category_sms]
+#Name=Newsletters by SMS
+#Description=Short newsletters to my mobile phone
+#Essential=false
+#DefaultOn=false
+#HandlerClass=CjwNewsletterSmsCategoryHandler
+
 */ ?>
