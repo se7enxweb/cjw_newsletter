@@ -16,16 +16,12 @@
                 {else}<span class="nl-pill is-muted">{'No rate limit'|i18n( 'cjw_newsletter/deliverability' )}</span>{/if}
                 {if $d.batches_running}<span class="nl-pill is-info">{'%count batches waiting'|i18n( 'cjw_newsletter/deliverability',, hash( '%count', $d.batches_running ) )}</span>{/if}
             </p>
-            <table class="list nl-table">
-                <tr><th>{'Transport'|i18n( 'cjw_newsletter/deliverability' )}</th><th class="nl-num">{'This minute'|i18n( 'cjw_newsletter/deliverability' )}</th><th class="nl-num">{'This hour'|i18n( 'cjw_newsletter/deliverability' )}</th></tr>
-                {foreach $d.transports as $t sequence array( 'bglight', 'bgdark' ) as $seq}
-                <tr class="{$seq}">
-                    <td><code>{$t.transport|wash}</code>{if $t.paused} <span class="nl-pill is-warn">{'paused'|i18n( 'cjw_newsletter/deliverability' )}</span>{/if}</td>
-                    <td class="nl-num">{$t.sent_minute}{if $t.limit_minute} / {$t.limit_minute}{/if}</td>
-                    <td class="nl-num">{$t.sent_hour}{if $t.limit_hour} / {$t.limit_hour}{/if}</td>
-                </tr>
+            <dl class="nl-kv">
+                {foreach $d.transports as $t}
+                <dt><code>{$t.transport|wash}</code></dt>
+                <dd>{if $t.paused}<span class="nl-pill is-warn">{'paused'|i18n( 'cjw_newsletter/deliverability' )}</span> {/if}{'%minute this minute, %hour this hour'|i18n( 'cjw_newsletter/deliverability',, hash( '%minute', cond( $t.limit_minute, concat( $t.sent_minute, '/', $t.limit_minute ), $t.sent_minute ), '%hour', cond( $t.limit_hour, concat( $t.sent_hour, '/', $t.limit_hour ), $t.sent_hour ) ) )|wash}</dd>
                 {/foreach}
-            </table>
+            </dl>
             <div class="nl-links">
                 <a class="button" href={'newsletter/throttle'|ezurl}>{'Rate limits and batches'|i18n( 'cjw_newsletter/deliverability' )}</a>
             </div>

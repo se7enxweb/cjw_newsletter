@@ -21,18 +21,18 @@
             <h2>{'Transports'|i18n( 'cjw_newsletter/deliverability' )}</h2>
             <p class="nl-muted">{'A pause holds every send of the transport, also when the limits are off. The limits are set per transport in [ThrottleSettings] MaxPerMinute[] and MaxPerHour[].'|i18n( 'cjw_newsletter/deliverability' )}</p>
             <table class="list nl-table">
-                <tr><th>{'Transport'|i18n( 'cjw_newsletter/deliverability' )}</th><th class="nl-num">{'This minute'|i18n( 'cjw_newsletter/deliverability' )}</th><th class="nl-num">{'This hour'|i18n( 'cjw_newsletter/deliverability' )}</th><th>{'State'|i18n( 'cjw_newsletter/deliverability' )}</th><th class="tight">{'Actions'|i18n( 'cjw_newsletter/deliverability' )}</th></tr>
+                <tr><th>{'Transport'|i18n( 'cjw_newsletter/deliverability' )}</th><th>{'Sent'|i18n( 'cjw_newsletter/deliverability' )}</th><th>{'State'|i18n( 'cjw_newsletter/deliverability' )}</th></tr>
                 {foreach $transports as $t sequence array( 'bglight', 'bgdark' ) as $seq}
                 <tr class="{$seq}">
-                    <td><code>{$t.transport|wash}</code>{if $t.is_cronjob} <span class="nl-muted">{'(newsletter)'|i18n( 'cjw_newsletter/deliverability' )}</span>{/if}</td>
-                    <td class="nl-num">{$t.sent_minute} / {if $t.limit_minute}{$t.limit_minute}{else}&infin;{/if}</td>
-                    <td class="nl-num">{$t.sent_hour} / {if $t.limit_hour}{$t.limit_hour}{else}&infin;{/if}</td>
-                    <td>{if $t.paused}<span class="nl-pill is-warn">{'paused until %time'|i18n( 'cjw_newsletter/deliverability',, hash( '%time', $t.paused_until|l10n( 'shortdatetime' ) ) )|wash}</span>{elseif eq( $t.available, 0 )}<span class="nl-pill is-info">{'limit reached'|i18n( 'cjw_newsletter/deliverability' )}</span>{else}<span class="nl-pill is-ok">{'sends'|i18n( 'cjw_newsletter/deliverability' )}</span>{/if}</td>
-                    <td class="nl-actions">
-                        <form action={'newsletter/throttle'|ezurl} method="post">
+                    <td class="nl-wrap"><code>{$t.transport|wash}</code>{if $t.is_cronjob}<br /><span class="nl-muted">{'(newsletter)'|i18n( 'cjw_newsletter/deliverability' )}</span>{/if}</td>
+                    <td>{'This minute'|i18n( 'cjw_newsletter/deliverability' )}: {$t.sent_minute} / {if $t.limit_minute}{$t.limit_minute}{else}&infin;{/if}<br />
+                        {'This hour'|i18n( 'cjw_newsletter/deliverability' )}: {$t.sent_hour} / {if $t.limit_hour}{$t.limit_hour}{else}&infin;{/if}</td>
+                    <td>
+                        {if $t.paused}<span class="nl-pill is-warn">{'paused until %time'|i18n( 'cjw_newsletter/deliverability',, hash( '%time', $t.paused_until|l10n( 'shortdatetime' ) ) )|wash}</span>{elseif eq( $t.available, 0 )}<span class="nl-pill is-info">{'limit reached'|i18n( 'cjw_newsletter/deliverability' )}</span>{else}<span class="nl-pill is-ok">{'sends'|i18n( 'cjw_newsletter/deliverability' )}</span>{/if}
+                        <form action={'newsletter/throttle'|ezurl} method="post" style="margin: 0.4em 0 0 0">
                             <input type="hidden" name="Transport" value="{$t.transport|wash}" />
                             {if $t.paused}<input class="button" type="submit" name="ResumeButton" value="{'Resume'|i18n( 'cjw_newsletter/deliverability' )|wash}" />
-                            {else}<label class="nl-inline">{'for'|i18n( 'cjw_newsletter/deliverability' )} <input type="number" name="Minutes" value="60" min="1" max="10080" size="5" aria-label="{'Minutes'|i18n( 'cjw_newsletter/deliverability' )|wash}" /> {'min'|i18n( 'cjw_newsletter/deliverability' )}</label>
+                            {else}<label>{'for'|i18n( 'cjw_newsletter/deliverability' )} <input type="number" name="Minutes" value="60" min="1" max="10080" style="width: 5em" aria-label="{'Minutes'|i18n( 'cjw_newsletter/deliverability' )|wash}" /> {'min'|i18n( 'cjw_newsletter/deliverability' )}</label>
                             <input class="button" type="submit" name="PauseButton" value="{'Pause'|i18n( 'cjw_newsletter/deliverability' )|wash}" />{/if}
                         </form>
                     </td>
