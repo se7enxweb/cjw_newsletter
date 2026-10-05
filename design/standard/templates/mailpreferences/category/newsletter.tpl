@@ -20,8 +20,8 @@
 </div>
 {/if}
 {if $part.has_interests}
-<fieldset class="mp-field mp-interests">
-    <legend>{'Your interests'|i18n( $i18n )}</legend>
+<div class="mp-field mp-interests" role="group" aria-labelledby="{$id}-interests">
+    <span class="mp-label" id="{$id}-interests">{'Your interests'|i18n( $i18n )}</span>
     <p class="mp-hint">{'Newsletters that have a block of articles for your interests fill it from what you pick here. Nothing picked: no such block.'|i18n( $i18n )}</p>
 {foreach $part.lists as $list}
 {if $list.interests|count|gt( 0 )}
@@ -33,7 +33,7 @@
     </div>
 {/if}
 {/foreach}
-</fieldset>
+</div>
 {/if}
 {def $mailin_count = 0}
 {foreach $part.lists as $list}{set $mailin_count = $mailin_count|sum( $list.mailin|count )}{/foreach}

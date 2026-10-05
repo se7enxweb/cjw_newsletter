@@ -1,6 +1,6 @@
 {* The rendering's part of the newsletter card (cjw_newsletter 4.2.0, [NotificationCardSettings] Parts[]): the lists of
-   the user, the language of the newsletters and the interests (stored like on the preference page), the link to the
-   e-mail preferences. Uses the classes of the notification cards (nf-*), so media and admin4 draw it alike.
+   the user, the language of the newsletters and the interests (stored like on the preference page). Uses the
+   classes of the notification cards (nf-*), so media and admin4 draw it alike.
    Variables: handler, card (CjwNewsletterHandler::card()) *}
 {def $i18n = 'cjw_newsletter/rendering'
      $part = $card.part}
@@ -32,15 +32,14 @@
 </div>
 {/if}
 {if $part.has_interests}
-<fieldset class="nf-field cjwnl-card-interests">
-    <legend>{'Your interests'|i18n( $i18n )}</legend>
+<div class="nf-field cjwnl-card-interests" role="group" aria-labelledby="nf-cjwnl-interests">
+    <div id="nf-cjwnl-interests">{'Your interests'|i18n( $i18n )}</div>
 {foreach $part.lists as $list}
 {foreach $list.interests as $interest}
     <label class="nf-toggle"><input type="checkbox" name="MailPreferencePart[{$part.key|wash}][Interest][]" value="{$interest.id}"{if $interest.checked} checked="checked"{/if} /><div><b>{$interest.name|wash}</b></div></label>
 {/foreach}
 {/foreach}
-</fieldset>
+</div>
 {/if}
 {/if}
-<p class="nf-lead"><a href={$card.preferences_url|ezurl}>{'All your e-mail preferences'|i18n( $i18n )}</a></p>
 {undef $i18n $part}
