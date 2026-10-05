@@ -128,6 +128,9 @@ class CjwNewsletterClassInstaller
             }
         }
         eZContentClass::expireCache();
+        // 4.2.0: the text fields are translatable (one edition with translations, a language per subscriber)
+        if ( class_exists( 'CjwNewsletterTranslatableFields' ) )
+            CjwNewsletterTranslatableFields::apply();
         return $report;
     }
 
