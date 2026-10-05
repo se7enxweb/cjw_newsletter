@@ -135,14 +135,15 @@ class CjwNewsletterSubscriberExport
      * @param array $filters cleanFilters()
      * @param int $limit 0 = all
      * @param int $offset
+     * @param bool $newestFirst the newest subscriptions first (the preview); the file keeps the order they were made
      * @return array[] rows, column => value as written to the file (dates and statuses readable, not yet defused)
      */
-    static function fetchRows( $listId, $filters, $limit = 0, $offset = 0 )
+    static function fetchRows( $listId, $filters, $limit = 0, $offset = 0, $newestFirst = false )
     {
         $select = array();
         foreach ( $filters['columns'] as $column )
             $select[] = self::$columns[$column] . ' AS ' . $column;
-        $sql = 'SELECT ' . implode( ', ', $select ) . ' FROM cjwnl_subscription s, cjwnl_user u WHERE ' . self::where( $listId, $filters ) . ' ORDER BY s.id';
+        $sql = 'SELECT ' . implode( ', ', $select ) . ' FROM cjwnl_subscription s, cjwnl_user u WHERE ' . self::where( $listId, $filters ) . ' ORDER BY s.id' . ( $newestFirst ? ' DESC' : '' );
         $params = (int)$limit > 0 ? array( 'limit' => (int)$limit, 'offset' => (int)$offset ) : array();
         $rows = eZDB::instance()->arrayQuery( $sql, $params );
         $names = self::statusNames();

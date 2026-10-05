@@ -69,6 +69,8 @@ function getDataForCsv( $listContentObjectId, $limit = 0, $module = false )
                        FROM cjwnl_subscription s, cjwnl_user u
                        WHERE s.list_contentobject_id=$listContentObjectId
                        AND s.newsletter_user_id=u.id";
+        // the preview shows the newest subscriptions, the file has them in the order they were made
+        $qryGetData .= $qryParams ? ' ORDER BY s.id DESC' : ' ORDER BY s.id';
 
         // execute query
         $resQryGetData = $db->arrayQuery( $qryGetData, $qryParams );

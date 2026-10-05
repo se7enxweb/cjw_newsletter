@@ -94,7 +94,7 @@ class SubscriberExport extends \Exponential\Runnable\ModuleView
         $tpl->setVariable( 'column_names', $columnNames );
         $tpl->setVariable( 'date_fields', array_keys( \CjwNewsletterSubscriberExport::$dateFields ) );
         $tpl->setVariable( 'count', \CjwNewsletterSubscriberExport::count( $listId, $filters ) );
-        $tpl->setVariable( 'preview', \CjwNewsletterSubscriberExport::fetchRows( $listId, $filters, self::PREVIEW_ROWS ) );
+        $tpl->setVariable( 'preview', \CjwNewsletterSubscriberExport::fetchRows( $listId, $filters, self::PREVIEW_ROWS, 0, true ) );
 
         $Result = array();
         $Result['content'] = $tpl->fetch( 'design:newsletter/importexport/subscriber_export.tpl' );

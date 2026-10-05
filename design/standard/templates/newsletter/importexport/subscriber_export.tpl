@@ -45,7 +45,7 @@
             </section>
 
             <section class="nl-ie-section">
-                <h2>{'Preview'|i18n( 'cjw_newsletter/importexport' )} <span class="nl-pill is-info">{'%count rows'|i18n( 'cjw_newsletter/importexport',, hash( '%count', $count ) )}</span></h2>
+                <h2>{'Preview'|i18n( 'cjw_newsletter/importexport' )} <span class="nl-muted">({'the newest first'|i18n( 'cjw_newsletter/importexport' )})</span> <span class="nl-pill is-info">{'%count rows'|i18n( 'cjw_newsletter/importexport',, hash( '%count', $count ) )}</span></h2>
                 {if $preview|count}
                 <div class="nl-ie-scroll">
                 <table class="list nl-table nl-ie-preview">
