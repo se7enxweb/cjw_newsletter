@@ -98,7 +98,7 @@ class CjwNewsletterMailCategoryHandler implements expMailCategoryHandler
         $url = 'newsletter/configure/' . $newsletterUser->attribute( 'hash' );
         eZURI::transformURI( $url, false, 'full' );
         $out['configure_url'] = $url;
-        $names = CjwNewsletterRendering::contentLanguages();
+        $names = CjwNewsletterRendering::nativeContentLanguages();
         $picked = CjwNewsletterInterests::idsForUser( $newsletterUser->attribute( 'id' ) );
         $active = array( CjwNewsletterSubscription::STATUS_CONFIRMED, CjwNewsletterSubscription::STATUS_APPROVED, CjwNewsletterSubscription::STATUS_PENDING );
         foreach ( (array)CjwNewsletterSubscription::fetchSubscriptionListByNewsletterUserId( $newsletterUser->attribute( 'id' ) ) as $subscription )

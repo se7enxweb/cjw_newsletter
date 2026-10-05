@@ -139,6 +139,29 @@ class CjwNewsletterRendering
     }
 
     /**
+     * Every language of the content, each in its own name ("Deutsch (Deutschland)" for ger-DE), for pickers a
+     * subscriber reads. A locale without a share/locale file keeps the name of the content language.
+     *
+     * @return string[] locale => name
+     */
+    static function nativeContentLanguages()
+    {
+        $out = array();
+        foreach ( self::contentLanguages() as $locale => $name )
+        {
+            $native = '';
+            if ( file_exists( 'share/locale/' . $locale . '.ini' ) )
+            {
+                $l = eZLocale::instance( $locale );
+                if ( is_object( $l ) && $l->isValid() )
+                    $native = (string)$l->languageName();
+            }
+            $out[$locale] = $native !== '' ? $native : $name;
+        }
+        return $out;
+    }
+
+    /**
      * The language a subscriber gets: theirs when the list offers it and the send has an output in it, else the
      * list's main language ([LanguageSettings] FallbackToListMainLanguage).
      *
