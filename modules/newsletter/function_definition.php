@@ -200,4 +200,24 @@ $FunctionList['test_group_list'] = array( 'name' => 'test_group_list',
                                                              'default' => 0,
                                                              'required' => false ) ) );
 // ---- end N1 fetch functions
+// ---- 4.2.0 N4 Statistics: fetch functions
+// {fetch( 'newsletter', 'article_statistics', hash( 'contentobject_id', $id ) )} the editions an article went out in, its sends and clicks
+$FunctionList['article_statistics'] = array( 'name' => 'article_statistics',
+                               'operation_types' => array( 'read' ),
+                               'call_method' => array( 'class' => 'CjwNewsletterStatistics',
+                                                       'method' => 'fetchArticleStatistics' ),
+                               'parameter_type' => 'standard',
+                               'parameters' => array( array( 'name' => 'contentobject_id',
+                                                             'type' => 'integer',
+                                                             'required' => true ) ) );
+// {fetch( 'newsletter', 'send_statistics', hash( 'edition_send_id', $id ) )} the report of a send (totals only)
+$FunctionList['send_statistics'] = array( 'name' => 'send_statistics',
+                               'operation_types' => array( 'read' ),
+                               'call_method' => array( 'class' => 'CjwNewsletterStatistics',
+                                                       'method' => 'fetchSendStatistics' ),
+                               'parameter_type' => 'standard',
+                               'parameters' => array( array( 'name' => 'edition_send_id',
+                                                             'type' => 'integer',
+                                                             'required' => true ) ) );
+// ---- end N4 fetch functions
 ?>
