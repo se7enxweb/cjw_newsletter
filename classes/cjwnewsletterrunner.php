@@ -544,6 +544,15 @@ class CjwNewsletterRunner
                 continue;
             }
 
+            // 4.2.0 N1: the batch of this run (rate limits of the transport, pause between batches); false = the
+            // send waits for a later run, null = no batches (CjwNewsletterDeliverability)
+            $deliverability = class_exists( '\CjwNewsletterDeliverability' );
+            if ( $deliverability && \CjwNewsletterDeliverability::startBatch( $sendObject, $cli ) === false )
+            {
+                $totals['waiting'] += \CjwNewsletterDeliverability::dueItemCount( $sendObject->attribute( 'id' ) );
+                continue;
+            }
+
             // set startdate only at the first time
             if ( $sendObject->attribute( 'status' ) == \CjwNewsletterEditionSend::STATUS_MAILQUEUE_CREATED )
             {
@@ -596,7 +605,9 @@ class CjwNewsletterRunner
             for( $i = 0; $i < $itemsNotSend; $i += $limit)
             {
               //  $progressBar->advance();
-                $sendItemList = \CjwNewsletterEditionSendItem::fetchListSendIdAndStatus( $editionSendId, \CjwNewsletterEditionSendItem::STATUS_NEW, $limit, $offset );
+                // 4.2.0 N1: items that wait for a soft-bounce retry are left out
+                $sendItemList = $deliverability ? \CjwNewsletterDeliverability::dueItems( $editionSendId, $limit )
+                                                : \CjwNewsletterEditionSendItem::fetchListSendIdAndStatus( $editionSendId, \CjwNewsletterEditionSendItem::STATUS_NEW, $limit, $offset );
                 $count = count( $sendItemList );
 
                 foreach ( $sendItemList as $sendItem )
@@ -693,6 +704,14 @@ class CjwNewsletterRunner
                                     \CjwNewsletterEditionSendItem::STATUS_SEND );
                                 $sendItem->store();
                             }
+                            else if ( $deliverability && \CjwNewsletterBounce::sendFailed( $sendItem, $resultArray ) )
+                            {
+                                // 4.2.0 N1: a temporary refusal waits for its retry, a permanent one is a hard bounce
+                                $progressMonitor->addEntry( "[RETRY] $itemCounter/$itemsNotSend",
+                                    "Newsletter send item {$id} refused: " . ( (int)$sendItem->attribute( 'status' ) === \CjwNewsletterEditionSendItem::STATUS_NEW
+                                        ? 'sent again after ' . date( 'Y-m-d H:i', (int)$sendItem->attribute( 'next_retry' ) ) : 'hard bounce' ) . '.' );
+                                $totals['failed']++;
+                            }
                             else
                             {
                                 // error execption
@@ -754,6 +773,12 @@ class CjwNewsletterRunner
                     // no, we do not sleep - we do work
                     // usleep( 200000 );
                 }
+            }
+
+            // 4.2.0 N1: the batch is closed (done, or paused to be resumed by the next run) and counted against the rate limits
+            if ( $deliverability )
+            {
+                \CjwNewsletterDeliverability::endBatch( $sendObject );
             }
 
             // all send_items of sendobject are send? if yes set status == PROCESS_FINISHED
