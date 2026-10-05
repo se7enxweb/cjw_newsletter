@@ -174,6 +174,19 @@ class CjwNewsletterEditionBuilder
     }
 
     /**
+     * @return int[] the content object ids of the content under the edition (its newsletter articles, picks included)
+     */
+    static function childObjectIds( $edition )
+    {
+        $ids = array();
+        if ( !$edition instanceof eZContentObject || !$edition->attribute( 'main_node_id' ) )
+            return $ids;
+        foreach ( (array)eZContentObjectTreeNode::subTreeByNodeID( array( 'Limitation' => array(), 'IgnoreVisibility' => true ), (int)$edition->attribute( 'main_node_id' ) ) as $node )
+            $ids[] = (int)$node->attribute( 'contentobject_id' );
+        return $ids;
+    }
+
+    /**
      * @return int[] the content object ids of the articles the edition carries from pools
      */
     static function pickedObjectIds( $editionObjectId )

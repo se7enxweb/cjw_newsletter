@@ -217,7 +217,8 @@ class CjwNewsletterScheduleRunner
             if ( (int)$schedule->attribute( 'auto_fill' ) )
             {
                 $pool = $schedule->articlePool();
-                $exclude = array();
+                // not the template's own articles, nor what earlier copies carried
+                $exclude = CjwNewsletterEditionBuilder::childObjectIds( $template );
                 foreach ( $schedule->editionObjectIds() as $editionId )
                     $exclude = array_merge( $exclude, CjwNewsletterEditionBuilder::pickedObjectIds( $editionId ) );
                 $nodes = CjwNewsletterArticlePoolFinder::find( $pool, array( 'since' => $schedule->lastSentTime(), 'until' => (int)$now + 1,

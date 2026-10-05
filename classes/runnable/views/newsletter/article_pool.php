@@ -63,11 +63,13 @@ class ArticlePool extends \Exponential\Runnable\ModuleView
         if ( !$locked && $http->hasPostVariable( 'AddButton' ) )
         {
             $added = 0;
+            $own = \CjwNewsletterEditionBuilder::childObjectIds( $edition );
             foreach ( \CjwNewsletterEditorialUI::postedIds( $http, 'AddNodeIds' ) as $addId )
             {
                 $source = \eZContentObjectTreeNode::fetch( $addId );
                 // only what the pool offers can be taken
-                if ( $source && self::inPool( $pool, $source ) &&\CjwNewsletterEditionBuilder::addArticle( $edition, $source, \CjwNewsletterEditionArticle::ADDED_BY_EDITOR, (int)$pool->attribute( 'id' ) ) )
+                if ( $source && !in_array( (int)$source->attribute( 'contentobject_id' ), $own, true )
+                     && self::inPool( $pool, $source ) && \CjwNewsletterEditionBuilder::addArticle( $edition, $source, \CjwNewsletterEditionArticle::ADDED_BY_EDITOR, (int)$pool->attribute( 'id' ) ) )
                     ++$added;
             }
             if ( $added )
@@ -91,6 +93,8 @@ class ArticlePool extends \Exponential\Runnable\ModuleView
         }
 
         $options = self::options( $filters );
+        // not the edition's own articles
+        $options['exclude_object_ids'] = \CjwNewsletterEditionBuilder::childObjectIds( $edition );
         $total = \CjwNewsletterArticlePoolFinder::count( $pool, $options );
         $options['limit'] = self::PAGE;
         $options['offset'] = $filters['offset'];

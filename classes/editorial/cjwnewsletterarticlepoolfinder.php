@@ -52,8 +52,11 @@ class CjwNewsletterArticlePoolFinder
             return array();
         $parents = $params['__parents'];
         unset( $params['__parents'] );
+        // a few more than wanted, for the duplicates of the tag joins and the pick copies left out
+        $wanted = $params['Limit'];
+        $params['Limit'] = $wanted * 2 + 10;
         $nodes = eZContentObjectTreeNode::subTreeByNodeID( $params, count( $parents ) === 1 ? $parents[0] : $parents );
-        return self::unique( is_array( $nodes ) ? $nodes : array(), isset( $params['Limit'] ) ? $params['Limit'] : 0 );
+        return self::unique( is_array( $nodes ) ? $nodes : array(), $wanted );
     }
 
     /**
@@ -236,7 +239,8 @@ class CjwNewsletterArticlePoolFinder
         return $result;
     }
 
-    /** A node may come twice through the joins of the tag filter: each once, at most $limit. */
+    /** A node may come twice through the joins of the tag filter: each once, at most $limit. The newsletter articles an
+        edition carries for its picks (remote id cjwnl-pick-...) are copies, never sources: they are left out. */
     protected static function unique( $nodes, $limit )
     {
         $seen = array();
@@ -247,6 +251,9 @@ class CjwNewsletterArticlePoolFinder
                 continue;
             $id = (int)$node->attribute( 'node_id' );
             if ( isset( $seen[$id] ) )
+                continue;
+            $object = $node->attribute( 'object' );
+            if ( $object && strpos( (string)$object->attribute( 'remote_id' ), 'cjwnl-pick-' ) === 0 )
                 continue;
             $seen[$id] = true;
             $result[] = $node;
