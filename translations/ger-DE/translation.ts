@@ -4662,4 +4662,52 @@ müssen Sie diese Seite bestätigen.</translation>
         <translation>Von der Newsletter-Sperrliste genommen</translation>
     </message>
 </context>
+<context>
+    <name>cjw_newsletter/deliverability</name>
+    <!-- cjw_newsletter 4.2.0, area N1: its strings only, appended here -->
+    <message>
+        <source>Deliverability</source>
+        <translation>Zustellbarkeit</translation>
+    </message>
+</context>
+<context>
+    <name>cjw_newsletter/editorial</name>
+    <!-- cjw_newsletter 4.2.0, area N2: its strings only, appended here -->
+    <message>
+        <source>Editorial</source>
+        <translation>Redaktion</translation>
+    </message>
+</context>
+<context>
+    <name>cjw_newsletter/rendering</name>
+    <!-- cjw_newsletter 4.2.0, area N3: its strings only, appended here -->
+    <message>
+        <source>Rendering</source>
+        <translation>Darstellung</translation>
+    </message>
+</context>
+<context>
+    <name>cjw_newsletter/statistics</name>
+    <!-- cjw_newsletter 4.2.0, area N4: its strings only, appended here -->
+    <message>
+        <source>Statistics</source>
+        <translation>Statistik</translation>
+    </message>
+</context>
+<context>
+    <name>cjw_newsletter/sms</name>
+    <!-- cjw_newsletter 4.2.0, area N5: its strings only, appended here -->
+    <message>
+        <source>SMS</source>
+        <translation>SMS</translation>
+    </message>
+</context>
+<context>
+    <name>cjw_newsletter/importexport</name>
+    <!-- cjw_newsletter 4.2.0, area N6: its strings only, appended here -->
+    <message>
+        <source>Import/export</source>
+        <translation>Import/Export</translation>
+    </message>
+</context>
 </TS>

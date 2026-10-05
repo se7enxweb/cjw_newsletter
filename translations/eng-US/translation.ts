@@ -4139,4 +4139,52 @@ you have to confirm this page.</translation>
         <translation>Taken off the newsletter blacklist</translation>
     </message>
 </context>
+<context>
+    <name>cjw_newsletter/deliverability</name>
+    <!-- cjw_newsletter 4.2.0, area N1: its strings only, appended here -->
+    <message>
+        <source>Deliverability</source>
+        <translation>Deliverability</translation>
+    </message>
+</context>
+<context>
+    <name>cjw_newsletter/editorial</name>
+    <!-- cjw_newsletter 4.2.0, area N2: its strings only, appended here -->
+    <message>
+        <source>Editorial</source>
+        <translation>Editorial</translation>
+    </message>
+</context>
+<context>
+    <name>cjw_newsletter/rendering</name>
+    <!-- cjw_newsletter 4.2.0, area N3: its strings only, appended here -->
+    <message>
+        <source>Rendering</source>
+        <translation>Rendering</translation>
+    </message>
+</context>
+<context>
+    <name>cjw_newsletter/statistics</name>
+    <!-- cjw_newsletter 4.2.0, area N4: its strings only, appended here -->
+    <message>
+        <source>Statistics</source>
+        <translation>Statistics</translation>
+    </message>
+</context>
+<context>
+    <name>cjw_newsletter/sms</name>
+    <!-- cjw_newsletter 4.2.0, area N5: its strings only, appended here -->
+    <message>
+        <source>SMS</source>
+        <translation>SMS</translation>
+    </message>
+</context>
+<context>
+    <name>cjw_newsletter/importexport</name>
+    <!-- cjw_newsletter 4.2.0, area N6: its strings only, appended here -->
+    <message>
+        <source>Import/export</source>
+        <translation>Import/export</translation>
+    </message>
+</context>
 </TS>
