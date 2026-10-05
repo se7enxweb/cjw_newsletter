@@ -6567,6 +6567,470 @@ Wenn Sie diese Bitte nicht geschickt haben, beachten Sie diese Mail nicht: Es ä
         <source>SMS</source>
         <translation>SMS</translation>
     </message>
+    <message>
+        <source>Reply %keyword to stop.</source>
+        <translation>Abmelden: %keyword antworten.</translation>
+    </message>
+    <message>
+        <source>This is not a valid mobile number. Please enter it with the country code, for example +49 151 23456789.</source>
+        <translation>Das ist keine gültige Handynummer. Bitte geben Sie sie mit der Ländervorwahl ein, zum Beispiel +49 151 23456789.</translation>
+    </message>
+    <message>
+        <source>Too many codes were requested. Please wait an hour and try again.</source>
+        <translation>Es wurden zu viele Codes angefordert. Bitte warten Sie eine Stunde und versuchen Sie es dann erneut.</translation>
+    </message>
+    <message>
+        <source>SMS cannot be sent at the moment. Please try again later.</source>
+        <translation>Im Moment können keine SMS gesendet werden. Bitte versuchen Sie es später erneut.</translation>
+    </message>
+    <message>
+        <source>SMS cannot be sent at the moment. Please try again in a few minutes.</source>
+        <translation>Im Moment können keine SMS gesendet werden. Bitte versuchen Sie es in einigen Minuten erneut.</translation>
+    </message>
+    <message>
+        <source>Your confirmation code for the newsletters of %site: %code</source>
+        <translation>Ihr Bestätigungscode für die Newsletter von %site: %code</translation>
+    </message>
+    <message>
+        <source>Enter it at %url</source>
+        <translation>Eingeben unter %url</translation>
+    </message>
+    <message>
+        <source>The code could not be sent. Please check the number or try again later.</source>
+        <translation>Der Code konnte nicht gesendet werden. Bitte prüfen Sie die Nummer oder versuchen Sie es später erneut.</translation>
+    </message>
+    <message>
+        <source>The code has expired. Please ask for a new code.</source>
+        <translation>Der Code ist abgelaufen. Bitte fordern Sie einen neuen Code an.</translation>
+    </message>
+    <message>
+        <source>The code was entered wrongly too often. Please ask for a new code.</source>
+        <translation>Der Code wurde zu oft falsch eingegeben. Bitte fordern Sie einen neuen Code an.</translation>
+    </message>
+    <message>
+        <source>The code is not right. Please check it and try again.</source>
+        <translation>Der Code stimmt nicht. Bitte prüfen Sie ihn und versuchen Sie es erneut.</translation>
+    </message>
+    <message>
+        <source>I confirm my mobile number with the code and want to receive newsletters by SMS. I can stop them at any time by replying STOP or on the preference page.</source>
+        <translation>Ich bestätige meine Handynummer mit dem Code und möchte Newsletter per SMS erhalten. Ich kann sie jederzeit beenden, indem ich mit STOP antworte oder sie auf der Einstellungsseite abschalte.</translation>
+    </message>
+    <message>
+        <source>The person replied STOP by SMS.</source>
+        <translation>Die Person hat per SMS mit STOP geantwortet.</translation>
+    </message>
+    <message>
+        <source>SMS are not switched on for this list.</source>
+        <translation>Für diese Liste sind SMS nicht eingeschaltet.</translation>
+    </message>
+    <message>
+        <source>Please write the text of the SMS.</source>
+        <translation>Bitte schreiben Sie den Text der SMS.</translation>
+    </message>
+    <message>
+        <source>The SMS would need %count parts; at most %max are allowed. Please shorten the text.</source>
+        <translation>Die SMS bräuchte %count Teile; erlaubt sind höchstens %max. Bitte kürzen Sie den Text.</translation>
+    </message>
+    <message>
+        <source>No SMS transport is set up.</source>
+        <translation>Es ist kein SMS-Versand eingerichtet.</translation>
+    </message>
+    <message>
+        <source>SMS are switched on, but the SMS transport %name is not set up.</source>
+        <translation>SMS sind eingeschaltet, aber der SMS-Versand %name ist nicht eingerichtet.</translation>
+    </message>
+    <message>
+        <source>The mail-preference category %category is not switched on, so nobody can agree to SMS.</source>
+        <translation>Die E-Mail-Einstellungskategorie %category ist nicht eingeschaltet, deshalb kann niemand SMS zustimmen.</translation>
+    </message>
+    <message>
+        <source>%count SMS could not be sent.</source>
+        <translation>%count SMS konnten nicht gesendet werden.</translation>
+    </message>
+    <message>
+        <source>The SMS sender must be a number like +4915123456789 or a name of 3 to 11 letters and digits.</source>
+        <translation>Der SMS-Absender muss eine Nummer wie +4915123456789 oder ein Name aus 3 bis 11 Buchstaben und Ziffern sein.</translation>
+    </message>
+    <message>
+        <source>The confirmation code was sent to %phone.</source>
+        <translation>Der Bestätigungscode wurde an %phone gesendet.</translation>
+    </message>
+    <message>
+        <source>Please subscribe to a newsletter first; then you can add your mobile number here.</source>
+        <translation>Bitte abonnieren Sie zuerst einen Newsletter; dann können Sie hier Ihre Handynummer angeben.</translation>
+    </message>
+    <message>
+        <source>The test SMS was sent to %phone.</source>
+        <translation>Die Test-SMS wurde an %phone gesendet.</translation>
+    </message>
+    <message>
+        <source>SMS are switched off in the settings ([SmsSettings] Sms).</source>
+        <translation>SMS sind in den Einstellungen ausgeschaltet ([SmsSettings] Sms).</translation>
+    </message>
+    <message>
+        <source>The SMS send was created. The next run of the queue sends it.</source>
+        <translation>Der SMS-Versand wurde angelegt. Der nächste Lauf der Warteschlange versendet ihn.</translation>
+    </message>
+    <message>
+        <source>Send by SMS</source>
+        <translation>Per SMS senden</translation>
+    </message>
+    <message>
+        <source>There is no code waiting for this number. Please ask for a new code.</source>
+        <translation>Für diese Nummer wartet kein Code. Bitte fordern Sie einen neuen Code an.</translation>
+    </message>
+    <message>
+        <source>A new code was sent to %phone.</source>
+        <translation>Ein neuer Code wurde an %phone gesendet.</translation>
+    </message>
+    <message>
+        <source>Confirm your mobile number</source>
+        <translation>Handynummer bestätigen</translation>
+    </message>
+    <message>
+        <source>switched off</source>
+        <translation>ausgeschaltet</translation>
+    </message>
+    <message>
+        <source>no transport</source>
+        <translation>kein Versand eingerichtet</translation>
+    </message>
+    <message>
+        <source>writes SMS to files</source>
+        <translation>schreibt SMS in Dateien</translation>
+    </message>
+    <message>
+        <source>sends by %name</source>
+        <translation>sendet über %name</translation>
+    </message>
+    <message>
+        <source>in the queue</source>
+        <translation>in der Warteschlange</translation>
+    </message>
+    <message>
+        <source>sent</source>
+        <translation>gesendet</translation>
+    </message>
+    <message>
+        <source>failed</source>
+        <translation>fehlgeschlagen</translation>
+    </message>
+    <message>
+        <source>confirmed numbers</source>
+        <translation>bestätigte Nummern</translation>
+    </message>
+    <message>
+        <source>waiting for the code</source>
+        <translation>warten auf den Code</translation>
+    </message>
+    <message>
+        <source>SMS consents</source>
+        <translation>SMS-Einwilligungen</translation>
+    </message>
+    <message>
+        <source>STOP replies</source>
+        <translation>STOP-Antworten</translation>
+    </message>
+    <message>
+        <source>%count in 30 days</source>
+        <translation>%count in 30 Tagen</translation>
+    </message>
+    <message>
+        <source>Outbox</source>
+        <translation>Postausgang</translation>
+    </message>
+    <message>
+        <source>The mail-preference category %category is not switched on; see doc/sms.md of the extension.</source>
+        <translation>Die E-Mail-Einstellungskategorie %category ist nicht eingeschaltet; siehe doc/sms.md der Erweiterung.</translation>
+    </message>
+    <message>
+        <source>Last SMS sends</source>
+        <translation>Letzte SMS-Versände</translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <translation>Wartend</translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation>Gesendet</translation>
+    </message>
+    <message>
+        <source>Failed</source>
+        <translation>Fehlgeschlagen</translation>
+    </message>
+    <message>
+        <source>No edition was sent by SMS yet. An edition is sent by SMS from its send page.</source>
+        <translation>Noch keine Ausgabe wurde per SMS gesendet. Eine Ausgabe wird auf ihrer Versandseite per SMS gesendet.</translation>
+    </message>
+    <message>
+        <source>Thank you. Your mobile number %phone is confirmed.</source>
+        <translation>Vielen Dank. Ihre Handynummer %phone ist bestätigt.</translation>
+    </message>
+    <message>
+        <source>You will receive our newsletters by SMS. To stop them, reply STOP to one of them or turn them off in your settings.</source>
+        <translation>Sie erhalten unsere Newsletter per SMS. Zum Beenden antworten Sie mit STOP auf eine davon oder schalten Sie sie in Ihren Einstellungen ab.</translation>
+    </message>
+    <message>
+        <source>Your mobile number %phone is already confirmed.</source>
+        <translation>Ihre Handynummer %phone ist bereits bestätigt.</translation>
+    </message>
+    <message>
+        <source>There is no mobile number to confirm. You can add one in your newsletter settings.</source>
+        <translation>Es gibt keine Handynummer zu bestätigen. Sie können eine in Ihren Newsletter-Einstellungen angeben.</translation>
+    </message>
+    <message>
+        <source>We sent a code by SMS to %phone. Enter it here to confirm the number.</source>
+        <translation>Wir haben einen Code per SMS an %phone gesendet. Geben Sie ihn hier ein, um die Nummer zu bestätigen.</translation>
+    </message>
+    <message>
+        <source>Code from the SMS</source>
+        <translation>Code aus der SMS</translation>
+    </message>
+    <message>
+        <source>Confirm</source>
+        <translation>Bestätigen</translation>
+    </message>
+    <message>
+        <source>Send a new code</source>
+        <translation>Neuen Code senden</translation>
+    </message>
+    <message>
+        <source>Your newsletter settings</source>
+        <translation>Ihre Newsletter-Einstellungen</translation>
+    </message>
+    <message>
+        <source>Editions of this list may be sent by SMS</source>
+        <translation>Ausgaben dieser Liste dürfen per SMS gesendet werden</translation>
+    </message>
+    <message>
+        <source>Only subscribers who confirmed their mobile number and agreed to newsletters by SMS get them.</source>
+        <translation>Nur Abonnenten, die ihre Handynummer bestätigt und Newslettern per SMS zugestimmt haben, erhalten sie.</translation>
+    </message>
+    <message>
+        <source>SMS sender</source>
+        <translation>SMS-Absender</translation>
+    </message>
+    <message>
+        <source>A number like +4915123456789 or a name of 3 to 11 letters and digits; empty: the sender of the SMS transport.</source>
+        <translation>Eine Nummer wie +4915123456789 oder ein Name aus 3 bis 11 Buchstaben und Ziffern; leer: der Absender des SMS-Versands.</translation>
+    </message>
+    <message>
+        <source>switched on</source>
+        <translation>eingeschaltet</translation>
+    </message>
+    <message>
+        <source>sender</source>
+        <translation>Absender</translation>
+    </message>
+    <message>
+        <source>confirmed</source>
+        <translation>bestätigt</translation>
+    </message>
+    <message>
+        <source>stopped by SMS</source>
+        <translation>per SMS beendet</translation>
+    </message>
+    <message>
+        <source>not confirmed</source>
+        <translation>nicht bestätigt</translation>
+    </message>
+    <message>
+        <source>Send by SMS: %name</source>
+        <translation>Per SMS senden: %name</translation>
+    </message>
+    <message>
+        <source>Please check the SMS</source>
+        <translation>Bitte prüfen Sie die SMS</translation>
+    </message>
+    <message>
+        <source>subscribers</source>
+        <translation>Abonnenten</translation>
+    </message>
+    <message>
+        <source>with a confirmed number</source>
+        <translation>mit bestätigter Nummer</translation>
+    </message>
+    <message>
+        <source>waiting for their code</source>
+        <translation>warten auf ihren Code</translation>
+    </message>
+    <message>
+        <source>SMS are switched off</source>
+        <translation>SMS sind ausgeschaltet</translation>
+    </message>
+    <message>
+        <source>No SMS transport</source>
+        <translation>Kein SMS-Versand</translation>
+    </message>
+    <message>
+        <source>Writes SMS to files</source>
+        <translation>Schreibt SMS in Dateien</translation>
+    </message>
+    <message>
+        <source>Sends by %name</source>
+        <translation>Sendet über %name</translation>
+    </message>
+    <message>
+        <source>Not switched on for this list</source>
+        <translation>Für diese Liste nicht eingeschaltet</translation>
+    </message>
+    <message>
+        <source>Only subscribers who confirmed their mobile number with the code and agreed to newsletters by SMS on the preference page get the SMS. Everyone else is left out when the queue is made.</source>
+        <translation>Nur Abonnenten, die ihre Handynummer mit dem Code bestätigt und auf der Einstellungsseite Newslettern per SMS zugestimmt haben, erhalten die SMS. Alle anderen werden beim Erstellen der Warteschlange ausgelassen.</translation>
+    </message>
+    <message>
+        <source>Text of the SMS</source>
+        <translation>Text der SMS</translation>
+    </message>
+    <message>
+        <source>characters</source>
+        <translation>Zeichen</translation>
+    </message>
+    <message>
+        <source>SMS parts</source>
+        <translation>SMS-Teile</translation>
+    </message>
+    <message>
+        <source>at most %max</source>
+        <translation>höchstens %max</translation>
+    </message>
+    <message>
+        <source>left in this part</source>
+        <translation>frei in diesem Teil</translation>
+    </message>
+    <message>
+        <source>This line is added to every SMS and counted above:</source>
+        <translation>Diese Zeile wird an jede SMS angehängt und oben mitgezählt:</translation>
+    </message>
+    <message>
+        <source>Placeholders:</source>
+        <translation>Platzhalter:</translation>
+    </message>
+    <message>
+        <source>The counter counts them as typed; a long name makes the SMS longer.</source>
+        <translation>Der Zähler zählt sie, wie sie geschrieben sind; ein langer Name macht die SMS länger.</translation>
+    </message>
+    <message>
+        <source>Test SMS</source>
+        <translation>Test-SMS</translation>
+    </message>
+    <message>
+        <source>Mobile number</source>
+        <translation>Handynummer</translation>
+    </message>
+    <message>
+        <source>The test goes only to this number; the placeholders stay as they are.</source>
+        <translation>Der Test geht nur an diese Nummer; die Platzhalter bleiben, wie sie sind.</translation>
+    </message>
+    <message>
+        <source>Send a test SMS</source>
+        <translation>Test-SMS senden</translation>
+    </message>
+    <message>
+        <source>Sender</source>
+        <translation>Absender</translation>
+    </message>
+    <message>
+        <source>The sender of the transport</source>
+        <translation>Der Absender des Versands</translation>
+    </message>
+    <message>
+        <source>The sender and the SMS switch of a list are set on the list object.</source>
+        <translation>Absender und SMS-Schalter einer Liste werden am Listenobjekt eingestellt.</translation>
+    </message>
+    <message>
+        <source>SMS sends of this edition</source>
+        <translation>SMS-Versände dieser Ausgabe</translation>
+    </message>
+    <message>
+        <source>Created</source>
+        <translation>Angelegt</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Text</translation>
+    </message>
+    <message>
+        <source>Stopped</source>
+        <translation>Beendet</translation>
+    </message>
+    <message>
+        <source>This edition was not sent by SMS yet.</source>
+        <translation>Diese Ausgabe wurde noch nicht per SMS gesendet.</translation>
+    </message>
+    <message>
+        <source>Back to the edition</source>
+        <translation>Zurück zur Ausgabe</translation>
+    </message>
+    <message>
+        <source>Send this edition by SMS instead</source>
+        <translation>Diese Ausgabe stattdessen per SMS senden</translation>
+    </message>
+    <message>
+        <source>Mobile number (optional, for newsletters by SMS)</source>
+        <translation>Handynummer (freiwillig, für Newsletter per SMS)</translation>
+    </message>
+    <message>
+        <source>We send a code to this number. Newsletters by SMS start only once you enter it; reply STOP to end them.</source>
+        <translation>Wir senden einen Code an diese Nummer. Newsletter per SMS beginnen erst, wenn Sie ihn eingeben; mit STOP beenden Sie sie.</translation>
+    </message>
+    <message>
+        <source>Send the confirmation code to this number after saving</source>
+        <translation>Nach dem Speichern den Bestätigungscode an diese Nummer senden</translation>
+    </message>
+    <message>
+        <source>Newsletters by SMS are not offered at the moment.</source>
+        <translation>Newsletter per SMS werden im Moment nicht angeboten.</translation>
+    </message>
+    <message>
+        <source>Newsletters by SMS go to the subscribers of our newsletters. Subscribe to a newsletter first; then you can add your mobile number here.</source>
+        <translation>Newsletter per SMS gehen an die Abonnenten unserer Newsletter. Abonnieren Sie zuerst einen Newsletter; dann können Sie hier Ihre Handynummer angeben.</translation>
+    </message>
+    <message>
+        <source>We sent a code to %phone.</source>
+        <translation>Wir haben einen Code an %phone gesendet.</translation>
+    </message>
+    <message>
+        <source>Confirmed</source>
+        <translation>Bestätigt</translation>
+    </message>
+    <message>
+        <source>Waiting for the code</source>
+        <translation>Wartet auf den Code</translation>
+    </message>
+    <message>
+        <source>Stopped by SMS</source>
+        <translation>Per SMS beendet</translation>
+    </message>
+    <message>
+        <source>With the country code. Leave the field empty to remove the number.</source>
+        <translation>Mit Ländervorwahl. Lassen Sie das Feld leer, um die Nummer zu entfernen.</translation>
+    </message>
+    <message>
+        <source>We sent a code to %phone. Enter it and save to confirm the number.</source>
+        <translation>Wir haben einen Code an %phone gesendet. Geben Sie ihn ein und speichern Sie, um die Nummer zu bestätigen.</translation>
+    </message>
+    <message>
+        <source>The code has expired.</source>
+        <translation>Der Code ist abgelaufen.</translation>
+    </message>
+    <message>
+        <source>Send me a new code</source>
+        <translation>Neuen Code an mich senden</translation>
+    </message>
+    <message>
+        <source>SMS go to this number while this is on. Reply %keyword to any of them to stop them.</source>
+        <translation>Solange dies eingeschaltet ist, gehen SMS an diese Nummer. Antworten Sie auf eine davon mit %keyword, um sie zu beenden.</translation>
+    </message>
+    <message>
+        <source>You stopped the SMS with a reply. Turn this on and save to get a new code and start again.</source>
+        <translation>Sie haben die SMS mit einer Antwort beendet. Schalten Sie dies ein und speichern Sie, um einen neuen Code zu erhalten und neu zu beginnen.</translation>
+    </message>
+    <message>
+        <source>When this is on and you save, we send a code to the number. The SMS start once you enter the code.</source>
+        <translation>Wenn dies eingeschaltet ist und Sie speichern, senden wir einen Code an die Nummer. Die SMS beginnen, sobald Sie den Code eingeben.</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/importexport</name>

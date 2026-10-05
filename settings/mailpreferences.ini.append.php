@@ -34,13 +34,17 @@ MessageListeners[]=CjwNewsletterMailin
 #HandlerClass=CjwNewsletterStatisticsCategoryHandler
 
 # N5 SMS: newsletters by SMS, confirmed with a code
-#[CategorySettings]
-#Categories[]=sms
-#[Category_sms]
-#Name=Newsletters by SMS
-#Description=Short newsletters to my mobile phone
-#Essential=false
-#DefaultOn=false
-#HandlerClass=CjwNewsletterSmsCategoryHandler
+# The double opt-in of this category is the code sent by SMS to the number (CjwNewsletterSmsCategoryHandler), not
+# the e-mail link of the kernel, so DoubleOptIn stays false. An SMS goes out only when the category is on AND the
+# number is confirmed; a STOP reply switches the category off.
+[CategorySettings]
+Categories[]=sms
+[Category_sms]
+Name=Newsletters by SMS
+Description=Short newsletters to my mobile phone
+Essential=false
+DefaultOn=false
+DoubleOptIn=false
+HandlerClass=CjwNewsletterSmsCategoryHandler
 
 */ ?>

@@ -5466,6 +5466,470 @@ If you did not send this request, ignore this mail: nothing changes.</source>
         <source>SMS</source>
         <translation>SMS</translation>
     </message>
+    <message>
+        <source>Reply %keyword to stop.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This is not a valid mobile number. Please enter it with the country code, for example +49 151 23456789.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Too many codes were requested. Please wait an hour and try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SMS cannot be sent at the moment. Please try again later.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SMS cannot be sent at the moment. Please try again in a few minutes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your confirmation code for the newsletters of %site: %code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter it at %url</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The code could not be sent. Please check the number or try again later.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The code has expired. Please ask for a new code.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The code was entered wrongly too often. Please ask for a new code.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The code is not right. Please check it and try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>I confirm my mobile number with the code and want to receive newsletters by SMS. I can stop them at any time by replying STOP or on the preference page.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The person replied STOP by SMS.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SMS are not switched on for this list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please write the text of the SMS.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The SMS would need %count parts; at most %max are allowed. Please shorten the text.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No SMS transport is set up.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SMS are switched on, but the SMS transport %name is not set up.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The mail-preference category %category is not switched on, so nobody can agree to SMS.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count SMS could not be sent.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The SMS sender must be a number like +4915123456789 or a name of 3 to 11 letters and digits.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The confirmation code was sent to %phone.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please subscribe to a newsletter first; then you can add your mobile number here.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The test SMS was sent to %phone.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SMS are switched off in the settings ([SmsSettings] Sms).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The SMS send was created. The next run of the queue sends it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send by SMS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There is no code waiting for this number. Please ask for a new code.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A new code was sent to %phone.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Confirm your mobile number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>switched off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>no transport</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>writes SMS to files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sends by %name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>in the queue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>confirmed numbers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>waiting for the code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SMS consents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>STOP replies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count in 30 days</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Outbox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The mail-preference category %category is not switched on; see doc/sms.md of the extension.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last SMS sends</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No edition was sent by SMS yet. An edition is sent by SMS from its send page.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thank you. Your mobile number %phone is confirmed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You will receive our newsletters by SMS. To stop them, reply STOP to one of them or turn them off in your settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your mobile number %phone is already confirmed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There is no mobile number to confirm. You can add one in your newsletter settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>We sent a code by SMS to %phone. Enter it here to confirm the number.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Code from the SMS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Confirm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send a new code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your newsletter settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Editions of this list may be sent by SMS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Only subscribers who confirmed their mobile number and agreed to newsletters by SMS get them.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SMS sender</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A number like +4915123456789 or a name of 3 to 11 letters and digits; empty: the sender of the SMS transport.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>switched on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sender</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>confirmed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>stopped by SMS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>not confirmed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send by SMS: %name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please check the SMS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>subscribers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>with a confirmed number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>waiting for their code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SMS are switched off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No SMS transport</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Writes SMS to files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sends by %name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Not switched on for this list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Only subscribers who confirmed their mobile number with the code and agreed to newsletters by SMS on the preference page get the SMS. Everyone else is left out when the queue is made.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text of the SMS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>characters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SMS parts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>at most %max</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>left in this part</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This line is added to every SMS and counted above:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Placeholders:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The counter counts them as typed; a long name makes the SMS longer.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Test SMS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mobile number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The test goes only to this number; the placeholders stay as they are.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send a test SMS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sender</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The sender of the transport</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The sender and the SMS switch of a list are set on the list object.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SMS sends of this edition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Created</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stopped</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This edition was not sent by SMS yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Back to the edition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send this edition by SMS instead</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mobile number (optional, for newsletters by SMS)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>We send a code to this number. Newsletters by SMS start only once you enter it; reply STOP to end them.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send the confirmation code to this number after saving</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Newsletters by SMS are not offered at the moment.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Newsletters by SMS go to the subscribers of our newsletters. Subscribe to a newsletter first; then you can add your mobile number here.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>We sent a code to %phone.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Confirmed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Waiting for the code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stopped by SMS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>With the country code. Leave the field empty to remove the number.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>We sent a code to %phone. Enter it and save to confirm the number.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The code has expired.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send me a new code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SMS go to this number while this is on. Reply %keyword to any of them to stop them.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You stopped the SMS with a reply. Turn this on and save to get a new code and start again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When this is on and you save, we send a code to the number. The SMS start once you enter the code.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/importexport</name>

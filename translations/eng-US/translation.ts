@@ -6044,6 +6044,470 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
         <source>SMS</source>
         <translation>SMS</translation>
     </message>
+    <message>
+        <source>Reply %keyword to stop.</source>
+        <translation>Reply %keyword to stop.</translation>
+    </message>
+    <message>
+        <source>This is not a valid mobile number. Please enter it with the country code, for example +49 151 23456789.</source>
+        <translation>This is not a valid mobile number. Please enter it with the country code, for example +49 151 23456789.</translation>
+    </message>
+    <message>
+        <source>Too many codes were requested. Please wait an hour and try again.</source>
+        <translation>Too many codes were requested. Please wait an hour and try again.</translation>
+    </message>
+    <message>
+        <source>SMS cannot be sent at the moment. Please try again later.</source>
+        <translation>SMS cannot be sent at the moment. Please try again later.</translation>
+    </message>
+    <message>
+        <source>SMS cannot be sent at the moment. Please try again in a few minutes.</source>
+        <translation>SMS cannot be sent at the moment. Please try again in a few minutes.</translation>
+    </message>
+    <message>
+        <source>Your confirmation code for the newsletters of %site: %code</source>
+        <translation>Your confirmation code for the newsletters of %site: %code</translation>
+    </message>
+    <message>
+        <source>Enter it at %url</source>
+        <translation>Enter it at %url</translation>
+    </message>
+    <message>
+        <source>The code could not be sent. Please check the number or try again later.</source>
+        <translation>The code could not be sent. Please check the number or try again later.</translation>
+    </message>
+    <message>
+        <source>The code has expired. Please ask for a new code.</source>
+        <translation>The code has expired. Please ask for a new code.</translation>
+    </message>
+    <message>
+        <source>The code was entered wrongly too often. Please ask for a new code.</source>
+        <translation>The code was entered wrongly too often. Please ask for a new code.</translation>
+    </message>
+    <message>
+        <source>The code is not right. Please check it and try again.</source>
+        <translation>The code is not right. Please check it and try again.</translation>
+    </message>
+    <message>
+        <source>I confirm my mobile number with the code and want to receive newsletters by SMS. I can stop them at any time by replying STOP or on the preference page.</source>
+        <translation>I confirm my mobile number with the code and want to receive newsletters by SMS. I can stop them at any time by replying STOP or on the preference page.</translation>
+    </message>
+    <message>
+        <source>The person replied STOP by SMS.</source>
+        <translation>The person replied STOP by SMS.</translation>
+    </message>
+    <message>
+        <source>SMS are not switched on for this list.</source>
+        <translation>SMS are not switched on for this list.</translation>
+    </message>
+    <message>
+        <source>Please write the text of the SMS.</source>
+        <translation>Please write the text of the SMS.</translation>
+    </message>
+    <message>
+        <source>The SMS would need %count parts; at most %max are allowed. Please shorten the text.</source>
+        <translation>The SMS would need %count parts; at most %max are allowed. Please shorten the text.</translation>
+    </message>
+    <message>
+        <source>No SMS transport is set up.</source>
+        <translation>No SMS transport is set up.</translation>
+    </message>
+    <message>
+        <source>SMS are switched on, but the SMS transport %name is not set up.</source>
+        <translation>SMS are switched on, but the SMS transport %name is not set up.</translation>
+    </message>
+    <message>
+        <source>The mail-preference category %category is not switched on, so nobody can agree to SMS.</source>
+        <translation>The mail-preference category %category is not switched on, so nobody can agree to SMS.</translation>
+    </message>
+    <message>
+        <source>%count SMS could not be sent.</source>
+        <translation>%count SMS could not be sent.</translation>
+    </message>
+    <message>
+        <source>The SMS sender must be a number like +4915123456789 or a name of 3 to 11 letters and digits.</source>
+        <translation>The SMS sender must be a number like +4915123456789 or a name of 3 to 11 letters and digits.</translation>
+    </message>
+    <message>
+        <source>The confirmation code was sent to %phone.</source>
+        <translation>The confirmation code was sent to %phone.</translation>
+    </message>
+    <message>
+        <source>Please subscribe to a newsletter first; then you can add your mobile number here.</source>
+        <translation>Please subscribe to a newsletter first; then you can add your mobile number here.</translation>
+    </message>
+    <message>
+        <source>The test SMS was sent to %phone.</source>
+        <translation>The test SMS was sent to %phone.</translation>
+    </message>
+    <message>
+        <source>SMS are switched off in the settings ([SmsSettings] Sms).</source>
+        <translation>SMS are switched off in the settings ([SmsSettings] Sms).</translation>
+    </message>
+    <message>
+        <source>The SMS send was created. The next run of the queue sends it.</source>
+        <translation>The SMS send was created. The next run of the queue sends it.</translation>
+    </message>
+    <message>
+        <source>Send by SMS</source>
+        <translation>Send by SMS</translation>
+    </message>
+    <message>
+        <source>There is no code waiting for this number. Please ask for a new code.</source>
+        <translation>There is no code waiting for this number. Please ask for a new code.</translation>
+    </message>
+    <message>
+        <source>A new code was sent to %phone.</source>
+        <translation>A new code was sent to %phone.</translation>
+    </message>
+    <message>
+        <source>Confirm your mobile number</source>
+        <translation>Confirm your mobile number</translation>
+    </message>
+    <message>
+        <source>switched off</source>
+        <translation>switched off</translation>
+    </message>
+    <message>
+        <source>no transport</source>
+        <translation>no transport</translation>
+    </message>
+    <message>
+        <source>writes SMS to files</source>
+        <translation>writes SMS to files</translation>
+    </message>
+    <message>
+        <source>sends by %name</source>
+        <translation>sends by %name</translation>
+    </message>
+    <message>
+        <source>in the queue</source>
+        <translation>in the queue</translation>
+    </message>
+    <message>
+        <source>sent</source>
+        <translation>sent</translation>
+    </message>
+    <message>
+        <source>failed</source>
+        <translation>failed</translation>
+    </message>
+    <message>
+        <source>confirmed numbers</source>
+        <translation>confirmed numbers</translation>
+    </message>
+    <message>
+        <source>waiting for the code</source>
+        <translation>waiting for the code</translation>
+    </message>
+    <message>
+        <source>SMS consents</source>
+        <translation>SMS consents</translation>
+    </message>
+    <message>
+        <source>STOP replies</source>
+        <translation>STOP replies</translation>
+    </message>
+    <message>
+        <source>%count in 30 days</source>
+        <translation>%count in 30 days</translation>
+    </message>
+    <message>
+        <source>Outbox</source>
+        <translation>Outbox</translation>
+    </message>
+    <message>
+        <source>The mail-preference category %category is not switched on; see doc/sms.md of the extension.</source>
+        <translation>The mail-preference category %category is not switched on; see doc/sms.md of the extension.</translation>
+    </message>
+    <message>
+        <source>Last SMS sends</source>
+        <translation>Last SMS sends</translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <translation>Waiting</translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation>Sent</translation>
+    </message>
+    <message>
+        <source>Failed</source>
+        <translation>Failed</translation>
+    </message>
+    <message>
+        <source>No edition was sent by SMS yet. An edition is sent by SMS from its send page.</source>
+        <translation>No edition was sent by SMS yet. An edition is sent by SMS from its send page.</translation>
+    </message>
+    <message>
+        <source>Thank you. Your mobile number %phone is confirmed.</source>
+        <translation>Thank you. Your mobile number %phone is confirmed.</translation>
+    </message>
+    <message>
+        <source>You will receive our newsletters by SMS. To stop them, reply STOP to one of them or turn them off in your settings.</source>
+        <translation>You will receive our newsletters by SMS. To stop them, reply STOP to one of them or turn them off in your settings.</translation>
+    </message>
+    <message>
+        <source>Your mobile number %phone is already confirmed.</source>
+        <translation>Your mobile number %phone is already confirmed.</translation>
+    </message>
+    <message>
+        <source>There is no mobile number to confirm. You can add one in your newsletter settings.</source>
+        <translation>There is no mobile number to confirm. You can add one in your newsletter settings.</translation>
+    </message>
+    <message>
+        <source>We sent a code by SMS to %phone. Enter it here to confirm the number.</source>
+        <translation>We sent a code by SMS to %phone. Enter it here to confirm the number.</translation>
+    </message>
+    <message>
+        <source>Code from the SMS</source>
+        <translation>Code from the SMS</translation>
+    </message>
+    <message>
+        <source>Confirm</source>
+        <translation>Confirm</translation>
+    </message>
+    <message>
+        <source>Send a new code</source>
+        <translation>Send a new code</translation>
+    </message>
+    <message>
+        <source>Your newsletter settings</source>
+        <translation>Your newsletter settings</translation>
+    </message>
+    <message>
+        <source>Editions of this list may be sent by SMS</source>
+        <translation>Editions of this list may be sent by SMS</translation>
+    </message>
+    <message>
+        <source>Only subscribers who confirmed their mobile number and agreed to newsletters by SMS get them.</source>
+        <translation>Only subscribers who confirmed their mobile number and agreed to newsletters by SMS get them.</translation>
+    </message>
+    <message>
+        <source>SMS sender</source>
+        <translation>SMS sender</translation>
+    </message>
+    <message>
+        <source>A number like +4915123456789 or a name of 3 to 11 letters and digits; empty: the sender of the SMS transport.</source>
+        <translation>A number like +4915123456789 or a name of 3 to 11 letters and digits; empty: the sender of the SMS transport.</translation>
+    </message>
+    <message>
+        <source>switched on</source>
+        <translation>switched on</translation>
+    </message>
+    <message>
+        <source>sender</source>
+        <translation>sender</translation>
+    </message>
+    <message>
+        <source>confirmed</source>
+        <translation>confirmed</translation>
+    </message>
+    <message>
+        <source>stopped by SMS</source>
+        <translation>stopped by SMS</translation>
+    </message>
+    <message>
+        <source>not confirmed</source>
+        <translation>not confirmed</translation>
+    </message>
+    <message>
+        <source>Send by SMS: %name</source>
+        <translation>Send by SMS: %name</translation>
+    </message>
+    <message>
+        <source>Please check the SMS</source>
+        <translation>Please check the SMS</translation>
+    </message>
+    <message>
+        <source>subscribers</source>
+        <translation>subscribers</translation>
+    </message>
+    <message>
+        <source>with a confirmed number</source>
+        <translation>with a confirmed number</translation>
+    </message>
+    <message>
+        <source>waiting for their code</source>
+        <translation>waiting for their code</translation>
+    </message>
+    <message>
+        <source>SMS are switched off</source>
+        <translation>SMS are switched off</translation>
+    </message>
+    <message>
+        <source>No SMS transport</source>
+        <translation>No SMS transport</translation>
+    </message>
+    <message>
+        <source>Writes SMS to files</source>
+        <translation>Writes SMS to files</translation>
+    </message>
+    <message>
+        <source>Sends by %name</source>
+        <translation>Sends by %name</translation>
+    </message>
+    <message>
+        <source>Not switched on for this list</source>
+        <translation>Not switched on for this list</translation>
+    </message>
+    <message>
+        <source>Only subscribers who confirmed their mobile number with the code and agreed to newsletters by SMS on the preference page get the SMS. Everyone else is left out when the queue is made.</source>
+        <translation>Only subscribers who confirmed their mobile number with the code and agreed to newsletters by SMS on the preference page get the SMS. Everyone else is left out when the queue is made.</translation>
+    </message>
+    <message>
+        <source>Text of the SMS</source>
+        <translation>Text of the SMS</translation>
+    </message>
+    <message>
+        <source>characters</source>
+        <translation>characters</translation>
+    </message>
+    <message>
+        <source>SMS parts</source>
+        <translation>SMS parts</translation>
+    </message>
+    <message>
+        <source>at most %max</source>
+        <translation>at most %max</translation>
+    </message>
+    <message>
+        <source>left in this part</source>
+        <translation>left in this part</translation>
+    </message>
+    <message>
+        <source>This line is added to every SMS and counted above:</source>
+        <translation>This line is added to every SMS and counted above:</translation>
+    </message>
+    <message>
+        <source>Placeholders:</source>
+        <translation>Placeholders:</translation>
+    </message>
+    <message>
+        <source>The counter counts them as typed; a long name makes the SMS longer.</source>
+        <translation>The counter counts them as typed; a long name makes the SMS longer.</translation>
+    </message>
+    <message>
+        <source>Test SMS</source>
+        <translation>Test SMS</translation>
+    </message>
+    <message>
+        <source>Mobile number</source>
+        <translation>Mobile number</translation>
+    </message>
+    <message>
+        <source>The test goes only to this number; the placeholders stay as they are.</source>
+        <translation>The test goes only to this number; the placeholders stay as they are.</translation>
+    </message>
+    <message>
+        <source>Send a test SMS</source>
+        <translation>Send a test SMS</translation>
+    </message>
+    <message>
+        <source>Sender</source>
+        <translation>Sender</translation>
+    </message>
+    <message>
+        <source>The sender of the transport</source>
+        <translation>The sender of the transport</translation>
+    </message>
+    <message>
+        <source>The sender and the SMS switch of a list are set on the list object.</source>
+        <translation>The sender and the SMS switch of a list are set on the list object.</translation>
+    </message>
+    <message>
+        <source>SMS sends of this edition</source>
+        <translation>SMS sends of this edition</translation>
+    </message>
+    <message>
+        <source>Created</source>
+        <translation>Created</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Text</translation>
+    </message>
+    <message>
+        <source>Stopped</source>
+        <translation>Stopped</translation>
+    </message>
+    <message>
+        <source>This edition was not sent by SMS yet.</source>
+        <translation>This edition was not sent by SMS yet.</translation>
+    </message>
+    <message>
+        <source>Back to the edition</source>
+        <translation>Back to the edition</translation>
+    </message>
+    <message>
+        <source>Send this edition by SMS instead</source>
+        <translation>Send this edition by SMS instead</translation>
+    </message>
+    <message>
+        <source>Mobile number (optional, for newsletters by SMS)</source>
+        <translation>Mobile number (optional, for newsletters by SMS)</translation>
+    </message>
+    <message>
+        <source>We send a code to this number. Newsletters by SMS start only once you enter it; reply STOP to end them.</source>
+        <translation>We send a code to this number. Newsletters by SMS start only once you enter it; reply STOP to end them.</translation>
+    </message>
+    <message>
+        <source>Send the confirmation code to this number after saving</source>
+        <translation>Send the confirmation code to this number after saving</translation>
+    </message>
+    <message>
+        <source>Newsletters by SMS are not offered at the moment.</source>
+        <translation>Newsletters by SMS are not offered at the moment.</translation>
+    </message>
+    <message>
+        <source>Newsletters by SMS go to the subscribers of our newsletters. Subscribe to a newsletter first; then you can add your mobile number here.</source>
+        <translation>Newsletters by SMS go to the subscribers of our newsletters. Subscribe to a newsletter first; then you can add your mobile number here.</translation>
+    </message>
+    <message>
+        <source>We sent a code to %phone.</source>
+        <translation>We sent a code to %phone.</translation>
+    </message>
+    <message>
+        <source>Confirmed</source>
+        <translation>Confirmed</translation>
+    </message>
+    <message>
+        <source>Waiting for the code</source>
+        <translation>Waiting for the code</translation>
+    </message>
+    <message>
+        <source>Stopped by SMS</source>
+        <translation>Stopped by SMS</translation>
+    </message>
+    <message>
+        <source>With the country code. Leave the field empty to remove the number.</source>
+        <translation>With the country code. Leave the field empty to remove the number.</translation>
+    </message>
+    <message>
+        <source>We sent a code to %phone. Enter it and save to confirm the number.</source>
+        <translation>We sent a code to %phone. Enter it and save to confirm the number.</translation>
+    </message>
+    <message>
+        <source>The code has expired.</source>
+        <translation>The code has expired.</translation>
+    </message>
+    <message>
+        <source>Send me a new code</source>
+        <translation>Send me a new code</translation>
+    </message>
+    <message>
+        <source>SMS go to this number while this is on. Reply %keyword to any of them to stop them.</source>
+        <translation>SMS go to this number while this is on. Reply %keyword to any of them to stop them.</translation>
+    </message>
+    <message>
+        <source>You stopped the SMS with a reply. Turn this on and save to get a new code and start again.</source>
+        <translation>You stopped the SMS with a reply. Turn this on and save to get a new code and start again.</translation>
+    </message>
+    <message>
+        <source>When this is on and you save, we send a code to the number. The SMS start once you enter the code.</source>
+        <translation>When this is on and you save, we send a code to the number. The SMS start once you enter the code.</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/importexport</name>
