@@ -15,6 +15,8 @@ Listeners[]=CjwNewsletterMailPreferences
 # ---- cjw_newsletter 4.2.0: categories of the feature areas, switched on by the area when its code exists.
 # Both are optional and off by default (the person opts in on the central preference page).
 
+# N1 Deliverability: the kernel bounce reader hands newsletter bounces and mail-in messages to the newsletter
+
 # N4 Statistics: consent to per-person open and click counting
 #[CategorySettings]
 #Categories[]=newsletter_statistics
