@@ -444,7 +444,7 @@ Indexes: `cjwnl_sms_code_user` (newsletter_user_id, purpose).
 
 ### cjwnl_sms_message
 
-Area N5 SMS, class `CjwNewsletterSmsMessage` (`classes/sms/cjwnewslettersmsmessage.php`). One SMS of an SMS edition. `status`: 0 new, 1 sent, 2 failed, 9 aborted.
+Area N5 SMS, class `CjwNewsletterSmsMessage` (`classes/sms/cjwnewslettersmsmessage.php`). One SMS of an SMS edition. `status`: 0 new, 1 sent, 2 failed, 8 template, 9 aborted. The text of an SMS send (with its placeholders) is the one row with `newsletter_user_id` 0 and `status` 8 ("template"); the rows of the recipients are made from it when the queue is created.
 
 | Column | Type | Meaning |
 |---|---|---|
