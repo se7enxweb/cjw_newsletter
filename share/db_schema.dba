@@ -1,6 +1,445 @@
 <?php
 // This array contains the database schema
 $schema = array (
+  'cjwnl_ab_test' => 
+  array (
+    'name' => 'cjwnl_ab_test',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'edition_send_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'status' => 
+      array (
+        'length' => 4,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'sample_percent' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 10,
+      ),
+      'variant_count' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 2,
+      ),
+      'criterion' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => 'open',
+      ),
+      'wait_seconds' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 14400,
+      ),
+      'winner_variant_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'samples_sent' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'decided' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'modified' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_ab_test_send' => 
+      array (
+        'type' => 'unique',
+        'fields' => 
+        array (
+          0 => 'edition_send_id',
+        ),
+      ),
+      'cjwnl_ab_test_status' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'status',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_ab_variant' => 
+  array (
+    'name' => 'cjwnl_ab_variant',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'ab_test_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'variant_key' => 
+      array (
+        'length' => 10,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'subject' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'item_count' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'open_count' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'click_count' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_ab_variant_test' => 
+      array (
+        'type' => 'unique',
+        'fields' => 
+        array (
+          0 => 'ab_test_id',
+          1 => 'variant_key',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_approval' => 
+  array (
+    'name' => 'cjwnl_approval',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'edition_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'edition_contentobject_version' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'list_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'collaboration_item_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'status' => 
+      array (
+        'length' => 4,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'requested_by' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'requested' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'decided_by' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'decided' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'comment' => 
+      array (
+        'type' => 'text',
+        'default' => NULL,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_approval_edition' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'edition_contentobject_id',
+          1 => 'edition_contentobject_version',
+        ),
+      ),
+      'cjwnl_approval_collaboration' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'collaboration_item_id',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_article_pool' => 
+  array (
+    'name' => 'cjwnl_article_pool',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'list_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'name' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'is_default' => 
+      array (
+        'length' => 1,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'parent_node_id_array_string' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'class_identifier_array_string' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'section_id_array_string' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'tag_id_array_string' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'state_id_array_string' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'max_age_days' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'max_items' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 10,
+      ),
+      'sort_by' => 
+      array (
+        'length' => 50,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => 'published',
+      ),
+      'filter_data' => 
+      array (
+        'type' => 'text',
+        'default' => NULL,
+      ),
+      'creator_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'modified' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_article_pool_list' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'list_contentobject_id',
+        ),
+      ),
+    ),
+  ),
   'cjwnl_blacklist_item' => 
   array (
     'name' => 'cjwnl_blacklist_item',
@@ -130,6 +569,95 @@ $schema = array (
         ),
       ),
       'contentobject_id' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'contentobject_id',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_edition_article' => 
+  array (
+    'name' => 'cjwnl_edition_article',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'edition_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'article_pool_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'position' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'added_by' => 
+      array (
+        'length' => 4,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'creator_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_edition_article_edition' => 
+      array (
+        'type' => 'unique',
+        'fields' => 
+        array (
+          0 => 'edition_contentobject_id',
+          1 => 'contentobject_id',
+        ),
+      ),
+      'cjwnl_edition_article_object' => 
       array (
         'type' => 'non-unique',
         'fields' => 
@@ -301,6 +829,55 @@ $schema = array (
         'not_null' => '1',
         'default' => '0',
       ),
+      'skin_name' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'channel' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => 'email',
+      ),
+      'schedule_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'tracking_mode' => 
+      array (
+        'length' => 4,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'ab_test_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'test_group_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'throttle_transport' => 
+      array (
+        'length' => 50,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
     ),
     'indexes' => 
     array (
@@ -411,6 +988,62 @@ $schema = array (
         'not_null' => '1',
         'default' => 0,
       ),
+      'retry_count' => 
+      array (
+        'length' => 4,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'next_retry' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'batch_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'language' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'ab_variant_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'first_opened' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'open_count' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'click_count' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
     ),
     'indexes' => 
     array (
@@ -444,6 +1077,64 @@ $schema = array (
         'fields' => 
         array (
           0 => 'subscription_id',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_edition_send_output' => 
+  array (
+    'name' => 'cjwnl_edition_send_output',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'edition_send_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'language' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'output_xml' => 
+      array (
+        'type' => 'longtext',
+        'default' => NULL,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_edition_send_output_lang' => 
+      array (
+        'type' => 'unique',
+        'fields' => 
+        array (
+          0 => 'edition_send_id',
+          1 => 'language',
         ),
       ),
     ),
@@ -528,6 +1219,48 @@ $schema = array (
         'not_null' => '1',
         'default' => 0,
       ),
+      'mapping_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'is_dry_run' => 
+      array (
+        'length' => 1,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'consent_source' => 
+      array (
+        'length' => 100,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'status' => 
+      array (
+        'length' => 4,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'skipped_count' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'error_count' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
     ),
     'indexes' => 
     array (
@@ -537,6 +1270,355 @@ $schema = array (
         'fields' => 
         array (
           0 => 'id',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_import_mapping' => 
+  array (
+    'name' => 'cjwnl_import_mapping',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'name' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'list_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'mapping' => 
+      array (
+        'type' => 'text',
+        'default' => NULL,
+      ),
+      'delimiter' => 
+      array (
+        'length' => 5,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => ';',
+      ),
+      'has_header' => 
+      array (
+        'length' => 1,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '1',
+      ),
+      'encoding' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => 'UTF-8',
+      ),
+      'consent_source' => 
+      array (
+        'length' => 100,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'creator_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'modified' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_import_mapping_list' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'list_contentobject_id',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_interest' => 
+  array (
+    'name' => 'cjwnl_interest',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'list_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'identifier' => 
+      array (
+        'length' => 100,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'name' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'source' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => 'topic',
+      ),
+      'eztags_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'priority' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'is_active' => 
+      array (
+        'length' => 1,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '1',
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'modified' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_interest_identifier' => 
+      array (
+        'type' => 'unique',
+        'fields' => 
+        array (
+          0 => 'list_contentobject_id',
+          1 => 'identifier',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_link' => 
+  array (
+    'name' => 'cjwnl_link',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'edition_send_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'url_hash' => 
+      array (
+        'length' => 64,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'url' => 
+      array (
+        'type' => 'text',
+        'default' => NULL,
+      ),
+      'contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'position' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'click_count' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_link_send_url' => 
+      array (
+        'type' => 'unique',
+        'fields' => 
+        array (
+          0 => 'edition_send_id',
+          1 => 'url_hash',
+        ),
+      ),
+      'cjwnl_link_object' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'contentobject_id',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_link_click' => 
+  array (
+    'name' => 'cjwnl_link_click',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'link_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'edition_send_item_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_link_click_link' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'link_id',
+        ),
+      ),
+      'cjwnl_link_click_item' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'edition_send_item_id',
+        ),
+      ),
+      'cjwnl_link_click_created' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'created',
         ),
       ),
     ),
@@ -669,6 +1751,69 @@ $schema = array (
         'type' => 'text',
         'not_null' => '1',
         'default' => false,
+      ),
+      'skin_name_array_string' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'main_language' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'language_array_string' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'interest_source' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'approval_required' => 
+      array (
+        'length' => 1,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'article_pool_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'tracking_mode' => 
+      array (
+        'length' => 4,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'sms_enabled' => 
+      array (
+        'length' => 1,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'sms_sender' => 
+      array (
+        'length' => 50,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
       ),
     ),
     'indexes' => 
@@ -926,6 +2071,1104 @@ $schema = array (
       ),
     ),
   ),
+  'cjwnl_mailin_address' => 
+  array (
+    'name' => 'cjwnl_mailin_address',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'list_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'email' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'plus_tag' => 
+      array (
+        'length' => 100,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'action' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => 'both',
+      ),
+      'mailbox_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'is_active' => 
+      array (
+        'length' => 1,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '1',
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'modified' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_mailin_address_email' => 
+      array (
+        'type' => 'unique',
+        'fields' => 
+        array (
+          0 => 'email',
+          1 => 'plus_tag',
+        ),
+      ),
+      'cjwnl_mailin_address_list' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'list_contentobject_id',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_mailin_message' => 
+  array (
+    'name' => 'cjwnl_mailin_message',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'mailin_address_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'message_identifier' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'email_from' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'action' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'status' => 
+      array (
+        'length' => 4,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'pending_token' => 
+      array (
+        'length' => 64,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'newsletter_user_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'note' => 
+      array (
+        'type' => 'text',
+        'default' => NULL,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'processed' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_mailin_message_ident' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'message_identifier',
+        ),
+      ),
+      'cjwnl_mailin_message_status' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'status',
+          1 => 'created',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_migration_log' => 
+  array (
+    'name' => 'cjwnl_migration_log',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'run_id' => 
+      array (
+        'length' => 40,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'source_table' => 
+      array (
+        'length' => 100,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'source_id' => 
+      array (
+        'length' => 100,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'target_table' => 
+      array (
+        'length' => 100,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'target_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'action' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'is_dry_run' => 
+      array (
+        'length' => 1,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'message' => 
+      array (
+        'type' => 'text',
+        'default' => NULL,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_migration_log_run' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'run_id',
+        ),
+      ),
+      'cjwnl_migration_log_source' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'source_table',
+          1 => 'source_id',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_open' => 
+  array (
+    'name' => 'cjwnl_open',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'edition_send_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'edition_send_item_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_open_send' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'edition_send_id',
+        ),
+      ),
+      'cjwnl_open_item' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'edition_send_item_id',
+        ),
+      ),
+      'cjwnl_open_created' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'created',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_schedule' => 
+  array (
+    'name' => 'cjwnl_schedule',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'list_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'mode' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => 'latest',
+      ),
+      'template_edition_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'recurrence_type' => 
+      array (
+        'length' => 1,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => 'w',
+      ),
+      'recurrence_value' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'send_time' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'timezone' => 
+      array (
+        'length' => 64,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'auto_fill' => 
+      array (
+        'length' => 1,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'article_pool_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'skip_if_empty' => 
+      array (
+        'length' => 1,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '1',
+      ),
+      'condition_handler' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'next_run' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'last_run' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'last_edition_send_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'last_result' => 
+      array (
+        'length' => 50,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'status' => 
+      array (
+        'length' => 4,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'creator_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'modified' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_schedule_due' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'status',
+          1 => 'next_run',
+        ),
+      ),
+      'cjwnl_schedule_list' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'list_contentobject_id',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_schedule_log' => 
+  array (
+    'name' => 'cjwnl_schedule_log',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'schedule_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'run_at' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'result' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'edition_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'edition_send_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'article_count' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'message' => 
+      array (
+        'type' => 'text',
+        'default' => NULL,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_schedule_log_schedule' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'schedule_id',
+          1 => 'run_at',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_send_batch' => 
+  array (
+    'name' => 'cjwnl_send_batch',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'edition_send_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'channel' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => 'email',
+      ),
+      'batch_number' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'item_count' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'sent_count' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'failed_count' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'last_item_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'status' => 
+      array (
+        'length' => 4,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'started' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'finished' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_send_batch_send' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'edition_send_id',
+          1 => 'status',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_sms_code' => 
+  array (
+    'name' => 'cjwnl_sms_code',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'newsletter_user_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'phone_number' => 
+      array (
+        'length' => 50,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'code_hash' => 
+      array (
+        'length' => 64,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'purpose' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => 'confirm',
+      ),
+      'attempts' => 
+      array (
+        'length' => 4,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'expires' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'used' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_sms_code_user' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'newsletter_user_id',
+          1 => 'purpose',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_sms_inbound' => 
+  array (
+    'name' => 'cjwnl_sms_inbound',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'phone_number' => 
+      array (
+        'length' => 50,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'keyword' => 
+      array (
+        'length' => 50,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'body' => 
+      array (
+        'type' => 'text',
+        'default' => NULL,
+      ),
+      'newsletter_user_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'action' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'provider_message_id' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'processed' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_sms_inbound_phone' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'phone_number',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_sms_message' => 
+  array (
+    'name' => 'cjwnl_sms_message',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'edition_send_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'newsletter_user_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'phone_number' => 
+      array (
+        'length' => 50,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'body' => 
+      array (
+        'type' => 'text',
+        'default' => NULL,
+      ),
+      'status' => 
+      array (
+        'length' => 4,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'transport' => 
+      array (
+        'length' => 50,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'provider_message_id' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'error' => 
+      array (
+        'type' => 'text',
+        'default' => NULL,
+      ),
+      'batch_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'processed' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_sms_message_send' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'edition_send_id',
+          1 => 'status',
+        ),
+      ),
+      'cjwnl_sms_message_user' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'newsletter_user_id',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_stat_total' => 
+  array (
+    'name' => 'cjwnl_stat_total',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'edition_send_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'link_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'stat_type' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'stat_day' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'total' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_stat_total_key' => 
+      array (
+        'type' => 'unique',
+        'fields' => 
+        array (
+          0 => 'edition_send_id',
+          1 => 'link_id',
+          2 => 'stat_type',
+          3 => 'stat_day',
+        ),
+      ),
+      'cjwnl_stat_total_day' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'stat_type',
+          1 => 'stat_day',
+        ),
+      ),
+    ),
+  ),
   'cjwnl_subscription' => 
   array (
     'name' => 'cjwnl_subscription',
@@ -1066,6 +3309,151 @@ $schema = array (
         'fields' => 
         array (
           0 => 'newsletter_user_id',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_test_group' => 
+  array (
+    'name' => 'cjwnl_test_group',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'list_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'name' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'email_list' => 
+      array (
+        'type' => 'text',
+        'default' => NULL,
+      ),
+      'creator_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'modified' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_test_group_list' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'list_contentobject_id',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_throttle_state' => 
+  array (
+    'name' => 'cjwnl_throttle_state',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'transport' => 
+      array (
+        'length' => 50,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'window_type' => 
+      array (
+        'length' => 10,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => 'minute',
+      ),
+      'window_start' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'sent_count' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'paused_until' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'modified' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_throttle_state_window' => 
+      array (
+        'type' => 'unique',
+        'fields' => 
+        array (
+          0 => 'transport',
+          1 => 'window_type',
         ),
       ),
     ),
@@ -1258,6 +3646,48 @@ $schema = array (
         'not_null' => '1',
         'default' => '',
       ),
+      'language' => 
+      array (
+        'length' => 20,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'soft_bounce_count' => 
+      array (
+        'length' => 4,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'last_bounce' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'phone_number' => 
+      array (
+        'length' => 50,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'phone_status' => 
+      array (
+        'length' => 4,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
+      ),
+      'phone_confirmed' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
     ),
     'indexes' => 
     array (
@@ -1283,6 +3713,67 @@ $schema = array (
         'fields' => 
         array (
           0 => 'import_id',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_user_interest' => 
+  array (
+    'name' => 'cjwnl_user_interest',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'newsletter_user_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'interest_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_user_interest_pair' => 
+      array (
+        'type' => 'unique',
+        'fields' => 
+        array (
+          0 => 'newsletter_user_id',
+          1 => 'interest_id',
+        ),
+      ),
+      'cjwnl_user_interest_interest' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'interest_id',
         ),
       ),
     ),
