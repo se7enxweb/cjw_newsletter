@@ -1,5 +1,30 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.1.17
+======
+
+Fixed
+
+- Subscriptions of newsletter users that no longer exist were put in the mail queue and then failed ("newsletter_user_object not available"), and the subscription list showed them with an empty Edit link. Lists, counts and the queue skip them; `ext:cjw_newsletter:repair` removes them.
+- The user list showed the first 10 users only (fixed limit, no offset, the count was the size of the page). It pages, sorts and filters by text, status and list now.
+- The public subscribe forms used the posted back link unchecked in a link (reflected XSS, `javascript:`); it is a path of this site now. Custom data fields, the data text and xml of a user, the redirect fields of the user forms and the file path of a mailbox item are escaped.
+- The mail account form wrote the stored password back into the page in clear text. It stays empty now and an empty password keeps the stored one. Mail accounts and blacklist entries are validated (address, server, port, user, password, length of the note).
+- "Collect all mails" and "Parse mails" were GET forms that changed data and held the request while a mail server answered. They are POST buttons that start a background run.
+- An upload that could not be stored (folder not writable) ended in "Import done" with no rows; it says what is wrong now. "Import done" showed the creation date.
+- The user view logged five errors per view for the optional custom field groups of the ini.
+- The newsletter log raised a dynamic property deprecation on every request that wrote a line (PHP 8.2 and later).
+- The SQLite driver lists only tables whose names start with "ez": a check for `cjwnl_*` tables found none.
+- Imports and bounces were listed oldest first.
+- The CSV parser set `auto_detect_line_endings` when its file was loaded, which PHP 8.1 and later report as a deprecation on every request that loads the class; a file with old Mac line endings (a carriage return alone) is converted by the parser itself.
+
+Added
+
+- A dashboard as the start page: lists and subscribers, editions, the last sends, the transport and the outbox, the last runs of the cronjob parts, and the problems found (tables, folder, sender address, orphans, stuck sends, unparsed bounces).
+- Lists with sorting, filter and paging for users, the blacklist, imports and bounces; removal of blacklist entries and mail accounts asks first; notices after each action; admin4 components and tokens (`newsletter_ui.css`); English and German strings; "Dashboard" in the left menu.
+- Console commands `ext:cjw_newsletter:queue`, `mailbox`, `import`, `repair` and `status` (with `--help`, `--dry-run`, aliases `nl-*`), a cronjob part `cjw_newsletter_mailbox`, and `CjwNewsletterRunner`, which the cronjob parts and the commands share: one run at a time (a lock), the time and result of the last run, and an audit event `system.cjw_newsletter.*` per run.
+- "Send now", "Count only", "Process the mail accounts", "Parse mails", "Collect all mails", "Import all" (setting `[NewsletterCsvImportSettings] ImportInBackground`) and "Remove them" (orphans) start the command in the background and show its progress.
+- Tests for the runner, the commands, the rebuilt views and the fixes (suite `cjw_newsletter`).
+
 - 20101001 (felix) cjw_newsletter '1.0.0beta2' moving to public github
 
 1.0.0
