@@ -64,8 +64,10 @@
 .nl .nl-danger { color: #b3261e; }
 
 /* Detail views */
-.nl-kv { display: grid; grid-template-columns: max-content 1fr; gap: 0.35em 1.2em; margin: 0.4em 0 0 0; }
-.nl-kv dt { font-weight: bold; }
+.nl-kv { display: grid; grid-template-columns: fit-content(50%) minmax(0, 1fr); gap: 0.35em 1.2em; margin: 0.4em 0 0 0; }
+.nl-kv.is-stacked { grid-template-columns: minmax(0, 1fr); gap: 0.1em; }
+.nl-kv.is-stacked dd + dt { margin-top: 0.5em; }
+.nl-kv dt { font-weight: bold; overflow-wrap: anywhere; }
 .nl-kv dd { margin: 0; word-break: break-word; }
 .nl-form-error { color: #b3261e; font-size: 0.92em; margin: 0.2em 0 0 0; }
 .nl-field-error input[type=text], .nl-field-error textarea { border-color: #b3261e; }

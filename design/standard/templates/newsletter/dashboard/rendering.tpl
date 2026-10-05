@@ -22,7 +22,7 @@
             {if $r.lists|count|eq( 0 )}
             <p class="nl-muted">{'No newsletter list yet.'|i18n( $i18n )}</p>
             {else}
-            <dl class="nl-kv">
+            <dl class="nl-kv is-stacked">
                 {foreach $r.lists as $list}
                 <dt>{$list.name|wash}</dt>
                 <dd>{$list.skin|wash}{if $list.skins|count|gt( 1 )} <span class="nl-muted">({'%count skins allowed'|i18n( $i18n,, hash( '%count', $list.skins|count ) )})</span>{/if}
