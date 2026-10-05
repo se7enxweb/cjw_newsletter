@@ -4143,8 +4143,706 @@ you have to confirm this page.</translation>
     <name>cjw_newsletter/deliverability</name>
     <!-- cjw_newsletter 4.2.0, area N1: its strings only, appended here -->
     <message>
+        <source>The transport &quot;%transport&quot; is paused until %time: no newsletter is sent with it.</source>
+        <translation>The transport &quot;%transport&quot; is paused until %time: no newsletter is sent with it.</translation>
+    </message>
+    <message>
+        <source>Mail-in addresses exist, but no mailbox reads them: switch on the bounce reader of the e-mail preferences or a newsletter mail account.</source>
+        <translation>Mail-in addresses exist, but no mailbox reads them: switch on the bounce reader of the e-mail preferences or a newsletter mail account.</translation>
+    </message>
+    <message>
+        <source>Give the group a name.</source>
+        <translation>Give the group a name.</translation>
+    </message>
+    <message>
+        <source>These are no valid addresses: %list</source>
+        <translation>These are no valid addresses: %list</translation>
+    </message>
+    <message>
+        <source>Enter at least one address.</source>
+        <translation>Enter at least one address.</translation>
+    </message>
+    <message>
+        <source>A test group has at most %max addresses.</source>
+        <translation>A test group has at most %max addresses.</translation>
+    </message>
+    <message>
+        <source>Choose a newsletter list.</source>
+        <translation>Choose a newsletter list.</translation>
+    </message>
+    <message>
+        <source>Enter a valid address without a &quot;+&quot; part (the tag goes into its own field).</source>
+        <translation>Enter a valid address without a &quot;+&quot; part (the tag goes into its own field).</translation>
+    </message>
+    <message>
+        <source>A tag has only letters, digits, &quot;.&quot;, &quot;_&quot; and &quot;-&quot;.</source>
+        <translation>A tag has only letters, digits, &quot;.&quot;, &quot;_&quot; and &quot;-&quot;.</translation>
+    </message>
+    <message>
+        <source>An address for every list can only take unsubscribe mails.</source>
+        <translation>An address for every list can only take unsubscribe mails.</translation>
+    </message>
+    <message>
+        <source>Choose a mail account.</source>
+        <translation>Choose a mail account.</translation>
+    </message>
+    <message>
+        <source>This address is already in use.</source>
+        <translation>This address is already in use.</translation>
+    </message>
+    <message>
+        <source>The e-mail preferences of Exponential are not installed here: there is no suppression list.</source>
+        <translation>The e-mail preferences of Exponential are not installed here: there is no suppression list.</translation>
+    </message>
+    <message>
+        <source>Choose a reason: %reasons.</source>
+        <translation>Choose a reason: %reasons.</translation>
+    </message>
+    <message>
+        <source>The file has more than %max rows. Split it.</source>
+        <translation>The file has more than %max rows. Split it.</translation>
+    </message>
+    <message>
+        <source>The file holds no rows.</source>
+        <translation>The file holds no rows.</translation>
+    </message>
+    <message>
+        <source>Test group</source>
+        <translation>Test group</translation>
+    </message>
+    <message>
+        <source>Only the addresses above</source>
+        <translation>Only the addresses above</translation>
+    </message>
+    <message>
+        <source>Test mails are marked as tests and are never counted.</source>
+        <translation>Test mails are marked as tests and are never counted.</translation>
+    </message>
+    <message>
+        <source>Delivery</source>
+        <translation>Delivery</translation>
+    </message>
+    <message>
+        <source>The mails go out with &quot;%transport&quot; in batches of %size, within the rate limits of the transport; a send that is stopped goes on with the next run.</source>
+        <translation>The mails go out with &quot;%transport&quot; in batches of %size, within the rate limits of the transport; a send that is stopped goes on with the next run.</translation>
+    </message>
+    <message>
+        <source>The mails go out with &quot;%transport&quot;, without a rate limit.</source>
+        <translation>The mails go out with &quot;%transport&quot;, without a rate limit.</translation>
+    </message>
+    <message>
+        <source>A soft bounce is sent again up to %count times.</source>
+        <translation>A soft bounce is sent again up to %count times.</translation>
+    </message>
+    <message>
+        <source>Test groups</source>
+        <translation>Test groups</translation>
+    </message>
+    <message>
+        <source>A test group is a named set of addresses that gets the test mails of an edition. Its addresses are added to those typed into the test send form. Every test mail starts its subject with &quot;%prefix&quot; and carries the header X-Cjwnl-Test; test mails never pass the mail gate and are never counted.</source>
+        <translation>A test group is a named set of addresses that gets the test mails of an edition. Its addresses are added to those typed into the test send form. Every test mail starts its subject with &quot;%prefix&quot; and carries the header X-Cjwnl-Test; test mails never pass the mail gate and are never counted.</translation>
+    </message>
+    <message>
+        <source>New test group</source>
+        <translation>New test group</translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation>Name</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>List</translation>
+    </message>
+    <message>
+        <source>Addresses</source>
+        <translation>Addresses</translation>
+    </message>
+    <message>
+        <source>Changed</source>
+        <translation>Changed</translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation>Actions</translation>
+    </message>
+    <message>
+        <source>every list</source>
+        <translation>every list</translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation>Edit</translation>
+    </message>
+    <message>
+        <source>There is no test group yet.</source>
+        <translation>There is no test group yet.</translation>
+    </message>
+    <message>
+        <source>Test group &quot;%name&quot;</source>
+        <translation>Test group &quot;%name&quot;</translation>
+    </message>
+    <message>
+        <source>Remove this test group?</source>
+        <translation>Remove this test group?</translation>
+    </message>
+    <message>
+        <source>Yes, remove</source>
+        <translation>Yes, remove</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Cancel</translation>
+    </message>
+    <message>
+        <source>Please correct the form</source>
+        <translation>Please correct the form</translation>
+    </message>
+    <message>
+        <source>Every list</source>
+        <translation>Every list</translation>
+    </message>
+    <message>
+        <source>One address per line (or separated by &quot;;&quot; or &quot;,&quot;), at most %max.</source>
+        <translation>One address per line (or separated by &quot;;&quot; or &quot;,&quot;), at most %max.</translation>
+    </message>
+    <message>
+        <source>Store</source>
+        <translation>Store</translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation>Remove</translation>
+    </message>
+    <message>
+        <source>Mail-in addresses</source>
+        <translation>Mail-in addresses</translation>
+    </message>
+    <message>
+        <source>People subscribe and unsubscribe by writing to these addresses. A subscribe mail only starts the subscription: the confirmation mail goes to the sender, who must open its link. An unsubscribe mail is honoured: at once when it proves the address, otherwise the address gets a mail with its unsubscribe link. The From header alone never changes anything.</source>
+        <translation>People subscribe and unsubscribe by writing to these addresses. A subscribe mail only starts the subscription: the confirmation mail goes to the sender, who must open its link. An unsubscribe mail is honoured: at once when it proves the address, otherwise the address gets a mail with its unsubscribe link. The From header alone never changes anything.</translation>
+    </message>
+    <message>
+        <source>Mail-in is on</source>
+        <translation>Mail-in is on</translation>
+    </message>
+    <message>
+        <source>Mail-in is off ([MailInSettings] MailIn)</source>
+        <translation>Mail-in is off ([MailInSettings] MailIn)</translation>
+    </message>
+    <message>
+        <source>Plus-addressing</source>
+        <translation>Plus-addressing</translation>
+    </message>
+    <message>
+        <source>The bounce reader of the e-mail preferences reads the mailbox</source>
+        <translation>The bounce reader of the e-mail preferences reads the mailbox</translation>
+    </message>
+    <message>
+        <source>The bounce reader of the e-mail preferences is off</source>
+        <translation>The bounce reader of the e-mail preferences is off</translation>
+    </message>
+    <message>
+        <source>New mail-in address</source>
+        <translation>New mail-in address</translation>
+    </message>
+    <message>
+        <source>Address</source>
+        <translation>Address</translation>
+    </message>
+    <message>
+        <source>Takes</source>
+        <translation>Takes</translation>
+    </message>
+    <message>
+        <source>Mailbox</source>
+        <translation>Mailbox</translation>
+    </message>
+    <message>
+        <source>Active</source>
+        <translation>Active</translation>
+    </message>
+    <message>
+        <source>subscribe</source>
+        <translation>subscribe</translation>
+    </message>
+    <message>
+        <source>unsubscribe</source>
+        <translation>unsubscribe</translation>
+    </message>
+    <message>
+        <source>both, by keyword</source>
+        <translation>both, by keyword</translation>
+    </message>
+    <message>
+        <source>bounce mailbox</source>
+        <translation>bounce mailbox</translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation>yes</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>no</translation>
+    </message>
+    <message>
+        <source>There is no mail-in address yet.</source>
+        <translation>There is no mail-in address yet.</translation>
+    </message>
+    <message>
+        <source>Last messages</source>
+        <translation>Last messages</translation>
+    </message>
+    <message>
+        <source>Received</source>
+        <translation>Received</translation>
+    </message>
+    <message>
+        <source>To</source>
+        <translation>To</translation>
+    </message>
+    <message>
+        <source>From</source>
+        <translation>From</translation>
+    </message>
+    <message>
+        <source>Request</source>
+        <translation>Request</translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation>Result</translation>
+    </message>
+    <message>
+        <source>Note</source>
+        <translation>Note</translation>
+    </message>
+    <message>
+        <source>No message has come in yet.</source>
+        <translation>No message has come in yet.</translation>
+    </message>
+    <message>
+        <source>Mail-in address %address</source>
+        <translation>Mail-in address %address</translation>
+    </message>
+    <message>
+        <source>Remove this mail-in address?</source>
+        <translation>Remove this mail-in address?</translation>
+    </message>
+    <message>
+        <source>Mails to it are no longer acted on. The messages it got stay in the list.</source>
+        <translation>Mails to it are no longer acted on. The messages it got stay in the list.</translation>
+    </message>
+    <message>
+        <source>Plus tag</source>
+        <translation>Plus tag</translation>
+    </message>
+    <message>
+        <source>Optional: with tag &quot;weekly&quot; the address is news+weekly@example.org.</source>
+        <translation>Optional: with tag &quot;weekly&quot; the address is news+weekly@example.org.</translation>
+    </message>
+    <message>
+        <source>Plus-addressing is off ([MailInSettings] PlusAddressing), so only an address without a tag is reached.</source>
+        <translation>Plus-addressing is off ([MailInSettings] PlusAddressing), so only an address without a tag is reached.</translation>
+    </message>
+    <message>
+        <source>Every list (unsubscribe only)</source>
+        <translation>Every list (unsubscribe only)</translation>
+    </message>
+    <message>
+        <source>both, by keyword (subject or first line)</source>
+        <translation>both, by keyword (subject or first line)</translation>
+    </message>
+    <message>
+        <source>The bounce mailbox of the e-mail preferences</source>
+        <translation>The bounce mailbox of the e-mail preferences</translation>
+    </message>
+    <message>
+        <source>The mailbox the mails to this address arrive in. Only messages read from it are acted on.</source>
+        <translation>The mailbox the mails to this address arrive in. Only messages read from it are acted on.</translation>
+    </message>
+    <message>
+        <source>Rate limits and batches</source>
+        <translation>Rate limits and batches</translation>
+    </message>
+    <message>
+        <source>Batches and limits</source>
+        <translation>Batches and limits</translation>
+    </message>
+    <message>
+        <source>on</source>
+        <translation>on</translation>
+    </message>
+    <message>
+        <source>batches of %size, %pause seconds between two batches of a send</source>
+        <translation>batches of %size, %pause seconds between two batches of a send</translation>
+    </message>
+    <message>
+        <source>off</source>
+        <translation>off</translation>
+    </message>
+    <message>
+        <source>the queue sends everything in one run ([ThrottleSettings] Throttle)</source>
+        <translation>the queue sends everything in one run ([ThrottleSettings] Throttle)</translation>
+    </message>
+    <message>
+        <source>Soft bounces</source>
+        <translation>Soft bounces</translation>
+    </message>
+    <message>
+        <source>sent again up to %count times, the first time after %minutes minutes</source>
+        <translation>sent again up to %count times, the first time after %minutes minutes</translation>
+    </message>
+    <message>
+        <source>not sent again</source>
+        <translation>not sent again</translation>
+    </message>
+    <message>
+        <source>%count mails wait for their retry</source>
+        <translation>%count mails wait for their retry</translation>
+    </message>
+    <message>
+        <source>Transports</source>
+        <translation>Transports</translation>
+    </message>
+    <message>
+        <source>A pause holds every send of the transport, also when the limits are off. The limits are set per transport in [ThrottleSettings] MaxPerMinute[] and MaxPerHour[].</source>
+        <translation>A pause holds every send of the transport, also when the limits are off. The limits are set per transport in [ThrottleSettings] MaxPerMinute[] and MaxPerHour[].</translation>
+    </message>
+    <message>
+        <source>Transport</source>
+        <translation>Transport</translation>
+    </message>
+    <message>
+        <source>This minute</source>
+        <translation>This minute</translation>
+    </message>
+    <message>
+        <source>This hour</source>
+        <translation>This hour</translation>
+    </message>
+    <message>
+        <source>State</source>
+        <translation>State</translation>
+    </message>
+    <message>
+        <source>(newsletter)</source>
+        <translation>(newsletter)</translation>
+    </message>
+    <message>
+        <source>paused until %time</source>
+        <translation>paused until %time</translation>
+    </message>
+    <message>
+        <source>limit reached</source>
+        <translation>limit reached</translation>
+    </message>
+    <message>
+        <source>sends</source>
+        <translation>sends</translation>
+    </message>
+    <message>
+        <source>Resume</source>
+        <translation>Resume</translation>
+    </message>
+    <message>
+        <source>for</source>
+        <translation>for</translation>
+    </message>
+    <message>
+        <source>Minutes</source>
+        <translation>Minutes</translation>
+    </message>
+    <message>
+        <source>min</source>
+        <translation>min</translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation>Pause</translation>
+    </message>
+    <message>
+        <source>Last batches</source>
+        <translation>Last batches</translation>
+    </message>
+    <message>
+        <source>Send</source>
+        <translation>Send</translation>
+    </message>
+    <message>
+        <source>Batch</source>
+        <translation>Batch</translation>
+    </message>
+    <message>
+        <source>Channel</source>
+        <translation>Channel</translation>
+    </message>
+    <message>
+        <source>Taken</source>
+        <translation>Taken</translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation>Sent</translation>
+    </message>
+    <message>
+        <source>Failed</source>
+        <translation>Failed</translation>
+    </message>
+    <message>
+        <source>Started</source>
+        <translation>Started</translation>
+    </message>
+    <message>
+        <source>Finished</source>
+        <translation>Finished</translation>
+    </message>
+    <message>
+        <source>No batch has run yet.</source>
+        <translation>No batch has run yet.</translation>
+    </message>
+    <message>
+        <source>Import into the suppression list</source>
+        <translation>Import into the suppression list</translation>
+    </message>
+    <message>
+        <source>No optional mail of the site goes to an address on the suppression list: newsletters, notifications, offers. Only a hash of each address is stored. The addresses also go on the newsletter blacklist. The file itself is not kept.</source>
+        <translation>No optional mail of the site goes to an address on the suppression list: newsletters, notifications, offers. Only a hash of each address is stored. The addresses also go on the newsletter blacklist. The file itself is not kept.</translation>
+    </message>
+    <message>
+        <source>%all addresses are suppressed now (%legal for legal requests, %bounce for bounces).</source>
+        <translation>%all addresses are suppressed now (%legal for legal requests, %bounce for bounces).</translation>
+    </message>
+    <message>
+        <source>Check: %added addresses would be suppressed.</source>
+        <translation>Check: %added addresses would be suppressed.</translation>
+    </message>
+    <message>
+        <source>%added addresses were suppressed.</source>
+        <translation>%added addresses were suppressed.</translation>
+    </message>
+    <message>
+        <source>File</source>
+        <translation>File</translation>
+    </message>
+    <message>
+        <source>column</source>
+        <translation>column</translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation>Reason</translation>
+    </message>
+    <message>
+        <source>Rows</source>
+        <translation>Rows</translation>
+    </message>
+    <message>
+        <source>Valid addresses</source>
+        <translation>Valid addresses</translation>
+    </message>
+    <message>
+        <source>%count twice in the file</source>
+        <translation>%count twice in the file</translation>
+    </message>
+    <message>
+        <source>Already suppressed</source>
+        <translation>Already suppressed</translation>
+    </message>
+    <message>
+        <source>Not an address</source>
+        <translation>Not an address</translation>
+    </message>
+    <message>
+        <source>Line</source>
+        <translation>Line</translation>
+    </message>
+    <message>
+        <source>Value</source>
+        <translation>Value</translation>
+    </message>
+    <message>
+        <source>CSV file</source>
+        <translation>CSV file</translation>
+    </message>
+    <message>
+        <source>One address per row, in a column &quot;email&quot; or the first column with an address; &quot;;&quot;, &quot;,&quot;, tab or &quot;|&quot; between the columns; at most %max rows.</source>
+        <translation>One address per row, in a column &quot;email&quot; or the first column with an address; &quot;;&quot;, &quot;,&quot;, tab or &quot;|&quot; between the columns; at most %max rows.</translation>
+    </message>
+    <message>
+        <source>Or paste the addresses</source>
+        <translation>Or paste the addresses</translation>
+    </message>
+    <message>
+        <source>legal request, do-not-contact list</source>
+        <translation>legal request, do-not-contact list</translation>
+    </message>
+    <message>
+        <source>administrator</source>
+        <translation>administrator</translation>
+    </message>
+    <message>
+        <source>bounce</source>
+        <translation>bounce</translation>
+    </message>
+    <message>
+        <source>complaint</source>
+        <translation>complaint</translation>
+    </message>
+    <message>
+        <source>stop all optional e-mail</source>
+        <translation>stop all optional e-mail</translation>
+    </message>
+    <message>
+        <source>For the administrators, stored with every entry (addresses are taken out of it).</source>
+        <translation>For the administrators, stored with every entry (addresses are taken out of it).</translation>
+    </message>
+    <message>
+        <source>Check (change nothing)</source>
+        <translation>Check (change nothing)</translation>
+    </message>
+    <message>
+        <source>Import</source>
+        <translation>Import</translation>
+    </message>
+    <message>
+        <source>On the console:</source>
+        <translation>On the console:</translation>
+    </message>
+    <message>
+        <source>Your unsubscribe request</source>
+        <translation>Your unsubscribe request</translation>
+    </message>
+    <message>
+        <source>Hello,
+
+we received a request by e-mail to unsubscribe this address from our newsletter. To unsubscribe, open the link of the newsletter:
+%links
+
+If you did not send this request, ignore this mail: nothing changes.</source>
+        <translation>Hello,
+
+we received a request by e-mail to unsubscribe this address from our newsletter. To unsubscribe, open the link of the newsletter:
+%links
+
+If you did not send this request, ignore this mail: nothing changes.</translation>
+    </message>
+    <message>
         <source>Deliverability</source>
         <translation>Deliverability</translation>
+    </message>
+    <message>
+        <source>Sending rate</source>
+        <translation>Sending rate</translation>
+    </message>
+    <message>
+        <source>Batches of %size</source>
+        <translation>Batches of %size</translation>
+    </message>
+    <message>
+        <source>No rate limit</source>
+        <translation>No rate limit</translation>
+    </message>
+    <message>
+        <source>%count batches waiting</source>
+        <translation>%count batches waiting</translation>
+    </message>
+    <message>
+        <source>paused</source>
+        <translation>paused</translation>
+    </message>
+    <message>
+        <source>Bounces and suppression</source>
+        <translation>Bounces and suppression</translation>
+    </message>
+    <message>
+        <source>bounces in 30 days</source>
+        <translation>bounces in 30 days</translation>
+    </message>
+    <message>
+        <source>retries waiting</source>
+        <translation>retries waiting</translation>
+    </message>
+    <message>
+        <source>suppressed: bounce</source>
+        <translation>suppressed: bounce</translation>
+    </message>
+    <message>
+        <source>suppressed: complaint</source>
+        <translation>suppressed: complaint</translation>
+    </message>
+    <message>
+        <source>Hard bounces and complaints go on the suppression list of the site: no optional mail goes to them any more.</source>
+        <translation>Hard bounces and complaints go on the suppression list of the site: no optional mail goes to them any more.</translation>
+    </message>
+    <message>
+        <source>Hard bounces only mark the newsletter user as bounced.</source>
+        <translation>Hard bounces only mark the newsletter user as bounced.</translation>
+    </message>
+    <message>
+        <source>Bounce reader of the e-mail preferences</source>
+        <translation>Bounce reader of the e-mail preferences</translation>
+    </message>
+    <message>
+        <source>Bounces</source>
+        <translation>Bounces</translation>
+    </message>
+    <message>
+        <source>Test sends and mail-in</source>
+        <translation>Test sends and mail-in</translation>
+    </message>
+    <message>
+        <source>test groups</source>
+        <translation>test groups</translation>
+    </message>
+    <message>
+        <source>mail-in addresses</source>
+        <translation>mail-in addresses</translation>
+    </message>
+    <message>
+        <source>waiting for a confirmation</source>
+        <translation>waiting for a confirmation</translation>
+    </message>
+    <message>
+        <source>handled in 30 days</source>
+        <translation>handled in 30 days</translation>
+    </message>
+    <message>
+        <source>Subscribe and unsubscribe by e-mail is switched off ([MailInSettings] MailIn).</source>
+        <translation>Subscribe and unsubscribe by e-mail is switched off ([MailInSettings] MailIn).</translation>
+    </message>
+    <message>
+        <source>The test group was removed.</source>
+        <translation>The test group was removed.</translation>
+    </message>
+    <message>
+        <source>The test group &quot;%name&quot; was stored.</source>
+        <translation>The test group &quot;%name&quot; was stored.</translation>
+    </message>
+    <message>
+        <source>The mail-in address was removed.</source>
+        <translation>The mail-in address was removed.</translation>
+    </message>
+    <message>
+        <source>The mail-in address %address was stored.</source>
+        <translation>The mail-in address %address was stored.</translation>
+    </message>
+    <message>
+        <source>The transport &quot;%transport&quot; sends again.</source>
+        <translation>The transport &quot;%transport&quot; sends again.</translation>
+    </message>
+    <message>
+        <source>The transport &quot;%transport&quot; is paused for %minutes minutes.</source>
+        <translation>The transport &quot;%transport&quot; is paused for %minutes minutes.</translation>
+    </message>
+    <message>
+        <source>Choose a CSV file or paste the addresses.</source>
+        <translation>Choose a CSV file or paste the addresses.</translation>
+    </message>
+    <message>
+        <source>Suppression import</source>
+        <translation>Suppression import</translation>
     </message>
 </context>
 <context>

@@ -3350,7 +3350,700 @@ you have to confirm this page.</source>
     <name>cjw_newsletter/deliverability</name>
     <!-- cjw_newsletter 4.2.0, area N1: its strings only, appended here -->
     <message>
+        <source>The transport &quot;%transport&quot; is paused until %time: no newsletter is sent with it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mail-in addresses exist, but no mailbox reads them: switch on the bounce reader of the e-mail preferences or a newsletter mail account.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Give the group a name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>These are no valid addresses: %list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter at least one address.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A test group has at most %max addresses.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose a newsletter list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a valid address without a &quot;+&quot; part (the tag goes into its own field).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A tag has only letters, digits, &quot;.&quot;, &quot;_&quot; and &quot;-&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>An address for every list can only take unsubscribe mails.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose a mail account.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This address is already in use.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The e-mail preferences of Exponential are not installed here: there is no suppression list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose a reason: %reasons.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The file has more than %max rows. Split it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The file holds no rows.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Test group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Only the addresses above</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Test mails are marked as tests and are never counted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delivery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The mails go out with &quot;%transport&quot; in batches of %size, within the rate limits of the transport; a send that is stopped goes on with the next run.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The mails go out with &quot;%transport&quot;, without a rate limit.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A soft bounce is sent again up to %count times.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Test groups</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A test group is a named set of addresses that gets the test mails of an edition. Its addresses are added to those typed into the test send form. Every test mail starts its subject with &quot;%prefix&quot; and carries the header X-Cjwnl-Test; test mails never pass the mail gate and are never counted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New test group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Addresses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Changed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>every list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There is no test group yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Test group &quot;%name&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove this test group?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Yes, remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please correct the form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Every list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>One address per line (or separated by &quot;;&quot; or &quot;,&quot;), at most %max.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mail-in addresses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>People subscribe and unsubscribe by writing to these addresses. A subscribe mail only starts the subscription: the confirmation mail goes to the sender, who must open its link. An unsubscribe mail is honoured: at once when it proves the address, otherwise the address gets a mail with its unsubscribe link. The From header alone never changes anything.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mail-in is on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mail-in is off ([MailInSettings] MailIn)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plus-addressing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The bounce reader of the e-mail preferences reads the mailbox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The bounce reader of the e-mail preferences is off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New mail-in address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Takes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mailbox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>subscribe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>unsubscribe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>both, by keyword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bounce mailbox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There is no mail-in address yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Received</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>From</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Request</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No message has come in yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mail-in address %address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove this mail-in address?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mails to it are no longer acted on. The messages it got stay in the list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plus tag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Optional: with tag &quot;weekly&quot; the address is news+weekly@example.org.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plus-addressing is off ([MailInSettings] PlusAddressing), so only an address without a tag is reached.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Every list (unsubscribe only)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>both, by keyword (subject or first line)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The bounce mailbox of the e-mail preferences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The mailbox the mails to this address arrive in. Only messages read from it are acted on.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rate limits and batches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Batches and limits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>batches of %size, %pause seconds between two batches of a send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the queue sends everything in one run ([ThrottleSettings] Throttle)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Soft bounces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sent again up to %count times, the first time after %minutes minutes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>not sent again</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count mails wait for their retry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Transports</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A pause holds every send of the transport, also when the limits are off. The limits are set per transport in [ThrottleSettings] MaxPerMinute[] and MaxPerHour[].</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Transport</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This minute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This hour</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>State</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>(newsletter)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>paused until %time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>limit reached</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sends</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resume</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>for</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Minutes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>min</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last batches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Batch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Taken</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Started</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Finished</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No batch has run yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import into the suppression list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No optional mail of the site goes to an address on the suppression list: newsletters, notifications, offers. Only a hash of each address is stored. The addresses also go on the newsletter blacklist. The file itself is not kept.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%all addresses are suppressed now (%legal for legal requests, %bounce for bounces).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check: %added addresses would be suppressed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%added addresses were suppressed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>column</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reason</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Valid addresses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count twice in the file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Already suppressed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Not an address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CSV file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>One address per row, in a column &quot;email&quot; or the first column with an address; &quot;;&quot;, &quot;,&quot;, tab or &quot;|&quot; between the columns; at most %max rows.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Or paste the addresses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>legal request, do-not-contact list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>administrator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bounce</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>complaint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>stop all optional e-mail</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>For the administrators, stored with every entry (addresses are taken out of it).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check (change nothing)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>On the console:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your unsubscribe request</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hello,
+
+we received a request by e-mail to unsubscribe this address from our newsletter. To unsubscribe, open the link of the newsletter:
+%links
+
+If you did not send this request, ignore this mail: nothing changes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Deliverability</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sending rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Batches of %size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No rate limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count batches waiting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>paused</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bounces and suppression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bounces in 30 days</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>retries waiting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>suppressed: bounce</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>suppressed: complaint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hard bounces and complaints go on the suppression list of the site: no optional mail goes to them any more.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hard bounces only mark the newsletter user as bounced.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bounce reader of the e-mail preferences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bounces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Test sends and mail-in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>test groups</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mail-in addresses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>waiting for a confirmation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>handled in 30 days</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subscribe and unsubscribe by e-mail is switched off ([MailInSettings] MailIn).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The test group was removed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The test group &quot;%name&quot; was stored.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The mail-in address was removed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The mail-in address %address was stored.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The transport &quot;%transport&quot; sends again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The transport &quot;%transport&quot; is paused for %minutes minutes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose a CSV file or paste the addresses.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Suppression import</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
