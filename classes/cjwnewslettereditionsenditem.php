@@ -81,6 +81,15 @@ class CjwNewsletterEditionSendItem extends eZPersistentObject
                                                         'datatype' => 'integer',
                                                         'default' => 0,
                                                         'required' => true ),
+                                         // cjw_newsletter 4.2.0 (doc/schema-4.2.md)
+                                         'retry_count' => array( 'name' => 'RetryCount', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N1
+                                         'next_retry' => array( 'name' => 'NextRetry', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N1
+                                         'batch_id' => array( 'name' => 'BatchId', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N1
+                                         'language' => array( 'name' => 'Language', 'datatype' => 'string', 'default' => '', 'required' => false ), // N3
+                                         'ab_variant_id' => array( 'name' => 'AbVariantId', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N4
+                                         'first_opened' => array( 'name' => 'FirstOpened', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N4
+                                         'open_count' => array( 'name' => 'OpenCount', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N4
+                                         'click_count' => array( 'name' => 'ClickCount', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N4
 
 
                                                                     ),

@@ -110,6 +110,16 @@ class CjwNewsletterList extends eZPersistentObject
                                                                               'datatype' => 'string',
                                                                               'default' => '',
                                                                               'required' => false ),
+                                         // cjw_newsletter 4.2.0 (doc/schema-4.2.md)
+                                         'skin_name_array_string' => array( 'name' => 'SkinNameArrayString', 'datatype' => 'string', 'default' => '', 'required' => false ), // N3
+                                         'main_language' => array( 'name' => 'MainLanguage', 'datatype' => 'string', 'default' => '', 'required' => false ), // N3
+                                         'language_array_string' => array( 'name' => 'LanguageArrayString', 'datatype' => 'string', 'default' => '', 'required' => false ), // N3
+                                         'interest_source' => array( 'name' => 'InterestSource', 'datatype' => 'string', 'default' => '', 'required' => false ), // N3
+                                         'approval_required' => array( 'name' => 'ApprovalRequired', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N2
+                                         'article_pool_id' => array( 'name' => 'ArticlePoolId', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N2
+                                         'tracking_mode' => array( 'name' => 'TrackingMode', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N4
+                                         'sms_enabled' => array( 'name' => 'SmsEnabled', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N5
+                                         'sms_sender' => array( 'name' => 'SmsSender', 'datatype' => 'string', 'default' => '', 'required' => false ), // N5
 
                                                                     ),
                       'keys' => array( 'contentobject_attribute_id', 'contentobject_attribute_version' ),

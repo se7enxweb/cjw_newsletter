@@ -85,6 +85,13 @@ class CjwNewsletterImport extends eZPersistentObject
                                                              'datatype' => 'integer',
                                                              'default'  => 0,
                                                              'required' => true ),
+                                         // cjw_newsletter 4.2.0 (doc/schema-4.2.md)
+                                         'mapping_id' => array( 'name' => 'MappingId', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N6
+                                         'is_dry_run' => array( 'name' => 'IsDryRun', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N6
+                                         'consent_source' => array( 'name' => 'ConsentSource', 'datatype' => 'string', 'default' => '', 'required' => false ), // N6
+                                         'status' => array( 'name' => 'Status', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N6
+                                         'skipped_count' => array( 'name' => 'SkippedCount', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N6
+                                         'error_count' => array( 'name' => 'ErrorCount', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N6
 
                                         ),
                       'keys' => array( 'id' ),

@@ -21,7 +21,14 @@ class CjwNewsletterDashboard
     static function tableNames()
     {
         return array( 'cjwnl_blacklist_item', 'cjwnl_edition', 'cjwnl_edition_send', 'cjwnl_edition_send_item', 'cjwnl_import',
-                      'cjwnl_list', 'cjwnl_mailbox', 'cjwnl_mailbox_item', 'cjwnl_subscription', 'cjwnl_user' );
+                      'cjwnl_list', 'cjwnl_mailbox', 'cjwnl_mailbox_item', 'cjwnl_subscription', 'cjwnl_user',
+                      // 4.2.0 (doc/schema-4.2.md): N1, N2, N3, N4, N5, N6
+                      'cjwnl_throttle_state', 'cjwnl_send_batch', 'cjwnl_mailin_address', 'cjwnl_mailin_message', 'cjwnl_test_group',
+                      'cjwnl_schedule', 'cjwnl_schedule_log', 'cjwnl_article_pool', 'cjwnl_edition_article', 'cjwnl_approval',
+                      'cjwnl_interest', 'cjwnl_user_interest', 'cjwnl_edition_send_output',
+                      'cjwnl_link', 'cjwnl_link_click', 'cjwnl_open', 'cjwnl_stat_total', 'cjwnl_ab_test', 'cjwnl_ab_variant',
+                      'cjwnl_sms_code', 'cjwnl_sms_message', 'cjwnl_sms_inbound',
+                      'cjwnl_import_mapping', 'cjwnl_migration_log' );
     }
 
     /*!

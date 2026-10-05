@@ -131,6 +131,14 @@ class CjwNewsletterEditionSend extends eZPersistentObject
                                                                                         'datatype' => 'Integer',
                                                                                         'default' => 0,
                                                                                         'required' => false ),
+                                         // cjw_newsletter 4.2.0 (doc/schema-4.2.md)
+                                         'skin_name' => array( 'name' => 'SkinName', 'datatype' => 'string', 'default' => '', 'required' => false ), // N3
+                                         'channel' => array( 'name' => 'Channel', 'datatype' => 'string', 'default' => 'email', 'required' => false ), // N5
+                                         'schedule_id' => array( 'name' => 'ScheduleId', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N2
+                                         'tracking_mode' => array( 'name' => 'TrackingMode', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N4
+                                         'ab_test_id' => array( 'name' => 'AbTestId', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N4
+                                         'test_group_id' => array( 'name' => 'TestGroupId', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N1
+                                         'throttle_transport' => array( 'name' => 'ThrottleTransport', 'datatype' => 'string', 'default' => '', 'required' => false ), // N1
                                                                                            ),
 
 

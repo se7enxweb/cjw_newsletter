@@ -184,6 +184,13 @@ class CjwNewsletterUser extends eZPersistentObject
                                                                 'datatype' => 'string',
                                                                 'default' => '',
                                                                 'required' => false ),
+                                         // cjw_newsletter 4.2.0 (doc/schema-4.2.md)
+                                         'language' => array( 'name' => 'Language', 'datatype' => 'string', 'default' => '', 'required' => false ), // N3
+                                         'soft_bounce_count' => array( 'name' => 'SoftBounceCount', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N1
+                                         'last_bounce' => array( 'name' => 'LastBounce', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N1
+                                         'phone_number' => array( 'name' => 'PhoneNumber', 'datatype' => 'string', 'default' => '', 'required' => false ), // N5
+                                         'phone_status' => array( 'name' => 'PhoneStatus', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N5
+                                         'phone_confirmed' => array( 'name' => 'PhoneConfirmed', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N5
                                         ),
                       'keys'                => array( 'id' ),
                       'increment_key'       => 'id',
