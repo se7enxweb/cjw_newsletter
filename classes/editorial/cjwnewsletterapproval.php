@@ -37,7 +37,13 @@ class CjwNewsletterApproval extends eZPersistentObject
             ),
             'keys' => array( 'id' ),
             'increment_key' => 'id',
-            'function_attributes' => array(),
+            'function_attributes' => array( 'status_name' => 'statusName',
+                                            'status_identifier' => 'statusIdentifier',
+                                            'edition_name' => 'editionName',
+                                            'edition_node_id' => 'editionNodeId',
+                                            'list_name' => 'listName',
+                                            'requester_name' => 'requesterName',
+                                            'decider_name' => 'deciderName' ),
             'sort' => array( 'id' => 'desc' ),
             'class_name' => 'CjwNewsletterApproval',
             'name' => 'cjwnl_approval' );
@@ -107,5 +113,72 @@ class CjwNewsletterApproval extends eZPersistentObject
     static function fetchListByCollaborationItemId( $collaborationItemId, $limit = 0, $offset = 0 )
     {
         return self::fetchList( array( 'collaboration_item_id' => (int)$collaborationItemId ), $limit, $offset );
+    }
+
+    // ------------------------------------------------------------------ behaviour (4.2.0 N2 Editorial)
+
+    const STATUS_PENDING = 0;
+    const STATUS_APPROVED = 1;
+    const STATUS_REJECTED = 2;
+    const STATUS_WITHDRAWN = 3;
+
+    /** @return string pending, approved, rejected or withdrawn */
+    function statusIdentifier()
+    {
+        $map = array( self::STATUS_PENDING => 'pending', self::STATUS_APPROVED => 'approved', self::STATUS_REJECTED => 'rejected', self::STATUS_WITHDRAWN => 'withdrawn' );
+        $status = (int)$this->attribute( 'status' );
+        return isset( $map[$status] ) ? $map[$status] : 'pending';
+    }
+
+    /** @return string */
+    function statusName()
+    {
+        switch ( (int)$this->attribute( 'status' ) )
+        {
+            case self::STATUS_APPROVED: return ezpI18n::tr( 'cjw_newsletter/editorial', 'approved' );
+            case self::STATUS_REJECTED: return ezpI18n::tr( 'cjw_newsletter/editorial', 'rejected' );
+            case self::STATUS_WITHDRAWN: return ezpI18n::tr( 'cjw_newsletter/editorial', 'replaced' );
+            default: return ezpI18n::tr( 'cjw_newsletter/editorial', 'waiting for approval' );
+        }
+    }
+
+    /** @return string */
+    function editionName()
+    {
+        $title = class_exists( 'expCollaborationInbox' ) ? expCollaborationInbox::approvalTitle( (int)$this->attribute( 'edition_contentobject_id' ), (int)$this->attribute( 'edition_contentobject_version' ) ) : '';
+        if ( $title === '' )
+        {
+            $object = eZContentObject::fetch( (int)$this->attribute( 'edition_contentobject_id' ) );
+            $title = $object ? (string)$object->attribute( 'name' ) : '#' . (int)$this->attribute( 'edition_contentobject_id' );
+        }
+        return $title;
+    }
+
+    /** @return int */
+    function editionNodeId()
+    {
+        $object = eZContentObject::fetch( (int)$this->attribute( 'edition_contentobject_id' ) );
+        return $object ? (int)$object->attribute( 'main_node_id' ) : 0;
+    }
+
+    /** @return string */
+    function listName()
+    {
+        $object = eZContentObject::fetch( (int)$this->attribute( 'list_contentobject_id' ) );
+        return $object ? (string)$object->attribute( 'name' ) : '';
+    }
+
+    /** @return string */
+    function requesterName()
+    {
+        $object = eZContentObject::fetch( (int)$this->attribute( 'requested_by' ) );
+        return $object ? (string)$object->attribute( 'name' ) : '';
+    }
+
+    /** @return string */
+    function deciderName()
+    {
+        $object = (int)$this->attribute( 'decided_by' ) ? eZContentObject::fetch( (int)$this->attribute( 'decided_by' ) ) : null;
+        return $object ? (string)$object->attribute( 'name' ) : '';
     }
 }
