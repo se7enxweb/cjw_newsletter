@@ -36,4 +36,13 @@ MatchFile=node/view/line/cjw_newsletter_edition.tpl
 Subdir=templates
 Match[class_identifier]=cjw_newsletter_edition
 
+# N4 Statistics: the box "Newsletter statistics" on the admin preview of an article (in which editions it went out
+# and how its links were clicked), above the attributes ([StatisticsSettings] ArticleStatsBox)
+[admin_preview_cjw_newsletter_article]
+Source=node/view/admin_preview.tpl
+MatchFile=node/view/admin_preview/cjw_newsletter_article.tpl
+Subdir=templates
+Match[class_identifier]=cjw_newsletter_article
+# end N4
+
 */ ?>
