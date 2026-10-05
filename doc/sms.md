@@ -17,8 +17,13 @@ preset for APIs in the style of Twilio. The consent is a category of the kernel'
 | Rate limit | the throttle of the deliverability area, transport name `sms` | `[ThrottleSettings] MaxPerMinute[sms]`, `MaxPerHour[sms]` |
 | Dashboard | Newsletter dashboard, block "SMS" | |
 
-Policy functions: `newsletter/sms` for the send page; `newsletter/sms_public` for the code page and the inbound
-endpoint. **Grant `newsletter/sms_public` to the anonymous role** (Roles and policies > Anonymous > New policy >
+Policy functions: `newsletter/sms` for the send page (editors and administrators). The two public views,
+`newsletter/sms_inbound` (the endpoint the provider calls) and `newsletter/sms_confirm` (the code page), are in the
+extension's `settings/site.ini.append.php` `[RoleSettings] PolicyOmitList[]`, so they work for everybody with no
+role change on install or upgrade: the endpoint checks the provider's signature or secret itself and refuses
+everything else, and the code page is reached only with the subscriber's secret hash, like `newsletter/configure`.
+The policy function `newsletter/sms_public` stays for a site that takes the two views out of `PolicyOmitList`; it
+then has to grant `newsletter/sms_public` to the anonymous role (Roles and policies > Anonymous > New policy >
 newsletter > sms_public), or the provider's calls and the code page answer "access denied".
 
 ## 1. Switching it on
@@ -34,7 +39,7 @@ newsletter > sms_public), or the provider's calls and the code page answer "acce
 
 2. The category `sms` is on in the extension's `settings/mailpreferences.ini.append.php` (it is part of 4.2.0). It is
    optional and off by default: nobody gets an SMS until they turn it on themselves and confirm their number.
-3. Grant `newsletter/sms_public` to the anonymous role (see above).
+3. Nothing to grant: the public views are in `PolicyOmitList` (see above).
 4. Clear the INI and template caches; on Velocity a deploy is needed (a new class is named in the INI).
 5. On the list object tick "Editions of this list may be sent by SMS"; optionally set the sender.
 
@@ -199,8 +204,8 @@ with another address only needs `Url=`.
 1. Create the sender (number or alphanumeric id) at the provider; note that alphanumeric senders cannot receive
    replies, so STOP needs a number or the provider's own opt-out handling.
 2. Put the credentials into the settings override, never into the extension.
-3. Set the webhook for incoming messages to `https://<site>/newsletter/sms_inbound/<transport>` and its secret, and
-   grant `newsletter/sms_public` to the anonymous role.
+3. Set the webhook for incoming messages to `https://<site>/newsletter/sms_inbound/<transport>` and its secret
+   (the endpoint needs no role, see the policy note at the top).
 4. Send a test SMS from the SMS page of an edition to your own number.
 5. Reply STOP from that number and check the dashboard ("STOP replies") and the consent log of the person.
 6. Set the rate limits of the provider: `[ThrottleSettings] Throttle=enabled`, `MaxPerMinute[sms]=...`.
