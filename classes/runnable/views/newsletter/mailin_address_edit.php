@@ -65,9 +65,13 @@ class MailinAddressEdit extends \Exponential\Runnable\ModuleView
         foreach ( array( 'id', 'email', 'plus_tag', 'list_contentobject_id', 'action', 'mailbox_id', 'is_active' ) as $field )
             $values[$field] = $address->attribute( $field );
         $values['id'] = (int)$values['id'];
+        $lists = \CjwNewsletterTestSend::listChoices();
+        // a new address belongs to a list (an address for every list only takes unsubscribe mails)
+        if ( !$values['id'] && !$http->hasPostVariable( 'StoreButton' ) && $lists )
+            $values['list_contentobject_id'] = $lists[0]['id'];
         $tpl->setVariable( 'address', $values );
         $tpl->setVariable( 'display', \CjwNewsletterMailin::displayAddress( $address ) );
-        $tpl->setVariable( 'lists', \CjwNewsletterTestSend::listChoices() );
+        $tpl->setVariable( 'lists', $lists );
         $tpl->setVariable( 'mailboxes', $mailboxes );
         $tpl->setVariable( 'errors', $errors );
         $tpl->setVariable( 'confirm_remove', $confirmRemove );
