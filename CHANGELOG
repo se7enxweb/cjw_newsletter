@@ -1,5 +1,17 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.1.20
+======
+
+Fixed
+
+- The PostgreSQL schema (`sql/postgresql/schema.sql`) lacked thirteen columns that the MySQL schema and `share/db_schema.dba` have: `cjwnl_edition_send.list_contentobject_version`, `list_is_virtual`, `mailqueue_process_scheduled`, `email_reply_to`, `email_return_path`; `cjwnl_list.email_reply_to`, `email_return_path`, `is_virtual`, `virtual_filter`; `cjwnl_user.custom_data_text_1` to `_4`. A PostgreSQL installation made from that file failed on the first send. The file also started with a byte order mark, which psql reads as part of the first statement. `update/database/postgresql/4.1/dbupdate-4.1.19-to-4.1.20.sql` adds the missing columns where they are absent (safe to run on an installation that added some by hand).
+- The personalisation values (`[[name]]`, `[[salutation_name]]`, `[[first_name]]`, `[[last_name]]`) went into the HTML part of an edition unescaped: a subscriber's name could inject markup into the mail. They are HTML-escaped in the HTML part now; the text part and the subject get them as they are (`CjwNewsletterPlaceholders`).
+
+Added
+
+- `sql/sqlite/schema.sql`: the SQLite schema, generated from `share/db_schema.dba` by the kernel's SQLite schema handler (index names `<table>__<name>`, as an installation from the `.dba` has them).
+
 4.1.19
 ======
 

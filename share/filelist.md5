@@ -1,10 +1,10 @@
 name: cjw_newsletter
-version: 4.1.19
-files_count: 340
+version: 4.1.20
+files_count: 343
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
 aa9ea80af84e6cba65e0764a80b56e16  .gitignore
-e3e370f3dec03e9ba368cb6bcfc9d417  CHANGELOG
+d3030546c280752848017efe3554f601  CHANGELOG
 90ef4496589ac9dd18ee5e5d98e0bb4c  FAQ
 694a2892d8ff79eca1ecaf3cdcfe9a50  INSTALL
 0636e73ff0215e8d672dc4c32c317bb3  LICENSE
@@ -45,8 +45,9 @@ d0ed5d8b7f0da9899840f15b935ab254  classes/cjwnewslettermailbox.php
 c2cc5743eca7eac6f1f8f8ba4068f844  classes/cjwnewslettermailcomposer.php
 4caedf6b208e9ce04195bbefce237a90  classes/cjwnewslettermailparser.php
 e0ba364177f2c4366394a6eac9f47c3f  classes/cjwnewslettermailpreferences.php
+66efe4396379f597baafc4fe748b26f3  classes/cjwnewsletterplaceholders.php
 8d5b7878cf2ab338b6531633b38f28d0  classes/cjwnewsletterprogress.php
-274e4fafd89caf8a881cffb6feedad1b  classes/cjwnewsletterrunner.php
+f2423cbaa9c0004c1c27de9f6283e2a6  classes/cjwnewsletterrunner.php
 948727d748344e7c2bb0fbe2237a706d  classes/cjwnewslettersubscription.php
 aa675f094d9ec01f80857790eaf58278  classes/cjwnewslettersubscriptionvirtual.php
 9679aa6133164e7f480e59a78282c3bf  classes/cjwnewslettertransport.php
@@ -277,8 +278,8 @@ cf1036b2d3360f8e36d7462c0c58eaa8  doc/uml/cjw_newsletter_dbschema_v1.0.0.png
 71f4165c0974cba8273f21381b2a7031  doc/uml/class_diagram.svg
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
 782edd7ce72084d23e44e94ae248d722  extendedattributefilter/cjwnewsletterlistfilter.php
-0cce7ff4eac57dcee3a22fc1d5f3f84c  extension.xml
-b58f75284f6ae7bae82a18d6f9d6f644  ezinfo.php
+64e13b4d7a8a8288222acc7fd34af915  extension.xml
+3bb9ecb9e42c0c5a8c23b6a0c00e67a7  ezinfo.php
 497b5da0906ba7711bb1c1bf1e7992de  modules/newsletter/archive.php
 092c3c44c54c804db95592598cf3026f  modules/newsletter/blacklist_item_add.php
 0590861266fa3db091c7e434d11e9f7f  modules/newsletter/blacklist_item_list.php
@@ -332,7 +333,8 @@ ab41f1e8cf068990f03974c3e50e692c  settings/menu.ini.append.php
 e0fb0db8bc7127f92f518c510b43fe13  settings/websitetoolbar.ini.append.php
 55e5fa9c3cbd314111cc488492b78384  share/db_schema.dba
 b829d5125f764e31c1a62e897fa2742b  sql/mysql/schema.sql
-bec2649673924ae9ec6b9506bb1b26b0  sql/postgresql/schema.sql
+f84a16b051ba139519139c384bb6db27  sql/postgresql/schema.sql
+bdc04193e94f953d9a8d885fb3551982  sql/sqlite/schema.sql
 0d44f8cf076b8771432d0c0d2a361e87  translations/eng-US/translation.ts
 1ddb26d6affbce3932cb19a291a88c3a  translations/fre-FR/translation.ts
 4b5bd5f4fb2c95046a8447ed515d02f9  translations/ger-DE/translation.ts
@@ -342,3 +344,4 @@ d2ee502fdf8fe8f793538e6e12f39643  translations/untranslated/translation.ts
 dcbc9647a87b9e82edb28c3055b93649  update/database/mysql/1.0/unstable/dbupdate-1.0.0beta2-to-1.0.0rc1.sql
 083452edd270bb0f7dd2f7772a785be3  update/database/mysql/1.0/unstable/dbupdate-1.0.0rc1-to-1.0.0.sql
 3810733353286529cc50580ef776e829  update/database/mysql/2.0/unstable/dbupdate-1.1.0-to-2.0.0beta.sql
+babd159a5fac485d1f36bb5a2793ebd9  update/database/postgresql/4.1/dbupdate-4.1.19-to-4.1.20.sql
