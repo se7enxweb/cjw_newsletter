@@ -136,7 +136,7 @@ class CjwNewsletterEditionArticle extends eZPersistentObject
     /** @return eZContentObject|null the article taken from the pool */
     function articleObject()
     {
-        $object = eZContentObject::fetch( (int)$this->attribute( 'contentobject_id' ) );
+        $object = CjwNewsletterUtils::contentObject( (int)$this->attribute( 'contentobject_id' ) );
         return $object instanceof eZContentObject ? $object : null;
     }
 

@@ -61,7 +61,7 @@ class CjwNewsletterStatisticsCategoryHandler implements expMailCategoryHandler
     /** @return int lists that count per person (with consent) */
     protected static function perPersonListCount()
     {
-        $rows = eZDB::instance()->arrayQuery( 'SELECT COUNT( DISTINCT contentobject_id ) AS c FROM cjwnl_list WHERE tracking_mode = ' . CjwNewsletterTracking::MODE_PERSON );
+        $rows = eZDB::instance()->arrayQuery( 'SELECT COUNT( DISTINCT l.contentobject_id ) AS c FROM cjwnl_list l, ezcontentobject o WHERE o.id = l.contentobject_id AND l.tracking_mode = ' . CjwNewsletterTracking::MODE_PERSON );
         return isset( $rows[0]['c'] ) ? (int)$rows[0]['c'] : 0;
     }
 }

@@ -49,7 +49,7 @@ class InterestEdit extends \Exponential\Runnable\ModuleView
         }
 
         $lists = array();
-        foreach ( (array)\eZDB::instance()->arrayQuery( 'SELECT DISTINCT contentobject_id FROM cjwnl_list' ) as $row )
+        foreach ( (array)\eZDB::instance()->arrayQuery( 'SELECT DISTINCT l.contentobject_id AS contentobject_id FROM cjwnl_list l, ezcontentobject o WHERE o.id = l.contentobject_id' ) as $row )
         {
             $object = \eZContentObject::fetch( (int)$row['contentobject_id'] );
             if ( $object )

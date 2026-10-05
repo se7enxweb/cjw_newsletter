@@ -25,6 +25,19 @@ class CjwNewsletterUtils extends eZPersistentObject
      * @param string $flexibleVar is used as a part of string for md5
      * @return string md5
      */
+    /**
+     * The content object of an id that a newsletter table holds (a list, an edition, a picked article), or null
+     * when it is gone: unlike eZContentObject::fetch() it writes no debug error for a removed object.
+     *
+     * @param int $id
+     * @return eZContentObject|null
+     */
+    static function contentObject( $id )
+    {
+        $id = (int)$id;
+        return $id > 0 && eZContentObject::exists( $id ) ? eZContentObject::fetch( $id ) : null;
+    }
+
     static function generateUniqueMd5Hash( $flexibleVar = '' )
     {
         // The hash is the only secret in a configure or unsubscribe link, so the random part comes from the

@@ -148,7 +148,7 @@ class CjwNewsletterApproval extends eZPersistentObject
         $title = class_exists( 'expCollaborationInbox' ) ? expCollaborationInbox::approvalTitle( (int)$this->attribute( 'edition_contentobject_id' ), (int)$this->attribute( 'edition_contentobject_version' ) ) : '';
         if ( $title === '' )
         {
-            $object = eZContentObject::fetch( (int)$this->attribute( 'edition_contentobject_id' ) );
+            $object = CjwNewsletterUtils::contentObject( (int)$this->attribute( 'edition_contentobject_id' ) );
             $title = $object ? (string)$object->attribute( 'name' ) : '#' . (int)$this->attribute( 'edition_contentobject_id' );
         }
         return $title;
@@ -157,28 +157,28 @@ class CjwNewsletterApproval extends eZPersistentObject
     /** @return int */
     function editionNodeId()
     {
-        $object = eZContentObject::fetch( (int)$this->attribute( 'edition_contentobject_id' ) );
+        $object = CjwNewsletterUtils::contentObject( (int)$this->attribute( 'edition_contentobject_id' ) );
         return $object ? (int)$object->attribute( 'main_node_id' ) : 0;
     }
 
     /** @return string */
     function listName()
     {
-        $object = eZContentObject::fetch( (int)$this->attribute( 'list_contentobject_id' ) );
+        $object = CjwNewsletterUtils::contentObject( (int)$this->attribute( 'list_contentobject_id' ) );
         return $object ? (string)$object->attribute( 'name' ) : '';
     }
 
     /** @return string */
     function requesterName()
     {
-        $object = eZContentObject::fetch( (int)$this->attribute( 'requested_by' ) );
+        $object = CjwNewsletterUtils::contentObject( (int)$this->attribute( 'requested_by' ) );
         return $object ? (string)$object->attribute( 'name' ) : '';
     }
 
     /** @return string */
     function deciderName()
     {
-        $object = (int)$this->attribute( 'decided_by' ) ? eZContentObject::fetch( (int)$this->attribute( 'decided_by' ) ) : null;
+        $object = (int)$this->attribute( 'decided_by' ) ? CjwNewsletterUtils::contentObject( (int)$this->attribute( 'decided_by' ) ) : null;
         return $object ? (string)$object->attribute( 'name' ) : '';
     }
 }

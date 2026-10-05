@@ -252,7 +252,7 @@ class CjwNewsletterRendering
     /** @return string[] the languages of the edition object (its translations) */
     static function editionLanguages( $send )
     {
-        $object = eZContentObject::fetch( (int)$send->attribute( 'edition_contentobject_id' ) );
+        $object = CjwNewsletterUtils::contentObject( (int)$send->attribute( 'edition_contentobject_id' ) );
         return $object ? array_values( (array)$object->availableLanguages() ) : array();
     }
 
@@ -433,7 +433,7 @@ class CjwNewsletterRendering
             $list = $edition->attribute( 'list_attribute_content' );
             $listId = (int)$list->attribute( 'contentobject_id' );
             $have = array();
-            $object = eZContentObject::fetch( (int)$edition->attribute( 'contentobject_id' ) );
+            $object = CjwNewsletterUtils::contentObject( (int)$edition->attribute( 'contentobject_id' ) );
             if ( $object )
                 $have = array_values( (array)$object->availableLanguages() );
             $main = self::mainLanguage( $list );

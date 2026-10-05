@@ -195,7 +195,7 @@ class CjwNewsletterTestSend
     {
         $out = array();
         $db = eZDB::instance();
-        foreach ( (array)$db->arrayQuery( 'SELECT DISTINCT contentobject_id FROM cjwnl_list' ) as $row )
+        foreach ( (array)$db->arrayQuery( 'SELECT DISTINCT l.contentobject_id AS contentobject_id FROM cjwnl_list l, ezcontentobject o WHERE o.id = l.contentobject_id' ) as $row )
         {
             $object = eZContentObject::fetch( (int)$row['contentobject_id'] );
             if ( $object instanceof eZContentObject && $object->attribute( 'status' ) == eZContentObject::STATUS_PUBLISHED )

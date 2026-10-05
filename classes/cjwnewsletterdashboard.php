@@ -119,10 +119,10 @@ class CjwNewsletterDashboard
         // the lists: one row per version of the list object, the published object is what counts
         $rootNodeId = (int)eZINI::instance( 'cjw_newsletter.ini' )->variable( 'NewsletterSettings', 'RootFolderNodeId' );
         $summary['root'] = array( 'node_id' => $rootNodeId, 'exists' => $rootNodeId > 1 && is_object( eZContentObjectTreeNode::fetch( $rootNodeId ) ) );
-        $rows = $db->arrayQuery( 'SELECT DISTINCT contentobject_id FROM cjwnl_list' );
+        $rows = $db->arrayQuery( 'SELECT DISTINCT l.contentobject_id AS contentobject_id FROM cjwnl_list l, ezcontentobject o WHERE o.id = l.contentobject_id' );
         foreach ( (array)$rows as $row )
         {
-            $object = eZContentObject::fetch( (int)$row['contentobject_id'] );
+            $object = CjwNewsletterUtils::contentObject( (int)$row['contentobject_id'] );
             if ( !$object || $object->attribute( 'status' ) != eZContentObject::STATUS_PUBLISHED )
             {
                 continue;
@@ -191,7 +191,8 @@ class CjwNewsletterDashboard
         $statusNames = array( 4 => 'scheduled', 0 => 'waiting for the queue', 1 => 'queued', 2 => 'sending', 3 => 'finished', 9 => 'aborted' );
         foreach ( (array)$db->arrayQuery( 'SELECT id, edition_contentobject_id, status, created, mailqueue_process_started, mailqueue_process_finished FROM cjwnl_edition_send ORDER BY id DESC', array( 'limit' => 5 ) ) as $r )
         {
-            $edition = eZContentObject::fetch( (int)$r['edition_contentobject_id'] );
+            // a send outlives its edition when the edition is removed: no debug error for it
+            $edition = CjwNewsletterUtils::contentObject( (int)$r['edition_contentobject_id'] );
             $items = array( 'all' => 0, 'sent' => 0, 'failed' => 0 );
             foreach ( (array)$db->arrayQuery( 'SELECT status AS s, COUNT(*) AS c FROM cjwnl_edition_send_item WHERE edition_send_id = ' . (int)$r['id'] . ' GROUP BY status' ) as $ir )
             {

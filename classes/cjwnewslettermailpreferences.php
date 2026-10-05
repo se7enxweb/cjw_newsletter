@@ -207,7 +207,7 @@ class CjwNewsletterMailPreferences
      */
     public static function listName( $subscription )
     {
-        $object = eZContentObject::fetch( (int)$subscription->attribute( 'list_contentobject_id' ) );
+        $object = CjwNewsletterUtils::contentObject( (int)$subscription->attribute( 'list_contentobject_id' ) );
         return $object instanceof eZContentObject ? (string)$object->attribute( 'name' ) : '#' . (int)$subscription->attribute( 'list_contentobject_id' );
     }
 

@@ -33,7 +33,7 @@ class CjwNewsletterImportExportHooks
                                      . ' FROM cjwnl_import ORDER BY id DESC', array( 'limit' => 5 ) );
             foreach ( is_array( $rows ) ? $rows : array() as $row )
             {
-                $list = eZContentObject::fetch( (int)$row['list_contentobject_id'] );
+                $list = CjwNewsletterUtils::contentObject( (int)$row['list_contentobject_id'] );
                 $result['imports'][] = array( 'id' => (int)$row['id'], 'mapped' => $row['type'] === CjwNewsletterMappedImport::TYPE,
                                               'list' => $list instanceof eZContentObject ? (string)$list->attribute( 'name' ) : '',
                                               'created' => (int)$row['created'], 'imported' => (int)$row['imported'],

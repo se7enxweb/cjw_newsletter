@@ -194,12 +194,12 @@ class CjwNewsletterRenderingHooks
     {
         $db = eZDB::instance();
         $lists = array();
-        foreach ( (array)$db->arrayQuery( "SELECT DISTINCT contentobject_id FROM cjwnl_list" ) as $row )
+        foreach ( (array)$db->arrayQuery( "SELECT DISTINCT l.contentobject_id AS contentobject_id FROM cjwnl_list l, ezcontentobject o WHERE o.id = l.contentobject_id" ) as $row )
         {
             $list = CjwNewsletterList::fetchByListObjectVersion( (int)$row['contentobject_id'], 0 );
             if ( !is_object( $list ) )
                 continue;
-            $object = eZContentObject::fetch( (int)$row['contentobject_id'] );
+            $object = CjwNewsletterUtils::contentObject( (int)$row['contentobject_id'] );
             $lists[] = array( 'id' => (int)$row['contentobject_id'], 'name' => $object ? (string)$object->attribute( 'name' ) : '#' . (int)$row['contentobject_id'],
                               'skin' => (string)$list->attribute( 'skin_name' ) === '' ? 'default' : (string)$list->attribute( 'skin_name' ),
                               'skins' => CjwNewsletterRendering::allowedSkins( $list ),

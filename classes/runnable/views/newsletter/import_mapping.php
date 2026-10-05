@@ -41,7 +41,7 @@ class ImportMapping extends \Exponential\Runnable\ModuleView
         $import = \CjwNewsletterImport::fetch( $importId );
         if ( !is_object( $import ) || $import->attribute( 'type' ) !== \CjwNewsletterMappedImport::TYPE )
             return $this->viewResult( null, $module->handleError( \eZError::KERNEL_NOT_AVAILABLE, 'kernel' ) );
-        $listObject = \eZContentObject::fetch( (int)$import->attribute( 'list_contentobject_id' ) );
+        $listObject = \CjwNewsletterUtils::contentObject( (int)$import->attribute( 'list_contentobject_id' ) );
         $listNode = $listObject instanceof \eZContentObject ? $listObject->attribute( 'main_node' ) : null;
         if ( !$listNode instanceof \eZContentObjectTreeNode )
             return $this->viewResult( null, $module->handleError( \eZError::KERNEL_NOT_AVAILABLE, 'kernel' ) );
@@ -119,7 +119,7 @@ class ImportMapping extends \Exponential\Runnable\ModuleView
             }
         }
 
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $tpl->setVariable( 'import', $import );
         $tpl->setVariable( 'list_node', $listNode );
         $tpl->setVariable( 'settings', $settings );
@@ -176,7 +176,7 @@ class ImportMapping extends \Exponential\Runnable\ModuleView
 
         $mappings = array_merge( \CjwNewsletterImportMapping::fetchListByListContentobjectId( $listId ),
                                  \CjwNewsletterImportMapping::fetchListByListContentobjectId( 0 ) );
-        $tpl = templateInit();
+        $tpl = \eZTemplate::factory();
         $tpl->setVariable( 'list_node', $listNode );
         $tpl->setVariable( 'mappings', $mappings );
         $tpl->setVariable( 'encodings', \CjwNewsletterCsvMapper::$encodings );
