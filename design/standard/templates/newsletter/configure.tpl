@@ -7,6 +7,8 @@
 
     <h1>{'Configure newsletter settings'|i18n( 'cjw_newsletter/configure' )}</h1>
 
+    {include uri='design:mailpreferences/parts/account_link.tpl' context='newsletter'}
+
     {def $newsletter_root_node_id = ezini( 'NewsletterSettings', 'RootFolderNodeId', 'cjw_newsletter.ini' )
          $available_output_formats = 2} {* for tables *}
 

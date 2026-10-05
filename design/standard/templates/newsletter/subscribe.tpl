@@ -34,6 +34,8 @@
 
     <h1>{'Newsletter subscribe'|i18n( 'cjw_newsletter/subscribe' )}</h1>
 
+    {include uri='design:mailpreferences/parts/account_link.tpl' context='newsletter'}
+
 
     {* check if nl system is available *}
     {if or( $newsletter_system_node_list|count()|eq(0), $newsletter_list_count|eq(0) )}
