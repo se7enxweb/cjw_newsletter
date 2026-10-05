@@ -15,6 +15,9 @@
 # php runcronjobs.php cjw_newsletter
 # php runcronjobs.php -s siteaccess cjw_newsletter_mailqueue_create
 # php runcronjobs.php -s siteaccess cjw_newsletter_mailqueue_process
+# php runcronjobs.php -s siteaccess cjw_newsletter_mailbox
+#
+# the same work by hand: ./console ext:cjw_newsletter:queue, ext:cjw_newsletter:mailbox
 
 [CronjobSettings]
 ExtensionDirectories[]=cjw_newsletter
@@ -34,5 +37,9 @@ Scripts[]=cjw_newsletter_mailqueue_create.php
 
 [CronjobPart-cjw_newsletter_mailqueue_process]
 Scripts[]=cjw_newsletter_mailqueue_process.php
+
+# collect the mails of the active mail accounts and parse the bounces (not part of the cjw_newsletter part above)
+[CronjobPart-cjw_newsletter_mailbox]
+Scripts[]=cjw_newsletter_mailbox.php
 
 */ ?>
