@@ -388,7 +388,7 @@ class CjwNewsletterEdition extends eZPersistentObject
      *
      * @return xml
      */
-    function createOutputXml()
+    function createOutputXml( $skinName = null, $language = null )
     {
         $editionContentObjectId = $this->attribute('contentobject_id');
         $editionContentObjectVersion = $this->attribute('contentobject_attribute_version');
@@ -398,7 +398,10 @@ class CjwNewsletterEdition extends eZPersistentObject
 
         $mainSiteAccess = $listAttributeContent->attribute( 'main_siteaccess' );
 
-        $skinName = $listAttributeContent->attribute( 'skin_name' );
+        // 4.2.0: the skin of a send (empty = the list's skin) and the language of an output (empty = the main one)
+        if ( $skinName === null || $skinName === '' )
+            $skinName = $listAttributeContent->attribute( 'skin_name' );
+        $language = $language === null ? '' : (string)$language;
 
         $dom = new DOMDocument( '1.0', 'utf-8' );
         $root = $dom->createElement( 'newsletter_edition_send' );
@@ -423,7 +426,8 @@ class CjwNewsletterEdition extends eZPersistentObject
             $text = '<html>1234</html>';
 
             $forceNotIncludingImages = true;
-            $textArray = CjwNewsletterEdition::getOutput( $editionContentObjectId, $editionContentObjectVersion, $id, $mainSiteAccess, $skinName, $forceNotIncludingImages );
+            // the condition markers stay in the stored output: they are resolved per subscriber at send time
+            $textArray = CjwNewsletterEdition::getOutputRaw( $editionContentObjectId, $editionContentObjectVersion, $id, $mainSiteAccess, $skinName, $forceNotIncludingImages, $language );
             $bodyArray = $textArray['body'];
 
             $subject = $textArray['subject'];
@@ -460,6 +464,8 @@ class CjwNewsletterEdition extends eZPersistentObject
         }
 
         $root->setAttribute( 'locale', $textArray['locale'] );
+        $root->setAttribute( 'language', isset( $textArray['language'] ) ? $textArray['language'] : $language );
+        $root->setAttribute( 'skin_name', $skinName );
         //$root->setAttribute( 'site_url', $textArray['site_url'] );
         //$root->setAttribute( 'ez_root', $textArray['ez_root'] );
         //$root->setAttribute( 'ez_url', $textArray['ez_url'] );
@@ -485,7 +491,23 @@ class CjwNewsletterEdition extends eZPersistentObject
 
      * @return array
      */
-    static function getOutput( $editionContentObjectId, $versionId, $outputFormat, $siteAccess, $skinName = 'default', $forceSettingImageIncludeTo = -1 )
+    static function getOutput( $editionContentObjectId, $versionId, $outputFormat, $siteAccess, $skinName = 'default', $forceSettingImageIncludeTo = -1, $language = '', $conditionContext = null )
+    {
+        $result = self::getOutputRaw( $editionContentObjectId, $versionId, $outputFormat, $siteAccess, $skinName, $forceSettingImageIncludeTo, $language );
+        // a preview or a test mail without a subscriber shows every conditional part (4.2.0, CjwNewsletterConditions)
+        if ( class_exists( 'CjwNewsletterRendering' ) )
+            $result = CjwNewsletterRendering::resolveOutputArray( $result, $conditionContext === null ? array( 'mode' => 'all', 'language' => $language ) : $conditionContext );
+        return $result;
+    }
+
+    /**
+     * The output as getOutput(), with the condition markers of the "newsletter condition" tag still in it: the
+     * stored output of a send, resolved per subscriber when it is sent.
+     *
+     * @param string $language the language to render in ('' = the siteaccess language)
+     * @return array
+     */
+    static function getOutputRaw( $editionContentObjectId, $versionId, $outputFormat, $siteAccess, $skinName = 'default', $forceSettingImageIncludeTo = -1, $language = '' )
     {
         if ( $skinName == '' )
             $skinName = 'default';
@@ -508,6 +530,10 @@ class CjwNewsletterEdition extends eZPersistentObject
         }
         $args[] = escapeshellarg( '--current_hostname=' . $currentHostName );
         $args[] = escapeshellarg( '--skin_name=' . $skinName );
+        if ( preg_match( '/^[a-z]{3}-[A-Z]{2}(@[a-z0-9]+)?$/', (string)$language ) )
+        {
+            $args[] = escapeshellarg( '--language=' . $language );
+        }
         $args[] = '-s ' . escapeshellarg( (string)$siteAccess );
         // a cron job runs as root on many installations, and a script run as root refuses to start without this
         if ( function_exists( 'posix_geteuid' ) && posix_geteuid() === 0 )

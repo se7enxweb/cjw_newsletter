@@ -476,7 +476,34 @@ class CjwNewsletterEditionSend extends eZPersistentObject
      *
      * @return array
      */
-    function getParsedOutputXml()
+    function getParsedOutputXml( $mode = 'anonymous' )
+    {
+        $resultArray = self::parseOutputXmlString( $this->attribute( 'output_xml' ) );
+        // 4.2.0: the parts of the "newsletter condition" tag. The runner's renderer (CjwNewsletterRenderingHooks)
+        // resolves them per subscriber from the raw output; everyone else (the web archive) gets them resolved
+        // without a subscriber
+        if ( $mode !== 'raw' && class_exists( 'CjwNewsletterRendering' ) )
+        {
+            $context = array( 'mode' => $mode === 'all' ? 'all' : 'anonymous', 'list_id' => (int)$this->attribute( 'list_contentobject_id' ),
+                              'language' => CjwNewsletterRendering::mainLanguage( CjwNewsletterRendering::listOfSend( $this ) ) );
+            foreach ( $resultArray as $id => $format )
+            {
+                $format['contentobject_id'] = (int)$this->attribute( 'edition_contentobject_id' );
+                $resolved = CjwNewsletterRendering::resolveOutputArray( $format, $context );
+                unset( $resolved['contentobject_id'] );
+                $resultArray[$id] = $resolved;
+            }
+        }
+        return $resultArray;
+    }
+
+    /**
+     * The output formats of an output XML (output_xml of a send, or of an output in another language).
+     *
+     * @param string $xmlString
+     * @return array output format id => hash( subject, ez_root, ez_url, html_mail_image_include, body: hash( html, text ) )
+     */
+    static function parseOutputXmlString( $xmlString )
     {
 
         $resultArray = array();
@@ -484,8 +511,6 @@ class CjwNewsletterEditionSend extends eZPersistentObject
         $subject = 'subject';
         $html = 'html';
         $text = 'text';
-
-        $xmlString = $this->attribute( 'output_xml' );
 
         $doc = new DOMDocument();
         // an empty or damaged output_xml has no output formats

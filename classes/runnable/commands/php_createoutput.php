@@ -293,7 +293,7 @@ class Createoutput extends \Exponential\Runnable\Command
                                              'use-modules' => true,
                                              'use-extensions' => true ) );
 
-        $options = $this->startup( "[output_format_id:][object_id:][object_version:][current_hostname:][www_dir:][skin_name:]",
+        $options = $this->startup( "[output_format_id:][object_id:][object_version:][current_hostname:][www_dir:][skin_name:][language:]",
                                         "",
                                         array( 'output_format_id' => '--',
                                                'object_id' => '--',
@@ -301,6 +301,7 @@ class Createoutput extends \Exponential\Runnable\Command
                                                'current_hostname' => '--',
                                                'www_dir' => '--',
                                                'skin_name' => '--',
+                                               'language' => '--',
                                                ),
                                         false,
                                         array( 'siteaccess' => true,
@@ -351,10 +352,26 @@ class Createoutput extends \Exponential\Runnable\Command
             $skinName = $options['skin_name'];
         }
 
+        // a skin name is a folder name, nothing else
+        if ( !preg_match( '/^[a-z0-9_]{1,40}$/i', (string)$skinName ) )
+        {
+            $skinName = 'default';
+        }
+
         //$iniName = $options['arguments'][0];
         $ini = \eZINI::instance( 'site.ini' );
         $siteUrl = $ini->variable( 'SiteSettings', 'SiteURL' );
         $locale = $ini->variable( 'RegionalSettings', 'Locale' );
+
+        // 4.2.0: the output in another language of the edition (a translation); the content, the texts of the skin
+        // and the dates follow it
+        $renderLanguage = '';
+        if ( $options['language'] && preg_match( '/^[a-z]{3}-[A-Z]{2}(@[a-z0-9]+)?$/', (string)$options['language'] ) )
+        {
+            $renderLanguage = (string)$options['language'];
+            \CjwNewsletterRendering::switchLanguage( $renderLanguage );
+            $locale = $renderLanguage;
+        }
 
         $outputContent = '';
 
@@ -362,6 +379,10 @@ class Createoutput extends \Exponential\Runnable\Command
         $contentObject = \eZContentObjectVersion::fetchVersion( $objectVersion ,$objectId );
 
         $tpl = templateInit();
+        if ( is_object( $contentObject ) && $renderLanguage !== '' )
+        {
+            $contentObject->CurrentLanguage = $renderLanguage;
+        }
         $tpl->setVariable('contentobject', $contentObject );
 
         if( !is_object( $contentObject ) )
@@ -376,6 +397,10 @@ class Createoutput extends \Exponential\Runnable\Command
 
         $urlArray = getUrlArray( $siteUrl, $currentHostName, $wwwDir );
 
+        // 4.2.0: the skins get the list, the language, the skin settings and absolute addresses (cjwnl_abs_url)
+        \CjwNewsletterRendering::prepareTemplate( $tpl, $contentObject, $skinName, $renderLanguage !== '' ? $renderLanguage : $locale, $urlArray );
+        $plainTextSkin = \CjwNewsletterRendering::skinTextFormat( $skinName ) === 'plain';
+
 
         switch( $outputFormatId )
         {
@@ -383,11 +408,18 @@ class Createoutput extends \Exponential\Runnable\Command
             // html 0
             case \CjwNewsletterSubscription::OUTPUT_FORMAT_HTML :
             {
-                // textpart
+                // textpart (a skin with TextFormat=plain writes the text part itself, with the plaintext views)
                 $template = 'design:newsletter/skin/'.$skinName.'/outputformat/text.tpl';
                 $content = $tpl->fetch( $template );
-                $content = generateAbsoluteLinks( $content, $urlArray );
-                $content = formatText( $content );
+                if ( $plainTextSkin )
+                {
+                    $content = \CjwNewsletterPlainText::finish( $content );
+                }
+                else
+                {
+                    $content = generateAbsoluteLinks( $content, $urlArray );
+                    $content = formatText( $content );
+                }
                 $newsletterEditionContent['text'] = $content;
                 // htmlpart
                 $template = 'design:newsletter/skin/'.$skinName.'/outputformat/html.tpl';
@@ -407,11 +439,16 @@ class Createoutput extends \Exponential\Runnable\Command
             {
                 $template = 'design:newsletter/skin/'.$skinName.'/outputformat/text.tpl';
                 $content = $tpl->fetch( $template );
-                // TODO text version erstellen
 
-                $content = generateAbsoluteLinks( $content, $urlArray );
-
-                $content = formatText( $content );
+                if ( $plainTextSkin )
+                {
+                    $content = \CjwNewsletterPlainText::finish( $content );
+                }
+                else
+                {
+                    $content = generateAbsoluteLinks( $content, $urlArray );
+                    $content = formatText( $content );
+                }
 
                 $newsletterEditionContent['text'] = $content;
                 $contentType = 'text/plain';
@@ -457,6 +494,8 @@ class Createoutput extends \Exponential\Runnable\Command
                               'template_errors' => $tpl->errorLog(),
                               'site_url' => $siteUrl,
                               'locale' => $locale,
+                              'language' => $renderLanguage,
+                              'skin_name' => $skinName,
                               'html_mail_image_include' => $htmlMailImageInclude
                                );
 
