@@ -33,7 +33,8 @@ class CjwNewsletterStatisticsReport
     /** @return array name, node_id of a content object (empty when it is gone) */
     static function objectInfo( $objectId )
     {
-        $object = (int)$objectId > 0 ? eZContentObject::fetch( (int)$objectId ) : null;
+        // fetched without eZContentObject::fetch(), which writes a debug error for a removed object (an old send)
+        $object = (int)$objectId > 0 ? eZPersistentObject::fetchObject( eZContentObject::definition(), null, array( 'id' => (int)$objectId ), true ) : null;
         if ( !is_object( $object ) )
             return array( 'name' => '', 'node_id' => 0, 'object_id' => (int)$objectId );
         return array( 'name' => (string)$object->attribute( 'name' ), 'node_id' => (int)$object->attribute( 'main_node_id' ), 'object_id' => (int)$objectId );
