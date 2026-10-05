@@ -3667,11 +3667,7 @@ you have to confirm this page.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This minute</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This hour</source>
+        <source>Sent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3680,6 +3676,14 @@ you have to confirm this page.</source>
     </message>
     <message>
         <source>(newsletter)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This minute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This hour</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3732,10 +3736,6 @@ you have to confirm this page.</source>
     </message>
     <message>
         <source>Taken</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3897,6 +3897,10 @@ If you did not send this request, ignore this mail: nothing changes.</source>
     </message>
     <message>
         <source>paused</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%minute this minute, %hour this hour</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

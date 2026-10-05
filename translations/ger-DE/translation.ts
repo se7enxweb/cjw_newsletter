@@ -5038,12 +5038,8 @@ müssen Sie diese Seite bestätigen.</translation>
         <translation>Versandweg</translation>
     </message>
     <message>
-        <source>This minute</source>
-        <translation>Diese Minute</translation>
-    </message>
-    <message>
-        <source>This hour</source>
-        <translation>Diese Stunde</translation>
+        <source>Sent</source>
+        <translation>Gesendet</translation>
     </message>
     <message>
         <source>State</source>
@@ -5052,6 +5048,14 @@ müssen Sie diese Seite bestätigen.</translation>
     <message>
         <source>(newsletter)</source>
         <translation>(Newsletter)</translation>
+    </message>
+    <message>
+        <source>This minute</source>
+        <translation>Diese Minute</translation>
+    </message>
+    <message>
+        <source>This hour</source>
+        <translation>Diese Stunde</translation>
     </message>
     <message>
         <source>paused until %time</source>
@@ -5104,10 +5108,6 @@ müssen Sie diese Seite bestätigen.</translation>
     <message>
         <source>Taken</source>
         <translation>Genommen</translation>
-    </message>
-    <message>
-        <source>Sent</source>
-        <translation>Gesendet</translation>
     </message>
     <message>
         <source>Failed</source>
@@ -5274,6 +5274,10 @@ Wenn Sie diese Bitte nicht geschickt haben, beachten Sie diese Mail nicht: Es ä
     <message>
         <source>paused</source>
         <translation>angehalten</translation>
+    </message>
+    <message>
+        <source>%minute this minute, %hour this hour</source>
+        <translation>%minute in dieser Minute, %hour in dieser Stunde</translation>
     </message>
     <message>
         <source>Bounces and suppression</source>

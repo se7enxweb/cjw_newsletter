@@ -4515,12 +4515,8 @@ you have to confirm this page.</translation>
         <translation>Transport</translation>
     </message>
     <message>
-        <source>This minute</source>
-        <translation>This minute</translation>
-    </message>
-    <message>
-        <source>This hour</source>
-        <translation>This hour</translation>
+        <source>Sent</source>
+        <translation>Sent</translation>
     </message>
     <message>
         <source>State</source>
@@ -4529,6 +4525,14 @@ you have to confirm this page.</translation>
     <message>
         <source>(newsletter)</source>
         <translation>(newsletter)</translation>
+    </message>
+    <message>
+        <source>This minute</source>
+        <translation>This minute</translation>
+    </message>
+    <message>
+        <source>This hour</source>
+        <translation>This hour</translation>
     </message>
     <message>
         <source>paused until %time</source>
@@ -4581,10 +4585,6 @@ you have to confirm this page.</translation>
     <message>
         <source>Taken</source>
         <translation>Taken</translation>
-    </message>
-    <message>
-        <source>Sent</source>
-        <translation>Sent</translation>
     </message>
     <message>
         <source>Failed</source>
@@ -4751,6 +4751,10 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
     <message>
         <source>paused</source>
         <translation>paused</translation>
+    </message>
+    <message>
+        <source>%minute this minute, %hour this hour</source>
+        <translation>%minute this minute, %hour this hour</translation>
     </message>
     <message>
         <source>Bounces and suppression</source>
