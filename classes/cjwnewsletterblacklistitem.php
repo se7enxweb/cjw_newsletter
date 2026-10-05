@@ -235,6 +235,28 @@ class CjwNewsletterBlacklistItem extends eZPersistentObject
     }
 
     /**
+     * One page of the blacklist for the list view: a text filter on the address and the note, sorted and cut.
+     *
+     * @param string $q
+     * @param string $sort email, created or id
+     * @param string $order asc or desc
+     * @param integer $limit
+     * @param integer $offset
+     * @param integer $total receives the number of items matching the filter
+     * @return array of CjwNewsletterBlacklistItem
+     */
+    static public function fetchPage( $q, $sort, $order, $limit, $offset, &$total )
+    {
+        $where = CjwNewsletterUI::searchCondition( $q, array( 'cjwnl_blacklist_item.email', 'cjwnl_blacklist_item.note' ) );
+        $total = CjwNewsletterUI::countRows( self::definition(), 'cjwnl_blacklist_item', $where );
+        $column = in_array( $sort, array( 'email', 'created', 'id' ) ) ? $sort : 'created';
+        $limitArr = (int)$limit ? array( 'limit' => (int)$limit, 'offset' => max( 0, (int)$offset ) ) : null;
+        $list = eZPersistentObject::fetchObjectList( self::definition(), null, array( 'id' => array( '>', 0 ) ), array( $column => $order == 'asc' ? 'asc' : 'desc' ), $limitArr,
+                                                     true, false, null, null, $where !== '' ? ' AND ' . $where : null );
+        return is_array( $list ) ? $list : array();
+    }
+
+    /**
      * Fetches the newsletter object the blacklist object is attached to
      *
      * @return CjwNewsletterUser

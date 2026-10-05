@@ -953,7 +953,8 @@ class CjwNewsletterSubscription extends eZPersistentObject
                                                     null,
                                                     null,
                                                     null,
-                                                    null );
+                                                    // a subscription of a removed user is never listed or mailed
+                                                    ' AND cjwnl_subscription.newsletter_user_id IN ( SELECT id FROM cjwnl_user )' );
         return $objectList;
     }
 
@@ -981,11 +982,18 @@ class CjwNewsletterSubscription extends eZPersistentObject
             }
         }
 
-        $count = eZPersistentObject::count(
+        $rows = eZPersistentObject::fetchObjectList(
                      self::definition(),
+                     array(),
                      $condArr,
-                     'id' );
-        return $count;
+                     null,
+                     null,
+                     false,
+                     false,
+                     array( array( 'operation' => 'COUNT( cjwnl_subscription.id )', 'name' => 'row_count' ) ),
+                     null,
+                     ' AND cjwnl_subscription.newsletter_user_id IN ( SELECT id FROM cjwnl_user )' );
+        return $rows ? (int)$rows[0]['row_count'] : 0;
     }
 
     /**

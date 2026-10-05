@@ -1028,6 +1028,53 @@ class CjwNewsletterUser extends eZPersistentObject
     }
 
     /**
+     * One page of the newsletter users for the user list: a filter on the address and the names, on the status
+     * and on a list, sorted and cut. Works on every database (LOWER() instead of a case insensitive LIKE).
+     *
+     * @param string $q text looked for in the email address, the names and the organisation
+     * @param array $statusArray the user statuses to show, empty for all
+     * @param integer $listContentObjectId only users with a subscription to this list, 0 for all
+     * @param string $sort email, name, status, created or id
+     * @param string $order asc or desc
+     * @param integer $limit
+     * @param integer $offset
+     * @param integer $total receives the number of users matching the filter
+     * @return array of CjwNewsletterUser
+     */
+    static function fetchUserPage( $q, $statusArray, $listContentObjectId, $sort, $order, $limit, $offset, &$total )
+    {
+        $db = eZDB::instance();
+        $conds = array();
+        $search = CjwNewsletterUI::searchCondition( $q, array( 'cjwnl_user.email', 'cjwnl_user.first_name', 'cjwnl_user.last_name', 'cjwnl_user.organisation' ) );
+        if ( $search !== '' )
+        {
+            $conds[] = $search;
+        }
+        if ( $statusArray )
+        {
+            $conds[] = 'cjwnl_user.status IN ( ' . implode( ',', array_map( 'intval', $statusArray ) ) . ' )';
+        }
+        if ( (int)$listContentObjectId )
+        {
+            $conds[] = 'cjwnl_user.id IN ( SELECT newsletter_user_id FROM cjwnl_subscription WHERE list_contentobject_id = ' . (int)$listContentObjectId . ' )';
+        }
+        $where = $conds ? ' AND ' . implode( ' AND ', $conds ) : null;
+
+        $total = CjwNewsletterUI::countRows( self::definition(), 'cjwnl_user', implode( ' AND ', $conds ) );
+
+        $sortColumns = array( 'email' => 'email', 'name' => 'last_name', 'status' => 'status', 'created' => 'created', 'id' => 'id' );
+        $column = isset( $sortColumns[$sort] ) ? $sortColumns[$sort] : 'email';
+        $sorts = array( $column => $order == 'desc' ? 'desc' : 'asc' );
+        if ( $column == 'last_name' )
+        {
+            $sorts['first_name'] = $sorts['last_name'];
+        }
+        $limitArr = (int)$limit ? array( 'limit' => (int)$limit, 'offset' => max( 0, (int)$offset ) ) : null;
+        $list = eZPersistentObject::fetchObjectList( self::definition(), null, array( 'id' => array( '>', 0 ) ), $sorts, $limitArr, true, false, null, null, $where );
+        return is_array( $list ) ? $list : array();
+    }
+
+    /**
      * Search all user with importId
      *
      * @param integer $importId

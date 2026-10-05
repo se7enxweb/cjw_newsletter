@@ -87,8 +87,8 @@ class CjwNewsletterLog extends ezcLog
         // Create the writers
         $generalFilename = "cjw_newsletter_".$logNamePostfix."general.log";
         $errorFilename = "cjw_newsletter_".$logNamePostfix."error.log";
-        $writeAll = new ezcLogUnixFileWriter( $logDir, $generalFilename );
-        $writeErrors = new ezcLogUnixFileWriter( $logDir, $errorFilename );
+        $writeAll = new CjwNewsletterLogWriter( $logDir, $generalFilename );
+        $writeErrors = new CjwNewsletterLogWriter( $logDir, $errorFilename );
 
         // Check file permissions
         foreach( array( $generalFilename, $errorFilename ) as $file )
