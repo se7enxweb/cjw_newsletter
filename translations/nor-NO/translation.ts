@@ -5659,6 +5659,18 @@ If you did not send this request, ignore this mail: nothing changes.</source>
         <source>When this is on and you save, we send a code to the number. The SMS start once you enter the code.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Newsletters by SMS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>no number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Number and consent on your e-mail preferences page</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/importexport</name>

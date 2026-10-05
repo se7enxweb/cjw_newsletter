@@ -7035,6 +7035,18 @@ Wenn Sie diese Bitte nicht geschickt haben, beachten Sie diese Mail nicht: Es ä
         <source>When this is on and you save, we send a code to the number. The SMS start once you enter the code.</source>
         <translation>Wenn dies eingeschaltet ist und Sie speichern, senden wir einen Code an die Nummer. Die SMS beginnen, sobald Sie den Code eingeben.</translation>
     </message>
+    <message>
+        <source>Newsletters by SMS</source>
+        <translation>Newsletter per SMS</translation>
+    </message>
+    <message>
+        <source>no number</source>
+        <translation>keine Nummer</translation>
+    </message>
+    <message>
+        <source>Number and consent on your e-mail preferences page</source>
+        <translation>Nummer und Einwilligung auf Ihrer E-Mail-Einstellungsseite</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/importexport</name>

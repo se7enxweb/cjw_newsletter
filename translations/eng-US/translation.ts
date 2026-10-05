@@ -6512,6 +6512,18 @@ If you did not send this request, ignore this mail: nothing changes.</translatio
         <source>When this is on and you save, we send a code to the number. The SMS start once you enter the code.</source>
         <translation>When this is on and you save, we send a code to the number. The SMS start once you enter the code.</translation>
     </message>
+    <message>
+        <source>Newsletters by SMS</source>
+        <translation>Newsletters by SMS</translation>
+    </message>
+    <message>
+        <source>no number</source>
+        <translation>no number</translation>
+    </message>
+    <message>
+        <source>Number and consent on your e-mail preferences page</source>
+        <translation>Number and consent on your e-mail preferences page</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/importexport</name>
