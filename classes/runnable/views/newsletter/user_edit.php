@@ -243,12 +243,17 @@ class UserEdit extends \Exponential\Runnable\ModuleView
                 }
             }
 
+            // the feature areas set their columns from their form parts ([ExtensionPointSettings] UserEditParts[])
+            foreach ( \CjwNewsletterExtensionPoints::errors( 'userInput', array( $newsletterUserObject, $http ) ) as $pointIndex => $pointError )
+                $warningArr['extension_point_' . $pointIndex] = array( 'field_key' => '', 'message' => $pointError );
+
             // only store changes if all is ok
             if( $module->isCurrentAction( 'Store' ) && count( $warningArr ) == 0 )
             {
                 // no changes to db => test run
                 $dryRun = false;
                 $newsletterUserObject->store();
+                \CjwNewsletterExtensionPoints::call( 'userStored', array( $newsletterUserObject, $http ) );
             }
 
             $idArray = $subscriptionDataArr['id_array'];
@@ -363,6 +368,7 @@ class UserEdit extends \Exponential\Runnable\ModuleView
         $tpl->setVariable( 'message_feedback', $messageFeedback );
 
         $tpl->setVariable( 'newsletter_user', $newsletterUserObject );
+        $tpl->setVariable( 'user_edit_parts', \CjwNewsletterExtensionPoints::templates( 'UserEditParts' ) );
         $tpl->setVariable( 'available_salutation_array', \CjwNewsletterUser::getAvailableSalutationNameArrayFromIni() );
 
         $tpl->setVariable( 'redirect_url_action_cancel', $redirectUrlCancel );

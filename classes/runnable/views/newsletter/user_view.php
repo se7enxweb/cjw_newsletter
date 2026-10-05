@@ -69,6 +69,7 @@ class UserView extends \Exponential\Runnable\ModuleView
         $tpl->setVariable( 'view_parameters', $viewParameters );
 
         $tpl->setVariable( 'newsletter_user', $newsletterUserObject );
+        $tpl->setVariable( 'user_view_parts', \CjwNewsletterExtensionPoints::templates( 'UserViewParts' ) );
 
         $Result = array();
 

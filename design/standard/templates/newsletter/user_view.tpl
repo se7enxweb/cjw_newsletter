@@ -222,9 +222,11 @@
                                         {'Note'|i18n( 'cjw_newsletter/user_view' )}
                                     </th>
                                     <td>
-                                        {$newsletter_user.note|nl2br}
+                                        {$newsletter_user.note|wash|nl2br}
                                     </td>
                                 </tr>
+                                {* the rows the feature areas add ([ExtensionPointSettings] UserViewParts[]): <tr><th>..</th><td>..</td></tr> *}
+                                {if is_set( $user_view_parts )}{foreach $user_view_parts as $user_view_part}{include uri=$user_view_part newsletter_user=$newsletter_user}{/foreach}{/if}
                                  <tr>
                                     <th>
                                         {'Data xml'|i18n( 'cjw_newsletter/user_view' )}

@@ -177,6 +177,9 @@
                 <input class="halfbox" id="Subscription_Email" type="text" name="Subscription_Email" value="{cond( and( is_set( $user ), $subscription_data_array['email']|eq('') ), $user.email|wash(), $subscription_data_array['email']|wash )}" title="{'Email of the subscriber.'|i18n( 'cjw_newsletter/subscribe' )}" />
             </div>
 
+            {* the fields the feature areas add ([ExtensionPointSettings] SubscribeFormParts[]): <div class="block">..</div> *}
+            {if is_set( $subscribe_form_parts )}{foreach $subscribe_form_parts as $subscribe_form_part}{include uri=$subscribe_form_part subscription_data_array=$subscription_data_array}{/foreach}{/if}
+
             <div class="block">
                 <input type="hidden" name="BackUrlInput" value="{cond( ezhttp_hasvariable('BackUrlInput'), ezhttp('BackUrlInput'), 'newsletter/subscribe'|ezurl('no'))|wash}" />
                 <input class="button" type="submit" name="SubscribeButton" value="{'Subscribe'|i18n( 'cjw_newsletter/subscribe' )}" title="{'Add to subscription.'|i18n( 'cjw_newsletter/subscribe' )}" />

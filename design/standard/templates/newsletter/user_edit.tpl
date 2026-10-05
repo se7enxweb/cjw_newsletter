@@ -125,6 +125,8 @@
                                         <textarea class="box" name="Subscription_Note" cols="50" rows="10">{$newsletter_user.note|wash}</textarea>
                                     </td>
                                 </tr>
+                                {* the rows the feature areas add ([ExtensionPointSettings] UserEditParts[]): <tr><th>..</th><td>..</td></tr> *}
+                                {if is_set( $user_edit_parts )}{foreach $user_edit_parts as $user_edit_part}{include uri=$user_edit_part newsletter_user=$newsletter_user}{/foreach}{/if}
 
                                 <tr>
                                     <th>

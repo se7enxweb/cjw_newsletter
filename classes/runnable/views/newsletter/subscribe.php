@@ -172,6 +172,10 @@ class Subscribe extends \Exponential\Runnable\ModuleView
                 }
             }
 
+            // the feature areas check the fields of their form parts ([ExtensionPointSettings] SubscribeFormParts[])
+            foreach ( \CjwNewsletterExtensionPoints::errors( 'subscribeValidate', array( $http ) ) as $pointIndex => $pointError )
+                $warningArr['extension_point_' . $pointIndex] = array( 'field_key' => '', 'message' => $pointError );
+
             // check if email already exists
             $existingNewsletterUserObject = \CjwNewsletterUser::fetchByEmail( $subscriptionDataArr['email'] );
 
@@ -191,6 +195,8 @@ class Subscribe extends \Exponential\Runnable\ModuleView
                                                                                                      true,
                                                                                                      $context );
                     $newNewsletterUser = \CjwNewsletterUser::fetchByEmail( $subscriptionDataArr['email'] );
+                    if ( is_object( $newNewsletterUser ) )
+                        \CjwNewsletterExtensionPoints::call( 'subscribeInput', array( $newNewsletterUser, $http ) );
 
                     $tpl->setVariable( 'user_email_already_exists', false );
                     $tpl->setVariable( 'mail_send_result', false );
@@ -240,6 +246,9 @@ class Subscribe extends \Exponential\Runnable\ModuleView
                                                                                                      $context );
 
                     $newNewsletterUser = \CjwNewsletterUser::fetchByEmail( $subscriptionDataArr['email'] );
+                    // the feature areas store their fields on the new subscriber, before the confirmation mail
+                    if ( is_object( $newNewsletterUser ) )
+                        \CjwNewsletterExtensionPoints::call( 'subscribeInput', array( $newNewsletterUser, $http ) );
                     $mailSendResult = $newNewsletterUser->sendSubcriptionConfirmationMail();
 
                     $tpl->setVariable( 'user_email_already_exists', false );
@@ -266,6 +275,7 @@ class Subscribe extends \Exponential\Runnable\ModuleView
         }
 
         $tpl->setVariable( 'subscription_data_array', $subscriptionDataArr );
+        $tpl->setVariable( 'subscribe_form_parts', \CjwNewsletterExtensionPoints::templates( 'SubscribeFormParts' ) );
 
         $tpl->setVariable( 'warning_array', $warningArr );
 
