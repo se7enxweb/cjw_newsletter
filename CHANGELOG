@@ -1,5 +1,23 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.1
+=====
+
+Updated
+
+- Installed classes and data use eng-US: the class packages named the six newsletter classes and their attributes in
+  eng-GB, and the kernel creates every language a class package names, so importing the classes added eng-GB as a
+  content language to a site whose language is eng-US and gave the newsletter classes eng-GB as their initial
+  language. The packages use eng-US now, also as the always-available language; the German names stay.
+
+Added
+
+- The upgrade step `ext:cjw_newsletter:class-languages` (also `bin/php/class-languages.php`) moves the newsletter
+  classes of an existing installation from eng-GB to eng-US: class and attribute names and descriptions, language
+  mask, initial language and the class name rows, with a JSON backup of the rows, `--dry-run`, and nothing to do on
+  a second run. Content objects and the eng-GB language are left alone. The class installer runs the same step.
+  Upgrade from 4.2.0: doc/upgrade-4.2.md, section 11.
+
 4.2.0
 =====
 
