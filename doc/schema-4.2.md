@@ -51,7 +51,7 @@ ids or names in one column use cjw's `;a;b;` form. Every new column has a defaul
 |---|---|---|---|
 | `skin_name_array_string` | varchar(255), default '' | N3 | Skins allowed for sends of the list, as `;default;company;`; empty = every skin. |
 | `main_language` | varchar(20), default '' | N3 | Locale a subscriber gets when the edition has no translation in their language; empty = the siteaccess locale. |
-| `language_array_string` | varchar(255), default '' | N3 | Locales offered to subscribers, as `;eng-GB;ger-DE;`. |
+| `language_array_string` | varchar(255), default '' | N3 | Locales offered to subscribers, as `;eng-US;ger-DE;`. |
 | `interest_source` | varchar(20), default '' | N3 | Where interests come from: empty (none), `topics` (`cjwnl_interest` of the list) or `eztags`. |
 | `approval_required` | tinyint (0/1), default `0` | N2 | 1 = a send waits for an approval (`cjwnl_approval`). |
 | `article_pool_id` | int, default `0` | N2 | `cjwnl_article_pool.id` of the list; 0 = the global default pool. |

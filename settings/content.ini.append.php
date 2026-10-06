@@ -27,7 +27,7 @@ AvailableDataTypes[]=cjwnewsletterlistvirtual
 #             not_empty (the default without a value)
 #   value     compared without regard to case
 #   list      ids of newsletter list objects, with commas
-#   language  locales with commas, e.g. ger-DE,eng-GB: the language the subscriber gets
+#   language  locales with commas, e.g. ger-DE,eng-US: the language the subscriber gets
 #   interest  identifiers of interests (or eztags ids), with commas
 #   negate    1: the opposite
 # The same settings are the ezconfig values of the eztemplate "newsletter_condition" in ezrichtext.

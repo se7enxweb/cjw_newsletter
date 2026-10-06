@@ -26,7 +26,7 @@
  *   operator  eq (default when value is set), ne, contains, starts, empty, not_empty (default without value), in
  *   value     the value to compare with (case-insensitive); for "in" a list separated by commas
  *   list      content object ids of lists, separated by commas: the send is for one of them
- *   language  locales separated by commas (ger-DE,eng-GB): the language the subscriber gets
+ *   language  locales separated by commas (ger-DE,eng-US): the language the subscriber gets
  *   interest  interest identifiers or eztags ids separated by commas: the subscriber picked one of them
  *   negate    1: the opposite
  *
