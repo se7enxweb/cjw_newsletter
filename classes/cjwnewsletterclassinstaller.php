@@ -131,6 +131,9 @@ class CjwNewsletterClassInstaller
         // 4.2.0: the text fields are translatable (one edition with translations, a language per subscriber)
         if ( class_exists( 'CjwNewsletterTranslatableFields' ) )
             CjwNewsletterTranslatableFields::apply();
+        // 4.2.1: classes imported from the packages up to 4.2.0 are named in eng-GB; they move to eng-US
+        if ( class_exists( 'CjwNewsletterClassLanguages' ) )
+            CjwNewsletterClassLanguages::apply();
         return $report;
     }
 

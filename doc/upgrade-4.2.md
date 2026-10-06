@@ -181,3 +181,26 @@ The console commands of 4.2.0 (each with `--help` and `--dry-run`):
   (extension point `userRemoved`).
 - A `450` reply of the mail server is no longer a hard bounce; it is sent again.
 - Placeholders are escaped in the HTML part (since 4.1.20); the new placeholders of 4.2.0 too.
+
+## 11. From 4.2.0 to 4.2.1: the newsletter classes in eng-US
+
+The class packages up to 4.2.0 named the newsletter classes in British English (eng-GB). The kernel creates every
+language a class package names, so importing the newsletter classes added eng-GB as a content language to a site
+whose language is eng-US, and the newsletter classes had eng-GB as their initial language. The packages of 4.2.1 use
+eng-US (the German names stay). An installation that imported the classes before 4.2.1 runs the upgrade step once:
+
+```
+./console ext:cjw_newsletter:class-languages --dry-run   # lists the rows it would change
+./console ext:cjw_newsletter:class-languages             # or: php extension/cjw_newsletter/bin/php/class-languages.php
+php bin/php/ezcache.php --clear-id=content,classid,sortkey,template,template-block,content_language
+```
+
+It moves, for every version of the six newsletter classes, the class and attribute names and descriptions from
+eng-GB to eng-US (an eng-US text that exists already is kept), makes eng-US the always-available and the initial
+language and corrects the language mask and the class name rows. The German texts stay. The rows are saved as JSON
+before they change (`var/<site>/cjw_newsletter/class-languages-backup-<time>.json`, or `--backup-dir=<dir>`). A
+second run changes nothing. The class installer (`CjwNewsletterClassInstaller::install()`) runs the same step.
+
+Content objects and the eng-GB language itself are not touched: the command says how many newsletter objects still
+carry eng-GB translations. If nothing else on the site uses eng-GB, an administrator can remove the language under
+Setup > Languages; removing a language removes the translations in it, so check that first.
