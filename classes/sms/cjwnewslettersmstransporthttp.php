@@ -177,7 +177,7 @@ class CjwNewsletterSmsTransportHttp extends CjwNewsletterSmsTransportBase
             $error = $body === false ? curl_error( $ch ) : '';
             $status = (int)curl_getinfo( $ch, CURLINFO_RESPONSE_CODE );
             if ( PHP_VERSION_ID < 80000 )
-                curl_close( $ch );
+                if ( PHP_VERSION_ID < 80000 ) curl_close( $ch ); // no effect since PHP 8.0, deprecated in 8.5
             unset( $ch );
             return array( 'status' => $status, 'body' => $body === false ? '' : (string)$body, 'error' => $error );
         }
