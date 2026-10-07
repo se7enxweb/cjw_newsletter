@@ -1,10 +1,10 @@
 name: cjw_newsletter
-version: 4.2.1
+version: 4.2.2
 files_count: 689
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
 aa9ea80af84e6cba65e0764a80b56e16  .gitignore
-8a728f27ca001ba8214f309958850b07  CHANGELOG
+ed85ca077a17397eafe3d0c4095049a9  CHANGELOG
 90ef4496589ac9dd18ee5e5d98e0bb4c  FAQ
 694a2892d8ff79eca1ecaf3cdcfe9a50  INSTALL
 0636e73ff0215e8d672dc4c32c317bb3  LICENSE
@@ -26,7 +26,7 @@ b022022151bb1255a0ab48ed98ddbe22  bin/php/queue.php
 5119f149a0a62e20a1d1c25664baefe4  bin/php/translatable-fields.php
 77d795ab0950dea720d042dd9f404282  classes/cjwnewsletterauditbranch.php
 6dfdaf477ec7c35e234dcb5143a17a1f  classes/cjwnewsletterblacklistitem.php
-a3b3aa8211188c1f99b6cb69e9d13f34  classes/cjwnewsletterclassinstaller.php
+17c52fde2353530fa7ed38961393e5cd  classes/cjwnewsletterclassinstaller.php
 c1481f9dc5b85c015f5eb6cb7f06b5da  classes/cjwnewsletterclasslanguages.php
 538888730b963e7ecf37ba4b0181506f  classes/cjwnewslettercsvexport.php
 a74c21ca4ad6e4047918792df09c68e4  classes/cjwnewslettercsvparser.php
@@ -34,7 +34,7 @@ a53d1e5e6de2d603becf26872fde2d39  classes/cjwnewsletterdashboard.php
 0e20fa38e9bc39df9c58eacdf3f75b5f  classes/cjwnewsletteredition.php
 4509dab5a0f9fe288fcdbada7e8adda5  classes/cjwnewslettereditionsend.php
 d27b2ecd2094e3ce715b20c5092a4ed7  classes/cjwnewslettereditionsenditem.php
-66cbdaefb3dbc9c47d81e3203503fbd2  classes/cjwnewslettererrorhandler.php
+e3e0b60f7f433a7d1d2b1f570b5d642a  classes/cjwnewslettererrorhandler.php
 58981b98b9626f95a9efb099548ed12a  classes/cjwnewsletterextensionpoints.php
 46d17fcdfd35ce9846d55f79abfef99c  classes/cjwnewsletterfilter.php
 4996dbcb842c339eb4be92034e6184ab  classes/cjwnewsletterfiltertype.php
@@ -139,7 +139,7 @@ a255c1cfce93b6e863443b40eb4cbba1  classes/runnable/views/newsletter/approval.php
 a13511f3ba73cb69a5b0c9eedb8d8610  classes/runnable/views/newsletter/blacklist_item_add.php
 57c30c0cb2defc71459e4f96924f74e5  classes/runnable/views/newsletter/blacklist_item_list.php
 a69442ff647c9e50c46084c6140c5f95  classes/runnable/views/newsletter/blacklist_item_remove.php
-f77ccce44f500fc0b7efcf9244f85ab2  classes/runnable/views/newsletter/configure.php
+ad3ca4ba3c25af9a9ecef57cfb15c779  classes/runnable/views/newsletter/configure.php
 f13c3e203d87ba24e543c6e2d5350cfe  classes/runnable/views/newsletter/import_list.php
 903811c0be6dc6c7e4484c6fe20d75ac  classes/runnable/views/newsletter/import_mapping.php
 5c6114bfa218c38add362489af902aa1  classes/runnable/views/newsletter/import_view.php
@@ -170,7 +170,7 @@ d68f17796b90e7294c95153fa9e39008  classes/runnable/views/newsletter/sms_confirm.
 24cd2bd34c8a179c6155e6745804b9b0  classes/runnable/views/newsletter/sms_inbound.php
 9020b5e8c594c257ed9f89fbde065af9  classes/runnable/views/newsletter/sms_send.php
 340324099e104c009a8bf12532ab44d4  classes/runnable/views/newsletter/statistics_export.php
-2250f6e1093693a09e25122b61774777  classes/runnable/views/newsletter/subscribe.php
+8dbcee0f3588bd6bb766011eed87f47e  classes/runnable/views/newsletter/subscribe.php
 1a4db5722eb610c5062e015d6b18b6da  classes/runnable/views/newsletter/subscribe_infomail.php
 3e1c28ee4fd1e17d9072b65fd1155b07  classes/runnable/views/newsletter/subscriber_export.php
 8dbd64b9df722315e434badadf0b4552  classes/runnable/views/newsletter/subscription_list.php
@@ -196,7 +196,7 @@ ee470718312560e58b6bc67727265d5e  classes/sms/cjwnewslettersmsmessage.php
 11fe1772bf9e5279f17c7fd29767d144  classes/sms/cjwnewslettersmstransport.php
 c34d9b5127f6f4f1b5717be11f9954f1  classes/sms/cjwnewslettersmstransportbase.php
 ce3c2b1c34ec563b525d110ad16924f7  classes/sms/cjwnewslettersmstransportfile.php
-da00e1de22dabc3d54257123aa6ba228  classes/sms/cjwnewslettersmstransporthttp.php
+ffe75654e5c47615611f9823a665bfbe  classes/sms/cjwnewslettersmstransporthttp.php
 e0d09662a5d3127d835a03e1bfcee55e  classes/sms/cjwnewslettersmstransporttwilio.php
 897ef93121c7135b32463b22bf0401d7  classes/statistics/cjwnewsletterabtest.php
 1e82df8668668452ff4d48c06f4fc8e1  classes/statistics/cjwnewsletterabtester.php
@@ -591,8 +591,8 @@ cf1036b2d3360f8e36d7462c0c58eaa8  doc/uml/cjw_newsletter_dbschema_v1.0.0.png
 f90eec2d1f019a7db9a9dfb9d9632d42  doc/upgrade-4.2.md
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
 782edd7ce72084d23e44e94ae248d722  extendedattributefilter/cjwnewsletterlistfilter.php
-2c7bd7a452ebda1ce6ce14fa4390bc90  extension.xml
-73d7025aa9a7e25189d873541202d3bb  ezinfo.php
+ae4c8164769f74038d23577b2b6e4a73  extension.xml
+6542990d36666b5e4fdc2a7dd6e193c2  ezinfo.php
 90bbccd4a9f3f11f423a5371db08cc5b  modules/newsletter/ab_test.php
 58407deb615ce3169e78a3ebb276bfc8  modules/newsletter/approval.php
 497b5da0906ba7711bb1c1bf1e7992de  modules/newsletter/archive.php

@@ -1,5 +1,17 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.2
+=====
+
+Updated
+
+- The subscribe and configure views and the class installer ask eZUser::isRegistered() instead of the deprecated
+  isLoggedIn(), so they leave no deprecation entry in strict.log.
+- The newsletter error handler names the strict level by its value; the E_STRICT constant is deprecated since
+  PHP 8.4.
+- The SMS HTTP transport calls curl_close() only on PHP versions before 8.0, where it still had an effect; PHP 8.5
+  deprecates it.
+
 4.2.1
 =====
 
