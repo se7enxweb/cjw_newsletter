@@ -66,7 +66,7 @@ function cjwNewsletterErrorHandler($errno, $errstr='', $errfile='', $errline='')
                E_USER_ERROR     => 'USER ERROR',
                E_USER_WARNING   => 'USER WARNING',
                E_USER_NOTICE    => 'USER NOTICE',
-               E_STRICT         => 'STRICT NOTICE',
+               2048             => 'STRICT NOTICE', // E_STRICT, a deprecated constant since PHP 8.4
                E_RECOVERABLE_ERROR  => 'RECOVERABLE ERROR'
                );
 
@@ -121,7 +121,7 @@ function cjwNewsletterErrorHandler($errno, $errstr='', $errfile='', $errline='')
     // what to do
     switch ($errno) {
         case E_NOTICE:
-        case E_STRICT:
+        case 2048: // E_STRICT, a deprecated constant since PHP 8.4
         case E_WARNING:
         case E_USER_NOTICE:
         case E_CORE_WARNING:
