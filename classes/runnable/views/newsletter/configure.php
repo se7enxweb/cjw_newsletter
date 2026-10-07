@@ -62,7 +62,7 @@ class Configure extends \Exponential\Runnable\ModuleView
 
         $user = false;
         $currentUser = \eZUser::currentUser();
-        if ( $currentUser->isLoggedIn() )
+        if ( $currentUser->isRegistered() )
         {
             $user = $currentUser;
         }

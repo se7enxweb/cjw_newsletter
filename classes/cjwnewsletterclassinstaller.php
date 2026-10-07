@@ -218,7 +218,7 @@ class CjwNewsletterClassInstaller
         }
 
         $user = eZUser::currentUser();
-        if ( !$user || !$user->isLoggedIn() )
+        if ( !$user || !$user->isRegistered() )
         {
             $admin = eZUser::fetch( 14 );
             if ( $admin )
