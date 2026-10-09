@@ -1,5 +1,15 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.3
+=====
+
+Updated
+
+- The newsletter log files and the SMS outbox of the file transport keep to the limits EZP_FILE_MODE_MAX and
+  EZP_DIR_MODE_MAX of Exponential 6.0.15 (config.php): the log files get LogFilePermissions, the outbox folder 0770
+  and each SMS file 0660 through the kernel helpers, which only narrow them. Without the limits, or on a kernel
+  without the helpers, the modes are exactly those of before.
+
 4.2.2
 =====
 
