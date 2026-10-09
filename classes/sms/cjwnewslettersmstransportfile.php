@@ -44,7 +44,7 @@ class CjwNewsletterSmsTransportFile extends CjwNewsletterSmsTransportBase
         if ( $pattern !== '' && @preg_match( $pattern, (string)$to ) )
             return array( 'ok' => false, 'id' => '', 'error' => 'simulated failure' );
         $dir = $this->dir();
-        if ( !is_dir( $dir ) && !@mkdir( $dir, 0770, true ) && !is_dir( $dir ) )
+        if ( !is_dir( $dir ) && !@mkdir( $dir, self::dirMode( 0770 ), true ) && !is_dir( $dir ) )
             return array( 'ok' => false, 'id' => '', 'error' => 'the directory ' . $dir . ' cannot be created' );
         $id = 'file-' . bin2hex( random_bytes( 8 ) );
         $from = (string)$from !== '' ? (string)$from : (string)$this->setting( 'From' );
@@ -53,7 +53,7 @@ class CjwNewsletterSmsTransportFile extends CjwNewsletterSmsTransportBase
         $file = $dir . '/' . gmdate( 'Ymd-His' ) . '-' . $id . '.sms.json';
         if ( @file_put_contents( $file, json_encode( $data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ) . "\n", LOCK_EX ) === false )
             return array( 'ok' => false, 'id' => '', 'error' => 'the file ' . $file . ' cannot be written' );
-        @chmod( $file, 0660 );
+        @chmod( $file, self::fileMode( 0660 ) );
         return array( 'ok' => true, 'id' => $id, 'error' => '' );
     }
 
@@ -73,5 +73,29 @@ class CjwNewsletterSmsTransportFile extends CjwNewsletterSmsTransportBase
                 $out[] = $data + array( 'file' => $file );
         }
         return $out;
+    }
+
+    /**
+     * The mode $mode within the limit EZP_FILE_MODE_MAX of the kernel (eZFile::fileMode()); on a kernel without
+     * that helper $mode as it is.
+     *
+     * @param int $mode
+     * @return int
+     */
+    private static function fileMode( $mode )
+    {
+        return method_exists( 'eZFile', 'fileMode' ) ? eZFile::fileMode( $mode ) : (int)$mode;
+    }
+
+    /**
+     * The mode $mode within the limit EZP_DIR_MODE_MAX of the kernel (eZDir::dirMode()); on a kernel without that
+     * helper $mode as it is.
+     *
+     * @param int $mode
+     * @return int
+     */
+    private static function dirMode( $mode )
+    {
+        return method_exists( 'eZDir', 'dirMode' ) ? eZDir::dirMode( $mode ) : (int)$mode;
     }
 }

@@ -96,7 +96,7 @@ class CjwNewsletterLog extends ezcLog
             $path = eZDir::path( array( $logDir, $file ) );
             if( substr(decoct(fileperms($path)), 2) !== $permissions )
             {
-                @chmod($path, $permissions);
+                @chmod($path, self::fileMode( $permissions ));
             }
         }
 
@@ -225,6 +225,17 @@ class CjwNewsletterLog extends ezcLog
         return $this->debug;
     }
 
+    /**
+     * The mode $mode within the limit EZP_FILE_MODE_MAX of the kernel (eZFile::fileMode()); on a kernel without
+     * that helper $mode as it is.
+     *
+     * @param int $mode
+     * @return int
+     */
+    private static function fileMode( $mode )
+    {
+        return method_exists( 'eZFile', 'fileMode' ) ? eZFile::fileMode( $mode ) : (int)$mode;
+    }
 }
 
 ?>
