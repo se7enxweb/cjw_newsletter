@@ -1,5 +1,14 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.4
+=====
+
+Updated
+
+- The newsletter card of the notification settings and the newsletter approval view in the admin4 design draw
+  with the shared administration components of Exponential (components.css): no inline CSS, light and dark
+  mode. The old nf-* classes stay beside the new ones for the site themes that style them.
+
 4.2.3
 =====
 
