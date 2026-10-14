@@ -236,7 +236,7 @@ fb12eeda3c7f08beba53ed2f7379dd7a  design/admin2/templates/cjw_newsletter_edition
 58709ec4f051aa2d337f043b032187cd  design/admin2/templates/includes/cjwnewsletteredition_preview.tpl
 d32e990a22cadba985e18f04bc1a8d53  design/admin2/templates/includes/cjwnewsletteredition_preview_archive.tpl
 99d5cf8f81c9691af6a26b59b498e46a  design/admin2/templates/parts/newsletter/newsletter_menu.tpl
-c6e41afcf1e98777323a88b13e534afd  design/admin4/templates/collaboration/handlers/view/full/cjwnewsletterapproval.tpl
+dd92028d986c5ad3d3090938ee377f57  design/admin4/templates/collaboration/handlers/view/full/cjwnewsletterapproval.tpl
 37c56a83d2f2de84f5480be57dc12933  design/ezwebin/override/templates/node/view/full/cjw_newsletter_edition.tpl
 5ef3acdc869a74be4345cd3aa3399f1d  design/ezwebin/override/templates/node/view/full/cjw_newsletter_list.tpl
 498ec4572e20bba10a5e3ade3b474ee3  design/ezwebin/templates/cjw_newsletter_list_children.tpl
@@ -559,9 +559,9 @@ f0e08e3dc6634ebd8f02d34907e9de2b  design/standard/templates/newsletter/user_edit
 584d712cc8bd3aa4d3d6bb9acdc0f576  design/standard/templates/newsletter/user_list.tpl
 19321ef4d67cdfc56931b9f511d58289  design/standard/templates/newsletter/user_remove.tpl
 acab303e5faef5be2a93cba9d1fa372d  design/standard/templates/newsletter/user_view.tpl
-d3bbdb35c39dd23e4eb6ceed5cbde473  design/standard/templates/notification/handler/cjwnewsletter/parts/lists.tpl
-8422a2da2e9e4662a35f00ba1033feba  design/standard/templates/notification/handler/cjwnewsletter/parts/sms.tpl
-8fd026c2459a04e844c95ce0b2236497  design/standard/templates/notification/handler/cjwnewsletter/settings/edit.tpl
+d54a5da64bdcd9c1f1111c68f294e5c3  design/standard/templates/notification/handler/cjwnewsletter/parts/lists.tpl
+9f6422f949ea666cb53bf5ea1989e1c8  design/standard/templates/notification/handler/cjwnewsletter/parts/sms.tpl
+ede5d8dee2f775addb6fb28908f5e3ac  design/standard/templates/notification/handler/cjwnewsletter/settings/edit.tpl
 14a518d0fb0d6be46b7029997d1604d3  design/standard/templates/notification/handler/ezcollaboration/view/cjwnewsletterapproval/approve.tpl
 c07a685e24ae509e1a869b40433b665e  design/standard/templates/notification/handler/ezcollaboration/view/cjwnewsletterapproval/author.tpl
 8f73de44ca3467a2979841f041d08690  design/standard/templates/parts/newsletter/job.tpl
