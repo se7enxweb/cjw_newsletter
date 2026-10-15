@@ -10,17 +10,17 @@
                  $can_edit=false()
                  $can_create=false()
                  $can_copy=false()
-                 $status = ''}
+                 $cjwnl_status = ''}
 
             {if is_set( $view_parameters.status )}
-                {set $status = $view_parameters.status}
+                {set $cjwnl_status = $view_parameters.status}
             {/if}
 
             {def $children_count=fetch( 'content', 'list_count', hash( 'parent_node_id', $node.node_id,
                                                                   'objectname_filter', $view_parameters.namefilter,
                                                                   'extended_attribute_filter',
                                                                    hash( 'id', 'CjwNewsletterEditionFilter',
-                                                                         'params', hash( 'status', $status )
+                                                                         'params', hash( 'status', $cjwnl_status )
                                                                    ) ) )
                  $children=fetch( 'content', 'list', hash( 'parent_node_id', $node.node_id,
                                                       'sort_by', $node.sort_array,
@@ -29,7 +29,7 @@
                                                       'objectname_filter', $view_parameters.namefilter,
                                                       'extended_attribute_filter',
                                                        hash( 'id', 'CjwNewsletterEditionFilter',
-                                                             'params', hash( 'status', $status ) )
+                                                             'params', hash( 'status', $cjwnl_status ) )
                                                        ) ) }
 
             {* DESIGN: Content START *}<div class="box-ml"><div class="box-mr"><div class="box-content">

@@ -72,7 +72,7 @@
                             <span class="node-name-normal">{'Subscriptions Filter (%approved/%all)'|i18n( 'cjw_newsletter/contentstructuremenu',, hash( '%approved', concat( '<b>', $subcription_user_statistic.approved, '</b>' ), '%all', $subcription_user_statistic.all ) )}</span>
                         </a>
                     </li>
-                    {undef $subcripion_user_statistic}
+                    {undef $subcription_user_statistic}
 
                 {else}
 
@@ -85,7 +85,7 @@
                             <span class="node-name-normal">{'Subscriptions'|i18n('cjw_newsletter/contentstructuremenu')} (<b>{$subcription_user_statistic.approved}</b>/{$subcription_user_statistic.all})</span>
                         </a>
                     </li>
-                    {undef $subcripion_user_statistic}
+                    {undef $subcription_user_statistic}
                 {/if}
 
                 {* draft *}

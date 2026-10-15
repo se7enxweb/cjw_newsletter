@@ -11,10 +11,10 @@
                  $can_edit=false()
                  $can_create=false()
                  $can_copy=false()
-                 $status = ''}
+                 $cjwnl_status = ''}
 
             {if is_set( $view_parameters.status )}
-                {set $status = $view_parameters.status}
+                {set $cjwnl_status = $view_parameters.status}
             {/if}
 
             {def
@@ -25,7 +25,7 @@
                                                                   'objectname_filter', $view_parameters.namefilter,
                                                                   'extended_attribute_filter',
                                                                    hash( 'id', 'CjwNewsletterEditionFilter',
-                                                                         'params', hash( 'status', $status )
+                                                                         'params', hash( 'status', $cjwnl_status )
                                                                    ) ) )
                  $children=fetch( 'content', 'list', hash( 'parent_node_id', $node.node_id,
                                                       'class_filter_type', 'include',
@@ -36,7 +36,7 @@
                                                       'objectname_filter', $view_parameters.namefilter,
                                                       'extended_attribute_filter',
                                                        hash( 'id', 'CjwNewsletterEditionFilter',
-                                                             'params', hash( 'status', $status ) )
+                                                             'params', hash( 'status', $cjwnl_status ) )
                                                        ) ) }
 
             {* DESIGN: Header START *}<div class="box-header"><div class="box-tc"><div class="box-ml"><div class="box-mr"><div class="box-tl"><div class="box-tr">

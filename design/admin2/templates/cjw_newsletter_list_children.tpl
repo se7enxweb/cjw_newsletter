@@ -25,10 +25,10 @@
 <input type="hidden" name="ContentNodeID" value="{$node.node_id}" />
 *}
 
-    {def $status = ''}
+    {def $cjwnl_status = ''}
 
     {if is_set( $view_parameters.status )}
-        {set $status = $view_parameters.status}
+        {set $cjwnl_status = $view_parameters.status}
     {/if}
 
     {set $children_count=fetch( 'content', 'list_count', hash( 'parent_node_id', $node.node_id,
@@ -37,7 +37,7 @@
                                                                   'objectname_filter', $view_parameters.namefilter,
                                                                   'extended_attribute_filter',
                                                                    hash( 'id', 'CjwNewsletterEditionFilter',
-                                                                         'params', hash( 'status', $status )
+                                                                         'params', hash( 'status', $cjwnl_status )
                                                                    ) ) )
                  $children=fetch( 'content', 'list', hash( 'parent_node_id', $node.node_id,
                                                       'class_filter_type', 'include',
@@ -49,7 +49,7 @@
                                                       'objectname_filter', $view_parameters.namefilter,
                                                       'extended_attribute_filter',
                                                        hash( 'id', 'CjwNewsletterEditionFilter',
-                                                             'params', hash( 'status', $status ) )
+                                                             'params', hash( 'status', $cjwnl_status ) )
                                                        ) )}
 
 
@@ -101,7 +101,7 @@
     {* newsletter list selection *}
     <p class="table-preferences">
 
-    {if $status|eq('')}
+    {if $cjwnl_status|eq('')}
         <span class="current">{'All'|i18n('cjw_newsletter/cjw_newsletter_list')}</span>
     {else}
         <a href={concat( $node.url_alias,'')|ezurl}>
@@ -109,7 +109,7 @@
         </a>
     {/if}
 
-    {if $status|eq('draft')}
+    {if $cjwnl_status|eq('draft')}
         <span class="current"><img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_draft.png'|ezdesign} width="12" height="12" /> {'Draft'|i18n('cjw_newsletter/contentstructuremenu')}</span>
     {else}
         <a href={concat( $node.url_alias, '/(status)/draft' )|ezurl}>
@@ -117,7 +117,7 @@
         </a>
     {/if}
 
-    {if $status|eq('process')}
+    {if $cjwnl_status|eq('process')}
         <span class="current"><img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_process.png'|ezdesign} width="12" height="12" /> {'Sending'|i18n('cjw_newsletter/contentstructuremenu')}</span>
     {else}
         <a href={concat( $node.url_alias, '/(status)/process' )|ezurl}>
@@ -125,7 +125,7 @@
         </a>
     {/if}
 
-    {if $status|eq('archive')}
+    {if $cjwnl_status|eq('archive')}
         <span class="current"><img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_archive.png'|ezdesign} width="12" height="12" /> {'Archived'|i18n('cjw_newsletter/contentstructuremenu')}</span>
     {else}
         <a href={concat( $node.url_alias, '/(status)/archive' )|ezurl}>
@@ -133,7 +133,7 @@
         </a>
     {/if}
 
-    {if $status|eq('abort')}
+    {if $cjwnl_status|eq('abort')}
         <span class="current"><img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_abort.png'|ezdesign} width="12" height="12" /> {'Aborted'|i18n('cjw_newsletter/contentstructuremenu')}</span>
     {else}
         <a href={concat( $node.url_alias, '/(status)/abort' )|ezurl}>
@@ -451,5 +451,5 @@ jQuery('#ezasi-sort-field, #ezasi-sort-order').each( function(){
 
 <!-- Children END -->
 
-{undef $item_type $number_of_items $can_remove $can_move $can_edit $can_create $can_copy $current_path $admin_children_viewmode $children_count $children}
+{undef $item_type $number_of_items $can_remove $can_move $can_edit $can_create $can_copy $current_path $admin_children_viewmode $children_count $children $cjwnl_status}
 </div>

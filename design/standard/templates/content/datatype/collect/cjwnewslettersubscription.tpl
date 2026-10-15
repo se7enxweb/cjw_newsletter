@@ -82,7 +82,7 @@ content/datatype/collect/cjwnewslettersubscription.tpl
                              $removed = 0
                              $subscription = null
                              $list_selected_output_format_array = array()
-                             $status = 0
+                             $cjwnl_status = 0
                              $is_removed = true()
                              $subscription_hash = ''
                              $td_counter = 0}
@@ -94,7 +94,7 @@ content/datatype/collect/cjwnewslettersubscription.tpl
                                  $confirmed = $subscription.confirmed
                                  $removed = $subscription.removed
                                  $approved = $subscription.approved
-                                 $status = $subscription.status
+                                 $cjwnl_status = $subscription.status
                                  $is_removed = $subscription.is_removed
                                  $subscription_hash = $subscription.hash}
 
@@ -104,7 +104,7 @@ content/datatype/collect/cjwnewslettersubscription.tpl
 
                         {if $list_output_format_array|count|ne(0)}
                             <td>
-                                {*<li>status: ({$status|wash}) - confirmed( {if $confirmed|ne(0)} {$confirmed|datetime( 'custom', '%j.%m.%Y %H:%i' )}{else} n/a {/if}) | approved({if $approved|ne(0)}  {$approved|datetime( 'custom', '%j.%m.%Y %H:%i' )} {else} n/a {/if}) | removed({if $removed|ne(0)}  {$removed|datetime( 'custom', '%j.%m.%Y %H:%i' )} {else} n/a {/if})<br>*}
+                                {*<li>status: ({$cjwnl_status|wash}) - confirmed( {if $confirmed|ne(0)} {$confirmed|datetime( 'custom', '%j.%m.%Y %H:%i' )}{else} n/a {/if}) | approved({if $approved|ne(0)}  {$approved|datetime( 'custom', '%j.%m.%Y %H:%i' )} {else} n/a {/if}) | removed({if $removed|ne(0)}  {$removed|datetime( 'custom', '%j.%m.%Y %H:%i' )} {else} n/a {/if})<br>*}
                                 <input type="hidden" name="Subscription_IdArray[]" value="{$list_id}" title="" />
                                 <input type="checkbox" name="Subscription_ListArray[]" value="{$list_id}"{if and( $is_removed|not , is_set( $subscription_array[ $list_id ] ) )} checked="checked"{/if} title="{$list_node.data_map.title.content|wash}" /> {$list_node.data_map.title.content|wash}
                                 {*$list_node.data_map.newsletter_list|attribute(show)*}
@@ -145,7 +145,7 @@ content/datatype/collect/cjwnewslettersubscription.tpl
                                $removed
                                $subscription
                                $list_selected_output_format_array
-                               $status
+                               $cjwnl_status
                                $is_removed
                                $subscription_hash
                                $td_counter}
