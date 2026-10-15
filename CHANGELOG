@@ -1,5 +1,15 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.5
+=====
+
+Updated
+
+- Names, addresses and values in the newsletter templates are escaped for where they stand: a value escaped for
+  JavaScript inside an onclick attribute (the context menu of an edition, a list or a virtual list) is escaped for
+  HTML as well, and the subscriber names and addresses in the subscription lists and the import view, the sender
+  and test addresses of a list and the node names of the newsletter tree are escaped for HTML.
+
 4.2.4
 =====
 
