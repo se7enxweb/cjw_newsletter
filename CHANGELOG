@@ -1,5 +1,21 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.6
+=====
+
+Updated
+
+- The "HTML / Text" and "Text" tabs of a newsletter edition show the newsletter again on hosts whose PATH "php" is
+  another PHP version than the web server's: [NewsletterSettings] PhpCli=auto (the new default; also an empty
+  value or a bare "php") renders the preview, the test mail and the siteaccess settings with the command line of
+  the running PHP, found by the kernel. Any other value is used as it is.
+- The preview frames are sandboxed (no scripts, no access to the admin page), have a title and take their size
+  from the class cjwnl-preview-frame in cjw_newsletter.css; their canvas stays light in the dark admin theme, and
+  the preview tab panels grow with the frame instead of the fixed 20em scrolling box of the admin tab panels.
+- The edition's tab row follows the kernel: an unset tabs preference means tabs on, and (tab)/preview_<id> in the
+  URL opens that preview. The frames are no longer hidden by the tabs preference when their tab is shown.
+- When a preview cannot be created, the frame says so in one sentence and points to the newsletter error log.
+
 4.2.5
 =====
 
