@@ -8,7 +8,7 @@
 {*<label title="'test1@example.com;test2@example.com'">{"Send Test Newsletter at"|i18n("cjw_newsletter/send")}</label>*}
 
     {* Testemail input*}
-    <input type="text" name="EmailReseiverTestInput" value="{$email_receiver_test}"  title="test1@example.com;test2@example.com" />
+    <input type="text" name="EmailReseiverTestInput" value="{$email_receiver_test|wash}"  title="test1@example.com;test2@example.com" />
 
     <input type="hidden" name="TopLevelNode" value="{$node.object.main_node_id}" />
     <input type="hidden" name="ContentNodeID" value="{$node.node_id}" />

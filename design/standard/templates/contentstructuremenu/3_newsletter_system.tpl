@@ -49,7 +49,7 @@
                 {'cjw_newsletter_system'|class_icon( small )}
 
                 {section show=or( eq($ui_context, 'browse')|not(), eq($:parentNode.object.is_container, true()))}
-                    <a class="nodetext" href={concat( 'content/view/full/',$newsletter_system_node.node_id )|ezurl} title="{$:toolTip}"><span class="node-name-normal">{$newsletter_system_node.name}</span></a>
+                    <a class="nodetext" href={concat( 'content/view/full/',$newsletter_system_node.node_id )|ezurl} title="{$:toolTip}"><span class="node-name-normal">{$newsletter_system_node.name|wash}</span></a>
                 {section-else}
                             <span class="node-name-normal">{$newsletter_system_node.name|wash}</span>
                 {/section}

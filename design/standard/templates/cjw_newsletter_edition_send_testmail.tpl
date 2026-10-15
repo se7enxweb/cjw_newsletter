@@ -18,7 +18,7 @@
 <div class="mainobject-window">
 
     {* Testemail input*}
-    <input class="box" type="text" name="EmailReseiverTestInput" value="{$email_receiver_test}" />
+    <input class="box" type="text" name="EmailReseiverTestInput" value="{$email_receiver_test|wash}" />
 
     <div class="break"></div>{* Terminate overflow bug fix *}
 </div>

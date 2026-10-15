@@ -88,25 +88,25 @@
 <hr>*}
 {* email_sender *}
 {*<label>* {'Newsletter sender email'|i18n('cjw_newsletter/datatype/cjwnewsletterlist')}</label>
-<input type="text" class="halfbox" name="{$attribute_base}_CjwNewsletterList_EmailSender_{$attribute.id}" value="{$email_sender}" />
+<input type="text" class="halfbox" name="{$attribute_base}_CjwNewsletterList_EmailSender_{$attribute.id}" value="{$email_sender|wash}" />
 *}
 {* email_sender_name *}
 {*<label>{'Newsletter sender name'|i18n('cjw_newsletter/datatype/cjwnewsletterlist')}</label>
-<input type="text" class="halfbox" name="{$attribute_base}_CjwNewsletterList_EmailSenderName_{$attribute.id}" value="{$email_sender_name}" />
+<input type="text" class="halfbox" name="{$attribute_base}_CjwNewsletterList_EmailSenderName_{$attribute.id}" value="{$email_sender_name|wash}" />
 *}
 
 {* email_reply_to*}
 {*<label>{'Email reply-to'|i18n('cjw_newsletter/datatype/cjwnewsletterlist')}</label>
-<input type="text" class="halfbox" name="{$attribute_base}_CjwNewsletterList_EmailReplyTo_{$attribute.id}" value="{$email_reply_to}" />
+<input type="text" class="halfbox" name="{$attribute_base}_CjwNewsletterList_EmailReplyTo_{$attribute.id}" value="{$email_reply_to|wash}" />
 *}
 {* email_return_path *}
 {*<label>{'Email return-path'|i18n('cjw_newsletter/datatype/cjwnewsletterlist')}</label>
-<input type="text" class="halfbox" name="{$attribute_base}_CjwNewsletterList_EmailReturnPath_{$attribute.id}" value="{$email_return_path}" />
+<input type="text" class="halfbox" name="{$attribute_base}_CjwNewsletterList_EmailReturnPath_{$attribute.id}" value="{$email_return_path|wash}" />
 *}
 {*<hr>*}
 {* email_reciever_test *}
 {*<label>{'Newsletter default test receiver email'|i18n('cjw_newsletter/datatype/cjwnewsletterlist')}</label>
-<input type="text" class="halfbox" name="{$attribute_base}_CjwNewsletterList_EmailReceiverTest_{$attribute.id}" value="{$email_receiver_test}" />
+<input type="text" class="halfbox" name="{$attribute_base}_CjwNewsletterList_EmailReceiverTest_{$attribute.id}" value="{$email_receiver_test|wash}" />
 
 <hr>*}
 {* skin_name *}

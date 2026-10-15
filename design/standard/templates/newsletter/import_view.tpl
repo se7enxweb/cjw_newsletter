@@ -258,7 +258,7 @@ full view of an newsletter user - with all related data
                                     <a href={concat('content/view/full/', $subscription.newsletter_list.main_node_id)|ezurl}>{$subscription.newsletter_list.name|wash} </a>
                                 </td>
                                 <td>
-                                    <a href={concat('newsletter/user_view/', $subscription.newsletter_user_id)|ezurl}>{$newsletter_user.email} ({$newsletter_user.name|wash}) </a>
+                                    <a href={concat('newsletter/user_view/', $subscription.newsletter_user_id)|ezurl}>{$newsletter_user.email|wash} ({$newsletter_user.name|wash}) </a>
                                 </td>
                                 <td>
                                     {$subscription.output_format_array|implode(', ')}

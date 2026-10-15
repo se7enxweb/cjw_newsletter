@@ -290,7 +290,7 @@
             <td><input type="checkbox" name="SubscriptionIDArray[]" value="{$subscription.id|wash}" title="{'Select subscriber for removal'|i18n( 'cjw_newsletter/subscription_list' )}" /></td>
         *}
             <td>{$subscription.id|wash}</td>
-            <td><a href={concat('newsletter/user_view/',$subscription.newsletter_user.id)|ezurl} title="{$subscription.newsletter_user.first_name} {$subscription.newsletter_user.last_name}">{$subscription.newsletter_user.email}</a></td>
+            <td><a href={concat('newsletter/user_view/',$subscription.newsletter_user.id)|ezurl} title="{$subscription.newsletter_user.first_name|wash} {$subscription.newsletter_user.last_name|wash}">{$subscription.newsletter_user.email|wash}</a></td>
             <td>{$subscription.newsletter_user.first_name|wash}</td>
             <td>{$subscription.newsletter_user.last_name|wash}</td>
             <td>
