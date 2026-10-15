@@ -1,5 +1,18 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.7
+=====
+
+Updated
+
+- The edition list of a newsletter no longer logs "Variable 'status' is already defined" when it is filtered by
+  (status)/draft, process, archive or abort: the node view sets every custom view parameter as a template
+  variable, so the children list (admin2, ezwebin and standard designs) and the subscription datatype's collect
+  and edit templates now use $cjwnl_status.
+- The report and the A/B test page no longer log "Variable 'i18n' is already defined": the included variants
+  table (newsletter/statistics/ab_table.tpl) uses $cjwnl_ab_i18n.
+- The newsletter entry of the content structure menu undefines $subcription_user_statistic under its own name.
+
 4.2.6
 =====
 
