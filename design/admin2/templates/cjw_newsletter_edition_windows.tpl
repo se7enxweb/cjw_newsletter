@@ -8,7 +8,7 @@
 {if $newsletter_edition_status|ne('draft')}
 
     {foreach $output_format_array as $output_format_id => $output_format_name}
-        <div id="node-tab-preview_{$output_format_id}-content" class="tab-content{if $node_tab_index|ne( concat( 'preview_', $output_format_id ) )} hide{else} selected{/if}">
+        <div id="node-tab-preview_{$output_format_id}-content" class="tab-content cjwnl-preview-panel{if $node_tab_index|ne( concat( 'preview_', $output_format_id ) )} hide{else} selected{/if}">
             {include uri='design:cjw_newsletter_edition_preview_archive.tpl' show_output_format_id=$output_format_id}
              <div class="break"></div>
         </div>
@@ -18,7 +18,7 @@
 {else}
 
     {foreach $output_format_array as $output_format_id => $output_format_name}
-        <div id="node-tab-preview_{$output_format_id}-content" class="tab-content{if $node_tab_index|ne( concat( 'preview_', $output_format_id ) )} hide{else} selected{/if}">
+        <div id="node-tab-preview_{$output_format_id}-content" class="tab-content cjwnl-preview-panel{if $node_tab_index|ne( concat( 'preview_', $output_format_id ) )} hide{else} selected{/if}">
             {include uri='design:cjw_newsletter_edition_preview.tpl' show_output_format_id=$output_format_id}
              <div class="break"></div>
         </div>

@@ -10,9 +10,8 @@ newsletter edition vorschau in iframes oder nur links zu den full views
     {def $show_iframes = true()}
 {/if}
 
-{if is_set( $iframe_height )|not() }
-    {def $iframe_height = 200}
-{/if}
+{* The frame shows the newsletter as it is mailed: its own HTML, sandboxed (no scripts, no forms, no access to
+   the admin page), sized by the class cjwnl-preview-frame in cjw_newsletter.css. *}
 
 {* @see in calling tpl def $newsletter_edition_attribute_content = $newsletter_edition_attribute.content *}
 
@@ -29,7 +28,7 @@ newsletter edition vorschau in iframes oder nur links zu den full views
 <img src={concat('newsletter/icons/crystal-newsletter/16x16/preview_', $output_format_id, '.png')|ezimage} title="{$output_format_name}" /> {'Preview'|i18n('cjw_newsletter/cjwnewsletteredition_preview')} "{$output_format_name}"
 [{'Skin'|i18n('cjw_newsletter/cjwnewsletteredition_preview')}: {$skin_name}] <a href={$src_url|ezurl} target="new_{$output_format_id}">[{'Fullscreen'|i18n('cjw_newsletter/cjwnewsletteredition_preview')}]</a>
 {if $show_iframes}
-    <iframe src={$src_url|ezurl} width="100%" height="{$iframe_height}" name="EDITION_PREVIEW_{$output_format_id}">
+    <iframe class="cjwnl-preview-frame" src={$src_url|ezurl} sandbox="allow-popups allow-popups-to-escape-sandbox" referrerpolicy="same-origin" title="{'Preview of the output format %name'|i18n( 'cjw_newsletter/cjwnewsletteredition_preview',, hash( '%name', $output_format_name ) )|wash}" name="EDITION_PREVIEW_{$output_format_id}">
         <p>{'your browser does not support iframes!'|i18n( 'cjw_newsletter/cjwnewsletteredition_preview' )}</p>
     </iframe>
 {/if}

@@ -581,6 +581,10 @@
         <source>your browser does not support iframes!</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Preview of the output format %name</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/cjwnewsletteredition_preview_archive</name>
@@ -1627,6 +1631,10 @@ To edit your newsletter settings please visit the following link:
     </message>
     <message>
         <source>Email subject</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The preview of this newsletter could not be created. The newsletter error log has the reason.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

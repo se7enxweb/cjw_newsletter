@@ -129,7 +129,15 @@ class Preview extends \Exponential\Runnable\ModuleView
 
         if( !is_array( $newsletterContentArray ) || !empty( $newsletterContentArray['error'] ) )
         {
-            return $this->viewResult( isset( $Result ) ? $Result : null,  $module->handleError( \eZError::KERNEL_NOT_FOUND, 'kernel' ) );
+            // the preview is shown in a frame of the edition's tab: a short page that says what happened, not a
+            // whole admin page with "not found" inside the frame (the reason is in the newsletter error log)
+            http_response_code( 500 );
+            header( "Content-type: text/html; charset=utf-8" );
+            echo '<!DOCTYPE html><html><head><meta charset="utf-8"><title>'
+                . htmlspecialchars( \ezpI18n::tr( 'cjw_newsletter/preview', 'Newsletter preview' ), ENT_QUOTES, 'UTF-8' ) . '</title></head><body><p>'
+                . htmlspecialchars( \ezpI18n::tr( 'cjw_newsletter/preview', 'The preview of this newsletter could not be created. The newsletter error log has the reason.' ), ENT_QUOTES, 'UTF-8' )
+                . '</p></body></html>';
+            return $this->viewResult( null, \eZExecution::cleanExit() );
         }
 
         if( $newsletterContentArray['content_type'] == 'text/html' )

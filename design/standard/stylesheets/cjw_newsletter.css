@@ -49,3 +49,26 @@
   background-image: url(../images/newsletter/icons/subscription_status_icons_12x12.png);
   background-repeat: no-repeat;
 }
+
+/* The preview frame of an edition (HTML / Text and Text tabs, and the archive preview). It shows the newsletter
+   as it is mailed, so its canvas stays light in the dark admin theme too: a mail has a white page, and the text
+   version sets no background of its own. The edge and the radius follow the admin tokens. */
+.cjwnl-preview-frame {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 70vh;
+  min-height: 24em;
+  margin: 0.5em 0 1em;
+  border: 1px solid var(--a4-line, #d5d9df);
+  border-radius: var(--a4-radius, 4px);
+  background: #fff;
+  color-scheme: light;
+}
+
+/* A preview tab's panel grows with its frame: the admin designs' tab panels are fixed 20em boxes that scroll
+   (div.tab-content in pagelayout.css), which cut the 70vh frame to a strip. */
+div.tab-content.cjwnl-preview-panel {
+  height: auto;
+  overflow-y: visible;
+}

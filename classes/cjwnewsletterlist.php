@@ -399,9 +399,7 @@ class CjwNewsletterList extends eZPersistentObject
     {
         $iniObject = NULL;
 
-        // $phpCli = 'php';
-        $cjwNewsletterIni = eZINI::instance('cjw_newsletter.ini');
-        $phpCli = $cjwNewsletterIni->variable('NewsletterSettings', 'PhpCli' );
+        $phpCli = CjwNewsletterEdition::phpCli();
 
         $args = array( escapeshellarg( $phpCli ),
                        escapeshellarg( 'extension/cjw_newsletter/bin/php/iniloader.php' ),

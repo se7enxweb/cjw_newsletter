@@ -597,6 +597,10 @@
         <source>Archived</source>
         <translation>Archivé</translation>
     </message>
+    <message>
+        <source>Preview of the output format %name</source>
+        <translation>Aperçu du format de sortie %name</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/cjwnewsletteredition_preview_archive</name>
@@ -1719,6 +1723,10 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     <message>
         <source>Email subject</source>
         <translation>Sujet d&apos;email</translation>
+    </message>
+    <message>
+        <source>The preview of this newsletter could not be created. The newsletter error log has the reason.</source>
+        <translation>L&apos;aperçu de cette newsletter n&apos;a pas pu être créé. Le journal d&apos;erreurs de la newsletter en indique la raison.</translation>
     </message>
 </context>
 <context>

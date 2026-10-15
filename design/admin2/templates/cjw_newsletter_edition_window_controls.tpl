@@ -1,6 +1,7 @@
 {* Window controls *}
 {def $node_url_alias      = $node.url_alias
-     $tabs_disabled       = ezpreference( 'admin_navigation_content' )|not
+     $tabs_disabled       = false()
+     $admin_navigation_content_pref = ezpreference( 'admin_navigation_content' )
      $default_tab         = 'view'
      $node_tab_index      = first_set( $view_parameters.tab, $default_tab )
      $read_open_tab_by_cookie = true()
@@ -11,8 +12,15 @@
      $states_count        = $states|count
      $related_objects_count = fetch( 'content', 'related_objects_count', hash( 'object_id', $node.object.id , 'all_relations', true() ) )
      $reverse_related_objects_count = fetch( 'content', 'reverse_related_objects_count', hash( 'object_id', $node.object.id , 'all_relations', true() ) )
-     $valid_tabs = array( $default_tab, 'details', 'translations', 'locations', 'relations', 'states' )
+     $valid_tabs = array( $default_tab, 'details', 'translations', 'locations', 'relations', 'states', 'ordering' )
 }
+
+{* As in the kernel's window_controls.tpl: the tabs are on unless the user switched them off (an unset preference
+   is on), and every preview tab of an output format can be opened by its (tab) in the URL. *}
+{if $admin_navigation_content_pref|is_string}{set $tabs_disabled = $admin_navigation_content_pref|not}{/if}
+{foreach $output_format_array as $output_format_id => $output_format_name}
+    {set $valid_tabs = $valid_tabs|append( concat( 'preview_', $output_format_id ) )}
+{/foreach}
 
 {if $tabs_disabled}
     <div class="button-left"><a id="maincontent-show" class="show-hide-tabs" href={'/user/preferences/set/admin_navigation_content/1'|ezurl} title="{'Enable &quot;Tabs&quot; by default while browsing content.'|i18n( 'design/admin/parts/my/menu' )}">+</a></div>

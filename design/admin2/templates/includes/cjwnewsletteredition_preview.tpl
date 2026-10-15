@@ -7,9 +7,8 @@
     {def $show_iframes = true()}
 {/if*}
 
-{if is_set( $iframe_height )|not() }
-    {def $iframe_height = 200}
-{/if}
+{* The frame shows the newsletter as it is mailed: its own HTML, sandboxed (no scripts, no forms, no access to
+   the admin page), sized by the class cjwnl-preview-frame in cjw_newsletter.css. *}
 
 
 {foreach $output_format_array as $output_format_id => $output_format_name}
@@ -24,7 +23,7 @@
 
 
 {if $show_iframes}
-    <iframe src={$src_url|ezurl} width="100%" height="{$iframe_height}" name="EDITION_PREVIEW_{$output_format_id}">
+    <iframe class="cjwnl-preview-frame" src={$src_url|ezurl} sandbox="allow-popups allow-popups-to-escape-sandbox" referrerpolicy="same-origin" title="{'Preview of the output format %name'|i18n( 'cjw_newsletter/cjwnewsletteredition_preview',, hash( '%name', $output_format_name ) )|wash}" name="EDITION_PREVIEW_{$output_format_id}">
         <p>{'your browser does not support iframes!'|i18n( 'cjw_newsletter/cjwnewsletteredition_preview' )}</p>
     </iframe>
 {/if}

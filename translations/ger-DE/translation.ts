@@ -637,6 +637,10 @@
         <source>your browser does not support iframes!</source>
         <translation>Ihr Browser unterstützt keine iframes!</translation>
     </message>
+    <message>
+        <source>Preview of the output format %name</source>
+        <translation>Vorschau des Ausgabeformats %name</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/cjwnewsletteredition_preview_archive</name>
@@ -1924,6 +1928,10 @@ Zur Bearbeitung der Newslettereinstellungen bitte auf folgenden Link klicken:
     <message>
         <source>Email subject</source>
         <translation>E-Mail-Betreff</translation>
+    </message>
+    <message>
+        <source>The preview of this newsletter could not be created. The newsletter error log has the reason.</source>
+        <translation>Die Vorschau dieses Newsletters konnte nicht erstellt werden. Der Grund steht im Fehlerprotokoll des Newsletters.</translation>
     </message>
 </context>
 <context>

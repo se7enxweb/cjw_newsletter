@@ -576,6 +576,10 @@
         <source>Archived</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Preview of the output format %name</source>
+        <translation>Forhåndsvisning av utdataformatet %name</translation>
+    </message>
 </context>
 <context>
     <name>cjw_newsletter/cjwnewsletteredition_preview_archive</name>
@@ -1573,6 +1577,10 @@ To edit your newsletter settings please visit the following link:
         <location filename="preview_archive.php" line="70"/>
         <source>Email subject</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The preview of this newsletter could not be created. The newsletter error log has the reason.</source>
+        <translation>Forhåndsvisningen av dette nyhetsbrevet kunne ikke lages. Årsaken står i feilloggen for nyhetsbrevet.</translation>
     </message>
 </context>
 <context>

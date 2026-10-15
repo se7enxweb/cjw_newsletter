@@ -476,6 +476,27 @@ class CjwNewsletterEdition extends eZPersistentObject
     }
 
     /**
+     * The PHP command line the preview, the test mail and the siteaccess settings are rendered with
+     * ([NewsletterSettings] PhpCli). "auto" (the default), an empty value or a bare "php" mean the command line of
+     * the PHP that serves the request, as the kernel finds it: a bare "php" on the PATH is often another version
+     * than the web server's (the system PHP next to a hosting panel's PHP), and the child script then stops at
+     * Composer's platform check before it renders anything, which left the preview tab empty. Any other value is
+     * a path or command an installation chose and is used as it is.
+     *
+     * @return string
+     */
+    static function phpCli()
+    {
+        $phpCli = trim( (string)eZINI::instance( 'cjw_newsletter.ini' )->variable( 'NewsletterSettings', 'PhpCli' ) );
+        if ( $phpCli === '' || $phpCli === 'auto' || $phpCli === 'php' )
+        {
+            $found = class_exists( 'expProcessTools' ) ? expProcessTools::phpCli() : false;
+            $phpCli = is_string( $found ) && $found !== '' ? $found : 'php';
+        }
+        return $phpCli;
+    }
+
+    /**
      * Generate text html of a output for preview and sending email
      *
      * @see classes/cjwnewslettermail.php getAllOutputFormatTextByContentObjectVersion()
@@ -512,8 +533,7 @@ class CjwNewsletterEdition extends eZPersistentObject
         if ( $skinName == '' )
             $skinName = 'default';
 
-        $cjwNewsletterIni = eZINI::instance( 'cjw_newsletter.ini' );
-        $phpCli = $cjwNewsletterIni->variable( 'NewsletterSettings', 'PhpCli' );
+        $phpCli = self::phpCli();
 
         $currentHostName = eZSys::hostname();
         $wwwDir = eZSys::wwwDir();

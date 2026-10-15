@@ -1,11 +1,8 @@
 {*'Newsletter edition preview archive'|i18n( 'cjw_newsletter/cjw_newsletter_edition_status' )*}
 {*def $editionAttributeContent = $editionAttribute.content
 $editionStatus = $editionAttributeContent.status*}
+{* The frames are shown whenever this tab is: with the tabs switched off the tab is not on the page at all. *}
 {def $show_iframes = true()}
-
-{if ezpreference( 'admin_navigation_content' )|eq(0)}
-    {set $show_iframes = false()}
-{/if}
 <div class="mainobject-window">
     {* show iframes  or icon list *}
     {include uri="design:includes/cjwnewsletteredition_preview_archive.tpl" newsletter_edition_attribute=$newsletter_edition_attribute show_iframes=$show_iframes height="100" show_output_format_id=$show_output_format_id}

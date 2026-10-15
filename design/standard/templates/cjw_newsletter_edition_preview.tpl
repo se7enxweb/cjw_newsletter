@@ -28,9 +28,6 @@
                             $editionStatus = $editionAttributeContent.status*}
                             {* show nl preview if standard ez content preview is active *}
                             {def $show_iframes = true()}
-                            {if ezpreference( 'admin_navigation_content' )|eq(0)}
-                            {set $show_iframes = false()}
-                            {/if}
                             <div class="mainobject-window">
                                 {* show iframes or icon list *}
                                 {include uri="design:includes/cjwnewsletteredition_preview.tpl" newsletter_edition_attribute=$newsletter_edition_attribute show_iframes=$show_iframes height="100"}
