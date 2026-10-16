@@ -1,5 +1,13 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.8
+=====
+
+Added
+
+- Spanish (Spain and Mexico), Hebrew, Latin and Klingon administration translations (esl-ES, esl-MX, heb-IL,
+  lat-VA, tlh-QO). They are complete and machine-assisted, and would benefit from review by native speakers.
+
 4.2.7
 =====
 

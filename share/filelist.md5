@@ -1,10 +1,10 @@
 name: cjw_newsletter
-version: 4.2.7
-files_count: 689
+version: 4.2.8
+files_count: 694
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
 aa9ea80af84e6cba65e0764a80b56e16  .gitignore
-67c5736f951a48ba944abc8466b1442f  CHANGELOG
+10f6d1109166135ddccfb2f8f96bced6  CHANGELOG
 90ef4496589ac9dd18ee5e5d98e0bb4c  FAQ
 694a2892d8ff79eca1ecaf3cdcfe9a50  INSTALL
 0636e73ff0215e8d672dc4c32c317bb3  LICENSE
@@ -591,8 +591,8 @@ cf1036b2d3360f8e36d7462c0c58eaa8  doc/uml/cjw_newsletter_dbschema_v1.0.0.png
 f90eec2d1f019a7db9a9dfb9d9632d42  doc/upgrade-4.2.md
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
 782edd7ce72084d23e44e94ae248d722  extendedattributefilter/cjwnewsletterlistfilter.php
-4389924c1f3f5ccb702bbc1c2427f7e4  extension.xml
-ff22847f04407dec4455c9273d52e4d3  ezinfo.php
+39ef4fed4354d38a2688af4ed55ad311  extension.xml
+6bbca3c0e7f6a162bd1869eaf78bbdfc  ezinfo.php
 90bbccd4a9f3f11f423a5371db08cc5b  modules/newsletter/ab_test.php
 58407deb615ce3169e78a3ebb276bfc8  modules/newsletter/approval.php
 497b5da0906ba7711bb1c1bf1e7992de  modules/newsletter/archive.php
@@ -679,9 +679,14 @@ e0fb0db8bc7127f92f518c510b43fe13  settings/websitetoolbar.ini.append.php
 600638220be48f5dc740aeffc97fa7dc  sql/postgresql/schema.sql
 3e40c5ef67d2b6bbcd22c0b5cbbbbef1  sql/sqlite/schema.sql
 ca904215d429cfd3383b26e85033a322  translations/eng-US/translation.ts
+774bcebcbe58171e7f01f9313285be1e  translations/esl-ES/translation.ts
+16e23a43e5496e196d80f8eda62d4621  translations/esl-MX/translation.ts
 b3a4c7d5ccd2b4281f7d9dce4b491cf1  translations/fre-FR/translation.ts
 cd841d15d0f4269e5b79964246eb7938  translations/ger-DE/translation.ts
+a15b848e3f318fc892f3abb969f1fb41  translations/heb-IL/translation.ts
+1d9ce4c39becd184202fc4254de538b8  translations/lat-VA/translation.ts
 1cdc418c806794d06cded6acaa52aa0a  translations/nor-NO/translation.ts
+e3dc192e1589eb0b5ea5e585afe4ee3c  translations/tlh-QO/translation.ts
 7c1190dd5aa5aad6977dc53a1387bdf3  translations/untranslated/translation.ts
 8467fc444a55eb51e0864b1cc6d2dfcf  update/database/mysql/1.0/unstable/dbupdate-1.0.0beta-to-1.0.0beta2.sql
 dcbc9647a87b9e82edb28c3055b93649  update/database/mysql/1.0/unstable/dbupdate-1.0.0beta2-to-1.0.0rc1.sql
