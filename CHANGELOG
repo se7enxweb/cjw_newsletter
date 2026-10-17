@@ -1,5 +1,28 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.11
+======
+
+Fixed
+
+- The check-all boxes of the blacklist and of the editorial article pool have an aria-label ("Select all"), not
+  only a title (axe: label-title-only).
+- The status icons of the edition filter in the admin2 newsletter list have an empty alt; their text follows them
+  (axe: image-alt).
+- The current page of the pager uses the strong accent (--a4-accent-strong) behind its white number: 5.2:1 instead
+  of 3.1:1.
+
+Updated
+
+- The language flags and the inline forms of the admin2 templates use the classes cjwnl-flag and
+  cjwnl-inline-form of cjw_newsletter.css instead of style="" attributes, which a Content-Security-Policy without
+  'unsafe-inline' for style-src-attr drops.
+
+Added
+
+- tests/cjwNewsletterTemplateAccessibilityTest.php (no database): the check-all boxes have an aria-label, every
+  image has an alt or a title, and the admin2 templates carry no inline CSS.
+
 4.2.10
 ======
 
