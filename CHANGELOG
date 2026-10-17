@@ -1,5 +1,15 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.10
+======
+
+Fixed
+
+- The newsletter/mailbox_item_view and newsletter/subscription_list_csvexport views define their global
+  functions as expModuleViewNewsletterMailboxItemViewDownloadFile and
+  expModuleViewNewsletterSubscriptionListCsvexportDataForCsv instead of the generic downloadFile and getDataForCsv,
+  which a server with persistent workers would have mixed up with other code of the same name.
+
 4.2.9
 =====
 

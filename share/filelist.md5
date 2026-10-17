@@ -1,10 +1,10 @@
 name: cjw_newsletter
-version: 4.2.9
+version: 4.2.10
 files_count: 695
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
 aa9ea80af84e6cba65e0764a80b56e16  .gitignore
-af977782d6932549fd556516d9ac7ffe  CHANGELOG
+ebe56a4a33b5093bcd2f3a483949deeb  CHANGELOG
 90ef4496589ac9dd18ee5e5d98e0bb4c  FAQ
 694a2892d8ff79eca1ecaf3cdcfe9a50  INSTALL
 0636e73ff0215e8d672dc4c32c317bb3  LICENSE
@@ -149,7 +149,7 @@ ef28bad338467959a2cd8eeccf8a6442  classes/runnable/views/newsletter/interest_lis
 0d576cb4102dfd52d3cf87adcff24637  classes/runnable/views/newsletter/job.php
 39e69b7718fa42fe0b2ef3f51257cd7d  classes/runnable/views/newsletter/mailbox_edit.php
 7b45eb04f256c0b1a049489f71ec02af  classes/runnable/views/newsletter/mailbox_item_list.php
-ee7413dbd91b1b901693403515845ae0  classes/runnable/views/newsletter/mailbox_item_view.php
+acd7e405e9db951f9866473bcd76288f  classes/runnable/views/newsletter/mailbox_item_view.php
 8fc7053b46cde04e0d3a139a8a85c185  classes/runnable/views/newsletter/mailbox_list.php
 588a424259a7a3fdb9616bb89d0cc657  classes/runnable/views/newsletter/mailin_address_edit.php
 d1918695ebdb7faabf9f1703f7e06e70  classes/runnable/views/newsletter/mailin_address_list.php
@@ -174,7 +174,7 @@ d68f17796b90e7294c95153fa9e39008  classes/runnable/views/newsletter/sms_confirm.
 1a4db5722eb610c5062e015d6b18b6da  classes/runnable/views/newsletter/subscribe_infomail.php
 3e1c28ee4fd1e17d9072b65fd1155b07  classes/runnable/views/newsletter/subscriber_export.php
 8dbd64b9df722315e434badadf0b4552  classes/runnable/views/newsletter/subscription_list.php
-6efa80253ec8ed68eb657e71cdb4c19f  classes/runnable/views/newsletter/subscription_list_csvexport.php
+5652d3cc5686019fa61715d62573133b  classes/runnable/views/newsletter/subscription_list_csvexport.php
 9637a1c42a749bef43f38f5fc99fe310  classes/runnable/views/newsletter/subscription_list_csvimport.php
 f2b67cc889545db756e5a49da3d6f61b  classes/runnable/views/newsletter/subscription_view.php
 52c0eec0ed3e89a49ae8ca20663c6ddc  classes/runnable/views/newsletter/suppression_import.php
@@ -592,8 +592,8 @@ cf1036b2d3360f8e36d7462c0c58eaa8  doc/uml/cjw_newsletter_dbschema_v1.0.0.png
 f90eec2d1f019a7db9a9dfb9d9632d42  doc/upgrade-4.2.md
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
 782edd7ce72084d23e44e94ae248d722  extendedattributefilter/cjwnewsletterlistfilter.php
-749b1467af1e61a080fbef3674daede0  extension.xml
-dc33738d874ea1548df1a783d0a1620d  ezinfo.php
+57f60cb1c57874a4f6656c454b304b7d  extension.xml
+dc3d3bdcffb76621a421fe01ff98c237  ezinfo.php
 90bbccd4a9f3f11f423a5371db08cc5b  modules/newsletter/ab_test.php
 58407deb615ce3169e78a3ebb276bfc8  modules/newsletter/approval.php
 497b5da0906ba7711bb1c1bf1e7992de  modules/newsletter/archive.php
