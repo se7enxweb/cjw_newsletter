@@ -72,3 +72,9 @@ div.tab-content.cjwnl-preview-panel {
   height: auto;
   overflow-y: visible;
 }
+
+/* Utilities of the admin2 templates, instead of style="" attributes (a Content-Security-Policy without
+   'unsafe-inline' for style-src-attr drops those): the language flag next to the translation name, and a form
+   that sits inline next to other buttons. */
+img.cjwnl-flag { vertical-align: middle; }
+form.cjwnl-inline-form { display: inline; }

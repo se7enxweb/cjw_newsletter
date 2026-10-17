@@ -33,7 +33,7 @@
         <input type="hidden" name="RedirectURI" value="newsletter/blacklist_item_list" />
         <table class="list nl-table">
             <tr>
-                <th class="tight"><input type="checkbox" data-nl-check-all="1" title="{'Select all'|i18n( 'extension/cjw_newsletter' )|wash}" /></th>
+                <th class="tight"><input type="checkbox" data-nl-check-all="1" title="{'Select all'|i18n( 'extension/cjw_newsletter' )|wash}" aria-label="{'Select all'|i18n( 'extension/cjw_newsletter' )|wash}" /></th>
                 <th class="nl-num"><a href={concat( 'newsletter/blacklist_item_list', $qpart, '/(sort)/id/(order)/', cond( eq( $vp.sort, 'id' ), $other_order, 'desc' ) )|ezurl} class="{if eq( $vp.sort, 'id' )}is-sorted{if eq( $vp.order, 'desc' )} is-desc{/if}{/if}">{'ID'|i18n( 'cjw_newsletter/blacklist_item_list' )}</a></th>
                 <th><a href={concat( 'newsletter/blacklist_item_list', $qpart, '/(sort)/email/(order)/', cond( eq( $vp.sort, 'email' ), $other_order, 'asc' ) )|ezurl} class="{if eq( $vp.sort, 'email' )}is-sorted{if eq( $vp.order, 'desc' )} is-desc{/if}{/if}">{'Email'|i18n( 'cjw_newsletter/blacklist_item_list' )}</a></th>
                 <th>{'Newsletter UID'|i18n( 'cjw_newsletter/blacklist_item_list' )}</th>

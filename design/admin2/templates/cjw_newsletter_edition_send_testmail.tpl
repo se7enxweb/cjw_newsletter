@@ -1,6 +1,6 @@
 {def $email_receiver_test = $newsletter_list_attribute_content.email_receiver_test}
 
-<form action={'newsletter/send'|ezurl()} method="post" style="display:inline;">
+<form action={'newsletter/send'|ezurl()} method="post" class="cjwnl-inline-form">
 
 
 

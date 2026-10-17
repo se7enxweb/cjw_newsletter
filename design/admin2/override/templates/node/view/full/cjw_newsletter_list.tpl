@@ -44,7 +44,7 @@
 
 <div class="context-information">
 <p class="left modified">{'Last modified'|i18n( 'design/admin/node/view/full' )}: {$node.object.modified|l10n(shortdatetime)}, <a href={$node.object.current.creator.main_node.url_alias|ezurl}>{$node.object.current.creator.name|wash}</a> ({'Node ID'|i18n( 'design/admin/node/view/full' )}: {$node.node_id}, {'Object ID'|i18n( 'design/admin/node/view/full' )}: {$node.object.id})</p>
-<p class="right translation">{$node.object.current_language_object.locale_object.intl_language_name}&nbsp;<img src="{$node.object.current_language|flag_icon}" alt="{$language_code}" style="vertical-align: middle;" /></p>
+<p class="right translation">{$node.object.current_language_object.locale_object.intl_language_name}&nbsp;<img src="{$node.object.current_language|flag_icon}" alt="{$language_code}" class="cjwnl-flag" /></p>
 <div class="break"></div>
 </div>
 
@@ -155,7 +155,7 @@
 {/if}
 
 
-<form name="CreateNewNewsletterUser" method="post" style="display:inline;" action={'newsletter/user_create'|ezurl}>
+<form name="CreateNewNewsletterUser" method="post" class="cjwnl-inline-form" action={'newsletter/user_create'|ezurl}>
     <input type="hidden" name="Subscription_IdArray[]" value="{$node.contentobject_id}" />
     <input type="hidden" name="Subscription_ListArray[]" value="{$node.contentobject_id}" />
     <input type="hidden" name="RedirectUrlActionCancel" value="{$node.url_alias}" />

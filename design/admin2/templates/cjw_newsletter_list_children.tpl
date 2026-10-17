@@ -110,34 +110,34 @@
     {/if}
 
     {if $cjwnl_status|eq('draft')}
-        <span class="current"><img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_draft.png'|ezdesign} width="12" height="12" /> {'Draft'|i18n('cjw_newsletter/contentstructuremenu')}</span>
+        <span class="current"><img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_draft.png'|ezdesign} width="12" height="12" alt="" /> {'Draft'|i18n('cjw_newsletter/contentstructuremenu')}</span>
     {else}
         <a href={concat( $node.url_alias, '/(status)/draft' )|ezurl}>
-            <img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_draft.png'|ezdesign} width="12" height="12" /> {'Draft'|i18n('cjw_newsletter/contentstructuremenu')}
+            <img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_draft.png'|ezdesign} width="12" height="12" alt="" /> {'Draft'|i18n('cjw_newsletter/contentstructuremenu')}
         </a>
     {/if}
 
     {if $cjwnl_status|eq('process')}
-        <span class="current"><img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_process.png'|ezdesign} width="12" height="12" /> {'Sending'|i18n('cjw_newsletter/contentstructuremenu')}</span>
+        <span class="current"><img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_process.png'|ezdesign} width="12" height="12" alt="" /> {'Sending'|i18n('cjw_newsletter/contentstructuremenu')}</span>
     {else}
         <a href={concat( $node.url_alias, '/(status)/process' )|ezurl}>
-            <img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_process.png'|ezdesign} width="12" height="12" /> {'Sending'|i18n('cjw_newsletter/contentstructuremenu')}
+            <img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_process.png'|ezdesign} width="12" height="12" alt="" /> {'Sending'|i18n('cjw_newsletter/contentstructuremenu')}
         </a>
     {/if}
 
     {if $cjwnl_status|eq('archive')}
-        <span class="current"><img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_archive.png'|ezdesign} width="12" height="12" /> {'Archived'|i18n('cjw_newsletter/contentstructuremenu')}</span>
+        <span class="current"><img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_archive.png'|ezdesign} width="12" height="12" alt="" /> {'Archived'|i18n('cjw_newsletter/contentstructuremenu')}</span>
     {else}
         <a href={concat( $node.url_alias, '/(status)/archive' )|ezurl}>
-            <img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_archive.png'|ezdesign} width="12" height="12" /> {'Archived'|i18n('cjw_newsletter/contentstructuremenu')}
+            <img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_archive.png'|ezdesign} width="12" height="12" alt="" /> {'Archived'|i18n('cjw_newsletter/contentstructuremenu')}
         </a>
     {/if}
 
     {if $cjwnl_status|eq('abort')}
-        <span class="current"><img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_abort.png'|ezdesign} width="12" height="12" /> {'Aborted'|i18n('cjw_newsletter/contentstructuremenu')}</span>
+        <span class="current"><img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_abort.png'|ezdesign} width="12" height="12" alt="" /> {'Aborted'|i18n('cjw_newsletter/contentstructuremenu')}</span>
     {else}
         <a href={concat( $node.url_alias, '/(status)/abort' )|ezurl}>
-            <img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_abort.png'|ezdesign} width="12" height="12" /> {'Aborted'|i18n('cjw_newsletter/contentstructuremenu')}
+            <img src={'images/newsletter/icons/crystal-newsletter/16x16/newsletter_abort.png'|ezdesign} width="12" height="12" alt="" /> {'Aborted'|i18n('cjw_newsletter/contentstructuremenu')}
         </a>
     {/if}
     </p>

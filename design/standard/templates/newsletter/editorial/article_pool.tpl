@@ -71,7 +71,7 @@
             <form method="post" action={concat( $base, $filter_url )|ezurl}>
             <table class="list nl-table nl-ed-articles nl-ed-responsive">
                 <tr class="nl-ed-head">
-                    <th class="tight">{if $locked|not}<input type="checkbox" data-nl-check-all="" title="{'Select all'|i18n( 'cjw_newsletter/editorial' )|wash}" />{/if}</th>
+                    <th class="tight">{if $locked|not}<input type="checkbox" data-nl-check-all="" title="{'Select all'|i18n( 'cjw_newsletter/editorial' )|wash}" aria-label="{'Select all'|i18n( 'cjw_newsletter/editorial' )|wash}" />{/if}</th>
                     <th>{'Title'|i18n( 'cjw_newsletter/editorial' )}</th>
                     <th>{'Class'|i18n( 'cjw_newsletter/editorial' )}</th>
                     <th>{'Section'|i18n( 'cjw_newsletter/editorial' )}</th>
