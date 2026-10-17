@@ -22,14 +22,14 @@
 
 namespace
 {
-if ( !function_exists( 'getDataForCsv' ) ) {
+if ( !function_exists( 'expModuleViewNewsletterSubscriptionListCsvexportDataForCsv' ) ) {
 /**
  * fetch data for csv export
  *
  * @param integer $listContentObjectId
  * @return array with data
  */
-function getDataForCsv( $listContentObjectId, $limit = 0, $module = false )
+function expModuleViewNewsletterSubscriptionListCsvexportDataForCsv( $listContentObjectId, $limit = 0, $module = false )
 {
     if ( isset( $listContentObjectId ) )
     {
@@ -170,7 +170,7 @@ class SubscriptionListCsvexport extends \Exponential\Runnable\ModuleView
          * CSV Preview
          */
         // preview for csv data export, fetch data with limit
-        $arrPreviewCsvData = getDataForCsv( $listContentObjectId, 10, $module );
+        $arrPreviewCsvData = expModuleViewNewsletterSubscriptionListCsvexportDataForCsv( $listContentObjectId, 10, $module );
 
         // create csv string for preview
 
@@ -207,7 +207,7 @@ class SubscriptionListCsvexport extends \Exponential\Runnable\ModuleView
              * Export
              */
             // fetch data
-            $arrCsvData = getDataForCsv( $listContentObjectId, 0, $module );
+            $arrCsvData = expModuleViewNewsletterSubscriptionListCsvexportDataForCsv( $listContentObjectId, 0, $module );
 
             if ( $arrCsvData !== FALSE )
             {

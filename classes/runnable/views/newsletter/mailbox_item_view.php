@@ -20,12 +20,12 @@
 
 namespace
 {
-if ( !function_exists( 'downloadFile' ) ) {
+if ( !function_exists( 'expModuleViewNewsletterMailboxItemViewDownloadFile' ) ) {
 // helpfunction
 /**
  * Passthrough file, and exit cleanly
 */
-function downloadFile( $filePath )
+function expModuleViewNewsletterMailboxItemViewDownloadFile( $filePath )
 {
 
     if( !file_exists( $filePath ) )
@@ -95,7 +95,7 @@ class MailboxItemView extends \Exponential\Runnable\ModuleView
         }
         elseif ( $http->hasVariable( 'DownloadRawMailContent' ) )
         {
-            downloadFile( $mailboxItemObject->getFilePath() );
+            expModuleViewNewsletterMailboxItemViewDownloadFile( $mailboxItemObject->getFilePath() );
         }
         else
         {
