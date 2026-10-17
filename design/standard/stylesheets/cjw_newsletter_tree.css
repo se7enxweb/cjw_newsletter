@@ -1,0 +1,4 @@
+/* The static newsletter tree (contentstructuremenu/1_newsletter_structure_menu.tpl) and the static content tree of
+   the newsletter_admin_ez4.0.0 page layout: the indentation of the levels. */
+div#contentstructure ul#content_tree_menu ul li { padding-left: 0; }
+div#contentstructure ul#content_tree_menu ul ul { margin-left: 20px; }

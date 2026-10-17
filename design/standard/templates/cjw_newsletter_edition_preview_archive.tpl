@@ -57,7 +57,8 @@
                                                                 {* Newsletter button. *}
 
                                                                 {if and( $node.can_remove,$node.data_map.newsletter_edition.content.is_draft )}
-                                                                    <input class="button" type="submit" name="SendNewsletterButton" value="{"Send Newsletter"|i18n("cjw_newsletter/send")}"  onclick="return confirm('{'Do you really want to send out this newsletter to all recipients of this Newsletterlist?'|i18n( 'cjw_newsletter/cjw_newsletter_edition_preview' )}')" />
+                                                                    <input class="button" type="submit" name="SendNewsletterButton" value="{"Send Newsletter"|i18n("cjw_newsletter/send")}" data-nl-confirm-button="{'Do you really want to send out this newsletter to all recipients of this Newsletterlist?'|i18n( 'cjw_newsletter/cjw_newsletter_edition_preview' )|wash}" />
+                                                                    {include uri='design:parts/newsletter/script.tpl'}
                                                                 {/if}
 
                                                             </div>{* Custom content action buttons. *}

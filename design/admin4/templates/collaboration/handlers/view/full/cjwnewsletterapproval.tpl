@@ -102,14 +102,6 @@
 {/if}
     </div>
 </div>
-<script type="text/javascript">
-{literal}
-(function () {
-    var buttons = document.querySelectorAll('#exp-collab [data-cb-confirm]');
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', function (e) { if (!window.confirm(this.getAttribute('data-cb-confirm'))) e.preventDefault(); });
-    }
-})();
-{/literal}
-</script>
+{* The data-cb-confirm buttons ask first (cjw_newsletter.js). *}
+{ezscript( array( 'cjw_newsletter.js' ) )}
 {undef $row $edition $version $ap $picks $current_participant $participant_list $message_list $waiting $title}

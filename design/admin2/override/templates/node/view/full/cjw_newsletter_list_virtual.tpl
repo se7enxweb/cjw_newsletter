@@ -31,7 +31,8 @@
     {/if}
 {/if}
 
-<h1 class="context-title"><a href={concat( '/class/view/', $node.object.contentclass_id )|ezurl} onclick="ezpopmenu_showTopLevel( event, 'ClassMenu', ez_createAArray( new Array( '%classID%', {$node.object.contentclass_id}, '%objectID%', {$node.contentobject_id}, '%nodeID%', {$node.node_id}, '%currentURL%', '{$node.url|wash( javascript )|wash}', '%languages%', {$js_class_languages} ) ), '{$node.class_name|wash(javascript)|wash}', {$disabled_sub_menu}, {$disable_another_language} ); return false;">{$node.class_identifier|class_icon( normal, $node.class_name )}</a>&nbsp;{$node.name|wash}&nbsp;[{$node.class_name|wash}]&nbsp;{$hide_status}</h1>
+<h1 class="context-title"><a href={concat( '/class/view/', $node.object.contentclass_id )|ezurl} data-cjwnl-menu="{json_encode( hash( 'menu', 'ClassMenu', 'values', hash( '%classID%', $node.object.contentclass_id, '%objectID%', $node.contentobject_id, '%nodeID%', $node.node_id, '%currentURL%', $node.url ), 'title', $node.class_name, 'disable', $disabled_sub_menu, 'disableItem', $disable_another_language ) )|wash}" data-cjwnl-menu-languages="{$js_class_languages|wash}">{$node.class_identifier|class_icon( normal, $node.class_name )}</a>&nbsp;{$node.name|wash}&nbsp;[{$node.class_name|wash}]&nbsp;{$hide_status}</h1>
+{ezscript( array( 'cjw_newsletter.js' ) )}
 
 {undef $js_class_languages $disable_another_language $disabled_sub_menu $hide_status}
 

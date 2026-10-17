@@ -47,15 +47,8 @@
 {/if}
 
 </style>
-
 {if ezini('TreeMenu','Dynamic','contentstructuremenu.ini')|ne('enabled')}
-{literal}
-<script language="JavaScript" type="text/javascript">
-<!--
-document.write("<style type='text/css'>div#contentstructure ul#content_tree_menu ul li { padding-left: 0; }div#contentstructure ul#content_tree_menu ul ul { margin-left: 20px; }<\/style>");
--->
-</script>
-{/literal}
+<link rel="stylesheet" type="text/css" href={'stylesheets/cjw_newsletter_tree.css'|ezdesign} />
 {/if}
 
 {literal}
@@ -91,13 +84,7 @@ div#leftmenu-design { margin: 0.5em 4px 0.5em 0.5em; }
 <![endif]-->
 {/literal}
 
-<!--[if gte IE 5.5000]>
-<script type="text/javascript">
-    var emptyIcon16 = {'16x16.gif'|ezimage};
-    var emptyIcon32 = {'32x32.gif'|ezimage};
-</script>
-<script type="text/javascript" src={'javascript/tools/eziepngfix.js'|ezdesign}></script>
-<![endif]-->
+{* The PNG fix of Internet Explorer 5.5 and 6 (an inline script in a conditional comment) is no longer loaded. *}
 
 </head>
 

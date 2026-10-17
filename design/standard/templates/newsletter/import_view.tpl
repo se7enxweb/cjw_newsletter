@@ -163,11 +163,12 @@ full view of an newsletter user - with all related data
                                         {* Edit *}
 
                                         <div class="left">
-                                            <input class="button" type="submit" name="RemoveSubsciptionsByAdminButton" value="{'Remove %count_active_subscriptions active subscriptions by admin'|i18n( 'cjw_newsletter/import_view', ,hash( '%count_active_subscriptions', $imported_subscription_count_live_approved))}" onclick="return confirm('{'Do you really want to set status removed by admin to all active subscriptions (%count_active_subscriptions)?'|i18n( 'cjw_newsletter/import_view', ,hash( '%count_active_subscriptions', $imported_subscription_count_live_approved ) )}')" />
+                                            <input class="button" type="submit" name="RemoveSubsciptionsByAdminButton" value="{'Remove %count_active_subscriptions active subscriptions by admin'|i18n( 'cjw_newsletter/import_view', ,hash( '%count_active_subscriptions', $imported_subscription_count_live_approved))}" data-nl-confirm-button="{'Do you really want to set status removed by admin to all active subscriptions (%count_active_subscriptions)?'|i18n( 'cjw_newsletter/import_view', ,hash( '%count_active_subscriptions', $imported_subscription_count_live_approved ) )|wash}" />
                                         </div>
                                         <div class="right">
                                         </div>
                                         </form>
+                                        {include uri='design:parts/newsletter/script.tpl'}
                                     </div>{* DESIGN: Control bar END *}
                                 </div>
                             </div>

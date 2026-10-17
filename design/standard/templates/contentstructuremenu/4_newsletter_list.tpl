@@ -40,7 +40,7 @@
 
             {* Fold/Unfold/Empty: [-]/[+]/[ ] *}
                    <a class="openclose" href="#" title="{'Fold/Unfold'|i18n('cjw_newsletter/contentstructuremenu')}"
-                      onclick="ezpopmenu_hideAll(); ezcst_onFoldClicked( this.parentNode ); return false;"></a>
+                      data-cjwnl-fold=""></a>
 
             {* Label *}
                     {set toolTip = ''}
@@ -152,7 +152,7 @@
 
 
                    <a class="openclose" href="#" title="{'Fold/Unfold'|i18n('cjw_newsletter/contentstructuremenu')}"
-                      onclick="ezpopmenu_hideAll(); ezcst_onFoldClicked( this.parentNode ); return false;"></a>
+                      data-cjwnl-fold=""></a>
 
                     <span class="openclose"></span>
                     <img src={'images/newsletter/icons/crystal-newsletter/16x16_indexed/actions/view_tree.png'|ezdesign} alt="" />

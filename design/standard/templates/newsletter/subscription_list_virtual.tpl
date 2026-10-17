@@ -270,7 +270,7 @@
         <table class="list" cellspacing="0">
         <tr>
         {*
-            <th class="tight"><img src={'toggle-button-16x16.gif'|ezimage} alt="{'Invert selection'|i18n( 'cjw_newsletter/subscription_list' )}" title="{'Invert selection'|i18n( 'cjw_newsletter/subscription_list' )}" onclick="ezjs_toggleCheckboxes( document.subscription_list, 'SubscriptionIDArray[]' ); return false;" /></th>
+            <th class="tight"><img src={'toggle-button-16x16.gif'|ezimage} alt="{'Invert selection'|i18n( 'cjw_newsletter/subscription_list' )}" title="{'Invert selection'|i18n( 'cjw_newsletter/subscription_list' )}" data-cjwnl-toggle-checkboxes="SubscriptionIDArray[]" data-cjwnl-form="subscription_list" /></th>
         *}
             <th class="tight">{'ID'|i18n('cjw_newsletter/subscription_list')}</th>
             <th>{'Email'|i18n( 'cjw_newsletter/subscription_list' )}</th>

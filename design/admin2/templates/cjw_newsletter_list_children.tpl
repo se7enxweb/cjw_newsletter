@@ -1,4 +1,6 @@
 <div class="content-view-children">
+{* The language choice of "Create here", the sorting button and the selection: cjw_newsletter.js *}
+{ezscript( array( 'cjw_newsletter.js' ) )}
 
 {* Generic children list for admin interface. *}
 {def $item_type    = ezpreference( 'admin_list_limit' )
@@ -258,12 +260,19 @@
 
 
                 {def $can_create_languages = fetch( 'content', 'prioritized_languages' )
-                     $content_locale = ezini( 'RegionalSettings', 'ContentObjectLocale' )}
+                     $content_locale = ezini( 'RegionalSettings', 'ContentObjectLocale' )
+                     $cjwnl_class_languages = array()}
 
                 {if and( is_set( $can_create_languages[0] ), eq( $can_create_languages|count, 1 ) )}
                     <select id="ClassID" name="ClassID" title="{'Use this menu to select the type of item you want to create then click the "Create here" button. The item will be created in the current location.'|i18n( 'design/admin/node/view/full' )|wash()}">
                 {else}
-                    <select id="ClassID" name="ClassID" onchange="updateLanguageSelector(this)" title="{'Use this menu to select the type of item you want to create then click the "Create here" button. The item will be created in the current location.'|i18n( 'design/admin/node/view/full' )|wash()}">
+                    {* the languages each class can be created in, for cjw_newsletter.js: {"<class id>": ["<locale>", ...]} *}
+                    {foreach $can_create_classes as $group}
+                        {foreach $group.items as $class}
+                            {set $cjwnl_class_languages = $cjwnl_class_languages|append( concat( '"', $class.id, '":', json_encode( $class.can_instantiate_languages ) ) )}
+                        {/foreach}
+                    {/foreach}
+                    <select id="ClassID" name="ClassID" data-cjwnl-languages="{ldelim}{$cjwnl_class_languages|implode( ',' )|wash}{rdelim}" title="{'Use this menu to select the type of item you want to create then click the "Create here" button. The item will be created in the current location.'|i18n( 'design/admin/node/view/full' )|wash()}">
                 {/if}
                     {foreach $can_create_classes as $group}
                         <optgroup label="{$group.group_name}">
@@ -280,7 +289,7 @@
                     <input name="ContentLanguageCode" value="{$can_create_languages[0].locale}" type="hidden" />
                 {else}
                     <label for="ClassContentLanguageCode" class="inline">{'in'|i18n( 'design/admin/node/view/full' )}</label>
-                    <select id="ClassContentLanguageCode" name="ContentLanguageCode" onchange="checkLanguageSelector(this)" title="{'Use this menu to select the language you want to use for the creation then click the "Create here" button. The item will be created in the current location.'|i18n( 'design/admin/node/view/full' )|wash()}">
+                    <select id="ClassContentLanguageCode" name="ContentLanguageCode" data-cjwnl-language-select="" title="{'Use this menu to select the language you want to use for the creation then click the "Create here" button. The item will be created in the current location.'|i18n( 'design/admin/node/view/full' )|wash()}">
                         {foreach $can_create_languages as $tmp_language}
                             <option value="{$tmp_language.locale|wash()}"{if $content_locale|eq( $tmp_language.locale )} selected="selected"{/if}>{$tmp_language.name|wash()}</option>
                         {/foreach}
@@ -290,87 +299,7 @@
                 <input class="button" type="submit" name="NewButton" value="{'Here'|i18n( 'design/admin/node/view/full' )}" title="{'Create a new item in the current location. Use the menu on the left to select the type of  item.'|i18n( 'design/admin/node/view/full' )}" />
                 <input type="hidden" name="ViewMode" value="full" />
 
-                {if ne( $can_create_languages|count, 1 )}
-                <script type="text/javascript">
-                <!--
-                    {literal}
-                    function updateLanguageSelector( classSelector )
-                    {
-                        var languageSelector = classSelector.form.ContentLanguageCode;
-                        if ( !languageSelector )
-                        {
-                            return;
-                        }
-
-                        var classID = classSelector.value, languages = languagesByClassID[classID], candidateIndex = -1;
-                        for ( var index = 0, length = languageSelector.options.length; index < length; index++ )
-                        {
-                            var value = languageSelector.options[index].value, disabled = true;
-
-                            for ( var indexj = 0, lengthj = languages.length; indexj < lengthj; indexj++ )
-                            {
-                                if ( languages[indexj] == value )
-                                {
-                                    disabled = false;
-                                    break;
-                                }
-                            }
-
-                            if ( !disabled && candidateIndex == -1 )
-                            {
-                                candidateIndex = index;
-                            }
-
-                            languageSelector.options[index].disabled = disabled;
-                            if ( disabled )
-                            {
-                                languageSelector.options[index].style.color = '#888';
-                                if ( languageSelector.options[index].text.substring( 0, 1 ) != '(' )
-                                {
-                                    languageSelector.options[index].text = '(' + languageSelector.options[index].text + ')';
-                                }
-                            }
-                            else
-                            {
-                                languageSelector.options[index].style.color = '#000';
-                                if ( languageSelector.options[index].text.substring( 0, 1 ) == '(' )
-                                {
-                                    languageSelector.options[index].text = languageSelector.options[index].text.substring( 1, languageSelector.options[index].text.length - 1 );
-                                }
-                            }
-                        }
-
-                        if ( languageSelector.options[languageSelector.selectedIndex].disabled )
-                        {
-                            window.languageSelectorIndex = candidateIndex;
-                            languageSelector.selectedIndex = candidateIndex;
-                        }
-                    }
-
-                    function checkLanguageSelector( languageSelector )
-                    {
-                        if ( languageSelector.options[languageSelector.selectedIndex].disabled )
-                        {
-                            languageSelector.selectedIndex = window.languageSelectorIndex;
-                            return;
-                        }
-                        window.languageSelectorIndex = languageSelector.selectedIndex;
-                    }
-
-                    setTimeout( function() { updateLanguageSelector( document.getElementById( 'ClassID' ) ); }, 100 );
-
-                    var languagesByClassID = {};
-                    {/literal}
-
-                    {foreach $can_create_classes as $group}
-                        {foreach $group.items as $class}
-                        languagesByClassID[{$class.id}] = [ {foreach $class.can_instantiate_languages as $tmp_language}'{$tmp_language}'{delimiter}, {/delimiter} {/foreach} ];
-                        {/foreach}
-                    {/foreach}
-                // -->
-                </script>
-                {/if}
-                {undef $can_create_languages $can_create_classes}
+                {undef $can_create_languages $can_create_classes $cjwnl_class_languages}
             {else}
                 <select id="ClassID" name="ClassID" disabled="disabled">
                 <option value="">{'Not available'|i18n( 'design/admin/node/view/full' )}</option>
@@ -412,7 +341,7 @@
                 <option value="1"{if eq($node.sort_order, 1)} selected="selected"{/if}>{'Ascending'|i18n( 'design/admin/node/view/full' )}</option>
             </select>
 
-            <input  id="ezasi-sort-set" {if $disabled}class="button-disabled"{else}class="button"{/if} type="submit" name="SetSorting" value="{'Set'|i18n( 'design/admin/node/view/full' )}" title="{$title}" {$disabled} />
+            <input  id="ezasi-sort-set"{if is_set( $viewmode_newsletter )|not} data-cjwnl-sort-highlight=""{/if} {if $disabled}class="button-disabled"{else}class="button"{/if} type="submit" name="SetSorting" value="{'Set'|i18n( 'design/admin/node/view/full' )}" title="{$title}" {$disabled} />
 
             {/let}
         </fieldset>
@@ -424,30 +353,6 @@
 {*</form>*}
 
 
-{* hide subitems functions *}
-{if and( $children_count|ne( 0 ), is_set( $viewmode_newsletter )|not )}
-
-
-
-
-{* Highlight "SetSorting" button on change *}
-{literal}
-<script type="text/javascript">
-jQuery('#ezasi-sort-field, #ezasi-sort-order').each( function(){
-        jQuery( this ).attr( 'initial', this.value );
-} ).on('change', function(){
-        var t = $(this), o = $(this.id === 'ezasi-sort-field' ? '#ezasi-sort-order' : '#ezasi-sort-field'), s = $('#ezasi-sort-set');
-        // signal in gui if user needs to save this or not
-        if ( t.val() === t.attr('initial') && o.val() === o.attr('initial') )
-                s.removeClass('defaultbutton').addClass('button');
-        else
-                s.removeClass('button').addClass('defaultbutton');
-});
-</script>
-{/literal}
-
-
-{/if}
 
 <!-- Children END -->
 

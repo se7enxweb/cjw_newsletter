@@ -8,6 +8,7 @@
  *  NA-01 - Every check-all box (data-nl-check-all) has an aria-label, not only a title
  *  NA-02 - Every <img> of the templates has an alt attribute or a title
  *  NA-03 - No style="" attribute and no <style> block in the admin2 templates
+ *  NA-04 - No inline <script> with code, no on...= handler and no javascript: URL in any template
  *
  * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
@@ -59,6 +60,28 @@ class cjwNewsletterTemplateAccessibilityTest extends TestCase
             foreach ( $m[0] as $tag )
                 $this->assertMatchesRegularExpression( '/\s(alt|title)=/', $tag, basename( $path ) . ': ' . $tag );
         }
+    }
+
+    /** NA-04 */
+    public function testNoInlineScriptCode()
+    {
+        $seen = 0;
+        foreach ( self::templates( 'design' ) as $path => $source )
+        {
+            preg_match_all( '/<script\b([^>]*)>(.*?)<\/script>/is', $source, $m, PREG_SET_ORDER );
+            foreach ( $m as $script )
+            {
+                if ( preg_match( '/\bsrc\s*=|type\s*=\s*["\']application\/(ld\+)?json["\']/i', $script[1] ) )
+                    continue;
+                $this->assertSame( '', trim( $script[2] ), basename( $path ) . ': inline <script> with code' );
+            }
+            $this->assertDoesNotMatchRegularExpression( '/<[a-z][^>]*\son[a-z]+\s*=/i', $source, basename( $path ) . ': on...= handler' );
+            $this->assertDoesNotMatchRegularExpression( '/(href|action|src)\s*=\s*["\']?\s*javascript:/i', $source, basename( $path ) . ': javascript: URL' );
+            $seen += substr_count( $source, 'cjw_newsletter.js' );
+        }
+        // the behavior lives in the file the templates print
+        $this->assertGreaterThan( 0, $seen );
+        $this->assertFileExists( dirname( __DIR__ ) . '/design/standard/javascript/cjw_newsletter.js' );
     }
 
     /** NA-03 */

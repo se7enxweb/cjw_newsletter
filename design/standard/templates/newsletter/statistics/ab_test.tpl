@@ -35,3 +35,4 @@
 </div>
 </div>
 {undef $i18n}
+{include uri='design:parts/newsletter/script.tpl'}

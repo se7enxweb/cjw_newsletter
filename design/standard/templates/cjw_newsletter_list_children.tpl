@@ -1,4 +1,6 @@
 <div class="content-view-children">
+{* The language choice of "Create here" and the selection: cjw_newsletter.js *}
+{ezscript( array( 'cjw_newsletter.js' ) )}
 
     <!-- Children START -->
     <div class="context-block">
@@ -206,7 +208,12 @@
                                 {if and(eq( $can_create_languages|count, 1 ), is_set( $can_create_languages[0] ) )}
                                     <select id="ClassID" name="ClassID" title="{'Use this menu to select the type of item you want to create then click the "Create here" button. The item will be created in the current location.'|i18n( 'cjw_newsletter/cjw_newsletter_list_children' )|wash()}">
                                 {else}
-                                    <select id="ClassID" name="ClassID" onchange="updateLanguageSelector(this)" title="{'Use this menu to select the type of item you want to create then click the "Create here" button. The item will be created in the current location.'|i18n( 'cjw_newsletter/cjw_newsletter_list_children' )|wash()}">
+                                    {* the languages each class can be created in, for cjw_newsletter.js: {"<class id>": ["<locale>", ...]} *}
+                                    {def $cjwnl_class_languages = array()}
+                                    {foreach $can_create_classes as $cjwnl_class}
+                                        {set $cjwnl_class_languages = $cjwnl_class_languages|append( concat( '"', $cjwnl_class.id, '":', json_encode( $cjwnl_class.can_instantiate_languages ) ) )}
+                                    {/foreach}
+                                    <select id="ClassID" name="ClassID" data-cjwnl-languages="{ldelim}{$cjwnl_class_languages|implode( ',' )|wash}{rdelim}" title="{'Use this menu to select the type of item you want to create then click the "Create here" button. The item will be created in the current location.'|i18n( 'cjw_newsletter/cjw_newsletter_list_children' )|wash()}">
                                 {/if}
                                     {section var=CanCreateClasses loop=$can_create_classes}
                                         {if $CanCreateClasses.item.can_instantiate_languages}
@@ -218,7 +225,7 @@
                                 {if and(eq( $can_create_languages|count, 1 ), is_set( $can_create_languages[0] ) )}
                                     <input name="ContentLanguageCode" value="{$can_create_languages[0].locale}" type="hidden" />
                                 {else}
-                                    <select name="ContentLanguageCode" onchange="checkLanguageSelector(this)" title="{'Use this menu to select the language you want to use for the creation then click the "Create here" button. The item will be created in the current location.'|i18n( 'cjw_newsletter/cjw_newsletter_list_children' )|wash()}">
+                                    <select name="ContentLanguageCode" data-cjwnl-language-select="" title="{'Use this menu to select the language you want to use for the creation then click the "Create here" button. The item will be created in the current location.'|i18n( 'cjw_newsletter/cjw_newsletter_list_children' )|wash()}">
                                         {foreach $can_create_languages as $tmp_language}
                                             <option value="{$tmp_language.locale|wash()}">{$tmp_language.name|wash()}</option>
                                         {/foreach}

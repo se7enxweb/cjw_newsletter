@@ -273,7 +273,7 @@ list all blacklist items
                                     <tr>
                                         {*
                                         <th class="tight">
-                                            <img src={'toggle-button-16x16.gif'|ezimage}  alt="{'Invert selection'|i18n( 'cjw_newsletter/subscription_list_csvimport' )}" title="{'Invert selection'|i18n( 'cjw_newsletter/subscription_list_csvimport' )}" onclick="ezjs_toggleCheckboxes( document.subscription_import, 'RowNum[]' ); return false;" />
+                                            <img src={'toggle-button-16x16.gif'|ezimage}  alt="{'Invert selection'|i18n( 'cjw_newsletter/subscription_list_csvimport' )}" title="{'Invert selection'|i18n( 'cjw_newsletter/subscription_list_csvimport' )}" data-cjwnl-toggle-checkboxes="RowNum[]" data-cjwnl-form="subscription_import" />
                                         </th>*}
                                         <th class="tight">
                                             {'Row nr'|i18n( 'cjw_newsletter/subscription_list_csvimport' )}

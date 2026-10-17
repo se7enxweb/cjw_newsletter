@@ -1,10 +1,6 @@
-{literal}
-<script language="JavaScript" type="text/javascript">
-<!--
-document.write("<style type='text/css'>div#contentstructure ul#content_tree_menu ul li { padding-left: 0px; }div#contentstructure ul#content_tree_menu ul ul { margin-left: 20px; }<\/style>");
--->
-</script>
-{/literal}
+{* The newsletter tree. Its script is cjw_newsletter.js: it reads data-cjwnl-tree of the ul (the open path, the icons to
+   preload and the fold icons) and calls the ezcst_* functions of contentstructuremenu.js, as the inline script did. *}
+<link rel="stylesheet" type="text/css" href={'stylesheets/cjw_newsletter_tree.css'|ezdesign} />
 
 <script language="JavaScript" type="text/javascript" src={"javascript/lib/ezjslibcookiesupport.js"|ezdesign}></script>
 <script language="JavaScript" type="text/javascript" src={"javascript/lib/ezjslibdomsupport.js"|ezdesign}></script>
@@ -31,7 +27,8 @@ document.write("<style type='text/css'>div#contentstructure ul#content_tree_menu
         {set classIconsSize=$:class_icons_size}
     {/section}
 
-    {* load icons if preloadClassIcons is enabled *}
+    {* icons to preload if preloadClassIcons is enabled (cjw_newsletter.js passes them to ezjslib_preloadImageList) *}
+    {def $cjwnl_tree_icons = array()}
     {section show=eq( $:preloadClassIcons, "enabled" )}
         {let iconInfo           = icon_info( class )
              iconsThemePath     = $:iconInfo.theme_path
@@ -39,27 +36,13 @@ document.write("<style type='text/css'>div#contentstructure ul#content_tree_menu
              defaultIcon        = $:iconInfo.default
              iconSizePath       = $:iconInfo.size_path_list[$:classIconsSize] }
 
-            <script language="JavaScript" type="text/javascript"><!--
-
-                var iconsList       = new Array();
-                var wwwDirPrefix    = "{ezsys('wwwdir')}";
-                var iconPath        = "";
-
-                // oridinary icons.
+                {* oridinary icons. *}
                 {section var=icon loop=$:iconsList}
-                    iconPath = wwwDirPrefix + "/" + "{$:iconsThemePath}" + "/" + "{$:iconSizePath}" + "/" + "{$:icon}";
-                    iconsList.push( iconPath );
+                    {set $cjwnl_tree_icons = $cjwnl_tree_icons|append( concat( ezsys( 'wwwdir' ), '/', $:iconsThemePath, '/', $:iconSizePath, '/', $:icon ) )}
                 {/section}
 
-                // default icon.
-                iconPath = wwwDirPrefix + "/" + "{$:iconsThemePath}" + "/" + "{$:iconSizePath}" + "/" + "{$:defaultIcon}";
-                iconsList.push( iconPath );
-
-                // load them all!!
-                ezjslib_preloadImageList( iconsList );
-
-            // -->
-            </script>
+                {* default icon. *}
+                {set $cjwnl_tree_icons = $cjwnl_tree_icons|append( concat( ezsys( 'wwwdir' ), '/', $:iconsThemePath, '/', $:iconSizePath, '/', $:defaultIcon ) )}
         {/let}
     {/section}
 
@@ -89,27 +72,27 @@ document.write("<style type='text/css'>div#contentstructure ul#content_tree_menu
                                                             $:fetchHidden ) *}
         {* Show menu tree. All container nodes are unfolded. *}
             {*<h4>Alle Systeme</h4>*}
-            <ul id="{$:menuID}">
+
+    {* get path to current node which consists of nodes ids *}
+    {def $cjwnl_tree_nodes = array()}
+    {section var=path loop=$module_result.path}
+        {section show=and(is_set($:path.node_id), or($:isDepthUnlimited, $:maxDepth|gt(0)))}
+            {set $cjwnl_tree_nodes = $cjwnl_tree_nodes|append( concat( 'n', $:path.node_id ) )}
+            {set maxDepth = dec($:maxDepth)}
+        {/section}
+    {/section}
+
+            <ul id="{$:menuID}" data-cjwnl-tree="{json_encode( hash( 'nodes', $cjwnl_tree_nodes,
+                                                                    'icons', $cjwnl_tree_icons,
+                                                                    'openIcon', 'images/content_tree-open.gif'|ezdesign( 'no' ),
+                                                                    'closeIcon', 'images/content_tree-close.gif'|ezdesign( 'no' ),
+                                                                    'emptyIcon', 'images/1x1.gif'|ezdesign( 'no' ),
+                                                                    'autoopen', $:autoopenCurrentNode ) )|wash}">
                 {include uri="design:contentstructuremenu/2_newsletter_system_tree.tpl" contentStructureTree=$contentStructureTree class_icons_size=$:classIconsSize csm_menu_item_click_action=$:itemClickAction ui_context=$ui_context is_root_node=true()}
             </ul>
 
-    {* initialize menu *}
-    <script language="JavaScript" type="text/javascript"><!--
-
-        {* get path to current node which consists of nodes ids *}
-        var nodesList = new Array();
-
-        {section var=path loop=$module_result.path}
-            {section show=and(is_set($:path.node_id), or($:isDepthUnlimited, $:maxDepth|gt(0)))}
-                nodesList.push( "n{$:path.node_id}" );
-                {set maxDepth = dec($:maxDepth)}
-            {/section}
-        {/section}
-
-
-        ezcst_setFoldUnfoldIcons( {"images/content_tree-open.gif"|ezdesign}, {"images/content_tree-close.gif"|ezdesign}, {"images/1x1.gif"|ezdesign} );
-        ezcst_initializeMenuState( nodesList, "{$:menuID}", "{$:autoopenCurrentNode}" );
-    // -->
-    </script>
+    {* initialize menu: cjw_newsletter.js *}
+    {ezscript( array( 'cjw_newsletter.js' ) )}
+    {undef $cjwnl_tree_icons $cjwnl_tree_nodes}
 {/let}
 

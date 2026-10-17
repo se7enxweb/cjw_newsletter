@@ -37,7 +37,7 @@
                 <option value="{$key}"{if $values_selected|contains( $key )} selected="selected"{/if}>{$name}</option>
             {/foreach}
             </select>
-            <a style="vertical-align: bottom;" onclick="toggleMultiSelect( '{$filter_index}' ); return false;" href="#">[+]</a>
+            <a style="vertical-align: bottom;" data-cjwnl-toggle-multiple="values_{$filter_index}" href="#">[+]</a>
         {else}
 
             {if $values_selected|count|eq( 0 )}

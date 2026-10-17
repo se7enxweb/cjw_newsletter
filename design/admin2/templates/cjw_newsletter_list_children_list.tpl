@@ -2,7 +2,7 @@
     <table class="list" cellspacing="0">
         <tr>
             {* Remove column *}
-            <th class="remove"><img src={'toggle-button-16x16.gif'|ezimage} alt="{'Invert selection.'|i18n( 'cjw_newsletter/cjw_newsletter_list_children_list' )}" title="{'Invert selection.'|i18n( 'cjw_newsletter/cjw_newsletter_list_children_list' )}" onclick="ezjs_toggleCheckboxes( document.children, 'DeleteIDArray[]' ); return false;" /></th>
+            <th class="remove"><img src={'toggle-button-16x16.gif'|ezimage} alt="{'Invert selection.'|i18n( 'cjw_newsletter/cjw_newsletter_list_children_list' )}" title="{'Invert selection.'|i18n( 'cjw_newsletter/cjw_newsletter_list_children_list' )}" data-cjwnl-toggle-checkboxes="DeleteIDArray[]" data-cjwnl-form="children" /></th>
 
             {* Name column *}
             <th class="name">{'Name'|i18n( 'cjw_newsletter/cjw_newsletter_list_children_list' )}</th>

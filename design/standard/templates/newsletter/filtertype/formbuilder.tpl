@@ -9,31 +9,8 @@ requries filtertype_object_array_active
 {*$filtertype_object_array_available|attribute(show)*}
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-<script language="JavaScript">
-{literal}
-function toggleMultiSelect( field )
-{
-    select = $( '#values_' + field );
-    if ( select.attr( 'multiple' ) == true )
-    {
-        select.prop( 'multiple', false );
-    }
-    else
-    {
-        select.prop( 'multiple', true );
-    }
-}
-
-function addTextValue( field )
-{
-    select = $( '#text_values_' + field );
-    alert( 'TODO insert new text input field' );
-}
-
-{/literal}
-</script>
+{* The [+] link of a filter switches its select between single and multiple choice (cjw_newsletter.js). *}
+{ezscript( array( 'cjw_newsletter.js' ) )}
 
 <fieldset title="{'Filter'|i18n( 'cjw_newsletter/filtertypes' )}" id="filter">
     <legend>{'Active filters'|i18n( 'cjw_newsletter/filtertypes' )}</legend>

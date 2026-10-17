@@ -37,7 +37,7 @@
 
             {* Fold/Unfold/Empty: [-]/[+]/[ ] *}
                    <a class="openclose" href="#" title="{'Fold/Unfold'|i18n('cjw_newsletter/contentstructuremenu')}"
-                      onclick="ezpopmenu_hideAll(); ezcst_onFoldClicked( this.parentNode ); return false;"></a>
+                      data-cjwnl-fold=""></a>
 
             {* Label *}
                     {set toolTip = ''}
