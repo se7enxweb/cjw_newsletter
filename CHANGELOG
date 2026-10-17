@@ -1,5 +1,39 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.12
+======
+
+Updated
+
+- The templates carry no inline JavaScript any more: no <script> with code, no onclick/onchange handler and no
+  javascript: URL, so the administration works under a Content-Security-Policy without 'unsafe-inline' for
+  scripts. The code is in design/standard/javascript/cjw_newsletter.js, printed with ezscript() where the inline
+  code stood; it may be printed more than once and sets itself up once. The templates pass their values in data
+  attributes (data-cjwnl-*, data-nl-*, data-cb-confirm); the header of the file lists them. It works in every
+  administration design and needs no library.
+- The class menu of the list, system and edition views and the context menu of an edition line open through
+  ezpopmenu_showTopLevel() from that file. The confirmation dialogs (send, remove subscriptions by admin, approval)
+  stay window.confirm() with the same translated texts.
+- The newsletter tree and the static tree of the newsletter_admin_ez4.0.0 page layout load their indentation from
+  stylesheets/cjw_newsletter_tree.css instead of writing a <style> block with document.write().
+- The filter form builder no longer loads jQuery 1.4.2 from ajax.googleapis.com; its [+] link switches the select
+  between single and multiple choice without it.
+
+Fixed
+
+- The class menu of the list, system and edition views opens again: the language list was printed as JSON with
+  double quotes into a double-quoted onclick attribute and ended it early ("Unexpected end of input").
+- The A/B test view loads the confirmation script its forms rely on.
+
+Removed
+
+- The PNG fix of Internet Explorer 5.5 and 6 in the newsletter_admin_ez4.0.0 page layout.
+
+Added
+
+- tests/cjwNewsletterTemplateAccessibilityTest.php NA-04: no inline <script> with code, no on...= handler and no
+  javascript: URL in any template.
+
 4.2.11
 ======
 
