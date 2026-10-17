@@ -1,5 +1,15 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.9
+=====
+
+Updated
+
+- In admin4 and admin4l the newsletter pages' left menu draws admin4's own width switch (the kernel's shared
+  parts/left_width_control.tpl), the same as every kernel module; before, the newsletter column had none there.
+- The width links of the standard menu (classic admin designs) set admin_left_menu_size, the preference the page
+  layouts read, instead of the unused admin_left_menu_width.
+
 4.2.8
 =====
 

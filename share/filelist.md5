@@ -1,10 +1,10 @@
 name: cjw_newsletter
-version: 4.2.8
-files_count: 694
+version: 4.2.9
+files_count: 695
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
 aa9ea80af84e6cba65e0764a80b56e16  .gitignore
-10f6d1109166135ddccfb2f8f96bced6  CHANGELOG
+af977782d6932549fd556516d9ac7ffe  CHANGELOG
 90ef4496589ac9dd18ee5e5d98e0bb4c  FAQ
 694a2892d8ff79eca1ecaf3cdcfe9a50  INSTALL
 0636e73ff0215e8d672dc4c32c317bb3  LICENSE
@@ -237,6 +237,7 @@ e548cd621a3049c5fe6416a9a64a00ce  design/admin2/templates/cjw_newsletter_edition
 e867943165d4388d1e4e68d9640d45d1  design/admin2/templates/includes/cjwnewsletteredition_preview_archive.tpl
 99d5cf8f81c9691af6a26b59b498e46a  design/admin2/templates/parts/newsletter/newsletter_menu.tpl
 dd92028d986c5ad3d3090938ee377f57  design/admin4/templates/collaboration/handlers/view/full/cjwnewsletterapproval.tpl
+e594cb6b1c13eb0958a1fa07563d20e1  design/admin4/templates/parts/newsletter/menu.tpl
 37c56a83d2f2de84f5480be57dc12933  design/ezwebin/override/templates/node/view/full/cjw_newsletter_edition.tpl
 5ef3acdc869a74be4345cd3aa3399f1d  design/ezwebin/override/templates/node/view/full/cjw_newsletter_list.tpl
 c6e2d42fe4fca384c0ec517fd6b984fd  design/ezwebin/templates/cjw_newsletter_list_children.tpl
@@ -566,7 +567,7 @@ ede5d8dee2f775addb6fb28908f5e3ac  design/standard/templates/notification/handler
 c07a685e24ae509e1a869b40433b665e  design/standard/templates/notification/handler/ezcollaboration/view/cjwnewsletterapproval/author.tpl
 8f73de44ca3467a2979841f041d08690  design/standard/templates/parts/newsletter/job.tpl
 ade87f04079681dff2b1662842f6be99  design/standard/templates/parts/newsletter/menu.tpl
-2a1905a097fea6008d1be0deab2964d5  design/standard/templates/parts/newsletter/newsletter_menu.tpl
+f559924b059b3df3884bfea42f011324  design/standard/templates/parts/newsletter/newsletter_menu.tpl
 4ccde23825cda8a441eea77ce5cf3a2d  design/standard/templates/parts/newsletter/newsletter_menu_admin.tpl
 7ad2e7b3b6e54f62b2b8dff55211c53c  design/standard/templates/parts/newsletter/notices.tpl
 38d5af62985586d1e713ef2d44103fe8  design/standard/templates/parts/newsletter/script.tpl
@@ -591,8 +592,8 @@ cf1036b2d3360f8e36d7462c0c58eaa8  doc/uml/cjw_newsletter_dbschema_v1.0.0.png
 f90eec2d1f019a7db9a9dfb9d9632d42  doc/upgrade-4.2.md
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
 782edd7ce72084d23e44e94ae248d722  extendedattributefilter/cjwnewsletterlistfilter.php
-39ef4fed4354d38a2688af4ed55ad311  extension.xml
-6bbca3c0e7f6a162bd1869eaf78bbdfc  ezinfo.php
+749b1467af1e61a080fbef3674daede0  extension.xml
+dc33738d874ea1548df1a783d0a1620d  ezinfo.php
 90bbccd4a9f3f11f423a5371db08cc5b  modules/newsletter/ab_test.php
 58407deb615ce3169e78a3ebb276bfc8  modules/newsletter/approval.php
 497b5da0906ba7711bb1c1bf1e7992de  modules/newsletter/archive.php
