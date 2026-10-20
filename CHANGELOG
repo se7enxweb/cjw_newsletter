@@ -1,5 +1,14 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.13
+======
+
+Added
+
+- Translations in Croatian, Czech, Danish, Dutch, Italian, Norwegian, Polish, Brazilian Portuguese, Swedish and Turkish: every message of the current templates and classes, 2066 per language. The Norwegian
+  catalogue, which had 6 of its messages translated, is completed and keeps them. share/filelist.md5 lists the new
+  files.
+
 4.2.12
 ======
 
