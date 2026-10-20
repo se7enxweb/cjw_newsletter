@@ -1,6 +1,6 @@
 name: cjw_newsletter
 version: 4.2.12
-files_count: 697
+files_count: 706
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
 aa9ea80af84e6cba65e0764a80b56e16  .gitignore
@@ -681,15 +681,24 @@ e0fb0db8bc7127f92f518c510b43fe13  settings/websitetoolbar.ini.append.php
 64523242b2f594a2300f708521ec4df2  sql/mysql/schema.sql
 600638220be48f5dc740aeffc97fa7dc  sql/postgresql/schema.sql
 3e40c5ef67d2b6bbcd22c0b5cbbbbef1  sql/sqlite/schema.sql
+581b7b05c1b16e84ca9bcc422ed03f4e  translations/cro-HR/translation.ts
+fc19b739165f7d68310f34d8fd92c594  translations/cze-CZ/translation.ts
+6aff4fd483a9f35c6b5bb5024015f80d  translations/dan-DK/translation.ts
+b74f3d1b25c0c2a9fd3feac525f7d658  translations/dut-NL/translation.ts
 ca904215d429cfd3383b26e85033a322  translations/eng-US/translation.ts
 774bcebcbe58171e7f01f9313285be1e  translations/esl-ES/translation.ts
 16e23a43e5496e196d80f8eda62d4621  translations/esl-MX/translation.ts
 b3a4c7d5ccd2b4281f7d9dce4b491cf1  translations/fre-FR/translation.ts
 cd841d15d0f4269e5b79964246eb7938  translations/ger-DE/translation.ts
 a15b848e3f318fc892f3abb969f1fb41  translations/heb-IL/translation.ts
+e94e4e68b7f671d55e3443ebd042f843  translations/ita-IT/translation.ts
 1d9ce4c39becd184202fc4254de538b8  translations/lat-VA/translation.ts
-1cdc418c806794d06cded6acaa52aa0a  translations/nor-NO/translation.ts
+2d7c5eef1e351f00020963da187f5f08  translations/nor-NO/translation.ts
+7efad476dd4532d607700e27f6beb947  translations/pol-PL/translation.ts
+af28677a5c04113d86f2fb103548d134  translations/por-BR/translation.ts
+b78b89991950ec3ac0ce8cb06acd47b7  translations/swe-SE/translation.ts
 e3dc192e1589eb0b5ea5e585afe4ee3c  translations/tlh-QO/translation.ts
+ee064e0d38f3c899dca0467bb83cd281  translations/tur-TR/translation.ts
 7c1190dd5aa5aad6977dc53a1387bdf3  translations/untranslated/translation.ts
 8467fc444a55eb51e0864b1cc6d2dfcf  update/database/mysql/1.0/unstable/dbupdate-1.0.0beta-to-1.0.0beta2.sql
 dcbc9647a87b9e82edb28c3055b93649  update/database/mysql/1.0/unstable/dbupdate-1.0.0beta2-to-1.0.0rc1.sql
