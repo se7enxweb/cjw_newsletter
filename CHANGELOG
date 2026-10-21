@@ -1,5 +1,13 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.14
+======
+
+Updated
+
+- The Norwegian (Bokmål) translation, with the contributor's wording where both had translated a message.
+  share/filelist.md5 lists the changed checksums.
+
 4.2.13
 ======
 
