@@ -40,11 +40,11 @@
     </message>
     <message>
         <source>Successfully adding newsletter user %nl_user_id with email %email to blacklist</source>
-        <translation>Nyhetsbrevbrukeren %nl_user_id med e-posten %email er lagt til i svartelisten</translation>
+        <translation>Nyhetsbrevbrukeren %nl_user_id med e-postadressen %email ble lagt til i svartelisten</translation>
     </message>
     <message>
         <source>Successfully adding email address %email to blacklist</source>
-        <translation>E-postadressen %email er lagt til i svartelisten</translation>
+        <translation>E-postadressen %email ble lagt til i svartelisten</translation>
     </message>
     <message>
         <source>Blacklist add</source>
@@ -115,11 +115,11 @@
     </message>
     <message>
         <source>Manage blacklist</source>
-        <translation>Administrer svarteliste</translation>
+        <translation>Administrer svartelisten</translation>
     </message>
     <message>
         <source>By adding an user to the blacklist, you can make sure that he will never get a newsletter again from this system.</source>
-        <translation>Ved å legge en bruker til i svartelisten sikrer du at brukeren aldri igjen får et nyhetsbrev fra dette systemet.</translation>
+        <translation>Når du legger til en bruker i svartelisten, sikrer du at vedkommende aldri igjen får et nyhetsbrev fra dette systemet.</translation>
     </message>
     <message>
         <source>Add email address to blacklist</source>
@@ -143,7 +143,7 @@
     </message>
     <message>
         <source>Remove the selected items from the list above.</source>
-        <translation>Fjern de valgte elementene fra listen ovenfor.</translation>
+        <translation>Fjern de valgte elementene fra listen over.</translation>
     </message>
     <message>
         <source>Newsletter user</source>
@@ -165,11 +165,11 @@
     <name>cjw_newsletter/cjw_newsletter_edition_send_statistic</name>
     <message>
         <source>Newsletter Edition send out statistic</source>
-        <translation>Utsendelsesstatistikk for nyhetsbrevutgave</translation>
+        <translation>Utsendingsstatistikk for nyhetsbrevutgaven</translation>
     </message>
     <message>
         <source>Current Date</source>
-        <translation>Dagens dato</translation>
+        <translation>Gjeldende dato</translation>
     </message>
     <message>
         <source>Id</source>
@@ -181,15 +181,15 @@
     </message>
     <message>
         <source>Mail send</source>
-        <translation>E-poster sendt</translation>
+        <translation>E-post sendt</translation>
     </message>
     <message>
         <source>Mail not send</source>
-        <translation>E-poster ikke sendt</translation>
+        <translation>E-post ikke sendt</translation>
     </message>
     <message>
         <source>Mail bounced</source>
-        <translation>E-poster avvist</translation>
+        <translation>E-post returnert</translation>
     </message>
     <message>
         <source>Creator</source>
@@ -197,7 +197,7 @@
     </message>
     <message>
         <source>Abort cronjob</source>
-        <translation>Avbryt cronjob</translation>
+        <translation>Avbryt cronjobb</translation>
     </message>
     <message>
         <source>Emails count</source>
@@ -205,19 +205,19 @@
     </message>
     <message>
         <source>Emails sent</source>
-        <translation>Sendte e-poster</translation>
+        <translation>E-poster sendt</translation>
     </message>
     <message>
         <source>Emails opened</source>
-        <translation>Åpnede e-poster</translation>
+        <translation>E-poster åpnet</translation>
     </message>
     <message>
         <source>Emails not sent</source>
-        <translation>Ikke sendte e-poster</translation>
+        <translation>E-poster ikke sendt</translation>
     </message>
     <message>
         <source>Emails bounced</source>
-        <translation>Avviste e-poster</translation>
+        <translation>E-poster returnert</translation>
     </message>
     <message>
         <source>Newsletter processing info</source>
@@ -225,7 +225,7 @@
     </message>
     <message>
         <source>Cronjob status</source>
-        <translation>Cronjob-status</translation>
+        <translation>Cronjobbstatus</translation>
     </message>
     <message>
         <source>Statistics</source>
@@ -233,7 +233,7 @@
     </message>
     <message>
         <source>Cronjob Status:</source>
-        <translation>Cronjob-status:</translation>
+        <translation>Cronjobbstatus:</translation>
     </message>
 </context>
 <context>
@@ -244,11 +244,11 @@
     </message>
     <message>
         <source>Newsletter edition preview archive</source>
-        <translation>Arkiv over forhåndsvisninger av nyhetsbrevutgaver</translation>
+        <translation>Forhåndsvisning av arkivert nyhetsbrevutgave</translation>
     </message>
     <message>
         <source>Edition State</source>
-        <translation>Utgavens tilstand</translation>
+        <translation>Utgavestatus</translation>
     </message>
     <message>
         <source>State</source>
@@ -256,7 +256,7 @@
     </message>
     <message>
         <source>Status draft</source>
-        <translation>Status: utkast</translation>
+        <translation>Status utkast</translation>
     </message>
     <message>
         <source>Send Newsletter</source>
@@ -264,7 +264,7 @@
     </message>
     <message>
         <source>Status process</source>
-        <translation>Status: behandles</translation>
+        <translation>Status under behandling</translation>
     </message>
     <message>
         <source>in the dispatch</source>
@@ -272,11 +272,11 @@
     </message>
     <message>
         <source>Status archive</source>
-        <translation>Status: arkiv</translation>
+        <translation>Status arkiv</translation>
     </message>
     <message>
         <source>sends</source>
-        <translation>sendt</translation>
+        <translation>sendes</translation>
     </message>
     <message>
         <source>uncompletedly</source>
@@ -284,7 +284,7 @@
     </message>
     <message>
         <source>Status abort</source>
-        <translation>Status: avbrutt</translation>
+        <translation>Status avbrutt</translation>
     </message>
     <message>
         <source>Operation</source>
@@ -295,7 +295,7 @@
     <name>cjw_newsletter/cjw_newsletter_list</name>
     <message>
         <source>Create newsletter here</source>
-        <translation>Lag nyhetsbrev her</translation>
+        <translation>Opprett nyhetsbrev her</translation>
     </message>
     <message>
         <source>Newsletter editions</source>
@@ -311,7 +311,7 @@
     </message>
     <message>
         <source>Create filter here</source>
-        <translation>Lag filter her</translation>
+        <translation>Opprett filter her</translation>
     </message>
 </context>
 <context>
@@ -350,7 +350,7 @@
     </message>
     <message>
         <source>Display sub items using a detailed list.</source>
-        <translation>Vis underelementer som en detaljert liste.</translation>
+        <translation>Vis underelementer i en detaljert liste.</translation>
     </message>
     <message>
         <source>Detailed</source>
@@ -362,7 +362,7 @@
     </message>
     <message>
         <source>The current item does not contain any sub items.</source>
-        <translation>Det gjeldende elementet inneholder ingen underelementer.</translation>
+        <translation>Det gjeldende elementet har ingen underelementer.</translation>
     </message>
     <message>
         <source>Remove selected</source>
@@ -370,11 +370,11 @@
     </message>
     <message>
         <source>Remove the selected items from the list above.</source>
-        <translation>Fjern de valgte elementene fra listen ovenfor.</translation>
+        <translation>Fjern de valgte elementene fra listen over.</translation>
     </message>
     <message>
         <source>You do not have permission to remove any of the items from the list above.</source>
-        <translation>Du har ikke tillatelse til å fjerne elementer fra listen ovenfor.</translation>
+        <translation>Du har ikke tillatelse til å fjerne noen av elementene fra listen over.</translation>
     </message>
     <message>
         <source>Update priorities</source>
@@ -382,19 +382,19 @@
     </message>
     <message>
         <source>Apply changes to the priorities of the items in the list above.</source>
-        <translation>Bruk endringene i prioritetene for elementene i listen ovenfor.</translation>
+        <translation>Bruk endringene i prioriteten til elementene i listen over.</translation>
     </message>
     <message>
         <source>You cannot update the priorities because you do not have permission to edit the current item or because a non-priority sorting method is used.</source>
-        <translation>Du kan ikke oppdatere prioritetene fordi du ikke har tillatelse til å redigere det gjeldende elementet, eller fordi det brukes en sorteringsmetode som ikke er basert på prioritet.</translation>
+        <translation>Du kan ikke oppdatere prioritetene fordi du ikke har tillatelse til å redigere det gjeldende elementet, eller fordi det brukes en sorteringsmetode som ikke er etter prioritet.</translation>
     </message>
     <message>
         <source>Use this menu to select the type of item you want to create then click the "Create here" button. The item will be created in the current location.</source>
-        <translation>Velg i denne menyen hvilken type element du vil lage, og klikk deretter på knappen "Lag her". Elementet blir laget på den gjeldende plasseringen.</translation>
+        <translation>Bruk denne menyen til å velge hvilken type element du vil opprette, og klikk deretter på "Opprett her". Elementet blir opprettet på den gjeldende plasseringen.</translation>
     </message>
     <message>
         <source>Use this menu to select the language you want to use for the creation then click the "Create here" button. The item will be created in the current location.</source>
-        <translation>Velg i denne menyen språket du vil bruke, og klikk deretter på knappen "Lag her". Elementet blir laget på den gjeldende plasseringen.</translation>
+        <translation>Bruk denne menyen til å velge hvilket språk du vil bruke ved opprettelsen, og klikk deretter på "Opprett her". Elementet blir opprettet på den gjeldende plasseringen.</translation>
     </message>
     <message>
         <source>Create here</source>
@@ -402,7 +402,7 @@
     </message>
     <message>
         <source>Create a new item in the current location. Use the menu on the left to select the type of  item.</source>
-        <translation>Lag et nytt element på den gjeldende plasseringen. Velg elementtypen i menyen til venstre.</translation>
+        <translation>Opprett et nytt element på den gjeldende plasseringen. Bruk menyen til venstre til å velge type element.</translation>
     </message>
     <message>
         <source>Not available</source>
@@ -410,7 +410,7 @@
     </message>
     <message>
         <source>You do not have permission to create new items in the current location.</source>
-        <translation>Du har ikke tillatelse til å lage nye elementer på den gjeldende plasseringen.</translation>
+        <translation>Du har ikke tillatelse til å opprette nye elementer på den gjeldende plasseringen.</translation>
     </message>
     <message>
         <source>Sorting</source>
@@ -501,7 +501,7 @@
     </message>
     <message>
         <source>Use the priority fields to control the order in which the items appear. You can use both positive and negative integers. Click the "Update priorities" button to apply the changes.</source>
-        <translation>Bruk prioritetsfeltene til å styre rekkefølgen elementene vises i. Du kan bruke både positive og negative heltall. Klikk på knappen "Oppdater prioriteter" for å ta i bruk endringene.</translation>
+        <translation>Bruk prioritetsfeltene til å styre rekkefølgen elementene vises i. Du kan bruke både positive og negative heltall. Klikk på "Oppdater prioriteter" for å bruke endringene.</translation>
     </message>
     <message>
         <source>You are not allowed to update the priorities because you do not have permission to edit &lt;%node_name&gt;.</source>
@@ -629,7 +629,7 @@
     <name>cjw_newsletter/configure</name>
     <message>
         <source>Configure newsletter settings</source>
-        <translation>Konfigurer innstillinger for nyhetsbrev</translation>
+        <translation>Konfigurer nyhetsbrevinnstillinger</translation>
     </message>
     <message>
         <source>You can also edit the small boxes "first name" and "last name".</source>
@@ -657,7 +657,7 @@
     </message>
     <message>
         <source>Email of the subscriber.</source>
-        <translation>Abonnentens e-post.</translation>
+        <translation>Abonnentens e-postadresse.</translation>
     </message>
     <message>
         <source>Confirm</source>
@@ -665,7 +665,7 @@
     </message>
     <message>
         <source>Add to subscription.</source>
-        <translation>Legg til i abonnement.</translation>
+        <translation>Legg til i abonnementet.</translation>
     </message>
     <message>
         <source>* mandatory fields</source>
@@ -681,15 +681,15 @@
     </message>
     <message>
         <source>No newsletters available.</source>
-        <translation>Ingen nyhetsbrev tilgjengelig.</translation>
+        <translation>Ingen nyhetsbrev er tilgjengelige.</translation>
     </message>
     <message>
         <source>Here you can edit your newsletter attributes.</source>
-        <translation>Her kan du redigere attributtene for nyhetsbrevet ditt.</translation>
+        <translation>Her kan du redigere nyhetsbrevattributtene dine.</translation>
     </message>
     <message>
         <source>Please select the newsletter you wish to subscribe to. Deselect to unsubscribe.</source>
-        <translation>Velg nyhetsbrevet du vil abonnere på. Fjern markeringen for å melde deg av.</translation>
+        <translation>Velg nyhetsbrevet du vil abonnere på. Fjern avmerkingen for å si opp abonnementet.</translation>
     </message>
     <message>
         <source>Please register another email address to subscribe to the same newsletter twice.</source>
@@ -755,11 +755,11 @@
     <name>cjw_newsletter/datatype/cjwnewsletteredition</name>
     <message>
         <source>The current edition is already in sending process - you have to create a new copy of this object</source>
-        <translation>Den gjeldende utgaven er allerede under utsending - du må lage en ny kopi av dette objektet</translation>
+        <translation>Den gjeldende utgaven er allerede under utsending – du må opprette en ny kopi av dette objektet</translation>
     </message>
     <message>
         <source>The current edition is already in sending process - to create a new version please stop it first</source>
-        <translation>Den gjeldende utgaven er allerede under utsending - stopp utsendingen først for å lage en ny versjon</translation>
+        <translation>Den gjeldende utgaven er allerede under utsending – stopp den først for å opprette en ny versjon</translation>
     </message>
     <message>
         <source>The current edition was already send and is in archive!</source>
@@ -771,7 +771,7 @@
     </message>
     <message>
         <source>The schedule date or time is invalid!</source>
-        <translation>Den planlagte datoen eller tiden er ugyldig!</translation>
+        <translation>Den planlagte datoen eller klokkeslettet er ugyldig!</translation>
     </message>
     <message>
         <source>You have to set a valid email adress</source>
@@ -782,7 +782,7 @@
     <name>cjw_newsletter/datatype/cjwnewsletterlist</name>
     <message>
         <source>Main Siteaccess must be set</source>
-        <translation>Hovednettstedstilgang må være angitt</translation>
+        <translation>Hovednettstedstilgang må angis</translation>
     </message>
     <message>
         <source>You have to choose an output format</source>
@@ -790,15 +790,15 @@
     </message>
     <message>
         <source>You have to set a valid email adress</source>
-        <translation>Du må oppgi en gyldig e-postadresse</translation>
+        <translation>Du må angi en gyldig e-postadresse</translation>
     </message>
     <message>
         <source>You have to set a valid semder email</source>
-        <translation>Du må oppgi en gyldig avsender-e-post</translation>
+        <translation>Du må angi en gyldig avsenderadresse</translation>
     </message>
     <message>
         <source>You have to set a valid semder email adress &gt;&gt; $reciever</source>
-        <translation>Du må oppgi en gyldig e-postadresse for avsender &gt;&gt; $reciever</translation>
+        <translation>Du må angi en gyldig avsenderadresse &gt;&gt; $reciever</translation>
     </message>
     <message>
         <source>List options</source>
@@ -822,7 +822,7 @@
     </message>
     <message>
         <source>Newsletter sender email</source>
-        <translation>Avsenderens e-post for nyhetsbrev</translation>
+        <translation>Avsenderadresse for nyhetsbrev</translation>
     </message>
     <message>
         <source>Newsletter sender name</source>
@@ -830,15 +830,15 @@
     </message>
     <message>
         <source>Newsletter default test receiver email</source>
-        <translation>Standard e-post for testmottaker av nyhetsbrev</translation>
+        <translation>Standard e-postadresse for testmottaker av nyhetsbrev</translation>
     </message>
     <message>
         <source>Newsletter skin name</source>
-        <translation>Navn på nyhetsbrevtema</translation>
+        <translation>Temanavn for nyhetsbrev</translation>
     </message>
     <message>
         <source>Personalize newsletter if data are available?</source>
-        <translation>Tilpass nyhetsbrevet personlig hvis data er tilgjengelige?</translation>
+        <translation>Vil du tilpasse nyhetsbrevet hvis data er tilgjengelige?</translation>
     </message>
     <message>
         <source>Newsletter output formats</source>
@@ -858,7 +858,7 @@
     </message>
     <message>
         <source>Main siteaccess locale</source>
-        <translation>Språkinnstilling for hovednettstedstilgang</translation>
+        <translation>Lokalinnstilling for hovednettstedstilgang</translation>
     </message>
     <message>
         <source>Email sender</source>
@@ -866,11 +866,11 @@
     </message>
     <message>
         <source>Email sender name</source>
-        <translation>Avsendernavn for e-post</translation>
+        <translation>Navn på e-postavsender</translation>
     </message>
     <message>
         <source>Email receiver test</source>
-        <translation>Mottaker av test-e-post</translation>
+        <translation>Test-e-postmottaker</translation>
     </message>
     <message>
         <source>No</source>
@@ -882,7 +882,7 @@
     </message>
     <message>
         <source>Personalize content</source>
-        <translation>Tilpass innholdet personlig</translation>
+        <translation>Tilpass innholdet</translation>
     </message>
     <message>
         <source>no</source>
@@ -894,15 +894,15 @@
     </message>
     <message>
         <source>Automatically approve subscription after user registration?</source>
-        <translation>Godkjenn abonnement automatisk etter brukerregistrering?</translation>
+        <translation>Vil du godkjenne abonnementet automatisk etter brukerregistreringen?</translation>
     </message>
     <message>
         <source>Email reply-to</source>
-        <translation>E-post for svar (reply-to)</translation>
+        <translation>Svaradresse (reply-to)</translation>
     </message>
     <message>
         <source>Email return-path</source>
-        <translation>E-post for retur (return-path)</translation>
+        <translation>Returadresse (return-path)</translation>
     </message>
     <message>
         <source>You have to choose a siteaccess for the list</source>
@@ -924,18 +924,18 @@
     </message>
     <message>
         <source>No user account found</source>
-        <translation>Ingen brukerkonto funnet</translation>
+        <translation>Fant ingen brukerkonto</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/datatype/cjwnewslettersubscription</name>
     <message>
         <source>No newsletters available.</source>
-        <translation>Ingen nyhetsbrev tilgjengelig.</translation>
+        <translation>Ingen nyhetsbrev er tilgjengelige.</translation>
     </message>
     <message>
         <source>Email of the subscriber.</source>
-        <translation>Abonnentens e-post.</translation>
+        <translation>Abonnentens e-postadresse.</translation>
     </message>
     <message>
         <source>no</source>
@@ -951,22 +951,22 @@
     <message>
         <source>CJW Newsletter Edition</source>
         <comment>Datatype name</comment>
-        <translation>CJW Newsletter – utgave</translation>
+        <translation>CJW nyhetsbrevutgave</translation>
     </message>
     <message>
         <source>CJW Newsletter List</source>
         <comment>Datatype name</comment>
-        <translation>CJW Newsletter – liste</translation>
+        <translation>CJW nyhetsbrevliste</translation>
     </message>
     <message>
         <source>CJW Newsletter Subscription</source>
         <comment>Datatype name</comment>
-        <translation>CJW Newsletter – abonnement</translation>
+        <translation>CJW nyhetsbrevabonnement</translation>
     </message>
     <message>
         <source>CJW Newsletter List Virtual</source>
         <comment>Datatype name</comment>
-        <translation>CJW Newsletter – virtuell liste</translation>
+        <translation>CJW virtuell nyhetsbrevliste</translation>
     </message>
 </context>
 <context>
@@ -1087,11 +1087,11 @@
     </message>
     <message>
         <source>Subscriptions in current system with import id %importId</source>
-        <translation>Abonnementer i gjeldende system med import-ID %importId</translation>
+        <translation>Abonnementer i det gjeldende systemet med import-ID %importId</translation>
     </message>
     <message>
         <source>Approved subscriptions in current system with import id %importId</source>
-        <translation>Godkjente abonnementer i gjeldende system med import-ID %importId</translation>
+        <translation>Godkjente abonnementer i det gjeldende systemet med import-ID %importId</translation>
     </message>
     <message>
         <source>Manage imports</source>
@@ -1138,7 +1138,7 @@
     </message>
     <message>
         <source>Import note</source>
-        <translation>Importmerknad</translation>
+        <translation>Importnotat</translation>
     </message>
     <message>
         <source>Data text</source>
@@ -1158,11 +1158,11 @@
     </message>
     <message>
         <source>Live count</source>
-        <translation>Gjeldende antall</translation>
+        <translation>Aktuelt antall</translation>
     </message>
     <message>
         <source>Live count approved</source>
-        <translation>Gjeldende antall godkjente</translation>
+        <translation>Aktuelt antall godkjente</translation>
     </message>
     <message>
         <source>Subscription count after import</source>
@@ -1170,11 +1170,11 @@
     </message>
     <message>
         <source>Subscriptions in current system with import id %importId</source>
-        <translation>Abonnementer i gjeldende system med import-ID %importId</translation>
+        <translation>Abonnementer i det gjeldende systemet med import-ID %importId</translation>
     </message>
     <message>
         <source>Approved subscriptions in current system with import id %importId</source>
-        <translation>Godkjente abonnementer i gjeldende system med import-ID %importId</translation>
+        <translation>Godkjente abonnementer i det gjeldende systemet med import-ID %importId</translation>
     </message>
     <message>
         <source>Imported user count</source>
@@ -1182,7 +1182,7 @@
     </message>
     <message>
         <source>Live count confirmed</source>
-        <translation>Gjeldende antall bekreftede</translation>
+        <translation>Aktuelt antall bekreftede</translation>
     </message>
     <message>
         <source>Newsletter user count after import</source>
@@ -1190,19 +1190,19 @@
     </message>
     <message>
         <source>Newsletter user in current system with import id %importId</source>
-        <translation>Nyhetsbrevbrukere i gjeldende system med import-ID %importId</translation>
+        <translation>Nyhetsbrevbrukere i det gjeldende systemet med import-ID %importId</translation>
     </message>
     <message>
         <source>Confirmed Newsletter user in current system with import id %importId</source>
-        <translation>Bekreftede nyhetsbrevbrukere i gjeldende system med import-ID %importId</translation>
+        <translation>Bekreftede nyhetsbrevbrukere i det gjeldende systemet med import-ID %importId</translation>
     </message>
     <message>
         <source>Remove %count_active_subscriptions active subscriptions by admin</source>
-        <translation>Fjern aktive abonnementer (%count_active_subscriptions) som administrator</translation>
+        <translation>Fjern %count_active_subscriptions aktive abonnementer som administrator</translation>
     </message>
     <message>
         <source>Do you really want to set status removed by admin to all active subscriptions (%count_active_subscriptions)?</source>
-        <translation>Vil du virkelig sette statusen «fjernet av administrator» på alle aktive abonnementer (%count_active_subscriptions)?</translation>
+        <translation>Vil du virkelig sette statusen "fjernet av administrator" på alle aktive abonnementer (%count_active_subscriptions)?</translation>
     </message>
     <message>
         <source>Subscriptions created by import</source>
@@ -1210,7 +1210,7 @@
     </message>
     <message>
         <source>n/a</source>
-        <translation>i/t</translation>
+        <translation>i.t.</translation>
     </message>
     <message>
         <source>Imports</source>
@@ -1229,7 +1229,7 @@
     </message>
     <message>
         <source>Newsletter dashboard</source>
-        <translation>Oversikt for nyhetsbrev</translation>
+        <translation>Nyhetsbrevoversikt</translation>
     </message>
     <message>
         <source>Last actions</source>
@@ -1237,7 +1237,7 @@
     </message>
     <message>
         <source>Create newsletter here</source>
-        <translation>Lag nyhetsbrev her</translation>
+        <translation>Opprett nyhetsbrev her</translation>
     </message>
     <message>
         <source>Edit newsletter</source>
@@ -1285,7 +1285,7 @@ To activate or edit your subscription, please visit this link:
 Takk for at du abonnerer på følgende nyhetsbrev:
 %subscriptionList
 
-For å aktivere eller redigere abonnementet ditt, gå til denne lenken:
+For å aktivere eller redigere abonnementet ditt går du til denne lenken:
 
 %configureLink
 </translation>
@@ -1304,7 +1304,7 @@ To edit your newsletter settings please visit the following link:
         <translation>Hei %name
 
 Takk for at du bruker nyhetsbrevet vårt.
-For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
+For å redigere nyhetsbrevinnstillingene dine går du til følgende lenke:
 
 %configureLink
 </translation>
@@ -1425,11 +1425,11 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     <name>cjw_newsletter/mailbox_item_list</name>
     <message>
         <source>Mailbox collect mail result</source>
-        <translation>Resultat av henting av e-post fra postkassen</translation>
+        <translation>Resultat av e-postinnhenting fra postboks</translation>
     </message>
     <message>
         <source>Collection result for mailbox %mailbox_id.</source>
-        <translation>Henteresultat for postkasse %mailbox_id.</translation>
+        <translation>Innhentingsresultat for postboks %mailbox_id.</translation>
     </message>
     <message>
         <source>Added</source>
@@ -1449,7 +1449,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Mailbox item parse result</source>
-        <translation>Resultat av analyse av postkasseelementer</translation>
+        <translation>Tolkingsresultat for postbokselement</translation>
     </message>
     <message>
         <source>Collect all mails</source>
@@ -1457,7 +1457,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Parse mails</source>
-        <translation>Analyser e-poster</translation>
+        <translation>Tolk e-poster</translation>
     </message>
     <message>
         <source>Invert selection</source>
@@ -1469,19 +1469,19 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Mb</source>
-        <translation>Pk</translation>
+        <translation>Pb</translation>
     </message>
     <message>
         <source>Ms</source>
-        <translation>Fru</translation>
+        <translation>St</translation>
     </message>
     <message>
         <source>MI</source>
-        <translation>PE</translation>
+        <translation>EI</translation>
     </message>
     <message>
         <source>MSize</source>
-        <translation>Størrelse</translation>
+        <translation>Str.</translation>
     </message>
     <message>
         <source>Bouncecode</source>
@@ -1489,11 +1489,11 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>IsBounce</source>
-        <translation>Returnert</translation>
+        <translation>Er retur</translation>
     </message>
     <message>
         <source>Nl user</source>
-        <translation>Nb-bruker</translation>
+        <translation>Nb.-bruker</translation>
     </message>
     <message>
         <source>Subject</source>
@@ -1521,19 +1521,19 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Select mailbox item for removal</source>
-        <translation>Velg postkasseelement som skal fjernes</translation>
+        <translation>Velg postbokselement som skal fjernes</translation>
     </message>
     <message>
         <source>n/a</source>
-        <translation>i/t</translation>
+        <translation>i.t.</translation>
     </message>
     <message>
         <source>Manage bounces</source>
-        <translation>Administrer returnerte e-poster</translation>
+        <translation>Administrer returer</translation>
     </message>
     <message>
         <source>Mailbox items</source>
-        <translation>Postkasseelementer</translation>
+        <translation>Postbokselementer</translation>
     </message>
     <message>
         <source>Mail accounts</source>
@@ -1541,15 +1541,15 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Bounces</source>
-        <translation>Returnerte e-poster</translation>
+        <translation>Returer</translation>
     </message>
     <message>
         <source>Collect emails from bounce accounts and parse them. You may then accept the detected bounce status or manually adjust it.</source>
-        <translation>Hent e-poster fra kontoene for returnerte e-poster og analyser dem. Deretter kan du godta den oppdagede returstatusen eller justere den manuelt.</translation>
+        <translation>Hent e-poster fra returkontoer og tolk dem. Deretter kan du godta den registrerte returstatusen eller justere den manuelt.</translation>
     </message>
     <message>
         <source>E-mails parsed</source>
-        <translation>E-poster analysert</translation>
+        <translation>E-poster tolket</translation>
     </message>
     <message>
         <source>Mailbox item list</source>
@@ -1560,19 +1560,19 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     <name>cjw_newsletter/mailbox_item_view</name>
     <message>
         <source>Mailbox Item Database Infos</source>
-        <translation>Databaseinformasjon om postkasseelement</translation>
+        <translation>Databaseinformasjon om postbokselement</translation>
     </message>
     <message>
         <source>LIVE mailbox item parse infos</source>
-        <translation>Gjeldende analyseinformasjon om postkasseelement</translation>
+        <translation>AKTUELL tolkingsinformasjon om postbokselement</translation>
     </message>
     <message>
         <source>Raw mail content</source>
-        <translation>Rått e-postinnhold</translation>
+        <translation>Rå e-postinnhold</translation>
     </message>
     <message>
         <source>Full View</source>
-        <translation>Full visning</translation>
+        <translation>Fullvisning</translation>
     </message>
     <message>
         <source>Download</source>
@@ -1580,7 +1580,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Show raw mail content inline.</source>
-        <translation>Vis rått e-postinnhold direkte på siden.</translation>
+        <translation>Vis rått e-postinnhold på siden.</translation>
     </message>
     <message>
         <source>Show inline</source>
@@ -1596,11 +1596,11 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Mailbox item list</source>
-        <translation>Liste over postkasseelementer</translation>
+        <translation>Liste over postbokselementer</translation>
     </message>
     <message>
         <source>Mailbox item view</source>
-        <translation>Visning av postkasseelement</translation>
+        <translation>Visning av postbokselement</translation>
     </message>
     <message>
         <source>created</source>
@@ -1627,7 +1627,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>n/a</source>
-        <translation>i/t</translation>
+        <translation>i.t.</translation>
     </message>
     <message>
         <source>Edit</source>
@@ -1635,11 +1635,11 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Edit mailbox.</source>
-        <translation>Rediger postkasse.</translation>
+        <translation>Rediger postboks.</translation>
     </message>
     <message>
         <source>Add new mailbox.</source>
-        <translation>Legg til ny postkasse.</translation>
+        <translation>Legg til ny postboks.</translation>
     </message>
     <message>
         <source>Manage mail accounts</source>
@@ -1647,7 +1647,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Define mail accounts that will collect mails for bounce handling</source>
-        <translation>Definer e-postkontoer som skal hente e-poster for håndtering av returnerte e-poster</translation>
+        <translation>Definer e-postkontoer som skal hente e-poster for returbehandling</translation>
     </message>
     <message>
         <source>Add mail account</source>
@@ -1726,7 +1726,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Bounces</source>
-        <translation>Returnerte e-poster</translation>
+        <translation>Returer</translation>
     </message>
     <message>
         <source>Newsletter systems</source>
@@ -1742,7 +1742,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Subscription form</source>
-        <translation>Påmeldingsskjema</translation>
+        <translation>Abonnementsskjema</translation>
     </message>
     <message>
         <source>INI Settings</source>
@@ -1833,7 +1833,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Preview of the newsletter output formats in iframe?</source>
-        <translation>Forhåndsvise nyhetsbrevets utdataformater i en iframe?</translation>
+        <translation>Vil du forhåndsvise utdataformatene for nyhetsbrevet i en iframe?</translation>
     </message>
     <message>
         <source>Email subject</source>
@@ -1904,7 +1904,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Test newsletter sent result</source>
-        <translation>Resultat av utsending av testnyhetsbrev</translation>
+        <translation>Resultat av testutsending</translation>
     </message>
     <message>
         <source>Subject</source>
@@ -1990,7 +1990,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Abort successfull</source>
-        <translation>Avbrytingen lyktes</translation>
+        <translation>Avbrutt</translation>
     </message>
     <message>
         <source>Abort not successfull</source>
@@ -2012,11 +2012,11 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     <name>cjw_newsletter/skin/default</name>
     <message>
         <source>unsubscribe</source>
-        <translation>melde av</translation>
+        <translation>meld av</translation>
     </message>
     <message>
         <source>To unsubscribe from this newsletter please visit the following link</source>
-        <translation>Gå til følgende lenke for å melde deg av dette nyhetsbrevet</translation>
+        <translation>For å melde deg av dette nyhetsbrevet går du til følgende lenke</translation>
     </message>
 </context>
 <context>
@@ -2027,15 +2027,15 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Newsletter subscribe</source>
-        <translation>Påmelding til nyhetsbrev</translation>
+        <translation>Abonner på nyhetsbrev</translation>
     </message>
     <message>
         <source>Here you can subscribe to one of our newsletters.</source>
-        <translation>Her kan du melde deg på et av våre nyhetsbrev.</translation>
+        <translation>Her kan du abonnere på et av nyhetsbrevene våre.</translation>
     </message>
     <message>
         <source>Please fill in the boxes "first name" and "last name" and enter your e-mail address in the corresponding field. Then, select the newsletter you are interested in and the format you prefer.</source>
-        <translation>Fyll ut feltene "fornavn" og "etternavn", og skriv inn e-postadressen din i det tilhørende feltet. Velg deretter nyhetsbrevet du er interessert i og formatet du foretrekker.</translation>
+        <translation>Fyll ut feltene "fornavn" og "etternavn", og skriv inn e-postadressen din i det tilhørende feltet. Velg deretter nyhetsbrevet du er interessert i, og formatet du foretrekker.</translation>
     </message>
     <message>
         <source>Salutation</source>
@@ -2063,15 +2063,15 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Email of the subscriber.</source>
-        <translation>Abonnentens e-post.</translation>
+        <translation>Abonnentens e-postadresse.</translation>
     </message>
     <message>
         <source>Subscribe</source>
-        <translation>Meld på</translation>
+        <translation>Abonner</translation>
     </message>
     <message>
         <source>Add to subscription.</source>
-        <translation>Legg til i abonnement.</translation>
+        <translation>Legg til i abonnementet.</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2087,7 +2087,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Your e-mail address will under no circumstances be passed on to unauthorized third parties.</source>
-        <translation>E-postadressen din vil under ingen omstendigheter bli gitt videre til uautoriserte tredjeparter.</translation>
+        <translation>E-postadressen din vil ikke under noen omstendigheter bli gitt videre til uvedkommende tredjeparter.</translation>
     </message>
     <message>
         <source>Further Options</source>
@@ -2099,7 +2099,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>unsubscribe</source>
-        <translation>melde av</translation>
+        <translation>meld av</translation>
     </message>
     <message>
         <source>change</source>
@@ -2107,25 +2107,25 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Subscription form</source>
-        <translation>Påmeldingsskjema</translation>
+        <translation>Abonnementsskjema</translation>
     </message>
     <message>
         <source>No newsletters available.</source>
-        <translation>Ingen nyhetsbrev tilgjengelig.</translation>
+        <translation>Ingen nyhetsbrev er tilgjengelige.</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/subscribe_info</name>
     <message>
         <source>Get subscribe information</source>
-        <translation>Hent abonnementsinformasjon</translation>
+        <translation>Få abonnementsinformasjon</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/subscribe_infomail</name>
     <message>
         <source>Newsletter - Edit profile</source>
-        <translation>Nyhetsbrev - Rediger profil</translation>
+        <translation>Nyhetsbrev – rediger profil</translation>
     </message>
     <message>
         <source>Input did not validate</source>
@@ -2133,7 +2133,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Enter the e-mail address you originally used to subscribe and you will be sent a link to edit you data.</source>
-        <translation>Skriv inn e-postadressen du opprinnelig brukte ved påmeldingen, så får du tilsendt en lenke for å redigere opplysningene dine.</translation>
+        <translation>Skriv inn e-postadressen du opprinnelig brukte til å abonnere, så får du tilsendt en lenke for å redigere dataene dine.</translation>
     </message>
     <message>
         <source>E-mail</source>
@@ -2179,19 +2179,19 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     <name>cjw_newsletter/subscribe_success</name>
     <message>
         <source>Newsletter - subscribe success</source>
-        <translation>Nyhetsbrev - påmelding fullført</translation>
+        <translation>Nyhetsbrev – abonnementet er registrert</translation>
     </message>
     <message>
         <source>You are registered for our newsletter.</source>
-        <translation>Du er påmeldt nyhetsbrevet vårt.</translation>
+        <translation>Du er registrert for nyhetsbrevet vårt.</translation>
     </message>
     <message>
         <source>An email was sent to your address %email.</source>
-        <translation>Det er sendt en e-post til adressen din %email.</translation>
+        <translation>En e-post ble sendt til adressen din %email.</translation>
     </message>
     <message>
         <source>Please note that your subscription is only active if you clicked confirmation link in these email.</source>
-        <translation>Merk at abonnementet ditt først er aktivt når du har klikket på bekreftelseslenken i denne e-posten.</translation>
+        <translation>Merk at abonnementet ditt bare er aktivt hvis du har klikket på bekreftelseslenken i denne e-posten.</translation>
     </message>
     <message>
         <source>You have the possibility of changing your personal profile at any time.</source>
@@ -2206,7 +2206,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     <name>cjw_newsletter/subscribe_success_not</name>
     <message>
         <source>Newsletter - subscribe unsuccessfull</source>
-        <translation>Nyhetsbrev - påmelding mislyktes</translation>
+        <translation>Nyhetsbrev – abonnementet mislyktes</translation>
     </message>
     <message>
         <source>Please contact the system administrator</source>
@@ -2225,7 +2225,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>You must choose a list for subscription.</source>
-        <translation>Du må velge en liste å melde deg på.</translation>
+        <translation>Du må velge en liste å abonnere på.</translation>
     </message>
     <message>
         <source>First name</source>
@@ -2280,11 +2280,11 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Bounced soft</source>
-        <translation>Midlertidig avvist</translation>
+        <translation>Myk retur</translation>
     </message>
     <message>
         <source>Bounced hard</source>
-        <translation>Permanent avvist</translation>
+        <translation>Hard retur</translation>
     </message>
     <message>
         <source>Blacklisted</source>
@@ -2393,7 +2393,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>n/a</source>
-        <translation>i/t</translation>
+        <translation>i.t.</translation>
     </message>
     <message>
         <source>Remove selected</source>
@@ -2401,7 +2401,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Remove selected subscription.</source>
-        <translation>Fjern valgt abonnement.</translation>
+        <translation>Fjern det valgte abonnementet.</translation>
     </message>
     <message>
         <source>New subscription</source>
@@ -2465,7 +2465,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>This View is only available for 'Newsletter List' objects</source>
-        <translation>Denne visningen er bare tilgjengelig for objekter av typen 'Nyhetsbrevliste'</translation>
+        <translation>Denne visningen er bare tilgjengelig for objekter av typen "Newsletter List"</translation>
     </message>
     <message>
         <source>Name</source>
@@ -2492,11 +2492,11 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>CSV field delimiter</source>
-        <translation>CSV-feltskilletegn</translation>
+        <translation>Feltskilletegn for CSV</translation>
     </message>
     <message>
         <source>CSV preview</source>
-        <translation>CSV-forhåndsvisning</translation>
+        <translation>Forhåndsvisning av CSV</translation>
     </message>
     <message>
         <source>Export</source>
@@ -2512,7 +2512,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Cancel subscription export.</source>
-        <translation>Avbryt eksport av abonnementer.</translation>
+        <translation>Avbryt eksporten av abonnementer.</translation>
     </message>
     <message>
         <source>Subscription list CSV export</source>
@@ -2535,7 +2535,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Import done</source>
-        <translation>Import fullført</translation>
+        <translation>Importen er fullført</translation>
     </message>
     <message>
         <source>Csv File Uploaded</source>
@@ -2543,7 +2543,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>First row is label</source>
-        <translation>Første rad er overskrift</translation>
+        <translation>Første rad er overskrifter</translation>
     </message>
     <message>
         <source>Output format</source>
@@ -2551,11 +2551,11 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>CSV field delimiter</source>
-        <translation>CSV-feltskilletegn</translation>
+        <translation>Feltskilletegn for CSV</translation>
     </message>
     <message>
         <source>Import note</source>
-        <translation>Importmerknad</translation>
+        <translation>Importnotat</translation>
     </message>
     <message>
         <source>Update</source>
@@ -2567,7 +2567,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Cancel subscription import.</source>
-        <translation>Avbryt import av abonnementer.</translation>
+        <translation>Avbryt importen av abonnementer.</translation>
     </message>
     <message>
         <source>Invert selection</source>
@@ -2595,7 +2595,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Email ok</source>
-        <translation>E-post ok</translation>
+        <translation>E-post OK</translation>
     </message>
     <message>
         <source>Nl user created</source>
@@ -2675,7 +2675,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Import all - disabled</source>
-        <translation>Importer alle - deaktivert</translation>
+        <translation>Importer alle – deaktivert</translation>
     </message>
     <message>
         <source>The file could not be stored in %dir. Check that the web server can write there.</source>
@@ -2754,7 +2754,7 @@ For å redigere innstillingene for nyhetsbrevet, gå til følgende lenke:
     </message>
     <message>
         <source>Newsletter subscription</source>
-        <translation>Abonnement på nyhetsbrev</translation>
+        <translation>Nyhetsbrevabonnement</translation>
     </message>
     <message>
         <source>Format</source>
@@ -2803,7 +2803,7 @@ må du bekrefte denne siden.</translation>
         You already unsubscribed from List "%listName".</source>
         <translation>Hei %name
 
-        Du er allerede meldt av listen "%listName".</translation>
+        Du har allerede meldt deg av listen "%listName".</translation>
     </message>
     <message>
         <source>Unsubscribe success</source>
@@ -2822,7 +2822,7 @@ må du bekrefte denne siden.</translation>
     <name>cjw_newsletter/user/salutation</name>
     <message>
         <source>Mr</source>
-        <translation>Hr.</translation>
+        <translation>Herr</translation>
     </message>
     <message>
         <source>Mrs</source>
@@ -2830,7 +2830,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Ms</source>
-        <translation>Fru</translation>
+        <translation>St</translation>
     </message>
 </context>
 <context>
@@ -2853,11 +2853,11 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Bounced soft</source>
-        <translation>Midlertidig avvist</translation>
+        <translation>Myk retur</translation>
     </message>
     <message>
         <source>Bounced hard</source>
-        <translation>Permanent avvist</translation>
+        <translation>Hard retur</translation>
     </message>
     <message>
         <source>Blacklisted</source>
@@ -2865,7 +2865,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Pending eZ User Register</source>
-        <translation>Venter på registrering av eZ-bruker</translation>
+        <translation>Venter på eZ-brukerregistrering</translation>
     </message>
 </context>
 <context>
@@ -2923,7 +2923,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Can not edit newsletter user because he is blacklisted</source>
-        <translation>Nyhetsbrevbrukeren kan ikke redigeres fordi brukeren er svartelistet</translation>
+        <translation>Kan ikke redigere nyhetsbrevbrukeren fordi vedkommende er svartelistet</translation>
     </message>
     <message>
         <source>auto approve</source>
@@ -2946,7 +2946,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Edit current subscription list.</source>
-        <translation>Rediger gjeldende abonnementsliste.</translation>
+        <translation>Rediger den gjeldende abonnementslisten.</translation>
     </message>
     <message>
         <source>Import CSV</source>
@@ -2982,7 +2982,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Bounce</source>
-        <translation>Returnert</translation>
+        <translation>Retur</translation>
     </message>
     <message>
         <source>Status</source>
@@ -3038,7 +3038,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Bounce count</source>
-        <translation>Antall returneringer</translation>
+        <translation>Antall returer</translation>
     </message>
     <message>
         <source>Details</source>
@@ -3097,7 +3097,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>S</source>
-        <translation>S</translation>
+        <translation>A</translation>
     </message>
     <message>
         <source>Remove</source>
@@ -3176,7 +3176,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Bounce count</source>
-        <translation>Antall returneringer</translation>
+        <translation>Antall returer</translation>
     </message>
     <message>
         <source>Remote id</source>
@@ -3212,7 +3212,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Ez user with id %ez_user_id does not exist anymore!</source>
-        <translation>eZ-bruker med ID %ez_user_id finnes ikke lenger!</translation>
+        <translation>eZ-brukeren med ID %ez_user_id finnes ikke lenger!</translation>
     </message>
     <message>
         <source>Removed</source>
@@ -3248,7 +3248,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Newsletter received</source>
-        <translation>Mottatte nyhetsbrev</translation>
+        <translation>Nyhetsbrev mottatt</translation>
     </message>
     <message>
         <source>Edition sent id</source>
@@ -3358,7 +3358,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Remove this item.</source>
-        <translation>Fjern dette objektet.</translation>
+        <translation>Fjern dette elementet.</translation>
     </message>
     <message>
         <source>You do not have permission to remove this item.</source>
@@ -3398,11 +3398,11 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Remove the selected items from the list above.</source>
-        <translation>Fjern de valgte elementene fra listen ovenfor.</translation>
+        <translation>Fjern de valgte elementene fra listen over.</translation>
     </message>
     <message>
         <source>You do not have permission to remove any of the items from the list above.</source>
-        <translation>Du har ikke tillatelse til å fjerne elementer fra listen ovenfor.</translation>
+        <translation>Du har ikke tillatelse til å fjerne noen av elementene fra listen over.</translation>
     </message>
     <message>
         <source>Move selected</source>
@@ -3410,11 +3410,11 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Move the selected items from the list above.</source>
-        <translation>Flytt valgte elementer fra listen over.</translation>
+        <translation>Flytt de valgte elementene fra listen over.</translation>
     </message>
     <message>
         <source>You do not have permission to move any of the items from the list above.</source>
-        <translation>Du har ikke tilgang til å flytte noen av elementene i listen over.</translation>
+        <translation>Du har ikke tillatelse til å flytte noen av elementene i listen over.</translation>
     </message>
     <message>
         <source>Update priorities</source>
@@ -3422,11 +3422,11 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Apply changes to the priorities of the items in the list above.</source>
-        <translation>Bruk endringene i prioritetene for elementene i listen ovenfor.</translation>
+        <translation>Bruk endringene i prioriteten til elementene i listen over.</translation>
     </message>
     <message>
         <source>You cannot update the priorities because you do not have permission to edit the current item or because a non-priority sorting method is used.</source>
-        <translation>Du kan ikke oppdatere prioritetene fordi du ikke har tillatelse til å redigere det gjeldende elementet, eller fordi det brukes en sorteringsmetode som ikke er basert på prioritet.</translation>
+        <translation>Du kan ikke oppdatere prioritetene fordi du ikke har tillatelse til å redigere det gjeldende elementet, eller fordi det brukes en sorteringsmetode som ikke er etter prioritet.</translation>
     </message>
     <message>
         <source>Create</source>
@@ -3434,7 +3434,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Use this menu to select the type of item you want to create then click the "Create here" button. The item will be created in the current location.</source>
-        <translation>Velg i denne menyen hvilken type element du vil lage, og klikk deretter på knappen "Lag her". Elementet blir laget på den gjeldende plasseringen.</translation>
+        <translation>Bruk denne menyen til å velge hvilken type element du vil opprette, og klikk deretter på "Opprett her". Elementet blir opprettet på den gjeldende plasseringen.</translation>
     </message>
     <message>
         <source>in</source>
@@ -3442,7 +3442,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Use this menu to select the language you want to use for the creation then click the "Create here" button. The item will be created in the current location.</source>
-        <translation>Velg i denne menyen språket du vil bruke, og klikk deretter på knappen "Lag her". Elementet blir laget på den gjeldende plasseringen.</translation>
+        <translation>Bruk denne menyen til å velge hvilket språk du vil bruke ved opprettelsen, og klikk deretter på "Opprett her". Elementet blir opprettet på den gjeldende plasseringen.</translation>
     </message>
     <message>
         <source>Here</source>
@@ -3450,11 +3450,11 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Create a new item in the current location. Use the menu on the left to select the type of  item.</source>
-        <translation>Lag et nytt element på den gjeldende plasseringen. Velg elementtypen i menyen til venstre.</translation>
+        <translation>Opprett et nytt element på den gjeldende plasseringen. Bruk menyen til venstre til å velge type element.</translation>
     </message>
     <message>
         <source>You do not have permission to create new items in the current location.</source>
-        <translation>Du har ikke tillatelse til å lage nye elementer på den gjeldende plasseringen.</translation>
+        <translation>Du har ikke tillatelse til å opprette nye elementer på den gjeldende plasseringen.</translation>
     </message>
     <message>
         <source>Published order</source>
@@ -3637,7 +3637,7 @@ må du bekrefte denne siden.</translation>
     <name>design/admin/node/view/line</name>
     <message>
         <source>Click on the icon to get a context sensitive menu.</source>
-        <translation>Klikk på ikonet for å få en kontekstmeny.</translation>
+        <translation>Klikk på ikonet for å få en kontekstavhengig meny.</translation>
     </message>
     <message>
         <source>Node ID: %node_id Visibility: %node_visibility</source>
@@ -3660,7 +3660,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Search only from the current location.</source>
-        <translation>Søk fra nåværende posisjon.</translation>
+        <translation>Søk bare fra gjeldende plassering.</translation>
     </message>
     <message>
         <source>Current location</source>
@@ -3736,7 +3736,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Mail-in addresses exist, but no mailbox reads them: switch on the bounce reader of the e-mail preferences or a newsletter mail account.</source>
-        <translation>Det finnes innkommende adresser, men ingen postkasse leser dem: slå på returleseren i e-postinnstillingene eller en e-postkonto for nyhetsbrevet.</translation>
+        <translation>Det finnes innkommende adresser, men ingen postboks leser dem: slå på returleseren i e-postinnstillingene eller en e-postkonto for nyhetsbrev.</translation>
     </message>
     <message>
         <source>Give the group a name.</source>
@@ -3744,7 +3744,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>These are no valid addresses: %list</source>
-        <translation>Dette er ikke gyldige adresser: %list</translation>
+        <translation>Dette er ingen gyldige adresser: %list</translation>
     </message>
     <message>
         <source>Enter at least one address.</source>
@@ -3752,7 +3752,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>A test group has at most %max addresses.</source>
-        <translation>En testgruppe har maks %max adresser.</translation>
+        <translation>En testgruppe har høyst %max adresser.</translation>
     </message>
     <message>
         <source>Choose a newsletter list.</source>
@@ -3760,15 +3760,15 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Enter a valid address without a "+" part (the tag goes into its own field).</source>
-        <translation>Skriv inn en gyldig adresse uten en "+"-del (merket hører hjemme i et eget felt).</translation>
+        <translation>Skriv inn en gyldig adresse uten en "+"-del (taggen hører hjemme i et eget felt).</translation>
     </message>
     <message>
         <source>A tag has only letters, digits, ".", "_" and "-".</source>
-        <translation>Et merke inneholder bare bokstaver, sifre, ".", "_" og "-".</translation>
+        <translation>En tagg har bare bokstaver, sifre, ".", "_" og "-".</translation>
     </message>
     <message>
         <source>An address for every list can only take unsubscribe mails.</source>
-        <translation>En adresse for alle lister kan bare ta imot avmeldings-e-post.</translation>
+        <translation>En adresse for alle lister kan bare ta imot avmeldings-e-poster.</translation>
     </message>
     <message>
         <source>Choose a mail account.</source>
@@ -3780,7 +3780,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>The e-mail preferences of Exponential are not installed here: there is no suppression list.</source>
-        <translation>E-postinnstillingene for Exponential er ikke installert her: det finnes ingen sperreliste.</translation>
+        <translation>E-postinnstillingene til Exponential er ikke installert her: det finnes ingen sperreliste.</translation>
     </message>
     <message>
         <source>Choose a reason: %reasons.</source>
@@ -3804,7 +3804,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Test mails are marked as tests and are never counted.</source>
-        <translation>Test-e-post merkes som test og telles aldri med.</translation>
+        <translation>Test-e-poster merkes som tester og telles aldri med.</translation>
     </message>
     <message>
         <source>Delivery</source>
@@ -3812,7 +3812,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>The mails go out with "%transport" in batches of %size, within the rate limits of the transport; a send that is stopped goes on with the next run.</source>
-        <translation>E-postene sendes med "%transport" i puljer på %size, innenfor transportens hastighetsgrenser; en sending som stoppes, fortsetter ved neste kjøring.</translation>
+        <translation>E-postene sendes med "%transport" i puljer på %size, innenfor transportens hastighetsgrenser; en utsending som stoppes, fortsetter ved neste kjøring.</translation>
     </message>
     <message>
         <source>The mails go out with "%transport", without a rate limit.</source>
@@ -3820,7 +3820,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>A soft bounce is sent again up to %count times.</source>
-        <translation>En midlertidig returnering sendes på nytt opptil %count ganger.</translation>
+        <translation>En myk retur sendes på nytt opptil %count ganger.</translation>
     </message>
     <message>
         <source>Test groups</source>
@@ -3828,7 +3828,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>A test group is a named set of addresses that gets the test mails of an edition. Its addresses are added to those typed into the test send form. Every test mail starts its subject with "%prefix" and carries the header X-Cjwnl-Test; test mails never pass the mail gate and are never counted.</source>
-        <translation>En testgruppe er et navngitt sett med adresser som får test-e-postene for en utgave. Adressene legges til dem som er skrevet inn i skjemaet for testsending. Emnet i hver test-e-post starter med "%prefix", og e-posten har headeren X-Cjwnl-Test; test-e-post passerer aldri e-postfilteret og telles aldri med.</translation>
+        <translation>En testgruppe er et navngitt sett med adresser som får test-e-postene for en utgave. Adressene legges til dem som skrives inn i skjemaet for testutsending. Hver test-e-post har et emne som begynner med "%prefix", og har headeren X-Cjwnl-Test; test-e-poster passerer aldri e-postsperren og telles aldri med.</translation>
     </message>
     <message>
         <source>New test group</source>
@@ -3892,7 +3892,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>One address per line (or separated by ";" or ","), at most %max.</source>
-        <translation>Én adresse per linje (eller skilt med ";" eller ","), maks %max.</translation>
+        <translation>Én adresse per linje (eller atskilt med ";" eller ","), høyst %max.</translation>
     </message>
     <message>
         <source>Store</source>
@@ -3908,7 +3908,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>People subscribe and unsubscribe by writing to these addresses. A subscribe mail only starts the subscription: the confirmation mail goes to the sender, who must open its link. An unsubscribe mail is honoured: at once when it proves the address, otherwise the address gets a mail with its unsubscribe link. The From header alone never changes anything.</source>
-        <translation>Folk melder seg på og av ved å skrive til disse adressene. En påmeldings-e-post starter bare abonnementet: bekreftelses-e-posten går til avsenderen, som må åpne lenken i den. En avmeldings-e-post etterkommes: med en gang når den beviser adressen, ellers får adressen en e-post med sin avmeldingslenke. From-headeren alene endrer aldri noe.</translation>
+        <translation>Folk abonnerer og avslutter abonnementet ved å skrive til disse adressene. En abonnements-e-post starter bare abonnementet: bekreftelses-e-posten går til avsenderen, som må åpne lenken i den. En avmeldings-e-post blir fulgt: straks når den beviser adressen, ellers får adressen en e-post med avmeldingslenken sin. From-headeren alene endrer aldri noe.</translation>
     </message>
     <message>
         <source>Mail-in is on</source>
@@ -3924,7 +3924,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>The bounce reader of the e-mail preferences reads the mailbox</source>
-        <translation>Returleseren i e-postinnstillingene leser postkassen</translation>
+        <translation>Returleseren i e-postinnstillingene leser postboksen</translation>
     </message>
     <message>
         <source>The bounce reader of the e-mail preferences is off</source>
@@ -3944,7 +3944,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Mailbox</source>
-        <translation>Postkasse</translation>
+        <translation>Postboks</translation>
     </message>
     <message>
         <source>Active</source>
@@ -3952,11 +3952,11 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>subscribe</source>
-        <translation>påmelding</translation>
+        <translation>abonner</translation>
     </message>
     <message>
         <source>unsubscribe</source>
-        <translation>melde av</translation>
+        <translation>meld av</translation>
     </message>
     <message>
         <source>both, by keyword</source>
@@ -3964,7 +3964,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>bounce mailbox</source>
-        <translation>returpostkasse</translation>
+        <translation>returpostboks</translation>
     </message>
     <message>
         <source>yes</source>
@@ -4020,19 +4020,19 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Mails to it are no longer acted on. The messages it got stay in the list.</source>
-        <translation>E-post til den behandles ikke lenger. Meldingene den har mottatt, blir værende i listen.</translation>
+        <translation>E-poster til den blir ikke lenger behandlet. Meldingene den har fått, blir værende i listen.</translation>
     </message>
     <message>
         <source>Plus tag</source>
-        <translation>Plussmerke</translation>
+        <translation>Plusstagg</translation>
     </message>
     <message>
         <source>Optional: with tag "weekly" the address is news+weekly@example.org.</source>
-        <translation>Valgfritt: med merket "weekly" er adressen news+weekly@example.org.</translation>
+        <translation>Valgfritt: med taggen "weekly" blir adressen news+weekly@example.org.</translation>
     </message>
     <message>
         <source>Plus-addressing is off ([MailInSettings] PlusAddressing), so only an address without a tag is reached.</source>
-        <translation>Plussadressering er av ([MailInSettings] PlusAddressing), så bare en adresse uten merke nås.</translation>
+        <translation>Plussadressering er av ([MailInSettings] PlusAddressing), så bare en adresse uten tagg nås.</translation>
     </message>
     <message>
         <source>Every list (unsubscribe only)</source>
@@ -4044,11 +4044,11 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>The bounce mailbox of the e-mail preferences</source>
-        <translation>Returpostkassen i e-postinnstillingene</translation>
+        <translation>Returpostboksen i e-postinnstillingene</translation>
     </message>
     <message>
         <source>The mailbox the mails to this address arrive in. Only messages read from it are acted on.</source>
-        <translation>Postkassen der e-post til denne adressen kommer inn. Bare meldinger som leses derfra, behandles.</translation>
+        <translation>Postboksen som e-postene til denne adressen kommer inn i. Bare meldinger som leses fra den, blir behandlet.</translation>
     </message>
     <message>
         <source>Rate limits and batches</source>
@@ -4064,7 +4064,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>batches of %size, %pause seconds between two batches of a send</source>
-        <translation>puljer på %size, %pause sekunder mellom to puljer i en utsendelse</translation>
+        <translation>puljer på %size, %pause sekunder mellom to puljer i en utsending</translation>
     </message>
     <message>
         <source>off</source>
@@ -4096,7 +4096,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>A pause holds every send of the transport, also when the limits are off. The limits are set per transport in [ThrottleSettings] MaxPerMinute[] and MaxPerHour[].</source>
-        <translation>En pause holder tilbake alle utsendelser fra transporten, også når grensene er slått av. Grensene settes per transport i [ThrottleSettings] MaxPerMinute[] og MaxPerHour[].</translation>
+        <translation>En pause holder tilbake alle utsendinger med transporten, også når grensene er av. Grensene angis per transport i [ThrottleSettings] MaxPerMinute[] og MaxPerHour[].</translation>
     </message>
     <message>
         <source>Transport</source>
@@ -4128,11 +4128,11 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>limit reached</source>
-        <translation>grense nådd</translation>
+        <translation>grensen er nådd</translation>
     </message>
     <message>
         <source>sends</source>
-        <translation>sendt</translation>
+        <translation>sendes</translation>
     </message>
     <message>
         <source>Resume</source>
@@ -4140,7 +4140,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>for</source>
-        <translation>i</translation>
+        <translation>for</translation>
     </message>
     <message>
         <source>Minutes</source>
@@ -4172,7 +4172,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>Taken</source>
-        <translation>Hentet</translation>
+        <translation>Tatt</translation>
     </message>
     <message>
         <source>Failed</source>
@@ -4196,11 +4196,11 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>No optional mail of the site goes to an address on the suppression list: newsletters, notifications, offers. Only a hash of each address is stored. The addresses also go on the newsletter blacklist. The file itself is not kept.</source>
-        <translation>Ingen valgfri e-post fra nettstedet går til en adresse på sperrelisten: nyhetsbrev, varsler, tilbud. Bare en hash av hver adresse lagres. Adressene legges også på nyhetsbrevets svarteliste. Selve filen beholdes ikke.</translation>
+        <translation>Ingen valgfri e-post fra nettstedet går til en adresse på sperrelisten: nyhetsbrev, varsler, tilbud. Bare en hash av hver adresse lagres. Adressene havner også på svartelisten for nyhetsbrev. Selve filen beholdes ikke.</translation>
     </message>
     <message>
         <source>%all addresses are suppressed now (%legal for legal requests, %bounce for bounces).</source>
-        <translation>%all adresser er sperret nå (%legal på grunn av juridiske forespørsler, %bounce på grunn av returer).</translation>
+        <translation>%all adresser er nå sperret (%legal på grunn av juridiske forespørsler, %bounce på grunn av returer).</translation>
     </message>
     <message>
         <source>Check: %added addresses would be suppressed.</source>
@@ -4284,7 +4284,7 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>For the administrators, stored with every entry (addresses are taken out of it).</source>
-        <translation>For administratorene, lagres med hver oppføring (adresser fjernes fra den).</translation>
+        <translation>For administratorene, lagret med hver oppføring (adresser fjernes fra teksten).</translation>
     </message>
     <message>
         <source>Check (change nothing)</source>
@@ -4296,11 +4296,11 @@ må du bekrefte denne siden.</translation>
     </message>
     <message>
         <source>On the console:</source>
-        <translation>I konsollen:</translation>
+        <translation>På konsollen:</translation>
     </message>
     <message>
         <source>Your unsubscribe request</source>
-        <translation>Din forespørsel om avmelding</translation>
+        <translation>Forespørselen din om avmelding</translation>
     </message>
     <message>
         <source>Hello,
@@ -4311,7 +4311,7 @@ we received a request by e-mail to unsubscribe this address from our newsletter.
 If you did not send this request, ignore this mail: nothing changes.</source>
         <translation>Hei,
 
-vi har mottatt en forespørsel per e-post om å melde denne adressen av nyhetsbrevet vårt. For å melde deg av, åpne lenken i nyhetsbrevet:
+vi har mottatt en forespørsel per e-post om å melde denne adressen av nyhetsbrevet vårt. For å melde deg av åpner du lenken i nyhetsbrevet:
 %links
 
 Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ingenting endres.</translation>
@@ -4366,23 +4366,23 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Hard bounces and complaints go on the suppression list of the site: no optional mail goes to them any more.</source>
-        <translation>Harde returer og klager legges på nettstedets sperreliste: ingen valgfri e-post går til dem lenger.</translation>
+        <translation>Harde returer og klager havner på nettstedets sperreliste: ingen valgfri e-post går til dem lenger.</translation>
     </message>
     <message>
         <source>Hard bounces only mark the newsletter user as bounced.</source>
-        <translation>Harde returer markerer bare nyhetsbrevbrukeren som returnert.</translation>
+        <translation>Harde returer merker bare nyhetsbrevbrukeren som returnert.</translation>
     </message>
     <message>
         <source>Bounce reader of the e-mail preferences</source>
-        <translation>Returleser for e-postinnstillingene</translation>
+        <translation>Returleser i e-postinnstillingene</translation>
     </message>
     <message>
         <source>Bounces</source>
-        <translation>Returnerte e-poster</translation>
+        <translation>Returer</translation>
     </message>
     <message>
         <source>Test sends and mail-in</source>
-        <translation>Testutsendelser og innkommende e-post</translation>
+        <translation>Testutsendinger og innkommende e-post</translation>
     </message>
     <message>
         <source>test groups</source>
@@ -4390,7 +4390,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>mail-in addresses</source>
-        <translation>adresser for innkommende e-post</translation>
+        <translation>innkommende adresser</translation>
     </message>
     <message>
         <source>waiting for a confirmation</source>
@@ -4402,7 +4402,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Subscribe and unsubscribe by e-mail is switched off ([MailInSettings] MailIn).</source>
-        <translation>Påmelding og avmelding per e-post er slått av ([MailInSettings] MailIn).</translation>
+        <translation>Abonnement og avmelding per e-post er slått av ([MailInSettings] MailIn).</translation>
     </message>
     <message>
         <source>The test group was removed.</source>
@@ -4414,11 +4414,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The mail-in address was removed.</source>
-        <translation>Adressen for innkommende e-post ble fjernet.</translation>
+        <translation>Den innkommende adressen ble fjernet.</translation>
     </message>
     <message>
         <source>The mail-in address %address was stored.</source>
-        <translation>Adressen for innkommende e-post %address ble lagret.</translation>
+        <translation>Den innkommende adressen %address ble lagret.</translation>
     </message>
     <message>
         <source>The transport "%transport" sends again.</source>
@@ -4434,7 +4434,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Suppression import</source>
-        <translation>Sperreimport</translation>
+        <translation>Import til sperreliste</translation>
     </message>
 </context>
 <context>
@@ -4462,15 +4462,15 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Default pool (settings)</source>
-        <translation>Standardsamling (innstillinger)</translation>
+        <translation>Standardpool (innstillinger)</translation>
     </message>
     <message>
         <source>Pool %id</source>
-        <translation>Samling %id</translation>
+        <translation>Pool %id</translation>
     </message>
     <message>
         <source>auto-fill</source>
-        <translation>autoutfylling</translation>
+        <translation>autofyll</translation>
     </message>
     <message>
         <source>interests</source>
@@ -4498,15 +4498,15 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The chosen article pool does not exist.</source>
-        <translation>Den valgte artikkelsamlingen finnes ikke.</translation>
+        <translation>Den valgte artikkelpoolen finnes ikke.</translation>
     </message>
     <message>
         <source>There are active recurring sends, but [ScheduleSettings] Schedules is disabled: the cronjob does not run them.</source>
-        <translation>Det finnes aktive gjentakende utsendelser, men [ScheduleSettings] Schedules er deaktivert: cronjobben kjører dem ikke.</translation>
+        <translation>Det finnes aktive gjentakende utsendinger, men [ScheduleSettings] Schedules er deaktivert: cronjobben kjører dem ikke.</translation>
     </message>
     <message>
         <source>%count runs of recurring sends failed in the last 7 days.</source>
-        <translation>%count kjøringer av gjentakende utsendelser mislyktes de siste 7 dagene.</translation>
+        <translation>%count kjøringer av gjentakende utsendinger mislyktes de siste 7 dagene.</translation>
     </message>
     <message>
         <source>"%name" has waited more than two days for its approval.</source>
@@ -4526,7 +4526,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Monthly on day %day at %time</source>
-        <translation>Månedlig på dag %day kl. %time</translation>
+        <translation>Månedlig den %day. kl. %time</translation>
     </message>
     <message>
         <source>Weekly on %day at %time</source>
@@ -4542,11 +4542,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Only when the pool has new articles</source>
-        <translation>Bare når samlingen har nye artikler</translation>
+        <translation>Bare når poolen har nye artikler</translation>
     </message>
     <message>
         <source>Made by the recurring send %id.</source>
-        <translation>Laget av den gjentakende utsendelsen %id.</translation>
+        <translation>Laget av den gjentakende utsendingen %id.</translation>
     </message>
     <message>
         <source>Newsletter approval</source>
@@ -4574,27 +4574,27 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The recurring send %id is paused.</source>
-        <translation>Den gjentakende utsendelsen %id er satt på pause.</translation>
+        <translation>Den gjentakende utsendingen %id er satt på pause.</translation>
     </message>
     <message>
         <source>The recurring send %id runs again; next run %time.</source>
-        <translation>Den gjentakende utsendelsen %id kjører igjen; neste kjøring %time.</translation>
+        <translation>Den gjentakende utsendingen %id kjører igjen; neste kjøring %time.</translation>
     </message>
     <message>
         <source>Another run of the recurring sends is active. Try again in a moment.</source>
-        <translation>En annen kjøring av de gjentakende utsendelsene er aktiv. Prøv igjen om et øyeblikk.</translation>
+        <translation>En annen kjøring av de gjentakende utsendingene er aktiv. Prøv igjen om et øyeblikk.</translation>
     </message>
     <message>
         <source>Recurring send %id: %result. %message</source>
-        <translation>Gjentakende utsendelse %id: %result. %message</translation>
+        <translation>Gjentakende utsending %id: %result. %message</translation>
     </message>
     <message>
         <source>The recurring send %id was removed. The editions and sends it made stay.</source>
-        <translation>Den gjentakende utsendelsen %id ble fjernet. Utgavene og utsendelsene den laget, blir værende.</translation>
+        <translation>Den gjentakende utsendingen %id ble fjernet. Utgavene og utsendingene den laget, blir værende.</translation>
     </message>
     <message>
         <source>Recurring sends</source>
-        <translation>Gjentakende utsendelser</translation>
+        <translation>Gjentakende utsendinger</translation>
     </message>
     <message>
         <source>sent</source>
@@ -4602,7 +4602,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>skipped, nothing new</source>
-        <translation>hoppet over, ingenting nytt</translation>
+        <translation>hoppet over, ikke noe nytt</translation>
     </message>
     <message>
         <source>skipped, condition not met</source>
@@ -4622,11 +4622,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The recurring send was saved. Next run: %time.</source>
-        <translation>Den gjentakende utsendelsen ble lagret. Neste kjøring: %time.</translation>
+        <translation>Den gjentakende utsendingen ble lagret. Neste kjøring: %time.</translation>
     </message>
     <message>
         <source>The recurring send was saved. It is paused.</source>
-        <translation>Den gjentakende utsendelsen ble lagret. Den er satt på pause.</translation>
+        <translation>Den gjentakende utsendingen ble lagret. Den er satt på pause.</translation>
     </message>
     <message>
         <source>Edit</source>
@@ -4634,7 +4634,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>New recurring send</source>
-        <translation>Ny gjentakende utsendelse</translation>
+        <translation>Ny gjentakende utsending</translation>
     </message>
     <message>
         <source>Choose the newsletter list.</source>
@@ -4646,15 +4646,15 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The template edition must belong to the chosen list.</source>
-        <translation>Malutgaven må tilhøre den valgte listen.</translation>
+        <translation>Malutgaven må høre til den valgte listen.</translation>
     </message>
     <message>
         <source>Enter the time as HH:MM, for example 08:30.</source>
-        <translation>Skriv inn klokkeslettet som HH:MM, for eksempel 08:30.</translation>
+        <translation>Skriv inn klokkeslettet som TT:MM, for eksempel 08:30.</translation>
     </message>
     <message>
         <source>Choose a time zone of the list.</source>
-        <translation>Velg en tidssone fra listen.</translation>
+        <translation>Velg en tidssone for listen.</translation>
     </message>
     <message>
         <source>The chosen condition is not available.</source>
@@ -4662,19 +4662,19 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The article pool "%name" was removed. Its lists and recurring sends use the default pool now.</source>
-        <translation>Artikkelsamlingen "%name" ble fjernet. Listene og de gjentakende utsendelsene bruker nå standardsamlingen.</translation>
+        <translation>Artikkelpoolen "%name" ble fjernet. Listene og de gjentakende utsendingene som brukte den, bruker nå standardpoolen.</translation>
     </message>
     <message>
         <source>Article pools</source>
-        <translation>Artikkelsamlinger</translation>
+        <translation>Artikkelpooler</translation>
     </message>
     <message>
         <source>Give the pool a name.</source>
-        <translation>Gi samlingen et navn.</translation>
+        <translation>Gi poolen et navn.</translation>
     </message>
     <message>
         <source>Choose a newsletter list, or none for a global pool.</source>
-        <translation>Velg en nyhetsbrevliste, eller ingen for en global samling.</translation>
+        <translation>Velg en nyhetsbrevliste, eller ingen for en global pool.</translation>
     </message>
     <message>
         <source>The node %id does not exist.</source>
@@ -4682,7 +4682,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Enter at least one node the articles are searched under.</source>
-        <translation>Angi minst én node som artiklene søkes under.</translation>
+        <translation>Angi minst én node som det skal søkes etter artikler under.</translation>
     </message>
     <message>
         <source>Some of the tag ids do not exist.</source>
@@ -4690,19 +4690,19 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The number of articles is between 1 and %max.</source>
-        <translation>Antall artikler må være mellom 1 og %max.</translation>
+        <translation>Antall artikler er mellom 1 og %max.</translation>
     </message>
     <message>
         <source>The article pool "%name" was saved.</source>
-        <translation>Artikkelsamlingen "%name" ble lagret.</translation>
+        <translation>Artikkelpoolen "%name" ble lagret.</translation>
     </message>
     <message>
         <source>New article pool</source>
-        <translation>Ny artikkelsamling</translation>
+        <translation>Ny artikkelpool</translation>
     </message>
     <message>
         <source>%count articles were taken into the edition.</source>
-        <translation>%count artikler ble tatt med i utgaven.</translation>
+        <translation>%count artikler ble tatt inn i utgaven.</translation>
     </message>
     <message>
         <source>The edition must be approved again.</source>
@@ -4718,7 +4718,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The approval was asked for, but nobody can approve it: set [ApprovalSettings] ApproverUserIds[] or ApproverGroupIds[].</source>
-        <translation>Det ble bedt om godkjenning, men ingen kan godkjenne: angi [ApprovalSettings] ApproverUserIds[] eller ApproverGroupIds[].</translation>
+        <translation>Det ble bedt om godkjenning, men ingen kan godkjenne den: angi [ApprovalSettings] ApproverUserIds[] eller ApproverGroupIds[].</translation>
     </message>
     <message>
         <source>The approval was asked for. The approvers find it in their collaboration inbox.</source>
@@ -4738,11 +4738,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>not the current version (%current)</source>
-        <translation>ikke gjeldende versjon (%current)</translation>
+        <translation>ikke den gjeldende versjonen (%current)</translation>
     </message>
     <message>
         <source>The list needs no approval: the edition can be sent as it is.</source>
-        <translation>Listen trenger ingen godkjenning: utgaven kan sendes som den er.</translation>
+        <translation>Listen krever ingen godkjenning: utgaven kan sendes som den er.</translation>
     </message>
     <message>
         <source>The edition</source>
@@ -4754,7 +4754,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Asked by</source>
-        <translation>Forespurt av</translation>
+        <translation>Bedt om av</translation>
     </message>
     <message>
         <source>Decided by</source>
@@ -4766,7 +4766,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Articles from pools</source>
-        <translation>Artikler fra samlinger</translation>
+        <translation>Artikler fra pooler</translation>
     </message>
     <message>
         <source>Your decision</source>
@@ -4778,7 +4778,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Approve this edition? It can be sent then.</source>
-        <translation>Godkjenne denne utgaven? Da kan den sendes.</translation>
+        <translation>Vil du godkjenne denne utgaven? Den kan da sendes.</translation>
     </message>
     <message>
         <source>Reject</source>
@@ -4790,11 +4790,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Nobody gets the request yet: set [ApprovalSettings] ApproverUserIds[] or ApproverGroupIds[].</source>
-        <translation>Ingen mottar forespørselen ennå: angi [ApprovalSettings] ApproverUserIds[] eller ApproverGroupIds[].</translation>
+        <translation>Ingen får forespørselen ennå: angi [ApprovalSettings] ApproverUserIds[] eller ApproverGroupIds[].</translation>
     </message>
     <message>
         <source>%count approvers get it in their collaboration inbox.</source>
-        <translation>%count godkjennere mottar den i samarbeidsinnboksen sin.</translation>
+        <translation>%count godkjennere får den i samarbeidsinnboksen sin.</translation>
     </message>
     <message>
         <source>Message to the approvers</source>
@@ -4834,11 +4834,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Pool</source>
-        <translation>Samling</translation>
+        <translation>Pool</translation>
     </message>
     <message>
         <source>articles taken</source>
-        <translation>artikler tatt med</translation>
+        <translation>artikler tatt inn</translation>
     </message>
     <message>
         <source>Back to the edition</source>
@@ -4846,7 +4846,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The edition is being sent or was sent: its articles cannot change.</source>
-        <translation>Utgaven sendes eller er sendt: artiklene kan ikke endres.</translation>
+        <translation>Utgaven sendes eller er sendt: artiklene i den kan ikke endres.</translation>
     </message>
     <message>
         <source>In the edition</source>
@@ -4870,11 +4870,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>No article of the pool is in the edition yet.</source>
-        <translation>Ingen artikkel fra samlingen er i utgaven ennå.</translation>
+        <translation>Ingen artikkel fra poolen er i utgaven ennå.</translation>
     </message>
     <message>
         <source>Articles of the pool</source>
-        <translation>Artikler i samlingen</translation>
+        <translation>Artikler i poolen</translation>
     </message>
     <message>
         <source>Class</source>
@@ -4930,7 +4930,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Take the chosen articles into the edition</source>
-        <translation>Ta de valgte artiklene med i utgaven</translation>
+        <translation>Ta de valgte artiklene inn i utgaven</translation>
     </message>
     <message>
         <source>%from to %to of %total</source>
@@ -4946,11 +4946,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>No article of the pool matches the filters.</source>
-        <translation>Ingen artikkel fra samlingen samsvarer med filtrene.</translation>
+        <translation>Ingen artikkel i poolen samsvarer med filtrene.</translation>
     </message>
     <message>
         <source>Edit the article pool "%name"</source>
-        <translation>Rediger artikkelsamlingen "%name"</translation>
+        <translation>Rediger artikkelpoolen "%name"</translation>
     </message>
     <message>
         <source>Please check the form</source>
@@ -4966,11 +4966,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Every list (a global pool)</source>
-        <translation>Alle lister (en global samling)</translation>
+        <translation>Alle lister (en global pool)</translation>
     </message>
     <message>
         <source>The global default pool (only for a global pool)</source>
-        <translation>Den globale standardsamlingen (bare for en global samling)</translation>
+        <translation>Den globale standardpoolen (bare for en global pool)</translation>
     </message>
     <message>
         <source>Searched under the nodes</source>
@@ -5018,7 +5018,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>days (0 = any age)</source>
-        <translation>dager (0 = hvilken som helst alder)</translation>
+        <translation>dager (0 = vilkårlig alder)</translation>
     </message>
     <message>
         <source>Articles per edition</source>
@@ -5026,7 +5026,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>the most the auto-fill takes</source>
-        <translation>det meste automatisk utfylling tar med</translation>
+        <translation>det meste autofyll tar</translation>
     </message>
     <message>
         <source>Order</source>
@@ -5050,7 +5050,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The pool finds %count articles now</source>
-        <translation>Samlingen finner nå %count artikler</translation>
+        <translation>Poolen finner nå %count artikler</translation>
     </message>
     <message>
         <source>Nothing matches. Check the nodes, classes and filters.</source>
@@ -5070,11 +5070,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Remove the article pool "%name"?</source>
-        <translation>Fjerne artikkelsamlingen "%name"?</translation>
+        <translation>Vil du fjerne artikkelpoolen "%name"?</translation>
     </message>
     <message>
         <source>The lists and recurring sends that use it fall back to the default pool. The articles taken into editions stay.</source>
-        <translation>Lister og gjentakende utsendelser som bruker den, faller tilbake til standardsamlingen. Artikler som er tatt med i utgaver, blir værende.</translation>
+        <translation>Listene og de gjentakende utsendingene som bruker den, faller tilbake på standardpoolen. Artiklene som er tatt inn i utgaver, blir værende.</translation>
     </message>
     <message>
         <source>Yes, remove</source>
@@ -5082,11 +5082,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>A pool says where the articles for editions come from: the nodes searched, the classes, sections, tags, states and age. A list uses the pool it names, else a pool made for it, else the global default.</source>
-        <translation>En samling angir hvor artiklene til utgaver kommer fra: nodene det søkes i, klassene, seksjonene, taggene, tilstandene og alderen. En liste bruker samlingen den angir, ellers en samling laget for den, ellers den globale standarden.</translation>
+        <translation>En pool angir hvor artiklene til utgaver kommer fra: nodene det søkes under, klassene, seksjonene, taggene, tilstandene og alderen. En liste bruker poolen den angir, ellers en pool laget for den, ellers den globale standarden.</translation>
     </message>
     <message>
         <source>No default pool is stored: the settings are used</source>
-        <translation>Ingen standardsamling er lagret: innstillingene brukes</translation>
+        <translation>Ingen standardpool er lagret: innstillingene brukes</translation>
     </message>
     <message>
         <source>Nodes</source>
@@ -5154,11 +5154,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>There is no article pool yet.</source>
-        <translation>Det finnes ingen artikkelsamling ennå.</translation>
+        <translation>Det finnes ingen artikkelpool ennå.</translation>
     </message>
     <message>
         <source>Make a global default pool, or one for a list.</source>
-        <translation>Lag en global standardsamling, eller en for en liste.</translation>
+        <translation>Lag en global standardpool, eller en for en liste.</translation>
     </message>
     <message>
         <source>no</source>
@@ -5170,11 +5170,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Article pool</source>
-        <translation>Artikkelsamling</translation>
+        <translation>Artikkelpool</translation>
     </message>
     <message>
         <source>The pool made for the list, else the global default</source>
-        <translation>Samlingen laget for listen, ellers den globale standarden</translation>
+        <translation>Poolen laget for listen, ellers den globale standarden</translation>
     </message>
     <message>
         <source>an edition is sent only after its approval</source>
@@ -5190,11 +5190,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Edit the recurring send %id</source>
-        <translation>Rediger den gjentakende utsendelsen %id</translation>
+        <translation>Rediger den gjentakende utsendingen %id</translation>
     </message>
     <message>
         <source>[ScheduleSettings] Schedules is disabled: the cronjob does not run recurring sends. ext:cjw_newsletter:schedule run does.</source>
-        <translation>[ScheduleSettings] Schedules er deaktivert: cronjobben kjører ikke gjentakende utsendelser. Det gjør ext:cjw_newsletter:schedule run.</translation>
+        <translation>[ScheduleSettings] Schedules er deaktivert: cronjobben kjører ikke gjentakende utsendinger. Det gjør ext:cjw_newsletter:schedule run.</translation>
     </message>
     <message>
         <source>What is sent</source>
@@ -5218,7 +5218,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Send the latest edition of the list that was not sent yet</source>
-        <translation>Send listens nyeste utgave som ikke er sendt ennå</translation>
+        <translation>Send den siste utgaven av listen som ikke er sendt ennå</translation>
     </message>
     <message>
         <source>Copy a template edition and send the copy</source>
@@ -5238,15 +5238,15 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Auto-fill</source>
-        <translation>Automatisk utfylling</translation>
+        <translation>Autofyll</translation>
     </message>
     <message>
         <source>Fill the copy with the articles of the pool published since the last send</source>
-        <translation>Fyll kopien med artiklene fra samlingen publisert siden forrige utsendelse</translation>
+        <translation>Fyll kopien med artiklene fra poolen som er publisert siden forrige utsending</translation>
     </message>
     <message>
         <source>The pool of the list</source>
-        <translation>Listens samling</translation>
+        <translation>Listens pool</translation>
     </message>
     <message>
         <source>Skip the run when there is nothing new (it is logged)</source>
@@ -5290,7 +5290,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>A day beyond the end of a month means its last day (the 31st is the 30th in April).</source>
-        <translation>En dag etter slutten av en måned betyr månedens siste dag (den 31. er den 30. i april).</translation>
+        <translation>En dag etter slutten av en måned betyr den siste dagen (den 31. er den 30. i april).</translation>
     </message>
     <message>
         <source>Time</source>
@@ -5310,15 +5310,15 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Remove this recurring send?</source>
-        <translation>Fjerne denne gjentakende utsendelsen?</translation>
+        <translation>Vil du fjerne denne gjentakende utsendingen?</translation>
     </message>
     <message>
         <source>The editions and sends it made stay; its log is removed.</source>
-        <translation>Utgavene og utsendelsene den laget, blir værende; loggen fjernes.</translation>
+        <translation>Utgavene og utsendingene den laget, blir værende; loggen dens fjernes.</translation>
     </message>
     <message>
         <source>The cronjob runs the due sends</source>
-        <translation>Cronjobben kjører utsendelsene som forfaller</translation>
+        <translation>Cronjobben kjører utsendingene som skal kjøres</translation>
     </message>
     <message>
         <source>[ScheduleSettings] Schedules is disabled: the cronjob does not run them</source>
@@ -5330,7 +5330,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The recurring sends have not run yet.</source>
-        <translation>De gjentakende utsendelsene har ikke kjørt ennå.</translation>
+        <translation>De gjentakende utsendingene har ikke kjørt ennå.</translation>
     </message>
     <message>
         <source>In cron: the part cjw_newsletter_mailqueue_create runs them. By hand:</source>
@@ -5346,7 +5346,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>list removed</source>
-        <translation>liste fjernet</translation>
+        <translation>listen er fjernet</translation>
     </message>
     <message>
         <source>Copy of "%name"</source>
@@ -5358,7 +5358,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The latest unsent edition</source>
-        <translation>Den nyeste usendte utgaven</translation>
+        <translation>Den siste usendte utgaven</translation>
     </message>
     <message>
         <source>with a condition</source>
@@ -5394,15 +5394,15 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Run this recurring send now? It makes the send at once.</source>
-        <translation>Kjøre denne gjentakende utsendelsen nå? Utsendelsen skjer med en gang.</translation>
+        <translation>Vil du kjøre denne gjentakende utsendingen nå? Utsendingen lages med en gang.</translation>
     </message>
     <message>
         <source>There is no recurring send yet.</source>
-        <translation>Det finnes ingen gjentakende utsendelse ennå.</translation>
+        <translation>Det finnes ingen gjentakende utsending ennå.</translation>
     </message>
     <message>
         <source>A recurring send sends a list on chosen weekdays, weekly or monthly: a copy of a template edition, or the latest edition that was not sent.</source>
-        <translation>En gjentakende utsendelse sender en liste på valgte ukedager, ukentlig eller månedlig: en kopi av en malutgave, eller den nyeste utgaven som ikke er sendt.</translation>
+        <translation>En gjentakende utsending sender en liste på valgte ukedager, ukentlig eller månedlig: en kopi av en malutgave, eller den siste utgaven som ikke er sendt.</translation>
     </message>
     <message>
         <source>Last runs</source>
@@ -5422,15 +5422,15 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>send %id</source>
-        <translation>utsendelse %id</translation>
+        <translation>utsending %id</translation>
     </message>
     <message>
         <source>No run yet.</source>
-        <translation>Ikke kjørt ennå.</translation>
+        <translation>Ingen kjøring ennå.</translation>
     </message>
     <message>
         <source>Ask for or give the approval</source>
-        <translation>Be om eller gi godkjenningen</translation>
+        <translation>Be om eller gi godkjenning</translation>
     </message>
     <message>
         <source>The list needs an approval: this version cannot be sent before it is approved.</source>
@@ -5438,7 +5438,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Articles from the pool</source>
-        <translation>Artikler fra puljen</translation>
+        <translation>Artikler fra poolen</translation>
     </message>
     <message>
         <source>copy</source>
@@ -5446,11 +5446,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>latest</source>
-        <translation>nyeste</translation>
+        <translation>siste</translation>
     </message>
     <message>
         <source>No recurring send is planned.</source>
-        <translation>Ingen gjentakende utsendelse er planlagt.</translation>
+        <translation>Ingen gjentakende utsending er planlagt.</translation>
     </message>
     <message>
         <source>The cronjob runs them</source>
@@ -5466,7 +5466,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>asked %time by %name</source>
-        <translation>bedt om %time av %name</translation>
+        <translation>forespurt %time av %name</translation>
     </message>
     <message>
         <source>No edition waits for an approval.</source>
@@ -5478,11 +5478,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>pools</source>
-        <translation>puljer</translation>
+        <translation>pooler</translation>
     </message>
     <message>
         <source>Editors pick articles for an edition from the pool of its list; recurring copies are filled from it.</source>
-        <translation>Redaktører velger artikler til en utgave fra puljen til listen; gjentakende kopier fylles derfra.</translation>
+        <translation>Redaktører velger artikler til en utgave fra listens pool; gjentakende kopier fylles fra den.</translation>
     </message>
     <message>
         <source>Approved</source>
@@ -5502,7 +5502,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Asked</source>
-        <translation>Bedt om</translation>
+        <translation>Forespurt</translation>
     </message>
     <message>
         <source>Version</source>
@@ -5530,7 +5530,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The request was replaced by a newer one (the edition changed).</source>
-        <translation>Forespørselen ble erstattet av en nyere (utgaven er endret).</translation>
+        <translation>Forespørselen ble erstattet av en nyere (utgaven ble endret).</translation>
     </message>
     <message>
         <source>The edition waits for an approver.</source>
@@ -5538,7 +5538,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The edition waits for your approval before it is sent.</source>
-        <translation>Utgaven venter på din godkjenning før den sendes.</translation>
+        <translation>Utgaven venter på godkjenningen din før den sendes.</translation>
     </message>
     <message>
         <source>Add comment</source>
@@ -5546,11 +5546,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Approve "%title"? It can be sent then.</source>
-        <translation>Godkjenne "%title"? Den kan da sendes.</translation>
+        <translation>Vil du godkjenne "%title"? Den kan da sendes.</translation>
     </message>
     <message>
         <source>Reject "%title"?</source>
-        <translation>Avvise "%title"?</translation>
+        <translation>Vil du avvise "%title"?</translation>
     </message>
     <message>
         <source>Only an approver can approve or reject this request.</source>
@@ -5574,7 +5574,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>"%1" was approved for sending</source>
-        <translation>"%1" ble godkjent for utsendelse</translation>
+        <translation>"%1" ble godkjent for utsending</translation>
     </message>
     <message>
         <source>"%1" was rejected</source>
@@ -5590,19 +5590,19 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>"%1" waits for your approval before it is sent</source>
-        <translation>"%1" venter på din godkjenning før den sendes</translation>
+        <translation>"%1" venter på godkjenningen din før det sendes</translation>
     </message>
     <message>
         <source>[%sitename] The newsletter "%name" waits for your approval</source>
-        <translation>[%sitename] Nyhetsbrevet "%name" venter på din godkjenning</translation>
+        <translation>[%sitename] Nyhetsbrevet "%name" venter på godkjenningen din</translation>
     </message>
     <message>
         <source>The newsletter edition "%name" waits for your approval at %sitename. It is not sent before it is approved.</source>
-        <translation>Nyhetsbrevutgaven "%name" venter på din godkjenning på %sitename. Den sendes ikke før den er godkjent.</translation>
+        <translation>Nyhetsbrevutgaven "%name" venter på godkjenningen din på %sitename. Den sendes ikke før den er godkjent.</translation>
     </message>
     <message>
         <source>If you do not want to receive these notifications, change your settings at:</source>
-        <translation>Hvis du ikke vil motta disse varslene, endrer du innstillingene dine her:</translation>
+        <translation>Hvis du ikke vil motta disse varslene, kan du endre innstillingene dine her:</translation>
     </message>
     <message>
         <source>[%sitename] The approval of the newsletter "%name"</source>
@@ -5622,7 +5622,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The identifier may only contain the letters a-z, digits and underscores.</source>
-        <translation>Identifikatoren kan bare inneholde bokstavene a-z, sifre og understreker.</translation>
+        <translation>Identifikatoren kan bare inneholde bokstavene a–z, sifre og understreker.</translation>
     </message>
     <message>
         <source>Enter a name of at most 255 characters.</source>
@@ -5642,15 +5642,15 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The skin %skin is not allowed for this list.</source>
-        <translation>Designet %skin er ikke tillatt for denne listen.</translation>
+        <translation>Temaet %skin er ikke tillatt for denne listen.</translation>
     </message>
     <message>
         <source>The skin of the list (%skin) must be one of the allowed skins.</source>
-        <translation>Listens design (%skin) må være et av de tillatte designene.</translation>
+        <translation>Listens tema (%skin) må være ett av de tillatte temaene.</translation>
     </message>
     <message>
         <source>The main language %language is not a language of the site.</source>
-        <translation>Hovedspråket %language er ikke et av nettstedets språk.</translation>
+        <translation>Hovedspråket %language er ikke et språk på nettstedet.</translation>
     </message>
     <message>
         <source>Interests from eztags need the eztags extension.</source>
@@ -5658,7 +5658,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The skin %skin is listed in AvailableSkinArray[] but has no templates.</source>
-        <translation>Designet %skin står i AvailableSkinArray[], men har ingen maler.</translation>
+        <translation>Temaet %skin står i AvailableSkinArray[], men har ingen maler.</translation>
     </message>
     <message>
         <source>This language is not offered.</source>
@@ -5678,7 +5678,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The interest "%name" was removed, with the picks of its subscribers.</source>
-        <translation>Interessen "%name" ble fjernet sammen med abonnentenes valg.</translation>
+        <translation>Interessen "%name" ble fjernet, sammen med abonnentenes valg av den.</translation>
     </message>
     <message>
         <source>Every list</source>
@@ -5698,7 +5698,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Skins</source>
-        <translation>Designer</translation>
+        <translation>Temaer</translation>
     </message>
     <message>
         <source>Newsletters</source>
@@ -5718,7 +5718,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>What subscribers see on their preference page.</source>
-        <translation>Det abonnentene ser på preferansesiden sin.</translation>
+        <translation>Det abonnentene ser på innstillingssiden sin.</translation>
     </message>
     <message>
         <source>Identifier</source>
@@ -5726,7 +5726,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Letters a-z, digits and underscores; made from the name when empty. A "newsletter condition" tests it (interest).</source>
-        <translation>Bokstavene a-z, sifre og understreker; lages fra navnet når feltet er tomt. En "nyhetsbrevbetingelse" tester den (interesse).</translation>
+        <translation>Bokstavene a–z, sifre og understreker; lages fra navnet når feltet er tomt. En "nyhetsbrevbetingelse" tester den (interest).</translation>
     </message>
     <message>
         <source>List</source>
@@ -5738,7 +5738,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Topic (a list offers it when its interest source is "Topics of the list")</source>
-        <translation>Tema (en liste tilbyr det når interessekilden er "Listens temaer")</translation>
+        <translation>Emne (en liste tilbyr det når interessekilden er "Listens emner")</translation>
     </message>
     <message>
         <source>Tag (a list offers it when its interest source is "Tags")</source>
@@ -5750,7 +5750,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Needed for a tag. For a topic optional: the "articles for your interests" block finds articles with this tag; without one it looks for the identifier among the keywords of an article.</source>
-        <translation>Påkrevd for en tagg. Valgfritt for et tema: blokken "artikler for dine interesser" finner artikler med denne taggen; uten tagg leter den etter identifikatoren blant nøkkelordene til en artikkel.</translation>
+        <translation>Kreves for en tagg. Valgfritt for et emne: blokken "artikler for dine interesser" finner artikler med denne taggen; uten tagg ser den etter identifikatoren blant nøkkelordene til en artikkel.</translation>
     </message>
     <message>
         <source>Order</source>
@@ -5774,7 +5774,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Remove this interest?</source>
-        <translation>Fjerne denne interessen?</translation>
+        <translation>Vil du fjerne denne interessen?</translation>
     </message>
     <message>
         <source>%count subscribers picked it; their picks are removed with it.</source>
@@ -5786,11 +5786,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Subscribers pick interests on their e-mail preference page. A list offers them when its interest source is set (list edit form).</source>
-        <translation>Abonnenter velger interesser på siden for e-postpreferanser. En liste tilbyr dem når interessekilden er angitt (skjemaet for redigering av listen).</translation>
+        <translation>Abonnenter velger interesser på siden for e-postinnstillinger. En liste tilbyr dem når interessekilden er angitt (redigeringsskjemaet for listen).</translation>
     </message>
     <message>
         <source>eztags is not installed: only topics</source>
-        <translation>eztags er ikke installert: bare temaer</translation>
+        <translation>eztags er ikke installert: bare emner</translation>
     </message>
     <message>
         <source>Subscribers</source>
@@ -5810,7 +5810,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Topic</source>
-        <translation>Tema</translation>
+        <translation>Emne</translation>
     </message>
     <message>
         <source>tag</source>
@@ -5834,15 +5834,15 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>No interest yet.</source>
-        <translation>Ingen interesse ennå.</translation>
+        <translation>Ingen interesser ennå.</translation>
     </message>
     <message>
         <source>Skins allowed for a send</source>
-        <translation>Tillatte designer for en utsendelse</translation>
+        <translation>Temaer som er tillatt for en utsending</translation>
     </message>
     <message>
         <source>The editor chooses one of these when an edition is sent. None ticked: every skin.</source>
-        <translation>Redaktøren velger ett av disse når en utgave sendes. Ingen avkrysset: alle designer.</translation>
+        <translation>Redaktøren velger ett av disse når en utgave sendes. Ingen avmerket: alle temaer.</translation>
     </message>
     <message>
         <source>Languages</source>
@@ -5850,7 +5850,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>One edition with translations: each subscriber gets his language when the edition has it, else the main language. None ticked: every subscriber gets the main language.</source>
-        <translation>Én utgave med oversettelser: hver abonnent får sitt språk når utgaven har det, ellers hovedspråket. Ingen avkrysset: alle abonnenter får hovedspråket.</translation>
+        <translation>Én utgave med oversettelser: hver abonnent får sitt eget språk når utgaven har det, ellers hovedspråket. Ingen avmerket: alle abonnenter får hovedspråket.</translation>
     </message>
     <message>
         <source>Main language</source>
@@ -5858,11 +5858,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The language of the main siteaccess</source>
-        <translation>Språket til hovedsiteaccessen</translation>
+        <translation>Språket til hovednettstedstilgangen</translation>
     </message>
     <message>
         <source>Subscribers pick interests on their preference page; the block "articles for your interests" of a skin is filled from them.</source>
-        <translation>Abonnenter velger interesser på preferansesiden sin; blokken "artikler for dine interesser" i et design fylles ut fra dem.</translation>
+        <translation>Abonnenter velger interesser på innstillingssiden sin; blokken "artikler for dine interesser" i et tema fylles ut fra dem.</translation>
     </message>
     <message>
         <source>No interests</source>
@@ -5870,7 +5870,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Topics of the list</source>
-        <translation>Listens temaer</translation>
+        <translation>Listens emner</translation>
     </message>
     <message>
         <source>Tags (eztags)</source>
@@ -5882,7 +5882,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Every skin</source>
-        <translation>Alle designer</translation>
+        <translation>Alle temaer</translation>
     </message>
     <message>
         <source>Only the main language</source>
@@ -5902,7 +5902,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Or one of the subscribers of the list:</source>
-        <translation>Eller en av listens abonnenter:</translation>
+        <translation>Eller en av abonnentene på listen:</translation>
     </message>
     <message>
         <source>Subscriber</source>
@@ -5942,27 +5942,27 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Choose a subscriber: the preview shows his language, the conditional parts, the articles for his interests and his placeholders. Nothing is sent.</source>
-        <translation>Velg en abonnent: forhåndsvisningen viser abonnentens språk, de betingede delene, artiklene for abonnentens interesser og plassholderne. Ingenting sendes.</translation>
+        <translation>Velg en abonnent: forhåndsvisningen viser vedkommendes språk, de betingede delene, artiklene for vedkommendes interesser og plassholderne. Ingenting sendes.</translation>
     </message>
     <message>
         <source>Skin of this send</source>
-        <translation>Design for denne utsendelsen</translation>
+        <translation>Tema for denne utsendingen</translation>
     </message>
     <message>
         <source>Preview the skins</source>
-        <translation>Forhåndsvis designene</translation>
+        <translation>Forhåndsvis temaene</translation>
     </message>
     <message>
         <source>his language, the conditional parts and the articles for his interests</source>
-        <translation>abonnentens språk, de betingede delene og artiklene for abonnentens interesser</translation>
+        <translation>vedkommendes språk, de betingede delene og artiklene for vedkommendes interesser</translation>
     </message>
     <message>
         <source>the list's skin</source>
-        <translation>listens design</translation>
+        <translation>listens tema</translation>
     </message>
     <message>
         <source>Text part written with the plain text views</source>
-        <translation>Tekstdel skrevet med visningene for ren tekst</translation>
+        <translation>Tekstdel skrevet med rentekstvisningene</translation>
     </message>
     <message>
         <source>Text part converted from the HTML part</source>
@@ -5978,11 +5978,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>There is no edition to show the skin with yet.</source>
-        <translation>Det finnes ingen utgave å vise designet med ennå.</translation>
+        <translation>Det finnes ingen utgave å vise temaet med ennå.</translation>
     </message>
     <message>
         <source>Language of the newsletters</source>
-        <translation>Nyhetsbrevenes språk</translation>
+        <translation>Språk for nyhetsbrevene</translation>
     </message>
     <message>
         <source>The main language of each list</source>
@@ -5990,7 +5990,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Skins, languages and interests</source>
-        <translation>Designer, språk og interesser</translation>
+        <translation>Temaer, språk og interesser</translation>
     </message>
     <message>
         <source>Lists</source>
@@ -6002,7 +6002,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>%count skins allowed</source>
-        <translation>%count designer tillatt</translation>
+        <translation>%count temaer tillatt</translation>
     </message>
     <message>
         <source>%count interests</source>
@@ -6014,7 +6014,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>outputs in other languages</source>
-        <translation>sender på andre språk</translation>
+        <translation>utdata på andre språk</translation>
     </message>
     <message>
         <source>Articles for your interests</source>
@@ -6034,11 +6034,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Top story</source>
-        <translation>Hovedsak</translation>
+        <translation>Toppsak</translation>
     </message>
     <message>
         <source>More for your interests</source>
-        <translation>Mer for interessene dine</translation>
+        <translation>Mer for dine interesser</translation>
     </message>
     <message>
         <source>View</source>
@@ -6046,23 +6046,23 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Picked for you</source>
-        <translation>Valgt for deg</translation>
+        <translation>Valgt ut for deg</translation>
     </message>
     <message>
         <source>An edition that has no translation in your language comes in the main language of its list.</source>
-        <translation>En utgave som ikke er oversatt til ditt språk, kommer på hovedspråket til listen sin.</translation>
+        <translation>En utgave som ikke har en oversettelse til språket ditt, kommer på hovedspråket til listen.</translation>
     </message>
     <message>
         <source>Your interests</source>
-        <translation>Interessene dine</translation>
+        <translation>Dine interesser</translation>
     </message>
     <message>
         <source>Newsletters that have a block of articles for your interests fill it from what you pick here. Nothing picked: no such block.</source>
-        <translation>Nyhetsbrev som har en blokk med artikler for interessene dine, fyller den med det du velger her. Ingenting valgt: ingen slik blokk.</translation>
+        <translation>Nyhetsbrev som har en blokk med artikler for dine interesser, fyller den ut fra det du velger her. Ingenting valgt: ingen slik blokk.</translation>
     </message>
     <message>
         <source>By e-mail</source>
-        <translation>Via e-post</translation>
+        <translation>Per e-post</translation>
     </message>
     <message>
         <source>to unsubscribe, write to</source>
@@ -6070,11 +6070,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>to subscribe, write to</source>
-        <translation>for å melde deg på, skriv til</translation>
+        <translation>for å abonnere, skriv til</translation>
     </message>
     <message>
         <source>to subscribe or unsubscribe, write to</source>
-        <translation>for å melde deg på eller av, skriv til</translation>
+        <translation>for å abonnere eller melde deg av, skriv til</translation>
     </message>
     <message>
         <source>Formats and lists of your newsletters</source>
@@ -6082,7 +6082,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The newsletters you receive by e-mail, in which language, and what you are interested in. Whether you get newsletters at all is decided on your e-mail preferences page.</source>
-        <translation>Nyhetsbrevene du mottar via e-post, på hvilket språk, og hva du er interessert i. Om du i det hele tatt får nyhetsbrev, avgjøres på siden for e-postinnstillingene dine.</translation>
+        <translation>Nyhetsbrevene du mottar per e-post, på hvilket språk, og hva du er interessert i. Om du i det hele tatt får nyhetsbrev, avgjøres på siden for e-postinnstillinger.</translation>
     </message>
     <message>
         <source>Sign in to see your newsletters.</source>
@@ -6098,7 +6098,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Newsletters are switched off on your e-mail preferences page, so none of these is sent.</source>
-        <translation>Nyhetsbrev er slått av på siden for e-postinnstillingene dine, så ingen av disse sendes.</translation>
+        <translation>Nyhetsbrev er slått av på siden for e-postinnstillinger, så ingen av disse sendes.</translation>
     </message>
     <message>
         <source>%count interests offered</source>
@@ -6138,7 +6138,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Week of %date</source>
-        <translation>Uke fra %date</translation>
+        <translation>Uken som begynner %date</translation>
     </message>
     <message>
         <source>%opens opens, %clicks clicks</source>
@@ -6154,7 +6154,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Nothing counted yet.</source>
-        <translation>Ingenting telt ennå.</translation>
+        <translation>Ingenting er telt ennå.</translation>
     </message>
     <message>
         <source>Off</source>
@@ -6182,7 +6182,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Sending started</source>
-        <translation>Utsending startet</translation>
+        <translation>Utsendingen startet</translation>
     </message>
     <message>
         <source>Finished</source>
@@ -6230,7 +6230,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Unique opens and clicks and the rates count only the %count people who agreed to the newsletter statistics; everybody else is in the totals of opens and clicks, without a name.</source>
-        <translation>Unike åpninger og klikk og ratene teller bare de %count personene som har godtatt nyhetsbrevstatistikken; alle andre er med i totalene for åpninger og klikk, uten navn.</translation>
+        <translation>Unike åpninger og klikk og ratene teller bare de %count personene som har samtykket til nyhetsbrevstatistikken; alle andre er med i totalene for åpninger og klikk, uten navn.</translation>
     </message>
     <message>
         <source>This send counts anonymous totals only: opens and clicks without a person, so there are no unique numbers.</source>
@@ -6238,7 +6238,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>This send was not tracked. Sent, delivered, bounced and unsubscribes come from the mail queue and the list.</source>
-        <translation>Denne utsendingen ble ikke sporet. Sendt, levert, avvist og avmeldinger kommer fra e-postkøen og listen.</translation>
+        <translation>Denne utsendingen ble ikke sporet. Sendt, levert, returnert og avmeldinger kommer fra e-postkøen og listen.</translation>
     </message>
     <message>
         <source>Clicks per link</source>
@@ -6290,7 +6290,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>%percent % of the list per variant, winner by %criterion rate after %hours h</source>
-        <translation>%percent % av listen per variant, vinner etter rate (%criterion) etter %hours t</translation>
+        <translation>%percent % av listen per variant, vinner etter %criterion-rate etter %hours t</translation>
     </message>
     <message>
         <source>open</source>
@@ -6354,7 +6354,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>In brackets: unique, counted only for the people who agreed to the newsletter statistics.</source>
-        <translation>I parentes: unike, telt bare for personene som har godtatt nyhetsbrevstatistikken.</translation>
+        <translation>I parentes: unike, telt bare for personene som har samtykket til nyhetsbrevstatistikken.</translation>
     </message>
     <message>
         <source>Nothing was sent yet.</source>
@@ -6394,7 +6394,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>%count people agreed</source>
-        <translation>%count personer har godtatt</translation>
+        <translation>%count personer har samtykket</translation>
     </message>
     <message>
         <source>No consent category</source>
@@ -6422,7 +6422,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Per-person rows are kept %months months, then only the totals stay. A person who withdraws the consent or is erased is removed at once.</source>
-        <translation>Rader per person beholdes i %months måneder, deretter blir bare totalene igjen. En person som trekker samtykket eller blir slettet, fjernes med en gang.</translation>
+        <translation>Rader per person beholdes i %months måneder, deretter blir bare totalene værende. En person som trekker tilbake samtykket eller blir slettet, fjernes med en gang.</translation>
     </message>
     <message>
         <source>Last cleanup: %time.</source>
@@ -6430,15 +6430,15 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The open rate counts the first open of each person who agreed to the newsletter statistics, per sent mail of the variant; the people are split at random, so the rates compare fairly.</source>
-        <translation>Åpningsraten teller den første åpningen fra hver person som har godtatt nyhetsbrevstatistikken, per sendt e-post for varianten; personene fordeles tilfeldig, så ratene kan sammenlignes rettferdig.</translation>
+        <translation>Åpningsraten teller den første åpningen fra hver person som har samtykket til nyhetsbrevstatistikken, per sendt e-post i varianten; personene fordeles tilfeldig, så ratene kan sammenlignes rettferdig.</translation>
     </message>
     <message>
         <source>The click rate decides: clicks per sent mail of the variant (anonymous totals, or no opens known).</source>
-        <translation>Klikkraten avgjør: klikk per sendt e-post for varianten (anonyme totaler, eller ingen kjente åpninger).</translation>
+        <translation>Klikkraten avgjør: klikk per sendt e-post i varianten (anonyme totaler, eller ingen kjente åpninger).</translation>
     </message>
     <message>
         <source>Change the test now?</source>
-        <translation>Endre testen nå?</translation>
+        <translation>Vil du endre testen nå?</translation>
     </message>
     <message>
         <source>Choose the winner now</source>
@@ -6470,7 +6470,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Per person counts only the recipients who agreed to the newsletter statistics on their e-mail preference page; everybody else is counted anonymously.</source>
-        <translation>Per person teller bare mottakerne som har godtatt nyhetsbrevstatistikken på siden for e-postinnstillingene sine; alle andre telles anonymt.</translation>
+        <translation>Per person teller bare mottakerne som har samtykket til nyhetsbrevstatistikken på siden for e-postinnstillinger; alle andre telles anonymt.</translation>
     </message>
     <message>
         <source>A sample of the list gets each subject; after the wait the subject with the best rate goes to the rest of the list. Subject A is the edition's own.</source>
@@ -6506,7 +6506,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Per person counts only the subscribers who switched on "Newsletter statistics" on their e-mail preference page; the others are counted anonymously. A send may choose another mode in the send form.</source>
-        <translation>Per person teller bare abonnentene som har slått på "Nyhetsbrevstatistikk" på siden for e-postinnstillingene sine; de andre telles anonymt. En utsending kan velge en annen modus i utsendingsskjemaet.</translation>
+        <translation>Per person teller bare abonnentene som har slått på "Nyhetsbrevstatistikk" på siden for e-postinnstillinger; de andre telles anonymt. En utsending kan velge en annen modus i utsendingsskjemaet.</translation>
     </message>
     <message>
         <source>editions</source>
@@ -6514,11 +6514,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>sends</source>
-        <translation>sendt</translation>
+        <translation>sendes</translation>
     </message>
     <message>
         <source>mails sent</source>
-        <translation>sendte e-poster</translation>
+        <translation>e-poster sendt</translation>
     </message>
     <message>
         <source>clicks on its links</source>
@@ -6542,7 +6542,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>No send is tracked yet. A list chooses its tracking in the list attribute; a send can choose another in the send form.</source>
-        <translation>Ingen utsending spores ennå. En liste velger sporingen sin i listeattributtet; en utsending kan velge en annen i utsendingsskjemaet.</translation>
+        <translation>Ingen utsending er sporet ennå. En liste velger sporing i listeattributtet; en utsending kan velge en annen i utsendingsskjemaet.</translation>
     </message>
     <message>
         <source>All statistics</source>
@@ -6550,11 +6550,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Export (CSV)</source>
-        <translation>Eksport (CSV)</translation>
+        <translation>Eksporter (CSV)</translation>
     </message>
     <message>
         <source>A/B subject tests</source>
-        <translation>A/B-tester av emner</translation>
+        <translation>A/B-tester av emne</translation>
     </message>
     <message>
         <source>winner at %time</source>
@@ -6570,7 +6570,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>We keep what is counted under your name for %months months; after that only the totals stay. When you switch this off or ask us to erase your data, it is removed at once.</source>
-        <translation>Vi beholder det som er telt under navnet ditt i %months måneder; deretter blir bare totalene igjen. Når du slår dette av eller ber oss slette dataene dine, fjernes det med en gang.</translation>
+        <translation>Vi beholder det som telles under navnet ditt, i %months måneder; deretter blir bare totalene værende. Når du slår dette av eller ber oss slette dataene dine, fjernes det med en gang.</translation>
     </message>
     <message>
         <source>Nothing is counted at the moment</source>
@@ -6598,11 +6598,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Tracking is on, but the e-mail preference category "%category" is not set up: nobody can agree to per-person statistics, so only anonymous totals are counted.</source>
-        <translation>Sporing er på, men e-postinnstillingskategorien "%category" er ikke satt opp: ingen kan godta statistikk per person, så bare anonyme totaler telles.</translation>
+        <translation>Sporing er på, men e-postinnstillingskategorien "%category" er ikke satt opp: ingen kan samtykke til statistikk per person, så bare anonyme totaler telles.</translation>
     </message>
     <message>
         <source>Some lists ask for tracking, but [TrackingSettings] Tracking is disabled for the site, so nothing is counted.</source>
-        <translation>Noen lister ber om sporing, men [TrackingSettings] Tracking er slått av for nettstedet, så ingenting telles.</translation>
+        <translation>Noen lister ber om sporing, men [TrackingSettings] Tracking er deaktivert for nettstedet, så ingenting telles.</translation>
     </message>
     <message>
         <source>The A/B test of "%edition" should have chosen its winner: does the mail queue run?</source>
@@ -6634,7 +6634,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>sampling</source>
-        <translation>utvalg</translation>
+        <translation>utvalg pågår</translation>
     </message>
     <message>
         <source>waiting</source>
@@ -6670,15 +6670,15 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Too many codes were requested. Please wait an hour and try again.</source>
-        <translation>Det ble bedt om for mange koder. Vent en time og prøv igjen.</translation>
+        <translation>Det er bedt om for mange koder. Vent en time og prøv igjen.</translation>
     </message>
     <message>
         <source>SMS cannot be sent at the moment. Please try again later.</source>
-        <translation>SMS kan ikke sendes akkurat nå. Prøv igjen senere.</translation>
+        <translation>SMS kan ikke sendes for øyeblikket. Prøv igjen senere.</translation>
     </message>
     <message>
         <source>SMS cannot be sent at the moment. Please try again in a few minutes.</source>
-        <translation>SMS kan ikke sendes akkurat nå. Prøv igjen om noen minutter.</translation>
+        <translation>SMS kan ikke sendes for øyeblikket. Prøv igjen om noen minutter.</translation>
     </message>
     <message>
         <source>Your confirmation code for the newsletters of %site: %code</source>
@@ -6694,7 +6694,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The code has expired. Please ask for a new code.</source>
-        <translation>Koden har utløpt. Be om en ny kode.</translation>
+        <translation>Koden er utløpt. Be om en ny kode.</translation>
     </message>
     <message>
         <source>The code was entered wrongly too often. Please ask for a new code.</source>
@@ -6706,11 +6706,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>I confirm my mobile number with the code and want to receive newsletters by SMS. I can stop them at any time by replying STOP or on the preference page.</source>
-        <translation>Jeg bekrefter mobilnummeret mitt med koden og vil motta nyhetsbrev på SMS. Jeg kan når som helst stoppe dem ved å svare STOP eller på preferansesiden.</translation>
+        <translation>Jeg bekrefter mobilnummeret mitt med koden og vil motta nyhetsbrev per SMS. Jeg kan når som helst stoppe dem ved å svare STOP eller på innstillingssiden.</translation>
     </message>
     <message>
         <source>The person replied STOP by SMS.</source>
-        <translation>Personen svarte STOP på SMS.</translation>
+        <translation>Personen svarte STOP per SMS.</translation>
     </message>
     <message>
         <source>SMS are not switched on for this list.</source>
@@ -6734,7 +6734,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The mail-preference category %category is not switched on, so nobody can agree to SMS.</source>
-        <translation>E-postpreferansekategorien %category er ikke slått på, så ingen kan samtykke til SMS.</translation>
+        <translation>E-postinnstillingskategorien %category er ikke slått på, så ingen kan samtykke til SMS.</translation>
     </message>
     <message>
         <source>%count SMS could not be sent.</source>
@@ -6762,15 +6762,15 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The SMS send was created. The next run of the queue sends it.</source>
-        <translation>SMS-utsendelsen ble opprettet. Neste kjøring av køen sender den.</translation>
+        <translation>SMS-utsendingen ble opprettet. Neste kjøring av køen sender den.</translation>
     </message>
     <message>
         <source>Send by SMS</source>
-        <translation>Send på SMS</translation>
+        <translation>Send per SMS</translation>
     </message>
     <message>
         <source>There is no code waiting for this number. Please ask for a new code.</source>
-        <translation>Det venter ingen kode for dette nummeret. Be om en ny kode.</translation>
+        <translation>Ingen kode venter for dette nummeret. Be om en ny kode.</translation>
     </message>
     <message>
         <source>A new code was sent to %phone.</source>
@@ -6834,11 +6834,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The mail-preference category %category is not switched on; see doc/sms.md of the extension.</source>
-        <translation>E-postpreferansekategorien %category er ikke slått på; se doc/sms.md i utvidelsen.</translation>
+        <translation>E-postinnstillingskategorien %category er ikke slått på; se doc/sms.md i utvidelsen.</translation>
     </message>
     <message>
         <source>Last SMS sends</source>
-        <translation>Siste SMS-utsendelser</translation>
+        <translation>Siste SMS-utsendinger</translation>
     </message>
     <message>
         <source>Waiting</source>
@@ -6854,7 +6854,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>No edition was sent by SMS yet. An edition is sent by SMS from its send page.</source>
-        <translation>Ingen utgave er sendt på SMS ennå. En utgave sendes på SMS fra sendesiden sin.</translation>
+        <translation>Ingen utgave er sendt per SMS ennå. En utgave sendes per SMS fra utsendingssiden sin.</translation>
     </message>
     <message>
         <source>Thank you. Your mobile number %phone is confirmed.</source>
@@ -6862,7 +6862,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>You will receive our newsletters by SMS. To stop them, reply STOP to one of them or turn them off in your settings.</source>
-        <translation>Du vil motta nyhetsbrevene våre på SMS. For å stoppe dem, svar STOP på en av dem eller slå dem av i innstillingene dine.</translation>
+        <translation>Du vil motta nyhetsbrevene våre per SMS. For å stoppe dem kan du svare STOP på en av dem eller slå dem av i innstillingene dine.</translation>
     </message>
     <message>
         <source>Your mobile number %phone is already confirmed.</source>
@@ -6874,7 +6874,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>We sent a code by SMS to %phone. Enter it here to confirm the number.</source>
-        <translation>Vi har sendt en kode på SMS til %phone. Skriv den inn her for å bekrefte nummeret.</translation>
+        <translation>Vi har sendt en kode per SMS til %phone. Skriv den inn her for å bekrefte nummeret.</translation>
     </message>
     <message>
         <source>Code from the SMS</source>
@@ -6894,11 +6894,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Editions of this list may be sent by SMS</source>
-        <translation>Utgaver av denne listen kan sendes på SMS</translation>
+        <translation>Utgaver av denne listen kan sendes per SMS</translation>
     </message>
     <message>
         <source>Only subscribers who confirmed their mobile number and agreed to newsletters by SMS get them.</source>
-        <translation>Bare abonnenter som har bekreftet mobilnummeret sitt og samtykket til nyhetsbrev på SMS, får dem.</translation>
+        <translation>Bare abonnenter som har bekreftet mobilnummeret sitt og samtykket til nyhetsbrev per SMS, får dem.</translation>
     </message>
     <message>
         <source>SMS sender</source>
@@ -6922,7 +6922,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>stopped by SMS</source>
-        <translation>stoppet via SMS</translation>
+        <translation>stoppet per SMS</translation>
     </message>
     <message>
         <source>not confirmed</source>
@@ -6930,7 +6930,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Send by SMS: %name</source>
-        <translation>Send på SMS: %name</translation>
+        <translation>Send per SMS: %name</translation>
     </message>
     <message>
         <source>Please check the SMS</source>
@@ -6970,7 +6970,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Only subscribers who confirmed their mobile number with the code and agreed to newsletters by SMS on the preference page get the SMS. Everyone else is left out when the queue is made.</source>
-        <translation>Bare abonnenter som har bekreftet mobilnummeret sitt med koden og samtykket til nyhetsbrev på SMS på preferansesiden, får SMS-en. Alle andre utelates når køen lages.</translation>
+        <translation>Bare abonnenter som har bekreftet mobilnummeret sitt med koden og samtykket til nyhetsbrev per SMS på innstillingssiden, får SMS-en. Alle andre utelates når køen lages.</translation>
     </message>
     <message>
         <source>Text of the SMS</source>
@@ -6994,7 +6994,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>This line is added to every SMS and counted above:</source>
-        <translation>Denne linjen legges til hver SMS og er talt med ovenfor:</translation>
+        <translation>Denne linjen legges til i hver SMS og telles med over:</translation>
     </message>
     <message>
         <source>Placeholders:</source>
@@ -7026,7 +7026,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The sender of the transport</source>
-        <translation>Transportens avsender</translation>
+        <translation>Avsenderen til transporten</translation>
     </message>
     <message>
         <source>The sender and the SMS switch of a list are set on the list object.</source>
@@ -7034,7 +7034,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>SMS sends of this edition</source>
-        <translation>SMS-utsendelser av denne utgaven</translation>
+        <translation>SMS-utsendinger av denne utgaven</translation>
     </message>
     <message>
         <source>Created</source>
@@ -7050,7 +7050,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>This edition was not sent by SMS yet.</source>
-        <translation>Denne utgaven er ikke sendt på SMS ennå.</translation>
+        <translation>Denne utgaven er ikke sendt per SMS ennå.</translation>
     </message>
     <message>
         <source>Back to the edition</source>
@@ -7058,15 +7058,15 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Send this edition by SMS instead</source>
-        <translation>Send denne utgaven på SMS i stedet</translation>
+        <translation>Send denne utgaven per SMS i stedet</translation>
     </message>
     <message>
         <source>Mobile number (optional, for newsletters by SMS)</source>
-        <translation>Mobilnummer (valgfritt, for nyhetsbrev på SMS)</translation>
+        <translation>Mobilnummer (valgfritt, for nyhetsbrev per SMS)</translation>
     </message>
     <message>
         <source>We send a code to this number. Newsletters by SMS start only once you enter it; reply STOP to end them.</source>
-        <translation>Vi sender en kode til dette nummeret. Nyhetsbrev på SMS starter først når du skriver den inn; svar STOP for å avslutte dem.</translation>
+        <translation>Vi sender en kode til dette nummeret. Nyhetsbrev per SMS starter først når du skriver den inn; svar STOP for å avslutte dem.</translation>
     </message>
     <message>
         <source>Send the confirmation code to this number after saving</source>
@@ -7074,11 +7074,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Newsletters by SMS are not offered at the moment.</source>
-        <translation>Nyhetsbrev på SMS tilbys ikke for øyeblikket.</translation>
+        <translation>Nyhetsbrev per SMS tilbys ikke for øyeblikket.</translation>
     </message>
     <message>
         <source>Newsletters by SMS go to the subscribers of our newsletters. Subscribe to a newsletter first; then you can add your mobile number here.</source>
-        <translation>Nyhetsbrev på SMS går til abonnentene på nyhetsbrevene våre. Abonner på et nyhetsbrev først; deretter kan du legge til mobilnummeret ditt her.</translation>
+        <translation>Nyhetsbrev per SMS går til abonnentene på nyhetsbrevene våre. Abonner på et nyhetsbrev først; deretter kan du legge til mobilnummeret ditt her.</translation>
     </message>
     <message>
         <source>We sent a code to %phone.</source>
@@ -7094,7 +7094,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Stopped by SMS</source>
-        <translation>Stoppet via SMS</translation>
+        <translation>Stoppet per SMS</translation>
     </message>
     <message>
         <source>With the country code. Leave the field empty to remove the number.</source>
@@ -7106,7 +7106,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The code has expired.</source>
-        <translation>Koden har utløpt.</translation>
+        <translation>Koden er utløpt.</translation>
     </message>
     <message>
         <source>Send me a new code</source>
@@ -7114,7 +7114,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>SMS go to this number while this is on. Reply %keyword to any of them to stop them.</source>
-        <translation>SMS går til dette nummeret så lenge dette er slått på. Svar %keyword på en av dem for å stoppe dem.</translation>
+        <translation>SMS går til dette nummeret så lenge dette er på. Svar %keyword på en av dem for å stoppe dem.</translation>
     </message>
     <message>
         <source>You stopped the SMS with a reply. Turn this on and save to get a new code and start again.</source>
@@ -7122,7 +7122,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>When this is on and you save, we send a code to the number. The SMS start once you enter the code.</source>
-        <translation>Når dette er slått på og du lagrer, sender vi en kode til nummeret. SMS-ene starter når du skriver inn koden.</translation>
+        <translation>Når dette er på og du lagrer, sender vi en kode til nummeret. SMS-ene starter når du skriver inn koden.</translation>
     </message>
     <message>
         <source>Newsletters by SMS</source>
@@ -7130,11 +7130,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>no number</source>
-        <translation>intet nummer</translation>
+        <translation>ingen nummer</translation>
     </message>
     <message>
         <source>Number and consent on your e-mail preferences page</source>
-        <translation>Nummer og samtykke på siden for e-postpreferansene dine</translation>
+        <translation>Nummer og samtykke på siden for e-postinnstillinger</translation>
     </message>
 </context>
 <context>
@@ -7162,7 +7162,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Map the columns</source>
-        <translation>Koble kolonnene</translation>
+        <translation>Tilordne kolonnene</translation>
     </message>
     <message>
         <source>Dry run</source>
@@ -7190,7 +7190,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Mapping</source>
-        <translation>Kobling</translation>
+        <translation>Tilordning</translation>
     </message>
     <message>
         <source>Imported</source>
@@ -7206,7 +7206,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Dry run done</source>
-        <translation>Prøvekjøring utført</translation>
+        <translation>Prøvekjøring fullført</translation>
     </message>
     <message>
         <source>Not imported yet</source>
@@ -7262,7 +7262,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Choose for each column of the file the field it fills. One column must be the e-mail address; each field can be chosen once.</source>
-        <translation>Velg for hver kolonne i filen feltet den fyller ut. Én kolonne må være e-postadressen; hvert felt kan bare velges én gang.</translation>
+        <translation>Velg for hver kolonne i filen hvilket felt den fyller. Én kolonne må være e-postadressen; hvert felt kan velges én gang.</translation>
     </message>
     <message>
         <source>Column</source>
@@ -7330,15 +7330,15 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Save the mapping as</source>
-        <translation>Lagre koblingen som</translation>
+        <translation>Lagre tilordningen som</translation>
     </message>
     <message>
         <source>Save mapping</source>
-        <translation>Lagre kobling</translation>
+        <translation>Lagre tilordning</translation>
     </message>
     <message>
         <source>Subscriptions of the list</source>
-        <translation>Listens abonnementer</translation>
+        <translation>Abonnementer på listen</translation>
     </message>
     <message>
         <source>Import details</source>
@@ -7350,7 +7350,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Report of the dry run</source>
-        <translation>Rapport over prøvekjøringen</translation>
+        <translation>Rapport fra prøvekjøringen</translation>
     </message>
     <message>
         <source>nothing was written</source>
@@ -7358,7 +7358,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Report of the import</source>
-        <translation>Rapport over importen</translation>
+        <translation>Rapport fra importen</translation>
     </message>
     <message>
         <source>Subscribers</source>
@@ -7414,11 +7414,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>%count rows had values that were left out (a salutation, language or phone number that could not be read); the rest of these rows was imported.</source>
-        <translation>%count rader hadde verdier som ble utelatt (en tiltaleform, et språk eller et telefonnummer som ikke kunne leses); resten av disse radene ble importert.</translation>
+        <translation>%count rader hadde verdier som ble utelatt (en tiltale, et språk eller et telefonnummer som ikke kunne leses); resten av disse radene ble importert.</translation>
     </message>
     <message>
         <source>CSV import with column mapping</source>
-        <translation>CSV-import med kolonnekobling</translation>
+        <translation>CSV-import med kolonnetilordning</translation>
     </message>
     <message>
         <source>The file was not uploaded</source>
@@ -7430,11 +7430,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The first row holds the column names</source>
-        <translation>Første rad inneholder kolonnenavnene</translation>
+        <translation>Den første raden inneholder kolonnenavnene</translation>
     </message>
     <message>
         <source>Saved mapping</source>
-        <translation>Lagret kobling</translation>
+        <translation>Lagret tilordning</translation>
     </message>
     <message>
         <source>None: guess from the column names</source>
@@ -7446,7 +7446,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Where and how these people agreed to get the newsletter. It is written to the consent log of every imported person, with the source "import".</source>
-        <translation>Hvor og hvordan disse personene samtykket til å motta nyhetsbrevet. Det skrives til samtykkeloggen for hver importert person, med kilden "import".</translation>
+        <translation>Hvor og hvordan disse personene samtykket til å få nyhetsbrevet. Det skrives til samtykkeloggen for hver importert person, med kilden "import".</translation>
     </message>
     <message>
         <source>Note</source>
@@ -7454,11 +7454,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The next step shows the columns of the file: choose for each the field it fills, check the preview, make a dry run, then import. Existing subscribers are updated, never duplicated; invalid, suppressed and unsubscribed addresses are skipped and listed.</source>
-        <translation>Neste trinn viser kolonnene i filen: velg for hver feltet den fyller ut, kontroller forhåndsvisningen, gjør en prøvekjøring og importer deretter. Eksisterende abonnenter oppdateres og dupliseres aldri; ugyldige, sperrede og avmeldte adresser hoppes over og listes opp.</translation>
+        <translation>Neste trinn viser kolonnene i filen: velg for hver av dem hvilket felt den fyller, kontroller forhåndsvisningen, gjør en prøvekjøring og importer deretter. Eksisterende abonnenter oppdateres, aldri duplisert; ugyldige, sperrede og avmeldte adresser hoppes over og listes opp.</translation>
     </message>
     <message>
         <source>Upload and map the columns</source>
-        <translation>Last opp og koble kolonnene</translation>
+        <translation>Last opp og tilordne kolonnene</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -7470,7 +7470,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>A site that ran the old eznewsletter extension can take its lists, subscribers and subscriptions over with a console command. The old tables are only read, never changed; every row read is logged here, and a second run skips what an earlier run took over.</source>
-        <translation>Et nettsted som brukte den gamle utvidelsen eznewsletter, kan overta listene, abonnentene og abonnementene sine med en konsollkommando. De gamle tabellene leses bare, de endres aldri; hver rad som leses, logges her, og en ny kjøring hopper over det en tidligere kjøring allerede har overtatt.</translation>
+        <translation>Et nettsted som kjørte den gamle utvidelsen eznewsletter, kan overta listene, abonnentene og abonnementene derfra med en konsollkommando. De gamle tabellene blir bare lest, aldri endret; hver rad som leses, logges her, og en ny kjøring hopper over det en tidligere kjøring har overtatt.</translation>
     </message>
     <message>
         <source>Old tables in this database</source>
@@ -7482,7 +7482,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>None: the old extension did not run on this database. A copy of the old data can be read from an SQLite file with --source-sqlite.</source>
-        <translation>Ingen: den gamle utvidelsen kjørte ikke på denne databasen. En kopi av de gamle dataene kan leses fra en SQLite-fil med --source-sqlite.</translation>
+        <translation>Ingen: den gamle utvidelsen har ikke kjørt på denne databasen. En kopi av de gamle dataene kan leses fra en SQLite-fil med --source-sqlite.</translation>
     </message>
     <message>
         <source>First a dry run, then the run:</source>
@@ -7538,7 +7538,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>No run yet.</source>
-        <translation>Ikke kjørt ennå.</translation>
+        <translation>Ingen kjøring ennå.</translation>
     </message>
     <message>
         <source>Migration run</source>
@@ -7598,7 +7598,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Subscriber export</source>
-        <translation>Eksport av abonnenter</translation>
+        <translation>Abonnenteksport</translation>
     </message>
     <message>
         <source>The file holds personal data. Every download is recorded in the audit trail with the list, the filters and the number of rows. Cells a spreadsheet would read as a formula start with an apostrophe.</source>
@@ -7614,7 +7614,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>none checked: every status</source>
-        <translation>ingen avkrysset: alle statuser</translation>
+        <translation>ingen avmerket: alle statuser</translation>
     </message>
     <message>
         <source>Date</source>
@@ -7630,11 +7630,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>the newest first</source>
-        <translation>nyeste først</translation>
+        <translation>de nyeste først</translation>
     </message>
     <message>
         <source>No subscriber matches the filters.</source>
-        <translation>Ingen abonnenter samsvarer med filtrene.</translation>
+        <translation>Ingen abonnent samsvarer med filtrene.</translation>
     </message>
     <message>
         <source>Download CSV</source>
@@ -7678,7 +7678,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Sites that ran eznewsletter take their subscribers over with ext:cjw_newsletter:import-eznewsletter.</source>
-        <translation>Nettsteder som brukte eznewsletter, overtar abonnentene sine med ext:cjw_newsletter:import-eznewsletter.</translation>
+        <translation>Nettsteder som kjørte eznewsletter, overtar abonnentene sine med ext:cjw_newsletter:import-eznewsletter.</translation>
     </message>
     <message>
         <source>Migration log</source>
@@ -7686,11 +7686,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The import with column mapping starts from the CSV import page of a list; sites that ran eznewsletter use the migration.</source>
-        <translation>Importen med kolonnekobling starter fra CSV-importsiden til en liste; nettsteder som brukte eznewsletter, bruker migreringen.</translation>
+        <translation>Importen med kolonnetilordning starter fra CSV-importsiden til en liste; nettsteder som kjørte eznewsletter, bruker migreringen.</translation>
     </message>
     <message>
         <source>CSV with mapping</source>
-        <translation>CSV med kobling</translation>
+        <translation>CSV med tilordning</translation>
     </message>
     <message>
         <source>Report</source>
@@ -7754,19 +7754,19 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Newsletter subscriptions taken over from eznewsletter (run %run); the person opted in on %date</source>
-        <translation>Nyhetsbrevabonnementer overtatt fra eznewsletter (kjøring %run); personen meldte seg på %date</translation>
+        <translation>Nyhetsbrevabonnementer overtatt fra eznewsletter (kjøring %run); personen samtykket %date</translation>
     </message>
     <message>
         <source>Newsletter unsubscription taken over from eznewsletter (run %run); the person unsubscribed on %date</source>
-        <translation>Avmelding fra nyhetsbrev overtatt fra eznewsletter (kjøring %run); personen meldte seg av %date</translation>
+        <translation>Nyhetsbrevavmelding overtatt fra eznewsletter (kjøring %run); personen meldte seg av %date</translation>
     </message>
     <message>
         <source>The import %id has been running for more than an hour.</source>
-        <translation>Importen %id har kjørt i mer enn en time.</translation>
+        <translation>Importen %id har kjørt i mer enn én time.</translation>
     </message>
     <message>
         <source>Newsletter "%list": subscribed by the CSV import %id (consent: %source)</source>
-        <translation>Nyhetsbrev "%list": påmeldt av CSV-importen %id (samtykke: %source)</translation>
+        <translation>Nyhetsbrev "%list": abonnert via CSV-importen %id (samtykke: %source)</translation>
     </message>
     <message>
         <source>No e-mail address</source>
@@ -7786,7 +7786,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>On the newsletter blacklist</source>
-        <translation>På nyhetsbrevets svarteliste</translation>
+        <translation>På svartelisten for nyhetsbrev</translation>
     </message>
     <message>
         <source>Switched the newsletter off in the e-mail preferences</source>
@@ -7794,11 +7794,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Unsubscribed before</source>
-        <translation>Tidligere avmeldt</translation>
+        <translation>Meldt av tidligere</translation>
     </message>
     <message>
         <source>The address bounced</source>
-        <translation>Adressen avviste e-posten</translation>
+        <translation>Adressen ga retur</translation>
     </message>
     <message>
         <source>Failed (see the debug log)</source>
@@ -7810,7 +7810,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>On the old do-not-contact list</source>
-        <translation>På den gamle listen over personer som ikke skal kontaktes</translation>
+        <translation>På den gamle ikke-kontakt-listen</translation>
     </message>
     <message>
         <source>Never confirmed</source>
@@ -7822,11 +7822,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Salutation not understood</source>
-        <translation>Tiltaleformen ble ikke forstått</translation>
+        <translation>Tiltalen ble ikke forstått</translation>
     </message>
     <message>
         <source>Not a locale (like ger-DE)</source>
-        <translation>Ikke en språkinnstilling (som ger-DE)</translation>
+        <translation>Ikke en lokalinnstilling (som ger-DE)</translation>
     </message>
     <message>
         <source>Not a phone number</source>
@@ -7834,19 +7834,19 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Give the mapping a name to save it.</source>
-        <translation>Gi koblingen et navn for å lagre den.</translation>
+        <translation>Gi tilordningen et navn for å lagre den.</translation>
     </message>
     <message>
         <source>The mapping "%name" was saved.</source>
-        <translation>Koblingen "%name" ble lagret.</translation>
+        <translation>Tilordningen "%name" ble lagret.</translation>
     </message>
     <message>
         <source>Map one column to the e-mail address.</source>
-        <translation>Koble én kolonne til e-postadressen.</translation>
+        <translation>Tilordne én kolonne til e-postadressen.</translation>
     </message>
     <message>
         <source>Say where the people gave their consent (the consent source).</source>
-        <translation>Oppgi hvor personene ga sitt samtykke (samtykkekilden).</translation>
+        <translation>Angi hvor personene ga samtykket sitt (samtykkekilden).</translation>
     </message>
     <message>
         <source>The file of this import is no longer there.</source>
@@ -7866,7 +7866,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>The file could not be stored in %dir. Check that the web server can write there.</source>
-        <translation>Filen kunne ikke lagres i %dir. Kontroller at webserveren kan skrive dit.</translation>
+        <translation>Filen kunne ikke lagres i %dir. Kontroller at webserveren kan skrive der.</translation>
     </message>
     <message>
         <source>This import was done already.</source>
@@ -7874,11 +7874,11 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Dry run done: nothing was written. See the report below.</source>
-        <translation>Prøvekjøring ferdig: ingenting ble skrevet. Se rapporten nedenfor.</translation>
+        <translation>Prøvekjøring fullført: ingenting ble skrevet. Se rapporten nedenfor.</translation>
     </message>
     <message>
         <source>The import is done.</source>
-        <translation>Importen er ferdig.</translation>
+        <translation>Importen er fullført.</translation>
     </message>
     <message>
         <source>Pending</source>
@@ -7894,7 +7894,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Unsubscribed</source>
-        <translation>Avmeldt</translation>
+        <translation>Meldt av</translation>
     </message>
     <message>
         <source>Removed by an administrator</source>
@@ -7902,7 +7902,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Soft bounce</source>
-        <translation>Midlertidig avvisning</translation>
+        <translation>Myk retur</translation>
     </message>
     <message>
         <source>Hard bounce</source>
@@ -7918,7 +7918,7 @@ Hvis du ikke sendte denne forespørselen, kan du se bort fra denne e-posten: ing
     </message>
     <message>
         <source>Subscribed</source>
-        <translation>Påmeldt</translation>
+        <translation>Abonnert</translation>
     </message>
     <message>
         <source>Removed</source>
