@@ -1,14 +1,14 @@
 name: cjw_newsletter
-version: 4.2.14
+version: 4.2.15
 files_count: 706
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
 aa9ea80af84e6cba65e0764a80b56e16  .gitignore
-d325088767255cd8fcc56c99e5c8c03c  CHANGELOG
-90ef4496589ac9dd18ee5e5d98e0bb4c  FAQ
-694a2892d8ff79eca1ecaf3cdcfe9a50  INSTALL
+f6f3eb70e179afbd4cd1b5da2e98035d  CHANGELOG
+d6fab46a528e9205716d5d7a12b628c6  FAQ
+153c75b3b81119edad890afba7ec5071  INSTALL
 0636e73ff0215e8d672dc4c32c317bb3  LICENSE
-017a2cce228ad7ca6b76322bd206eb58  README.md
+806aa0c012766d060bcb5c530e0f3f22  README.md
 365448c0f30ce8b58e9333eaae7cdfa0  autoloads/cjwnewsletteroperators.php
 7eee5f33bdc84297be5ee9f768890130  autoloads/eztemplateautoload.php
 061d04cef86b549be789825373e7929d  bin/php/class-languages.php
@@ -212,7 +212,7 @@ d5b92aa2051c8793830644c2edeffb3c  classes/statistics/cjwnewsletterstatisticsrepo
 39f3d167873060973e8e350a4d8b9f6e  classes/statistics/cjwnewsletterstattotal.php
 e204e68eb18812e1fac65917ea48e082  classes/statistics/cjwnewslettertracking.php
 421034ebc384fea3ee03154606f1679b  collaboration/cjwnewsletterapproval/cjwnewsletterapprovalcollaborationhandler.php
-3413266800226172399ed3294e737978  composer.json
+34af344a704bfd95a90176ad81d5e085  composer.json
 88c244a9f11d7b8fd2e3600e700cf25f  cronjobs/cjw_newsletter_mailbox.php
 93e27fe0928d89f7b2a5608f415a8e8d  cronjobs/cjw_newsletter_mailqueue_create.php
 e7e70295b7b1985893ef64f110a22280  cronjobs/cjw_newsletter_mailqueue_process.php
@@ -594,8 +594,8 @@ cf1036b2d3360f8e36d7462c0c58eaa8  doc/uml/cjw_newsletter_dbschema_v1.0.0.png
 f90eec2d1f019a7db9a9dfb9d9632d42  doc/upgrade-4.2.md
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
 782edd7ce72084d23e44e94ae248d722  extendedattributefilter/cjwnewsletterlistfilter.php
-d8b38b0cd0e51860b6190aa120868910  extension.xml
-dc4065827a97c54613d740fd1089b801  ezinfo.php
+223d00bd80da836844980b4b52bdd633  extension.xml
+a430bbd2b12cec5690686cd6aca50584  ezinfo.php
 90bbccd4a9f3f11f423a5371db08cc5b  modules/newsletter/ab_test.php
 58407deb615ce3169e78a3ebb276bfc8  modules/newsletter/approval.php
 497b5da0906ba7711bb1c1bf1e7992de  modules/newsletter/archive.php
@@ -670,7 +670,7 @@ c3dc3dd06b89f9521a918002f7784821  settings/design.ini.append.php
 299d2bb2379bc31e9a852987d148c715  settings/extendedattributefilter.ini.append.php
 f4f00b1e25828edb64aa1e9a8ba21d3d  settings/icon.ini.append.php
 cfa1d0d42b56c344ee9a302c177ce96e  settings/mailpreferences.ini.append.php
-ab41f1e8cf068990f03974c3e50e692c  settings/menu.ini.append.php
+077b9d6e1df4e6aee840833b9328e8e2  settings/menu.ini.append.php
 583081682e134c1be24c9752046a8a9f  settings/module.ini.append.php
 6415d736eea24c5079e5bd361180873b  settings/notification.ini.append.php
 de9d7e1cd7ee595989e17aa31e29cde9  settings/override.ini.append.php

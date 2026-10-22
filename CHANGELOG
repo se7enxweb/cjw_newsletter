@@ -1,5 +1,22 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.15
+======
+
+Updated
+
+- The Newsletter tab of the administration shows an icon: Icon=envelope in the tab's block [Topmenu_newsletter] of
+  menu.ini. admin4 draws it before the tab's name; other designs ignore it.
+- README.md is a complete guide: what the extension does, the requirements (Exponential 6.0.15 or later, PHP 8.0 or
+  later), the installation with Composer and by hand (tables, content classes with the class installer, settings,
+  cron), the main settings and a map of every settings block to its guide, the first send, the public pages,
+  template operators and fetch functions with examples, own skins, the cron jobs, the console commands, the policy
+  functions, upgrading and troubleshooting. INSTALL and FAQ, which described a 4.x installation, point to it.
+- composer.json requires PHP 8.0, names the issue tracker and the source, lists 7x as maintainer and sets
+  installer-name. ezinfo.php and extension.xml name 7x next to the original copyright; ezinfo.php no longer states a
+  kernel version of the past.
+- share/filelist.md5 lists the changed checksums.
+
 4.2.14
 ======
 
