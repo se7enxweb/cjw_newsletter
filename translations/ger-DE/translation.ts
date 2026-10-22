@@ -8888,4 +8888,15 @@ Wenn Sie diese Bitte nicht geschickt haben, beachten Sie diese Mail nicht: Es ä
         <translation>&quot;%name&quot;, versandt %date: %sent von %items Mails</translation>
     </message>
 </context>
+<context>
+    <name>kernel/transfer</name>
+    <message>
+        <source>Newsletter subscribers</source>
+        <translation>Newsletter-Abonnenten</translation>
+    </message>
+    <message>
+        <source>Add subscribers to a newsletter list from a CSV file with a column mapping, see past imports, and download a list&apos;s subscribers.</source>
+        <translation>Abonnenten aus einer CSV-Datei mit einer Spaltenzuordnung in eine Newsletter-Liste aufnehmen, frühere Importe ansehen und die Abonnenten einer Liste herunterladen.</translation>
+    </message>
+</context>
 </TS>
