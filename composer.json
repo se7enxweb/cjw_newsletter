@@ -1,26 +1,34 @@
 {
     "name": "se7enxweb/cjw_newsletter",
-    "description": "CJW Newsletter is a flexible newsletter solution for Exponential content object capabilities from CJW-Network",
+    "description": "CJW Newsletter, the newsletter system of Exponential: lists, editions and articles as content, double opt-in, sending from the cron, bounces, deliverability, statistics with consent, A/B tests, SMS and CSV import and export.",
     "type": "ezpublish-legacy-extension",
+    "keywords": [ "exponential", "exponential-extension", "newsletter", "mailing-list", "email", "double-opt-in", "bounce", "sms", "cjw" ],
+    "homepage": "https://github.com/se7enxweb/cjw_newsletter",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name" : "7x",
+            "name": "7x",
             "homepage": "https://se7enx.com",
             "email": "info@se7enx.com",
-            "role": "Developer"
+            "role": "Maintainer"
         },
         {
-            "name" : "CJW Network",
+            "name": "CJW Network",
             "homepage": "https://cjw-network.com",
             "email": "info@cjw-network.com",
             "role": "Author"
         }
     ],
+    "support": {
+        "issues": "https://github.com/se7enxweb/cjw_newsletter/issues",
+        "source": "https://github.com/se7enxweb/cjw_newsletter"
+    },
     "require": {
+        "php": ">=8.0",
         "se7enxweb/ezpublish-legacy-installer": "*"
     },
     "extra": {
-        "ezpublish-legacy-extension-name": "cjw_newsletter"
+        "ezpublish-legacy-extension-name": "cjw_newsletter",
+        "installer-name": "cjw_newsletter"
     }
 }
