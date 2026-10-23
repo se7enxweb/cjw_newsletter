@@ -1,5 +1,5 @@
 name: cjw_newsletter
-version: 4.2.15
+version: 4.2.16
 files_count: 706
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
@@ -482,7 +482,7 @@ f488c8ad73010ef4df9615c94081500e  design/standard/templates/newsletter/editorial
 06e4cd4a41e3e2c14158f216d6051a08  design/standard/templates/newsletter/filtertype/formbuilder.tpl
 b3c6880e5a9bc0929325f1ca3d569e3c  design/standard/templates/newsletter/filtertype/view/tableline.tpl
 71130ba3b8334bc76c8676502d2ca59d  design/standard/templates/newsletter/filtertype/viewbuilder.tpl
-77f7b6fd87f82816c3d26c373a5745cf  design/standard/templates/newsletter/import_list.tpl
+6b671f8f90ce8670dd9d535e2bb01ef3  design/standard/templates/newsletter/import_list.tpl
 d9f9989f22ac8dc5b8d6104c0ad3099a  design/standard/templates/newsletter/import_view.tpl
 51e7ba6e5c42ca118f4e863d3ed20b61  design/standard/templates/newsletter/importexport/import_mapping.tpl
 9cf9307ac5e6016f723a723975380af0  design/standard/templates/newsletter/importexport/import_report.tpl
@@ -594,7 +594,7 @@ cf1036b2d3360f8e36d7462c0c58eaa8  doc/uml/cjw_newsletter_dbschema_v1.0.0.png
 f90eec2d1f019a7db9a9dfb9d9632d42  doc/upgrade-4.2.md
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
 782edd7ce72084d23e44e94ae248d722  extendedattributefilter/cjwnewsletterlistfilter.php
-223d00bd80da836844980b4b52bdd633  extension.xml
+db44429a966b73a7617167b0a9b8224e  extension.xml
 a430bbd2b12cec5690686cd6aca50584  ezinfo.php
 90bbccd4a9f3f11f423a5371db08cc5b  modules/newsletter/ab_test.php
 58407deb615ce3169e78a3ebb276bfc8  modules/newsletter/approval.php
@@ -689,7 +689,7 @@ ca904215d429cfd3383b26e85033a322  translations/eng-US/translation.ts
 774bcebcbe58171e7f01f9313285be1e  translations/esl-ES/translation.ts
 16e23a43e5496e196d80f8eda62d4621  translations/esl-MX/translation.ts
 b3a4c7d5ccd2b4281f7d9dce4b491cf1  translations/fre-FR/translation.ts
-cd841d15d0f4269e5b79964246eb7938  translations/ger-DE/translation.ts
+39df0e834bf537f659aff8885b18e5e7  translations/ger-DE/translation.ts
 a15b848e3f318fc892f3abb969f1fb41  translations/heb-IL/translation.ts
 e94e4e68b7f671d55e3443ebd042f843  translations/ita-IT/translation.ts
 1d9ce4c39becd184202fc4254de538b8  translations/lat-VA/translation.ts
