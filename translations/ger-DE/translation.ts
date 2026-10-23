@@ -697,7 +697,7 @@
     </message>
     <message>
         <source>Please select the newsletter you wish to subscribe to. Deselect to unsubscribe.</source>
-        <translation>Wählen sie einen Newsletter aus um ihn zu abonnieren oder entfernen Sie die Auswahl eines Newsletter um das Abonnement zu beenden.</translation>
+        <translation>Wählen Sie einen Newsletter aus um ihn zu abonnieren oder entfernen Sie die Auswahl eines Newsletter um das Abonnement zu beenden.</translation>
     </message>
     <message>
         <source>You can also edit the small boxes &quot;first name&quot; and &quot;last name&quot;.</source>

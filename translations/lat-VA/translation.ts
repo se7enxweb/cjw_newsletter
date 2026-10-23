@@ -3546,7 +3546,7 @@ hanc paginam confirmare debes.</translation>
     </message>
     <message>
         <source>Store</source>
-        <translation>Taberna</translation>
+        <translation>Servare</translation>
     </message>
     <message>
         <source>Remove</source>
