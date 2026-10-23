@@ -3303,7 +3303,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Manage versions</source>
-        <translation>Zarządzaj wersjami</translation>
+        <translation>Zarządzać wersjami</translation>
     </message>
 </context>
 <context>
@@ -3326,7 +3326,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Edytować</translation>
     </message>
     <message>
         <source>Edit the contents of this item.</source>
@@ -3394,7 +3394,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Remove selected</source>
-        <translation>Usuń zaznaczone</translation>
+        <translation>Usunąć zaznaczone</translation>
     </message>
     <message>
         <source>Remove the selected items from the list above.</source>
@@ -3550,7 +3550,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Show object relation overview.</source>
-        <translation>Pokaż przegląd relacji obiektu.</translation>
+        <translation>Pokazać przegląd relacji obiektu.</translation>
     </message>
     <message>
         <source>Relations (%count)</source>
@@ -3680,7 +3680,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Logout from the system.</source>
-        <translation>Wyloguj się z systemu.</translation>
+        <translation>Wylogować się z systemu.</translation>
     </message>
     <message>
         <source>Logout</source>
