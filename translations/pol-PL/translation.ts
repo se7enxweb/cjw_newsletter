@@ -12,11 +12,11 @@
     <name>cjw_newsletter/blacklist_item_add</name>
     <message>
         <source>Edit &lt;%mailbox.email&gt; </source>
-        <translation>Edytuj &lt;%mailbox.email&gt; </translation>
+        <translation>Edytować &lt;%mailbox.email&gt; </translation>
     </message>
     <message>
         <source>Add a new Blacklist item </source>
-        <translation>Dodaj nowy element do czarnej listy </translation>
+        <translation>Dodać nowy element do czarnej listy </translation>
     </message>
     <message>
         <source>Email</source>
@@ -28,11 +28,11 @@
     </message>
     <message>
         <source>Add to Blacklist</source>
-        <translation>Dodaj do czarnej listy</translation>
+        <translation>Dodać do czarnej listy</translation>
     </message>
     <message>
         <source>Discard</source>
-        <translation>Odrzuć</translation>
+        <translation>Odrzucić</translation>
     </message>
     <message>
         <source>Back</source>
@@ -52,7 +52,7 @@
     </message>
     <message>
         <source>Add a new Blacklist item</source>
-        <translation>Dodaj nowy element do czarnej listy</translation>
+        <translation>Dodać nowy element do czarnej listy</translation>
     </message>
     <message>
         <source>Enter the email address.</source>
@@ -79,11 +79,11 @@
     <name>cjw_newsletter/blacklist_item_list</name>
     <message>
         <source>Create a new blacklist entry.</source>
-        <translation>Utwórz nowy wpis na czarnej liście.</translation>
+        <translation>Utworzyć nowy wpis na czarnej liście.</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation>Odwróć zaznaczenie</translation>
+        <translation>Odwrócić zaznaczenie</translation>
     </message>
     <message>
         <source>ID</source>
@@ -111,7 +111,7 @@
     </message>
     <message>
         <source>Select items for removal</source>
-        <translation>Zaznacz elementy do usunięcia</translation>
+        <translation>Zaznaczyć elementy do usunięcia</translation>
     </message>
     <message>
         <source>Manage blacklist</source>
@@ -123,7 +123,7 @@
     </message>
     <message>
         <source>Add email address to blacklist</source>
-        <translation>Dodaj adres e-mail do czarnej listy</translation>
+        <translation>Dodać adres e-mail do czarnej listy</translation>
     </message>
     <message>
         <source>Blacklisted users</source>
@@ -139,11 +139,11 @@
     </message>
     <message>
         <source>Remove selected</source>
-        <translation>Usuń zaznaczone</translation>
+        <translation>Usunąć zaznaczone</translation>
     </message>
     <message>
         <source>Remove the selected items from the list above.</source>
-        <translation>Usuń zaznaczone elementy z powyższej listy.</translation>
+        <translation>Usunąć zaznaczone elementy z powyższej listy.</translation>
     </message>
     <message>
         <source>Newsletter user</source>
@@ -197,7 +197,7 @@
     </message>
     <message>
         <source>Abort cronjob</source>
-        <translation>Przerwij cronjob</translation>
+        <translation>Przerwać cronjob</translation>
     </message>
     <message>
         <source>Emails count</source>
@@ -260,7 +260,7 @@
     </message>
     <message>
         <source>Send Newsletter</source>
-        <translation>Wyślij newsletter</translation>
+        <translation>Wysłać newsletter</translation>
     </message>
     <message>
         <source>Status process</source>
@@ -295,7 +295,7 @@
     <name>cjw_newsletter/cjw_newsletter_list</name>
     <message>
         <source>Create newsletter here</source>
-        <translation>Utwórz newsletter tutaj</translation>
+        <translation>Utworzyć newsletter tutaj</translation>
     </message>
     <message>
         <source>Newsletter editions</source>
@@ -311,7 +311,7 @@
     </message>
     <message>
         <source>Create filter here</source>
-        <translation>Utwórz filtr tutaj</translation>
+        <translation>Utworzyć filtr tutaj</translation>
     </message>
 </context>
 <context>
@@ -326,19 +326,19 @@
     </message>
     <message>
         <source>Show 10 items per page.</source>
-        <translation>Pokazuj 10 elementów na stronie.</translation>
+        <translation>Pokazywać 10 elementów na stronie.</translation>
     </message>
     <message>
         <source>Show 50 items per page.</source>
-        <translation>Pokazuj 50 elementów na stronie.</translation>
+        <translation>Pokazywać 50 elementów na stronie.</translation>
     </message>
     <message>
         <source>Show 25 items per page.</source>
-        <translation>Pokazuj 25 elementów na stronie.</translation>
+        <translation>Pokazywać 25 elementów na stronie.</translation>
     </message>
     <message>
         <source>Display sub items using a simple list.</source>
-        <translation>Wyświetlaj elementy podrzędne jako prostą listę.</translation>
+        <translation>Wyświetlać elementy podrzędne jako prostą listę.</translation>
     </message>
     <message>
         <source>List</source>
@@ -350,7 +350,7 @@
     </message>
     <message>
         <source>Display sub items using a detailed list.</source>
-        <translation>Wyświetl elementy podrzędne w postaci szczegółowej listy.</translation>
+        <translation>Wyświetlić elementy podrzędne w postaci szczegółowej listy.</translation>
     </message>
     <message>
         <source>Detailed</source>
@@ -358,7 +358,7 @@
     </message>
     <message>
         <source>Display sub items as thumbnails.</source>
-        <translation>Wyświetlaj elementy podrzędne jako miniatury.</translation>
+        <translation>Wyświetlać elementy podrzędne jako miniatury.</translation>
     </message>
     <message>
         <source>The current item does not contain any sub items.</source>
@@ -366,11 +366,11 @@
     </message>
     <message>
         <source>Remove selected</source>
-        <translation>Usuń zaznaczone</translation>
+        <translation>Usunąć zaznaczone</translation>
     </message>
     <message>
         <source>Remove the selected items from the list above.</source>
-        <translation>Usuń zaznaczone elementy z powyższej listy.</translation>
+        <translation>Usunąć zaznaczone elementy z powyższej listy.</translation>
     </message>
     <message>
         <source>You do not have permission to remove any of the items from the list above.</source>
@@ -378,11 +378,11 @@
     </message>
     <message>
         <source>Update priorities</source>
-        <translation>Zaktualizuj priorytety</translation>
+        <translation>Zaktualizować priorytety</translation>
     </message>
     <message>
         <source>Apply changes to the priorities of the items in the list above.</source>
-        <translation>Zastosuj zmiany priorytetów elementów z powyższej listy.</translation>
+        <translation>Zastosować zmiany priorytetów elementów z powyższej listy.</translation>
     </message>
     <message>
         <source>You cannot update the priorities because you do not have permission to edit the current item or because a non-priority sorting method is used.</source>
@@ -398,7 +398,7 @@
     </message>
     <message>
         <source>Create here</source>
-        <translation>Utwórz tutaj</translation>
+        <translation>Utworzyć tutaj</translation>
     </message>
     <message>
         <source>Create a new item in the current location. Use the menu on the left to select the type of  item.</source>
@@ -466,14 +466,14 @@
     </message>
     <message>
         <source>Set</source>
-        <translation>Ustaw</translation>
+        <translation>Ustawić</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/cjw_newsletter_list_children_list</name>
     <message>
         <source>Invert selection.</source>
-        <translation>Odwróć zaznaczenie.</translation>
+        <translation>Odwrócić zaznaczenie.</translation>
     </message>
     <message>
         <source>Name</source>
@@ -509,7 +509,7 @@
     </message>
     <message>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Edytować</translation>
     </message>
     <message>
         <source>The edition %child_name is already in sending process.</source>
@@ -532,7 +532,7 @@
     <name>cjw_newsletter/cjw_newsletter_list_window_controls</name>
     <message>
         <source>Hide preview of content.</source>
-        <translation>Ukryj podgląd treści.</translation>
+        <translation>Ukryć podgląd treści.</translation>
     </message>
     <message>
         <source>Preview</source>
@@ -540,11 +540,11 @@
     </message>
     <message>
         <source>Show preview of content.</source>
-        <translation>Pokaż podgląd treści.</translation>
+        <translation>Pokazać podgląd treści.</translation>
     </message>
     <message>
         <source>Hide details.</source>
-        <translation>Ukryj szczegóły.</translation>
+        <translation>Ukryć szczegóły.</translation>
     </message>
     <message>
         <source>Details</source>
@@ -552,11 +552,11 @@
     </message>
     <message>
         <source>Show details.</source>
-        <translation>Pokaż szczegóły.</translation>
+        <translation>Pokazać szczegóły.</translation>
     </message>
     <message>
         <source>Hide available translations.</source>
-        <translation>Ukryj dostępne tłumaczenia.</translation>
+        <translation>Ukryć dostępne tłumaczenia.</translation>
     </message>
     <message>
         <source>Translations</source>
@@ -564,11 +564,11 @@
     </message>
     <message>
         <source>Show available translations.</source>
-        <translation>Pokaż dostępne tłumaczenia.</translation>
+        <translation>Pokazać dostępne tłumaczenia.</translation>
     </message>
     <message>
         <source>Hide location overview.</source>
-        <translation>Ukryj przegląd lokalizacji.</translation>
+        <translation>Ukryć przegląd lokalizacji.</translation>
     </message>
     <message>
         <source>Locations</source>
@@ -576,11 +576,11 @@
     </message>
     <message>
         <source>Show location overview.</source>
-        <translation>Pokaż przegląd lokalizacji.</translation>
+        <translation>Pokazać przegląd lokalizacji.</translation>
     </message>
     <message>
         <source>Hide object relation overview.</source>
-        <translation>Ukryj przegląd relacji obiektu.</translation>
+        <translation>Ukryć przegląd relacji obiektu.</translation>
     </message>
     <message>
         <source>Relations</source>
@@ -588,7 +588,7 @@
     </message>
     <message>
         <source>Show object relation overview.</source>
-        <translation>Pokaż przegląd relacji obiektu.</translation>
+        <translation>Pokazać przegląd relacji obiektu.</translation>
     </message>
 </context>
 <context>
@@ -661,11 +661,11 @@
     </message>
     <message>
         <source>Confirm</source>
-        <translation>Potwierdź</translation>
+        <translation>Potwierdzić</translation>
     </message>
     <message>
         <source>Add to subscription.</source>
-        <translation>Dodaj do subskrypcji.</translation>
+        <translation>Dodać do subskrypcji.</translation>
     </message>
     <message>
         <source>* mandatory fields</source>
@@ -700,7 +700,7 @@
     <name>cjw_newsletter/contentstructuremenu</name>
     <message>
         <source>Fold/Unfold</source>
-        <translation>Zwiń/rozwiń</translation>
+        <translation>Zwinąć/rozwinąć</translation>
     </message>
     <message>
         <source>Draft</source>
@@ -736,7 +736,7 @@
     </message>
     <message>
         <source>Send</source>
-        <translation>Wyślij</translation>
+        <translation>Wysłać</translation>
     </message>
     <message>
         <source>Archive</source>
@@ -744,7 +744,7 @@
     </message>
     <message>
         <source>Abort</source>
-        <translation>Przerwij</translation>
+        <translation>Przerwać</translation>
     </message>
     <message>
         <source>Sent</source>
@@ -806,7 +806,7 @@
     </message>
     <message>
         <source>Render output</source>
-        <translation>Generuj wynik</translation>
+        <translation>Generować wynik</translation>
     </message>
     <message>
         <source>Can subscribe</source>
@@ -846,7 +846,7 @@
     </message>
     <message>
         <source>Show in siteaccess</source>
-        <translation>Pokaż w dostępie do witryny</translation>
+        <translation>Pokazać w dostępie do witryny</translation>
     </message>
     <message>
         <source>Main siteaccess</source>
@@ -882,7 +882,7 @@
     </message>
     <message>
         <source>Personalize content</source>
-        <translation>Personalizuj treść</translation>
+        <translation>Personalizować treść</translation>
     </message>
     <message>
         <source>no</source>
@@ -984,11 +984,11 @@
     </message>
     <message>
         <source>Send</source>
-        <translation>Wyślij</translation>
+        <translation>Wysłać</translation>
     </message>
     <message>
         <source>Abort</source>
-        <translation>Przerwij</translation>
+        <translation>Przerwać</translation>
     </message>
 </context>
 <context>
@@ -1039,7 +1039,7 @@
     </message>
     <message>
         <source>Invert selection</source>
-        <translation>Odwróć zaznaczenie</translation>
+        <translation>Odwrócić zaznaczenie</translation>
     </message>
     <message>
         <source>ID</source>
@@ -1079,7 +1079,7 @@
     </message>
     <message>
         <source>Select items for removal</source>
-        <translation>Zaznacz elementy do usunięcia</translation>
+        <translation>Zaznaczyć elementy do usunięcia</translation>
     </message>
     <message>
         <source>Subscription count after import</source>
@@ -1095,7 +1095,7 @@
     </message>
     <message>
         <source>Manage imports</source>
-        <translation>Zarządzaj importami</translation>
+        <translation>Zarządzać importami</translation>
     </message>
     <message>
         <source>Imports</source>
@@ -1198,7 +1198,7 @@
     </message>
     <message>
         <source>Remove %count_active_subscriptions active subscriptions by admin</source>
-        <translation>Usuń przez administratora aktywne subskrypcje (%count_active_subscriptions)</translation>
+        <translation>Usunąć przez administratora aktywne subskrypcje (%count_active_subscriptions)</translation>
     </message>
     <message>
         <source>Do you really want to set status removed by admin to all active subscriptions (%count_active_subscriptions)?</source>
@@ -1237,15 +1237,15 @@
     </message>
     <message>
         <source>Create newsletter here</source>
-        <translation>Utwórz newsletter tutaj</translation>
+        <translation>Utworzyć newsletter tutaj</translation>
     </message>
     <message>
         <source>Edit newsletter</source>
-        <translation>Edytuj newsletter</translation>
+        <translation>Edytować newsletter</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Edytować</translation>
     </message>
     <message>
         <source>Dashboard</source>
@@ -1314,7 +1314,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     <name>cjw_newsletter/mailbox_edit</name>
     <message>
         <source>Edit &lt;%mailbox.email&gt; </source>
-        <translation>Edytuj &lt;%mailbox.email&gt; </translation>
+        <translation>Edytować &lt;%mailbox.email&gt; </translation>
     </message>
     <message>
         <source>Email</source>
@@ -1346,19 +1346,19 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Store Changes</source>
-        <translation>Zapisz zmiany</translation>
+        <translation>Zapisać zmiany</translation>
     </message>
     <message>
         <source>Discard</source>
-        <translation>Odrzuć</translation>
+        <translation>Odrzucić</translation>
     </message>
     <message>
         <source>Add new mail account</source>
-        <translation>Dodaj nowe konto pocztowe</translation>
+        <translation>Dodać nowe konto pocztowe</translation>
     </message>
     <message>
         <source>Delete mails from server</source>
-        <translation>Usuwaj wiadomości z serwera</translation>
+        <translation>Usuwać wiadomości z serwera</translation>
     </message>
     <message>
         <source>Active</source>
@@ -1453,15 +1453,15 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Collect all mails</source>
-        <translation>Pobierz wszystkie wiadomości</translation>
+        <translation>Pobrać wszystkie wiadomości</translation>
     </message>
     <message>
         <source>Parse mails</source>
-        <translation>Analizuj wiadomości</translation>
+        <translation>Analizować wiadomości</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation>Odwróć zaznaczenie</translation>
+        <translation>Odwrócić zaznaczenie</translation>
     </message>
     <message>
         <source>ID</source>
@@ -1521,7 +1521,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Select mailbox item for removal</source>
-        <translation>Zaznacz element skrzynki do usunięcia</translation>
+        <translation>Zaznaczyć element skrzynki do usunięcia</translation>
     </message>
     <message>
         <source>n/a</source>
@@ -1529,7 +1529,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Manage bounces</source>
-        <translation>Zarządzaj zwrotami</translation>
+        <translation>Zarządzać zwrotami</translation>
     </message>
     <message>
         <source>Mailbox items</source>
@@ -1576,23 +1576,23 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Download</source>
-        <translation>Pobierz</translation>
+        <translation>Pobrać</translation>
     </message>
     <message>
         <source>Show raw mail content inline.</source>
-        <translation>Pokaż surową treść wiadomości na stronie.</translation>
+        <translation>Pokazać surową treść wiadomości na stronie.</translation>
     </message>
     <message>
         <source>Show inline</source>
-        <translation>Pokaż na stronie</translation>
+        <translation>Pokazać na stronie</translation>
     </message>
     <message>
         <source>Hide raw mail content inline.</source>
-        <translation>Ukryj surową treść wiadomości na stronie.</translation>
+        <translation>Ukryć surową treść wiadomości na stronie.</translation>
     </message>
     <message>
         <source>Hide inline</source>
-        <translation>Ukryj na stronie</translation>
+        <translation>Ukryć na stronie</translation>
     </message>
     <message>
         <source>Mailbox item list</source>
@@ -1615,7 +1615,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     <name>cjw_newsletter/mailbox_list</name>
     <message>
         <source>Invert selection</source>
-        <translation>Odwróć zaznaczenie</translation>
+        <translation>Odwrócić zaznaczenie</translation>
     </message>
     <message>
         <source>ID</source>
@@ -1623,7 +1623,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Select subscriber for removal</source>
-        <translation>Zaznacz subskrybenta do usunięcia</translation>
+        <translation>Zaznaczyć subskrybenta do usunięcia</translation>
     </message>
     <message>
         <source>n/a</source>
@@ -1631,19 +1631,19 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Edytować</translation>
     </message>
     <message>
         <source>Edit mailbox.</source>
-        <translation>Edytuj skrzynkę.</translation>
+        <translation>Edytować skrzynkę.</translation>
     </message>
     <message>
         <source>Add new mailbox.</source>
-        <translation>Dodaj nową skrzynkę.</translation>
+        <translation>Dodać nową skrzynkę.</translation>
     </message>
     <message>
         <source>Manage mail accounts</source>
-        <translation>Zarządzaj kontami pocztowymi</translation>
+        <translation>Zarządzać kontami pocztowymi</translation>
     </message>
     <message>
         <source>Define mail accounts that will collect mails for bounce handling</source>
@@ -1651,7 +1651,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Add mail account</source>
-        <translation>Dodaj konto pocztowe</translation>
+        <translation>Dodać konto pocztowe</translation>
     </message>
     <message>
         <source>Mail accounts</source>
@@ -1714,7 +1714,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Administer</source>
-        <translation>Administruj</translation>
+        <translation>Administrować</translation>
     </message>
     <message>
         <source>Users</source>
@@ -1758,11 +1758,11 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Hide</source>
-        <translation>Ukryj</translation>
+        <translation>Ukryć</translation>
     </message>
     <message>
         <source>Show</source>
-        <translation>Pokaż</translation>
+        <translation>Pokazać</translation>
     </message>
     <message>
         <source>Dashboard</source>
@@ -1773,18 +1773,18 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     <name>cjw_newsletter/newsletter_list_subscription</name>
     <message>
         <source>Import contact from CSV file.</source>
-        <translation>Importuj kontakt z pliku CSV.</translation>
+        <translation>Zaimportować kontakt z pliku CSV.</translation>
     </message>
     <message>
         <source>Export to CSV file.</source>
-        <translation>Eksportuj do pliku CSV.</translation>
+        <translation>Wyeksportować do pliku CSV.</translation>
     </message>
 </context>
 <context>
     <name>cjw_newsletter/newsletter_menu</name>
     <message>
         <source>Change the left menu width to small size.</source>
-        <translation>Ustaw małą szerokość lewego menu.</translation>
+        <translation>Ustawić małą szerokość lewego menu.</translation>
     </message>
     <message>
         <source>Small</source>
@@ -1796,7 +1796,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Change the left menu width to large size.</source>
-        <translation>Ustaw dużą szerokość lewego menu.</translation>
+        <translation>Ustawić dużą szerokość lewego menu.</translation>
     </message>
     <message>
         <source>Large</source>
@@ -1804,7 +1804,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Change the left menu width to medium size.</source>
-        <translation>Ustaw średnią szerokość lewego menu.</translation>
+        <translation>Ustawić średnią szerokość lewego menu.</translation>
     </message>
 </context>
 <context>
@@ -1848,15 +1848,15 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     <name>cjw_newsletter/send</name>
     <message>
         <source>Send Newsletter</source>
-        <translation>Wyślij newsletter</translation>
+        <translation>Wysłać newsletter</translation>
     </message>
     <message>
         <source>Send Test Newsletter at</source>
-        <translation>Wyślij testowy newsletter na adres</translation>
+        <translation>Wysłać testowy newsletter na adres</translation>
     </message>
     <message>
         <source>Send Test Newsletter</source>
-        <translation>Wyślij testowy newsletter</translation>
+        <translation>Wysłać testowy newsletter</translation>
     </message>
     <message>
         <source>Nr</source>
@@ -1896,11 +1896,11 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Send out newsletter</source>
-        <translation>Roześlij newsletter</translation>
+        <translation>Rozesłać newsletter</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Anulować</translation>
     </message>
     <message>
         <source>Test newsletter sent result</source>
@@ -1912,11 +1912,11 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Send</source>
-        <translation>Wyślij</translation>
+        <translation>Wysłać</translation>
     </message>
     <message>
         <source>Send test newsletter</source>
-        <translation>Wyślij testowy newsletter</translation>
+        <translation>Wysłać testowy newsletter</translation>
     </message>
     <message>
         <source>Status</source>
@@ -1936,11 +1936,11 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Abort</source>
-        <translation>Przerwij</translation>
+        <translation>Przerwać</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Edytować</translation>
     </message>
     <message>
         <source>Number</source>
@@ -1966,15 +1966,15 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     <name>cjw_newsletter/send_abort</name>
     <message>
         <source>Abort newsletter send out process</source>
-        <translation>Przerwij wysyłkę newslettera</translation>
+        <translation>Przerwać wysyłkę newslettera</translation>
     </message>
     <message>
         <source>Abort send out process</source>
-        <translation>Przerwij wysyłkę</translation>
+        <translation>Przerwać wysyłkę</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Anulować</translation>
     </message>
     <message>
         <source>Back</source>
@@ -1998,7 +1998,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Abort sent out process</source>
-        <translation>Przerwij wysyłkę</translation>
+        <translation>Przerwać wysyłkę</translation>
     </message>
 </context>
 <context>
@@ -2067,15 +2067,15 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Subscribe</source>
-        <translation>Subskrybuj</translation>
+        <translation>Subskrybować</translation>
     </message>
     <message>
         <source>Add to subscription.</source>
-        <translation>Dodaj do subskrypcji.</translation>
+        <translation>Dodać do subskrypcji.</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Anulować</translation>
     </message>
     <message>
         <source>* mandatory fields</source>
@@ -2118,7 +2118,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     <name>cjw_newsletter/subscribe_info</name>
     <message>
         <source>Get subscribe information</source>
-        <translation>Pobierz informacje o subskrypcji</translation>
+        <translation>Pobrać informacje o subskrypcji</translation>
     </message>
 </context>
 <context>
@@ -2141,7 +2141,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Send</source>
-        <translation>Wyślij</translation>
+        <translation>Wysłać</translation>
     </message>
     <message>
         <source>* mandatory fields</source>
@@ -2353,11 +2353,11 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Import CSV</source>
-        <translation>Importuj CSV</translation>
+        <translation>Zaimportować CSV</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation>Odwróć zaznaczenie</translation>
+        <translation>Odwrócić zaznaczenie</translation>
     </message>
     <message>
         <source>ID</source>
@@ -2389,7 +2389,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Select subscriber for removal</source>
-        <translation>Zaznacz subskrybenta do usunięcia</translation>
+        <translation>Zaznaczyć subskrybenta do usunięcia</translation>
     </message>
     <message>
         <source>n/a</source>
@@ -2397,11 +2397,11 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Remove selected</source>
-        <translation>Usuń zaznaczone</translation>
+        <translation>Usunąć zaznaczone</translation>
     </message>
     <message>
         <source>Remove selected subscription.</source>
-        <translation>Usuń zaznaczoną subskrypcję.</translation>
+        <translation>Usunąć zaznaczoną subskrypcję.</translation>
     </message>
     <message>
         <source>New subscription</source>
@@ -2409,7 +2409,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Create a new subscription.</source>
-        <translation>Utwórz nową subskrypcję.</translation>
+        <translation>Utworzyć nową subskrypcję.</translation>
     </message>
     <message>
         <source>Hash</source>
@@ -2417,11 +2417,11 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Export CSV</source>
-        <translation>Eksportuj CSV</translation>
+        <translation>Wyeksportować CSV</translation>
     </message>
     <message>
         <source>Create new Subscription</source>
-        <translation>Utwórz nową subskrypcję</translation>
+        <translation>Utworzyć nową subskrypcję</translation>
     </message>
     <message>
         <source>Subscriptions statistic</source>
@@ -2457,11 +2457,11 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Approve</source>
-        <translation>Zatwierdź</translation>
+        <translation>Zatwierdzić</translation>
     </message>
     <message>
         <source>Approve subscription</source>
-        <translation>Zatwierdź subskrypcję</translation>
+        <translation>Zatwierdzić subskrypcję</translation>
     </message>
     <message>
         <source>This View is only available for 'Newsletter List' objects</source>
@@ -2508,11 +2508,11 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Anulować</translation>
     </message>
     <message>
         <source>Cancel subscription export.</source>
-        <translation>Anuluj eksport subskrypcji.</translation>
+        <translation>Anulować eksport subskrypcji.</translation>
     </message>
     <message>
         <source>Subscription list CSV export</source>
@@ -2527,7 +2527,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     <name>cjw_newsletter/subscription_list_csvimport</name>
     <message>
         <source>Upload file</source>
-        <translation>Prześlij plik</translation>
+        <translation>Przesłać plik</translation>
     </message>
     <message>
         <source>Import   Id</source>
@@ -2559,19 +2559,19 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Update</source>
-        <translation>Zaktualizuj</translation>
+        <translation>Zaktualizować</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Anulować</translation>
     </message>
     <message>
         <source>Cancel subscription import.</source>
-        <translation>Anuluj import subskrypcji.</translation>
+        <translation>Anulować import subskrypcji.</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation>Odwróć zaznaczenie</translation>
+        <translation>Odwrócić zaznaczenie</translation>
     </message>
     <message>
         <source>Row nr</source>
@@ -2627,7 +2627,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Import all</source>
-        <translation>Importuj wszystko</translation>
+        <translation>Zaimportować wszystko</translation>
     </message>
     <message>
         <source>Subscription CSV import</source>
@@ -2675,7 +2675,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Import all - disabled</source>
-        <translation>Importuj wszystko - wyłączone</translation>
+        <translation>Zaimportować wszystko - wyłączone</translation>
     </message>
     <message>
         <source>The file could not be stored in %dir. Check that the web server can write there.</source>
@@ -2762,11 +2762,11 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     </message>
     <message>
         <source>Approve subscription</source>
-        <translation>Zatwierdź subskrypcję</translation>
+        <translation>Zatwierdzić subskrypcję</translation>
     </message>
     <message>
         <source>Remove subscription</source>
-        <translation>Usuń subskrypcję</translation>
+        <translation>Usunąć subskrypcję</translation>
     </message>
     <message>
         <source>Remove subscription by admin</source>
@@ -2777,7 +2777,7 @@ Aby edytować ustawienia newslettera, otwórz następujący link:
     <name>cjw_newsletter/unsubscribe</name>
     <message>
         <source>Unsubscribe</source>
-        <translation>Zrezygnuj z subskrypcji</translation>
+        <translation>Zrezygnować z subskrypcji</translation>
     </message>
     <message>
         <source>Hi %name
@@ -2791,7 +2791,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Unsubscribe from list.</source>
-        <translation>Wypisz z listy.</translation>
+        <translation>Wypisać z listy.</translation>
     </message>
     <message>
         <source>Unsubscription already done</source>
@@ -2872,19 +2872,19 @@ należy potwierdzić tę stronę.</translation>
     <name>cjw_newsletter/user_create</name>
     <message>
         <source>Create a new newsletter user</source>
-        <translation>Utwórz nowego użytkownika newslettera</translation>
+        <translation>Utworzyć nowego użytkownika newslettera</translation>
     </message>
     <message>
         <source>Create and edit</source>
-        <translation>Utwórz i edytuj</translation>
+        <translation>Utworzyć i edytować</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Anulować</translation>
     </message>
     <message>
         <source>Create</source>
-        <translation>Utwórz</translation>
+        <translation>Utworzyć</translation>
     </message>
 </context>
 <context>
@@ -2903,15 +2903,15 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Store and exit</source>
-        <translation>Zapisz i zakończ</translation>
+        <translation>Zapisać i zakończyć</translation>
     </message>
     <message>
         <source>Store draft</source>
-        <translation>Zapisz wersję roboczą</translation>
+        <translation>Zapisać wersję roboczą</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Anulować</translation>
     </message>
     <message>
         <source>Creating new newsletter user</source>
@@ -2919,7 +2919,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Edit existing newsletter user</source>
-        <translation>Edytuj istniejącego użytkownika newslettera</translation>
+        <translation>Edytować istniejącego użytkownika newslettera</translation>
     </message>
     <message>
         <source>Can not edit newsletter user because he is blacklisted</source>
@@ -2935,7 +2935,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Edit newsletter user</source>
-        <translation>Edytuj użytkownika newslettera</translation>
+        <translation>Edytować użytkownika newslettera</translation>
     </message>
 </context>
 <context>
@@ -2946,15 +2946,15 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Edit current subscription list.</source>
-        <translation>Edytuj bieżącą listę subskrypcji.</translation>
+        <translation>Edytować bieżącą listę subskrypcji.</translation>
     </message>
     <message>
         <source>Import CSV</source>
-        <translation>Importuj CSV</translation>
+        <translation>Zaimportować CSV</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation>Odwróć zaznaczenie</translation>
+        <translation>Odwrócić zaznaczenie</translation>
     </message>
     <message>
         <source>Name</source>
@@ -2990,15 +2990,15 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Select subscriber for removal</source>
-        <translation>Zaznacz subskrybenta do usunięcia</translation>
+        <translation>Zaznaczyć subskrybenta do usunięcia</translation>
     </message>
     <message>
         <source>Create Newsletter user</source>
-        <translation>Utwórz użytkownika newslettera</translation>
+        <translation>Utworzyć użytkownika newslettera</translation>
     </message>
     <message>
         <source>Edit newsletter user</source>
-        <translation>Edytuj użytkownika newslettera</translation>
+        <translation>Edytować użytkownika newslettera</translation>
     </message>
     <message>
         <source>Approved</source>
@@ -3014,11 +3014,11 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Manage users</source>
-        <translation>Zarządzaj użytkownikami</translation>
+        <translation>Zarządzać użytkownikami</translation>
     </message>
     <message>
         <source>Search for existing user</source>
-        <translation>Wyszukaj istniejącego użytkownika</translation>
+        <translation>Wyszukać istniejącego użytkownika</translation>
     </message>
     <message>
         <source>Users</source>
@@ -3050,7 +3050,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Edytować</translation>
     </message>
     <message>
         <source>search</source>
@@ -3066,11 +3066,11 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Remove selected</source>
-        <translation>Usuń zaznaczone</translation>
+        <translation>Usunąć zaznaczone</translation>
     </message>
     <message>
         <source>Remove selected subscription.</source>
-        <translation>Usuń zaznaczoną subskrypcję.</translation>
+        <translation>Usunąć zaznaczoną subskrypcję.</translation>
     </message>
     <message>
         <source>New subscription</source>
@@ -3078,7 +3078,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Create a new subscription.</source>
-        <translation>Utwórz nową subskrypcję.</translation>
+        <translation>Utworzyć nową subskrypcję.</translation>
     </message>
     <message>
         <source>ID</source>
@@ -3089,7 +3089,7 @@ należy potwierdzić tę stronę.</translation>
     <name>cjw_newsletter/user_remove</name>
     <message>
         <source>Remove newsletter user</source>
-        <translation>Usuń użytkownika newslettera</translation>
+        <translation>Usunąć użytkownika newslettera</translation>
     </message>
     <message>
         <source>Subscription count</source>
@@ -3101,11 +3101,11 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation>Usuń</translation>
+        <translation>Usunąć</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Anulować</translation>
     </message>
 </context>
 <context>
@@ -3220,11 +3220,11 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Edit by admin</source>
-        <translation>Edytuj jako administrator</translation>
+        <translation>Edytować jako administrator</translation>
     </message>
     <message>
         <source>Delete newsletter user and all subscriptions from database</source>
-        <translation>Usuń użytkownika newslettera i wszystkie subskrypcje z bazy danych</translation>
+        <translation>Usunąć użytkownika newslettera i wszystkie subskrypcje z bazy danych</translation>
     </message>
     <message>
         <source>eZ user id</source>
@@ -3232,15 +3232,15 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Edytować</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation>Usuń</translation>
+        <translation>Usunąć</translation>
     </message>
     <message>
         <source>Add to blacklist</source>
-        <translation>Dodaj do czarnej listy</translation>
+        <translation>Dodać do czarnej listy</translation>
     </message>
     <message>
         <source>Newsletter subscriptions</source>
@@ -3268,7 +3268,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Remove from blacklist</source>
-        <translation>Usuń z czarnej listy</translation>
+        <translation>Usunąć z czarnej listy</translation>
     </message>
     <message>
         <source>Custom Data text 1</source>
@@ -3303,7 +3303,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Manage versions</source>
-        <translation>Zarządzaj wersjami</translation>
+        <translation>Zarządzać wersjami</translation>
     </message>
 </context>
 <context>
@@ -3326,11 +3326,11 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Edytować</translation>
     </message>
     <message>
         <source>Edit the contents of this item.</source>
-        <translation>Edytuj zawartość tego elementu.</translation>
+        <translation>Edytować zawartość tego elementu.</translation>
     </message>
     <message>
         <source>Not available</source>
@@ -3354,11 +3354,11 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation>Usuń</translation>
+        <translation>Usunąć</translation>
     </message>
     <message>
         <source>Remove this item.</source>
-        <translation>Usuń ten element.</translation>
+        <translation>Usunąć ten element.</translation>
     </message>
     <message>
         <source>You do not have permission to remove this item.</source>
@@ -3374,15 +3374,15 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Show 10 items per page.</source>
-        <translation>Pokazuj 10 elementów na stronie.</translation>
+        <translation>Pokazywać 10 elementów na stronie.</translation>
     </message>
     <message>
         <source>Show 50 items per page.</source>
-        <translation>Pokazuj 50 elementów na stronie.</translation>
+        <translation>Pokazywać 50 elementów na stronie.</translation>
     </message>
     <message>
         <source>Show 25 items per page.</source>
-        <translation>Pokazuj 25 elementów na stronie.</translation>
+        <translation>Pokazywać 25 elementów na stronie.</translation>
     </message>
     <message>
         <source>New translation</source>
@@ -3394,11 +3394,11 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Remove selected</source>
-        <translation>Usuń zaznaczone</translation>
+        <translation>Usunąć zaznaczone</translation>
     </message>
     <message>
         <source>Remove the selected items from the list above.</source>
-        <translation>Usuń zaznaczone elementy z powyższej listy.</translation>
+        <translation>Usunąć zaznaczone elementy z powyższej listy.</translation>
     </message>
     <message>
         <source>You do not have permission to remove any of the items from the list above.</source>
@@ -3410,7 +3410,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Move the selected items from the list above.</source>
-        <translation>Przenieś wybrane elementy z powyższej listy.</translation>
+        <translation>Przenieść wybrane elementy z powyższej listy.</translation>
     </message>
     <message>
         <source>You do not have permission to move any of the items from the list above.</source>
@@ -3418,11 +3418,11 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Update priorities</source>
-        <translation>Zaktualizuj priorytety</translation>
+        <translation>Zaktualizować priorytety</translation>
     </message>
     <message>
         <source>Apply changes to the priorities of the items in the list above.</source>
-        <translation>Zastosuj zmiany priorytetów elementów z powyższej listy.</translation>
+        <translation>Zastosować zmiany priorytetów elementów z powyższej listy.</translation>
     </message>
     <message>
         <source>You cannot update the priorities because you do not have permission to edit the current item or because a non-priority sorting method is used.</source>
@@ -3430,7 +3430,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Create</source>
-        <translation>Utwórz</translation>
+        <translation>Utworzyć</translation>
     </message>
     <message>
         <source>Use this menu to select the type of item you want to create then click the "Create here" button. The item will be created in the current location.</source>
@@ -3510,7 +3510,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Set</source>
-        <translation>Ustaw</translation>
+        <translation>Ustawić</translation>
     </message>
     <message>
         <source>Edit &lt;%child_name&gt;.</source>
@@ -3518,7 +3518,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Copy</source>
-        <translation>Kopiuj</translation>
+        <translation>Kopiować</translation>
     </message>
     <message>
         <source>Create a copy of &lt;%child_name&gt;.</source>
@@ -3526,7 +3526,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Show details.</source>
-        <translation>Pokaż szczegóły.</translation>
+        <translation>Pokazać szczegóły.</translation>
     </message>
     <message>
         <source>Details</source>
@@ -3534,7 +3534,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Show available translations.</source>
-        <translation>Pokaż dostępne tłumaczenia.</translation>
+        <translation>Pokazać dostępne tłumaczenia.</translation>
     </message>
     <message>
         <source>Translations (%count)</source>
@@ -3542,7 +3542,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Show location overview.</source>
-        <translation>Pokaż przegląd lokalizacji.</translation>
+        <translation>Pokazać przegląd lokalizacji.</translation>
     </message>
     <message>
         <source>Locations (%count)</source>
@@ -3550,7 +3550,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Show object relation overview.</source>
-        <translation>Pokaż przegląd relacji obiektu.</translation>
+        <translation>Pokazać przegląd relacji obiektu.</translation>
     </message>
     <message>
         <source>Relations (%count)</source>
@@ -3562,11 +3562,11 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>View</source>
-        <translation>Wyświetl</translation>
+        <translation>Wyświetlić</translation>
     </message>
     <message>
         <source>Show simplified view of content.</source>
-        <translation>Pokaż uproszczony widok treści.</translation>
+        <translation>Pokazać uproszczony widok treści.</translation>
     </message>
     <message>
         <source>Ordering</source>
@@ -3574,7 +3574,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Show published ordering overview.</source>
-        <translation>Pokaż przegląd kolejności publikacji.</translation>
+        <translation>Pokazać przegląd kolejności publikacji.</translation>
     </message>
     <message>
         <source>Type</source>
@@ -3582,7 +3582,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Display sub items using a simple list.</source>
-        <translation>Wyświetlaj elementy podrzędne jako prostą listę.</translation>
+        <translation>Wyświetlać elementy podrzędne jako prostą listę.</translation>
     </message>
     <message>
         <source>List</source>
@@ -3594,7 +3594,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Display sub items using a detailed list.</source>
-        <translation>Wyświetl elementy podrzędne w postaci szczegółowej listy.</translation>
+        <translation>Wyświetlić elementy podrzędne w postaci szczegółowej listy.</translation>
     </message>
     <message>
         <source>Detailed</source>
@@ -3602,7 +3602,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Display sub items as thumbnails.</source>
-        <translation>Wyświetlaj elementy podrzędne jako miniatury.</translation>
+        <translation>Wyświetlać elementy podrzędne jako miniatury.</translation>
     </message>
     <message>
         <source>The current item does not contain any sub items.</source>
@@ -3610,7 +3610,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Invert selection.</source>
-        <translation>Odwróć zaznaczenie.</translation>
+        <translation>Odwrócić zaznaczenie.</translation>
     </message>
     <message>
         <source>(disabled)</source>
@@ -3630,7 +3630,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Show preview of content.</source>
-        <translation>Pokaż podgląd treści.</translation>
+        <translation>Pokazać podgląd treści.</translation>
     </message>
 </context>
 <context>
@@ -3648,11 +3648,11 @@ należy potwierdzić tę stronę.</translation>
     <name>design/admin/pagelayout</name>
     <message>
         <source>Search</source>
-        <translation>Wyszukaj</translation>
+        <translation>Wyszukać</translation>
     </message>
     <message>
         <source>Search all content.</source>
-        <translation>Wyszukaj w całej zawartości.</translation>
+        <translation>Wyszukać w całej zawartości.</translation>
     </message>
     <message>
         <source>All content</source>
@@ -3660,7 +3660,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Search only from the current location.</source>
-        <translation>Wyszukaj tylko w bieżącym położeniu.</translation>
+        <translation>Wyszukać tylko w bieżącym położeniu.</translation>
     </message>
     <message>
         <source>Current location</source>
@@ -3680,11 +3680,11 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Logout from the system.</source>
-        <translation>Wyloguj się z systemu.</translation>
+        <translation>Wylogować się z systemu.</translation>
     </message>
     <message>
         <source>Logout</source>
-        <translation>Wyloguj</translation>
+        <translation>Wylogować</translation>
     </message>
     <message>
         <source>Newsletter</source>
@@ -3710,14 +3710,14 @@ należy potwierdzić tę stronę.</translation>
     <name>design/admin/rss/edit_import</name>
     <message>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Edytować</translation>
     </message>
 </context>
 <context>
     <name>design/standard/content/datatype</name>
     <message>
         <source>Remove selected</source>
-        <translation>Usuń zaznaczone</translation>
+        <translation>Usunąć zaznaczone</translation>
     </message>
 </context>
 <context>
@@ -3860,7 +3860,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Edytować</translation>
     </message>
     <message>
         <source>There is no test group yet.</source>
@@ -3880,11 +3880,11 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Anulować</translation>
     </message>
     <message>
         <source>Please correct the form</source>
-        <translation>Popraw formularz</translation>
+        <translation>Poprawić formularz</translation>
     </message>
     <message>
         <source>Every list</source>
@@ -3896,11 +3896,11 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Store</source>
-        <translation>Zapisz</translation>
+        <translation>Zapisać</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation>Usuń</translation>
+        <translation>Usunąć</translation>
     </message>
     <message>
         <source>Mail-in addresses</source>
@@ -4136,7 +4136,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Resume</source>
-        <translation>Wznów</translation>
+        <translation>Wznowić</translation>
     </message>
     <message>
         <source>for</source>
@@ -4152,7 +4152,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Pause</source>
-        <translation>Wstrzymaj</translation>
+        <translation>Wstrzymać</translation>
     </message>
     <message>
         <source>Last batches</source>
@@ -4160,7 +4160,7 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Send</source>
-        <translation>Wyślij</translation>
+        <translation>Wysłać</translation>
     </message>
     <message>
         <source>Batch</source>
@@ -4288,11 +4288,11 @@ należy potwierdzić tę stronę.</translation>
     </message>
     <message>
         <source>Check (change nothing)</source>
-        <translation>Sprawdź (bez zmian)</translation>
+        <translation>Sprawdzić (bez zmian)</translation>
     </message>
     <message>
         <source>Import</source>
-        <translation>Zaimportuj</translation>
+        <translation>Zaimportować</translation>
     </message>
     <message>
         <source>On the console:</source>
@@ -4482,7 +4482,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Read more</source>
-        <translation>Czytaj więcej</translation>
+        <translation>Czytać więcej</translation>
     </message>
     <message>
         <source>This edition waits for its approval. It can be sent when it is approved.</source>
@@ -4630,7 +4630,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Edytować</translation>
     </message>
     <message>
         <source>New recurring send</source>
@@ -4714,7 +4714,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Pick articles</source>
-        <translation>Wybierz artykuły</translation>
+        <translation>Wybrać artykuły</translation>
     </message>
     <message>
         <source>The approval was asked for, but nobody can approve it: set [ApprovalSettings] ApproverUserIds[] or ApproverGroupIds[].</source>
@@ -4774,7 +4774,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Approve</source>
-        <translation>Zatwierdź</translation>
+        <translation>Zatwierdzić</translation>
     </message>
     <message>
         <source>Approve this edition? It can be sent then.</source>
@@ -4782,11 +4782,11 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Reject</source>
-        <translation>Odrzuć</translation>
+        <translation>Odrzucić</translation>
     </message>
     <message>
         <source>Ask for the approval</source>
-        <translation>Poproś o zatwierdzenie</translation>
+        <translation>Poprosić o zatwierdzenie</translation>
     </message>
     <message>
         <source>Nobody gets the request yet: set [ApprovalSettings] ApproverUserIds[] or ApproverGroupIds[].</source>
@@ -4802,7 +4802,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Ask for approval</source>
-        <translation>Poproś o zatwierdzenie</translation>
+        <translation>Poprosić o zatwierdzenie</translation>
     </message>
     <message>
         <source>The request waits for an approver.</source>
@@ -4830,7 +4830,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Pick articles for "%name"</source>
-        <translation>Wybierz artykuły dla "%name"</translation>
+        <translation>Wybrać artykuły dla "%name"</translation>
     </message>
     <message>
         <source>Pool</source>
@@ -4858,15 +4858,15 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Edit the text the edition shows</source>
-        <translation>Edytuj tekst wyświetlany w wydaniu</translation>
+        <translation>Edytować tekst wyświetlany w wydaniu</translation>
     </message>
     <message>
         <source>Edit the text</source>
-        <translation>Edytuj tekst</translation>
+        <translation>Edytować tekst</translation>
     </message>
     <message>
         <source>Take out</source>
-        <translation>Usuń z wydania</translation>
+        <translation>Usunąć z wydania</translation>
     </message>
     <message>
         <source>No article of the pool is in the edition yet.</source>
@@ -4910,11 +4910,11 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Reset</source>
-        <translation>Wyzeruj</translation>
+        <translation>Wyzerować</translation>
     </message>
     <message>
         <source>Select all</source>
-        <translation>Zaznacz wszystko</translation>
+        <translation>Zaznaczyć wszystko</translation>
     </message>
     <message>
         <source>Title</source>
@@ -4930,7 +4930,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Take the chosen articles into the edition</source>
-        <translation>Dodaj wybrane artykuły do wydania</translation>
+        <translation>Dodać wybrane artykuły do wydania</translation>
     </message>
     <message>
         <source>%from to %to of %total</source>
@@ -4950,11 +4950,11 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Edit the article pool "%name"</source>
-        <translation>Edytuj pulę artykułów "%name"</translation>
+        <translation>Edytować pulę artykułów "%name"</translation>
     </message>
     <message>
         <source>Please check the form</source>
-        <translation>Sprawdź formularz</translation>
+        <translation>Sprawdzić formularz</translation>
     </message>
     <message>
         <source>Name</source>
@@ -5058,15 +5058,15 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Save</source>
-        <translation>Zapisz</translation>
+        <translation>Zapisać</translation>
     </message>
     <message>
         <source>Show the articles</source>
-        <translation>Pokaż artykuły</translation>
+        <translation>Pokazać artykuły</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Anulować</translation>
     </message>
     <message>
         <source>Remove the article pool "%name"?</source>
@@ -5150,7 +5150,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Remove</source>
-        <translation>Usuń</translation>
+        <translation>Usunąć</translation>
     </message>
     <message>
         <source>There is no article pool yet.</source>
@@ -5158,7 +5158,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Make a global default pool, or one for a list.</source>
-        <translation>Utwórz globalną pulę domyślną lub pulę dla listy.</translation>
+        <translation>Utworzyć globalną pulę domyślną lub pulę dla listy.</translation>
     </message>
     <message>
         <source>no</source>
@@ -5190,7 +5190,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Edit the recurring send %id</source>
-        <translation>Edytuj wysyłkę cykliczną %id</translation>
+        <translation>Edytować wysyłkę cykliczną %id</translation>
     </message>
     <message>
         <source>[ScheduleSettings] Schedules is disabled: the cronjob does not run recurring sends. ext:cjw_newsletter:schedule run does.</source>
@@ -5218,11 +5218,11 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Send the latest edition of the list that was not sent yet</source>
-        <translation>Wyślij najnowsze jeszcze niewysłane wydanie listy</translation>
+        <translation>Wysłać najnowsze jeszcze niewysłane wydanie listy</translation>
     </message>
     <message>
         <source>Copy a template edition and send the copy</source>
-        <translation>Skopiuj wydanie szablonowe i wyślij kopię</translation>
+        <translation>Skopiować wydanie szablonowe i wysłać kopię</translation>
     </message>
     <message>
         <source>Template edition</source>
@@ -5242,7 +5242,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Fill the copy with the articles of the pool published since the last send</source>
-        <translation>Wypełnij kopię artykułami z puli opublikowanymi od ostatniej wysyłki</translation>
+        <translation>Wypełnić kopię artykułami z puli opublikowanymi od ostatniej wysyłki</translation>
     </message>
     <message>
         <source>The pool of the list</source>
@@ -5266,7 +5266,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Repeat</source>
-        <translation>Powtórz</translation>
+        <translation>Powtórzyć</translation>
     </message>
     <message>
         <source>On these weekdays</source>
@@ -5374,23 +5374,23 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Pause</source>
-        <translation>Wstrzymaj</translation>
+        <translation>Wstrzymać</translation>
     </message>
     <message>
         <source>Resume</source>
-        <translation>Wznów</translation>
+        <translation>Wznowić</translation>
     </message>
     <message>
         <source>Try</source>
-        <translation>Wypróbuj</translation>
+        <translation>Wypróbować</translation>
     </message>
     <message>
         <source>Say what a run would do now, change nothing</source>
-        <translation>Pokaż, co zrobiłoby uruchomienie teraz, bez wprowadzania zmian</translation>
+        <translation>Pokazać, co zrobiłoby uruchomienie teraz, bez wprowadzania zmian</translation>
     </message>
     <message>
         <source>Run now</source>
-        <translation>Uruchom teraz</translation>
+        <translation>Uruchomić teraz</translation>
     </message>
     <message>
         <source>Run this recurring send now? It makes the send at once.</source>
@@ -5430,7 +5430,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Ask for or give the approval</source>
-        <translation>Poproś o zatwierdzenie lub zatwierdź</translation>
+        <translation>Poprosić o zatwierdzenie lub zatwierdzić</translation>
     </message>
     <message>
         <source>The list needs an approval: this version cannot be sent before it is approved.</source>
@@ -5510,7 +5510,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Open the edition</source>
-        <translation>Otwórz wydanie</translation>
+        <translation>Otworzyć wydanie</translation>
     </message>
     <message>
         <source>Preview</source>
@@ -5542,7 +5542,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Add comment</source>
-        <translation>Dodaj komentarz</translation>
+        <translation>Dodać komentarz</translation>
     </message>
     <message>
         <source>Approve "%title"? It can be sent then.</source>
@@ -5766,11 +5766,11 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Save</source>
-        <translation>Zapisz</translation>
+        <translation>Zapisać</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Anulować</translation>
     </message>
     <message>
         <source>Remove this interest?</source>
@@ -5826,11 +5826,11 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Edytować</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation>Usuń</translation>
+        <translation>Usunąć</translation>
     </message>
     <message>
         <source>No interest yet.</source>
@@ -5878,7 +5878,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Manage the interests</source>
-        <translation>Zarządzaj zainteresowaniami</translation>
+        <translation>Zarządzać zainteresowaniami</translation>
     </message>
     <message>
         <source>Every skin</source>
@@ -5898,7 +5898,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Show</source>
-        <translation>Pokaż</translation>
+        <translation>Pokazać</translation>
     </message>
     <message>
         <source>Or one of the subscribers of the list:</source>
@@ -6026,11 +6026,11 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Change your newsletter settings</source>
-        <translation>Zmień ustawienia newslettera</translation>
+        <translation>Zmienić ustawienia newslettera</translation>
     </message>
     <message>
         <source>Unsubscribe</source>
-        <translation>Zrezygnuj z subskrypcji</translation>
+        <translation>Zrezygnować z subskrypcji</translation>
     </message>
     <message>
         <source>Top story</source>
@@ -6042,7 +6042,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>View</source>
-        <translation>Wyświetl</translation>
+        <translation>Wyświetlić</translation>
     </message>
     <message>
         <source>Picked for you</source>
@@ -6094,7 +6094,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Subscribe to a newsletter</source>
-        <translation>Zasubskrybuj newsletter</translation>
+        <translation>Zasubskrybować newsletter</translation>
     </message>
     <message>
         <source>Newsletters are switched off on your e-mail preferences page, so none of these is sent.</source>
@@ -6266,19 +6266,19 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Open the A/B test</source>
-        <translation>Otwórz test A/B</translation>
+        <translation>Otworzyć test A/B</translation>
     </message>
     <message>
         <source>Export the send (CSV)</source>
-        <translation>Eksportuj wysyłkę (CSV)</translation>
+        <translation>Wyeksportować wysyłkę (CSV)</translation>
     </message>
     <message>
         <source>Export the links (CSV)</source>
-        <translation>Eksportuj linki (CSV)</translation>
+        <translation>Wyeksportować linki (CSV)</translation>
     </message>
     <message>
         <source>Export the days (CSV)</source>
-        <translation>Eksportuj dni (CSV)</translation>
+        <translation>Wyeksportować dni (CSV)</translation>
     </message>
     <message>
         <source>All sends</source>
@@ -6362,7 +6362,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Export every send (CSV)</source>
-        <translation>Eksportuj wszystkie wysyłki (CSV)</translation>
+        <translation>Wyeksportować wszystkie wysyłki (CSV)</translation>
     </message>
     <message>
         <source>Dashboard</source>
@@ -6442,11 +6442,11 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Choose the winner now</source>
-        <translation>Wybierz zwycięzcę teraz</translation>
+        <translation>Wybrać zwycięzcę teraz</translation>
     </message>
     <message>
         <source>Cancel the test</source>
-        <translation>Anuluj test</translation>
+        <translation>Anulować test</translation>
     </message>
     <message>
         <source>Without you, the mail queue chooses the winner when the wait is over and then sends the rest of the list.</source>
@@ -6550,7 +6550,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Export (CSV)</source>
-        <translation>Eksportuj (CSV)</translation>
+        <translation>Wyeksportować (CSV)</translation>
     </message>
     <message>
         <source>A/B subject tests</source>
@@ -6686,7 +6686,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Enter it at %url</source>
-        <translation>Wpisz go na %url</translation>
+        <translation>Wpisać go na %url</translation>
     </message>
     <message>
         <source>The code could not be sent. Please check the number or try again later.</source>
@@ -6766,7 +6766,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Send by SMS</source>
-        <translation>Wyślij SMS-em</translation>
+        <translation>Wysłać SMS-em</translation>
     </message>
     <message>
         <source>There is no code waiting for this number. Please ask for a new code.</source>
@@ -6882,11 +6882,11 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Confirm</source>
-        <translation>Potwierdź</translation>
+        <translation>Potwierdzić</translation>
     </message>
     <message>
         <source>Send a new code</source>
-        <translation>Wyślij nowy kod</translation>
+        <translation>Wysłać nowy kod</translation>
     </message>
     <message>
         <source>Your newsletter settings</source>
@@ -6930,11 +6930,11 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Send by SMS: %name</source>
-        <translation>Wyślij SMS-em: %name</translation>
+        <translation>Wysłać SMS-em: %name</translation>
     </message>
     <message>
         <source>Please check the SMS</source>
-        <translation>Sprawdź SMS-a</translation>
+        <translation>Sprawdzić SMS-a</translation>
     </message>
     <message>
         <source>subscribers</source>
@@ -7018,7 +7018,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Send a test SMS</source>
-        <translation>Wyślij testowy SMS</translation>
+        <translation>Wysłać testowy SMS</translation>
     </message>
     <message>
         <source>Sender</source>
@@ -7110,7 +7110,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Send me a new code</source>
-        <translation>Wyślij mi nowy kod</translation>
+        <translation>Wysłać mi nowy kod</translation>
     </message>
     <message>
         <source>SMS go to this number while this is on. Reply %keyword to any of them to stop them.</source>
@@ -7150,7 +7150,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Please check</source>
-        <translation>Sprawdź</translation>
+        <translation>Sprawdzić</translation>
     </message>
     <message>
         <source>Steps</source>
@@ -7158,11 +7158,11 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Upload</source>
-        <translation>Prześlij</translation>
+        <translation>Przesłać</translation>
     </message>
     <message>
         <source>Map the columns</source>
-        <translation>Przypisz kolumny</translation>
+        <translation>Przypisać kolumny</translation>
     </message>
     <message>
         <source>Dry run</source>
@@ -7170,7 +7170,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Import</source>
-        <translation>Zaimportuj</translation>
+        <translation>Zaimportować</translation>
     </message>
     <message>
         <source>Reload this page when the run is finished to see the report.</source>
@@ -7250,7 +7250,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Update the data of existing subscribers</source>
-        <translation>Zaktualizuj dane istniejących subskrybentów</translation>
+        <translation>Zaktualizować dane istniejących subskrybentów</translation>
     </message>
     <message>
         <source>For example: sign-up form at the trade fair 2025</source>
@@ -7310,15 +7310,15 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Update the preview</source>
-        <translation>Zaktualizuj podgląd</translation>
+        <translation>Zaktualizować podgląd</translation>
     </message>
     <message>
         <source>Check every row and count, write nothing</source>
-        <translation>Sprawdź i policz każdy wiersz, niczego nie zapisuj</translation>
+        <translation>Sprawdzić i policzyć każdy wiersz, niczego nie zapisywać</translation>
     </message>
     <message>
         <source>Import %count rows</source>
-        <translation>Importuj %count wierszy</translation>
+        <translation>Zaimportować %count wierszy</translation>
     </message>
     <message>
         <source>Import the rows into the list now? The consent source is written to the consent log of every person.</source>
@@ -7326,15 +7326,15 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Back to the list</source>
-        <translation>Wróć do listy</translation>
+        <translation>Wrócić do listy</translation>
     </message>
     <message>
         <source>Save the mapping as</source>
-        <translation>Zapisz przypisanie jako</translation>
+        <translation>Zapisać przypisanie jako</translation>
     </message>
     <message>
         <source>Save mapping</source>
-        <translation>Zapisz przypisanie</translation>
+        <translation>Zapisać przypisanie</translation>
     </message>
     <message>
         <source>Subscriptions of the list</source>
@@ -7458,11 +7458,11 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Upload and map the columns</source>
-        <translation>Prześlij i przypisz kolumny</translation>
+        <translation>Przesłać i przypisać kolumny</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Anulować</translation>
     </message>
     <message>
         <source>eznewsletter migration</source>
@@ -7502,7 +7502,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Run</source>
-        <translation>Uruchom</translation>
+        <translation>Uruchomić</translation>
     </message>
     <message>
         <source>Started</source>
@@ -7638,7 +7638,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Download CSV</source>
-        <translation>Pobierz CSV</translation>
+        <translation>Pobrać CSV</translation>
     </message>
     <message>
         <source>Imports and migration</source>
@@ -7957,7 +7957,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Find an address</source>
-        <translation>Znajdź adres</translation>
+        <translation>Znaleźć adres</translation>
     </message>
     <message>
         <source>Address or note</source>
@@ -7969,15 +7969,15 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Clear</source>
-        <translation>Wyczyść</translation>
+        <translation>Wyczyścić</translation>
     </message>
     <message>
         <source>Select all</source>
-        <translation>Zaznacz wszystko</translation>
+        <translation>Zaznaczyć wszystko</translation>
     </message>
     <message>
         <source>Select</source>
-        <translation>Wybierz</translation>
+        <translation>Wybrać</translation>
     </message>
     <message>
         <source>%count of %all addresses</source>
@@ -7989,7 +7989,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Show all addresses</source>
-        <translation>Pokaż wszystkie adresy</translation>
+        <translation>Pokazać wszystkie adresy</translation>
     </message>
     <message>
         <source>The blacklist is empty.</source>
@@ -8001,7 +8001,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Anulować</translation>
     </message>
     <message>
         <source>Subscribers are imported from a CSV file on the subscriptions page of a list. Each upload is listed here.</source>
@@ -8025,7 +8025,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Open the subscriptions of a list and choose "Import CSV".</source>
-        <translation>Otwórz subskrypcje listy i wybierz "Importuj CSV".</translation>
+        <translation>Otworzyć subskrypcje listy i wybrać "Zaimportować CSV".</translation>
     </message>
     <message>
         <source>The extension is not installed in this database yet</source>
@@ -8169,7 +8169,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Run now</source>
-        <translation>Uruchom teraz</translation>
+        <translation>Uruchomić teraz</translation>
     </message>
     <message>
         <source>The cronjob parts do this on a schedule. Here you can run them by hand; the run goes on in the background.</source>
@@ -8181,7 +8181,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Send now</source>
-        <translation>Wyślij teraz</translation>
+        <translation>Wysłać teraz</translation>
     </message>
     <message>
         <source>Count only</source>
@@ -8189,7 +8189,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Say what a run would do, change nothing</source>
-        <translation>Pokaż, co zrobiłby przebieg, niczego nie zmieniając</translation>
+        <translation>Pokazać, co zrobiłby przebieg, niczego nie zmieniając</translation>
     </message>
     <message>
         <source>Read the mail accounts and parse the mails now?</source>
@@ -8197,7 +8197,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Process the mail accounts</source>
-        <translation>Przetwórz konta pocztowe</translation>
+        <translation>Przetworzyć konta pocztowe</translation>
     </message>
     <message>
         <source>In cron:</source>
@@ -8221,7 +8221,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Open</source>
-        <translation>Otwórz</translation>
+        <translation>Otworzyć</translation>
     </message>
     <message>
         <source>Remove these subscriptions and mails? This cannot be undone.</source>
@@ -8229,7 +8229,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Remove them</source>
-        <translation>Usuń je</translation>
+        <translation>Usunąć je</translation>
     </message>
     <message>
         <source>Nothing to report: the lists have subscribers, the mail queue runs and nothing is stuck.</source>
@@ -8265,7 +8265,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Import CSV</source>
-        <translation>Importuj CSV</translation>
+        <translation>Zaimportować CSV</translation>
     </message>
     <message>
         <source>There is no newsletter list yet.</source>
@@ -8309,7 +8309,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Remove</source>
-        <translation>Usuń</translation>
+        <translation>Usunąć</translation>
     </message>
     <message>
         <source>Collect reads the active mail accounts and stores the new mails; Parse looks at the stored mails and sets the status of the users that bounced. Both run in the background.</source>
@@ -8341,7 +8341,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Edytować</translation>
     </message>
     <message>
         <source>There is no mail account yet.</source>
@@ -8377,7 +8377,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Show all users</source>
-        <translation>Pokaż wszystkich użytkowników</translation>
+        <translation>Pokazać wszystkich użytkowników</translation>
     </message>
     <message>
         <source>There is no newsletter user yet.</source>
@@ -8524,7 +8524,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     <name>cjw_newsletter/blacklist_item_remove</name>
     <message>
         <source>Remove from the blacklist</source>
-        <translation>Usuń z czarnej listy</translation>
+        <translation>Usunąć z czarnej listy</translation>
     </message>
     <message>
         <source>Remove these addresses from the blacklist?</source>
@@ -8544,7 +8544,7 @@ Jeśli ta prośba nie została wysłana z tego adresu, wiadomość można zignor
     </message>
     <message>
         <source>Remove</source>
-        <translation>Usuń</translation>
+        <translation>Usunąć</translation>
     </message>
 </context>
 <context>
