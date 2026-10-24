@@ -427,7 +427,7 @@ class CjwNewsletterImport extends eZPersistentObject
             $eZUserId = false;
             $newsletterUserId = 0;
 
-            $emailOk = \ezcMailTools::validateEmailAddress( $email );
+            $emailOk = \CjwNewsletterTransport::isValidAddress( $email );
             $subscriptionObject = null;
             $createNewUser = 0; // 0 - no, 1 - yes, 2 - updated
             $createNewSubscription = 0;

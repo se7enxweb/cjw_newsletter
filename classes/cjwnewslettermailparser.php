@@ -37,6 +37,16 @@ class CjwNewsletterMailParser
     private $MailParser = null;
 
     /**
+     * @var bool
+     */
+    private $TmpDirWritable = false;
+
+    /**
+     * @var array temporary directories already reported as not writable in this process
+     */
+    private static $ReportedTmpDirs = array();
+
+    /**
      * constructor
      *
      * @param CjwNewsletterMailboxItem $rawMailContent
@@ -50,8 +60,51 @@ class CjwNewsletterMailParser
         // tmp dir for ezcmailparser have to be writeable
         // ... openbasedir restriction ...
         // projectvar/ cjw_newsletter/ tmp
-        $this->MailParser->setTmpDir( $this->getTmpDir( true ) );
+        $tmpDir = $this->getTmpDir( true );
+        $this->MailParser->setTmpDir( $tmpDir );
 
+        // 0700 makes the directory private to the user who created it: when the cronjob and the web server run as
+        // different users, the other one can no longer write there. That is reported, and nothing is parsed
+        // (the messages stay unprocessed and are parsed once the directory is writable again)
+        $this->TmpDirWritable = is_dir( $tmpDir ) && is_writable( $tmpDir );
+        if ( !$this->TmpDirWritable && !isset( self::$ReportedTmpDirs[ $tmpDir ] ) )
+        {
+            // once per run, not once per message
+            self::$ReportedTmpDirs[ $tmpDir ] = true;
+            $user = function_exists( 'posix_geteuid' ) && function_exists( 'posix_getpwuid' ) ? posix_getpwuid( posix_geteuid() ) : false;
+            $userName = is_array( $user ) && isset( $user['name'] ) ? $user['name'] : get_current_user();
+            $message = "The bounce parser's temporary directory $tmpDir is not writable for the user $userName: no message is "
+                     . "parsed. Run the bounce cronjob as the user who owns the directory (it is created with mode 0700), "
+                     . "or remove the directory so that it is created again by that user.";
+            eZDebug::writeError( $message, __METHOD__ );
+            CjwNewsletterLog::writeError( 'CjwNewsletterMailParser::__construct',
+                                          'parseMail',
+                                          'tmp-dir-not-writable',
+                                          array( 'dir' => $tmpDir, 'user' => $userName ) );
+        }
+    }
+
+    /**
+     * Whether the temporary directory of ezcMailParser can be written: if not, parse() parses nothing.
+     *
+     * @return bool
+     */
+    public function tmpDirIsWritable()
+    {
+        return $this->TmpDirWritable;
+    }
+
+    /**
+     * The largest bounce message in bytes that is fetched and parsed (cjw_newsletter.ini [BounceSettings]
+     * MaxMessageSize, default 10 MB).
+     *
+     * @return int
+     */
+    public static function maxMessageSize()
+    {
+        $ini = eZINI::instance( 'cjw_newsletter.ini' );
+        $max = $ini->hasVariable( 'BounceSettings', 'MaxMessageSize' ) ? (int)$ini->variable( 'BounceSettings', 'MaxMessageSize' ) : 0;
+        return $max > 0 ? $max : 10485760;
     }
 
     /**
@@ -76,10 +129,13 @@ class CjwNewsletterMailParser
 
         if( $createDirIfNotExists === true )
         {
+            // ezcMailParser writes the attachments of a parsed mail there under predictable names
+            // (<pid>-<counter>): a directory nobody else may read or write
             if( !file_exists( $filePath ) )
             {
-                eZDir::mkdir( $filePath, false, true );
+                eZDir::mkdir( $filePath, 0700, true );
             }
+            @chmod( $filePath, 0700 );
         }
 
         return $filePath;
@@ -92,10 +148,22 @@ class CjwNewsletterMailParser
      */
     public function parse( )
     {
+        if ( !$this->TmpDirWritable )
+        {
+            return false;
+        }
         // parse set to mailobject
         $rawMail = $this->MailboxItem->getRawMailMessageContent();
         if ( !is_string( $rawMail ) || $rawMail === '' )
         {
+            return false;
+        }
+        if ( strlen( $rawMail ) > self::maxMessageSize() )
+        {
+            CjwNewsletterLog::writeError( 'CjwNewsletterMailparser::parse',
+                                          'parseMail',
+                                          'message-too-large',
+                                          array( 'size' => strlen( $rawMail ), 'max' => self::maxMessageSize() ) );
             return false;
         }
         $set = new ezcMailVariableSet( $rawMail );
