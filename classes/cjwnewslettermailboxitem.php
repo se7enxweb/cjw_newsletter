@@ -191,6 +191,34 @@ class CjwNewsletterMailboxItem extends eZPersistentObject
     }
 
     /**
+     * Remembers a message that was left on the server because it is larger than [BounceSettings] MaxMessageSize:
+     * an item without content that is processed at once, so that the message counts as known in later runs.
+     *
+     * @param int $mailboxId
+     * @param string $messageIdentifier the unique identifier of the message on the server
+     * @param int $messageId
+     * @param int $messageSize
+     * @return CjwNewsletterMailboxItem|false false if the message is known already
+     */
+    public static function addOversizedMailboxItem( $mailboxId, $messageIdentifier, $messageId, $messageSize )
+    {
+        if ( is_object( self::fetchByMailboxIdMessageIdentifier( $mailboxId, $messageIdentifier ) ) )
+        {
+            return false;
+        }
+        $now = time();
+        $item = new CjwNewsletterMailboxItem( array( 'created'            => $now,
+                                                     'processed'          => $now,
+                                                     'mailbox_id'         => $mailboxId,
+                                                     'message_id'         => $messageId,
+                                                     'message_identifier' => $messageIdentifier,
+                                                     'message_size'       => (int)$messageSize,
+                                                     'email_subject'      => '(not fetched: larger than MaxMessageSize)' ) );
+        $item->store();
+        return $item;
+    }
+
+    /**
      * fetch alls mailbox items
      *
      * @param integer $limit
@@ -329,6 +357,11 @@ class CjwNewsletterMailboxItem extends eZPersistentObject
     public function parseMail()
     {
         $mailParserObject = new CjwNewsletterMailParser( $this );
+        if ( !$mailParserObject->tmpDirIsWritable() )
+        {
+            // not the message's fault (the parser logged why): it stays unprocessed and is parsed in a later run
+            return false;
+        }
         $parseResult = $mailParserObject->parse();
         $this->saveParsedInfos( $parseResult );
         return $parseResult;

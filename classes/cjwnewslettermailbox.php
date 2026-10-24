@@ -503,16 +503,6 @@ class CjwNewsletterMailbox extends eZPersistentObject
             $maxMessageSize = CjwNewsletterMailParser::maxMessageSize();
             foreach ( $messageIdArray as $messageId => $messageSize )
             {
-                // the whole message is read into memory: one that is too large is left on the server
-                if ( (int)$messageSize > $maxMessageSize )
-                {
-                    $statusArray['failed'][ $messageId ] = isset( $uniqueIdentifierArray[ $messageId ] ) ? $uniqueIdentifierArray[ $messageId ] : false;
-                    CjwNewsletterLog::writeError( 'CjwNewsletterMailbox::fetchMails',
-                                                  'mailbox',
-                                                  'message-too-large',
-                                                  array( 'message' => $messageId, 'size' => (int)$messageSize, 'max' => $maxMessageSize ) );
-                    continue;
-                }
                 if( isset( $uniqueIdentifierArray[ $messageId ] ) )
                 {
                     $uniqueIdentifier = $uniqueIdentifierArray[ $messageId ];
@@ -521,9 +511,25 @@ class CjwNewsletterMailbox extends eZPersistentObject
                 {
                     $uniqueIdentifier = false;
                 }
-                if( array_key_exists( $uniqueIdentifier, $existingMessageIdentifierArray ) )
+                if( $uniqueIdentifier !== false && array_key_exists( $uniqueIdentifier, $existingMessageIdentifierArray ) )
                 {
                     $statusArray['exists'][ $messageId ] = $uniqueIdentifier;
+                }
+                else if ( (int)$messageSize > $maxMessageSize )
+                {
+                    // the whole message is read into memory: one that is too large is left on the server. With a
+                    // unique identifier it is remembered as a processed item without content, so that it is
+                    // reported once and not again in every run; without one (a server without UIDL) it is reported
+                    // each time
+                    $statusArray['failed'][ $messageId ] = $uniqueIdentifier;
+                    CjwNewsletterLog::writeError( 'CjwNewsletterMailbox::fetchMails',
+                                                  'mailbox',
+                                                  'message-too-large',
+                                                  array( 'message' => $messageId, 'identifier' => (string)$uniqueIdentifier, 'size' => (int)$messageSize, 'max' => $maxMessageSize ) );
+                    if ( $uniqueIdentifier !== false )
+                    {
+                        CjwNewsletterMailboxItem::addOversizedMailboxItem( $mailboxId, $uniqueIdentifier, $messageId, (int)$messageSize );
+                    }
                 }
                 else
                 {

@@ -11,6 +11,11 @@
  *  MS-03 - secureMail() refuses a mail with a line break in an address (MAIL FROM / RCPT TO)
  *  MS-04 - sent over SMTP with HeaderLineEnding LF, a body line starting with "." is escaped and the line break is
  *          put back afterwards
+ *  MS-05 - isValidAddress() refuses a quoted local part with angle brackets, a backslash or a space
+ *  MS-06 - secureMail() refuses a body part whose file name, Content-ID, content type or Content-Disposition
+ *          parameter carries a line break or a quote, and lets a clean inline image through
+ *  MS-07 - secureMail() takes line breaks out of the headers of a body part
+ *  MS-08 - the bounce parser parses nothing when its temporary directory is not writable
  *
  * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
@@ -111,6 +116,80 @@ class cjwNewsletterMailSafetyTest extends TestCase
         $this->assertTrue( $result, $result instanceof Exception ? $result->getMessage() : '' );
         $this->assertStringContainsString( "Line one\r\n..\r\nLine three", $data );
         $this->assertStringNotContainsString( "\r\n.\r\n", $data );
+    }
+
+    /** MS-05 */
+    public function testAQuotedLocalPartIsNotValid()
+    {
+        $this->assertTrue( (bool)ezcMailTools::validateEmailAddress( '"x<y>"@example.com' ), 'the gap this closes' );
+        foreach ( array( '"x<y>"@example.com', '"a b"@example.com', 'a\\b@example.com', '<a@example.com>', "a\tb@example.com" ) as $address )
+            $this->assertFalse( CjwNewsletterTransport::isValidAddress( $address ), $address );
+        $this->assertTrue( CjwNewsletterTransport::isValidAddress( 'first.last+tag@example.com' ) );
+    }
+
+    /** An HTML mail with one inline image, the way CjwNewsletterMailComposer builds it */
+    private static function mailWithImage( ezcMailFilePart $image ): ezcMail
+    {
+        $mail = self::mail();
+        $html = new ezcMailText( '<img src="cid:image">', 'utf-8' );
+        $html->subType = 'html';
+        $related = new ezcMailMultipartRelated( $html );
+        $related->addRelatedPart( $image );
+        $mail->body = new ezcMailMultipartAlternative( new ezcMailText( 'text', 'utf-8' ), $related );
+        return $mail;
+    }
+
+    /** MS-06 */
+    public function testABodyPartWithALineBreakOrQuoteInItsParametersRefusesTheMail()
+    {
+        $clean = self::mailWithImage( new ezcMailVirtualFile( 'var/storage/images/logo.png', 'png', 'image', 'png' ) );
+        $this->assertNull( CjwNewsletterTransport::secureMail( $clean ) );
+        $this->assertStringContainsString( 'filename="logo.png"', $clean->generate() );
+
+        $image = new ezcMailVirtualFile( "logo.png\"\r\nBcc: victim@example.org", 'png', 'image', 'png' );
+        $this->assertSame( 'invalid file name or content id in a mail part', CjwNewsletterTransport::secureMail( self::mailWithImage( $image ) ) );
+
+        $image = new ezcMailVirtualFile( 'logo.png', 'png', 'image', "png\r\nBcc: victim@example.org" );
+        $this->assertSame( 'invalid content type in a mail part', CjwNewsletterTransport::secureMail( self::mailWithImage( $image ) ) );
+
+        $image = new ezcMailVirtualFile( 'logo.png', 'png', 'image', 'png' );
+        $mail = self::mailWithImage( $image );
+        $image->contentId = "logo\r\nBcc: victim@example.org";
+        $this->assertSame( 'invalid file name or content id in a mail part', CjwNewsletterTransport::secureMail( $mail ) );
+
+        $image = new ezcMailVirtualFile( 'logo.png', 'png', 'image', 'png' );
+        $image->contentDisposition = new ezcMailContentDispositionHeader( 'inline', 'logo.png"; x="' );
+        $this->assertSame( 'invalid content disposition in a mail part', CjwNewsletterTransport::secureMail( self::mailWithImage( $image ) ) );
+
+        $image = new ezcMailVirtualFile( 'logo.png', 'png', 'image', 'png' );
+        $image->contentDisposition = new ezcMailContentDispositionHeader( 'inline', 'logo.png' );
+        $image->contentDisposition->additionalParameters = array( 'x' => "1\r\nBcc: victim@example.org" );
+        $this->assertSame( 'invalid content disposition in a mail part', CjwNewsletterTransport::secureMail( self::mailWithImage( $image ) ) );
+    }
+
+    /** MS-07 */
+    public function testLineBreaksAreTakenOutOfTheHeadersOfABodyPart()
+    {
+        $image = new ezcMailVirtualFile( 'logo.png', 'png', 'image', 'png' );
+        $image->setHeader( 'X-Part', "a\r\nBcc: victim@example.org" );
+        $mail = self::mailWithImage( $image );
+        $this->assertNull( CjwNewsletterTransport::secureMail( $mail ) );
+        $this->assertDoesNotMatchRegularExpression( '/^Bcc:/mi', $mail->generate() );
+    }
+
+    /** MS-08 */
+    public function testTheBounceParserParsesNothingWithoutAWritableTemporaryDirectory()
+    {
+        require_once dirname( __DIR__ ) . '/classes/cjwnewslettermailparser.php';
+        $parser = new class( null ) extends CjwNewsletterMailParser
+        {
+            public function getTmpDir( $createDirIfNotExists = true )
+            {
+                return sys_get_temp_dir() . '/cjwnl-missing-' . getmypid() . '/not/there/';
+            }
+        };
+        $this->assertFalse( $parser->tmpDirIsWritable() );
+        $this->assertFalse( $parser->parse(), 'returns before reading the message (there is no mailbox item here)' );
     }
 
     /** A one-message SMTP server: argv[1] port, argv[2] file for what came after DATA */
