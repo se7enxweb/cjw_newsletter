@@ -238,7 +238,7 @@ class CjwNewsletterMail
         $mail->subjectCharset = $emailCharset;
         // from and to addresses, and subject
         $mail->from = new ezcMailAddress( trim( $emailSender ),
-                                          $emailSenderName,
+                                          CjwNewsletterTransport::cleanHeaderText( $emailSenderName ),
                                           $mail->charset );
         // returnpath for email bounces
         if ( !( $emailReturnPath && $emailReturnPath != '' ) )
@@ -283,7 +283,7 @@ class CjwNewsletterMail
         else
         {
             $mail->addTo( new ezcMailAddress( trim( $emailReceiver ),
-                                              $emailReceiverName,
+                                              CjwNewsletterTransport::cleanHeaderText( $emailReceiverName ),
                                               $mail->charset ) );
         }
 
@@ -292,7 +292,7 @@ class CjwNewsletterMail
         if ( array_key_exists( 'text', $emailBodyArray ) == false )
             $emailBodyArray['text'] = '';
 
-        $mail->subject = $emailSubject;
+        $mail->subject = CjwNewsletterTransport::cleanHeaderText( $emailSubject );
         if ( $emailBodyArray['html'] == '' )
         {
             // tue nix - da kein html da ist
@@ -335,23 +335,33 @@ class CjwNewsletterMail
         // LF - UNIX-MACOSX - \n
         // default LF
         //ezcMailTools::setLineBreak( "\n" );
+        // The line break is a global setting of zetacomponents/mail: it is put back after the send, so that
+        // later mails of the same process (the kernel's own, over SMTP as well) are not built with it.
+        // CjwNewsletterTransport sends SMTP with CRLF whatever is set here.
+        $previousLineBreak = ezcMailTools::lineBreak();
         ezcMailTools::setLineBreak( $this->HeaderLineEnding );
-
-        // set 'x-cjwnl-' mailheader
-        foreach( $this->ExtraEmailHeaderItemArray as $key => $value )
+        try
         {
-            $mail->setHeader( $key, $value, $mail->charset );
-        }
+            // set 'x-cjwnl-' mailheader
+            foreach( $this->ExtraEmailHeaderItemArray as $key => $value )
+            {
+                $mail->setHeader( $key, CjwNewsletterTransport::cleanHeaderText( $value ), $mail->charset );
+            }
 
-        $mail->build();
-        $transport = new CjwNewsletterTransport( $transportMethod );
-        $gate = null;
-        if ( !$isPreview && $this->MailCategory !== null && class_exists( 'CjwNewsletterMailPreferences' ) )
-            $gate = CjwNewsletterMailPreferences::sendThroughGate( $mail, $transport, $this->MailCategory );
-        if ( is_array( $gate ) && $gate['handled'] )
-            $sendResult = $gate['result'];
-        else
-            $sendResult = $transport->send( $mail );
+            $mail->build();
+            $transport = new CjwNewsletterTransport( $transportMethod );
+            $gate = null;
+            if ( !$isPreview && $this->MailCategory !== null && class_exists( 'CjwNewsletterMailPreferences' ) )
+                $gate = CjwNewsletterMailPreferences::sendThroughGate( $mail, $transport, $this->MailCategory );
+            if ( is_array( $gate ) && $gate['handled'] )
+                $sendResult = $gate['result'];
+            else
+                $sendResult = $transport->send( $mail );
+        }
+        finally
+        {
+            ezcMailTools::setLineBreak( $previousLineBreak );
+        }
 
         if ( is_array( $gate ) && $gate['blocked'] )
         {
@@ -417,11 +427,15 @@ class CjwNewsletterMail
      */
     function sendEmailWithEz( $emailSender, $emailReciever, $emailSubject, $emailBody, $emailContentType = 'text/html', $emailCharset = 'utf-8' )
     {
+        if ( !CjwNewsletterTransport::isValidAddress( trim( (string)$emailReciever ) ) || !CjwNewsletterTransport::isValidAddress( trim( (string)$emailSender ) ) )
+        {
+            return array( 'email_result' => false, 'send_result' => false, 'email_sender' => $emailSender, 'email_reciever' => $emailReciever, 'email_subject' => $emailSubject, 'email_content_type' => $emailContentType, 'email_charset' => $emailCharset );
+        }
         $mail = new eZMail();
         $redirectURL = false;
         $mail->setReceiver( trim( $emailReciever ) );
         $mail->setSender( trim( $emailSender )  );
-        $mail->setSubject( $emailSubject );
+        $mail->setSubject( CjwNewsletterTransport::cleanHeaderText( $emailSubject ) );
         $mail->setBody( $emailBody );
 
         // $mail->setContentType( $type = 'text/html', $charset = false, $transferEncoding = false, $disposition = false, $boundary = false);

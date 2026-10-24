@@ -500,8 +500,19 @@ class CjwNewsletterMailbox extends eZPersistentObject
             // use message_identifier for check
             $existingMessageIdentifierArray = $this->extractAllExistingIdentifiers( $uniqueIdentifierArray );
 
+            $maxMessageSize = CjwNewsletterMailParser::maxMessageSize();
             foreach ( $messageIdArray as $messageId => $messageSize )
             {
+                // the whole message is read into memory: one that is too large is left on the server
+                if ( (int)$messageSize > $maxMessageSize )
+                {
+                    $statusArray['failed'][ $messageId ] = isset( $uniqueIdentifierArray[ $messageId ] ) ? $uniqueIdentifierArray[ $messageId ] : false;
+                    CjwNewsletterLog::writeError( 'CjwNewsletterMailbox::fetchMails',
+                                                  'mailbox',
+                                                  'message-too-large',
+                                                  array( 'message' => $messageId, 'size' => (int)$messageSize, 'max' => $maxMessageSize ) );
+                    continue;
+                }
                 if( isset( $uniqueIdentifierArray[ $messageId ] ) )
                 {
                     $uniqueIdentifier = $uniqueIdentifierArray[ $messageId ];

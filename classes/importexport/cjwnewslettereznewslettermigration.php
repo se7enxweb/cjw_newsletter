@@ -176,7 +176,7 @@ class CjwNewsletterEznewsletterMigration
                     continue;
                 $this->robinson[$email] = true;
                 $this->totals['robinson']['entries']++;
-                if ( !$this->options['robinson_to_suppression'] || !class_exists( 'expMailSuppression' ) || !ezcMailTools::validateEmailAddress( $email ) )
+                if ( !$this->options['robinson_to_suppression'] || !class_exists( 'expMailSuppression' ) || !CjwNewsletterTransport::isValidAddress( $email ) )
                     continue;
                 if ( expMailSuppression::isSuppressed( $email ) )
                 {
@@ -380,7 +380,7 @@ class CjwNewsletterEznewsletterMigration
         $target = isset( $this->listTargets[$listId] ) ? $this->listTargets[$listId] : 0;
         if ( !$target )
             return $this->skip( 'no_list', $id, 'old list ' . $listId );
-        if ( $email === '' || !ezcMailTools::validateEmailAddress( $email ) )
+        if ( $email === '' || !CjwNewsletterTransport::isValidAddress( $email ) )
             return $this->skip( 'invalid', $id );
         if ( isset( $this->robinson[$email] ) )
             return $this->skip( 'robinson', $id );

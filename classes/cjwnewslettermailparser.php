@@ -55,6 +55,19 @@ class CjwNewsletterMailParser
     }
 
     /**
+     * The largest bounce message in bytes that is fetched and parsed (cjw_newsletter.ini [BounceSettings]
+     * MaxMessageSize, default 10 MB).
+     *
+     * @return int
+     */
+    public static function maxMessageSize()
+    {
+        $ini = eZINI::instance( 'cjw_newsletter.ini' );
+        $max = $ini->hasVariable( 'BounceSettings', 'MaxMessageSize' ) ? (int)$ini->variable( 'BounceSettings', 'MaxMessageSize' ) : 0;
+        return $max > 0 ? $max : 10485760;
+    }
+
+    /**
      * tmp dir for mail parser
      *    ezvardir / cjw_newsletter/tmp/
      * @return string dirname
@@ -76,10 +89,13 @@ class CjwNewsletterMailParser
 
         if( $createDirIfNotExists === true )
         {
+            // ezcMailParser writes the attachments of a parsed mail there under predictable names
+            // (<pid>-<counter>): a directory nobody else may read or write
             if( !file_exists( $filePath ) )
             {
-                eZDir::mkdir( $filePath, false, true );
+                eZDir::mkdir( $filePath, 0700, true );
             }
+            @chmod( $filePath, 0700 );
         }
 
         return $filePath;
@@ -96,6 +112,14 @@ class CjwNewsletterMailParser
         $rawMail = $this->MailboxItem->getRawMailMessageContent();
         if ( !is_string( $rawMail ) || $rawMail === '' )
         {
+            return false;
+        }
+        if ( strlen( $rawMail ) > self::maxMessageSize() )
+        {
+            CjwNewsletterLog::writeError( 'CjwNewsletterMailparser::parse',
+                                          'parseMail',
+                                          'message-too-large',
+                                          array( 'size' => strlen( $rawMail ), 'max' => self::maxMessageSize() ) );
             return false;
         }
         $set = new ezcMailVariableSet( $rawMail );

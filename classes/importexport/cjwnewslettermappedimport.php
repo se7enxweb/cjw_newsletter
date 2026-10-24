@@ -257,7 +257,7 @@ class CjwNewsletterMappedImport
             $r['reason'] = 'missing_email';
             return $r;
         }
-        if ( !ezcMailTools::validateEmailAddress( $email ) )
+        if ( !CjwNewsletterTransport::isValidAddress( $email ) )
         {
             $r['reason'] = 'invalid';
             return $r;

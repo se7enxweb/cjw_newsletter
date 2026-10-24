@@ -334,7 +334,7 @@ class ImportMapping extends \Exponential\Runnable\ModuleView
         $email = isset( $values['email'] ) ? mb_strtolower( trim( $values['email'] ) ) : '';
         if ( $email === '' )
             return array( 'status' => 'skip', 'reason' => 'missing_email' );
-        if ( !\ezcMailTools::validateEmailAddress( $email ) )
+        if ( !\CjwNewsletterTransport::isValidAddress( $email ) )
             return array( 'status' => 'skip', 'reason' => 'invalid' );
         $blocked = \CjwNewsletterImportConsent::blockReason( $email );
         if ( $blocked !== null )
