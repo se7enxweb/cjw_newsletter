@@ -25,6 +25,7 @@
 use PHPUnit\Framework\TestCase;
 
 require_once dirname( __DIR__ ) . '/classes/cjwnewslettertransport.php';
+require_once dirname( __DIR__ ) . '/classes/cjwnewsletterlog.php';
 
 class cjwNewsletterMailSafetyTest extends TestCase
 {

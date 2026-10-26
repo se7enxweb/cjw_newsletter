@@ -157,6 +157,8 @@ class CjwNewsletterLog extends ezcLog
                                                     'data' =>  $data ));
         */
         $log = CjwNewsletterLog::getInstance();
+        // null when the log directory is not writable: getInstance() has already reported that
+        if ( !$log ) return;
         $log->source = $source;
         $log->category = $category;
         $log->log( $message, ezcLog::INFO , $attributes );
@@ -174,6 +176,7 @@ class CjwNewsletterLog extends ezcLog
     public static function writeError( $message, $source ='default' , $category='default', array $attributes = array() )
     {
        $log = CjwNewsletterLog::getInstance();
+       if ( !$log ) return;
        $log->source = $source;
        $log->category = $category;
        $log->log( $message, ezcLog::ERROR , $attributes );
@@ -191,6 +194,7 @@ class CjwNewsletterLog extends ezcLog
     public static function writeDebug( $message, $source ='default' , $category='default', array $attributes = array() )
     {
         $log = CjwNewsletterLog::getInstance();
+        if ( !$log ) return;
         if ( $log->isDebugEnabled() === true )
         {
             $log->source = $source;
@@ -211,6 +215,7 @@ class CjwNewsletterLog extends ezcLog
     public static function writeNotice( $message, $source ='default' , $category='default', array $attributes = array() )
     {
        $log = CjwNewsletterLog::getInstance();
+       if ( !$log ) return;
        $log->source = $source;
        $log->category = $category;
        $log->log( $message, ezcLog::NOTICE , $attributes );
