@@ -290,7 +290,7 @@
     </message>
     <message>
         <source>Sub items [%children_count]</source>
-        <translation>Sub elementos [%children_count]</translation>
+        <translation>Subelementos [%children_count]</translation>
     </message>
     <message>
         <source>Show 10 items per page.</source>
@@ -306,7 +306,7 @@
     </message>
     <message>
         <source>Display sub items using a simple list.</source>
-        <translation>Mostrar sub elementos usando una lista simple.</translation>
+        <translation>Mostrar subelementos usando una lista simple.</translation>
     </message>
     <message>
         <source>List</source>
@@ -314,7 +314,7 @@
     </message>
     <message>
         <source>Thumbnail</source>
-        <translation>Diapositiva</translation>
+        <translation>Miniatura</translation>
     </message>
     <message>
         <source>Display sub items using a detailed list.</source>
@@ -326,7 +326,7 @@
     </message>
     <message>
         <source>Display sub items as thumbnails.</source>
-        <translation>Mostrar sub elementos como diapositivas.</translation>
+        <translation>Mostrar subelementos como miniaturas.</translation>
     </message>
     <message>
         <source>The current item does not contain any sub items.</source>

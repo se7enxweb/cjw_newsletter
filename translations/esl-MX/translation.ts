@@ -306,7 +306,7 @@
     </message>
     <message>
         <source>Display sub items using a simple list.</source>
-        <translation>Mostrar sub elementos usando una lista simple.</translation>
+        <translation>Mostrar subelementos usando una lista simple.</translation>
     </message>
     <message>
         <source>List</source>
@@ -314,7 +314,7 @@
     </message>
     <message>
         <source>Thumbnail</source>
-        <translation>Diapositiva</translation>
+        <translation>Miniatura</translation>
     </message>
     <message>
         <source>Display sub items using a detailed list.</source>
@@ -326,7 +326,7 @@
     </message>
     <message>
         <source>Display sub items as thumbnails.</source>
-        <translation>Mostrar sub elementos como diapositivas.</translation>
+        <translation>Mostrar subelementos como miniaturas.</translation>
     </message>
     <message>
         <source>The current item does not contain any sub items.</source>
@@ -822,7 +822,7 @@
     </message>
     <message>
         <source>Yes</source>
-        <translation>Si</translation>
+        <translation>Sí</translation>
     </message>
     <message>
         <source>Personalize content</source>
@@ -834,7 +834,7 @@
     </message>
     <message>
         <source>yes</source>
-        <translation>si</translation>
+        <translation>sí</translation>
     </message>
     <message>
         <source>Automatically approve subscription after user registration?</source>
@@ -883,7 +883,7 @@
     </message>
     <message>
         <source>yes</source>
-        <translation>si</translation>
+        <translation>sí</translation>
     </message>
 </context>
 <context>
@@ -2367,7 +2367,7 @@ Para editar la configuración de tu boletín, visita el siguiente enlace:
     </message>
     <message>
         <source>yes</source>
-        <translation>si</translation>
+        <translation>sí</translation>
     </message>
     <message>
         <source>no</source>
@@ -3615,7 +3615,7 @@ debes confirmarlo en esta página.</translation>
     </message>
     <message>
         <source>yes</source>
-        <translation>si</translation>
+        <translation>sí</translation>
     </message>
     <message>
         <source>no</source>
@@ -4676,7 +4676,7 @@ Si no enviaste esta solicitud, ignora este correo: no cambia nada.</translation>
     </message>
     <message>
         <source>Order</source>
-        <translation>Pedido</translation>
+        <translation>Orden</translation>
     </message>
     <message>
         <source>newest first</source>
@@ -5399,7 +5399,7 @@ Si no enviaste esta solicitud, ignora este correo: no cambia nada.</translation>
     </message>
     <message>
         <source>Order</source>
-        <translation>Pedido</translation>
+        <translation>Orden</translation>
     </message>
     <message>
         <source>Offered to subscribers</source>
@@ -5755,7 +5755,7 @@ Si no enviaste esta solicitud, ignora este correo: no cambia nada.</translation>
     </message>
     <message>
         <source>Yes</source>
-        <translation>Si</translation>
+        <translation>Sí</translation>
     </message>
     <message>
         <source>No</source>
