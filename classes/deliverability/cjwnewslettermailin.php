@@ -274,7 +274,7 @@ class CjwNewsletterMailin
         $mail->setExtraMailHeadersByNewsletterUser( $user );
         $mail->setTransportMethodDirectlyFromIni();
         return $mail->sendEmail( $ini->variable( 'NewsletterMailSettings', 'EmailSender' ), $ini->variable( 'NewsletterMailSettings', 'EmailSenderName' ),
-                                 (string)$user->attribute( 'email' ), '', $subject, array( 'text' => $body ), false, 'utf-8',
+                                 (string)$user->attribute( 'email' ), '', $subject, CjwNewsletterMail::systemMailBody( $body, $subject ), false, 'utf-8',
                                  $ini->variable( 'NewsletterMailSettings', 'EmailReplyTo' ), $ini->variable( 'NewsletterMailSettings', 'EmailReturnPath' ) );
     }
 

@@ -416,6 +416,28 @@ class CjwNewsletterMail
     }
 
     /**
+     * The body of a system mail of the newsletter (subscription confirmation and information, the unsubscribe links):
+     * the text of its template as the text part and, with Exponential 6.0.15 or later, the same text in the kernel's
+     * mail layout (design:mail/layout.tpl) as the HTML part, so these mails look like the other mails of the site. The
+     * first address on a line of its own becomes the button. The newsletters themselves keep their own skins.
+     *
+     * @param string $text
+     * @param string $subject
+     * @return array text, and html ('' with an older kernel): the body array of sendEmail()
+     */
+    static function systemMailBody( $text, $subject )
+    {
+        $body = array( 'text' => $text, 'html' => '' );
+        if ( class_exists( 'expMailTemplateBody' ) && method_exists( 'expMailTemplateBody', 'textLayout' ) )
+        {
+            $body['html'] = expMailTemplateBody::textLayout( $text, array(
+                'title' => trim( preg_replace( '/^\[[^\]]*\]\s*/', '', (string)$subject ) ),
+                'button' => ezpI18n::tr( 'design/standard/mail', 'Open the page' ) ) );
+        }
+        return $body;
+    }
+
+    /**
      *
      * @param unknown_type $emailSender
      * @param unknown_type $emailReciever

@@ -19,6 +19,6 @@ To activate or edit your subscription, please visit this link:
                                          hash( '%name', concat( $newsletter_user.first_name, ' ', $newsletter_user.last_name ),
                                                '%subscriptionList', $subscriptionListString,
                                                '%listName', $newsletter_list.name,
-                                               '%configureLink', concat( 'http://', $hostname, concat( '/newsletter/configure/', cond( $newsletter_user, $newsletter_user.hash, '#' ) )|ezurl(no) ),
+                                               '%configureLink', concat( 'https://', $hostname, concat( '/newsletter/configure/', cond( $newsletter_user, $newsletter_user.hash, '#' ) )|ezurl(no) ),
                                                 ) )}
 {include uri="design:newsletter/mail/footer.tpl"}

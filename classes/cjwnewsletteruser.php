@@ -628,7 +628,7 @@ class CjwNewsletterUser extends eZPersistentObject
         $emailReceiverName = '';
 
         $emailSubject = $subject;
-        $emailBody['text'] = $templateResult;
+        $emailBody = CjwNewsletterMail::systemMailBody( $templateResult, $subject );
 
         $cjwMail = new CjwNewsletterMail();
         // x header set for current user
