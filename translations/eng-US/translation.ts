@@ -385,14 +385,6 @@
         <translation>You cannot update the priorities because you do not have permission to edit the current item or because a non-priority sorting method is used.</translation>
     </message>
     <message>
-        <source>Use this menu to select the type of item you want to create then click the &quot;Create here&quot; button. The item will be created in the current location.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Use this menu to select the language you want to use for the creation then click the &quot;Create here&quot; button. The item will be created in the current location.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Create here</source>
         <translation>Create here</translation>
     </message>
@@ -504,10 +496,6 @@
         <translation>(locked)</translation>
     </message>
     <message>
-        <source>Use the priority fields to control the order in which the items appear. You can use both positive and negative integers. Click the &quot;Update priorities&quot; button to apply the changes.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>You are not allowed to update the priorities because you do not have permission to edit &lt;%node_name&gt;.</source>
         <translation>You are not allowed to update the priorities because you do not have permission to edit &lt;%node_name&gt;.</translation>
     </message>
@@ -522,10 +510,6 @@
     <message>
         <source>Edit &lt;%child_name&gt;.</source>
         <translation>Edit &lt;%child_name&gt;.</translation>
-    </message>
-    <message>
-        <source>You do not have permission to edit &quot;%child_name&quot;.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Modified</source>
@@ -686,10 +670,6 @@
     <message>
         <source>Please select the newsletter you wish to subscribe to. Deselect to unsubscribe.</source>
         <translation>Please select the newsletter you wish to subscribe to. Deselect to unsubscribe.</translation>
-    </message>
-    <message>
-        <source>You can also edit the small boxes &quot;first name&quot; and &quot;last name&quot;.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Please register another email address to subscribe to the same newsletter twice.</source>
@@ -1918,10 +1898,6 @@ To edit your newsletter settings please visit the following link:
         <translation>Here you can subscribe to one of our newsletters.</translation>
     </message>
     <message>
-        <source>Please fill in the boxes &quot;first name&quot; and &quot;last name&quot; and enter your e-mail address in the corresponding field. Then, select the newsletter you are interested in and the format you prefer.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>E-mail</source>
         <translation>E-mail</translation>
     </message>
@@ -2604,12 +2580,6 @@ To edit your newsletter settings please visit the following link:
         <translation>Unsubscribe</translation>
     </message>
     <message>
-        <source>Hi %name
-
-        You unsubscribe successfully from List &quot;%listName&quot;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Unsubscribe from list.</source>
         <translation>Unsubscribe from list.</translation>
     </message>
@@ -2618,21 +2588,8 @@ To edit your newsletter settings please visit the following link:
         <translation>Unsubscription already done</translation>
     </message>
     <message>
-        <source>Hi %name
-
-        You already unsubscribed from List &quot;%listName&quot;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Unsubscribe success</source>
         <translation>Unsubscribe success</translation>
-    </message>
-    <message>
-        <source>Hi %name
-
-If you want to unsubscribe from from List &quot;%listName&quot;
-you have to confirm this page.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Hi %name
