@@ -12,7 +12,7 @@
     <name>cjw_newsletter/blacklist_item_add</name>
     <message>
         <source>Edit &lt;%mailbox.email&gt; </source>
-        <translation>Editer &lt;%mailbox.email&gt; </translation>
+        <translation>Modifier &lt;%mailbox.email&gt; </translation>
     </message>
     <message>
         <source>Add a new Blacklist item </source>
@@ -20,7 +20,7 @@
     </message>
     <message>
         <source>Email</source>
-        <translation>Email</translation>
+        <translation>E-mail</translation>
     </message>
     <message>
         <source>Note</source>
@@ -32,7 +32,7 @@
     </message>
     <message>
         <source>Discard</source>
-        <translation>Annuler</translation>
+        <translation>Abandonner</translation>
     </message>
     <message>
         <source>Blacklist add item</source>
@@ -71,7 +71,7 @@
     </message>
     <message>
         <source>Invert selection</source>
-        <translation>Inversér la sélection</translation>
+        <translation>Inverser la sélection</translation>
     </message>
     <message>
         <source>ID</source>
@@ -83,7 +83,7 @@
     </message>
     <message>
         <source>Email</source>
-        <translation>Email</translation>
+        <translation>E-mail</translation>
     </message>
     <message>
         <source>Newsletter user</source>
@@ -154,7 +154,7 @@
     <name>cjw_newsletter/cjw_newsletter_edition_preview</name>
     <message>
         <source>Do you really want to send out this newsletter to all recipients of this Newsletterlist?</source>
-        <translation>Voulez vous vraiment envoyer cette newsletter à tous les inscrits de cette liste?</translation>
+        <translation>Voulez-vous vraiment envoyer cette newsletter à tous les inscrits de cette liste ?</translation>
     </message>
 </context>
 <context>
@@ -232,11 +232,11 @@
     <name>cjw_newsletter/cjw_newsletter_edition_status</name>
     <message>
         <source>Edition State</source>
-        <translation>Etat de l&apos;édition</translation>
+        <translation>État de l&apos;édition</translation>
     </message>
     <message>
         <source>State</source>
-        <translation>Etat</translation>
+        <translation>État</translation>
     </message>
     <message>
         <source>Operation</source>
@@ -291,7 +291,7 @@
     </message>
     <message>
         <source>Newsletter editions</source>
-        <translation>Editions de newsletter</translation>
+        <translation>Éditions de newsletter</translation>
     </message>
     <message>
         <source>All</source>
@@ -493,11 +493,11 @@
     </message>
     <message>
         <source>You are not allowed to update the priorities because you do not have permission to edit &lt;%node_name&gt;.</source>
-        <translation>Vous n&apos;etes pas authorisés à mettre à jour les priorités parceque vous n&apos;avez pas les droit pour éditer &lt;%node_name&gt;.</translation>
+        <translation>Vous n&apos;êtes pas autorisé à mettre à jour les priorités parce que vous n&apos;avez pas les droits pour modifier &lt;%node_name&gt;.</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation>Editer</translation>
+        <translation>Modifier</translation>
     </message>
     <message>
         <source>The edition %child_name is already in sending process.</source>
@@ -505,7 +505,7 @@
     </message>
     <message>
         <source>Edit &lt;%child_name&gt;.</source>
-        <translation>Editer &lt;%child_name&gt;.</translation>
+        <translation>Modifier &lt;%child_name&gt;.</translation>
     </message>
     <message>
         <source>You do not have permission to edit &quot;%child_name&quot;.</source>
@@ -645,7 +645,7 @@
     </message>
     <message>
         <source>Email</source>
-        <translation>Email</translation>
+        <translation>E-mail</translation>
     </message>
     <message>
         <source>Confirm</source>
@@ -731,7 +731,7 @@
     </message>
     <message>
         <source>The current edition was already send and is in archive!</source>
-        <translation>L&apos;édition actuelle a déjà été envoyée et archivée!</translation>
+        <translation>L&apos;édition actuelle a déjà été envoyée et archivée !</translation>
     </message>
 </context>
 <context>
@@ -778,7 +778,7 @@
     </message>
     <message>
         <source>Automatically approve subscription after user registration?</source>
-        <translation>Approbation automatique après l&apos;enregistrement d&apos;un nouvel utilisateur?</translation>
+        <translation>Approbation automatique après l&apos;enregistrement d&apos;un nouvel utilisateur ?</translation>
     </message>
     <message>
         <source>Newsletter sender email</source>
@@ -798,7 +798,7 @@
     </message>
     <message>
         <source>Personalize newsletter if data are available?</source>
-        <translation>Personnaliser la newsletter si les données sont disponibles?</translation>
+        <translation>Personnaliser la newsletter si les données sont disponibles ?</translation>
     </message>
     <message>
         <source>No</source>
@@ -935,7 +935,7 @@
     </message>
     <message>
         <source>Here you find a list of all data imports!</source>
-        <translation>Ici, vous pouvez trouver une liste des toutes les donéne importées!</translation>
+        <translation>Ici, vous pouvez trouver une liste de toutes les données importées !</translation>
     </message>
     <message>
         <source>Import items [%children_count]</source>
@@ -1118,7 +1118,7 @@
     </message>
     <message>
         <source>Do you really want to set status removed by admin to all active subscriptions (%count_active_subscriptions)?</source>
-        <translation>Voulez vous vraiment assigner un statut supprimé par administration sur toutes les souscriptions active (%count_active_subscriptions)?</translation>
+        <translation>Voulez-vous vraiment assigner un statut supprimé par administration sur toutes les souscriptions active (%count_active_subscriptions) ?</translation>
     </message>
     <message>
         <source>Imports</source>
@@ -1157,11 +1157,11 @@
     </message>
     <message>
         <source>Edit newsletter</source>
-        <translation>Editer newsletter</translation>
+        <translation>Modifier la newsletter</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation>Editer</translation>
+        <translation>Modifier</translation>
     </message>
     <message>
         <source>Dashboard</source>
@@ -1239,7 +1239,7 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     <name>cjw_newsletter/mailbox_edit</name>
     <message>
         <source>Edit &lt;%mailbox.email&gt; </source>
-        <translation>Editer &lt;%mailbox.email&gt; </translation>
+        <translation>Modifier &lt;%mailbox.email&gt; </translation>
     </message>
     <message>
         <source>Add new Mailbox </source>
@@ -1247,7 +1247,7 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     </message>
     <message>
         <source>Email</source>
-        <translation>Email</translation>
+        <translation>E-mail</translation>
     </message>
     <message>
         <source>Server</source>
@@ -1283,11 +1283,11 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     </message>
     <message>
         <source>Store Changes</source>
-        <translation>Enregister les changements</translation>
+        <translation>Enregistrer les modifications</translation>
     </message>
     <message>
         <source>Discard</source>
-        <translation>Annuler</translation>
+        <translation>Abandonner</translation>
     </message>
     <message>
         <source>mailbox edit</source>
@@ -1322,7 +1322,7 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     </message>
     <message>
         <source>Connection failed</source>
-        <translation>Echec de connexion</translation>
+        <translation>Échec de connexion</translation>
     </message>
     <message>
         <source>Mailbox item parse result</source>
@@ -1414,7 +1414,7 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     </message>
     <message>
         <source>Failed</source>
-        <translation>Echec</translation>
+        <translation>Échec</translation>
     </message>
     <message>
         <source>Manage bounces</source>
@@ -1548,11 +1548,11 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     </message>
     <message>
         <source>Edit</source>
-        <translation>Editer</translation>
+        <translation>Modifier</translation>
     </message>
     <message>
         <source>Edit mailbox.</source>
-        <translation>Editer boîte de réception</translation>
+        <translation>Modifier la boîte de réception.</translation>
     </message>
     <message>
         <source>Add Mailbox</source>
@@ -1757,7 +1757,7 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     </message>
     <message>
         <source>Email Sender</source>
-        <translation>Emétteur</translation>
+        <translation>Émetteur</translation>
     </message>
     <message>
         <source>Charset</source>
@@ -1895,11 +1895,11 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     </message>
     <message>
         <source>Send out process is finished, can not abort anymore!</source>
-        <translation>Processus d&apos;envoi fini, impossible d&apos;annuler!</translation>
+        <translation>Processus d&apos;envoi fini, impossible d&apos;annuler !</translation>
     </message>
     <message>
         <source>Send out process was already aborted!</source>
-        <translation>Processus d&apos;envoi déjà stoppé!</translation>
+        <translation>Processus d&apos;envoi déjà stoppé !</translation>
     </message>
     <message>
         <source>Abort successfull</source>
@@ -2062,11 +2062,11 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     </message>
     <message>
         <source>email</source>
-        <translation>email</translation>
+        <translation>e-mail</translation>
     </message>
     <message>
         <source>Please input a valid e-mail address!</source>
-        <translation>Veuillez saisir une adresse email valide!</translation>
+        <translation>Veuillez saisir une adresse email valide !</translation>
     </message>
 </context>
 <context>
@@ -2081,11 +2081,11 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     </message>
     <message>
         <source>E-mail has been sent!</source>
-        <translation>Email envoyé!</translation>
+        <translation>Email envoyé !</translation>
     </message>
     <message>
         <source>If you are a valid newsletter user, an e-mail has been sent to you with all information required!</source>
-        <translation>Si vous etes un utilisateur valide de newsletter, un email, contenant toutes les informations requises, vous a été envoyé!</translation>
+        <translation>Si vous êtes un utilisateur valide de newsletter, un e-mail, contenant toutes les informations requises, vous a été envoyé !</translation>
     </message>
 </context>
 <context>
@@ -2096,7 +2096,7 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     </message>
     <message>
         <source>You are registered for our newsletter.</source>
-        <translation>Vous etes enregistré a notre newsletter.</translation>
+        <translation>Vous êtes inscrit à notre newsletter.</translation>
     </message>
     <message>
         <source>An email was sent to your address %email.</source>
@@ -2142,7 +2142,7 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     </message>
     <message>
         <source>Email</source>
-        <translation>Email</translation>
+        <translation>E-mail</translation>
     </message>
     <message>
         <source>Newsletter</source>
@@ -2254,11 +2254,11 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     </message>
     <message>
         <source>Invert selection</source>
-        <translation>Inversé la sélection</translation>
+        <translation>Inverser la sélection</translation>
     </message>
     <message>
         <source>Email</source>
-        <translation>Email</translation>
+        <translation>E-mail</translation>
     </message>
     <message>
         <source>First name</source>
@@ -2552,7 +2552,7 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     </message>
     <message>
         <source>Imported items</source>
-        <translation>Eléments importés</translation>
+        <translation>Éléments importés</translation>
     </message>
     <message>
         <source>CSV import</source>
@@ -2635,7 +2635,7 @@ Pour éditer et configurer vos newsletter, veuillez visiter le lien suivant :
     </message>
     <message>
         <source>Subscription successfully approved!</source>
-        <translation>Souscription approuvée avec succès!</translation>
+        <translation>Souscription approuvée avec succès !</translation>
     </message>
     <message>
         <source>Subscription successfully removed!</source>
@@ -2840,7 +2840,7 @@ you have to confirm this page.</source>
     </message>
     <message>
         <source>Email</source>
-        <translation>Email</translation>
+        <translation>E-mail</translation>
     </message>
     <message>
         <source>search</source>
@@ -2860,11 +2860,11 @@ you have to confirm this page.</source>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation>Inverséer la sélection</translation>
+        <translation>Inverser la sélection</translation>
     </message>
     <message>
         <source>Lists</source>
-        <translation></translation>
+        <translation>Listes</translation>
     </message>
     <message>
         <source>Confirmed</source>
@@ -3014,7 +3014,7 @@ you have to confirm this page.</source>
     </message>
     <message>
         <source>Email</source>
-        <translation>Email</translation>
+        <translation>E-mail</translation>
     </message>
     <message>
         <source>Salutation</source>
@@ -3126,7 +3126,7 @@ you have to confirm this page.</source>
     </message>
     <message>
         <source>Edit by admin</source>
-        <translation>Editer par admin</translation>
+        <translation>Modifier par l&apos;administrateur</translation>
     </message>
     <message>
         <source>Delete newsletter user and all subscriptions from database</source>
@@ -3138,7 +3138,7 @@ you have to confirm this page.</source>
     </message>
     <message>
         <source>Edit</source>
-        <translation>Editer</translation>
+        <translation>Modifier</translation>
     </message>
     <message>
         <source>Remove</source>
@@ -3428,7 +3428,7 @@ you have to confirm this page.</source>
     </message>
     <message>
         <source>Edit &lt;%child_name&gt;.</source>
-        <translation>Editer &lt;%child_name&gt;.</translation>
+        <translation>Modifier &lt;%child_name&gt;.</translation>
     </message>
     <message>
         <source>Copy</source>
@@ -3464,7 +3464,7 @@ you have to confirm this page.</source>
     </message>
     <message>
         <source>Locations (%count)</source>
-        <translation>Emplacements</translation>
+        <translation>Emplacements (%count)</translation>
     </message>
     <message>
         <source>Show object relation overview.</source>
@@ -3499,34 +3499,34 @@ you have to confirm this page.</source>
     <name>design/admin/node/view/line</name>
     <message>
         <source>Click on the icon to get a context sensitive menu.</source>
-        <translation></translation>
+        <translation>Cliquez sur l'icône pour afficher le menu contextuel.</translation>
     </message>
     <message>
         <source>Node ID: %node_id Visibility: %node_visibility</source>
-        <translation></translation>
+        <translation>ID du nœud : %node_id Visibilité : %node_visibility</translation>
     </message>
 </context>
 <context>
     <name>design/admin/pagelayout</name>
     <message>
         <source>Search</source>
-        <translation></translation>
+        <translation>Rechercher</translation>
     </message>
     <message>
         <source>Search all content.</source>
-        <translation></translation>
+        <translation>Rechercher dans tout le contenu.</translation>
     </message>
     <message>
         <source>All content</source>
-        <translation></translation>
+        <translation>Tout le contenu</translation>
     </message>
     <message>
         <source>Search only from the current location.</source>
-        <translation></translation>
+        <translation>Rechercher uniquement à partir de l'emplacement actuel.</translation>
     </message>
     <message>
         <source>Current location</source>
-        <translation></translation>
+        <translation>Emplacement actuel</translation>
     </message>
     <message>
         <source>The same location</source>
@@ -3534,7 +3534,7 @@ you have to confirm this page.</source>
     </message>
     <message>
         <source>Advanced</source>
-        <translation></translation>
+        <translation>Avancée</translation>
     </message>
     <message>
         <source>Advanced search.</source>
@@ -3542,11 +3542,11 @@ you have to confirm this page.</source>
     </message>
     <message>
         <source>Logout from the system.</source>
-        <translation></translation>
+        <translation>Se déconnecter du système.</translation>
     </message>
     <message>
         <source>Logout</source>
-        <translation>Déconnection</translation>
+        <translation>Déconnexion</translation>
     </message>
 </context>
 <context>
@@ -3564,7 +3564,7 @@ you have to confirm this page.</source>
     <name>design/admin/rss/edit_import</name>
     <message>
         <source>Edit</source>
-        <translation></translation>
+        <translation>Modifier</translation>
     </message>
 </context>
 <context>

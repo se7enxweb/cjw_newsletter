@@ -458,7 +458,7 @@
     </message>
     <message>
         <source>Descending</source>
-        <translation>Nedstigande</translation>
+        <translation>Fallande</translation>
     </message>
     <message>
         <source>Ascending</source>
@@ -3502,7 +3502,7 @@ måste du bekräfta den här sidan.</translation>
     </message>
     <message>
         <source>Descending</source>
-        <translation>Nedstigande</translation>
+        <translation>Fallande</translation>
     </message>
     <message>
         <source>Ascending</source>
@@ -4910,7 +4910,7 @@ Om du inte skickade denna begäran kan du bortse från detta meddelande: ingenti
     </message>
     <message>
         <source>Reset</source>
-        <translation>Återställd</translation>
+        <translation>Återställ</translation>
     </message>
     <message>
         <source>Select all</source>

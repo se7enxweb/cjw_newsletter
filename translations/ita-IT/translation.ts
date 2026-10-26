@@ -346,7 +346,7 @@
     </message>
     <message>
         <source>Thumbnail</source>
-        <translation>Icona</translation>
+        <translation>Miniatura</translation>
     </message>
     <message>
         <source>Display sub items using a detailed list.</source>
@@ -3590,7 +3590,7 @@ devi confermare questa pagina.</translation>
     </message>
     <message>
         <source>Thumbnail</source>
-        <translation>Icona</translation>
+        <translation>Miniatura</translation>
     </message>
     <message>
         <source>Display sub items using a detailed list.</source>
