@@ -1,5 +1,23 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.17
+======
+
+- Fixed: Newsletter mails refuse a line break, quote or backslash in the file names, content ids, content types and
+  disposition parameters of their parts, addresses with a quoted local part are refused, bounce parsing reports a
+  temporary directory it cannot write instead of failing silently, and an oversized bounce message is reported once,
+  from ekked's pull request #5.
+- Fixed: Newsletter mails carry no line break from addresses, names, subjects or headers into the mail or the SMTP
+  dialogue, SMTP escapes lines starting with a dot, and bounce parsing keeps its files private and skips oversized
+  messages, from ekked's pull request #5.
+- Fixed: Translations that contradicted their language guide: wrong meanings, glossary breaches, forms of address,
+  typos and English left in the text, from ekked's pull request #4.
+- Fixed: The newsletter log no longer ends the request when its directory is not writable.
+- Fixed: French catalogue fills its empty administration entries and keeps %count.
+- Fixed: Each message appears once per context in the English catalogue.
+- Fixed: ezinfo.php states the release version again (SOFTWARE_VERSION had stayed at 4.2.15 in 4.2.16, which the about
+  page, the mail header and the file headers show).
+
 4.2.15
 ======
 

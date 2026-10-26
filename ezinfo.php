@@ -16,7 +16,7 @@
 class cjw_newsletterInfo
 {
     // set manually - is used in email header, and in file header @version
-    const SOFTWARE_VERSION = '4.2.15';
+    const SOFTWARE_VERSION = '4.2.17';
 
     static function info()
     {

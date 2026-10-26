@@ -1,10 +1,10 @@
 name: cjw_newsletter
-version: 4.2.16
+version: 4.2.17
 files_count: 706
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
 aa9ea80af84e6cba65e0764a80b56e16  .gitignore
-f6f3eb70e179afbd4cd1b5da2e98035d  CHANGELOG
+7636e77e53eea3d5c4f10d63e52660cf  CHANGELOG
 d6fab46a528e9205716d5d7a12b628c6  FAQ
 153c75b3b81119edad890afba7ec5071  INSTALL
 0636e73ff0215e8d672dc4c32c317bb3  LICENSE
@@ -594,8 +594,8 @@ cf1036b2d3360f8e36d7462c0c58eaa8  doc/uml/cjw_newsletter_dbschema_v1.0.0.png
 f90eec2d1f019a7db9a9dfb9d9632d42  doc/upgrade-4.2.md
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
 782edd7ce72084d23e44e94ae248d722  extendedattributefilter/cjwnewsletterlistfilter.php
-db44429a966b73a7617167b0a9b8224e  extension.xml
-a430bbd2b12cec5690686cd6aca50584  ezinfo.php
+256480cf5eeab6760986ea0457a7236f  extension.xml
+57c72e75cbfe42d0cc34f7a85a53c337  ezinfo.php
 90bbccd4a9f3f11f423a5371db08cc5b  modules/newsletter/ab_test.php
 58407deb615ce3169e78a3ebb276bfc8  modules/newsletter/approval.php
 497b5da0906ba7711bb1c1bf1e7992de  modules/newsletter/archive.php
