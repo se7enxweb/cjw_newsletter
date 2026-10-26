@@ -235,7 +235,7 @@ class CjwNewsletterCsvMapper
             {
                 foreach ( $row as $index => $cell )
                 {
-                    if ( strpos( $cell, '@' ) !== false && ezcMailTools::validateEmailAddress( $cell ) && isset( $mapping[$index] ) && $mapping[$index] === self::IGNORE )
+                    if ( strpos( $cell, '@' ) !== false && CjwNewsletterTransport::isValidAddress( $cell ) && isset( $mapping[$index] ) && $mapping[$index] === self::IGNORE )
                     {
                         $mapping[$index] = 'email';
                         break 2;
