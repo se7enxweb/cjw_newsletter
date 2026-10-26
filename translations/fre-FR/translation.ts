@@ -2864,7 +2864,7 @@ you have to confirm this page.</source>
     </message>
     <message>
         <source>Lists</source>
-        <translation></translation>
+        <translation>Listes</translation>
     </message>
     <message>
         <source>Confirmed</source>
@@ -3464,7 +3464,7 @@ you have to confirm this page.</source>
     </message>
     <message>
         <source>Locations (%count)</source>
-        <translation>Emplacements</translation>
+        <translation>Emplacements (%count)</translation>
     </message>
     <message>
         <source>Show object relation overview.</source>
@@ -3499,34 +3499,34 @@ you have to confirm this page.</source>
     <name>design/admin/node/view/line</name>
     <message>
         <source>Click on the icon to get a context sensitive menu.</source>
-        <translation></translation>
+        <translation>Cliquez sur l'icône pour afficher le menu contextuel.</translation>
     </message>
     <message>
         <source>Node ID: %node_id Visibility: %node_visibility</source>
-        <translation></translation>
+        <translation>ID du nœud : %node_id Visibilité : %node_visibility</translation>
     </message>
 </context>
 <context>
     <name>design/admin/pagelayout</name>
     <message>
         <source>Search</source>
-        <translation></translation>
+        <translation>Rechercher</translation>
     </message>
     <message>
         <source>Search all content.</source>
-        <translation></translation>
+        <translation>Rechercher dans tout le contenu.</translation>
     </message>
     <message>
         <source>All content</source>
-        <translation></translation>
+        <translation>Tout le contenu</translation>
     </message>
     <message>
         <source>Search only from the current location.</source>
-        <translation></translation>
+        <translation>Rechercher uniquement à partir de l'emplacement actuel.</translation>
     </message>
     <message>
         <source>Current location</source>
-        <translation></translation>
+        <translation>Emplacement actuel</translation>
     </message>
     <message>
         <source>The same location</source>
@@ -3534,7 +3534,7 @@ you have to confirm this page.</source>
     </message>
     <message>
         <source>Advanced</source>
-        <translation></translation>
+        <translation>Avancée</translation>
     </message>
     <message>
         <source>Advanced search.</source>
@@ -3542,7 +3542,7 @@ you have to confirm this page.</source>
     </message>
     <message>
         <source>Logout from the system.</source>
-        <translation></translation>
+        <translation>Se déconnecter du système.</translation>
     </message>
     <message>
         <source>Logout</source>
@@ -3564,7 +3564,7 @@ you have to confirm this page.</source>
     <name>design/admin/rss/edit_import</name>
     <message>
         <source>Edit</source>
-        <translation></translation>
+        <translation>Modifier</translation>
     </message>
 </context>
 <context>
