@@ -44,7 +44,7 @@ dd147a635c0e981fb7a28d4c7fb3da10  classes/cjwnewsletterjob.php
 11ac82bfaa1c6070cd2d5ac702716313  classes/cjwnewsletterjoboutput.php
 416a8d56004ec475fc33ba7c23178f75  classes/cjwnewsletterlist.php
 0bcc2bd5cd508119760dc7851345f0da  classes/cjwnewsletterlistvirtual.php
-528e984d3cd6e7b3553fbf9a6fd75a66  classes/cjwnewsletterlog.php
+f39f06518d66cfce8a3f372aa1342615  classes/cjwnewsletterlog.php
 c128656f936373422cb3e4ea50b9d82b  classes/cjwnewsletterlogwriter.php
 60dcc370c6c89ba1416d17148257e759  classes/cjwnewslettermail.php
 629aae310f5bd70e0e001d1bbb183acb  classes/cjwnewslettermailbox.php
