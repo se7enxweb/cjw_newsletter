@@ -774,7 +774,7 @@
     </message>
     <message>
         <source>You have to set a valid semder email adress &gt;&gt; $reciever</source>
-        <translation type="unfinished"></translation>
+        <translation>You have to set a valid semder email adress &gt;&gt; $reciever</translation>
     </message>
     <message>
         <source>List options</source>
@@ -2447,11 +2447,11 @@ To edit your newsletter settings please visit the following link:
     </message>
     <message>
         <source>Unsupported CSV delimiter. Please use one of the following: &quot;,&quot;, &quot;;&quot;, &quot;|&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Unsupported CSV delimiter. Please use one of the following: &quot;,&quot;, &quot;;&quot;, &quot;|&quot;</translation>
     </message>
     <message>
         <source>(supported CSV delimiters: &quot;,&quot;, &quot;;&quot;, &quot;|&quot;)</source>
-        <translation type="unfinished"></translation>
+        <translation>(supported CSV delimiters: &quot;,&quot;, &quot;;&quot;, &quot;|&quot;)</translation>
     </message>
     <message>
         <source>Unsupported CSV delimiter. Please use one of the following:</source>
@@ -3055,336 +3055,336 @@ you have to confirm this page.</translation>
     <name>design/admin/content/edit</name>
     <message>
         <source>View and manage (copy, delete, etc.) the versions of this object.</source>
-        <translation type="unfinished"></translation>
+        <translation>View and manage (copy, delete, etc.) the versions of this object.</translation>
     </message>
     <message>
         <source>Manage versions</source>
-        <translation type="unfinished"></translation>
+        <translation>Manage versions</translation>
     </message>
 </context>
 <context>
     <name>design/admin/node/view/full</name>
     <message>
         <source>Last modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Last modified</translation>
     </message>
     <message>
         <source>Node ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Node ID</translation>
     </message>
     <message>
         <source>Object ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Object ID</translation>
     </message>
     <message>
         <source>Another language</source>
-        <translation type="unfinished"></translation>
+        <translation>Another language</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit</translation>
     </message>
     <message>
         <source>Edit the contents of this item.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit the contents of this item.</translation>
     </message>
     <message>
         <source>Not available</source>
-        <translation type="unfinished"></translation>
+        <translation>Not available</translation>
     </message>
     <message>
         <source>You do not have permission to edit this item.</source>
-        <translation type="unfinished"></translation>
+        <translation>You do not have permission to edit this item.</translation>
     </message>
     <message>
         <source>Move</source>
-        <translation type="unfinished"></translation>
+        <translation>Move</translation>
     </message>
     <message>
         <source>Move this item to another location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Move this item to another location.</translation>
     </message>
     <message>
         <source>You do not have permission to move this item to another location.</source>
-        <translation type="unfinished"></translation>
+        <translation>You do not have permission to move this item to another location.</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove</translation>
     </message>
     <message>
         <source>Remove this item.</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove this item.</translation>
     </message>
     <message>
         <source>You do not have permission to remove this item.</source>
-        <translation type="unfinished"></translation>
+        <translation>You do not have permission to remove this item.</translation>
     </message>
     <message>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Preview</translation>
     </message>
     <message>
         <source>Use these checkboxes to select items for removal. Click the &quot;Remove selected&quot; button to  remove the selected items.</source>
-        <translation type="unfinished"></translation>
+        <translation>Use these checkboxes to select items for removal. Click the &quot;Remove selected&quot; button to  remove the selected items.</translation>
     </message>
     <message>
         <source>Show 10 items per page.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show 10 items per page.</translation>
     </message>
     <message>
         <source>Show 50 items per page.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show 50 items per page.</translation>
     </message>
     <message>
         <source>Show 25 items per page.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show 25 items per page.</translation>
     </message>
     <message>
         <source>New translation</source>
-        <translation type="unfinished"></translation>
+        <translation>New translation</translation>
     </message>
     <message>
         <source>Up one level.</source>
-        <translation type="unfinished"></translation>
+        <translation>Up one level.</translation>
     </message>
     <message>
         <source>Remove selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove selected</translation>
     </message>
     <message>
         <source>Remove the selected items from the list above.</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove the selected items from the list above.</translation>
     </message>
     <message>
         <source>You do not have permission to remove any of the items from the list above.</source>
-        <translation type="unfinished"></translation>
+        <translation>You do not have permission to remove any of the items from the list above.</translation>
     </message>
     <message>
         <source>Move selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Move selected</translation>
     </message>
     <message>
         <source>Move the selected items from the list above.</source>
-        <translation type="unfinished"></translation>
+        <translation>Move the selected items from the list above.</translation>
     </message>
     <message>
         <source>You do not have permission to move any of the items from the list above.</source>
-        <translation type="unfinished"></translation>
+        <translation>You do not have permission to move any of the items from the list above.</translation>
     </message>
     <message>
         <source>Update priorities</source>
-        <translation type="unfinished"></translation>
+        <translation>Update priorities</translation>
     </message>
     <message>
         <source>Apply changes to the priorities of the items in the list above.</source>
-        <translation type="unfinished"></translation>
+        <translation>Apply changes to the priorities of the items in the list above.</translation>
     </message>
     <message>
         <source>You cannot update the priorities because you do not have permission to edit the current item or because a non-priority sorting method is used.</source>
-        <translation type="unfinished"></translation>
+        <translation>You cannot update the priorities because you do not have permission to edit the current item or because a non-priority sorting method is used.</translation>
     </message>
     <message>
         <source>Create</source>
-        <translation type="unfinished"></translation>
+        <translation>Create</translation>
     </message>
     <message>
         <source>Use this menu to select the type of item you want to create then click the &quot;Create here&quot; button. The item will be created in the current location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Use this menu to select the type of item you want to create then click the &quot;Create here&quot; button. The item will be created in the current location.</translation>
     </message>
     <message>
         <source>in</source>
-        <translation type="unfinished"></translation>
+        <translation>in</translation>
     </message>
     <message>
         <source>Use this menu to select the language you want to use for the creation then click the &quot;Create here&quot; button. The item will be created in the current location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Use this menu to select the language you want to use for the creation then click the &quot;Create here&quot; button. The item will be created in the current location.</translation>
     </message>
     <message>
         <source>Here</source>
-        <translation type="unfinished"></translation>
+        <translation>Here</translation>
     </message>
     <message>
         <source>Create a new item in the current location. Use the menu on the left to select the type of  item.</source>
-        <translation type="unfinished"></translation>
+        <translation>Create a new item in the current location. Use the menu on the left to select the type of  item.</translation>
     </message>
     <message>
         <source>You do not have permission to create new items in the current location.</source>
-        <translation type="unfinished"></translation>
+        <translation>You do not have permission to create new items in the current location.</translation>
     </message>
     <message>
         <source>Published order</source>
-        <translation type="unfinished"></translation>
+        <translation>Published order</translation>
     </message>
     <message>
         <source>Class identifier</source>
-        <translation type="unfinished"></translation>
+        <translation>Class identifier</translation>
     </message>
     <message>
         <source>Class name</source>
-        <translation type="unfinished"></translation>
+        <translation>Class name</translation>
     </message>
     <message>
         <source>Depth</source>
-        <translation type="unfinished"></translation>
+        <translation>Depth</translation>
     </message>
     <message>
         <source>Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Modified</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Name</translation>
     </message>
     <message>
         <source>Priority</source>
-        <translation type="unfinished"></translation>
+        <translation>Priority</translation>
     </message>
     <message>
         <source>Published</source>
-        <translation type="unfinished"></translation>
+        <translation>Published</translation>
     </message>
     <message>
         <source>Section</source>
-        <translation type="unfinished"></translation>
+        <translation>Section</translation>
     </message>
     <message>
         <source>You cannot set the sorting method for the current location because you do not have permission to edit the current item.</source>
-        <translation type="unfinished"></translation>
+        <translation>You cannot set the sorting method for the current location because you do not have permission to edit the current item.</translation>
     </message>
     <message>
         <source>Use these controls to set the sorting method for the sub items of the current location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Use these controls to set the sorting method for the sub items of the current location.</translation>
     </message>
     <message>
         <source>Descending</source>
-        <translation type="unfinished"></translation>
+        <translation>Descending</translation>
     </message>
     <message>
         <source>Ascending</source>
-        <translation type="unfinished"></translation>
+        <translation>Ascending</translation>
     </message>
     <message>
         <source>Set</source>
-        <translation type="unfinished"></translation>
+        <translation>Set</translation>
     </message>
     <message>
         <source>Edit &lt;%child_name&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit &lt;%child_name&gt;.</translation>
     </message>
     <message>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Copy</translation>
     </message>
     <message>
         <source>Create a copy of &lt;%child_name&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Create a copy of &lt;%child_name&gt;.</translation>
     </message>
     <message>
         <source>Show details.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show details.</translation>
     </message>
     <message>
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Details</translation>
     </message>
     <message>
         <source>Show available translations.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show available translations.</translation>
     </message>
     <message>
         <source>Translations (%count)</source>
-        <translation type="unfinished"></translation>
+        <translation>Translations (%count)</translation>
     </message>
     <message>
         <source>Show location overview.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show location overview.</translation>
     </message>
     <message>
         <source>Locations (%count)</source>
-        <translation type="unfinished"></translation>
+        <translation>Locations (%count)</translation>
     </message>
     <message>
         <source>Show object relation overview.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show object relation overview.</translation>
     </message>
     <message>
         <source>Relations (%count)</source>
-        <translation type="unfinished"></translation>
+        <translation>Relations (%count)</translation>
     </message>
     <message>
         <source>Tab is disabled, enable with toggler to the left of these tabs.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab is disabled, enable with toggler to the left of these tabs.</translation>
     </message>
     <message>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>View</translation>
     </message>
     <message>
         <source>Show simplified view of content.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show simplified view of content.</translation>
     </message>
     <message>
         <source>Ordering</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordering</translation>
     </message>
     <message>
         <source>Show published ordering overview.</source>
-        <translation type="unfinished"></translation>
+        <translation>Show published ordering overview.</translation>
     </message>
 </context>
 <context>
     <name>design/admin/node/view/line</name>
     <message>
         <source>Click on the icon to get a context sensitive menu.</source>
-        <translation type="unfinished"></translation>
+        <translation>Click on the icon to get a context sensitive menu.</translation>
     </message>
     <message>
         <source>Node ID: %node_id Visibility: %node_visibility</source>
-        <translation type="unfinished"></translation>
+        <translation>Node ID: %node_id Visibility: %node_visibility</translation>
     </message>
 </context>
 <context>
     <name>design/admin/pagelayout</name>
     <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Search</translation>
     </message>
     <message>
         <source>Search all content.</source>
-        <translation type="unfinished"></translation>
+        <translation>Search all content.</translation>
     </message>
     <message>
         <source>All content</source>
-        <translation type="unfinished"></translation>
+        <translation>All content</translation>
     </message>
     <message>
         <source>Search only from the current location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Search only from the current location.</translation>
     </message>
     <message>
         <source>Current location</source>
-        <translation type="unfinished"></translation>
+        <translation>Current location</translation>
     </message>
     <message>
         <source>The same location</source>
-        <translation type="unfinished"></translation>
+        <translation>The same location</translation>
     </message>
     <message>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Advanced</translation>
     </message>
     <message>
         <source>Advanced search.</source>
-        <translation type="unfinished"></translation>
+        <translation>Advanced search.</translation>
     </message>
     <message>
         <source>Logout from the system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Logout from the system.</translation>
     </message>
     <message>
         <source>Logout</source>
-        <translation type="unfinished"></translation>
+        <translation>Logout</translation>
     </message>
     <message>
         <source>Newsletter</source>
@@ -3399,18 +3399,18 @@ you have to confirm this page.</translation>
     <name>design/admin/parts/my/menu</name>
     <message>
         <source>Enable &amp;quot;Tabs&amp;quot; by default while browsing content.</source>
-        <translation type="unfinished"></translation>
+        <translation>Enable &amp;quot;Tabs&amp;quot; by default while browsing content.</translation>
     </message>
     <message>
         <source>Disable &amp;quot;Tabs&amp;quot; by default while browsing content.</source>
-        <translation type="unfinished"></translation>
+        <translation>Disable &amp;quot;Tabs&amp;quot; by default while browsing content.</translation>
     </message>
 </context>
 <context>
     <name>design/admin/rss/edit_import</name>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit</translation>
     </message>
 </context>
 <context>
@@ -3424,7 +3424,7 @@ you have to confirm this page.</translation>
     <name>kernel/navigationpart</name>
     <message>
         <source>CJW Newsletter</source>
-        <translation type="unfinished"></translation>
+        <translation>CJW Newsletter</translation>
     </message>
 </context>
 <context>

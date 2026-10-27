@@ -167,11 +167,11 @@
     </message>
     <message>
         <source>Remove selected</source>
-        <translation type="unfinished">Ausgewählte löschen</translation>
+        <translation>Ausgewählte entfernen</translation>
     </message>
     <message>
         <source>Remove the selected items from the list above.</source>
-        <translation type="unfinished">Die ausgewählten Elemente von obiger Liste entfernen.</translation>
+        <translation>Die ausgewählten Elemente von obiger Liste entfernen.</translation>
     </message>
     <message>
         <source>Blacklisted email addresses</source>
@@ -717,7 +717,7 @@
     </message>
     <message>
         <source>No newsletters available.</source>
-        <translation type="unfinished">Zur Zeit ist kein Newsletter zur Anmeldung verfügbar.</translation>
+        <translation>Zur Zeit ist kein Newsletter zur Anmeldung verfügbar.</translation>
     </message>
 </context>
 <context>
@@ -2265,7 +2265,7 @@ Zur Bearbeitung der Newslettereinstellungen bitte auf folgenden Link klicken:
     </message>
     <message>
         <source>No newsletters available.</source>
-        <translation type="unfinished">Zur Zeit ist kein Newsletter zur Anmeldung verfügbar.</translation>
+        <translation>Zur Zeit ist kein Newsletter zur Anmeldung verfügbar.</translation>
     </message>
 </context>
 <context>
@@ -2575,7 +2575,7 @@ Zur Bearbeitung der Newslettereinstellungen bitte auf folgenden Link klicken:
     </message>
     <message>
         <source>ID</source>
-        <translation type="unfinished">ID</translation>
+        <translation>ID</translation>
     </message>
     <message>
         <source>eZ ID</source>
@@ -2655,7 +2655,7 @@ Zur Bearbeitung der Newslettereinstellungen bitte auf folgenden Link klicken:
     </message>
     <message>
         <source>Approve subscription</source>
-        <translation type="unfinished">Anmeldung annehmen</translation>
+        <translation>Anmeldung annehmen</translation>
     </message>
     <message>
         <source>This View is only available for &apos;Newsletter List&apos; objects</source>
@@ -2833,11 +2833,11 @@ Zur Bearbeitung der Newslettereinstellungen bitte auf folgenden Link klicken:
     </message>
     <message>
         <source>Unsupported CSV delimiter. Please use one of the following: &quot;,&quot;, &quot;;&quot;, &quot;|&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Nicht unterstütztes CSV-Trennzeichen. Bitte verwenden Sie eines der folgenden: &quot;,&quot;, &quot;;&quot;, &quot;|&quot;</translation>
     </message>
     <message>
         <source>(supported CSV delimiters: &quot;,&quot;, &quot;;&quot;, &quot;|&quot;)</source>
-        <translation type="unfinished"></translation>
+        <translation>(unterstützte CSV-Trennzeichen: &quot;,&quot;, &quot;;&quot;, &quot;|&quot;)</translation>
     </message>
     <message>
         <source>Unsupported CSV delimiter. Please use one of the following:</source>
@@ -3145,7 +3145,7 @@ müssen Sie diese Seite bestätigen.</translation>
     </message>
     <message>
         <source>Modified</source>
-        <translation type="unfinished">Geändert</translation>
+        <translation>Geändert</translation>
     </message>
 </context>
 <context>
@@ -3296,7 +3296,7 @@ müssen Sie diese Seite bestätigen.</translation>
     </message>
     <message>
         <source>Details</source>
-        <translation type="unfinished">Details</translation>
+        <translation>Details</translation>
     </message>
     <message>
         <source>Subscription details</source>
@@ -3304,7 +3304,7 @@ müssen Sie diese Seite bestätigen.</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation type="unfinished">Bearbeiten</translation>
+        <translation>Bearbeiten</translation>
     </message>
 </context>
 <context>
