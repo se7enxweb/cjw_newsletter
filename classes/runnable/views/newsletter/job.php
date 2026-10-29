@@ -3,7 +3,7 @@
  * The state of a background run as JSON: status (starting, running, done, failed), the result and the last log lines.
  * The start page polls it.
  *
- * @copyright Copyright (C) 1998 - 2026 7x and the Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
  */

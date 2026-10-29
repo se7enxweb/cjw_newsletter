@@ -6,7 +6,7 @@
  * length and parts, a test SMS to a typed number, and the SMS sends of the edition. "Send by SMS" makes a send with
  * channel sms; the next queue run makes one SMS per subscriber who allows it and sends them within the throttle.
  *
- * @copyright Copyright (C) 1998 - 2026 7x and the Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
  */

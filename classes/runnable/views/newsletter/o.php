@@ -5,7 +5,7 @@
  * Public, no login, no session. It always answers the 1x1 GIF with no-store caching, also for a bad or missing
  * signature (a mail client must never show a broken image); only a valid signature is counted (CjwNewsletterTracking).
  *
- * @copyright Copyright (C) 1998 - 2026 7x and the Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
  */

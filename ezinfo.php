@@ -2,7 +2,7 @@
 /**
  * File containing cjw_newsletterInfo class
  *
- * @copyright Copyright (C) 1998 - 2026 7x and the Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @copyright Copyright (C) 2007-2012 CJW Network - Coolscreen.de, JAC Systeme GmbH, Webmanufaktur. All rights reserved.
  * @license http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
@@ -22,7 +22,7 @@ class cjw_newsletterInfo
     {
         return array( 'Name'             => 'CJW Newsletter - Multi Channel Marketing',
                       'Version'          => self::SOFTWARE_VERSION,
-                      'Copyright'        => array( 'Copyright (C) 1998 - 2026 7x and the Exponential Foundation',
+                      'Copyright'        => array( 'Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.',
                                                    'Copyright (C) 2007 - 2015 <a href="http://www.cjw-network.com">CJW Network</a> [ <a href="http://www.coolscreen.de">coolscreen.de - enterprise internet</a> &amp; <a href="http://www.jac-systeme.de">JAC Systeme</a> &amp; <a href="http://www.webmanufaktur.ch">Webmanufaktur</a> ]' ),
                       'License'          => 'GNU General Public License v2.0 (or any later version)',
                       'Info_url'         => 'https://github.com/se7enxweb/cjw_newsletter',

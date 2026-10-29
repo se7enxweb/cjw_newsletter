@@ -17,7 +17,7 @@
  *  MS-07 - secureMail() takes line breaks out of the headers of a body part
  *  MS-08 - the bounce parser parses nothing when its temporary directory is not writable
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package tests
  */

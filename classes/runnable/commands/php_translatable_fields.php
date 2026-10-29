@@ -3,7 +3,7 @@
  * ext:cjw_newsletter:translatable-fields: makes the text fields of the newsletter classes translatable (4.2.0
  * upgrade step, idempotent). Options: --dry-run (only shows what would change).
  *
- * @copyright Copyright (C) 1998 - 2026 7x and the Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
  */

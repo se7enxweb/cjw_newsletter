@@ -3,7 +3,7 @@
  * The code of extension/cjw_newsletter/cronjobs/cjw_newsletter_mailbox.php, as a class (#207). The file extension/cjw_newsletter/cronjobs/cjw_newsletter_mailbox.php is one call to it.
  * Guide: doc/bc/6.0/cli_cronjob_view_abstractions.md
  * @description Collect the mails of the active mail accounts and parse them (bounces)
- * @copyright Copyright (C) 1998 - 2026 7x and the Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
  */

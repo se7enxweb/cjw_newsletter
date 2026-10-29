@@ -8,7 +8,7 @@
  * signature, a key of another send or an unknown link answer 404. A link without key and signature (the web archive
  * of the edition shows the links before the recipient's part is filled in) goes to the stored URL and counts nothing.
  *
- * @copyright Copyright (C) 1998 - 2026 7x and the Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
  */

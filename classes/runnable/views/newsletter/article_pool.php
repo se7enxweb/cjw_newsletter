@@ -7,7 +7,7 @@
  * The filters are view parameters, (class)/<identifier>/(section)/<id>/(state)/<id>/(tag)/<id>/(from)/<Y-m-d>/
  * (to)/<Y-m-d>/(offset)/<n>, each one checked and cast before it is used.
  *
- * @copyright Copyright (C) 1998 - 2026 7x and the Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
  */

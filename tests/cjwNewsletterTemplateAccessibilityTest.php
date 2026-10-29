@@ -10,7 +10,7 @@
  *  NA-03 - No style="" attribute and no <style> block in the admin2 templates
  *  NA-04 - No inline <script> with code, no on...= handler and no javascript: URL in any template
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package tests
  */

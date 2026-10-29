@@ -5,7 +5,7 @@
  * import csv data to a subscription list
  * if an nl user with email of csv already exists => override existing data with csv data if it is not empty
  *
- * @copyright Copyright (C) 1998 - 2026 7x and the Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
  */

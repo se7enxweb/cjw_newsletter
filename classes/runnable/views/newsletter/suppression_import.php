@@ -3,7 +3,7 @@
  * newsletter/suppression_import: a CSV file of addresses into the kernel suppression list, checked first (dry run)
  * (cjw_newsletter 4.2.0, area deliverability). The uploaded file is read and forgotten; it is never stored.
  *
- * @copyright Copyright (C) 1998 - 2026 7x and the Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
  */
