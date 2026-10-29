@@ -1,5 +1,12 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.19
+======
+
+- Updated: The admin stylesheets (newsletter_ui.css, newsletter_editorial.css, newsletter_importexport.css and
+  newsletter_statistics.css) use the shared admin tokens for weights, durations, radii, table headers, muted text and
+  the state colours, with the current light values as fallbacks; the local --nl-* custom properties are gone.
+
 4.2.18
 ======
 
