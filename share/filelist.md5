@@ -1,10 +1,10 @@
 name: cjw_newsletter
-version: 4.2.20
+version: 4.2.21
 files_count: 820
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
 aa9ea80af84e6cba65e0764a80b56e16  .gitignore
-75e681d07f9c25a16961dfa33e5546a4  CHANGELOG
+8c8045631d9e6ecb1503ccd0750ceb0c  CHANGELOG
 d6fab46a528e9205716d5d7a12b628c6  FAQ
 153c75b3b81119edad890afba7ec5071  INSTALL
 0636e73ff0215e8d672dc4c32c317bb3  LICENSE
@@ -515,7 +515,7 @@ ef71c7935f7f841a6c31cb5dc6a33c54  design/standard/templates/newsletter/send.tpl
 3c284e8961ca56614ed44579a529be65  design/standard/templates/newsletter/send_newsletter_test_result.tpl
 4c0877fc23ae4a3484a6904e6e316cfa  design/standard/templates/newsletter/skin/company/outputformat/html.tpl
 72d6fe23bbd82499e0cb1ce84a5a401f  design/standard/templates/newsletter/skin/company/outputformat/text.tpl
-f9870db3bb78a64397ccf2315ffd8304  design/standard/templates/newsletter/skin/default/outputformat/html.tpl
+ea631b5c029c9492c17d2abd2a5f9191  design/standard/templates/newsletter/skin/default/outputformat/html.tpl
 abb9ef510dd1ec1878d4943a2ceb6d6a  design/standard/templates/newsletter/skin/default/outputformat/text.tpl
 9851d9094bc49341e45a94157e2ac85a  design/standard/templates/newsletter/skin/news/outputformat/html.tpl
 1de115d165cc68a7e0db44887d433b7d  design/standard/templates/newsletter/skin/news/outputformat/text.tpl
@@ -594,8 +594,8 @@ cf1036b2d3360f8e36d7462c0c58eaa8  doc/uml/cjw_newsletter_dbschema_v1.0.0.png
 f90eec2d1f019a7db9a9dfb9d9632d42  doc/upgrade-4.2.md
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
 782edd7ce72084d23e44e94ae248d722  extendedattributefilter/cjwnewsletterlistfilter.php
-88bf4511eb945b5e0c7920c5b557747c  extension.xml
-02294615db94a8939febd3808898a6fe  ezinfo.php
+8c23f35101d433b07cda8cf36fcf5efe  extension.xml
+6730471a1fbd4850a7406a235337df7f  ezinfo.php
 a50ce9d1109f1006a3015c0111d57b15  modules/newsletter/ab_test.php
 6f44e8758a6311cd32c1d6e1e10cf7eb  modules/newsletter/approval.php
 7d7d02aedf15525f7bf6dba9b2d30d54  modules/newsletter/archive.php
