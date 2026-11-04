@@ -10,7 +10,7 @@
     <td valign="top">
         <table width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
             <tr>
-                <td><a href="http://www.cjw-network.com" title="CJW Network - Developers united in eZ Publish"><img src={'images/newsletter/skin/default/cjw-newsletter_header.jpg'|ezdesign()} border="0" width="600" height="100" alt="CJW Network - Developers united in eZ Publish" /></a></td>
+                <td><a href="http://www.cjw-network.com" title="CJW Network - Developers united in Exponential"><img src={'images/newsletter/skin/default/cjw-newsletter_header.jpg'|ezdesign()} border="0" width="600" height="100" alt="CJW Network - Developers united in Exponential" /></a></td>
             </tr>
             <tr>
                 <td style="padding: 20px 0 0 15px">
@@ -58,7 +58,7 @@
             </tr>
             {/if}
             <tr>
-                <td><a href="http://www.cjw-network.com" title="CJW Network - Developers united in eZ Publish"><img src={'images/newsletter/skin/default/cjw-newsletter_footer.gif'|ezdesign()} width="600" height="75" border="0" alt="-- www.CJW-Network.com --" /></a></td>
+                <td><a href="http://www.cjw-network.com" title="CJW Network - Developers united in Exponential"><img src={'images/newsletter/skin/default/cjw-newsletter_footer.gif'|ezdesign()} width="600" height="75" border="0" alt="-- www.CJW-Network.com --" /></a></td>
             </tr>
             <tr>
                 <td style="padding: 10px 30px 10px 10px;">
