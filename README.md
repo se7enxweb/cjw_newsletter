@@ -12,7 +12,9 @@ What you get:
 - A **Newsletter** tab in the administration (admin4 draws it with the `envelope` icon) with a dashboard of the
   lists, the subscribers, the sends and the problems found. In admin4 every administration page is drawn with
   admin4's own page heads, tables, buttons, notices and badges, and with Bootstrap icons instead of the Crystal
-  images, in light and dark mode and on a phone; admin and admin2 keep their look.
+  images, in light and dark mode and on a phone. That includes the edit forms of the list, edition and
+  subscription attributes and the newsletter card of the notification settings. admin and admin2 keep their look
+  (see [doc/admin4.md](doc/admin4.md)).
 - Lists, editions and articles as content classes; HTML and plain text output; the skins `default`, `company`,
   `news` and `shop`, and your own.
 - Public pages to subscribe, confirm (double opt-in), change the subscription and unsubscribe; a web archive of the
@@ -342,7 +344,6 @@ between from `update/database/<engine>/`, regenerate the autoloads and clear the
 - Oracle works only through the kernel's driver and is untested for 4.2.
 - Tracking, SMS, rate limits and mail-in are off until you switch them on.
 - On a kernel older than 6.0.15 the extension does not run.
-- In admin4 the edit forms of the list and edition attributes keep their older markup inside the kernel's edit page.
 - The content tree shows the newsletter classes with Bootstrap icons only on a kernel whose icon operator falls back
   to the icon theme's own mapping when a file of the extension's `icon.ini` is missing in the theme; an older kernel
   shows the Crystal image or the default icon there.
