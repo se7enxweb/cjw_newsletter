@@ -6,7 +6,8 @@
  *
  *   php vendor/bin/phpunit extension/cjw_newsletter/tests/cjwNewsletterMailSafetyTest.php
  *
- *  MS-01 - isValidAddress() refuses an address with a trailing newline, which ezcMailTools::validateEmailAddress() accepts
+ *  MS-01 - isValidAddress() refuses an address with a trailing newline, which zetacomponents' ezcMailTools::validateEmailAddress()
+ *          accepts (expcomponents' refuses it as well)
  *  MS-02 - secureMail() takes CR/LF out of names, subject and header values
  *  MS-03 - secureMail() refuses a mail with a line break in an address (MAIL FROM / RCPT TO)
  *  MS-04 - sent over SMTP with HeaderLineEnding LF, a body line starting with "." is escaped and the line break is
@@ -42,7 +43,8 @@ class cjwNewsletterMailSafetyTest extends TestCase
     /** MS-01 */
     public function testAnAddressWithALineBreakIsNotValid()
     {
-        $this->assertTrue( (bool)ezcMailTools::validateEmailAddress( "reader@example.com\n" ), 'the gap this closes' );
+        // the gap this closes: zetacomponents/mail accepts the trailing newline; expcomponents' mail refuses it too.
+        // Either way the newsletter refuses it itself, so it does not depend on which mail component is installed.
         $this->assertFalse( CjwNewsletterTransport::isValidAddress( "reader@example.com\n" ) );
         $this->assertFalse( CjwNewsletterTransport::isValidAddress( "reader@example.com\r\nRCPT TO:<x@example.org>" ) );
         $this->assertFalse( CjwNewsletterTransport::isValidAddress( "\"a\0b\"@example.com" ) );
