@@ -1,0 +1,6 @@
+{* The line view of a newsletter edition, admin4 (override.ini [node/view/line#cjw_newsletter_edition]). Same data as
+   design/standard/override/templates/node/view/line/cjw_newsletter_edition.tpl; the icon opens the content menu the
+   way admin4's own node/view/line.tpl does (data-menu-*), without the "create here" entries an edition has no use
+   for, and the name has the direction of its text. *}
+<a href={$node.url_alias|ezurl} class="nodeicon" aria-haspopup="menu" aria-expanded="false" data-menu-open="SubitemsContextMenu" data-menu-values="{json_encode( hash( '%version%', $node.object.current_version, '%nodeID%', $node.node_id, '%objectID%', $node.object.id ) )|wash}" data-menu-languages="{$node.object.language_js_array|wash}" data-menu-classes="''" data-menu-title="{$node.object.name|shorten( 18 )|wash}" data-menu-disable="{$node.node_id}" data-menu-disable-item="child-menu-create-here">{$node.class_identifier|class_icon( 'small', 'Click on the icon to display a context-sensitive menu.'|i18n( 'design/admin/node/view/line' ) )}</a>&nbsp;
+{if $node.url_alias}<a href={$node.url_alias|ezurl} dir="auto" title="{'Node ID: %node_id Visibility: %node_visibility'|i18n( 'design/admin/node/view/line',, hash( '%node_id', $node.node_id, '%node_visibility', $node.hidden_status_string ) )}">{$node.name|wash}</a>{else}<bdi>{$node.name|wash}</bdi>{/if}
