@@ -26,6 +26,7 @@ describes the content classes, the lists, the editions and the sending; the guid
 | [SMS](sms.md) | administrators | Newsletters by SMS: the transports (file, generic HTTP/JSON, a Twilio-style preset), the mobile number confirmed with a code, STOP, the rate limit |
 | [Import, export and migration](importexport.md) | administrators | The CSV import with a column mapping, a preview, a dry run and a consent source; the subscriber export; the migration from the old eznewsletter extension |
 | [The schema of 4.2.0](schema-4.2.md) | developers | Every table and column 4.2.0 adds, with its meaning |
+| [The administration in admin4](admin4.md) | administrators, designers | The admin4 copies of every administration page (4.2.22), the components, the Bootstrap icons per function and state, the stylesheet and its token rules, the test that keeps it complete |
 
 ## Where the features show
 
