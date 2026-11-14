@@ -5,7 +5,7 @@
   {def $attribute_base='ContentObjectAttribute'}
 {/if}
 
-{def $i18n = 'cjw_newsletter/datatype/cjwnewsletterlist'
+{def $cjwnl_list_i18n = 'cjw_newsletter/datatype/cjwnewsletterlist'
      $list_object = $attribute.content
      $available_skin_array = $list_object.available_skin_array
      $skin_name = $list_object['skin_name']}
@@ -13,7 +13,7 @@
 <div class="a4-stack">
 
 <fieldset class="a4-field">
-    <legend>{'Newsletter skin name'|i18n( $i18n )}</legend>
+    <legend>{'Newsletter skin name'|i18n( $cjwnl_list_i18n )}</legend>
     <div class="a4-row">
     {foreach $available_skin_array as $skin_name_2}
         <label class="a4-check"><input type="radio" name="{$attribute_base}_CjwNewsletterList_SkinName_{$attribute.id}" value="{$skin_name_2|wash}"{if or( eq( $skin_name, $skin_name_2 ), eq( $available_skin_array|count(), 1 ) )} checked="checked"{/if} /> <span>{$skin_name_2|wash}</span></label>
