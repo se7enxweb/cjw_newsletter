@@ -1,0 +1,70 @@
+{* The CSV imports into the lists, admin4. Same data and actions as design/standard/templates/newsletter/import_list.tpl *}
+{def $page_uri = 'newsletter/import_list'}
+<div class="a4-page newsletter newsletter-import_list">
+    <div class="a4-pagehead">
+        <div class="a4-pagehead-main">
+            <h1 class="a4-pagehead-title"><span class="a4-icon a4-bi-upload cjwnl-a4-lead" aria-hidden="true"></span>{'Imports'|i18n( 'cjw_newsletter/import_list' )} [{$import_list_count}]</h1>
+        </div>
+    </div>
+
+    {include uri='design:parts/newsletter/notices.tpl' notices=$notices}
+
+    <p class="a4-intro">{'Subscribers are imported from a CSV file on the subscriptions page of a list. Each upload is listed here.'|i18n( 'extension/cjw_newsletter' )}
+        {'The import with column mapping starts from the CSV import page of a list; sites that ran eznewsletter use the migration.'|i18n( 'cjw_newsletter/importexport' )}
+        <a href={'newsletter/migration_log'|ezurl}>{'Migration log'|i18n( 'cjw_newsletter/importexport' )}</a></p>
+
+    {if $import_list|count}
+    <div class="a4-table-wrap">
+    <table class="a4-table">
+        <thead>
+        <tr>
+            <th scope="col" class="a4-num">{'ID'|i18n( 'cjw_newsletter/import_list' )}</th>
+            <th scope="col">{'Type'|i18n( 'cjw_newsletter/import_list' )}</th>
+            <th scope="col">{'List'|i18n( 'cjw_newsletter/import_list' )}</th>
+            <th scope="col">{'Creator'|i18n( 'cjw_newsletter/import_list' )}</th>
+            <th scope="col">{'Note'|i18n( 'cjw_newsletter/import_list' )}</th>
+            <th scope="col">{'Created'|i18n( 'cjw_newsletter/import_list' )}</th>
+            <th scope="col">{'Imported'|i18n( 'cjw_newsletter/import_list' )}</th>
+            <th scope="col" class="a4-num" title="{'Subscription count after import'|i18n( 'cjw_newsletter/import_list' )|wash} | {'Subscriptions in current system with import id %importId'|i18n( 'cjw_newsletter/import_list',, hash( '%importId', '' ) )|wash}">{'Count'|i18n( 'cjw_newsletter/import_list' )}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {foreach $import_list as $import_item}
+        {def $list_contentobject = $import_item.list_contentobject}
+        <tr>
+            <td class="a4-num"><a href={cond( eq( $import_item.type, 'cjwnl_csv_mapped' ), concat( 'newsletter/import_mapping/', $import_item.id ), concat( 'newsletter/import_view/', $import_item.id ) )|ezurl}>{$import_item.id|wash}</a></td>
+            <td>{if eq( $import_item.type, 'cjwnl_csv_mapped' )}{'CSV with mapping'|i18n( 'cjw_newsletter/importexport' )}{if $import_item.skipped_count|gt( 0 )} <span class="a4-badge is-warn">{'%count skipped'|i18n( 'cjw_newsletter/importexport',, hash( '%count', $import_item.skipped_count ) )}</span>{/if}{if and( $import_item.is_dry_run|eq( 1 ), $import_item.imported|eq( 0 ) )} <span class="a4-badge is-info">{'dry run'|i18n( 'cjw_newsletter/importexport' )}</span>{/if}{else}{$import_item.type|wash}{/if}</td>
+            <td class="a4-wrap">{if is_object( $list_contentobject )}<a href={concat( 'newsletter/subscription_list/', $list_contentobject.main_node_id )|ezurl}>{$list_contentobject.name|wash}</a>{/if}</td>
+            <td>{if is_object( $import_item.creator )}{$import_item.creator.name|wash}{/if}</td>
+            <td class="a4-wrap">{$import_item.note|wash}</td>
+            <td>{$import_item.created|l10n( 'shortdatetime' )}</td>
+            <td>{if $import_item.imported|gt( 0 )}<span class="a4-badge is-ok">{$import_item.imported|l10n( 'shortdatetime' )}</span>{else}<span class="a4-badge is-warn">{'not imported'|i18n( 'extension/cjw_newsletter' )}</span>{/if}</td>
+            <td class="a4-num">{if $import_item.is_imported}{$import_item.imported_subscription_count|wash} | {$import_item.imported_subscription_count_live|wash} | <strong>{$import_item.imported_subscription_count_live_approved|wash}</strong>{/if}</td>
+        </tr>
+        {undef $list_contentobject}
+        {/foreach}
+        </tbody>
+    </table>
+    </div>
+    <div class="a4-listfoot">
+        <span class="a4-meta">{'%count imports'|i18n( 'extension/cjw_newsletter',, hash( '%count', $import_list_count ) )}</span>
+        <span class="a4-meta">{'Per page'|i18n( 'extension/cjw_newsletter' )}:
+            {foreach array( 10, 25, 50, 100 ) as $n}{if eq( $limit, $n )}<strong aria-current="true">{$n}</strong>{else}<a href={concat( 'newsletter/import_list/(limit)/', $n )|ezurl}>{$n}</a>{/if} {/foreach}
+        </span>
+        <div class="a4-pager">
+        {include name='Navigator'
+                 uri='design:navigator/google.tpl'
+                 page_uri=$page_uri
+                 item_count=$import_list_count
+                 view_parameters=$view_parameters
+                 item_limit=$limit}
+        </div>
+    </div>
+    {else}
+    <p class="a4-empty">{'There is no import yet.'|i18n( 'extension/cjw_newsletter' )}
+        {'Open the subscriptions of a list and choose "Import CSV".'|i18n( 'extension/cjw_newsletter' )}</p>
+    {/if}
+</div>
+
+{* the other import and export tools of the transfer registry (Exponential 6.0.15 and later; nothing on an older kernel) *}
+{if ezini_hasvariable( 'Service_transfer.registry', 'Class', 'kernelservices.ini' )}{include uri='design:transfer/looking_for.tpl' tool='transfer.newsletter'}{/if}

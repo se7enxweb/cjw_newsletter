@@ -272,7 +272,9 @@
                 .then(function (data) {
                     var status = box.querySelector('#nl-job-status');
                     status.textContent = labels[data.status] || data.status;
-                    status.className = 'nl-pill ' + (classes[data.status] || 'is-muted');
+                    // Only the tone changes: the element keeps the classes of its design (nl-pill, or a4-badge in admin4).
+                    Object.keys(classes).forEach(function (key) { status.classList.remove(classes[key]); });
+                    status.classList.add(classes[data.status] || 'is-muted');
                     box.querySelector('#nl-job-log').textContent = (data.log || []).join('\n');
                     var result = data.result || {};
                     var parts = [];

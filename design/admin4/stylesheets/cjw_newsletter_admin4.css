@@ -1,0 +1,258 @@
+/* cjw_newsletter in admin4 (and admin4l). The pages are built from the administration's shared components
+   (components.css) and take every colour, radius, size and space from its --a4-* tokens, which have a light and a
+   dark value. This file holds only what the components cannot do, as .cjwnl-a4-* classes.
+   Copyright CJW Network and Exponential Foundation. All rights reserved.
+   GNU General Public License v2.0 (or any later version) */
+
+/* ==== Dashboard, background run, left menu ==== */
+
+/* The icon before a page title, a menu group's heading or a menu link: one icon per function of the package, the
+   same in the menu, the page head and the dashboard (buttons have their own gap) */
+.a4-icon.cjwnl-a4-lead { margin-inline-end: var(--a4-space-2); }
+
+/* the status strip: the four facts, the badges after them */
+.cjwnl-a4-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--a4-space-3) var(--a4-space-4);
+  margin: 0 0 var(--a4-space-4);
+}
+.cjwnl-a4-status-facts { flex: 1 1 280px; margin: 0; }
+
+/* the cards of a block */
+.cjwnl-a4-cards { margin: var(--a4-space-3) 0 var(--a4-space-5); }
+.cjwnl-a4-card > :is(p, ul, dl, h2, h3, pre) { margin: 0; }
+.cjwnl-a4-card .a4-figures { margin: 0; }
+.cjwnl-a4-card .a4-facts { margin: 0; }
+.cjwnl-a4-wide { grid-column: 1 / -1; }
+.cjwnl-a4-block { margin: 0 0 var(--a4-space-5); }
+
+/* rows made of a badge, a text and maybe a button (problems, imports, next runs, A/B tests) */
+.cjwnl-a4-list {
+  display: grid;
+  gap: var(--a4-space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cjwnl-a4-list > li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--a4-space-1) var(--a4-space-3);
+  min-width: 0;
+}
+.cjwnl-a4-list.is-plain > li { align-items: baseline; }
+.cjwnl-a4-list form { display: contents; }
+.cjwnl-a4-grow { flex: 1 1 8em; min-width: 0; overflow-wrap: anywhere; }
+
+/* the newsletter systems table: lists and editions are indented below their list */
+.cjwnl-a4-system { margin: 0 0 var(--a4-space-3); }
+.cjwnl-a4-system td:first-child { overflow-wrap: anywhere; }
+.cjwnl-a4-system td.cjwnl-a4-level-1 { padding-inline-start: calc(var(--a4-cell-pad-x) + var(--a4-space-4)); }
+.cjwnl-a4-system td.cjwnl-a4-level-2 { padding-inline-start: calc(var(--a4-cell-pad-x) + var(--a4-space-5) + var(--a4-space-4)); }
+.cjwnl-a4-system form { margin: 0; }
+
+/* a number the package marks as a problem (failed counts); buttons with the class keep the button's colours */
+.nl-danger:not(.a4-btn) { color: var(--a4-bad); }
+
+/* ==== Full views of the newsletter classes, previews, send pages ==== */
+
+/* The row of the send and create buttons under the node head: the forms stand side by side and wrap on a phone */
+.cjwnl-a4-sendbar {
+  justify-content: flex-start;
+  margin: 0 0 var(--a4-space-3);
+}
+
+/* A form inside a toolbar: its fields and its button on one line, wrapping when narrow */
+form.cjwnl-a4-inline-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--a4-space-2);
+  margin: 0;
+}
+form.cjwnl-a4-inline-form .a4-input[type="text"] { width: auto; min-width: 0; flex: 1 1 14em; }
+
+/* The preview frame of an edition: the newsletter as it is mailed. Its page stays white in the dark theme too (a mail
+   has a white page, and the text version sets no background of its own), so the canvas is white and the frame
+   is told to render light. The one colour here that is not a token, for that reason. */
+.cjwnl-a4-preview-frame {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 70vh;
+  min-height: 24em;
+  margin: var(--a4-space-2) 0 var(--a4-space-4);
+  border: 1px solid var(--a4-line);
+  border-radius: var(--a4-radius-s);
+  background: Canvas; /* with color-scheme light: the white page a mailed newsletter has, also in dark mode */
+  color-scheme: light;
+}
+
+/* A preview tab's panel grows with its frame instead of scrolling inside the fixed height of the tab panels */
+div.tab-content.cjwnl-preview-panel {
+  height: auto;
+  overflow-y: visible;
+}
+
+/* ==== Newsletter users and subscriptions ==== */
+
+/* The detail tables of a user and of a subscription: the row header is a narrow column, the value wraps. */
+.cjwnl-a4-details th[scope="row"] {
+    width: 14rem;
+    max-width: 40%;
+    text-align: start;
+    white-space: normal;
+}
+.cjwnl-a4-details td { overflow-wrap: anywhere; }
+.cjwnl-a4-details .a4-input { width: 100%; max-width: 32rem; }
+.cjwnl-a4-details textarea.a4-input { max-width: 48rem; }
+
+/* The interest checkboxes of a user, side by side and wrapping. */
+.cjwnl-a4-interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--a4-space-2) var(--a4-space-4);
+}
+
+/* The one-character CSV delimiter field. */
+.cjwnl-a4-delimiter {
+    width: 3.5rem;
+    text-align: center;
+}
+
+/* The active filters of a virtual list: a fieldset without the browser frame. */
+fieldset.cjwnl-a4-filters { border: 0; margin: 0; padding: 0; min-width: 0; }
+.cjwnl-a4-filters .a4-input { max-width: 100%; }
+
+/* A toolbar of several one-button forms: the buttons take part in the toolbar's gap and wrap, as .a4-actions form
+   does in components.css. Only on the package's toolbars (.cjwnl-a4-forms), never on the kernel's. */
+.a4-toolbar.cjwnl-a4-forms > form { display: contents; }
+
+/* ==== Blacklist, mail accounts and bounces, imports ==== */
+
+.cjwnl-a4-lists-form { display: grid; gap: var(--a4-space-4); max-width: 640px; }
+.cjwnl-a4-sort { color: inherit; text-decoration: none; }
+.cjwnl-a4-sort:hover { text-decoration: underline; }
+.cjwnl-a4-sort.is-sorted::after { content: " \25B2"; font-size: 0.75em; }
+.cjwnl-a4-sort.is-sorted.is-desc::after { content: " \25BC"; }
+.cjwnl-a4-rawmail {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: 1px solid var(--a4-line);
+    border-radius: var(--a4-radius);
+    background-color: var(--a4-card);
+}
+
+/* ==== Editorial, rendering, SMS ==== */
+
+/* A row of state badges above a page's content */
+.cjwnl-a4-state {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--a4-space-3);
+  margin: 0 0 var(--a4-space-4);
+}
+
+/* An approver's free text keeps its line breaks */
+.cjwnl-a4-comment { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* The articles taken into an edition, or found by a pool: a title and its actions on one line */
+.cjwnl-a4-picks {
+  display: grid;
+  gap: var(--a4-space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cjwnl-a4-picks > li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--a4-space-2) var(--a4-space-3);
+  padding: var(--a4-space-2) 0;
+  border-bottom: 1px solid var(--a4-line);
+}
+.cjwnl-a4-picks > li:last-child { border-bottom: 0; }
+.cjwnl-a4-pick-title { flex: 1 1 16em; min-width: 0; overflow-wrap: anywhere; }
+
+/* Previous/next under a paged table */
+.cjwnl-a4-pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--a4-space-3);
+  margin: var(--a4-space-3) 0 0;
+}
+
+/* A control and its words on one line (a number and its unit, a radio and its select) */
+.cjwnl-a4-inline { display: flex; flex-wrap: wrap; align-items: center; gap: var(--a4-space-2) var(--a4-space-3); }
+.cjwnl-a4-inline > .a4-check { flex: 0 0 auto; }
+
+/* Short inputs (a number, a time) do not stretch over the card */
+.a4-field input.cjwnl-a4-narrow { width: auto; max-width: 10em; }
+
+/* Checkbox or radio choices side by side, wrapping */
+.cjwnl-a4-choices { display: flex; flex-wrap: wrap; gap: var(--a4-space-2) var(--a4-space-4); }
+
+/* The next runs of a schedule */
+.cjwnl-a4-next { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--a4-space-1); }
+
+/* A mail rendered in a sandboxed frame. The mail brings its own colours, so the frame is a light surface in both
+   themes (color-scheme: light makes Canvas white). */
+.cjwnl-a4-frame {
+  display: block;
+  width: 100%;
+  min-height: 900px;
+  border: 1px solid var(--a4-line);
+  border-radius: var(--a4-radius-s);
+  color-scheme: light;
+  background-color: Canvas;
+}
+
+/* The preview picture of a skin */
+.cjwnl-a4-skin-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 var(--a4-space-2);
+  border: 1px solid var(--a4-line);
+}
+
+/* ==== Deliverability, import and export ==== */
+
+/* The pause form under a transport's state badge. */
+.cjwnl-a4-throttle-form { margin-block-start: var(--a4-space-2); }
+.cjwnl-a4-minutes { inline-size: 5em; max-inline-size: 100%; }
+
+/* A command block: scrolls sideways instead of widening the page. */
+.cjwnl-a4-command { overflow-x: auto; white-space: pre; }
+
+/* A fieldset of check boxes laid out in columns (output formats, export columns, statuses). */
+.cjwnl-a4-choices { display: flex; flex-wrap: wrap; gap: var(--a4-space-2) var(--a4-space-4); margin: 0; padding: 0; list-style: none; }
+
+/* ==== Statistics ==== */
+
+.cjwnl-a4-gap { margin-top: var(--a4-space-4); }
+.cjwnl-a4-chart { margin: var(--a4-space-2) 0 0; }
+.cjwnl-a4-chart-bars { display: flex; align-items: flex-end; gap: 3px; height: 9em; padding: var(--a4-space-2) var(--a4-space-1) 0; border-bottom: 1px solid var(--a4-line-strong); overflow-x: auto; }
+.cjwnl-a4-chart-group { flex: 1 1 0; min-width: 0.9em; max-width: 3.2em; display: flex; align-items: flex-end; gap: 1px; height: 100%; }
+.cjwnl-a4-chart-bar { flex: 1 1 0; min-height: 1px; height: calc(var(--a4-pct, 0) * 1%); border-radius: var(--a4-radius-s) var(--a4-radius-s) 0 0; }
+.cjwnl-a4-chart-bar.is-open { background-color: var(--a4-chart-1); }
+.cjwnl-a4-chart-bar.is-click { background-color: var(--a4-chart-3); }
+.cjwnl-a4-chart-axis { display: flex; justify-content: space-between; gap: var(--a4-space-2); margin-top: var(--a4-space-1); }
+.cjwnl-a4-chart-legend { display: flex; flex-wrap: wrap; gap: var(--a4-space-1) var(--a4-space-4); margin: var(--a4-space-2) 0 0; padding: 0; list-style: none; }
+.cjwnl-a4-chart-legend li::before { content: ""; display: inline-block; width: 0.8em; height: 0.8em; margin-inline-end: var(--a4-space-1); border-radius: var(--a4-radius-s); vertical-align: -0.05em; }
+.cjwnl-a4-chart-legend li.is-open::before { background-color: var(--a4-chart-1); }
+.cjwnl-a4-chart-legend li.is-click::before { background-color: var(--a4-chart-3); }
+.cjwnl-a4-share { display: inline-flex; align-items: center; gap: var(--a4-space-2); white-space: nowrap; }
+.cjwnl-a4-share .a4-meter { width: 6em; }
+.cjwnl-a4-url { word-break: break-all; }
+.cjwnl-a4-winner td:first-child { font-weight: var(--a4-weight-bold); }
+@media (max-width: 640px) { .cjwnl-a4-chart-bars { height: 7em; } }

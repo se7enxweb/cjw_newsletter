@@ -23,6 +23,9 @@ FrontendCSSFileList[]=cjw_newsletter.css
 
 # Same as above for backend (admin2) designs
 BackendCSSFileList[]=cjw_newsletter.css
+# admin4 (and admin4l): only what the shared .a4-* components cannot do. The file is in design/admin4, so the
+# other admin designs do not find it and load nothing.
+BackendCSSFileList[]=cjw_newsletter_admin4.css
 
 
 
