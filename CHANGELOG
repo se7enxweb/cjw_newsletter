@@ -1,5 +1,28 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.2.22
+======
+
+- Updated: In admin4 every newsletter administration page is drawn with admin4's shared components (page heads,
+  cards, tables, buttons, notices, badges, facts and figures, filter bars, meters) and the kernel's Bootstrap icons
+  instead of box frames, list tables and Crystal images, with one icon per function and per state; admin, admin2 and
+  standard keep their look (pull request #6 by Ekkehard Dörre).
+- Added: admin4 copies of the edit forms of the list, virtual list, edition and subscription attributes, of the list
+  parts of the feature areas (approval and article pool, skins and languages, tracking, SMS), of the subscription
+  view, of the newsletter card on the notification settings (which showed design admin's fieldset inside admin4's
+  card) and of an edition's line view.
+- Added: doc/admin4.md, the guide to the administration in admin4.
+- Added: tests/cjwNewsletterAdmin4Test.php: no inline CSS, an admin4 copy of every administration template, no classic
+  markup, a stylesheet with only token colours and radii and no unused rule, and only icons the kernel defines.
+- Renamed: cjw_newsletter_admin4.css moved from design/admin4 to design/standard, so design admin and admin2 no longer
+  log "Could not find: stylesheets/cjw_newsletter_admin4.css" on every page.
+- Updated: The state badge of a background job keeps the classes of its design and drops the muted tone once the
+  state is known.
+- Updated: The mail safety test no longer needs a mail component that accepts a line break in an address.
+
+Upgrading: composer update, then deploy with the packer (or clear the ini, template, template-override, ezjscore-packer
+and template-block caches). No database change.
+
 4.2.21
 ======
 
