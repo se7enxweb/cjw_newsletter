@@ -30,7 +30,7 @@ class cjwNewsletterAdmin4Test extends TestCase
      */
     const NOT_ADMINISTRATION = '#^templates/(newsletter/(configure|subscribe[a-z_]*|unsubscribe[a-z_]*|mail/.*|deliverability/mail/.*|sms/(confirm|subscribe_part)|rendering/plaintext_attribute)|mail/.*|mailpreferences/.*|notification/handler/cjwnewsletter/parts/.*)\.tpl$#';
 
-    const STYLESHEET = 'design/admin4/stylesheets/cjw_newsletter_admin4.css';
+    const STYLESHEET = 'design/standard/stylesheets/cjw_newsletter_admin4.css';
 
     private static function root(): string
     {
