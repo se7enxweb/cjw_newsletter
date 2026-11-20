@@ -169,6 +169,27 @@ class CjwNewsletterTracking
         return null;
     }
 
+    /**
+     * Which per-person tracking a message carries.
+     *
+     * @param array $bodies message bodies by type ('html', 'text')
+     * @param bool $isPersonKey false for an anonymous key
+     * @return int bit 1: links carry the placeholder, bit 2: the HTML body carries the open pixel; 0 for an anonymous key
+     */
+    static function personTrackingBits( array $bodies, $isPersonKey )
+    {
+        if ( !$isPersonKey )
+            return 0;
+        $bits = 0;
+        foreach ( $bodies as $body )
+            // The open pixel carries the placeholder too; only links count for bit 1.
+            if ( strpos( str_replace( '/newsletter/o/' . self::PLACEHOLDER, '', (string)$body ), self::PLACEHOLDER ) !== false )
+                $bits |= 1;
+        if ( isset( $bodies['html'] ) && strpos( (string)$bodies['html'], '/newsletter/o/' . self::PLACEHOLDER ) !== false )
+            $bits |= 2;
+        return $bits;
+    }
+
     /** @return string what the placeholder becomes: "<key>/<signature>" */
     static function token( $key )
     {

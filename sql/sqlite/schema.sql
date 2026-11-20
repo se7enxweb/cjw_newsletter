@@ -131,7 +131,9 @@ CREATE TABLE cjwnl_edition_send (
   tracking_mode tinyint(4) NOT NULL DEFAULT '0',
   ab_test_id INTEGER(11) NOT NULL DEFAULT '0',
   test_group_id INTEGER(11) NOT NULL DEFAULT '0',
-  throttle_transport varchar(50) NOT NULL DEFAULT ''
+  throttle_transport varchar(50) NOT NULL DEFAULT '',
+  segment_id INTEGER(11) NOT NULL DEFAULT '0',
+  series_step_id INTEGER(11) NOT NULL DEFAULT '0'
 );
 CREATE  INDEX cjwnl_edition_send__edition_contentobject_id ON cjwnl_edition_send  ( edition_contentobject_id );
 CREATE  INDEX cjwnl_edition_send__edition_contentobject_version ON cjwnl_edition_send  ( edition_contentobject_version );
@@ -155,7 +157,8 @@ CREATE TABLE cjwnl_edition_send_item (
   ab_variant_id INTEGER(11) NOT NULL DEFAULT '0',
   first_opened INTEGER(11) NOT NULL DEFAULT '0',
   open_count INTEGER(11) NOT NULL DEFAULT '0',
-  click_count INTEGER(11) NOT NULL DEFAULT '0'
+  click_count INTEGER(11) NOT NULL DEFAULT '0',
+  person_tracking tinyint(1) NOT NULL DEFAULT '0'
 );
 CREATE  INDEX cjwnl_edition_send_item__edition_send_id ON cjwnl_edition_send_item  ( edition_send_id );
 CREATE  INDEX cjwnl_edition_send_item__newsletter_user_id ON cjwnl_edition_send_item  ( newsletter_user_id );
@@ -506,6 +509,18 @@ CREATE TABLE cjwnl_test_group (
 );
 CREATE  INDEX cjwnl_test_group_list ON cjwnl_test_group  ( list_contentobject_id );
 
+CREATE TABLE cjwnl_segment (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  list_contentobject_id INTEGER(11) NOT NULL DEFAULT '0',
+  name varchar(255) NOT NULL DEFAULT '',
+  match_mode varchar(3) NOT NULL DEFAULT 'all',
+  conditions text DEFAULT NULL,
+  creator_contentobject_id INTEGER(11) NOT NULL DEFAULT '0',
+  created INTEGER(11) NOT NULL DEFAULT '0',
+  modified INTEGER(11) NOT NULL DEFAULT '0'
+);
+CREATE  INDEX cjwnl_segment_list ON cjwnl_segment  ( list_contentobject_id );
+
 CREATE TABLE cjwnl_throttle_state (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   transport varchar(50) NOT NULL DEFAULT '',
@@ -565,3 +580,38 @@ CREATE TABLE cjwnl_user_interest (
 );
 CREATE  INDEX cjwnl_user_interest_interest ON cjwnl_user_interest  ( interest_id );
 CREATE  UNIQUE INDEX cjwnl_user_interest_pair ON cjwnl_user_interest  ( newsletter_user_id, interest_id );
+CREATE TABLE cjwnl_series (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  list_contentobject_id INTEGER(11) NOT NULL DEFAULT '0',
+  segment_id INTEGER(11) NOT NULL DEFAULT '0',
+  status INTEGER(11) NOT NULL DEFAULT '0',
+  creator_contentobject_id INTEGER(11) NOT NULL DEFAULT '0',
+  created INTEGER(11) NOT NULL DEFAULT '0',
+  modified INTEGER(11) NOT NULL DEFAULT '0'
+);
+CREATE  UNIQUE INDEX cjwnl_series_list ON cjwnl_series  ( list_contentobject_id );
+
+CREATE TABLE cjwnl_series_step (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  series_id INTEGER(11) NOT NULL DEFAULT '0',
+  position INTEGER(11) NOT NULL DEFAULT '0',
+  edition_contentobject_id INTEGER(11) NOT NULL DEFAULT '0',
+  delay_days INTEGER(11) NOT NULL DEFAULT '0',
+  created INTEGER(11) NOT NULL DEFAULT '0',
+  modified INTEGER(11) NOT NULL DEFAULT '0'
+);
+CREATE  UNIQUE INDEX cjwnl_series_step_pos ON cjwnl_series_step  ( series_id, position );
+
+CREATE TABLE cjwnl_series_member (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  series_id INTEGER(11) NOT NULL DEFAULT '0',
+  subscription_id INTEGER(11) NOT NULL DEFAULT '0',
+  newsletter_user_id INTEGER(11) NOT NULL DEFAULT '0',
+  entered INTEGER(11) NOT NULL DEFAULT '0',
+  last_position INTEGER(11) NOT NULL DEFAULT '0',
+  last_sent INTEGER(11) NOT NULL DEFAULT '0',
+  pending_send_id INTEGER(11) NOT NULL DEFAULT '0',
+  pending_position INTEGER(11) NOT NULL DEFAULT '0'
+);
+CREATE  UNIQUE INDEX cjwnl_series_member_sub ON cjwnl_series_member  ( series_id, subscription_id );
+CREATE  INDEX cjwnl_series_member_pending ON cjwnl_series_member  ( pending_send_id );

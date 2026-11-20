@@ -28,7 +28,9 @@ class CjwNewsletterDashboard
                       'cjwnl_interest', 'cjwnl_user_interest', 'cjwnl_edition_send_output',
                       'cjwnl_link', 'cjwnl_link_click', 'cjwnl_open', 'cjwnl_stat_total', 'cjwnl_ab_test', 'cjwnl_ab_variant',
                       'cjwnl_sms_code', 'cjwnl_sms_message', 'cjwnl_sms_inbound',
-                      'cjwnl_import_mapping', 'cjwnl_migration_log' );
+                      'cjwnl_import_mapping', 'cjwnl_migration_log',
+                      // 4.3.0 (doc/upgrade-4.3.md): segments, welcome series
+                      'cjwnl_segment', 'cjwnl_series', 'cjwnl_series_step', 'cjwnl_series_member' );
     }
 
     /*!

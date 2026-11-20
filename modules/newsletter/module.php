@@ -277,6 +277,27 @@ $ViewList['test_group_edit'] = array(
     'default_navigation_part' => 'eznewsletternavigationpart',
     'params' => array( 'TestGroupId' ) );
 
+// the segments of a list
+$ViewList['segment_list'] = array(
+    'script' => 'segment_list.php',
+    'functions' => array( 'editorial' ),
+    'default_navigation_part' => 'eznewsletternavigationpart',
+    'params' => array( 'ListContentObjectId' ) );
+
+// create or edit a segment of a list
+$ViewList['segment_edit'] = array(
+    'script' => 'segment_edit.php',
+    'functions' => array( 'editorial' ),
+    'default_navigation_part' => 'eznewsletternavigationpart',
+    'params' => array( 'SegmentId', 'ListContentObjectId' ) );
+
+// edit the welcome series of a list
+$ViewList['series_edit'] = array(
+    'script' => 'series_edit.php',
+    'functions' => array( 'editorial' ),
+    'default_navigation_part' => 'eznewsletternavigationpart',
+    'params' => array( 'ListContentObjectId' ) );
+
 // the mail-in addresses of the lists
 $ViewList['mailin_address_list'] = array(
     'script' => 'mailin_address_list.php',

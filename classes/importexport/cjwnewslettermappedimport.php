@@ -161,30 +161,38 @@ class CjwNewsletterMappedImport
 
         $seen = array();
         $db = eZDB::instance();
-        foreach ( $mapper->rows() as $index => $row )
+        CjwNewsletterExtensionPoints::beginBulk();
+        try
         {
-            $line = $index + 1 + ( $settings['has_header'] ? 1 : 0 );
-            $values = CjwNewsletterCsvMapper::mapRow( $row, $mapping );
-            try
+            foreach ( $mapper->rows() as $index => $row )
             {
-                if ( !$dryRun )
-                    $db->begin();
-                $rowResult = self::importRow( $values, $listId, $settings, $importId, $wording, $seen, $dryRun );
-                if ( !$dryRun )
-                    $db->commit();
+                $line = $index + 1 + ( $settings['has_header'] ? 1 : 0 );
+                $values = CjwNewsletterCsvMapper::mapRow( $row, $mapping );
+                try
+                {
+                    if ( !$dryRun )
+                        $db->begin();
+                    $rowResult = self::importRow( $values, $listId, $settings, $importId, $wording, $seen, $dryRun );
+                    if ( !$dryRun )
+                        $db->commit();
+                }
+                catch ( Throwable $e )
+                {
+                    if ( !$dryRun )
+                        $db->rollback();
+                    eZDebug::writeError( 'CSV import ' . $importId . ', line ' . $line . ': ' . $e->getMessage(), __METHOD__ );
+                    $rowResult = array( 'email' => isset( $values['email'] ) ? $values['email'] : '', 'action' => 'failed', 'reason' => 'error', 'notes' => array() );
+                }
+                $rowResult['line'] = $line;
+                self::count( $result['totals'], $rowResult );
+                $result['rows'][] = $rowResult;
+                if ( $out )
+                    $out->output( 'Line ' . $line . ': ' . $rowResult['email'] . ' ' . $rowResult['action'] . ( $rowResult['reason'] !== '' ? ' (' . $rowResult['reason'] . ')' : '' ) );
             }
-            catch ( Throwable $e )
-            {
-                if ( !$dryRun )
-                    $db->rollback();
-                eZDebug::writeError( 'CSV import ' . $importId . ', line ' . $line . ': ' . $e->getMessage(), __METHOD__ );
-                $rowResult = array( 'email' => isset( $values['email'] ) ? $values['email'] : '', 'action' => 'failed', 'reason' => 'error', 'notes' => array() );
-            }
-            $rowResult['line'] = $line;
-            self::count( $result['totals'], $rowResult );
-            $result['rows'][] = $rowResult;
-            if ( $out )
-                $out->output( 'Line ' . $line . ': ' . $rowResult['email'] . ' ' . $rowResult['action'] . ( $rowResult['reason'] !== '' ? ' (' . $rowResult['reason'] . ')' : '' ) );
+        }
+        finally
+        {
+            CjwNewsletterExtensionPoints::endBulk();
         }
         $result['totals']['rows'] = count( $result['rows'] );
 

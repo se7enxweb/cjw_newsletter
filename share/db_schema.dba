@@ -878,6 +878,20 @@ $schema = array (
         'not_null' => '1',
         'default' => '',
       ),
+      'segment_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'series_step_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
     ),
     'indexes' => 
     array (
@@ -1043,6 +1057,13 @@ $schema = array (
         'type' => 'int',
         'not_null' => '1',
         'default' => 0,
+      ),
+      'person_tracking' => 
+      array (
+        'length' => 1,
+        'type' => 'tinyint',
+        'not_null' => '1',
+        'default' => '0',
       ),
     ),
     'indexes' => 
@@ -3384,6 +3405,84 @@ $schema = array (
       ),
     ),
   ),
+  'cjwnl_segment' => 
+  array (
+    'name' => 'cjwnl_segment',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'list_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'name' => 
+      array (
+        'length' => 255,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => '',
+      ),
+      'match_mode' => 
+      array (
+        'length' => 3,
+        'type' => 'varchar',
+        'not_null' => '1',
+        'default' => 'all',
+      ),
+      'conditions' => 
+      array (
+        'type' => 'text',
+        'default' => NULL,
+      ),
+      'creator_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'modified' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_segment_list' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'list_contentobject_id',
+        ),
+      ),
+    ),
+  ),
   'cjwnl_throttle_state' => 
   array (
     'name' => 'cjwnl_throttle_state',
@@ -3774,6 +3873,249 @@ $schema = array (
         'fields' => 
         array (
           0 => 'interest_id',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_series' => 
+  array (
+    'name' => 'cjwnl_series',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'list_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'segment_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'status' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'creator_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'modified' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_series_list' => 
+      array (
+        'type' => 'unique',
+        'fields' => 
+        array (
+          0 => 'list_contentobject_id',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_series_step' => 
+  array (
+    'name' => 'cjwnl_series_step',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'series_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'position' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'edition_contentobject_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'delay_days' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'created' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'modified' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_series_step_pos' => 
+      array (
+        'type' => 'unique',
+        'fields' => 
+        array (
+          0 => 'series_id',
+          1 => 'position',
+        ),
+      ),
+    ),
+  ),
+  'cjwnl_series_member' => 
+  array (
+    'name' => 'cjwnl_series_member',
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'type' => 'auto_increment',
+        'default' => false,
+      ),
+      'series_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'subscription_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'newsletter_user_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'entered' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'last_position' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'last_sent' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'pending_send_id' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+      'pending_position' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
+    ),
+    'indexes' => 
+    array (
+      'PRIMARY' => 
+      array (
+        'type' => 'primary',
+        'fields' => 
+        array (
+          0 => 'id',
+        ),
+      ),
+      'cjwnl_series_member_sub' => 
+      array (
+        'type' => 'unique',
+        'fields' => 
+        array (
+          0 => 'series_id',
+          1 => 'subscription_id',
+        ),
+      ),
+      'cjwnl_series_member_pending' => 
+      array (
+        'type' => 'non-unique',
+        'fields' => 
+        array (
+          0 => 'pending_send_id',
         ),
       ),
     ),

@@ -25,6 +25,10 @@
  *                                                               send for this run), abort (a reason = close the item)
  *   itemSent( $sendItem, $sendObject, $result )                 after the mail of an item went out or failed ($result of
  *                                                               CjwNewsletterMail::sendEmail())
+ *   sendRecipients( $subscriptions, $sendObject )               filter: the subscriptions a send goes to (what
+ *                                                               CjwNewsletterEditionSend::getSubscriptionObjectArray()
+ *                                                               returns, objects or false); returns the same kind of
+ *                                                               value, a subset. Applied after limit and offset
  *   testSendRecipients( $emails, $http, $objectVersion )        filter: the test addresses (string), returns them
  *   sendFormValidate( $http, $objectVersion )                   returns error strings (empty = fine) before a send is made
  *   sendFormStored( $sendObject, $http, $objectVersion )        a send was made from the send form
@@ -35,6 +39,11 @@
  *   userRemoved( $newsletterUserId )                            a subscriber is being removed (CjwNewsletterUser::remove()):
  *                                                               remove the area's own rows of him (erasure goes through
  *                                                               the category handlers' erased() instead)
+ *   subscriptionStatusChanged( $subscription, $oldStatus, $bulk )
+ *                                                               a subscription was stored with a different status
+ *                                                               (CjwNewsletterSubscription::store()); $oldStatus is the
+ *                                                               stored status before, null for a new subscription; $bulk
+ *                                                               is true inside an import (see beginBulk())
  *
  * Template parts are listed in [ExtensionPointSettings] as design: template names, each area appending its own:
  * DashboardBlocks[] (dashboard, gets summary), SendFormParts[] (inside the send form, gets node, object_version),
@@ -48,6 +57,30 @@ class CjwNewsletterExtensionPoints
     /** the columns of cjwnl_list added in 4.2.0: kept from the stored version when the attribute is edited */
     static $listColumns42 = array( 'skin_name_array_string', 'main_language', 'language_array_string', 'interest_source',
                                    'approval_required', 'article_pool_id', 'tracking_mode', 'sms_enabled', 'sms_sender' );
+
+    /** @var int nesting depth of the bulk operations (imports) that are running */
+    private static $bulkDepth = 0;
+
+    /** Marks the start of a bulk operation; handlers see it as the $bulk flag of subscriptionStatusChanged. */
+    static function beginBulk()
+    {
+        self::$bulkDepth++;
+    }
+
+    /** Marks the end of a bulk operation; the depth never goes below 0. */
+    static function endBulk()
+    {
+        if ( self::$bulkDepth > 0 )
+            self::$bulkDepth--;
+    }
+
+    /**
+     * @return bool true while a bulk operation is running
+     */
+    static function inBulk()
+    {
+        return self::$bulkDepth > 0;
+    }
 
     /**
      * @return string[] the handler classes that exist

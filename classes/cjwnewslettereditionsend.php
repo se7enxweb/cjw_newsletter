@@ -139,6 +139,9 @@ class CjwNewsletterEditionSend extends eZPersistentObject
                                          'ab_test_id' => array( 'name' => 'AbTestId', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N4
                                          'test_group_id' => array( 'name' => 'TestGroupId', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N1
                                          'throttle_transport' => array( 'name' => 'ThrottleTransport', 'datatype' => 'string', 'default' => '', 'required' => false ), // N1
+                                         // cjw_newsletter 4.3.0
+                                         'segment_id' => array( 'name' => 'SegmentId', 'datatype' => 'integer', 'default' => 0, 'required' => false ),
+                                         'series_step_id' => array( 'name' => 'SeriesStepId', 'datatype' => 'integer', 'default' => 0, 'required' => false ),
                                                                                            ),
 
 
@@ -646,6 +649,8 @@ class CjwNewsletterEditionSend extends eZPersistentObject
         if ( is_object( $listObject ) )
         {
             $subscriptionObjectList = $listObject->getSubscriptionObjectArray( $subscriptionStatus, $limit, $offset );
+            // handlers may narrow the recipients; applied after limit and offset, so callers that page get a short page
+            $subscriptionObjectList = CjwNewsletterExtensionPoints::filter( 'sendRecipients', $subscriptionObjectList, array( $this ) );
         }
 
         return $subscriptionObjectList;
