@@ -211,8 +211,17 @@ class CjwNewsletterStatisticsHooks
         if ( $has )
         {
             $values = (array)$message['values'];
-            $values[CjwNewsletterTracking::PLACEHOLDER] = CjwNewsletterTracking::sendMode( $send ) !== CjwNewsletterTracking::MODE_OFF
-                ? CjwNewsletterTracking::token( CjwNewsletterTracking::keyForItem( $sendItem, $send, $user ) ) : '';
+            $key = CjwNewsletterTracking::sendMode( $send ) !== CjwNewsletterTracking::MODE_OFF
+                ? CjwNewsletterTracking::keyForItem( $sendItem, $send, $user ) : null;
+            $values[CjwNewsletterTracking::PLACEHOLDER] = $key !== null ? CjwNewsletterTracking::token( $key ) : '';
+            // remember which per-person tracking this item carries
+            $parsed = $key !== null ? CjwNewsletterTracking::parseKey( $key ) : null;
+            $bits = CjwNewsletterTracking::personTrackingBits( $bodies, $parsed !== null && $parsed['type'] === 'person' );
+            if ( $bits !== (int)$sendItem->attribute( 'person_tracking' ) )
+            {
+                eZDB::instance()->query( 'UPDATE cjwnl_edition_send_item SET person_tracking = ' . (int)$bits . ' WHERE id = ' . (int)$sendItem->attribute( 'id' ) );
+                $sendItem->setAttribute( 'person_tracking', $bits );
+            }
             $message['values'] = $values;
         }
         // the A/B subject

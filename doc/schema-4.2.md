@@ -519,3 +519,82 @@ Area N6 Import/export and migration, class `CjwNewsletterMigrationLog` (`classes
 | `created` | int, default `0` | When the row was made (Unix time). |
 
 Indexes: `cjwnl_migration_log_run` (run_id); `cjwnl_migration_log_source` (source_table, source_id).
+
+## 4.3.0
+
+Added by [the 4.3 update](upgrade-4.3.md).
+
+### cjwnl_segment
+
+Class `CjwNewsletterSegment` (`classes/segments/`). A saved segment of a newsletter list.
+
+| Column | Type | Meaning |
+|---|---|---|
+| `id` | int, auto increment | Key (auto increment). |
+| `list_contentobject_id` | int, default `0` | Content object id of the newsletter list. |
+| `name` | varchar(255), default '' | Name of the segment. |
+| `match_mode` | varchar(3), default `all` | `all` = a subscriber must meet every condition, `any` = at least one. |
+| `conditions` | text, null | JSON list of the conditions. |
+| `creator_contentobject_id` | int, default `0` | Content object id of the user who made it. |
+| `created` | int, default `0` | When the row was made (Unix time). |
+| `modified` | int, default `0` | When the row was last changed (Unix time). |
+
+Indexes: `cjwnl_segment_list` (list_contentobject_id).
+
+### cjwnl_series
+
+Class `CjwNewsletterSeries` (`classes/series/`). The welcome series of a newsletter list (one per list).
+
+| Column | Type | Meaning |
+|---|---|---|
+| `id` | int, auto increment | Key (auto increment). |
+| `list_contentobject_id` | int, default `0` | Content object id of the newsletter list. |
+| `segment_id` | int, default `0` | Segment a member must belong to when a step is sent; 0 = every member. |
+| `status` | int, default `0` | 0 = active, 1 = paused; a new series is saved paused. |
+| `creator_contentobject_id` | int, default `0` | Content object id of the user who made it. |
+| `created` | int, default `0` | When the row was made (Unix time). |
+| `modified` | int, default `0` | When the row was last changed (Unix time). |
+
+Indexes: `cjwnl_series_list` (list_contentobject_id, unique).
+
+### cjwnl_series_step
+
+Class `CjwNewsletterSeriesStep`. One step of a series: an edition and the days to wait.
+
+| Column | Type | Meaning |
+|---|---|---|
+| `id` | int, auto increment | Key (auto increment). |
+| `series_id` | int, default `0` | Id of the series. |
+| `position` | int, default `0` | Order of the step within the series. |
+| `edition_contentobject_id` | int, default `0` | Content object id of the edition sent in this step. |
+| `delay_days` | int, default `0` | Days after the previous step (after entering, for the first step). |
+| `created` | int, default `0` | When the row was made (Unix time). |
+| `modified` | int, default `0` | When the row was last changed (Unix time). |
+
+Indexes: `cjwnl_series_step_pos` (series_id, position, unique).
+
+### cjwnl_series_member
+
+Class `CjwNewsletterSeriesMember`. A subscription in a series and how far it has come.
+
+| Column | Type | Meaning |
+|---|---|---|
+| `id` | int, auto increment | Key (auto increment). |
+| `series_id` | int, default `0` | Id of the series. |
+| `subscription_id` | int, default `0` | Id of the subscription. |
+| `newsletter_user_id` | int, default `0` | Id of the newsletter user. |
+| `entered` | int, default `0` | When the subscription entered the series (Unix time). |
+| `last_position` | int, default `0` | Position of the last step received. |
+| `last_sent` | int, default `0` | When the last step was queued (Unix time). |
+| `pending_send_id` | int, default `0` | Send that holds the step now in progress; 0 = none. |
+| `pending_position` | int, default `0` | Position of that step. |
+
+Indexes: `cjwnl_series_member_sub` (series_id, subscription_id, unique); `cjwnl_series_member_pending` (pending_send_id).
+
+### New columns
+
+| Table | Column | Type | Meaning |
+|---|---|---|---|
+| `cjwnl_edition_send` | `segment_id` | int, default `0` | Segment the send goes to; 0 = the whole list. |
+| `cjwnl_edition_send_item` | `person_tracking` | tinyint, default `0` | Bit field: 1 = links tracked per person, 2 = open pixel tracked per person. |
+| `cjwnl_edition_send` | `series_step_id` | int, default `0` | Series step the send belongs to; 0 = not a series send. |

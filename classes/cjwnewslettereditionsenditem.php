@@ -90,6 +90,8 @@ class CjwNewsletterEditionSendItem extends eZPersistentObject
                                          'first_opened' => array( 'name' => 'FirstOpened', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N4
                                          'open_count' => array( 'name' => 'OpenCount', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N4
                                          'click_count' => array( 'name' => 'ClickCount', 'datatype' => 'integer', 'default' => 0, 'required' => false ), // N4
+                                         // cjw_newsletter 4.3.0
+                                         'person_tracking' => array( 'name' => 'PersonTracking', 'datatype' => 'integer', 'default' => 0, 'required' => false ),
 
 
                                                                     ),

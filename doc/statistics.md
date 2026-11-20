@@ -59,12 +59,14 @@ What is stored:
 
 - Per-person rows are removed after `[TrackingSettings] PersonRetentionMonths` (12): the rows of `cjwnl_open` and
   `cjwnl_link_click` older than that, and the per-person columns of the send items of sends older than that. The
-  totals stay. The mail queue does this once a day by itself; by hand:
+  totals stay. The `person_tracking` mark of a send item (which of its links and pixel were personal) is reset with
+  those columns. The mail queue does this once a day by itself; by hand:
   `./console ext:cjw_newsletter:statistics --cleanup [--dry-run] [--at=<date>]`.
 - **Withdrawal** (the person switches "Newsletter statistics" off, on the page, by a link or by an administrator):
   the category handler removes the person's rows at once.
 - **Erasure** (`exp:mail:preferences erase`, the erasure on request, the removal of the account): the kernel calls the
   handler's `erased()`, which removes the person's rows at once.
+- Withdrawal and erasure also reset the `person_tracking` mark of the person's send items.
 - As a safety net, every cleanup also removes the rows of people whose consent is no longer on.
 
 ## 4. Setup

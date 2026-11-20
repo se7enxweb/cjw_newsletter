@@ -1,0 +1,26 @@
+{*  newsletter/segments/send_form_part.tpl
+
+    The segment part of the send form ([ExtensionPointSettings] SendFormParts[]). Posts CjwNewsletterSegmentId
+    (0 = the whole list), read by CjwNewsletterSegmentHooks::sendFormValidate()/sendFormStored().
+    node_id, object_version
+*}
+{def $i18n = 'cjw_newsletter/segments'
+     $options = fetch( 'newsletter', 'segment_send_options', hash( 'object_version', $object_version ) )}
+{if $options|count}
+<div class="nl-stat-form">
+<fieldset>
+    <legend>{'Segment'|i18n( $i18n )}</legend>
+    <div class="nl-stat-row">
+        <label for="cjwnl-segment-id">{'Send to'|i18n( $i18n )}</label>
+        <select id="cjwnl-segment-id" name="CjwNewsletterSegmentId">
+            <option value="0" selected="selected">{'Whole list'|i18n( $i18n )}</option>
+            {foreach $options as $option}
+            <option value="{$option.id}">{$option.name|wash} ({if $option.few}{'fewer than %minimum'|i18n( $i18n,, hash( '%minimum', $option.minimum ) )}{else}{'%count recipients'|i18n( $i18n,, hash( '%count', $option.count ) )}{/if})</option>
+            {/foreach}
+        </select>
+    </div>
+    <p class="nl-hint">{'Only the current members of the segment get this send. The size is the number now; unsubscribes until the send is queued are left out.'|i18n( $i18n )}</p>
+</fieldset>
+</div>
+{/if}
+{undef $i18n $options}

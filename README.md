@@ -208,6 +208,27 @@ What is on and off by default (tracking, SMS, rate limits and mail-in are off) i
 4. The cron part `cjw_newsletter_mailqueue_create` creates one mail per subscriber, and
    `cjw_newsletter_mailqueue_process` sends them. The send page and the dashboard show the progress.
 
+### Select recipients with segments
+
+A segment is a saved, rule-based selection of the approved subscribers of one list. Conditions, match mode, the
+consent and known-send rules for behavior conditions: [doc/segments.md](doc/segments.md).
+
+Segments are managed on two pages: `/newsletter/segment_list/<list id>` lists the segments of a list, and
+`/newsletter/segment_edit/<id>/<list id>` creates (id `0`), edits, size-checks or removes one. **Show size** counts the
+members of the conditions as posted without saving; **Remove the segment** is refused while a send that is waiting or scheduled
+uses the segment. Both pages need the function `newsletter/editorial`; the sample of members in the size check is
+shown only to users who also have `newsletter/subscription_list` ([doc/segments.md](doc/segments.md#segment-pages)).
+
+To send an edition to a segment, choose it in the **Send to** select of the send form; "Whole list" keeps the
+send unchanged. The members are evaluated when the send is queued. Other extensions can narrow the recipients of a
+send with the `sendRecipients` extension point ([doc/segments.md](doc/segments.md#sending-to-a-segment)).
+
+### Greet new subscribers with a welcome series
+
+A series sends a fixed sequence of editions to new subscribers once their subscription is approved:
+[doc/series.md](doc/series.md). Edit it on the page `newsletter/series_edit/<list object id>` (steps, delays,
+audience, pause and resume, **Send to me**); the page needs the policy function `editorial`.
+
 ### Let visitors subscribe
 
 The public views are on any siteaccess:
@@ -287,6 +308,9 @@ also run on their own. A crontab that sends every five minutes:
 */5 * * * * cd /path/to/exponential && php runcronjobs.php -q -s <siteaccess> cjw_newsletter
 ```
 
+The [welcome series](doc/series.md) need no cron part of their own: the due steps are sent at the start of
+`cjw_newsletter_mailqueue_create`, and their mails go out in the next send run.
+
 ## Console commands
 
 Every command shows its options with `--help`; most have `--dry-run`.
@@ -323,7 +347,7 @@ The module `newsletter` has these policy functions (`modules/newsletter/module.p
 | `blacklist_item` | The blacklist |
 | `import_list`, `import_view` | Past imports |
 | `deliverability` | Rate limits and batches, test groups, mail-in addresses, suppression import |
-| `editorial`, `approve` | Recurring sends, article pools, asking for and deciding approvals |
+| `editorial`, `approve` | Recurring sends, article pools, segment pages (list and edit), the welcome series page (`series_edit`), asking for and deciding approvals |
 | `rendering` | Interests, the skin preview |
 | `statistics`, `track` | Reports and A/B tests; the open pixel and click redirect |
 | `sms`, `sms_public` | The SMS send page; the SMS confirmation and the provider endpoint |
@@ -337,7 +361,7 @@ Administrator role of a standard installation has `newsletter/*`.
 
 Replace the files (or run `composer update se7enxweb/cjw_newsletter`), run the database updates of the releases in
 between from `update/database/<engine>/`, regenerate the autoloads and clear the caches. From 4.1, follow
-[doc/upgrade-4.2.md](doc/upgrade-4.2.md) step by step. Every release is described in [CHANGELOG](CHANGELOG).
+[doc/upgrade-4.2.md](doc/upgrade-4.2.md) step by step; from 4.2, follow [doc/upgrade-4.3.md](doc/upgrade-4.3.md). Every release is described in [CHANGELOG](CHANGELOG).
 
 ## Known limits
 

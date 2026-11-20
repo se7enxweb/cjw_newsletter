@@ -12,7 +12,7 @@
  * How long per-person statistics are kept (cjw_newsletter 4.2.0, area N4 Statistics).
  *
  * Per person are: the rows of cjwnl_open and cjwnl_link_click with an item (edition_send_item_id > 0) and the
- * columns first_opened, open_count and click_count of cjwnl_edition_send_item. They are removed
+ * columns first_opened, open_count, click_count and person_tracking of cjwnl_edition_send_item. They are removed
  * - after [TrackingSettings] PersonRetentionMonths (12) by cleanup(), which runs once a day from the mail queue and
  *   with ext:cjw_newsletter:statistics --cleanup;
  * - at once when the person withdraws the consent (the category handler's changed()) or is erased (erased());
@@ -52,16 +52,16 @@ class CjwNewsletterStatisticsRetention
             'expired_clicks' => $count( "SELECT COUNT(*) AS c FROM cjwnl_link_click WHERE edition_send_item_id > 0 AND created < $cutoff" ),
             'expired_items' => 0, 'withdrawn_users' => 0, 'withdrawn_rows' => 0 );
         // items: the per-person columns of sends older than the retention, once nothing newer of the item is left
-        $itemWhere = "( first_opened > 0 OR open_count > 0 OR click_count > 0 ) AND edition_send_id IN ( SELECT id FROM cjwnl_edition_send WHERE created < $cutoff )";
+        $itemWhere = "( first_opened > 0 OR open_count > 0 OR click_count > 0 OR person_tracking > 0 ) AND edition_send_id IN ( SELECT id FROM cjwnl_edition_send WHERE created < $cutoff )";
         $result['expired_items'] = $count( "SELECT COUNT(*) AS c FROM cjwnl_edition_send_item WHERE $itemWhere" );
         if ( !$dryRun )
         {
             $db->query( "DELETE FROM cjwnl_open WHERE edition_send_item_id > 0 AND created < $cutoff" );
             $db->query( "DELETE FROM cjwnl_link_click WHERE edition_send_item_id > 0 AND created < $cutoff" );
-            $db->query( "UPDATE cjwnl_edition_send_item SET first_opened = 0, open_count = 0, click_count = 0 WHERE $itemWhere" );
+            $db->query( "UPDATE cjwnl_edition_send_item SET first_opened = 0, open_count = 0, click_count = 0, person_tracking = 0 WHERE $itemWhere" );
         }
         // the safety net: people with per-person rows whose consent is not on any more (withdrawn, erased, removed)
-        $rows = $db->arrayQuery( 'SELECT DISTINCT newsletter_user_id FROM cjwnl_edition_send_item WHERE first_opened > 0 OR open_count > 0 OR click_count > 0' );
+        $rows = $db->arrayQuery( 'SELECT DISTINCT newsletter_user_id FROM cjwnl_edition_send_item WHERE first_opened > 0 OR open_count > 0 OR click_count > 0 OR person_tracking > 0' );
         foreach ( (array)$rows as $row )
         {
             $userId = (int)$row['newsletter_user_id'];
@@ -94,13 +94,13 @@ class CjwNewsletterStatisticsRetention
         };
         $n = $c( "SELECT COUNT(*) AS c FROM cjwnl_open WHERE edition_send_item_id IN ( $items )" )
            + $c( "SELECT COUNT(*) AS c FROM cjwnl_link_click WHERE edition_send_item_id IN ( $items )" )
-           + $c( "SELECT COUNT(*) AS c FROM cjwnl_edition_send_item WHERE newsletter_user_id = $id AND ( first_opened > 0 OR open_count > 0 OR click_count > 0 )" );
+           + $c( "SELECT COUNT(*) AS c FROM cjwnl_edition_send_item WHERE newsletter_user_id = $id AND ( first_opened > 0 OR open_count > 0 OR click_count > 0 OR person_tracking > 0 )" );
         if ( !$dryRun && $n > 0 )
         {
             $db->begin();
             $db->query( "DELETE FROM cjwnl_open WHERE edition_send_item_id IN ( $items )" );
             $db->query( "DELETE FROM cjwnl_link_click WHERE edition_send_item_id IN ( $items )" );
-            $db->query( "UPDATE cjwnl_edition_send_item SET first_opened = 0, open_count = 0, click_count = 0 WHERE newsletter_user_id = $id" );
+            $db->query( "UPDATE cjwnl_edition_send_item SET first_opened = 0, open_count = 0, click_count = 0, person_tracking = 0 WHERE newsletter_user_id = $id" );
             $db->commit();
         }
         return $n;

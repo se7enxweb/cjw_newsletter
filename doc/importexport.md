@@ -65,6 +65,10 @@ choose it.
 | A hard bounce | Skipped: "The address bounced" |
 | A salutation, language or phone number that cannot be read | That value is left out and the rest of the row is imported. The report counts these rows |
 
+An import does not start a welcome series. A subscription that the import approves does not enter the series of
+its list, because the import runs inside a bulk operation (`CjwNewsletterExtensionPoints::beginBulk()`). This holds
+for both imports. See [Welcome series](series.md#for-developers).
+
 The values are cleaned before they are stored:
 
 - **Salutation**: `1`/`2`, or a word such as Mr, Herr, M., Ms, Frau or Mme.

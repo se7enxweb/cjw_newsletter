@@ -54,6 +54,8 @@ CREATE TABLE cjwnl_edition_send (
   ab_test_id int(11) NOT NULL DEFAULT '0',
   test_group_id int(11) NOT NULL DEFAULT '0',
   throttle_transport varchar(50) NOT NULL DEFAULT '',
+  segment_id int(11) NOT NULL DEFAULT '0',
+  series_step_id int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (id),
   KEY edition_contentobject_id (edition_contentobject_id),
   KEY edition_contentobject_version (edition_contentobject_version),
@@ -80,6 +82,7 @@ CREATE TABLE cjwnl_edition_send_item (
   first_opened int(11) NOT NULL DEFAULT '0',
   open_count int(11) NOT NULL DEFAULT '0',
   click_count int(11) NOT NULL DEFAULT '0',
+  person_tracking tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (id),
   KEY edition_send_id (edition_send_id),
   KEY newsletter_user_id (newsletter_user_id),
@@ -322,6 +325,19 @@ CREATE TABLE cjwnl_test_group (
   modified int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY ( id ),
   KEY cjwnl_test_group_list ( list_contentobject_id )
+) ENGINE=InnoDB;
+
+CREATE TABLE cjwnl_segment (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  list_contentobject_id int(11) NOT NULL DEFAULT '0',
+  name varchar(255) NOT NULL DEFAULT '',
+  match_mode varchar(3) NOT NULL DEFAULT 'all',
+  conditions text DEFAULT NULL,
+  creator_contentobject_id int(11) NOT NULL DEFAULT '0',
+  created int(11) NOT NULL DEFAULT '0',
+  modified int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY ( id ),
+  KEY cjwnl_segment_list ( list_contentobject_id )
 ) ENGINE=InnoDB;
 
 CREATE TABLE cjwnl_schedule (
@@ -605,4 +621,42 @@ CREATE TABLE cjwnl_migration_log (
   PRIMARY KEY ( id ),
   KEY cjwnl_migration_log_run ( run_id ),
   KEY cjwnl_migration_log_source ( source_table, source_id )
+) ENGINE=InnoDB;
+CREATE TABLE cjwnl_series (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  list_contentobject_id int(11) NOT NULL DEFAULT '0',
+  segment_id int(11) NOT NULL DEFAULT '0',
+  status int(11) NOT NULL DEFAULT '0',
+  creator_contentobject_id int(11) NOT NULL DEFAULT '0',
+  created int(11) NOT NULL DEFAULT '0',
+  modified int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY ( id ),
+  UNIQUE KEY cjwnl_series_list ( list_contentobject_id )
+) ENGINE=InnoDB;
+
+CREATE TABLE cjwnl_series_step (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  series_id int(11) NOT NULL DEFAULT '0',
+  position int(11) NOT NULL DEFAULT '0',
+  edition_contentobject_id int(11) NOT NULL DEFAULT '0',
+  delay_days int(11) NOT NULL DEFAULT '0',
+  created int(11) NOT NULL DEFAULT '0',
+  modified int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY ( id ),
+  UNIQUE KEY cjwnl_series_step_pos ( series_id, position )
+) ENGINE=InnoDB;
+
+CREATE TABLE cjwnl_series_member (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  series_id int(11) NOT NULL DEFAULT '0',
+  subscription_id int(11) NOT NULL DEFAULT '0',
+  newsletter_user_id int(11) NOT NULL DEFAULT '0',
+  entered int(11) NOT NULL DEFAULT '0',
+  last_position int(11) NOT NULL DEFAULT '0',
+  last_sent int(11) NOT NULL DEFAULT '0',
+  pending_send_id int(11) NOT NULL DEFAULT '0',
+  pending_position int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY ( id ),
+  UNIQUE KEY cjwnl_series_member_sub ( series_id, subscription_id ),
+  KEY cjwnl_series_member_pending ( pending_send_id )
 ) ENGINE=InnoDB;

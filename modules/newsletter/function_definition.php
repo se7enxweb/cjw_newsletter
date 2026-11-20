@@ -258,4 +258,13 @@ $FunctionList['schedule_list'] = array( 'name' => 'schedule_list',
                                'parameter_type' => 'standard',
                                'parameters' => array( array( 'name' => 'list_contentobject_id', 'type' => 'integer', 'default' => 0, 'required' => false ) ) );
 // ---- end N2 fetch functions
+// ---- N7 Segments: fetch functions
+// {fetch( 'newsletter', 'segment_send_options', hash( 'object_version', $object_version ) )} the valid segments of the edition's list with their size
+$FunctionList['segment_send_options'] = array( 'name' => 'segment_send_options',
+                               'operation_types' => array( 'read' ),
+                               'call_method' => array( 'class' => 'CjwNewsletterSegmentHooks',
+                                                       'method' => 'fetchSendOptions' ),
+                               'parameter_type' => 'standard',
+                               'parameters' => array( array( 'name' => 'object_version', 'type' => 'mixed', 'required' => true ) ) );
+// ---- end N7 fetch functions
 ?>
