@@ -30,4 +30,20 @@ class CjwNewsletterSegmentEzDb implements CjwNewsletterSegmentDb
     {
         return eZDB::instance()->escapeString( $string );
     }
+
+    /**
+     * Whether a table exists, from the database layer's own table list (no query that can fail).
+     *
+     * @param string $name
+     * @return bool
+     */
+    public function tableExists( $name )
+    {
+        $tables = eZDB::instance()->relationList( eZDBInterface::RELATION_TABLE );
+        if ( !is_array( $tables ) )
+        {
+            return false;
+        }
+        return in_array( strtolower( (string)$name ), array_map( 'strtolower', $tables ), true );
+    }
 }

@@ -25,6 +25,9 @@ class CjwNewsletterSegmentEvaluator
     /** @var int number of known items read per query */
     private $batchSize;
 
+    /** @var bool|null whether eztags_attribute_link exists (database layers with tableExists() only), null until asked */
+    private $tagsAvailable = null;
+
     public function __construct( CjwNewsletterSegmentDb $db, $batchSize = 5000 )
     {
         $this->db = $db;
@@ -35,6 +38,25 @@ class CjwNewsletterSegmentEvaluator
      * @return bool true when the eZ Tags table eztags_attribute_link exists
      */
     public function tagsAvailable()
+    {
+        // A database layer that can list its tables answers without a failing query: on eZDB a probe in the wrong SQL
+        // flavour logs a database error, and on PostgreSQL it would abort an open transaction. Its answer is kept
+        // for the life of this evaluator (one segment evaluation).
+        if ( method_exists( $this->db, 'tableExists' ) )
+        {
+            if ( $this->tagsAvailable === null )
+            {
+                $this->tagsAvailable = (bool)$this->db->tableExists( 'eztags_attribute_link' );
+            }
+            return $this->tagsAvailable;
+        }
+        return $this->probeTagsTable();
+    }
+
+    /**
+     * @return bool true when one of the information schema probes finds eztags_attribute_link
+     */
+    private function probeTagsTable()
     {
         $probes = array(
             "SELECT table_name FROM information_schema.tables WHERE table_schema = DATABASE() AND table_name = 'eztags_attribute_link'",
