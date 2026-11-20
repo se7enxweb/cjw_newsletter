@@ -1,5 +1,33 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.3.0
+=====
+
+- Added: Saved segments of a list: a named selection of the approved subscribers by subscription, profile, interests
+  and behavior (opened or clicked in the last N sends or days, clicked a link to an object or a tag, did not open the
+  last N sends), combined with all or any. Behavior conditions count only tracked per-person sends within the
+  statistics retention and never match a subscriber without statistics consent. Pages segment_list and segment_edit
+  (size check, sample of members); the send form can send to a segment, whose members are fixed when the send is
+  queued (doc/segments.md; pull request #7 by Ekkehard Dörre).
+- Added: A welcome series per list: ordered steps (an edition and a delay each) sent to a subscriber once the
+  subscription is approved, at most once per step, paused while the subscription is not approved, with an optional
+  segment as audience. Page series_edit with pause, resume and "Send to me"; the due steps go out at the start of the
+  queue-create cron part (doc/series.md; pull request #7).
+- Added: The extension points subscriptionStatusChanged and sendRecipients, and a bulk marker around the CSV and
+  mapped imports, so imports never enter anyone into a series.
+- Added: Per-person tracking marks on send items (cjwnl_edition_send_item.person_tracking), so behavior conditions
+  treat sends from before this update as unknown.
+- Fixed: Segments find the eZ Tags table from the database's own table list. The earlier probe ran queries for the
+  other database types first, which logged a database error on every check and, on PostgreSQL, could abort an open
+  transaction.
+- Fixed: The welcome series page in design standard hides its step labels with a stylesheet class (nl-sr-only)
+  instead of inline styles.
+
+Upgrading: run the database update for your engine from update/database/<engine>/4.3/ once (it starts from the
+4.2.20 schema; doc/upgrade-4.3.md), then composer update and deploy with the packer (or clear the ini, template,
+template-override, ezjscore-packer and template-block caches). The dashboard reports the four new tables as missing
+until the update has run.
+
 4.2.22
 ======
 
