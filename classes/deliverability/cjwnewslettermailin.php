@@ -405,9 +405,9 @@ class CjwNewsletterMailin
             return 'No subscribe or unsubscribe asked for.';
         if ( $from === '' )
             return 'No sender address.';
-        $auto = isset( $message['headers']['auto-submitted'][0] ) ? strtolower( trim( $message['headers']['auto-submitted'][0] ) ) : '';
-        $precedence = isset( $message['headers']['precedence'][0] ) ? strtolower( trim( $message['headers']['precedence'][0] ) ) : '';
-        if ( ( $auto !== '' && $auto !== 'no' ) || in_array( $precedence, array( 'bulk', 'junk', 'list' ), true ) )
+        $auto = isset( $message['headers']['auto-submitted'][0] ) ? $message['headers']['auto-submitted'][0] : '';
+        $precedence = isset( $message['headers']['precedence'][0] ) ? $message['headers']['precedence'][0] : '';
+        if ( CjwNewsletterBounce::isAutomaticHeaders( $auto, $precedence ) )
             return 'An automatic message.';
         foreach ( (array)self::setting( 'IgnoreSenders', array() ) as $pattern )
         {

@@ -18,7 +18,9 @@
  *    complaint: the address goes on the kernel suppression list with the reason "bounce" or "complaint"
  *    ([DeliverabilitySettings] SuppressHardBounces), which blocks every optional mail of the site, not only the
  *    newsletter. The suppression listener of the newsletter then puts the address on its blacklist.
- *  - soft (a full mailbox, a server that is down, a delay): the item of the send is queued again after
+ *  - delay (a delivery delay notice) and autoreply (an out-of-office reply): nothing is changed and nothing is
+ *    sent again; the first is not a failure yet, the second is not about delivery at all.
+ *  - soft (a full mailbox, a server that is down): the item of the send is queued again after
  *    SoftBounceRetryDelay seconds (doubled for each further try), at most SoftBounceMaxRetries times and only while
  *    the send is younger than SoftBounceRetryMaxAge days; the newsletter user's bounce count rises as before
  *    ([BounceSettings] BounceThresholdValue).
@@ -34,6 +36,10 @@ class CjwNewsletterBounce
     const HARD = 'hard';
     const SOFT = 'soft';
     const COMPLAINT = 'complaint';
+    /** a delivery delay notice: the mail is still being tried, nothing to count or resend */
+    const DELAY = 'delay';
+    /** an automatic reply (out of office), not a bounce even when its text quotes a reply code */
+    const AUTOREPLY = 'autoreply';
     const NONE = 'none';
 
     /** @var int|null test override of the clock */
@@ -77,8 +83,8 @@ class CjwNewsletterBounce
      *
      * @param string $raw the whole message
      * @param string $code the SMTP code the newsletter's parser found (CjwNewsletterMailParser), '' or '0' for none
-     * @return array kind (hard, soft, complaint, none), detail (status code or feedback type), addresses (failed
-     *               recipients the kernel read, lower case), source (kernel or code)
+     * @return array kind (hard, soft, delay, autoreply, complaint, none), detail (status code or feedback type), addresses (failed
+     *               recipients the kernel read, lower case), source (kernel, code or headers)
      */
     static function classify( $raw, $code = '' )
     {
@@ -91,8 +97,76 @@ class CjwNewsletterBounce
             if ( is_array( $c ) && isset( $c['detail'] ) && $c['detail'] === 'not-spam' )
                 return array( 'kind' => self::NONE, 'detail' => 'not-spam', 'addresses' => array(), 'source' => 'kernel' );
         }
+        // a reply marked automatic is no bounce, whatever reply codes its text quotes
+        if ( self::isAutomaticReply( $raw ) )
+            return array( 'kind' => self::AUTOREPLY, 'detail' => '', 'addresses' => array(), 'source' => 'headers' );
         $kind = self::kindOfCode( $code );
         return array( 'kind' => $kind, 'detail' => $kind === self::NONE ? '' : trim( (string)$code ), 'addresses' => array(), 'source' => 'code' );
+    }
+
+    /**
+     * @param string $raw the whole message
+     * @return bool the top-level headers mark it as automatic (isAutomaticHeaders()), and it is no delivery report
+     *              and does not come from a mail server's own address (those set Auto-Submitted on their bounces too)
+     */
+    static function isAutomaticReply( $raw )
+    {
+        $headers = self::topHeaders( $raw );
+        if ( isset( $headers['content-type'] ) && stripos( $headers['content-type'], 'multipart/report' ) !== false )
+            return false;
+        if ( isset( $headers['from'] ) && preg_match( '/\b(mailer-daemon|postmaster)@/i', $headers['from'] ) )
+            return false;
+        return self::isAutomaticHeaders( isset( $headers['auto-submitted'] ) ? $headers['auto-submitted'] : '',
+                                         isset( $headers['precedence'] ) ? $headers['precedence'] : '' );
+    }
+
+    /**
+     * The rule for an automatic message, shared with the mail-in (CjwNewsletterMailIn::rejectReason()).
+     *
+     * @param string $autoSubmitted value of Auto-Submitted
+     * @param string $precedence value of Precedence
+     * @return bool Auto-Submitted present and not "no", or Precedence bulk, junk or list (any case)
+     */
+    static function isAutomaticHeaders( $autoSubmitted, $precedence )
+    {
+        $auto = strtolower( trim( (string)$autoSubmitted ) );
+        $precedence = strtolower( trim( (string)$precedence ) );
+        return ( $auto !== '' && $auto !== 'no' ) || in_array( $precedence, array( 'bulk', 'junk', 'list' ), true );
+    }
+
+    /**
+     * The headers of the message itself (up to the first empty line, folded lines joined), not those of a part
+     * or of a quoted copy.
+     *
+     * @param string $raw
+     * @return array lower case name => value of its first occurrence
+     */
+    static function topHeaders( $raw )
+    {
+        $out = array();
+        $name = null;
+        foreach ( preg_split( "/\r\n|\n|\r/", (string)$raw ) as $line )
+        {
+            if ( $line === '' )
+                break;
+            if ( $name !== null && ( $line[0] === ' ' || $line[0] === "\t" ) )
+            {
+                $out[$name] .= ' ' . trim( $line );
+                continue;
+            }
+            $pieces = explode( ':', $line, 2 );
+            if ( count( $pieces ) !== 2 || $line[0] === ' ' || $line[0] === "\t" )
+            {
+                $name = null;
+                continue;
+            }
+            $name = strtolower( trim( $pieces[0] ) );
+            if ( isset( $out[$name] ) )
+                $name = null; // only the first occurrence counts
+            else
+                $out[$name] = trim( $pieces[1] );
+        }
+        return $out;
     }
 
     /**
@@ -176,6 +250,8 @@ class CjwNewsletterBounce
         $result = array( 'kind' => $kind, 'action' => 'none', 'detail' => $detail, 'retry_at' => 0 );
         if ( !is_object( $user ) && is_object( $sendItem ) )
             $user = $sendItem->attribute( 'newsletter_user_object' );
+        if ( $kind === self::DELAY || $kind === self::AUTOREPLY )
+            return $result; // action none: no item, no user, no retry
         if ( $kind === self::NONE || ( !is_object( $user ) && !is_object( $sendItem ) ) )
         {
             $result['action'] = $kind === self::NONE ? 'none' : 'ignored';
