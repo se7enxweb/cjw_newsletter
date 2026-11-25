@@ -299,6 +299,22 @@ class CjwNewsletterMailbox extends eZPersistentObject
      *
      * @return object / boolean
      */
+    /**
+     * The connection settings as they may be written to the newsletter log: the password is replaced by a mask.
+     * An empty password stays empty, so a log entry still shows that none was set.
+     *
+     * @param array $settingArray
+     * @return array
+     */
+    public static function loggableSettings( array $settingArray )
+    {
+        if ( isset( $settingArray['password'] ) && $settingArray['password'] !== '' )
+        {
+            $settingArray['password'] = '***';
+        }
+        return $settingArray;
+    }
+
     public function connect()
     {
         // current mailbox id
@@ -386,7 +402,7 @@ class CjwNewsletterMailbox extends eZPersistentObject
                                             'mailbox',
                                             'authenticate-failed',
                                              array_merge( array( 'error-code' => $e->getMessage() ),
-                                                          $settingArray )  );
+                                                          self::loggableSettings( $settingArray ) )  );
             return $e->getMessage();
         }
 
@@ -410,7 +426,7 @@ class CjwNewsletterMailbox extends eZPersistentObject
                                         'CjwNewsletterMailbox::connect',
                                         'mailbox',
                                         'connect-ok',
-                                         $settingArray );
+                                         self::loggableSettings( $settingArray ) );
 
             return $ezcTransportObject;
 
