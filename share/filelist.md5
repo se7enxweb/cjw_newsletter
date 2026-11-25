@@ -1,10 +1,10 @@
 name: cjw_newsletter
-version: 4.2.22
-files_count: 945
+version: 4.2.23
+files_count: 946
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
 aa9ea80af84e6cba65e0764a80b56e16  .gitignore
-069700fda8bd69f38c9d77ed400e889f  CHANGELOG
+29f43605baf4f75edfab758d8618d9e7  CHANGELOG
 d6fab46a528e9205716d5d7a12b628c6  FAQ
 153c75b3b81119edad890afba7ec5071  INSTALL
 0636e73ff0215e8d672dc4c32c317bb3  LICENSE
@@ -47,7 +47,7 @@ ecd9bd081eacd7195dc9311ed7e0b15e  classes/cjwnewsletterimport.php
 f39f06518d66cfce8a3f372aa1342615  classes/cjwnewsletterlog.php
 b76a922288f6a707933ab316f7516848  classes/cjwnewsletterlogwriter.php
 be678c396e09a940b0ea43a1828cd0ec  classes/cjwnewslettermail.php
-629aae310f5bd70e0e001d1bbb183acb  classes/cjwnewslettermailbox.php
+ca4fca073d51562599d5c9ae362fc46c  classes/cjwnewslettermailbox.php
 6c8b59c89129edacca192278a1c99f52  classes/cjwnewslettermailboxitem.php
 657173efcda08f6fce3825951d5952cd  classes/cjwnewslettermailcategoryhandler.php
 c2cc5743eca7eac6f1f8f8ba4068f844  classes/cjwnewslettermailcomposer.php
@@ -718,8 +718,8 @@ cf1036b2d3360f8e36d7462c0c58eaa8  doc/uml/cjw_newsletter_dbschema_v1.0.0.png
 f90eec2d1f019a7db9a9dfb9d9632d42  doc/upgrade-4.2.md
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
 782edd7ce72084d23e44e94ae248d722  extendedattributefilter/cjwnewsletterlistfilter.php
-63b1d3a91417439e36bd971516fff2db  extension.xml
-59fdca8aeda1a921c26a9851199931b4  ezinfo.php
+3cab689295e293754de0125f3a835d4b  extension.xml
+bac82b412d74edceee4eea553eb0653a  ezinfo.php
 a50ce9d1109f1006a3015c0111d57b15  modules/newsletter/ab_test.php
 6f44e8758a6311cd32c1d6e1e10cf7eb  modules/newsletter/approval.php
 7d7d02aedf15525f7bf6dba9b2d30d54  modules/newsletter/archive.php
@@ -808,6 +808,7 @@ e0fb0db8bc7127f92f518c510b43fe13  settings/websitetoolbar.ini.append.php
 3e40c5ef67d2b6bbcd22c0b5cbbbbef1  sql/sqlite/schema.sql
 3e43478b06594cb933188b3c562c47a1  tests/cjwNewsletterAdmin4Test.php
 4edba023ad8424bda9eb426edd36d2ee  tests/cjwNewsletterMailSafetyTest.php
+9ea17cb7ac4e984c971970d17ca0ebb3  tests/cjwNewsletterMailboxLogTest.php
 2bbc5c157eb03adb4a707d26c3bd0f29  tests/cjwNewsletterSystemMailLayoutTest.php
 b55207ceb4d3b12430d60112c2aeceac  tests/cjwNewsletterTemplateAccessibilityTest.php
 5640161fb9e010aedb049013383a2ae5  translations/afr-ZA/translation.ts
