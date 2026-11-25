@@ -1,10 +1,10 @@
 name: cjw_newsletter
-version: 4.3.0
-files_count: 996
+version: 4.3.1
+files_count: 997
 
 a65c763ef0340e232cfe8c274f56fca0  .github/FUNDING.yml
 aa9ea80af84e6cba65e0764a80b56e16  .gitignore
-c68b78c7741d2c065a6a1609fdd9b1da  CHANGELOG
+213252309824c5924790fe18753a2ed7  CHANGELOG
 d6fab46a528e9205716d5d7a12b628c6  FAQ
 153c75b3b81119edad890afba7ec5071  INSTALL
 0636e73ff0215e8d672dc4c32c317bb3  LICENSE
@@ -47,7 +47,7 @@ b9bb943b90d288641e3051f6ec46f9fc  classes/cjwnewslettergatetransport.php
 f39f06518d66cfce8a3f372aa1342615  classes/cjwnewsletterlog.php
 b76a922288f6a707933ab316f7516848  classes/cjwnewsletterlogwriter.php
 be678c396e09a940b0ea43a1828cd0ec  classes/cjwnewslettermail.php
-629aae310f5bd70e0e001d1bbb183acb  classes/cjwnewslettermailbox.php
+ca4fca073d51562599d5c9ae362fc46c  classes/cjwnewslettermailbox.php
 6c8b59c89129edacca192278a1c99f52  classes/cjwnewslettermailboxitem.php
 657173efcda08f6fce3825951d5952cd  classes/cjwnewslettermailcategoryhandler.php
 c2cc5743eca7eac6f1f8f8ba4068f844  classes/cjwnewslettermailcomposer.php
@@ -749,8 +749,8 @@ f90eec2d1f019a7db9a9dfb9d9632d42  doc/upgrade-4.2.md
 4984b46c94c5ee9d73876b49a2f0d31c  doc/upgrade-4.3.md
 fc0b891ae50b0fdf6ee85a11071ef97e  extendedattributefilter/cjwnewslettereditionfilter.php
 782edd7ce72084d23e44e94ae248d722  extendedattributefilter/cjwnewsletterlistfilter.php
-1a8b400e04b84aa1580444c30005f884  extension.xml
-10587345cde7beb728a40c61f3faa21d  ezinfo.php
+4d8a5cde04e966cf8d65025d41c3e8b5  extension.xml
+10d9e4bc52a63dca0010f38ba1faa095  ezinfo.php
 a50ce9d1109f1006a3015c0111d57b15  modules/newsletter/ab_test.php
 6f44e8758a6311cd32c1d6e1e10cf7eb  modules/newsletter/approval.php
 7d7d02aedf15525f7bf6dba9b2d30d54  modules/newsletter/archive.php
@@ -843,6 +843,7 @@ d68e606944e19c50abafe69ad9284dea  sql/postgresql/schema.sql
 3e43478b06594cb933188b3c562c47a1  tests/cjwNewsletterAdmin4Test.php
 38567e6a03900ad5d9b7b4e22aa33acd  tests/cjwNewsletterExtensionPointsBulkTest.php
 4edba023ad8424bda9eb426edd36d2ee  tests/cjwNewsletterMailSafetyTest.php
+9ea17cb7ac4e984c971970d17ca0ebb3  tests/cjwNewsletterMailboxLogTest.php
 92697eb45882725863e733d47dce3596  tests/cjwNewsletterPersonTrackingBitsTest.php
 7ab06c33ff4f7236f507fd2cae345231  tests/cjwNewsletterSegmentBehaviorTest.php
 dffca8a36705df5da516713053c92742  tests/cjwNewsletterSegmentConditionTest.php

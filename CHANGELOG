@@ -1,5 +1,13 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.3.1
+=====
+
+- Fixed: The mailbox connection no longer writes the mailbox password to the newsletter log. A failed login (error)
+  and a successful connect (debug) logged the whole connection settings, password included; the password is now
+  masked as *** (an empty password stays empty, so a missing one still shows). Check older newsletter logs
+  (var/log, cjw_newsletter) for passwords of bounce mailboxes and change those passwords if a log was shared.
+
 4.3.0
 =====
 
