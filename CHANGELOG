@@ -1,13 +1,21 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
-Unreleased
-==========
+4.3.2
+=====
+
+Release note: delay notices are no longer soft bounces. A delivery status notification whose action is `delayed`
+(the sending server keeps trying) has the new bounce kind `delay`; it changes nothing (no soft bounce count, no
+resend). Automatic replies (`Auto-Submitted` other than `no`, or `Precedence` bulk/junk/list) have the kind
+`autoreply` and change nothing either. With Exponential's bounce reader (6.0.15, `delay` kind) a site needs this
+version: older versions count the kernel's `delay` as a bounce.
 
 - Fixed: One mail account that fails to connect or fetch no longer stops the other accounts; the error is recorded per
   account.
 - Fixed: A message is deleted from the server only after it is stored (or known); a message that cannot be stored stays.
 - Fixed: Delay notices and automatic replies (out of office) are no longer counted as bounces; the bounce kinds `delay`
   and `autoreply` are new.
+- Fixed: The bounce mailbox finds the messages it already knows on PostgreSQL (the query mixed a number into a list of
+  strings and failed, so every message counted as new).
 
 4.3.1
 =====
