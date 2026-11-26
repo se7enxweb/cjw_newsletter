@@ -1,5 +1,12 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+4.3.3
+=====
+
+- Updated: Automatic replies are recognised with the kernel's shared rule (expMailReceive, Exponential 6.0.15) where
+  the kernel has it, the same rule as the bounce reader and the help desk; it also takes Precedence auto_reply and the
+  X-Autoreply / X-Autorespond headers. The newsletter's own copy of the rule stays for older kernels.
+
 4.3.2
 =====
 
