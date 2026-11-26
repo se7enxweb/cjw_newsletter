@@ -684,18 +684,27 @@ class CjwNewsletterMailbox extends eZPersistentObject
     {
         $existingMessageIdentifierArray = array();
         $mailboxId = (int) $this->attribute('id');
-        $identifierImplodeString = '';
+        $quoted = array();
 
         $db = eZDB::instance();
         foreach( (array)$messageIdentifierArray as $identifier )
         {
-            $identifierImplodeString .= "'" . $db->escapeString( (string)$identifier ) . "',";
+            $quoted[] = "'" . $db->escapeString( (string)$identifier ) . "'";
+        }
+        if ( count( $quoted ) == 0 )
+        {
+            return $existingMessageIdentifierArray;
         }
 
+        // only strings in the list: PostgreSQL refuses to compare the text column with a number such as -1
         $sql = "SELECT id, message_identifier, email_subject, message_size FROM cjwnl_mailbox_item
                 WHERE mailbox_id=$mailboxId
-                AND message_identifier IN ( $identifierImplodeString -1 )";
+                AND message_identifier IN ( " . implode( ',', $quoted ) . " )";
         $rows = $db->arrayQuery( $sql );
+        if ( !is_array( $rows ) )
+        {
+            $rows = array();
+        }
         $maxMessageSize = CjwNewsletterMailParser::maxMessageSize();
         foreach( $rows as $row )
         {
