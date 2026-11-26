@@ -111,6 +111,9 @@ class CjwNewsletterBounce
      */
     static function isAutomaticReply( $raw )
     {
+        // the kernel's shared rule (Exponential 6.0.15 and later): the same for every mailbox reader
+        if ( class_exists( 'expMailReceive' ) )
+            return expMailReceive::isAutomaticReply( (string)$raw );
         $headers = self::topHeaders( $raw );
         if ( isset( $headers['content-type'] ) && stripos( $headers['content-type'], 'multipart/report' ) !== false )
             return false;
@@ -121,7 +124,8 @@ class CjwNewsletterBounce
     }
 
     /**
-     * The rule for an automatic message, shared with the mail-in (CjwNewsletterMailIn::rejectReason()).
+     * The rule for an automatic message, shared with the mail-in (CjwNewsletterMailIn::rejectReason()). With the kernel's
+     * expMailReceive the kernel's rule applies (it adds Precedence auto_reply); the code below is for older kernels.
      *
      * @param string $autoSubmitted value of Auto-Submitted
      * @param string $precedence value of Precedence
@@ -129,6 +133,8 @@ class CjwNewsletterBounce
      */
     static function isAutomaticHeaders( $autoSubmitted, $precedence )
     {
+        if ( class_exists( 'expMailReceive' ) )
+            return expMailReceive::isAutomaticHeaders( array( 'auto-submitted' => (string)$autoSubmitted, 'precedence' => (string)$precedence ) );
         $auto = strtolower( trim( (string)$autoSubmitted ) );
         $precedence = strtolower( trim( (string)$precedence ) );
         return ( $auto !== '' && $auto !== 'no' ) || in_array( $precedence, array( 'bulk', 'junk', 'list' ), true );
@@ -143,6 +149,8 @@ class CjwNewsletterBounce
      */
     static function topHeaders( $raw )
     {
+        if ( class_exists( 'expMailReceive' ) )
+            return expMailReceive::topHeaders( $raw );
         $out = array();
         $name = null;
         foreach ( preg_split( "/\r\n|\n|\r/", (string)$raw ) as $line )
