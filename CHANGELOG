@@ -1,5 +1,14 @@
 # CHANGELOG # cjw_newsletter # - YYYYMMDD Description #
 
+Unreleased
+==========
+
+- Fixed: One mail account that fails to connect or fetch no longer stops the other accounts; the error is recorded per
+  account.
+- Fixed: A message is deleted from the server only after it is stored (or known); a message that cannot be stored stays.
+- Fixed: Delay notices and automatic replies (out of office) are no longer counted as bounces; the bounce kinds `delay`
+  and `autoreply` are new.
+
 4.3.1
 =====
 

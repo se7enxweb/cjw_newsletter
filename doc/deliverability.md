@@ -36,13 +36,21 @@ copies into the returned message.
 |---|---|
 | **hard** (the address or the domain does not exist: the kernel's `[BounceSettings] HardStatusCodes[]`, `5.1.x`, `5.2.1`, `5.4.4` by default) | The address goes on the **suppression list** with the reason `bounce`. The consent log records it (action `suppress`, source `system`). The suppression listener of the newsletter puts the address on the newsletter blacklist. No optional mail of the site goes to it any more, not only the newsletter. |
 | **complaint** (a spam report of a feedback loop) | The same, with the reason `complaint`. |
-| **soft** (a full mailbox, a server that is down, a delay, a policy refusal such as `5.7.x`) | The newsletter user's bounce count rises as before (`[BounceSettings] BounceThresholdValue`). The mail is **sent again** (section 2). |
+| **soft** (a full mailbox, a server that is down, a policy refusal such as `5.7.x`) | The newsletter user's bounce count rises as before (`[BounceSettings] BounceThresholdValue`). The mail is **sent again** (section 2). |
+| **delay** (a delivery status notification that only says the mail is delayed, action `delayed`, e.g. `4.2.2`; the server keeps trying) | Nothing. The send item and the user stay as they are and no retry is scheduled: the mail may still arrive, and the server reports the final result later. |
+| **autoreply** (an out-of-office reply or other automatic message that is not a delivery status notification: `Auto-Submitted` other than `no`, or `Precedence` bulk, junk or list) | Nothing, even if the text quotes a reply code such as `450`. A real bounce that carries such a header is still a bounce: the kernel's classification wins, and a delivery report (`multipart/report`) or a message from `MAILER-DAEMON@` or `postmaster@` is never taken for a reply. |
 
 With `SuppressHardBounces=disabled`, a hard bounce only marks the newsletter user as bounced, as before 4.2.0.
 
 A mail the mail server refuses at once while the queue sends it is handled the same way. A permanent failure is a hard
 bounce. A temporary refusal (`4xx`) or a server that cannot be reached is sent again. Other errors, such as a mail file
 that cannot be written, close the item as before. A `450` reply is no longer taken for a hard bounce.
+
+A newsletter mail account deletes messages from the server (`delete_mails_from_server`) only after they are stored:
+a message that is stored, or already known, is deleted; a message that cannot be stored stays on the server and is
+tried again at the next run. For IMAP the deleted messages are expunged at the end of the run, POP3 removes them when
+the connection closes. A mail account that fails to connect or to fetch is logged with its id and does not stop the
+other accounts.
 
 The suppression list is the kernel's: Setup > E-mail preferences > Suppression list shows and lifts entries. A lifted
 address also comes off the newsletter blacklist.

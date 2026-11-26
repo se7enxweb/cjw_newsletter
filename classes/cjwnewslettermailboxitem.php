@@ -449,7 +449,7 @@ class CjwNewsletterMailboxItem extends eZPersistentObject
             // 4.2.0: the kind of the bounce (the kernel's classifier, else the SMTP code); hard bounces and complaints
             // go on the kernel suppression list, soft bounces are sent again (CjwNewsletterBounce)
             $classification = CjwNewsletterBounce::classify( (string)$this->getRawMailMessageContent(), $parsedResult[ 'error_code' ] );
-            if ( $classification['kind'] !== CjwNewsletterBounce::NONE && !$this->isBounce() )
+            if ( $classification['kind'] !== CjwNewsletterBounce::NONE && $classification['kind'] !== CjwNewsletterBounce::AUTOREPLY && !$this->isBounce() )
             {
                 // a feedback loop report, or a status without an SMTP reply
                 $this->setAttribute( 'bounce_code', substr( $classification['detail'] !== '' ? $classification['detail'] : $classification['kind'], 0, 50 ) );

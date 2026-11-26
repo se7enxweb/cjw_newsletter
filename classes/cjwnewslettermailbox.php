@@ -148,6 +148,12 @@ class CjwNewsletterMailbox extends eZPersistentObject
     }
 
 
+    /** The mailboxes to collect from; a seam for tests. */
+    protected static function activeMailboxes()
+    {
+        return self::fetchAllActiveMailboxes();
+    }
+
     /**
      * connect to all mailboxes which are activated and store all mails in our db
      *
@@ -158,7 +164,7 @@ class CjwNewsletterMailbox extends eZPersistentObject
         $mailboxesProcessArray = array();
 
         // fetch all acitive mailboxes
-        $mailboxes = self::fetchAllActiveMailboxes();
+        $mailboxes = static::activeMailboxes();
 
         if ( is_array( $mailboxes ) )
         {
@@ -180,6 +186,7 @@ class CjwNewsletterMailbox extends eZPersistentObject
                                                     'connect-ok',
                                                      array( 'mailbox_id' => $mailbox->attribute('id') ) );
 
+                            // One failing mailbox must not stop the others.
                             try
                             {
                                 $mailboxesProcessArray[ $mailbox->attribute( 'id' ) ] = $mailbox->fetchMails();
@@ -187,18 +194,28 @@ class CjwNewsletterMailbox extends eZPersistentObject
                             }
                             catch( Exception $e )
                             {
+                                $mailboxesProcessArray[ $mailbox->attribute( 'id' ) ] = 'fetch failed: ' . $e->getMessage();
                                 CjwNewsletterLog::writeError(
-                                            'CjwNewsletterMailparser::parse',
-                                            'parseMail',
-                                            'ezcMailParser->parseMail-failed',
-                                             array( 'error-code' => $e->getMessage() ) );
-                                return $e->getMessage();
+                                            'CjwNewsletterMailbox::collectMailsFromActiveMailboxes',
+                                            'mailbox',
+                                            'fetch-failed',
+                                             array( 'mailbox_id' => $mailbox->attribute( 'id' ),
+                                                    'error-code' => $e->getMessage() ) );
+                                try
+                                {
+                                    $mailbox->disconnect();
+                                }
+                                catch( Exception $e2 )
+                                {
+                                    // the connect error is already recorded; a failed disconnect adds nothing
+                                }
+                                continue;
                             }
 
                         }
                         else
                         {
-                            $mailboxesProcessArray[ $mailbox->attribute( 'id' ) ] = 'connection failed'. $connectResult;
+                            $mailboxesProcessArray[ $mailbox->attribute( 'id' ) ] = 'connect failed: ' . $connectResult;
                             CjwNewsletterLog::writeError(
                                                     'CjwNewsletterMailbox::collectMailsFromActiveMailboxes',
                                                     'mailbox',
@@ -211,12 +228,14 @@ class CjwNewsletterMailbox extends eZPersistentObject
                     }
                     catch( Exception $e )
                     {
+                        $mailboxesProcessArray[ $mailbox->attribute( 'id' ) ] = 'connect failed: ' . $e->getMessage();
                         CjwNewsletterLog::writeError(
                                                         'CjwNewsletterMailbox::collectMailsFromActiveMailboxes',
                                                         'mailbox',
-                                                        'connect-failed-other',
-                                                         array( 'error-code' => $e->getMessage() ) );
-                        return $e->getMessage();
+                                                        'connect-failed',
+                                                         array( 'mailbox_id' => $mailbox->attribute( 'id' ),
+                                                                'error-code' => $e->getMessage() ) );
+                        continue;
                     }
 
                 }
@@ -444,6 +463,7 @@ class CjwNewsletterMailbox extends eZPersistentObject
 
     }
 
+
     /**
      * disconnect connection
      * @return unknown_type
@@ -469,6 +489,8 @@ class CjwNewsletterMailbox extends eZPersistentObject
                               'failed'  => array() );
         $mailboxId = $this->attribute( 'id' );
         $mailboxDeleteMailsFromServer = (bool) $this->attribute( 'delete_mails_from_server' );
+        // numbers of messages that are stored or already known; only these are deleted.
+        $deleteNumbers = array();
 
         if ( is_object( $this->TransportObject ) )
         {
@@ -530,6 +552,11 @@ class CjwNewsletterMailbox extends eZPersistentObject
                 if( $uniqueIdentifier !== false && array_key_exists( $uniqueIdentifier, $existingMessageIdentifierArray ) )
                 {
                     $statusArray['exists'][ $messageId ] = $uniqueIdentifier;
+                    // an oversized stub is not stored content: that message stays on the server
+                    if ( strpos( (string)$existingMessageIdentifierArray[ $uniqueIdentifier ], 'stub_' ) !== 0 )
+                    {
+                        $deleteNumbers[] = $messageId;
+                    }
                 }
                 else if ( (int)$messageSize > $maxMessageSize )
                 {
@@ -569,8 +596,8 @@ class CjwNewsletterMailbox extends eZPersistentObject
                     else
                     {
                         // create mailobject from message id
-                        // $mailboxDeleteMailsFromServer == true, set delete flag for current message
-                        $mailObject = $transport->fetchByMessageNr( $messageId, $mailboxDeleteMailsFromServer );
+                        // never flag on fetch: deleting happens after the item is stored
+                        $mailObject = $transport->fetchByMessageNr( $messageId, false );
 
                         // convert mailobject to string with own function
                         $messageString = $this->convertMailToString( $mailObject );
@@ -584,14 +611,31 @@ class CjwNewsletterMailbox extends eZPersistentObject
                         if ( $messageString != null )
                         {
                             // add item to DB / Filesystem
-                            $addResult = CjwNewsletterMailboxItem::addMailboxItem( $mailboxId, $messageIdentifier, $messageId, $messageString );
+                            try
+                            {
+                                $addResult = $this->storeItem( $mailboxId, $messageIdentifier, $messageId, $messageString );
+                            }
+                            catch( Exception $e )
+                            {
+                                $addResult = null;
+                                CjwNewsletterLog::writeError( 'CjwNewsletterMailbox::fetchMails',
+                                                              'mailbox',
+                                                              'store-failed',
+                                                              array( 'message' => $messageId, 'error-code' => $e->getMessage() ) );
+                            }
                             if ( is_object( $addResult ) )
                             {
                                 $statusArray[ 'added' ] [ $messageId ] =  $messageIdentifier;
+                                $deleteNumbers[] = $messageId;
+                            }
+                            else if ( $addResult === false )
+                            {
+                                $statusArray[ 'exists' ] [ $messageId ] = $messageIdentifier;
+                                $deleteNumbers[] = $messageId;
                             }
                             else
                             {
-                                $statusArray[ 'exists' ] [ $messageId ] = $messageIdentifier;
+                                $statusArray[ 'failed' ] [ $messageId ] = $messageIdentifier;
                             }
                             unset( $addResult );
                         }
@@ -605,20 +649,28 @@ class CjwNewsletterMailbox extends eZPersistentObject
                     $counter++;
                 }
 
-                // delete messages with delete flag from mailbox
-                switch ( $this->attribute('type') )
+            }
+
+            if ( $mailboxDeleteMailsFromServer )
+            {
+                foreach ( $deleteNumbers as $number )
                 {
-                    case 'imap':
-                        $transport->expunge();
-                        break;
+                    $transport->delete( $number );
                 }
             }
-            else
+            // IMAP removes deleted messages on expunge, POP3 at QUIT
+            if ( $mailboxDeleteMailsFromServer && count( $deleteNumbers ) > 0 && $this->attribute( 'type' ) == 'imap' )
             {
-                return $statusArray;
+                $transport->expunge();
             }
         }
         return $statusArray;
+    }
+
+    /** Stores one fetched message; an object means stored, false means already known. A seam for tests. */
+    protected function storeItem( $mailboxId, $identifier, $messageNumber, $raw )
+    {
+        return CjwNewsletterMailboxItem::addMailboxItem( $mailboxId, $identifier, $messageNumber, $raw );
     }
 
     /**
@@ -628,7 +680,7 @@ class CjwNewsletterMailbox extends eZPersistentObject
      * @param $array
      * @return unknown_type
      */
-    private function extractAllExistingIdentifiers( $messageIdentifierArray )
+    protected function extractAllExistingIdentifiers( $messageIdentifierArray )
     {
         $existingMessageIdentifierArray = array();
         $mailboxId = (int) $this->attribute('id');
@@ -640,13 +692,17 @@ class CjwNewsletterMailbox extends eZPersistentObject
             $identifierImplodeString .= "'" . $db->escapeString( (string)$identifier ) . "',";
         }
 
-        $sql = "SELECT id, message_identifier FROM cjwnl_mailbox_item
+        $sql = "SELECT id, message_identifier, email_subject, message_size FROM cjwnl_mailbox_item
                 WHERE mailbox_id=$mailboxId
                 AND message_identifier IN ( $identifierImplodeString -1 )";
         $rows = $db->arrayQuery( $sql );
+        $maxMessageSize = CjwNewsletterMailParser::maxMessageSize();
         foreach( $rows as $row )
         {
-            $existingMessageIdentifierArray[ $row[ 'message_identifier' ] ] = 'item_'.$row['id'];
+            // the size as well: a stored mail could carry the stub's subject itself
+            $isStub = strpos( (string)$row[ 'email_subject' ], '(not fetched: larger than' ) === 0
+                      && (int)$row[ 'message_size' ] > $maxMessageSize;
+            $existingMessageIdentifierArray[ $row[ 'message_identifier' ] ] = ( $isStub ? 'stub_' : 'item_' ).$row['id'];
         }
         return $existingMessageIdentifierArray;
     }
