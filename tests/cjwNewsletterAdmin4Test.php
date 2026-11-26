@@ -16,7 +16,7 @@
  *  A4-05 - Every cjwnl-a4-* rule of the stylesheet is used by a template
  *  A4-06 - Inside an installation: every a4-bi-* icon the templates use is defined by the kernel's components.css
  *
- * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x; All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package tests
  */

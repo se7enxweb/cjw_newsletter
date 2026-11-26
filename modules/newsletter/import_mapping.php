@@ -2,7 +2,7 @@
 /**
  * File import_mapping.php: map the CSV columns of an import, preview, dry run and import.
  *
- * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x; All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package cjw_newsletter
  */

@@ -9,7 +9,7 @@
  *  ML-02 - loggableSettings() keeps an empty or missing password as it is, so a missing password stays visible
  *  ML-03 - connect() passes its settings to the log only through loggableSettings()
  *
- * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x; All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package tests
  */
